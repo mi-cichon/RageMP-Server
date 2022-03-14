@@ -1,0 +1,2391 @@
+[33m[INFO] [0mStarting RAGE Multiplayer server...
+[0m[33m
+[============================================================]
+[33m[33m||
+[33m||[33m	MaxPlayers		[0m50[33m
+||	Sync rate		[0m40ms[33m
+||	Name			[0mBasicRPG.pl | W trakcie tworzenia | Wiecej na https://discord.gg/2vrMdXsdRW [PL][33m
+||	Gamemode		[0mrpg[33m
+||	Streaming distance	[0m500[33m
+||	Announcement		[0menabled[33m
+||	Voice chat		[0menabled[33m
+||	Address			[0m127.0.0.1:22005[33m
+||	Connection limits	[0mdisabled[33m
+||	Encryption		[0menabled[33m
+||	NodeJS			[0menabled[33m
+||	C#			[0menabled[33m
+||
+[============================================================]
+
+[0m
+[33m[INFO][0m Loading NodeJS packages...
+[33m[INFO][0m Starting packages...
+[32m[DONE][0m Server packages have been started.
+Initializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 11/14/2021 12:46:40 PM
+Unable to load acl.xml
+ACLEnabled: False
+Loaded 667 entries from vehicleData.json
+Loading resources..
+[?1h=[39;49m[33m->[39;49m[37m Starting [39;49m[36mServer[39;49m[37m resource..
+[39;49m[39;49m[37mServer:[39;49m[37m loading scripts.. found 1 script(s)
+[39;49m[39;49m[37mServer:[39;49m[37m instantiating [39;49m[37mServerSide.MainClass[39;49m[37m..
+[39;49mConnection refused [::1]:3306
+[39;49m[37mServer:[39;49m[37m loading server events.. found 10 server event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 10 server events(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loading remote events.. found 195 remote event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 195 remote event(s)
+[39;49mServer started...
+Connection refused [::1]:3306
+[39;49m[32m->[39;49m[37m Resource [39;49m[36mServer[39;49m[37m started!
+[39;49m[39;49m[32mStarted! Waiting for connections..
+[39;49m[32m[DONE] [0mStarted resource transfer server at 22006 port.
+[32m[DONE] [0mClient-side packages weight: [33m228.614456 MB[0m (uncompressed: [33m415.495178 MB[0m).
+[33m[INFO] [0mMasterList: Announcing into master server...
+[33m[INFO] [0mInitializing networking...
+[32m[DONE] [0mNetworking has been started: (IPv4-only) at 127.0.0.1:22005
+[32m[DONE] [0mThe server is ready to accept connections.
+[32m[DONE] [0mMasterList: Connected to master list.
+[N] Incoming connection from 84.15.184.55
+[N] 84.15.184.55:64739 has been disconnected.
+[N] Incoming connection from 84.15.184.55
+84.15.184.55 edgar12345cake
+[N] Incoming connection from 185.41.128.16
+185.41.128.16 1kubins1
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[39;49m[32m12:49 [2]MeHow: siema
+[39;49m[37m[39;49m[32m12:49 [1]Kubins: Siema
+[39;49m[37m[39;49m[32m12:49 [2]MeHow: dobra węgorze działają xD
+[39;49m[37m[39;49m[32m12:49 [2]MeHow: uwaga
+[39;49m[37m[39;49m[32m12:49 [2]MeHow: zobacz ile masz pkt pracy 
+[39;49m[37m[39;49m[32m12:49 [2]MeHow: w panelu
+[39;49m[37m/maxpoints 2
+[39;49m[33m12:50 - Pomyślnie zwiększono punkty pracy gracza do 2000!
+[39;49m[37m[39;49m[32m12:50 [1]Kubins: w chuj
+[39;49m[37m[39;49m[32m12:50 [2]MeHow: git działa
+[39;49m[37m[39;49m[32m12:50 [2]MeHow: mogę teraz komendą zwiekszać te punkty
+[39;49m[37m[39;49m[32m12:50 [2]MeHow: i z konsoli ;d
+[39;49m[37m[39;49m[32m12:50 [1]Kubins: Rolniesz Simeona?
+[39;49m[37m[39;49m[32m12:50 [0]edi1: niema nic 
+[39;49m[37m[39;49m[32m12:50 [2]MeHow: nie bedzie niczego
+[39;49m[37m[39;49m[32m12:51 [0]edi1: ja na nurku
+[39;49m[37m[39;49m[32m12:51 [2]MeHow: czego nie ma?
+[39;49m[37m[39;49m[32m12:51 [0]edi1: pszedmiotuf puste pole
+[39;49m[37m[39;49m[32m12:51 [2]MeHow: jest
+[39;49m[37m[39;49m[32m12:52 [2]MeHow: ryby se złów xD
+[39;49m[37m[39;49m[32m12:54 [0]edi1: ok motor wezme
+[39;49m[37m[39;49m[32m12:58 [0]edi1: moge tu miec dom 
+[39;49m[37m[39;49m[32m12:59 [2]MeHow: gdzie
+[39;49m[37m[39;49m[32m12:59 [0]edi1: kolo rybaka
+[39;49m[37m[39;49m[32m13:00 [0]edi1: tepnise jak morzesz
+[39;49m[37m[39;49m[32m13:00 [2]MeHow: zaraz
+[39;49m[37m[39;49m[32m13:12 [2]MeHow: gdzie ten domek?
+[39;49m[37mConnection refused [::1]:3306
+[N] 185.186.38.1:59448 has been disconnected.
+[N] 84.15.184.55:64739 has been disconnected.
+[N] Incoming connection from 84.15.184.55
+84.15.184.55 edgar12345cake
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 84.15.184.55:64739 has been disconnected.
+[N] Incoming connection from 84.15.184.55
+84.15.184.55 edgar12345cake
+[N] 188.47.127.251:16389 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 188.47.127.251:16389 has been disconnected.
+[39;49m[32m14:19 [0]edi1: zepsuty aparat zlapalem
+[39;49m[37m[39;49m[32m14:19 [1]Kubins: na nurku czy rybaku?
+[39;49m[37m[39;49m[32m14:20 [0]edi1: na rybaku
+[39;49m[37m[39;49m[32m14:34 [0]edi1: umnie nie parkink aut kolo tunera
+[39;49m[37m[39;49m[32m14:37 [1]Kubins: Miałem prosić czy przyjedziesz właśnie, bo kilka aut mam do zrobienia
+[39;49m[37m[39;49m[32m14:38 [0]edi1: jestem na tunerze
+[39;49m[37m[39;49m[32m14:47 [1]Kubins: Ale premia kox
+[39;49m[37m[39;49m[32m14:47 [0]edi1: to dobrze
+[39;49m[37m[N] Incoming connection from 89.64.93.46
+[N] 89.64.93.46:49709 has been disconnected.
+[N] Incoming connection from 91.245.82.80
+91.245.82.80 SNOWC4T
+[N] 185.41.128.16:65308 has been disconnected.
+[39;49m[32m15:04 [0]edi1: 2 razy kase nie dalo
+[39;49m[37m[N] 91.245.82.80:56650 has been disconnected.
+[N] 84.15.184.55:64739 has been disconnected.
+[N] Incoming connection from 109.173.131.119
+109.173.131.119 AlfPacinoo
+[N] 109.173.131.119:59318 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 188.47.127.251:16731 has been disconnected.
+[N] Incoming connection from 84.15.184.55
+84.15.184.55 edgar12345cake
+[N] 84.15.184.55:53680 has been disconnected.
+[N] Incoming connection from 91.231.100.49
+91.231.100.49 Giant_93
+[N] 91.231.100.49:63771 has been disconnected.
+[N] Incoming connection from 89.64.93.46
+[N] 89.64.93.46:49763 has been disconnected.
+[N] Incoming connection from 89.64.93.46
+89.64.93.46 -slupek-
+[N] 89.64.93.46:49735 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 188.47.127.251:16713 has been disconnected.
+[N] Incoming connection from 89.64.93.160
+89.64.93.160 -slupek-
+[N] 89.64.93.160:38818 has been disconnected.
+[N] Incoming connection from 89.64.93.160
+89.64.93.160 -slupek-
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 188.47.127.251:16446 has been disconnected.
+[N] 89.64.93.160:38818 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 188.47.127.251:16573 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 188.47.127.251:16573 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+[N] 188.47.127.251:16573 has been disconnected.
+[N] Incoming connection from 178.235.72.106
+178.235.72.106 TheHubertoosprin
+Connection refused [::1]:3306
+[N] 178.235.72.106:55940 has been disconnected.
+[N] Incoming connection from 79.186.225.19
+[N] 79.186.225.19:50032 has been disconnected.
+[N] Incoming connection from 79.186.225.19
+79.186.225.19 Piraciako
+[N] 79.186.225.19:53163 has been disconnected.
+[N] Incoming connection from 109.173.131.119
+109.173.131.119 AlfPacinoo
+[N] 109.173.131.119:64365 has been disconnected.
+[N] Incoming connection from 109.173.131.119
+109.173.131.119 AlfPacinoo
+[N] 109.173.131.119:64365 has been disconnected.
+[N] Incoming connection from 109.173.131.119
+109.173.131.119 AlfPacinoo
+[N] Incoming connection from 86.125.60.243
+86.125.60.243 MisuFoarfeca877
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] 86.125.60.243:50781 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[39;49m[32m17:46 [1]Bombel3k: Witam :D
+[39;49m[37m[39;49m[32m17:47 [0]Blancior: siemano :)
+[39;49m[37m[39;49m[32m17:48 [1]Bombel3k: przyszedłem tylko opłacic tunera i zwijam bo bratu zajebałem komputer bo u mnie sie płyta główna wyjebała xD
+[39;49m[37m[39;49m[32m17:49 [0]Blancior: aha no spoko ja tu znajomego wprowadzam na serwer
+[39;49m[37msiema
+[39;49m[32m17:49 [1]Bombel3k: siema
+[39;49m[37m[39;49m[32m17:50 [0]Blancior: witam :)
+[39;49m[37m  bombel
+jaki masz procesor
+kup se jakas plyte uzywana za 2 stowy i bedzie git
+xD
+[39;49m[32m17:50 [1]Bombel3k: tak pewnie zrobie
+[39;49m[37m[39;49m[32m17:52 [1]Bombel3k: ten laptop brata zara odleci xDD
+[39;49m[37m[39;49m[32m17:53 [0]Blancior: da rade adixowi dac punkty pracy ?
+[39;49m[37m[N] 62.141.227.162:64844 has been disconnected.
+[N] Incoming connection from 89.64.93.160
+[N] 89.64.93.160:38812 has been disconnected.
+[N] Incoming connection from 89.64.93.160
+89.64.93.160 -slupek-
+[39;49m[32m18:34 [1]slupek77: witam
+[39;49m[37m[39;49m[32m18:34 [0]Blancior: siema
+[39;49m[37m[39;49m[32m18:34 [2]adix8901: siema
+[39;49m[37m[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 188.47.127.251:16610 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+da radehah[6n  ko    siema
+punkty pracy komu?
+[39;49m[32m18:45 [3]Ametyst: mi daj
+[39;49m[37m[39;49m[32m18:45 [2]adix8901: mi jak można
+[39;49m[37m/maxpoints 2
+[39;49m[33m18:45 - Pomyślnie zwiększono punkty pracy gracza do 2000!
+[39;49m[37m/maxpointy [6n  s 3
+[39;49m[33m18:45 - Pomyślnie zwiększono punkty pracy gracza do 2000!
+[39;49m[37mmacie
+ku[6n  juz
+nie trzeba rc
+[39;49m[32m18:46 [3]Ametyst: dzieki wodzu
+[39;49m[37m[39;49m[32m18:46 [2]adix8901: dzk
+[39;49m[37mluz
+mam supermoce teraz i moge [6n                           [N] Incoming connection from 80.255.5.235
+[N] 188.47.127.251:16610 has been disconnected.
+80.255.5.235 Giant_93
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] Incoming connection from 84.15.184.55
+84.15.184.55 edgar12345cake
+[39;49m[32m18:49 [5]edi1: siema
+[39;49m[37m[39;49m[32m18:49 [2]adix8901: elo
+[39;49m[37msiema
+[39;49m[32m18:49 [2]adix8901: co tam edi
+[39;49m[37m[39;49m[32m18:51 [1]slupek77: siema
+[39;49m[37m[N] 188.47.127.251:16610 has been disconnected.
+[39;49m[32m18:51 [4]Giant_93: elo
+[39;49m[37m[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[39;49m[32m18:52 [1]slupek77: edi cho na tune
+[39;49m[37m[39;49m[32m18:52 [3]Ametyst: komus retro ft ? :D
+[39;49m[37m[39;49m[32m18:52 [5]edi1: jestem kolo tunera
+[39;49m[37m[39;49m[32m18:54 [0]Blancior: da rade mysliwego na bonus ? ;d
+[39;49m[37ma[6n zaraz wbj ije i ogarne
+[N] 188.47.127.251:16610 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 188.47.127.251:16610 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] Incoming connection from 185.186.38.1
+[N] 185.186.38.1:52880 has been disconnected.
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[39;49m[32m19:03 [6]MeHow: siema
+[39;49m[37m[39;49m[32m19:04 [0]Blancior: dziena :)
+[39;49m[37m[39;49m[32m19:04 [6]MeHow: spoczko ;d
+[39;49m[37m[39;49m[32m19:04 [3]Ametyst: co tam MeHow porabiasz
+[39;49m[37m[39;49m[32m19:04 [6]MeHow: nudze sie
+[39;49m[37m[39;49m[32m19:04 [6]MeHow: w csa gralem
+[39;49m[37m[39;49m[32m19:04 [6]MeHow: i nie podoba mi sie XD
+[39;49m[37m[39;49m[32m19:05 [3]Ametyst: jakis update kleisz ? :D
+[39;49m[37m[39;49m[32m19:05 [6]MeHow: niee
+[39;49m[37m[39;49m[32m19:05 [6]MeHow: nie dziś
+[39;49m[37m[N] 188.47.127.251:16610 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 80.255.5.235:14655 has been disconnected.
+[N] Incoming connection from 80.255.5.235
+80.255.5.235 Giant_93
+[N] 188.47.127.251:16610 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 80.255.5.235:14655 has been disconnected.
+[N] Incoming connection from 80.255.5.235
+80.255.5.235 Giant_93
+[N] 188.47.127.251:16610 has been disconnected.
+[39;49m[32m19:26 [6]MeHow: 300 za tankowanie
+[39;49m[37m[39;49m[32m19:26 [6]MeHow: wezcie na tej rafinerii coś róbcie XD
+[39;49m[37m[39;49m[32m19:31 [1]slupek77: zaraz bede robił tylko dojade xd
+[39;49m[37m[39;49m[32m19:31 [6]MeHow: git xD
+[39;49m[37m[N] 80.255.5.235:14655 has been disconnected.
+[N] 185.186.38.1:52436 has been disconnected.
+blancuio[6n   ior
+napisz cos
+[39;49m[32m20:26 [0]Blancior: halo ;d
+[39;49m[37m/maxpoints 0
+[39;49m[33m20:26 - Pomyślnie zwiększono punkty pracy gracza do 2000!
+[39;49m[37mjuz masz punkty
+[39;49m[32m20:26 [5]edi1: siema
+[39;49m[37m[39;49m[32m20:26 [0]Blancior: dzkieki
+[39;49m[37m[N] 109.173.131.119:64365 has been disconnected.
+[N] Incoming connection from 109.173.131.119
+109.173.131.119 AlfPacinoo
+[N] 89.64.93.160:38859 has been disconnected.
+[N] Incoming connection from 185.41.128.16
+185.41.128.16 1kubins1
+[39;49m[32m21:33 [1]Kubins: siemano
+[39;49m[37m[39;49m[32m21:33 [0]Blancior: witam
+[39;49m[37m[39;49m[32m21:33 [2]adix8901: witam
+[39;49m[37m[39;49m[32m21:33 [5]edi1: siema
+[39;49m[37m[N] 109.173.131.119:64365 has been disconnected.
+[N] 83.20.236.53:44961 has been disconnected.
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[N] 84.15.184.55:62462 has been disconnected.
+[N] Incoming connection from 84.15.184.55
+84.15.184.55 edgar12345cake
+[N] 83.20.236.53:44961 has been disconnected.
+[N] 84.15.184.55:62462 has been disconnected.
+[39;49m[32m22:11 [1]Kubins: Gdzie jest wjazd na tor wyścigowy przy porcie?
+[39;49m[37m[N] 185.41.128.16:65389 has been disconnected.
+[N] Incoming connection from 84.15.184.55
+84.15.184.55 edgar12345cake
+[N] 84.15.184.55:56546 has been disconnected.
+[N] Incoming connection from 84.15.184.55
+84.15.184.55 edgar12345cake
+[N] 84.15.184.55:56546 has been disconnected.
+[N] Incoming connection from 84.15.190.161
+84.15.190.161 edgar12345cake
+[N] 84.15.190.161:60785 has been disconnected.
+[N] Incoming connection from 90.255.28.139
+90.255.28.139 _SHWGR_
+[N] 90.255.28.139:57829 has been disconnected.
+[N] Incoming connection from 90.255.28.139
+90.255.28.139 _SHWGR_
+[N] 90.255.28.139:57829 has been disconnected.
+[N] Incoming connection from 90.255.28.139
+90.255.28.139 _SHWGR_
+[N] 90.255.28.139:57829 has been disconnected.
+[N] Incoming connection from 90.255.28.139
+90.255.28.139 _SHWGR_
+[N] 90.255.28.139:57829 has been disconnected.
+[N] Incoming connection from 90.255.28.139
+90.255.28.139 _SHWGR_
+[N] 90.255.28.139:57829 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 188.47.127.251:16580 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 188.47.127.251:16580 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 188.47.127.251:16580 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 188.47.127.251:16580 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[39;49m[32m14:01 [0]Ametyst: halo admin zrób dzień 
+[39;49m[37m[N] 188.47.127.251:17313 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] Incoming connection from 87.123.195.136
+87.123.195.136 SHOGUN_77
+[N] Incoming connection from 84.15.190.161
+84.15.190.161 edgar12345cake
+[39;49m[32m14:24 [2]edi1: siema
+[39;49m[37m[39;49m[32m14:31 [2]edi1: mnie muwili zlorzou morze zapomnieli
+[39;49m[37m[39;49m[32m14:32 [2]edi1: w bie na dc
+[39;49m[37m[N] Incoming connection from 89.64.93.167
+[N] 89.64.93.167:59842 has been disconnected.
+[N] 87.123.195.136:20241 has been disconnected.
+[N] Incoming connection from 89.64.93.167
+89.64.93.167 -slupek-
+[N] 188.47.127.251:17313 has been disconnected.
+[N] 89.64.93.167:59893 has been disconnected.
+[N] Incoming connection from 89.64.93.167
+89.64.93.167 -slupek-
+[N] Incoming connection from 41.47.184.57
+41.47.184.57 InfernosGamer_
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] 41.47.184.57:56971 has been disconnected.
+[N] 89.64.93.167:59893 has been disconnected.
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 188.47.127.251:17345 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] Incoming connection from 87.123.195.136
+87.123.195.136 SHOGUN_77
+[39;49m[32m16:30 [2]edi1: danke szon
+[39;49m[37m[39;49m[32m16:30 [0]adix8901: dzk shogu
+[39;49m[37m[39;49m[32m16:30 [0]adix8901: shogun
+[39;49m[37m[39;49m[32m16:30 [3]SHOGUN77: spox :)
+[39;49m[37m[N] 188.47.127.251:17345 has been disconnected.
+[N] 83.20.236.53:44613 has been disconnected.
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+Connection refused [::1]:3306
+[N] 83.20.236.53:44613 has been disconnected.
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[N] 87.123.195.136:20377 has been disconnected.
+[N] 83.20.236.53:44613 has been disconnected.
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[N] 83.20.236.53:44613 has been disconnected.
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[N] 83.20.236.53:44613 has been disconnected.
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[N] 83.20.236.53:44613 has been disconnected.
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[N] 83.20.236.53:44613 has been disconnected.
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[N] 83.20.236.53:44613 has been disconnected.
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[N] 83.20.236.53:44613 has been disconnected.
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[N] 83.20.236.53:44613 has been disconnected.
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[N] Incoming connection from 79.186.225.19
+79.186.225.19 Piraciako
+[N] 79.186.225.19:49271 has been disconnected.
+[N] Incoming connection from 80.255.13.124
+80.255.13.124 Giant_93
+[39;49m[32m19:13 [1]Giant_93: elo
+[39;49m[37m[39;49m[32m19:14 [0]adix8901: elo
+[39;49m[37m[N] 80.255.13.124:13385 has been disconnected.
+[N] Incoming connection from 80.255.13.124
+80.255.13.124 Giant_93
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[39;49m[32m19:30 [3]Bombel3k: cześć
+[39;49m[37m[39;49m[32m19:30 [0]adix8901: elo
+[39;49m[37m[39;49m[32m19:30 [2]edi1: siema
+[39;49m[37m[N] 62.141.227.162:55915 has been disconnected.
+[39;49m[32m19:37 [2]edi1: tun potszeba
+[39;49m[37m[N] Incoming connection from 193.108.220.155
+193.108.220.155 PiotrazPL
+[39;49m[32m19:51 [3]PiotrazPL: siema
+[39;49m[37m[39;49m[32m19:51 [0]adix8901: elo
+[39;49m[37m[N] 193.108.220.155:55117 has been disconnected.
+[39;49m[32m19:52 [2]edi1: elo
+[39;49m[37m[N] 80.255.13.124:13385 has been disconnected.
+/p [6n  dp 984
+[39;49m[33m20:27 - Pojazd o ID: 984 został przeniesiony do przechowalni!
+[39;49m[37m984 w przecho
+[N] 83.20.236.53:44613 has been disconnected.
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[N] 83.20.236.53:44613 has been disconnected.
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[N] 83.20.236.53:44613 has been disconnected.
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[N] 83.20.236.53:44613 has been disconnected.
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[N] 83.20.236.53:44613 has been disconnected.
+[N] 84.15.190.161:56401 has been disconnected.
+[N] Incoming connection from 94.254.168.20
+94.254.168.20 M4lpaa
+Connection refused [::1]:3306
+[N] 94.254.168.20:57853 has been disconnected.
+[N] Incoming connection from 94.254.168.20
+94.254.168.20 M4lpaa
+[N] 94.254.168.20:57825 has been disconnected.
+[N] Incoming connection from 84.15.190.161
+84.15.190.161 edgar12345cake
+[N] 84.15.190.161:59880 has been disconnected.
+[N] Incoming connection from 84.15.190.161
+84.15.190.161 edgar12345cake
+[N] 84.15.190.161:59880 has been disconnected.
+[N] Incoming connection from 90.255.28.139
+90.255.28.139 _SHWGR_
+[N] 90.255.28.139:62384 has been disconnected.
+[N] Incoming connection from 90.255.28.139
+90.255.28.139 _SHWGR_
+[N] Incoming connection from 89.64.91.195
+[N] 89.64.91.195:7607 has been disconnected.
+siema
+/maxpoints _shwgr_
+[39;49m[33m14:17 - Nie znaleziono gracza!
+[39;49m[37m/maxzp[6n  points 0
+[39;49m[33m14:17 - Pomyślnie zwiększono punkty pracy gracza do 2000!
+[39;49m[37m[39;49m[32m14:18 [0]Bartosz85: siemaw
+[39;49m[37m[N] 90.255.28.139:62384 has been disconnected.
+[N] Incoming connection from 90.255.28.139
+90.255.28.139 _SHWGR_
+[N] 90.255.28.139:62384 has been disconnected.
+[N] Incoming connection from 90.255.28.139
+90.255.28.139 _SHWGR_
+[N] 90.255.28.139:62384 has been disconnected.
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[N] 83.20.236.53:44086 has been disconnected.
+[N] Incoming connection from 81.196.204.8
+81.196.204.8 Tzucu12
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] 81.196.204.8:64912 has been disconnected.
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[N] 83.20.236.53:45020 has been disconnected.
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[N] Incoming connection from 79.186.225.19
+79.186.225.19 Piraciako
+[N] 79.186.225.19:56232 has been disconnected.
+[N] 83.20.236.53:45020 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[N] 62.141.227.162:59070 has been disconnected.
+[N] Incoming connection from 80.255.13.126
+80.255.13.126 Giant_93
+[N] Incoming connection from 94.254.168.2
+94.254.168.2 M4lpaa
+[N] 94.254.168.2:50215 has been disconnected.
+[N] Incoming connection from 94.254.168.2
+94.254.168.2 M4lpaa
+[39;49m[32m19:00 [1]M4lpaa: oddam zloma i civica za grosze jak ktos chce
+[39;49m[37m[N] Incoming connection from 84.15.190.161
+84.15.190.161 edgar12345cake
+[39;49m[32m19:24 [2]edi1: siema
+[39;49m[37m[39;49m[32m19:24 [1]M4lpaa: elo
+[39;49m[37m[39;49m[32m19:29 [0]Giant_93: elo
+[39;49m[37m[39;49m[32m19:29 [2]edi1: elo
+[39;49m[37m[N] 94.254.168.2:50215 has been disconnected.
+[N] Incoming connection from 46.151.20.24
+46.151.20.24 RogaliQQQQ
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 188.47.127.251:17128 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 188.47.127.251:17128 has been disconnected.
+[N] 80.255.13.126:6038 has been disconnected.
+/[6n /maxpoints rogal
+[39;49m[33m20:23 - Pomyślnie zwiększono punkty pracy gracza do 2000!
+[39;49m[37mmasz juz punkty Rogali[6n 
+[39;49m[32m20:23 [1]RogaliQQQQ: dzk
+[39;49m[37m[39;49m[32m20:24 [2]edi1: siema
+[39;49m[37m[N] 46.151.20.24:7470 has been disconnected.
+[N] Incoming connection from 46.151.20.24
+46.151.20.24 RogaliQQQQ
+[N] 84.15.190.161:61537 has been disconnected.
+[N] Incoming connection from 84.15.190.161
+84.15.190.161 edgar12345cake
+[N] 46.151.20.24:7470 has been disconnected.
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[39;49m[32m20:38 [0]MeHow: siema
+[39;49m[37m[N] Incoming connection from 82.20.98.11
+82.20.98.11 lolekhaha4
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[39;49m[32m20:41 [1]edi1: siema
+[39;49m[37m[39;49m[32m20:42 [1]edi1: morzna rypki bonus
+[39;49m[37m[N] 82.20.98.11:54686 has been disconnected.
+[39;49m[32m20:49 [0]MeHow: mona
+[39;49m[37m[N] 185.186.38.1:60738 has been disconnected.
+[39;49m[32m20:50 [1]edi1: dzienki 
+[39;49m[37mspk
+[N] 84.15.190.161:61537 has been disconnected.
+[N] Incoming connection from 84.15.190.161
+84.15.190.161 edgar12345cake
+[N] 84.15.190.161:61537 has been disconnected.
+[N] Incoming connection from 84.15.190.161
+84.15.190.161 edgar12345cake
+[N] 84.15.190.161:61537 has been disconnected.
+[N] Incoming connection from 84.15.190.161
+84.15.190.161 edgar12345cake
+[N] 84.15.190.161:61537 has been disconnected.
+[N] Incoming connection from 94.254.168.2
+94.254.168.2 M4lpaa
+[N] 94.254.168.2:63629 has been disconnected.
+[N] Incoming connection from 84.15.190.161
+84.15.190.161 edgar12345cake
+[N] 84.15.190.161:60168 has been disconnected.
+[N] Incoming connection from 84.15.190.161
+84.15.190.161 edgar12345cake
+[N] 84.15.190.161:60168 has been disconnected.
+[N] Incoming connection from 84.15.190.161
+84.15.190.161 edgar12345cake
+[N] 84.15.190.161:60168 has been disconnected.
+[N] Incoming connection from 84.15.190.161
+84.15.190.161 edgar12345cake
+[N] 84.15.190.161:58257 has been disconnected.
+[N] Incoming connection from 84.15.190.161
+84.15.190.161 edgar12345cake
+Object reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at void ServerSide.MainClass.FreezePublicVehicle(Player player, Vehicle vehicle, bool value) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 2306
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+[N] 84.15.190.161:58257 has been disconnected.
+[N] Incoming connection from 84.15.190.161
+84.15.190.161 edgar12345cake
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[39;49m[32m16:09 [0]edi1: siema
+[39;49m[37m[39;49m[32m16:09 [1]adix8901: elo
+[39;49m[37m[39;49m[32m16:09 [2]Ametyst: czesc
+[39;49m[37m[N] 188.47.127.251:17161 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 83.20.236.53:44359 has been disconnected.
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[N] 83.20.236.53:44359 has been disconnected.
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[N] Incoming connection from 89.64.92.12
+[N] 89.64.92.12:20816 has been disconnected.
+[N] 188.47.127.251:17161 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 188.47.127.251:17161 has been disconnected.
+[N] 83.20.236.53:44359 has been disconnected.
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[N] Incoming connection from 80.255.5.201
+80.255.5.201 Giant_93
+[39;49m[32m18:28 [2]Giant_93: elo  złoty pierscionek duzo warty?
+[39;49m[37m[39;49m[32m18:28 [1]adix8901: z premią to dużo
+[39;49m[37m[39;49m[32m18:28 [2]Giant_93: xD
+[39;49m[37m[39;49m[32m18:30 [0]edi1: hcesz zarobic to zpszedawai teras u pasera
+[39;49m[37m[N] 80.255.5.201:9729 has been disconnected.
+[N] Incoming connection from 91.150.178.195
+91.150.178.195 KSZKSZZZ
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] 91.150.178.195:3450 has been disconnected.
+[N] Incoming connection from 46.151.20.24
+46.151.20.24 RogaliQQQQ
+[N] 46.151.20.24:22454 has been disconnected.
+[N] 84.15.190.161:65315 has been disconnected.
+[N] Incoming connection from 84.15.190.161
+84.15.190.161 edgar12345cake
+[N] 83.20.236.53:44359 has been disconnected.
+[N] 84.15.190.161:65315 has been disconnected.
+[N] Incoming connection from 84.15.190.161
+84.15.190.161 edgar12345cake
+[N] Incoming connection from 79.186.225.19
+79.186.225.19 Piraciako
+[39;49m[32m19:40 [1]Piraciako: unloko 
+[39;49m[37m[39;49m[32m19:41 [0]edi1: elo 
+[39;49m[37m[N] 79.186.225.19:57767 has been disconnected.
+[N] Incoming connection from 5.173.5.101
+5.173.5.101 M4lpaa
+[39;49m[32m19:55 [1]M4lpaa: elo
+[39;49m[37m[39;49m[32m19:56 [1]M4lpaa: pod ktorym byl voice?W
+[39;49m[37m[39;49m[32m20:06 [1]M4lpaa: jest jakis bonus na prace jakas?W
+[39;49m[37m[39;49m[32m20:06 [0]edi1: nurek
+[39;49m[37m[39;49m[32m20:06 [1]M4lpaa: co tam od paru dni osob malo ostatnim razem jak bylem to z 40 osob gralo?
+[39;49m[37m[39;49m[32m20:08 [0]edi1: fl dziala to niema
+[39;49m[37m[39;49m[32m20:09 [0]edi1: puki co serwer testowy
+[39;49m[37m[39;49m[32m20:09 [1]M4lpaa: to wiem
+[39;49m[37m[39;49m[32m20:10 [0]edi1: ja jusz na tym serwerze 2 miesonc jestem
+[39;49m[37m[39;49m[32m20:10 [1]M4lpaa: git
+[39;49m[37m[39;49m[32m20:11 [0]edi1: bo testuje wszystkie prace
+[39;49m[37m[39;49m[32m20:12 [0]edi1: jak klikniesz f4 zobaczysz jaka umnie ranga
+[39;49m[37m[39;49m[32m20:12 [1]M4lpaa: 93
+[39;49m[37m[39;49m[32m20:14 [1]M4lpaa: lol czemu siana nie dostalem za znaleziony przedmiot?W
+[39;49m[37m[39;49m[32m20:15 [0]edi1: zaden daje siano za drugi nie  
+[39;49m[37m[N] 5.173.5.101:37478 has been disconnected.
+[39;49m[32m20:28 [0]edi1: sm nie dostaje kasy 
+[39;49m[37m[N] Incoming connection from 185.41.128.16
+185.41.128.16 1kubins1
+[39;49m[32m20:55 [1]Kubins: Siemka
+[39;49m[37m[39;49m[32m20:55 [0]edi1: siema
+[39;49m[37m[39;49m[32m21:29 [0]edi1: masz 2k
+[39;49m[37m[39;49m[32m21:29 [1]Kubins: Jak jesteś tunerem to możesz sam sobie tuningować fury? // Mam 2k
+[39;49m[37m[39;49m[32m21:29 [0]edi1: nie
+[39;49m[37m[39;49m[32m21:32 [0]edi1: chcesz moge ft zrobic 
+[39;49m[37m[39;49m[32m21:33 [1]Kubins: Nie nie, tak tylko pytam, bo jakiś biznes się zwolnił na sandy
+[39;49m[37m[N] 185.41.128.16:4867 has been disconnected.
+[N] 84.15.190.161:65315 has been disconnected.
+[N] Incoming connection from 90.255.28.139
+90.255.28.139 _SHWGR_
+[N] 90.255.28.139:64270 has been disconnected.
+[N] Incoming connection from 90.255.28.139
+[N] 90.255.28.139:64270 has been disconnected.
+[N] Incoming connection from 84.15.190.161
+84.15.190.161 edgar12345cake
+[N] 84.15.190.161:53772 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 188.47.127.251:16665 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[39;49m[32m12:42 [0]Ametyst: witam basicrpg 
+[39;49m[37m[N] 188.47.127.251:16665 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 188.47.127.251:16665 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 188.47.127.251:16607 has been disconnected.
+[N] Incoming connection from 80.255.2.93
+80.255.2.93 Giant_93
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[39;49m[32m14:53 [1]Bombel3k: siema
+[39;49m[37m[N] 62.141.227.162:51239 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 188.47.127.251:16437 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[39;49m[32m15:13 [2]Ametyst: masz tunera ?
+[39;49m[37m[39;49m[32m15:13 [1]Bombel3k: ta ale zacząłem dopiero kurs na ogrodniku ;/
+[39;49m[37m[39;49m[32m15:13 [2]Ametyst: oke luzik pozniej
+[39;49m[37m[N] 188.47.127.251:16437 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[39;49m[32m15:37 [1]Bombel3k: jade na tune 
+[39;49m[37m[39;49m[32m15:37 [2]Ametyst: a w ktorym miejscu masz ?
+[39;49m[37m[39;49m[32m15:37 [1]Bombel3k: plaża
+[39;49m[37m[39;49m[32m15:39 [2]Ametyst: juz jade tylko naprawie go
+[39;49m[37m[39;49m[32m15:39 [1]Bombel3k: nie trzeba
+[39;49m[37m[39;49m[32m15:43 [2]Ametyst: xd nie a skup nie chce ? xd
+[39;49m[37m[39;49m[32m15:43 [1]Bombel3k: skup chce za mało xD
+[39;49m[37m[N] 188.47.127.251:16437 has been disconnected.
+[N] 62.141.227.162:51239 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[N] 62.141.227.162:51239 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[N] 62.141.227.162:51239 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[N] 62.141.227.162:51239 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[N] 62.141.227.162:51239 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[N] 62.141.227.162:51239 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[N] 62.141.227.162:51239 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[N] 62.141.227.162:51239 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[N] 62.141.227.162:51239 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[N] 62.141.227.162:51239 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[N] 62.141.227.162:51239 has been disconnected.
+[N] Incoming connection from 176.221.120.62
+176.221.120.62 _Arrow222_
+[N] 176.221.120.62:61741 has been disconnected.
+[N] Incoming connection from 176.221.120.62
+176.221.120.62 _Arrow222_
+[N] Incoming connection from 84.15.187.102
+84.15.187.102 edgar12345cake
+[39;49m[32m18:33 [2]edi1: siema
+[39;49m[37m[39;49m[32m18:33 [1]Arrow: Siema
+[39;49m[37m[N] 84.15.187.102:63966 has been disconnected.
+[39;49m[32m18:52 [0]Giant_93: elo
+[39;49m[37m[N] 80.255.2.93:5432 has been disconnected.
+[N] Incoming connection from 80.255.2.93
+80.255.2.93 Giant_93
+[N] Incoming connection from 92.92.61.91
+92.92.61.91 Mouraiide
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] 92.92.61.91:50993 has been disconnected.
+[N] 80.255.2.93:5432 has been disconnected.
+[N] Incoming connection from 91.231.100.49
+91.231.100.49 Giant_93
+[N] 91.231.100.49:62658 has been disconnected.
+[N] Incoming connection from 80.255.13.13
+80.255.13.13 Giant_93
+[N] Incoming connection from 84.15.187.102
+84.15.187.102 edgar12345cake
+[N] 84.15.187.102:56588 has been disconnected.
+[N] Incoming connection from 84.15.187.102
+84.15.187.102 edgar12345cake
+[39;49m[32m21:41 [2]edi1: diema
+[39;49m[37m[39;49m[32m21:41 [2]edi1: siema
+[39;49m[37m[N] 84.15.187.102:56588 has been disconnected.
+[N] Incoming connection from 90.255.28.139
+90.255.28.139 _SHWGR_
+[N] 90.255.28.139:61372 has been disconnected.
+[N] Incoming connection from 90.255.28.139
+90.255.28.139 _SHWGR_
+[N] 90.255.28.139:61372 has been disconnected.
+[N] Incoming connection from 90.255.28.139
+90.255.28.139 _SHWGR_
+[N] 90.255.28.139:61372 has been disconnected.
+[N] Incoming connection from 90.255.28.139
+90.255.28.139 _SHWGR_
+[N] 80.255.13.13:5352 has been disconnected.
+[N] Incoming connection from 91.231.100.49
+91.231.100.49 Giant_93
+[N] 91.231.100.49:62658 has been disconnected.
+[N] Incoming connection from 80.255.12.248
+80.255.12.248 Giant_93
+[N] 176.221.120.62:61741 has been disconnected.
+[N] 90.255.28.139:61372 has been disconnected.
+[N] Incoming connection from 84.15.187.102
+84.15.187.102 edgar12345cake
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[39;49m[32m23:26 [2]Bombel3k: cześć
+[39;49m[37m[39;49m[32m23:27 [1]edi1: siema
+[39;49m[37m[39;49m[32m23:29 [2]Bombel3k: podjedziesz na tune ?
+[39;49m[37m[39;49m[32m23:31 [1]edi1: robie ogrodnika
+[39;49m[37m[39;49m[32m23:31 [2]Bombel3k: okej
+[39;49m[37msuemj[6n  ma
+/tp  dp 949
+[39;49m[33m23:39 - Pojazd o ID: 949 został przeniesiony do przechowalni!
+[39;49m[37mjusz
+/warn bob[6n mbel eee qwy   wyp tepalem ci [39;49m[32m23:40 [2]Bombel3k: czesc
+[39;49m[37m[39;49m[32m23:40 [1]edi1: siema
+[39;49m[37mauto ok?
+[39;49m[32m23:40 [2]Bombel3k: OK
+[39;49m[37mgit
+mam plan na prace
+mniej wiecej
+just[6n  tro zaczne robic
+i bedziemy miec wk onc      koncu[39;49m[32m23:40 [2]Bombel3k: a jaka praca ?
+[39;49m[37m prace na start gotowe
+bedzuie [6n    ie 3 praca liog   ogistyczna
+i bedzie miala 3 poziomy
+to bedzie dostawca
+i kazdy poziom bedzie yw  wymagal wiecej       c  coraz wiecej po[39;49m[32m23:41 [2]Bombel3k: a czego dostawca ?
+[39;49m[37m[6n[23;80H[K unktow te ych logistycznych
+roznie
+na pierwszej
+bedzie jakis podstawowy pokja   jazd i dostawa
+na drugim pioz   oziomie bedzie dostawa z zaladunkiem
+a na r trzecim dostawa z rozlad dunkiem i zaladunkiem
+na pierwszym busik
+drugim single
+trzecim c z necz   aczepa
+[39;49m[32m23:42 [2]Bombel3k: okej
+[39;49m[37mnie bedzie zle moze
+[39;49m[32m23:43 [2]Bombel3k: ej jak już jestes chcesz mi dac gamingowy chrom na retro retro ?
+[39;49m[37mjakie id?
+[39;49m[32m23:45 [2]Bombel3k: 871
+[39;49m[37mspk
+ale d[6n zrobimy organizacje
+śwo
+smierć wg[6n rogom ojczys zny
+ok?
+[39;49m[32m23:45 [2]Bombel3k: ok
+[39;49m[37mzwykly chrom czy gamingowy>[6n ?
+[39;49m[32m23:46 [2]Bombel3k: gaming
+[39;49m[37mzielony?
+[39;49m[32m23:46 [2]Bombel3k: a jest jakis inny xD
+[39;49m[37male ci chrom dopierdole
+[39;49m[32m23:46 [2]Bombel3k: dej czerwony
+[39;49m[37m/dp 871[39;49m[32m23:47 [1]edi1: sielony i niebieski
+[39;49m[37m
+[39;49m[33m23:47 - Pojazd o ID: 871 został przeniesiony do przechowalni!
+[39;49m[37mw przecho masz
+mozliwe ze rozjebany
+bo moja [39;49m[32m23:47 [2]Bombel3k: k
+[39;49m[37mkomenda rozwala auta XD
+[39;49m[32m23:47 [2]Bombel3k: ;/
+[39;49m[37mnaprawisz se
+staćcie[6n    cie
+w lspd pracujesz
+pr =ew   ewnie w chuj zarabiasz
+X
+D
+[39;49m[32m23:47 [2]Bombel3k: nei no co ty ja klepie biede mam 1,665kk
+[39;49m[37m[39;49m[32m23:47 [2]Bombel3k: jeszcze o 15 miałem 4,2kk
+[39;49m[37m[39;49m[32m23:47 [2]Bombel3k: xD
+[39;49m[37ma [6n  mauo
+:/
+ud  ide grac
+w3  [39;49m[32m23:48 [2]Bombel3k: a ty edi ile masz ?
+[39;49m[37m[6n[23;80H[K c [23;80H[K [39;49m[32m23:48 [2]Bombel3k: ok
+[39;49m[37mw cancer strike
+siema
+[39;49m[32m23:48 [1]edi1: to doroboty xd
+[39;49m[37m[39;49m[32m23:48 [2]Bombel3k: xD
+[39;49m[37m[39;49m[32m23:49 [2]Bombel3k: ej daj komende /kill xD
+[39;49m[37m[39;49m[32m23:49 [1]edi1: co mam 
+[39;49m[37m[39;49m[32m23:50 [2]Bombel3k: no ile kasy masz teraz ?
+[39;49m[37m[39;49m[32m23:50 [1]edi1: 20k
+[39;49m[37m[39;49m[32m23:51 [1]edi1: mowe odebralo
+[39;49m[37m[39;49m[32m23:56 [2]Bombel3k: siema
+[39;49m[37m[N] 62.141.227.162:50028 has been disconnected.
+[39;49m[32m23:57 [1]edi1: siema
+[39;49m[37m[N] Incoming connection from 188.241.25.16
+188.241.25.16 0DEYMAN0
+[N] 188.241.25.16:56336 has been disconnected.
+[N] Incoming connection from 188.241.25.16
+[N] 188.241.25.16:56336 has been disconnected.
+[N] Incoming connection from 188.241.25.16
+188.241.25.16 0DEYMAN0
+[N] 188.241.25.16:63317 has been disconnected.
+[N] Incoming connection from 188.241.25.16
+188.241.25.16 0DEYMAN0
+[39;49m[32m00:16 [2]DEYMAN: mozna malowac fele
+[39;49m[37m[39;49m[32m00:17 [1]edi1: nie
+[39;49m[37m[39;49m[32m00:18 [2]DEYMAN: sa jakies nowe czesci tuningowe
+[39;49m[37m[39;49m[32m00:19 [1]edi1: zalerzy od auta
+[39;49m[37m[39;49m[32m00:19 [2]DEYMAN: podjedz na tunera
+[39;49m[37m[39;49m[32m00:20 [1]edi1: bo u tunera to tylko ft i felgi
+[39;49m[37m[39;49m[32m00:20 [2]DEYMAN: doszlo cos do ft czy tak jak  było
+[39;49m[37m[39;49m[32m00:21 [1]edi1: to cobylo to i jest
+[39;49m[37m[39;49m[32m00:21 [2]DEYMAN: spk
+[39;49m[37m[N] 84.15.187.102:54878 has been disconnected.
+[N] Incoming connection from 84.15.187.102
+84.15.187.102 edgar12345cake
+[N] 84.15.187.102:54878 has been disconnected.
+[N] Incoming connection from 84.15.187.102
+84.15.187.102 edgar12345cake
+[N] 188.241.25.16:63317 has been disconnected.
+[N] 84.15.187.102:54878 has been disconnected.
+[N] 80.255.12.248:1300 has been disconnected.
+[N] Incoming connection from 84.15.187.102
+84.15.187.102 edgar12345cake
+[N] 84.15.187.102:65350 has been disconnected.
+[N] Incoming connection from 84.15.187.102
+84.15.187.102 edgar12345cake
+[N] 84.15.187.102:51527 has been disconnected.
+[N] Incoming connection from 84.15.187.102
+84.15.187.102 edgar12345cake
+[N] Incoming connection from 90.255.28.139
+90.255.28.139 _SHWGR_
+[39;49m[32m07:05 [1]Bartosz85: siemaw
+[39;49m[37m[39;49m[32m07:05 [0]edi1: siema
+[39;49m[37m[39;49m[32m07:16 [1]Bartosz85: jak slysze ten dzwiek to znaczy ze jestem blisko przedmiotu tak?
+[39;49m[37m[39;49m[32m07:17 [0]edi1: tak
+[39;49m[37m[39;49m[32m07:17 [1]Bartosz85: to jestem ślepy :D
+[39;49m[37m[39;49m[32m07:18 [0]edi1: uwarzai na odeh paska bo umrzesz
+[39;49m[37m[39;49m[32m07:18 [1]Bartosz85: plywam przy tym czołgu i nic
+[39;49m[37m[39;49m[32m07:19 [1]Bartosz85: o dzięki, zapomniał\em to monitorowac
+[39;49m[37m[39;49m[32m07:19 [1]Bartosz85: znalazłem
+[39;49m[37m[39;49m[32m07:19 [0]edi1: sou 3 pszedmioty 
+[39;49m[37m[39;49m[32m07:25 [0]edi1: jak cos to do potem ja spadam 
+[39;49m[37m[39;49m[32m07:25 [1]Bartosz85: spoko
+[39;49m[37m[N] 84.15.187.102:51527 has been disconnected.
+[N] 90.255.28.139:60914 has been disconnected.
+[N] Incoming connection from 90.255.28.139
+[N] 90.255.28.139:60914 has been disconnected.
+[N] Incoming connection from 176.221.120.62
+176.221.120.62 _Arrow222_
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 188.47.127.251:17010 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 188.47.127.251:17010 has been disconnected.
+[N] Incoming connection from 84.15.187.102
+84.15.187.102 edgar12345cake
+[39;49m[32m13:22 [1]edi1: siema
+[39;49m[37m[N] 84.15.187.102:62780 has been disconnected.
+[39;49m[32m13:41 [0]Arrow: Siema
+[39;49m[37m[N] Incoming connection from 46.204.83.96
+[N] 46.204.83.96:20252 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[39;49m[32m14:20 [1]Bombel3k: Siema
+[39;49m[37m[N] Incoming connection from 46.204.83.96
+[N] 46.204.83.96:20240 has been disconnected.
+[N] Incoming connection from 46.204.83.96
+46.204.83.96 XQwertexX
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[39;49m[32m14:25 [2]XQwertexX: siema
+[39;49m[37m[39;49m[32m14:25 [1]Bombel3k: siema
+[39;49m[37m[39;49m[32m14:26 [1]Bombel3k: chcesz quada za darmo bo slotów nie mam xD
+[39;49m[37m[39;49m[32m14:26 [2]XQwertexX: darmo to uczciwa cena, chce
+[39;49m[37m[39;49m[32m14:26 [1]Bombel3k: dobra jade po ciebie
+[39;49m[37m[N] 62.141.227.162:60431 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[N] 62.141.227.162:60431 has been disconnected.
+[N] 176.221.120.62:59153 has been disconnected.
+[N] 46.204.83.96:20370 has been disconnected.
+[N] Incoming connection from 46.204.83.96
+[N] 46.204.83.96:20271 has been disconnected.
+[N] Incoming connection from 46.204.83.96
+46.204.83.96 XQwertexX
+[N] 46.204.83.96:20289 has been disconnected.
+[N] Incoming connection from 91.239.251.99
+[N] 91.239.251.99:53845 has been disconnected.
+[N] Incoming connection from 91.239.251.99
+91.239.251.99 efezar
+Connection refused [::1]:3306
+[N] 91.239.251.99:54786 has been disconnected.
+[N] Incoming connection from 80.255.13.116
+80.255.13.116 Giant_93
+[N] Incoming connection from 176.221.120.62
+176.221.120.62 _Arrow222_
+[N] Incoming connection from 188.47.127.251
+[N] 188.47.127.251:16482 has been disconnected.
+[39;49m[32m16:45 [0]Giant_93: elo
+[39;49m[37m[39;49m[32m16:47 [1]Arrow: Siema
+[39;49m[37m[N] 80.255.13.116:13359 has been disconnected.
+[N] Incoming connection from 80.255.13.116
+80.255.13.116 Giant_93
+[N] 176.221.120.62:33015 has been disconnected.
+[N] Incoming connection from 46.204.83.96
+46.204.83.96 XQwertexX
+[39;49m[32m17:21 [1]XQwertexX: hei
+[39;49m[37m[39;49m[32m17:21 [0]Giant_93: elo
+[39;49m[37m[39;49m[32m17:21 [1]XQwertexX: gdzie sie respi honda nsx?
+[39;49m[37m[39;49m[32m17:22 [0]Giant_93: nie wiem tegow
+[39;49m[37m[39;49m[32m17:23 [1]XQwertexX: gdzie tu mozna lvl zobaczyc?
+[39;49m[37m[N] 46.204.83.96:20417 has been disconnected.
+[N] Incoming connection from 46.204.83.96
+46.204.83.96 XQwertexX
+[N] 46.204.83.96:20417 has been disconnected.
+[39;49m[32m17:24 [0]Giant_93: masz prawy gorny rog
+[39;49m[37m[39;49m[32m17:24 [0]Giant_93: f2
+[39;49m[37m[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[N] 83.20.236.53:44089 has been disconnected.
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[N] Incoming connection from 83.26.210.154
+[N] 83.26.210.154:40590 has been disconnected.
+[N] 83.20.236.53:44089 has been disconnected.
+[N] Incoming connection from 84.15.187.102
+[N] 84.15.187.102:53865 has been disconnected.
+[N] Incoming connection from 109.95.143.2
+109.95.143.2 MarioBrothres
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] Incoming connection from 84.15.187.102
+84.15.187.102 edgar12345cake
+[39;49m[32m19:13 [2]edi1: siema
+[39;49m[37m[39;49m[32m19:18 [1]MarioBrothres: elo
+[39;49m[37m[39;49m[32m19:18 [2]edi1: siema
+[39;49m[37m[N] 109.95.143.2:62365 has been disconnected.
+[N] 84.15.187.102:51077 has been disconnected.
+[N] Incoming connection from 84.15.187.102
+84.15.187.102 edgar12345cake
+[N] 84.15.187.102:51077 has been disconnected.
+[N] Incoming connection from 84.15.187.102
+84.15.187.102 edgar12345cake
+[N] 84.15.187.102:51077 has been disconnected.
+[N] Incoming connection from 84.15.187.102
+84.15.187.102 edgar12345cake
+[N] 84.15.187.102:51077 has been disconnected.
+[N] Incoming connection from 84.15.187.102
+84.15.187.102 edgar12345cake
+[N] 84.15.187.102:51077 has been disconnected.
+[N] Incoming connection from 84.15.187.102
+84.15.187.102 edgar12345cake
+[N] 84.15.187.102:51077 has been disconnected.
+[N] Incoming connection from 84.15.187.102
+84.15.187.102 edgar12345cake
+[N] Incoming connection from 31.0.181.13
+31.0.181.13 BigL3steR
+[N] 31.0.181.13:9821 has been disconnected.
+[N] Incoming connection from 31.0.181.13
+31.0.181.13 BigL3steR
+[N] 31.0.181.13:9821 has been disconnected.
+[N] 84.15.187.102:51077 has been disconnected.
+[N] Incoming connection from 84.15.187.102
+84.15.187.102 edgar12345cake
+[N] 84.15.187.102:53153 has been disconnected.
+[N] 80.255.13.116:13359 has been disconnected.
+[N] Incoming connection from 80.255.13.116
+80.255.13.116 Giant_93
+[N] 80.255.13.116:13359 has been disconnected.
+[N] Incoming connection from 80.255.13.116
+80.255.13.116 Giant_93
+[N] Incoming connection from 84.15.187.102
+84.15.187.102 edgar12345cake
+[N] 84.15.187.102:56155 has been disconnected.
+[N] 80.255.13.116:13359 has been disconnected.
+[N] Incoming connection from 91.231.100.49
+[N] 91.231.100.49:55994 has been disconnected.
+[N] Incoming connection from 80.255.13.26
+80.255.13.26 Giant_93
+[N] Incoming connection from 84.15.187.102
+84.15.187.102 edgar12345cake
+[N] Incoming connection from 31.0.181.13
+31.0.181.13 BigL3steR
+[N] 31.0.181.13:9824 has been disconnected.
+[N] Incoming connection from 89.64.92.112
+89.64.92.112 -slupek-
+[39;49m[32m02:40 [2]slupek77: witam
+[39;49m[37m[39;49m[32m02:40 [1]edi1: siema
+[39;49m[37m[39;49m[32m02:41 [2]slupek77: potrzebuje tuna
+[39;49m[37m[39;49m[32m02:42 [1]edi1: ja tesz potszebuie tuna na 5 aut niema komu
+[39;49m[37m[N] 84.15.187.102:51225 has been disconnected.
+[N] Incoming connection from 84.15.187.102
+84.15.187.102 edgar12345cake
+[39;49m[32m02:43 [2]slupek77: aha masakra \
+[39;49m[37m[39;49m[32m02:49 [1]edi1: kielih wutki i sen
+[39;49m[37m[39;49m[32m02:54 [1]edi1: euros na simonie
+[39;49m[37m[N] 89.64.92.112:27256 has been disconnected.
+[N] Incoming connection from 89.64.92.112
+89.64.92.112 -slupek-
+[N] 89.64.92.112:27256 has been disconnected.
+[N] 84.15.187.102:51225 has been disconnected.
+[N] Incoming connection from 84.15.187.102
+84.15.187.102 edgar12345cake
+[39;49m[32m06:22 [1]edi1: siema
+[39;49m[37m[N] 84.15.187.102:64411 has been disconnected.
+[N] Incoming connection from 84.15.187.102
+84.15.187.102 edgar12345cake
+[N] 84.15.187.102:60493 has been disconnected.
+[N] Incoming connection from 176.221.120.62
+176.221.120.62 _Arrow222_
+[N] Incoming connection from 37.249.178.23
+[N] 37.249.178.23:59693 has been disconnected.
+[N] Incoming connection from 188.146.103.195
+188.146.103.195 MATIPL2137
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] 188.146.103.195:42855 has been disconnected.
+[N] Incoming connection from 188.146.103.195
+[N] 188.146.103.195:42833 has been disconnected.
+[N] Incoming connection from 188.146.103.195
+188.146.103.195 MATIPL2137
+[N] 188.146.103.195:42834 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[N] Incoming connection from 84.15.187.102
+[N] 84.15.187.102:52868 has been disconnected.
+[N] Incoming connection from 84.15.187.102
+84.15.187.102 edgar12345cake
+[N] Incoming connection from 82.160.206.5
+82.160.206.5 Dep00x
+Connection refused [::1]:3306
+[39;49m[32m13:04 [1]Arrow: Siema
+[39;49m[37m[39;49m[32m13:04 [4]Dep00x: siema
+[39;49m[37m[39;49m[32m13:04 [2]Bombel3k: siema
+[39;49m[37m[39;49m[32m13:04 [2]Bombel3k: chce ktos ziona classic za 50k ?
+[39;49m[37m[39;49m[32m13:04 [2]Bombel3k: id999 xD
+[39;49m[37m[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[N] 62.141.227.162:57937 has been disconnected.
+[39;49m[32m13:09 [5]adix8901: witam wszystkich
+[39;49m[37m[39;49m[32m13:09 [3]edi1: siema
+[39;49m[37m[39;49m[32m13:09 [1]Arrow: Siema
+[39;49m[37m[39;49m[32m13:10 [3]edi1: twoje felgi sou adix
+[39;49m[37m[39;49m[32m13:11 [5]adix8901: dobra to podjeżdzam
+[39;49m[37m[39;49m[32m13:13 [5]adix8901: dawaj na tuna
+[39;49m[37m[39;49m[32m13:13 [3]edi1: auto wezme
+[39;49m[37m[N] 82.160.206.5:50197 has been disconnected.
+[N] Incoming connection from 82.160.206.5
+82.160.206.5 Dep00x
+[39;49m[32m13:22 [5]adix8901: edi lost na średnim komisie
+[39;49m[37m[39;49m[32m13:23 [3]edi1: adix wbijesz na dc
+[39;49m[37m[39;49m[32m13:23 [5]adix8901: dzisiaj nie bo gości mam
+[39;49m[37m[39;49m[32m13:24 [3]edi1: tobiesz bagai ci potszebny
+[39;49m[37m[39;49m[32m13:24 [5]adix8901: nie mam slotów
+[39;49m[37m[39;49m[32m13:25 [3]edi1: moge ci go kupuc i psztszymac
+[39;49m[37m[N] Incoming connection from 178.235.185.163
+[39;49m[32m13:25 [5]adix8901: nie trzeba
+[39;49m[37m178.235.185.163 DrogoVy
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] 83.20.236.53:44066 has been disconnected.
+[N] 82.160.206.5:50197 has been disconnected.
+[N] 178.235.185.163:7150 has been disconnected.
+[N] Incoming connection from 82.160.206.5
+[N] Incoming connection from 178.235.185.163
+82.160.206.5 Dep00x
+178.235.185.163 DrogoVy
+[N] 82.160.206.5:50197 has been disconnected.
+[39;49m[32m13:37 [3]edi1: zpszedam visone 1500k
+[39;49m[37m[N] Incoming connection from 82.160.206.5
+82.160.206.5 Dep00x
+[N] 84.15.187.102:55280 has been disconnected.
+[N] 82.160.206.5:50197 has been disconnected.
+[N] 178.235.185.163:7150 has been disconnected.
+[N] Incoming connection from 188.146.234.88
+188.146.234.88 Soundsnice23
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] 176.221.120.62:28938 has been disconnected.
+[N] Incoming connection from 109.173.131.119
+109.173.131.119 AlfPacinoo
+[N] 188.146.234.88:39621 has been disconnected.
+[N] Incoming connection from 188.146.234.88
+188.146.234.88 Soundsnice23
+[N] 109.173.131.119:65071 has been disconnected.
+[N] 188.146.234.88:39621 has been disconnected.
+[N] 80.255.13.26:3572 has been disconnected.
+[N] Incoming connection from 80.255.13.26
+80.255.13.26 Giant_93
+[N] Incoming connection from 178.235.185.163
+[N] 178.235.185.163:46416 has been disconnected.
+[N] Incoming connection from 178.235.185.163
+178.235.185.163 DrogoVy
+[N] 178.235.185.163:38440 has been disconnected.
+[N] 80.255.13.26:3572 has been disconnected.
+[N] Incoming connection from 80.255.13.26
+80.255.13.26 Giant_93
+[N] Incoming connection from 188.0.175.239
+188.0.175.239 ibragim00795
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] 188.0.175.239:43128 has been disconnected.
+[N] 80.255.13.26:3572 has been disconnected.
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[N] 83.20.236.53:44213 has been disconnected.
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[N] 83.20.236.53:44213 has been disconnected.
+[N] Incoming connection from 84.15.187.102
+[N] 84.15.187.102:51301 has been disconnected.
+[N] Incoming connection from 84.15.187.102
+84.15.187.102 edgar12345cake
+[N] 84.15.187.102:64334 has been disconnected.
+[N] Incoming connection from 84.15.187.102
+84.15.187.102 edgar12345cake
+[N] Incoming connection from 81.207.142.247
+81.207.142.247 Wiktor2331
+Connection refused [::1]:3306
+[39;49m[32m21:01 [0]edi1: siema
+[39;49m[37m[N] 81.207.142.247:64008 has been disconnected.
+[N] Incoming connection from 81.207.142.247
+81.207.142.247 Wiktor2331
+[39;49m[32m21:06 [0]edi1: potszebuiesz pomocy
+[39;49m[37m[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[39;49m[32m21:21 [2]Bombel3k: powracam ja xD
+[39;49m[37m[39;49m[32m21:21 [0]edi1: siema
+[39;49m[37m[N] 62.141.227.162:62390 has been disconnected.
+[N] 81.207.142.247:55475 has been disconnected.
+[N] 84.15.187.102:52819 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[N] 62.141.227.162:50100 has been disconnected.
+[N] Incoming connection from 83.142.83.26
+83.142.83.26 Giant_93
+[N] 83.142.83.26:10110 has been disconnected.
+[N] Incoming connection from 80.255.7.27
+80.255.7.27 Giant_93
+[N] 80.255.7.27:14155 has been disconnected.
+[N] Incoming connection from 90.255.28.139
+90.255.28.139 _SHWGR_
+[N] 90.255.28.139:54677 has been disconnected.
+[N] Incoming connection from 90.255.28.139
+90.255.28.139 _SHWGR_
+[N] 90.255.28.139:54677 has been disconnected.
+[N] Incoming connection from 90.255.28.139
+90.255.28.139 _SHWGR_
+[N] 90.255.28.139:54677 has been disconnected.
+[N] Incoming connection from 84.15.187.102
+84.15.187.102 edgar12345cake
+[N] 84.15.187.102:58293 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[N] Incoming connection from 80.255.7.27
+[N] 80.255.7.27:14127 has been disconnected.
+[N] 62.141.227.162:58239 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[N] Incoming connection from 80.255.7.27
+[N] 80.255.7.27:14069 has been disconnected.
+[39;49m[32m20:32 [0]Bombel3k: cześć 
+[39;49m[37m[N] Incoming connection from 80.255.7.27
+[N] 80.255.7.27:14096 has been disconnected.
+[N] Incoming connection from 80.255.7.27
+[N] 80.255.7.27:14166 has been disconnected.
+[39;49m[32m20:46 [0]Bombel3k: es
+[39;49m[37m[N] 62.141.227.162:58239 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[N] 62.141.227.162:58239 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[N] 62.141.227.162:58239 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[N] 62.141.227.162:58239 has been disconnected.
+[N] Incoming connection from 80.255.7.27
+[N] 80.255.7.27:14169 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 188.47.127.251:16884 has been disconnected.
+[N] Incoming connection from 90.255.28.139
+90.255.28.139 _SHWGR_
+[N] 90.255.28.139:64633 has been disconnected.
+[N] Incoming connection from 90.255.28.139
+90.255.28.139 _SHWGR_
+[N] 90.255.28.139:64633 has been disconnected.
+[N] Incoming connection from 90.255.28.139
+90.255.28.139 _SHWGR_
+[N] 90.255.28.139:64633 has been disconnected.
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[N] Incoming connection from 84.15.187.181
+84.15.187.181 edgar12345cake
+[39;49m[32m15:53 [1]edi1: siema
+[39;49m[37m[39;49m[32m15:54 [0]adix8901: elo
+[39;49m[37m[39;49m[32m15:54 [1]edi1: wbijesz na dc
+[39;49m[37m[39;49m[32m15:55 [0]adix8901: jutro wbije bo zaraz zawija
+[39;49m[37m[39;49m[32m15:55 [0]adix8901: zawijam
+[39;49m[37m[39;49m[32m15:55 [1]edi1: ok
+[39;49m[37m[39;49m[32m15:56 [1]edi1: ja to farminga gram teras 22
+[39;49m[37m[39;49m[32m15:56 [0]adix8901: ok
+[39;49m[37m[N] 84.15.187.181:51716 has been disconnected.
+[N] 83.20.236.53:44345 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[N] 62.141.227.162:62655 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[N] 62.141.227.162:62655 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[N] 62.141.227.162:62655 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[N] 62.141.227.162:62655 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[N] 62.141.227.162:62655 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[39;49m[32m16:45 [0]Bombel3k: siema
+[39;49m[37m[N] 62.141.227.162:62655 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 188.47.127.251:16631 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 188.47.127.251:16631 has been disconnected.
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[N] 83.20.236.53:44262 has been disconnected.
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[N] 83.20.236.53:44262 has been disconnected.
+[N] Incoming connection from 84.15.187.181
+84.15.187.181 edgar12345cake
+[N] 84.15.187.181:51744 has been disconnected.
+[N] Incoming connection from 80.255.2.92
+80.255.2.92 Giant_93
+[N] 80.255.2.92:2701 has been disconnected.
+[N] Incoming connection from 80.255.2.92
+[N] 80.255.2.92:2700 has been disconnected.
+[N] Incoming connection from 80.255.2.92
+[N] 80.255.2.92:2753 has been disconnected.
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[N] 185.186.38.1:56917 has been disconnected.
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[39;49m[32m00:20 [0]MeHow: :D
+[39;49m[37m[N] 185.186.38.1:56376 has been disconnected.
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[N] 185.186.38.1:56376 has been disconnected.
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[N] 185.186.38.1:56376 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[N] 62.141.227.162:55142 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[N] Incoming connection from 37.190.228.197
+37.190.228.197 Kristovv339
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] 37.190.228.197:49396 has been disconnected.
+[N] 62.141.227.162:55142 has been disconnected.
+[N] Incoming connection from 5.173.11.238
+5.173.11.238 Bolo__95
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] Incoming connection from 81.190.227.67
+81.190.227.67 Pasecki
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[39;49m[32m15:26 [0]Bolo__95: Siemka 
+[39;49m[37m[39;49m[32m15:26 [1]Ametyst: elo
+[39;49m[37m[39;49m[32m15:26 [0]Bolo__95: Nowy jestem takie pytanko coś tu jest do roboty ?
+[39;49m[37m[39;49m[32m15:27 [1]Ametyst: w sumie czekamy na update ogolnie to tylko mozesz sobie potestowac prace 
+[39;49m[37m[39;49m[32m15:27 [0]Bolo__95: zawsze cos 
+[39;49m[37m[39;49m[32m15:27 [1]Ametyst: najlepiej jak sprawdzisz swoje id gracza pod F2 w panelu podasz na discordzie zeby ci dał punkty pracy 
+[39;49m[37m[39;49m[32m15:27 [1]Ametyst: wtedy bedziesz mógł testowac prace na kazdym poziomie 
+[39;49m[37m[39;49m[32m15:27 [0]Bolo__95: Thx
+[39;49m[37m[N] 188.47.127.251:16448 has been disconnected.
+[N] 81.190.227.67:52411 has been disconnected.
+[N] Incoming connection from 81.190.227.67
+81.190.227.67 Pasecki
+[N] 5.173.11.238:2766 has been disconnected.
+[N] Incoming connection from 5.173.11.238
+5.173.11.238 Bolo__95
+[N] 81.190.227.67:52411 has been disconnected.
+[N] Incoming connection from 81.190.227.67
+81.190.227.67 Pasecki
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[N] 81.190.227.67:52411 has been disconnected.
+[N] Incoming connection from 81.190.227.67
+81.190.227.67 Pasecki
+[N] 5.173.11.238:2766 has been disconnected.
+[N] Incoming connection from 5.173.11.238
+5.173.11.238 Bolo__95
+[N] 81.190.227.67:52411 has been disconnected.
+[N] 5.173.11.238:2766 has been disconnected.
+[N] 83.20.236.53:44202 has been disconnected.
+[N] Incoming connection from 84.15.187.181
+84.15.187.181 edgar12345cake
+[N] 84.15.187.181:49259 has been disconnected.
+[N] Incoming connection from 77.114.41.85
+[N] 77.114.41.85:59080 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 188.47.127.251:16750 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[39;49m[32m18:39 [1]Bombel3k: siema
+[39;49m[37m[39;49m[32m18:39 [0]Ametyst: ema
+[39;49m[37m[N] Incoming connection from 80.255.5.235
+80.255.5.235 Giant_93
+[39;49m[32m18:47 [2]Giant_93: elo
+[39;49m[37m[39;49m[32m18:47 [1]Bombel3k: siema
+[39;49m[37m[39;49m[32m18:49 [2]Giant_93: za 3mln ile   aut  przetuninguje pod vmax?
+[39;49m[37m[39;49m[32m18:50 [1]Bombel3k: zalezy jakie auta bo ft moze kosztowac 80k albo 400k
+[39;49m[37m[39;49m[32m18:51 [1]Bombel3k: mam na tune jechac czy moge robic na magazynierze xD
+[39;49m[37m[39;49m[32m18:51 [2]Giant_93: mam 7 xD  i teraz nie wiem ktore chce przetuningować
+[39;49m[37m[39;49m[32m18:51 [2]Giant_93: auta mam pod tune  ediego
+[39;49m[37m[N] 80.255.5.235:13014 has been disconnected.
+[N] Incoming connection from 80.255.5.235
+80.255.5.235 Giant_93
+[39;49m[32m18:56 [1]Bombel3k: @2 ile tam aut masz do zrobienia ?
+[39;49m[37m[39;49m[32m18:57 [2]Giant_93: felzer   sentinel  penumbra........
+[39;49m[37m[39;49m[32m18:57 [2]Giant_93: growler
+[39;49m[37m[39;49m[32m18:58 [2]Giant_93: osiris
+[39;49m[37m[39;49m[32m18:58 [1]Bombel3k: pytałem o ilosc aut a nie modele ale ok XD
+[39;49m[37m[39;49m[32m18:58 [2]Giant_93: tyle wlasnie
+[39;49m[37m[39;49m[32m18:59 [2]Giant_93: 5-6...
+[39;49m[37m[N] 188.47.127.251:16750 has been disconnected.
+[39;49m[32m19:15 [2]Giant_93: na razie all bo zanim  ogarne tamte auta to zejdzie
+[39;49m[37m[39;49m[32m19:15 [1]Bombel3k: ok
+[39;49m[37m[39;49m[32m19:15 [1]Bombel3k: wbije moze kolo 21/22
+[39;49m[37m[39;49m[32m19:15 [2]Giant_93: luz
+[39;49m[37m[N] 62.141.227.162:49908 has been disconnected.
+[39;49m[32m19:17 [2]Giant_93: 5 aut i tylko 700 k zapłaciłem
+[39;49m[37m[N] 80.255.5.235:13132 has been disconnected.
+[N] Incoming connection from 80.255.5.235
+80.255.5.235 Giant_93
+[N] Incoming connection from 213.146.55.1
+[N] 213.146.55.1:15212 has been disconnected.
+[N] 80.255.5.235:13132 has been disconnected.
+[N] Incoming connection from 80.255.5.235
+80.255.5.235 Giant_93
+[N] Incoming connection from 84.15.187.181
+84.15.187.181 edgar12345cake
+[N] 84.15.187.181:57074 has been disconnected.
+[N] Incoming connection from 188.4.139.19
+188.4.139.19 spirosgionis
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] 188.4.139.19:61297 has been disconnected.
+[N] 80.255.5.235:13016 has been disconnected.
+[N] Incoming connection from 84.15.187.181
+84.15.187.181 edgar12345cake
+[N] 84.15.187.181:60253 has been disconnected.
+[N] Incoming connection from 84.15.187.181
+84.15.187.181 edgar12345cake
+[N] 84.15.187.181:60253 has been disconnected.
+[N] Incoming connection from 188.146.239.64
+188.146.239.64 Krubrikel
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] 188.146.239.64:52326 has been disconnected.
+[N] Incoming connection from 90.255.28.139
+90.255.28.139 _SHWGR_
+[N] 90.255.28.139:59345 has been disconnected.
+[N] Incoming connection from 90.255.28.139
+90.255.28.139 _SHWGR_
+[N] 90.255.28.139:59345 has been disconnected.
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[N] Incoming connection from 213.134.188.42
+213.134.188.42 -_Chmielu_-
+[N] 213.134.188.42:52212 has been disconnected.
+[N] 83.20.236.53:44987 has been disconnected.
+[N] Incoming connection from 83.142.83.25
+83.142.83.25 Giant_93
+[N] Incoming connection from 84.15.187.181
+84.15.187.181 edgar12345cake
+[39;49m[32m19:30 [1]edi1: siema
+[39;49m[37m[N] 84.15.187.181:60487 has been disconnected.
+[N] 83.142.83.25:8511 has been disconnected.
+[N] Incoming connection from 5.173.9.147
+[N] 5.173.9.147:36358 has been disconnected.
+[N] Incoming connection from 46.204.80.84
+[N] 46.204.80.84:28778 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 188.47.127.251:16533 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 188.47.127.251:16533 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Jup1kk
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] 62.141.227.162:51333 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Jup1kk
+[N] 62.141.227.162:55828 has been disconnected.
+[N] Incoming connection from 81.219.15.32
+81.219.15.32 Miszczeu
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] 81.219.15.32:59377 has been disconnected.
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[N] 83.20.236.53:44335 has been disconnected.
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[N] 83.20.236.53:44335 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Jup1kk
+[N] 62.141.227.162:63114 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[N] Incoming connection from 94.51.39.247
+94.51.39.247 Alpha20910
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] 94.51.39.247:61928 has been disconnected.
+[39;49m[32m18:53 [0]Bombel3k: cichooo
+[39;49m[37m[39;49m[32m18:53 [0]Bombel3k: tu
+[39;49m[37m[39;49m[32m18:53 [0]Bombel3k: fchuj
+[39;49m[37m[N] Incoming connection from 80.255.12.253
+80.255.12.253 Giant_93
+[39;49m[32m18:55 [1]Giant_93: elo
+[39;49m[37m[39;49m[32m18:55 [0]Bombel3k: siema
+[39;49m[37m[39;49m[32m18:56 [1]Giant_93: orientujesz sie jaki vmax ma itali  rsx?
+[39;49m[37m[39;49m[32m18:56 [0]Bombel3k: nwm
+[39;49m[37m[39;49m[32m18:57 [1]Giant_93: to  mozemy sprawdzic xD
+[39;49m[37m[39;49m[32m18:57 [0]Bombel3k: jak cos to tunera nie mam ;/
+[39;49m[37m[39;49m[32m18:57 [1]Giant_93: aha xD
+[39;49m[37m[39;49m[32m18:57 [0]Bombel3k: ediego trzeba wołać albo ty kupisz tunera a ja italke xD
+[39;49m[37m[39;49m[32m18:58 [1]Giant_93: ale nie moje xDs
+[39;49m[37m[39;49m[32m18:58 [0]Bombel3k: xD
+[39;49m[37m[39;49m[32m18:59 [1]Giant_93: ciekawe czy ma tu ktoś rsx
+[39;49m[37m[39;49m[32m18:59 [0]Bombel3k: edi ma
+[39;49m[37m[39;49m[32m19:02 [1]Giant_93: 2mln hahahahaha jebłem
+[39;49m[37m[39;49m[32m19:02 [0]Bombel3k: no ta
+[39;49m[37m[39;49m[32m19:02 [0]Bombel3k: a ja tego tunera to 4 razy kupiłem xDDD
+[39;49m[37m[39;49m[32m19:03 [1]Giant_93: to moge zakonczyć gre  xD
+[39;49m[37m[39;49m[32m19:03 [0]Bombel3k: jakbym miał jakis zapas chajsu to teraz tez bym wziął xD
+[39;49m[37m[39;49m[32m19:03 [1]Giant_93: ale piernicze
+[39;49m[37m[39;49m[32m19:04 [1]Giant_93: mi brak 400k xD
+[39;49m[37m[39;49m[32m19:04 [0]Bombel3k: moge dac
+[39;49m[37m[39;49m[32m19:04 [1]Giant_93: i tak nie kupię xD szkoda kasy
+[39;49m[37m[39;49m[32m19:04 [0]Bombel3k: xD
+[39;49m[37m[39;49m[32m19:05 [1]Giant_93: edi by się przydał xD
+[39;49m[37m[39;49m[32m19:06 [0]Bombel3k: no troche tak
+[39;49m[37m[39;49m[32m19:07 [1]Giant_93: rsx bez tune ma 207km/h
+[39;49m[37m[39;49m[32m19:07 [0]Bombel3k: to na ft -/+ 247
+[39;49m[37m[39;49m[32m19:07 [0]Bombel3k: ja zw na 15-20min bo z psem musze wyjsc
+[39;49m[37m[39;49m[32m19:07 [1]Giant_93: ok
+[39;49m[37m[39;49m[32m19:08 [1]Giant_93: ja ze swoja jutro pojde
+[39;49m[37m[N] 80.255.12.253:12493 has been disconnected.
+[N] 62.141.227.162:53119 has been disconnected.
+[N] Incoming connection from 193.34.138.24
+193.34.138.24 PiotrazPL
+[N] 193.34.138.24:52976 has been disconnected.
+[N] Incoming connection from 84.15.187.181
+84.15.187.181 edgar12345cake
+[N] 84.15.187.181:49311 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[39;49m[32m01:02 [0]Bombel3k: psiśłem :D
+[39;49m[37m[39;49m[32m01:15 [0]Bombel3k: jebie mnie to ide spac 
+[39;49m[37m[39;49m[32m01:15 [0]Bombel3k: :/
+[39;49m[37m[39;49m[32m01:15 [0]Bombel3k: <3
+[39;49m[37m[39;49m[32m01:15 [0]Bombel3k: -_-
+[39;49m[37m[39;49m[32m01:15 [0]Bombel3k: (*-*)
+[39;49m[37m[39;49m[32m01:15 [0]Bombel3k: (*_*)
+[39;49m[37m[39;49m[32m01:16 [0]Bombel3k: :D
+[39;49m[37m[39;49m[32m01:16 [0]Bombel3k: :P
+[39;49m[37m[39;49m[32m01:16 [0]Bombel3k: :-)
+[39;49m[37m[39;49m[32m01:16 [0]Bombel3k: :-(
+[39;49m[37m[39;49m[32m01:17 [0]Bombel3k: siema komunikat serwerowy :D
+[39;49m[37m[39;49m[32m01:17 [0]Bombel3k: ale depreszyn
+[39;49m[37m[39;49m[32m01:26 [0]Bombel3k: spierdalam spać
+[39;49m[37m[39;49m[32m01:26 [0]Bombel3k: naura
+[39;49m[37m[N] 62.141.227.162:58506 has been disconnected.
+[N] Incoming connection from 178.235.185.128
+178.235.185.128 DrogoVy
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[39;49m[32m13:07 [1]Bombel3k: siema
+[39;49m[37m[39;49m[32m13:07 [0]DrogoVy: siema
+[39;49m[37m[N] 178.235.185.128:38102 has been disconnected.
+[N] 62.141.227.162:50917 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[N] 62.141.227.162:50917 has been disconnected.
+[N] Incoming connection from 84.15.187.181
+84.15.187.181 edgar12345cake
+[N] 84.15.187.181:56863 has been disconnected.
+[N] Incoming connection from 84.15.187.181
+84.15.187.181 edgar12345cake
+[N] 84.15.187.181:56863 has been disconnected.
+[N] Incoming connection from 84.15.187.181
+84.15.187.181 edgar12345cake
+[N] 84.15.187.181:56863 has been disconnected.
+[N] Incoming connection from 84.15.187.181
+84.15.187.181 edgar12345cake
+[N] 84.15.187.181:56863 has been disconnected.
+[N] Incoming connection from 80.255.2.70
+80.255.2.70 Giant_93
+[N] 80.255.2.70:15583 has been disconnected.
+[N] Incoming connection from 89.64.35.231
+89.64.35.231 oskar3742
+[N] 89.64.35.231:48368 has been disconnected.
+[N] Incoming connection from 84.15.187.181
+84.15.187.181 edgar12345cake
+[N] 84.15.187.181:63846 has been disconnected.
+[N] Incoming connection from 84.15.187.181
+[N] Incoming connection from 62.141.227.162
+84.15.187.181 edgar12345cake
+62.141.227.162 Bombel3k
+[39;49m[32m19:47 [1]Bombel3k: siema
+[39;49m[37m[39;49m[32m19:47 [0]edi1: elo
+[39;49m[37m[N] 62.141.227.162:64826 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[39;49m[32m20:01 [0]edi1: dobry bonus
+[39;49m[37m[39;49m[32m20:01 [1]Bombel3k: no
+[39;49m[37m[N] 84.15.187.181:60249 has been disconnected.
+[N] Incoming connection from 84.15.187.181
+84.15.187.181 edgar12345cake
+[N] 62.141.227.162:64826 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[39;49m[32m20:08 [0]edi1: dobra spadam grac farminga 22
+[39;49m[37m[39;49m[32m20:08 [1]Bombel3k: ok
+[39;49m[37m[N] 84.15.187.181:60249 has been disconnected.
+[N] 62.141.227.162:64826 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[39;49m[32m20:55 [0]Bombel3k: naura
+[39;49m[37m[N] 62.141.227.162:64826 has been disconnected.
+[N] Incoming connection from 89.64.91.188
+[N] 89.64.91.188:34034 has been disconnected.
+[N] Incoming connection from 91.231.100.49
+91.231.100.49 Giant_93
+[N] 91.231.100.49:13841 has been disconnected.
+[N] Incoming connection from 80.255.7.4
+80.255.7.4 Giant_93
+[N] 80.255.7.4:6427 has been disconnected.
+[N] Incoming connection from 5.172.238.227
+5.172.238.227 Mateuszeqx
+Connection refused [::1]:3306
+[N] 5.172.238.227:2561 has been disconnected.
+[N] Incoming connection from 5.172.238.227
+5.172.238.227 Mateuszeqx
+[N] 5.172.238.227:2561 has been disconnected.
+[N] Incoming connection from 5.172.238.227
+5.172.238.227 Mateuszeqx
+[N] 5.172.238.227:2583 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[39;49m[32m19:15 [0]Bombel3k: siema widzowie
+[39;49m[37m[N] Incoming connection from 84.15.191.125
+84.15.191.125 edgar12345cake
+[39;49m[32m19:30 [1]edi1: siema
+[39;49m[37m[N] 84.15.191.125:50720 has been disconnected.
+[39;49m[32m19:32 [0]Bombel3k: siema
+[39;49m[37m[N] Incoming connection from 176.214.144.221
+176.214.144.221 zmibig
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] 176.214.144.221:22012 has been disconnected.
+[39;49m[32m21:09 [0]Bombel3k: naura widzowie
+[39;49m[37m[N] 62.141.227.162:57985 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[N] 62.141.227.162:52100 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[39;49m[32m16:03 [0]Bombel3k: siemanko widzowie
+[39;49m[37m[39;49m[32m16:04 [0]Bombel3k: ale masny bonusik
+[39;49m[37m[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[N] 83.20.236.53:44263 has been disconnected.
+[39;49m[32m16:12 [0]Bombel3k: siema
+[39;49m[37m[39;49m[32m16:12 [0]Bombel3k: aha ;c
+[39;49m[37m[N] 62.141.227.162:52100 has been disconnected.
+[N] Incoming connection from 5.173.3.82
+5.173.3.82 SwaciK2137
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] 5.173.3.82:49440 has been disconnected.
+[N] Incoming connection from 5.173.3.82
+5.173.3.82 SwaciK2137
+[N] 5.173.3.82:49440 has been disconnected.
+[N] Incoming connection from 5.173.3.82
+5.173.3.82 SwaciK2137
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[39;49m[32m19:26 [1]Bombel3k: siema
+[39;49m[37m[39;49m[32m19:27 [0]SwaciK2137: siema
+[39;49m[37m[N] 62.141.227.162:63372 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[39;49m[32m19:35 [0]SwaciK2137: pytanie mam 
+[39;49m[37m[39;49m[32m19:35 [1]Bombel3k: no ?
+[39;49m[37m[39;49m[32m19:36 [0]SwaciK2137: jak wyglada ta procentówka na pracach ? w sensie na ogrodnika jest premia 24k% 
+[39;49m[37m[39;49m[32m19:36 [1]Bombel3k: bo to są testy i żeby gracze mieli łatwiej to są takie premie duże
+[39;49m[37m[39;49m[32m19:36 [0]SwaciK2137: to wiem 
+[39;49m[37m[39;49m[32m19:36 [1]Bombel3k: napisz na dsc do MeHow żeby dodał ci punkty
+[39;49m[37m[39;49m[32m19:37 [0]SwaciK2137: chodziło mi czy to liczy normalnie 24k% razy tyle ile kasy zarabiasz
+[39;49m[37m[39;49m[32m19:37 [1]Bombel3k: ta
+[39;49m[37m[39;49m[32m19:37 [0]SwaciK2137: a i f3 mi nie działa na serwie wiec nie moge zrobic .auth na dc
+[39;49m[37m[39;49m[32m19:37 [1]Bombel3k: pod f2 jest wszystko
+[39;49m[37m[39;49m[32m19:38 [1]Bombel3k: f2 i opcje
+[39;49m[37m[39;49m[32m19:38 [0]SwaciK2137: a okej, dzieki 
+[39;49m[37m[N] 5.173.3.82:49440 has been disconnected.
+[N] Incoming connection from 5.173.3.82
+5.173.3.82 SwaciK2137
+[39;49m[32m19:41 [1]Bombel3k: jak jedziesz po auto to nie kupuj
+[39;49m[37m[39;49m[32m19:41 [1]Bombel3k: moge ci dac jakies
+[39;49m[37m[39;49m[32m19:41 [0]SwaciK2137: nie mam siana ani prawka xD
+[39;49m[37m[39;49m[32m19:41 [1]Bombel3k: dam ci auto za free i ci nawet na prawko dam xD
+[39;49m[37m[39;49m[32m19:41 [0]SwaciK2137: mam 1.1k na koncie w
+[39;49m[37m[39;49m[32m19:45 [0]SwaciK2137: okej
+[39;49m[37m[39;49m[32m19:48 [1]Bombel3k: ej kliknij f2 wejdz w postac i powiedz jakie masz serwer id (3 opcja od góry na środku)
+[39;49m[37m[39;49m[32m19:48 [1]Bombel3k: zaraz punkty pracy dostaniesz
+[39;49m[37m[39;49m[32m19:49 [0]SwaciK2137: 388
+[39;49m[37m[39;49m[32m19:50 [1]Bombel3k: zaraz rc bedziesz musiał zrobic jak ci napisze
+[39;49m[37m[N] Incoming connection from 37.30.113.42
+37.30.113.42 JaniaX135
+[39;49m[32m19:53 [1]Bombel3k: siema Janiax
+[39;49m[37m[39;49m[32m19:53 [2]JaniaX: siema
+[39;49m[37m[39;49m[32m19:53 [1]Bombel3k: o chodz mi zrolujesz simeona xD
+[39;49m[37m[39;49m[32m19:53 [2]JaniaX: sprawdz czy juz maz
+[39;49m[37m[39;49m[32m19:53 [0]SwaciK2137: siemaaano 
+[39;49m[37m[39;49m[32m19:53 [0]SwaciK2137: reloga mam zrobic ?
+[39;49m[37m[39;49m[32m19:54 [1]Bombel3k: ró
+[39;49m[37m[39;49m[32m19:54 [2]JaniaX: sprawdź w panelu pod f2
+[39;49m[37m[39;49m[32m19:54 [1]Bombel3k: rób
+[39;49m[37m[39;49m[32m19:54 [2]JaniaX: jak masz to nie musisz jak nie to zrób
+[39;49m[37m[39;49m[32m19:54 [0]SwaciK2137: ale kox, mam 
+[39;49m[37m[39;49m[32m19:54 [0]SwaciK2137: dzieki szef
+[39;49m[37m[39;49m[32m19:54 [1]Bombel3k: nei bo jak zdobedzie jakies punkty w pracu to mu sie zresetuja chyba
+[39;49m[37m[39;49m[32m19:54 [2]JaniaX: to kiedys tak działało jak dodawaliśmy przez baze
+[39;49m[37m[39;49m[32m19:54 [2]JaniaX: teraz mamy komende specjalna
+[39;49m[37m[39;49m[32m20:01 [1]Bombel3k: Janiax ile masz chajsu xD
+[39;49m[37m[39;49m[32m20:01 [2]JaniaX: cały
+[39;49m[37m[39;49m[32m20:02 [1]Bombel3k: chcesz tunera wziąźć i zrobic mi tego rsx na ft ? xD
+[39;49m[37m[39;49m[32m20:03 [2]JaniaX: moge
+[39;49m[37m[39;49m[32m20:04 [0]SwaciK2137: dobra zdałem xD
+[39;49m[37m[39;49m[32m20:04 [1]Bombel3k: git
+[39;49m[37m[39;49m[32m20:06 [1]Bombel3k: jade Jania
+[39;49m[37m[39;49m[32m20:06 [2]JaniaX: git
+[39;49m[37m[39;49m[32m20:07 [0]SwaciK2137: janiax ? mozesz mnie tp ? bo tak troche nie ma tu rowerka haha
+[39;49m[37m[39;49m[32m20:08 [1]Bombel3k: tepnij go na urzad
+[39;49m[37m[39;49m[32m20:08 [1]Bombel3k: albo chuj jade po ciebie
+[39;49m[37m[39;49m[32m20:09 [2]JaniaX: dobra ja spadam
+[39;49m[37m[39;49m[32m20:09 [2]JaniaX: jak cos to piszecie dc
+[39;49m[37m[39;49m[32m20:09 [1]Bombel3k: ok 
+[39;49m[37m[39;49m[32m20:09 [0]SwaciK2137: siemeeemano
+[39;49m[37m[N] 37.30.113.42:6195 has been disconnected.
+[39;49m[32m20:10 [0]SwaciK2137: wgl za ile "importy" mozna kupic ?
+[39;49m[37m[N] Incoming connection from 185.246.208.151
+185.246.208.151 Giant_93
+[39;49m[32m20:24 [2]Giant_93: elo
+[39;49m[37m[39;49m[32m20:25 [1]Bombel3k: siema
+[39;49m[37m[N] 62.141.227.162:63372 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[39;49m[32m20:25 [0]SwaciK2137: jest tu jakas myjnia ?
+[39;49m[37m[39;49m[32m20:26 [2]Giant_93: sa 4  dwie koło mnie
+[39;49m[37m[39;49m[32m20:38 [0]SwaciK2137: jakie tu max eq jest ?
+[39;49m[37m[39;49m[32m20:39 [1]Bombel3k: 80 slotów
+[39;49m[37m[N] 185.246.208.151:10928 has been disconnected.
+[39;49m[32m20:47 [0]SwaciK2137: i ten bonus jest do $ czy do expa ?
+[39;49m[37m[39;49m[32m20:47 [1]Bombel3k: to i to
+[39;49m[37m[39;49m[32m20:47 [1]Bombel3k: masz 33 lvl juz xD
+[39;49m[37m[39;49m[32m20:47 [0]SwaciK2137: no bo ogrodnika na premii robiłem xD
+[39;49m[37m[39;49m[32m20:47 [0]SwaciK2137: fajna pracaa
+[39;49m[37m[39;49m[32m20:48 [1]Bombel3k: e widlaki tera to zajebiscie
+[39;49m[37m[39;49m[32m20:49 [1]Bombel3k: jak była premia na widlaki 29k% to zarobiłem 1,6kk na godzine xD
+[39;49m[37m[39;49m[32m20:49 [0]SwaciK2137: kurwa
+[39;49m[37m[39;49m[32m20:50 [0]SwaciK2137: nacisnałem end podczas jazdy autem i musze biec z buta po auto xD
+[39;49m[37m[39;49m[32m20:50 [1]Bombel3k: unloko xD
+[39;49m[37m[39;49m[32m20:50 [0]SwaciK2137: ciekawosc i debilizm w jednym xD
+[39;49m[37m[39;49m[32m20:51 [1]Bombel3k: xD
+[39;49m[37m[39;49m[32m20:53 [0]SwaciK2137: lecisz na te wozki ?
+[39;49m[37m[39;49m[32m20:54 [1]Bombel3k: ta zaraz tylko musze przemyśleć jak ustawic kolejne auto na moim złomowisku xD
+[39;49m[37m[39;49m[32m20:54 [0]SwaciK2137: xD
+[39;49m[37m[39;49m[32m20:55 [1]Bombel3k: + jedno auto = przestawianie prawie wszystkich aut
+[39;49m[37m[39;49m[32m20:59 [0]SwaciK2137: jak sie odklada palete ?
+[39;49m[37m[N] Incoming connection from 89.64.35.231
+89.64.35.231 oskar3742
+[39;49m[32m21:00 [1]Bombel3k: shift i ctrl sie steruje góra dół i musisz wcelować tą paletą w to miejsce
+[39;49m[37m[39;49m[32m21:01 [0]SwaciK2137: dzieki :D
+[39;49m[37m[39;49m[32m21:01 [1]Bombel3k: luz po to tu jestem xD
+[39;49m[37m[39;49m[32m21:02 [2]oskar3742: elo gram 15 min moge moda
+[39;49m[37m[39;49m[32m21:02 [1]Bombel3k: spierdalaj pjerdek
+[39;49m[37m[39;49m[32m21:02 [0]SwaciK2137: xD
+[39;49m[37m[39;49m[32m21:02 [2]oskar3742: no i muta cbk
+[39;49m[37m[39;49m[32m21:04 [0]SwaciK2137: zajebista robota
+[39;49m[37m[39;49m[32m21:04 [2]oskar3742: japierdole wez spierdalaj
+[39;49m[37m[39;49m[32m21:04 [1]Bombel3k: kurwa pjerdek nei tu
+[39;49m[37m[39;49m[32m21:04 [1]Bombel3k: pm (id) dzbanie xD
+[39;49m[37m[39;49m[32m21:04 [2]oskar3742: aaaa
+[39;49m[37m[39;49m[32m21:04 [2]oskar3742: XD
+[39;49m[37m[39;49m[32m21:05 [0]SwaciK2137: ile comet s2 w simeonie ?
+[39;49m[37m[39;49m[32m21:06 [1]Bombel3k: idk +/- 250k
+[39;49m[37m[39;49m[32m21:06 [0]SwaciK2137: izi 70k juz na koncie xD
+[39;49m[37m[N] 89.64.35.231:48364 has been disconnected.
+[N] Incoming connection from 89.64.35.231
+89.64.35.231 oskar3742
+[N] Incoming connection from 86.165.122.59
+86.165.122.59 QueenMisia
+Connection refused [::1]:3306
+[N] 86.165.122.59:63299 has been disconnected.
+[N] Incoming connection from 86.165.122.59
+86.165.122.59 QueenMisia
+[N] 86.165.122.59:63299 has been disconnected.
+[N] Incoming connection from 31.60.65.107
+31.60.65.107 JaniaX135
+[39;49m[32m21:38 [1]Bombel3k: chopaki czekajta xD
+[39;49m[37m[39;49m[32m21:42 [0]SwaciK2137: jak cos zdemontować ?
+[39;49m[37m[39;49m[32m21:42 [3]JaniaX: wyjedz i wjedz 
+[39;49m[37m[39;49m[32m21:43 [0]SwaciK2137: zbugowałem sie 
+[39;49m[37m[39;49m[32m21:44 [0]SwaciK2137: mam !
+[39;49m[37m[39;49m[32m21:46 [2]oskar3742: XD
+[39;49m[37m[39;49m[32m21:46 [1]Bombel3k: kurwa ja zamkni zamknąłem zamiast pasy zapiąć
+[39;49m[37m[N] Incoming connection from 86.165.122.59
+86.165.122.59 QueenMisia
+[N] 86.165.122.59:52701 has been disconnected.
+[39;49m[32m21:54 [0]SwaciK2137: ile tu turbo dodaje ?
+[39;49m[37m[39;49m[32m21:54 [3]JaniaX: róznie chyba
+[39;49m[37m[39;49m[32m21:54 [3]JaniaX: juz nie pamietam xD
+[39;49m[37m[39;49m[32m21:54 [1]Bombel3k: tuning tu daje tak jak limiter na fl
+[39;49m[37m[39;49m[32m21:55 [1]Bombel3k: pasy zapiąłem i freeza dostałem
+[39;49m[37m[39;49m[32m21:55 [3]JaniaX: chujowy kąkuter
+[39;49m[37m[39;49m[32m21:55 [1]Bombel3k: cichow
+[39;49m[37m[39;49m[32m21:55 [1]Bombel3k: ważne że działa
+[39;49m[37m[N] 5.173.3.82:49440 has been disconnected.
+[N] 62.141.227.162:63372 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[N] 31.60.65.107:14585 has been disconnected.
+[N] 89.64.35.231:48364 has been disconnected.
+[N] 62.141.227.162:63372 has been disconnected.
+[N] Incoming connection from 5.173.3.82
+5.173.3.82 SwaciK2137
+[N] 5.173.3.82:14824 has been disconnected.
+[N] Incoming connection from 5.173.3.82
+5.173.3.82 SwaciK2137
+[N] 5.173.3.82:14824 has been disconnected.
+[N] Incoming connection from 84.15.191.125
+84.15.191.125 edgar12345cake
+[N] 84.15.191.125:56391 has been disconnected.
+[N] Incoming connection from 185.203.252.130
+185.203.252.130 Dynia_1
+Connection refused [::1]:3306
+[N] 185.203.252.130:30998 has been disconnected.
+[N] Incoming connection from 185.203.252.130
+185.203.252.130 Dynia_1
+[N] 185.203.252.130:30998 has been disconnected.
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[N] 83.20.236.53:44150 has been disconnected.
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[N] 83.20.236.53:44150 has been disconnected.
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[N] 83.20.236.53:44150 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[39;49m[32m19:24 [0]Bombel3k: siema
+[39;49m[37m[N] 62.141.227.162:55100 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[N] 62.141.227.162:55100 has been disconnected.
+[N] Incoming connection from 83.142.83.20
+83.142.83.20 Giant_93
+[N] 83.142.83.20:13338 has been disconnected.
+[N] Incoming connection from 84.15.181.239
+84.15.181.239 edgar12345cake
+[N] 84.15.181.239:65088 has been disconnected.
+[N] Incoming connection from 84.15.181.239
+84.15.181.239 edgar12345cake
+[N] 84.15.181.239:65088 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[N] 62.141.227.162:52460 has been disconnected.
+[N] Incoming connection from 84.15.181.249
+84.15.181.249 edgar12345cake
+[N] 84.15.181.249:58407 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[N] 62.141.227.162:57591 has been disconnected.
+[N] Incoming connection from 91.123.213.26
+91.123.213.26 bartek00560
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[N] 62.141.227.162:50222 has been disconnected.
+[N] 91.123.213.26:52895 has been disconnected.
+[N] Incoming connection from 91.123.213.26
+91.123.213.26 bartek00560
+[N] 91.123.213.26:52895 has been disconnected.
+[N] Incoming connection from 84.15.181.249
+84.15.181.249 edgar12345cake
+[N] 84.15.181.249:65343 has been disconnected.
+[N] Incoming connection from 94.254.238.68
+94.254.238.68 M4lpaa
+[N] 94.254.238.68:13645 has been disconnected.
+[N] Incoming connection from 91.123.213.26
+91.123.213.26 bartek00560
+[N] 91.123.213.26:60867 has been disconnected.
+[N] Incoming connection from 91.123.213.26
+91.123.213.26 bartek00560
+[N] 91.123.213.26:60867 has been disconnected.
+[N] Incoming connection from 84.15.181.249
+84.15.181.249 edgar12345cake
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[N] 213.108.119.240:55447 has been disconnected.
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[N] 84.15.181.249:51714 has been disconnected.
+[N] Incoming connection from 84.15.181.249
+84.15.181.249 edgar12345cake
+[N] 84.15.181.249:51714 has been disconnected.
+[39;49m[32m22:29 [1]robotek019: siema
+[39;49m[37m[N] Incoming connection from 5.173.5.92
+5.173.5.92 Bombel3k
+[39;49m[32m23:18 [0]Bombel3k: siemka
+[39;49m[37m[39;49m[32m23:18 [1]robotek019: siema
+[39;49m[37m[N] 213.108.119.240:55447 has been disconnected.
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[39;49m[32m23:24 [0]Bombel3k: widziałeś jakie mam złomowisko pod domkiem xD?
+[39;49m[37m[39;49m[32m23:29 [0]Bombel3k: jak dodał rafinerie to było 15 osob przez 2 dni
+[39;49m[37m[N] 213.108.119.240:55447 has been disconnected.
+[N] 5.173.5.92:54687 has been disconnected.
+[N] Incoming connection from 91.123.213.26
+[N] 91.123.213.26:57321 has been disconnected.
+[N] Incoming connection from 91.123.213.26
+[N] 91.123.213.26:60594 has been disconnected.
+[N] Incoming connection from 91.123.213.26
+91.123.213.26 bartek00560
+[N] 91.123.213.26:54564 has been disconnected.
+[N] Incoming connection from 91.123.213.26
+91.123.213.26 bartek00560
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[39;49m[32m13:05 [0]bartek00560: siema
+[39;49m[37m[39;49m[32m13:05 [1]adix8901: elo
+[39;49m[37m[39;49m[32m13:05 [0]bartek00560: fajny ten serwer
+[39;49m[37m[39;49m[32m13:06 [1]adix8901: wbijasz na dc 
+[39;49m[37m[39;49m[32m13:06 [0]bartek00560: nie mam mikro kuzynowi dalem sluchawki bo on ma zdalne lekcje i nie mial wgl sluchawek
+[39;49m[37m[N] 83.20.236.53:44302 has been disconnected.
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[39;49m[32m13:08 [1]adix8901: to przez telefon
+[39;49m[37m[39;49m[32m13:08 [0]bartek00560: moze kiedy indziej
+[39;49m[37m[N] Incoming connection from 89.64.93.26
+89.64.93.26 -slupek-
+[N] 83.20.236.53:44302 has been disconnected.
+[N] 91.123.213.26:54564 has been disconnected.
+[N] 89.64.93.26:63637 has been disconnected.
+[N] Incoming connection from 91.123.213.26
+91.123.213.26 bartek00560
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[39;49m[32m16:17 [1]adix8901: jj
+[39;49m[37m[39;49m[32m16:17 [0]bartek00560: ok
+[39;49m[37m[39;49m[32m16:18 [1]adix8901: ale guwniana premia
+[39;49m[37m[39;49m[32m16:19 [1]adix8901: załatwić ci te punkty pracy 
+[39;49m[37m[39;49m[32m16:19 [0]bartek00560: na tym zarabiasdz 20k w 2min
+[39;49m[37m[39;49m[32m16:19 [0]bartek00560: jak chcesz to mozesz
+[39;49m[37mmaxpoi[6n      /maxpoints 0
+[39;49m[33m16:26 - Pomyślnie zwiększono punkty pracy gracza do 2000!
+[39;49m[37mjuz
+[39;49m[32m16:26 [0]bartek00560: dzieki
+[39;49m[37m[39;49m[32m16:39 [1]adix8901: a potem rozwozisz na stacje
+[39;49m[37m[39;49m[32m16:40 [0]bartek00560: ok\
+[39;49m[37m[39;49m[32m16:40 [0]bartek00560: ok
+[39;49m[37m[39;49m[32m16:41 [1]adix8901: zaraz bonus się zmienia
+[39;49m[37m[39;49m[32m16:45 [1]adix8901: jeszcze w ls masz szyby
+[39;49m[37m[39;49m[32m16:45 [0]bartek00560: wiem 
+[39;49m[37m[39;49m[32m16:46 [1]adix8901: lawety sa
+[39;49m[37m[39;49m[32m16:47 [0]bartek00560: ma pisac np stacja f 0L
+[39;49m[37m[39;49m[32m16:47 [1]adix8901: ta
+[39;49m[37m[39;49m[32m16:47 [0]bartek00560: ?
+[39;49m[37m[39;49m[32m16:47 [0]bartek00560: ok
+[39;49m[37m[39;49m[32m16:48 [1]adix8901: i jak serverek się podoba?
+[39;49m[37m[39;49m[32m16:48 [0]bartek00560: jest git
+[39;49m[37m[39;49m[32m16:49 [0]bartek00560: po tym na lawety?
+[39;49m[37m[39;49m[32m16:49 [1]adix8901: ta
+[39;49m[37m[39;49m[32m16:50 [1]adix8901: bo premia
+[39;49m[37m[39;49m[32m16:55 [0]bartek00560: ile tu sie zarabia?
+[39;49m[37m[39;49m[32m16:55 [1]adix8901: zobaczysz
+[39;49m[37m[39;49m[32m16:56 [1]adix8901: ja jade po sraksa i na lawetki
+[39;49m[37m[39;49m[32m16:56 [0]bartek00560: ja  mam 4 stacje
+[39;49m[37m[39;49m[32m16:56 [1]adix8901: ok
+[39;49m[37m[39;49m[32m17:17 [1]adix8901: nie wtą  strone
+[39;49m[37m[39;49m[32m17:20 [0]bartek00560: jade
+[39;49m[37m[39;49m[32m17:24 [0]bartek00560: xd auta od graczy na lawete
+[39;49m[37m[39;49m[32m17:24 [1]adix8901: ta
+[39;49m[37m[39;49m[32m17:24 [0]bartek00560: tu nie ma kat a?
+[39;49m[37m[39;49m[32m17:25 [1]adix8901: narazie nie
+[39;49m[37m[39;49m[32m17:27 [1]adix8901: 42k ez
+[39;49m[37m[39;49m[32m17:28 [0]bartek00560: 35k 
+[39;49m[37m[39;49m[32m17:29 [1]adix8901: pod f2 i postać możesz przydzielić punkty umiejętności
+[39;49m[37m[39;49m[32m17:29 [0]bartek00560: juz to zrobilems
+[39;49m[37m[39;49m[32m17:30 [0]bartek00560: tu sie da domy miec
+[39;49m[37m[39;49m[32m17:30 [1]adix8901: ta
+[39;49m[37m[39;49m[32m17:32 [0]bartek00560: mam nowa fure
+[39;49m[37m[39;49m[32m17:32 [1]adix8901: jaką
+[39;49m[37m[39;49m[32m17:32 [0]bartek00560: zaraz zobaczysz
+[39;49m[37m[39;49m[32m17:34 [0]bartek00560: masz chatre?
+[39;49m[37m[39;49m[32m17:34 [0]bartek00560: chate?
+[39;49m[37m[39;49m[32m17:34 [1]adix8901: miałem
+[39;49m[37m[N] 83.20.236.53:44316 has been disconnected.
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[39;49m[32m17:45 [0]bartek00560: sprzedales auto?
+[39;49m[37m[N] 91.123.213.26:57083 has been disconnected.
+[N] Incoming connection from 91.123.213.26
+91.123.213.26 bartek00560
+[39;49m[32m17:50 [0]bartek00560: ale git w chacie jest schowek
+[39;49m[37m[N] 83.20.236.53:44316 has been disconnected.
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[N] 91.123.213.26:57083 has been disconnected.
+[N] Incoming connection from 91.123.213.26
+[N] 91.123.213.26:57083 has been disconnected.
+[N] Incoming connection from 91.123.213.26
+91.123.213.26 bartek00560
+[N] 83.20.236.53:44316 has been disconnected.
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[39;49m[32m18:21 [1]adix8901: j
+[39;49m[37m[39;49m[32m18:53 [0]bartek00560: srednia praca
+[39;49m[37m[39;49m[32m18:53 [1]adix8901: no
+[39;49m[37m[N] 91.123.213.26:61783 has been disconnected.
+[N] Incoming connection from 91.123.213.26
+91.123.213.26 bartek00560
+[39;49m[32m18:54 [0]bartek00560: jade wozki zobaczyc
+[39;49m[37m[39;49m[32m18:54 [1]adix8901: ok
+[39;49m[37m[39;49m[32m18:55 [1]adix8901: a ja magazuniera w paleto
+[39;49m[37m[39;49m[32m18:56 [0]bartek00560: okw
+[39;49m[37m[N] 83.20.236.53:44316 has been disconnected.
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[N] 83.20.236.53:44316 has been disconnected.
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[N] Incoming connection from 91.245.82.80
+91.245.82.80 SNOWC4T
+[N] 91.245.82.80:50000 has been disconnected.
+[39;49m[32m19:00 [0]bartek00560: gdzie ty?
+[39;49m[37m[39;49m[32m19:01 [1]adix8901: sklep z ubraniami
+[39;49m[37m[39;49m[32m19:04 [1]adix8901: ide na onlina
+[39;49m[37m[39;49m[32m19:04 [0]bartek00560: ok
+[39;49m[37m[N] 83.20.236.53:44316 has been disconnected.
+[N] 91.123.213.26:61783 has been disconnected.
+[N] Incoming connection from 5.173.142.251
+5.173.142.251 JaRuSzii
+Connection refused [::1]:3306
+[N] 5.173.142.251:16720 has been disconnected.
+[N] Incoming connection from 91.123.213.26
+91.123.213.26 bartek00560
+Connection refused [::1]:3306
+[N] 91.123.213.26:64529 has been disconnected.
+[N] Incoming connection from 91.123.213.26
+91.123.213.26 bartek00560
+[N] 91.123.213.26:64529 has been disconnected.
+[N] Incoming connection from 91.123.213.26
+91.123.213.26 bartek00560
+[N] 91.123.213.26:64529 has been disconnected.
+[N] Incoming connection from 91.123.213.26
+91.123.213.26 bartek00560
+[N] 91.123.213.26:64529 has been disconnected.
+[N] Incoming connection from 91.123.213.26
+91.123.213.26 bartek00560
+[N] 91.123.213.26:64529 has been disconnected.
+[N] Incoming connection from 91.123.213.26
+91.123.213.26 bartek00560
+[N] 91.123.213.26:64529 has been disconnected.
+[N] Incoming connection from 91.123.213.26
+91.123.213.26 bartek00560
+[N] Incoming connection from 79.186.226.21
+79.186.226.21 Piraciako
+[N] 79.186.226.21:63884 has been disconnected.
+[N] Incoming connection from 176.113.207.17
+176.113.207.17 PrzemoVPL
+[N] 91.123.213.26:64529 has been disconnected.
+[N] 176.113.207.17:59209 has been disconnected.
+[N] Incoming connection from 91.123.213.26
+91.123.213.26 bartek00560
+[N] 91.123.213.26:62955 has been disconnected.
+[N] Incoming connection from 176.113.207.17
+176.113.207.17 PrzemoVPL
+[N] 176.113.207.17:49250 has been disconnected.
+[N] Incoming connection from 176.113.207.17
+[N] 176.113.207.17:49250 has been disconnected.
+[N] Incoming connection from 84.15.181.249
+84.15.181.249 edgar12345cake
+[N] 84.15.181.249:60498 has been disconnected.
+[N] Incoming connection from 91.123.213.26
+91.123.213.26 bartek00560
+[N] 91.123.213.26:60314 has been disconnected.
+[N] Incoming connection from 91.123.213.26
+91.123.213.26 bartek00560
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 188.47.127.251:16513 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 188.47.127.251:16513 has been disconnected.
+[N] Incoming connection from 176.113.207.17
+176.113.207.17 PrzemoVPL
+[N] Incoming connection from 83.20.240.45
+83.20.240.45 PiterosLGD
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] 83.20.240.45:28948 has been disconnected.
+[N] 176.113.207.17:59824 has been disconnected.
+[N] Incoming connection from 176.113.207.17
+176.113.207.17 PrzemoVPL
+[N] 176.113.207.17:59824 has been disconnected.
+[N] Incoming connection from 176.113.207.17
+176.113.207.17 PrzemoVPL
+[39;49m[32m10:48 [1]PrzemoVPL: crash
+[39;49m[37m[39;49m[32m10:48 [0]Bartek: ok
+[39;49m[37m[N] Incoming connection from 83.20.236.53
+[N] 83.20.236.53:44669 has been disconnected.
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[N] 176.113.207.17:64798 has been disconnected.
+[N] Incoming connection from 176.113.207.17
+176.113.207.17 PrzemoVPL
+[N] 83.20.236.53:44780 has been disconnected.
+[N] 91.123.213.26:60314 has been disconnected.
+[39;49m[32m11:02 [1]PrzemoVPL: auto utopione znika?
+[39;49m[37m[N] 176.113.207.17:64798 has been disconnected.
+[N] Incoming connection from 91.123.213.26
+91.123.213.26 bartek00560
+[N] 91.123.213.26:49378 has been disconnected.
+[N] Incoming connection from 80.255.12.246
+80.255.12.246 Giant_93
+[N] 80.255.12.246:6091 has been disconnected.
+[N] Incoming connection from 91.123.213.26
+91.123.213.26 bartek00560
+[N] 91.123.213.26:52624 has been disconnected.
+[N] Incoming connection from 91.123.213.26
+91.123.213.26 bartek00560
+[N] 91.123.213.26:52624 has been disconnected.
+[N] Incoming connection from 83.25.205.159
+[N] 83.25.205.159:61683 has been disconnected.
+[N] Incoming connection from 176.113.207.17
+176.113.207.17 PrzemoVPL
+[N] 176.113.207.17:57992 has been disconnected.
+[N] Incoming connection from 84.15.181.249
+84.15.181.249 edgar12345cake
+[N] 84.15.181.249:63779 has been disconnected.
+[N] Incoming connection from 84.15.181.249
+84.15.181.249 edgar12345cake
+[N] 84.15.181.249:63779 has been disconnected.
+[N] Incoming connection from 91.123.213.26
+91.123.213.26 bartek00560
+[N] 91.123.213.26:51833 has been disconnected.
+[N] Incoming connection from 91.123.213.26
+91.123.213.26 bartek00560
+[N] 91.123.213.26:51833 has been disconnected.
+[N] Incoming connection from 91.123.213.26
+91.123.213.26 bartek00560
+[N] 91.123.213.26:51833 has been disconnected.
+[N] Incoming connection from 94.232.35.26
+94.232.35.26 Boile_sweet
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] 94.232.35.26:52847 has been disconnected.
+[N] Incoming connection from 176.113.207.17
+176.113.207.17 PrzemoVPL
+[N] Incoming connection from 193.34.173.210
+[N] 193.34.173.210:65323 has been disconnected.
+[N] 176.113.207.17:57895 has been disconnected.
+[N] Incoming connection from 176.113.207.17
+176.113.207.17 PrzemoVPL
+[N] 176.113.207.17:57895 has been disconnected.
+[N] Incoming connection from 176.113.207.17
+176.113.207.17 PrzemoVPL
+[N] 176.113.207.17:57895 has been disconnected.
+[N] Incoming connection from 176.113.207.17
+176.113.207.17 PrzemoVPL
+[N] Incoming connection from 78.9.3.135
+[N] 78.9.3.135:62882 has been disconnected.
+[N] 176.113.207.17:55038 has been disconnected.
+[N] Incoming connection from 176.113.207.17
+176.113.207.17 PrzemoVPL
+[N] 176.113.207.17:55038 has been disconnected.
+[N] Incoming connection from 176.113.207.17
+176.113.207.17 PrzemoVPL
+[N] 176.113.207.17:55038 has been disconnected.
+[N] Incoming connection from 91.123.213.26
+[N] 91.123.213.26:63081 has been disconnected.
+[N] Incoming connection from 91.123.213.26
+91.123.213.26 bartek00560
+[N] 91.123.213.26:58103 has been disconnected.
+[N] Incoming connection from 91.123.213.26
+91.123.213.26 bartek00560
+[N] 91.123.213.26:58103 has been disconnected.
+[N] Incoming connection from 91.123.213.26
+91.123.213.26 bartek00560
+[N] Incoming connection from 94.232.35.26
+94.232.35.26 Boile_sweet
+[39;49m[32m20:50 [0]Bartek: siema
+[39;49m[37m[39;49m[32m20:50 [1]Boile_sweet: elo
+[39;49m[37m[39;49m[32m20:50 [1]Boile_sweet: chujowy ten nicl
+[39;49m[37m[39;49m[32m20:50 [0]Bartek: jedz do urzedu zmienic
+[39;49m[37m[39;49m[32m20:50 [1]Boile_sweet: jade go zmienić
+[39;49m[37m[39;49m[32m20:50 [0]Bartek: jedz
+[39;49m[37m[39;49m[32m20:50 [1]Boile_sweet: 2km
+[39;49m[37m[N] 91.123.213.26:58103 has been disconnected.
+[N] Incoming connection from 91.123.213.26
+91.123.213.26 bartek00560
+[39;49m[32m20:51 [1]Boile_sweet: da się tu gadać?
+[39;49m[37m[39;49m[32m20:52 [1]Boile_sweet: XD
+[39;49m[37m[39;49m[32m20:52 [0]Bartek: jade
+[39;49m[37m[39;49m[32m20:52 [1]Boile_sweet: mg tu jeździć twoimi samochodami>
+[39;49m[37mConnection refused [::1]:3306
+[N] 94.232.35.26:49276 has been disconnected.
+[N] Incoming connection from 94.232.35.26
+94.232.35.26 Boile_sweet
+[39;49m[32m20:58 [0]Bartek: dawaj urzad
+[39;49m[37m[39;49m[32m20:58 [1]Paandaa: ok
+[39;49m[37m[39;49m[32m20:59 [1]Paandaa: kurde ja zaraz spadaćmusze ;( smutek
+[39;49m[37mConnection refused [::1]:3306
+[39;49m[32m21:01 [0]Bartek: czm
+[39;49m[37m[39;49m[32m21:01 [1]Paandaa: rano wstać wcześnie musze 
+[39;49m[37m[39;49m[32m21:01 [0]Bartek: o ktA?
+[39;49m[37m[39;49m[32m21:01 [0]Bartek: o kt?
+[39;49m[37m[39;49m[32m21:01 [1]Paandaa: nw 6 cos 
+[39;49m[37m[39;49m[32m21:01 [0]Bartek: ja 5,40
+[39;49m[37m[39;49m[32m21:01 [1]Paandaa: a mama ma na 8 a cos jescze zrobic musi 
+[39;49m[37m[39;49m[32m21:02 [0]Bartek: bo na azo musze jechac
+[39;49m[37m[39;49m[32m21:02 [1]Paandaa: zawieść mnie musi do szkoł
+[39;49m[37m[39;49m[32m21:02 [0]Bartek: ty do 10 chodzisz?
+[39;49m[37m[39;49m[32m21:02 [1]Paandaa: ta
+[39;49m[37m[39;49m[32m21:02 [0]Bartek: to ty masz 5min z buta
+[39;49m[37m[39;49m[32m21:02 [1]Paandaa: wiem XD
+[39;49m[37m[39;49m[32m21:04 [1]Paandaa: 500$ trza
+[39;49m[37m[39;49m[32m21:04 [0]Bartek: ja nwm jak przelew zrobic bo cos nie dziala
+[39;49m[37m[39;49m[32m21:04 [0]Bartek: czkj tam
+[39;49m[37m[39;49m[32m21:04 [1]Paandaa: XD esy sa 
+[39;49m[37m[39;49m[32m21:04 [1]Paandaa: ex*
+[39;49m[37m[39;49m[32m21:04 [1]Paandaa: kys tez
+[39;49m[37m[39;49m[32m21:05 [1]Paandaa: tu pablo adminem jest chyba
+[39;49m[37m[39;49m[32m21:05 [0]Bartek: czm na fl nie grasz?
+[39;49m[37m[39;49m[32m21:05 [1]Paandaa: znajomy mój
+[39;49m[37m[39;49m[32m21:05 [1]Paandaa: gram w fivem
+[39;49m[37m[39;49m[32m21:05 [0]Bartek: oka
+[39;49m[37m[39;49m[32m21:05 [0]Bartek: jakie masz fury na fl?
+[39;49m[37m[39;49m[32m21:05 [1]Paandaa: ff są i fos
+[39;49m[37m[39;49m[32m21:05 [1]Paandaa: XDDD
+[39;49m[37m[39;49m[32m21:06 [0]Bartek: jakie masz fury na fl?
+[39;49m[37m[39;49m[32m21:06 [1]Paandaa: mam penumbre 1215 id 
+[39;49m[37m[39;49m[32m21:06 [1]Paandaa: raidena 
+[39;49m[37m[39;49m[32m21:06 [1]Paandaa: cos jesxcze
+[39;49m[37m[N] 94.232.35.26:49276 has been disconnected.
+[N] 91.123.213.26:58103 has been disconnected.
+[N] Incoming connection from 83.142.83.23
+[N] 83.142.83.23:6984 has been disconnected.
+[N] Incoming connection from 83.142.83.23
+83.142.83.23 Giant_93
+[N] 83.142.83.23:6831 has been disconnected.
+[N] Incoming connection from 84.15.187.239
+84.15.187.239 edgar12345cake
+[N] 84.15.187.239:62472 has been disconnected.
+[N] Incoming connection from 77.253.89.94
+77.253.89.94 Kabess0
+Connection refused [::1]:3306
+[N] 77.253.89.94:62720 has been disconnected.
+[N] Incoming connection from 62.141.227.162
+62.141.227.162 Bombel3k
+[N] 62.141.227.162:62494 has been disconnected.
+[N] Incoming connection from 84.15.189.105
+84.15.189.105 edgar12345cake
+[N] 84.15.189.105:50783 has been disconnected.
+[N] Incoming connection from 84.15.189.105
+84.15.189.105 edgar12345cake
+[N] 84.15.189.105:50783 has been disconnected.
+[N] Incoming connection from 91.205.247.64
+91.205.247.64 bartek00560
+[N] 91.205.247.64:50298 has been disconnected.
+[N] Incoming connection from 80.255.2.89
+80.255.2.89 Giant_93
+[N] 80.255.2.89:10691 has been disconnected.
+[N] Incoming connection from 91.205.247.64
+91.205.247.64 bartek00560
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[N] 91.205.247.64:56794 has been disconnected.
+[N] Incoming connection from 91.205.247.64
+91.205.247.64 bartek00560
+[N] 83.20.236.53:25528 has been disconnected.
+[N] Incoming connection from 83.20.236.53
+83.20.236.53 adix8901
+[39;49m[32m18:55 [0]Bartek: 1 dziennie mozna auto sprzedac 
+[39;49m[37m[39;49m[32m18:57 [0]Bartek: tampa drift na simeonie
+[39;49m[37m[39;49m[32m18:58 [1]adix8901: ale nudy
+[39;49m[37m[N] 91.205.247.64:56794 has been disconnected.
+[N] 83.20.236.53:25528 has been disconnected.
+[N] Incoming connection from 89.64.74.244
+89.64.74.244 Szumixx3390
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] Incoming connection from 37.248.159.83
+[N] 37.248.159.83:17943 has been disconnected.
+[N] Incoming connection from 37.248.159.83
+37.248.159.83 Mateuszeqx
+[N] 37.248.159.83:17960 has been disconnected.
+[N] 89.64.74.244:61062 has been disconnected.
+[N] Incoming connection from 84.15.189.105
+84.15.189.105 edgar12345cake
+[N] 84.15.189.105:51342 has been disconnected.
+[N] Incoming connection from 188.241.25.16
+[N] 188.241.25.16:59036 has been disconnected.
+[N] Incoming connection from 188.241.25.16
+188.241.25.16 0DEYMAN0
+[N] 188.241.25.16:65264 has been disconnected.
+[N] Incoming connection from 188.241.25.16
+188.241.25.16 0DEYMAN0
+[N] 188.241.25.16:65264 has been disconnected.
+[N] Incoming connection from 176.113.207.17
+[N] 176.113.207.17:64562 has been disconnected.
+[N] Incoming connection from 176.113.207.17
+176.113.207.17 PrzemoVPL
+[N] 176.113.207.17:54259 has been disconnected.

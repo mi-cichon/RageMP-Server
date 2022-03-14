@@ -1,0 +1,134 @@
+[33m[INFO] [0mStarting RAGE Multiplayer server...
+[0m[33m
+[============================================================]
+[33m[33m||
+[33m||[33m	MaxPlayers		[0m50[33m
+||	Sync rate		[0m40ms[33m
+||	Name			[0mBasicRPG.pl | W trakcie tworzenia | Wiecej na https://discord.gg/2vrMdXsdRW [PL][33m
+||	Gamemode		[0mrpg[33m
+||	Streaming distance	[0m500[33m
+||	Announcement		[0menabled[33m
+||	Voice chat		[0menabled[33m
+||	Address			[0m127.0.0.1:22005[33m
+||	Connection limits	[0mdisabled[33m
+||	Encryption		[0menabled[33m
+||	NodeJS			[0menabled[33m
+||	C#			[0menabled[33m
+||
+[============================================================]
+
+[0m
+[33m[INFO][0m Loading NodeJS packages...
+[33m[INFO][0m Starting packages...
+[32m[DONE][0m Server packages have been started.
+Initializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 10/8/2021 8:55:30 PM
+Unable to load acl.xml
+ACLEnabled: False
+Loaded 667 entries from vehicleData.json
+Loading resources..
+[?1h=[39;49m[33m->[39;49m[37m Starting [39;49m[36mServer[39;49m[37m resource..
+[39;49m[39;49m[37mServer:[39;49m[37m loading scripts.. found 1 script(s)
+[39;49m[39;49m[37mServer:[39;49m[37m instantiating [39;49m[37mServerSide.MainClass[39;49m[37m..
+[39;49mConnection refused [::1]:3306
+Connection refused [::1]:3306
+[39;49m[37mServer:[39;49m[37m loading server events.. found 10 server event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 10 server events(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loading remote events.. found 145 remote event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 145 remote event(s)
+[39;49mServer started...
+[39;49m[32m->[39;49m[37m Resource [39;49m[36mServer[39;49m[37m started!
+[39;49m[39;49m[32mStarted! Waiting for connections..
+[39;49m[32m[DONE] [0mStarted resource transfer server at 22006 port.
+[32m[DONE] [0mClient-side packages weight: [33m166.754471 MB[0m (uncompressed: [33m324.780884 MB[0m).
+[33m[INFO] [0mMasterList: Announcing into master server...
+[33m[INFO] [0mInitializing networking...
+[32m[DONE] [0mNetworking has been started: (IPv4-only) at 127.0.0.1:22005
+[32m[DONE] [0mThe server is ready to accept connections.
+[32m[DONE] [0mMasterList: Connected to master list.
+[N] Incoming connection from 185.186.38.1
+[N] 185.186.38.1:55053 has been disconnected.
+[N] Incoming connection from 185.186.38.1
+[N] Incoming connection from 46.204.71.100
+185.186.38.1 maciejooosek
+46.204.71.100 Besnaj29
+[N] Incoming connection from 87.101.35.161
+87.101.35.161 TomoHERE_3hunna
+[39;49m[32m21:11 [2]TomoHERE: ktos potrzebuje tunera?
+[39;49m[37m[39;49m[32m21:11 [0]MeHow: juz nie :(
+[39;49m[37m[39;49m[32m21:11 [2]TomoHERE: sadge
+[39;49m[37m[39;49m[32m21:12 [2]TomoHERE: to wracam za 30minut ;v
+[39;49m[37m[39;49m[32m21:13 [1]Besnaj29: ok
+[39;49m[37m[N] 87.101.35.161:27354 has been disconnected.
+[N] Incoming connection from 84.15.187.11
+84.15.187.11 edgar12345cake
+[39;49m[32m21:23 [2]edi1: siema wszystkim
+[39;49m[37m[39;49m[32m21:23 [0]MeHow: siemaa
+[39;49m[37m[39;49m[32m21:23 [1]Besnaj29: siema
+[39;49m[37m[39;49m[32m21:27 [2]edi1: znik mi wydech mialem podwuiny 
+[39;49m[37m[39;49m[32m21:28 [0]MeHow: a to ja nie wiem, spróbuj włożyć do przecho i wyjac
+[39;49m[37m[39;49m[32m21:30 [1]Besnaj29: ej wyłączcie ten deszcz bo jest wkurzający
+[39;49m[37m[39;49m[32m21:30 [0]MeHow: przezyjesz xD
+[39;49m[37m[39;49m[32m21:31 [1]Besnaj29: to zmniejsz prawdo podobieństwo opadów 
+[39;49m[37m[N] 84.15.187.11:58242 has been disconnected.
+[N] Incoming connection from 84.15.187.11
+84.15.187.11 edgar12345cake
+[39;49m[32m21:32 [0]MeHow: to zmniejsze moze wkrotce xD
+[39;49m[37m[39;49m[32m21:33 [1]Besnaj29: okej
+[39;49m[37m[39;49m[32m21:41 [1]Besnaj29: gdzie jest feryzier?
+[39;49m[37m[39;49m[32m21:41 [1]Besnaj29: fryzier*
+[39;49m[37m[39;49m[32m21:42 [0]MeHow: nie ma
+[39;49m[37m[39;49m[32m21:42 [1]Besnaj29: serio eh
+[39;49m[37m[39;49m[32m21:43 [1]Besnaj29: mam inne ubrania wkońcu 
+[39;49m[37m[39;49m[32m21:48 [1]Besnaj29: nie mogę zatankować 
+[39;49m[37m[39;49m[32m21:48 [1]Besnaj29: a dobra nie było tematu
+[39;49m[37m[39;49m[32m21:49 [1]Besnaj29: nie ma tu banków?
+[39;49m[37m[39;49m[32m21:49 [0]MeHow: nie ma
+[39;49m[37m[39;49m[32m21:50 [1]Besnaj29: okej jade w doki bo tam mogą być jajka
+[39;49m[37m[39;49m[32m21:50 [1]Besnaj29: XD nie mineło nawet 5 minut i już leje
+[39;49m[37m[39;49m[32m21:51 [0]MeHow: musialo minac 5 minut xD
+[39;49m[37m[39;49m[32m21:55 [2]edi1: jak dziala doztawca
+[39;49m[37m[39;49m[32m21:56 [0]MeHow: musisz do sklepów wyznaczonych jezdzic
+[39;49m[37m[39;49m[32m21:56 [0]MeHow: i tam sie zatrzymujesz, potem kolejne sklepy
+[39;49m[37m[39;49m[32m21:56 [0]MeHow: i wracasz do bazy
+[39;49m[37m[39;49m[32m21:56 [2]edi1: ok
+[39;49m[37m[N] Incoming connection from 82.76.50.74
+[39;49m[32m21:59 [0]MeHow: ja spadam jakbyu co puiszcie dicosc
+[39;49m[37m82.76.50.74 nikedovsky
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] 185.186.38.1:55053 has been disconnected.
+[39;49m[32m21:59 [1]Besnaj29: ok 
+[39;49m[37m[39;49m[32m21:59 [2]edi1: ok
+[39;49m[37m[39;49m[32m22:00 [1]Besnaj29: edi zbieraj jajka za jedno 100k
+[39;49m[37m[39;49m[32m22:01 [1]Besnaj29: a jest ich 100
+[39;49m[37m[39;49m[32m22:01 [2]edi1: szukalem niemoge znalesc
+[39;49m[37m[39;49m[32m22:01 [1]Besnaj29: jedz na plarzę tartak paleto senndi ls
+[39;49m[37m[39;49m[32m22:02 [1]Besnaj29: jak coś ja spadam będę jutro
+[39;49m[37m[N] 82.76.50.74:63960 has been disconnected.
+[N] Incoming connection from 87.101.35.161
+87.101.35.161 TomoHERE_3hunna
+[N] 46.204.71.100:23539 has been disconnected.
+[39;49m[32m22:14 [2]edi1: jest ktos z adminuf
+[39;49m[37m[39;49m[32m22:15 [0]TomoHERE: nie ma, a co potrzebujesz bo gadam z Mehowem
+[39;49m[37m[39;49m[32m22:16 [2]edi1: usuncie sniek
+[39;49m[37m[N] Incoming connection from 213.134.168.147
+213.134.168.147 -_Chmielu_-
+[39;49m[32m22:25 [2]edi1: jak cos ja bende jutro bo jestem zmenczony
+[39;49m[37m[39;49m[32m22:25 [0]TomoHERE: ok ok dobranoc
+[39;49m[37m[N] 84.15.187.11:58242 has been disconnected.
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[N] 213.108.119.240:63520 has been disconnected.
+[N] 87.101.35.161:27429 has been disconnected.
+[N] 213.134.168.147:15955 has been disconnected.
+[N] Incoming connection from 87.101.35.161
+[N] 87.101.35.161:27396 has been disconnected.
+[N] Incoming connection from 87.101.35.161
+87.101.35.161 TomoHERE_3hunna
+[N] Incoming connection from 83.29.0.44
+83.29.0.44 Drymaniusz
+^C[33m[INFO] [0mShutting down the server...
+Shutting down..
+[32m[DONE] [0mThe server has been terminated.
+terminate called without an active exception

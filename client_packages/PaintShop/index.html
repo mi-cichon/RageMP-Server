@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" src="src/js/color-picker.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="colorpicker/style.css">
+        <link rel="shortcut icon" href="https://avatars2.githubusercontent.com/u/38456916?s=460&amp;u=7db06c46c3c24a2cf19cb793aa8fbb24aedf18d0&amp;v=4" type="image/x-icon">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    </head>
+<body>
+
+
+    <div class="paintshop_mainBody">
+        <div class="paintshop_name">Lakiernia</div>
+        <div class="paintshop_body">
+            <div class="paintshop_colorBody paintshop_primary"><p>Podstawowy</p>
+                <div class="paintshop_sliderBody">
+                    <div class="picker_body">
+                        <div class="picker_sliders">
+                            <input value="0" type="range" min="0" max="255" id="red_primary">
+                            <input type="number" id="redNum_primary" class="color_input">
+                        </div>
+                        <div class="picker_sliders">
+                            <input value="204" type="range" min="0" max="255" id="green_primary">
+                            <input type="number" id="greenNum_primary" class="color_input">
+                        </div>
+                        <div class="picker_sliders">
+                            
+                            <input value="153" type="range" min="0" max="255" id="blue_primary">
+                            <input type="number" id="blueNum_primary" class="color_input">
+                        </div>
+                    </div>
+                    <div class="picker_preview picker_primary"></div>
+                </div>
+                <div class="paintshop_buttonsBody paintshop_primaryButtons">
+                    <input type="button" class="button_select paintshop_selected" value="Klasyczny">
+                    <input type="button" class="button_select" value="Metaliczny">
+                    <input type="button" class="button_select" value="Matowy">
+                </div>
+            </div>
+            <div class="paintshop_colorBody paintshop_secondary"><p>Dodatkowy</p>
+                <div class="paintshop_sliderBody">
+                    <div class="picker_body">
+                        <div class="picker_sliders">
+                            <input value="0" type="range" min="0" max="255" id="red_secondary">
+                            <input type="number" id="redNum_secondary" class="color_input">
+                        </div>
+                        <div class="picker_sliders">
+                            <input value="204" type="range" min="0" max="255" id="green_secondary">
+                            <input type="number" id="greenNum_secondary" class="color_input">
+                        </div>
+                        <div class="picker_sliders">
+                            <input value="153" type="range" min="0" max="255" id="blue_secondary">
+                            <input type="number" id="blueNum_secondary" class="color_input">
+                        </div>
+                    </div>
+                    <div class="picker_preview picker_secondary"></div>
+                </div>
+                <div class="paintshop_buttonsBody paintshop_secondaryButtons">
+                    <input type="button" class="button_select paintshop_selected" value="Klasyczny">
+                    <input type="button" class="button_select" value="Metaliczny">
+                    <input type="button" class="button_select" value="Matowy">
+                </div>
+            </div>
+            <div class="paintshop_buttonsBody">
+                <p style="color: white; margin: 0; font-size: 1.2vh; width: 20%; text-align: center; height: 2vh; line-height: 2vh;">Koszt: $3000</p>
+                <input type="button" class="button_select paintshop_preview" value="Podgląd">
+                <input type="button" class="button_select paintshop_confirm" value="Potwierdź">
+                <input type="button" class="button_cancel paintshop_close" value="Zamknij">
+            </div>
+        </div>
+    </div>
+<script src="paintshop.js" type="text/javascript"></script>
+<script src="colorpicker/primary.js" type="text/javascript"></script>
+<script src="colorpicker/secondary.js" type="text/javascript"></script>
+</body>
+</html>

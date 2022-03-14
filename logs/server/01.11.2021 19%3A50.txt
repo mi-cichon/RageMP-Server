@@ -1,0 +1,112 @@
+[33m[INFO] [0mStarting RAGE Multiplayer server...
+[0m[33m
+[============================================================]
+[33m[33m||
+[33m||[33m	MaxPlayers		[0m50[33m
+||	Sync rate		[0m40ms[33m
+||	Name			[0mBasicRPG.pl | W trakcie tworzenia | Wiecej na https://discord.gg/2vrMdXsdRW [PL][33m
+||	Gamemode		[0mrpg[33m
+||	Streaming distance	[0m500[33m
+||	Announcement		[0menabled[33m
+||	Voice chat		[0menabled[33m
+||	Address			[0m127.0.0.1:22005[33m
+||	Connection limits	[0mdisabled[33m
+||	Encryption		[0menabled[33m
+||	NodeJS			[0menabled[33m
+||	C#			[0menabled[33m
+||
+[============================================================]
+
+[0m
+[33m[INFO][0m Loading NodeJS packages...
+[33m[INFO][0m Starting packages...
+[32m[DONE][0m Server packages have been started.
+Initializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 11/1/2021 7:50:48 PM
+Unable to load acl.xml
+ACLEnabled: False
+Loaded 667 entries from vehicleData.json
+Loading resources..
+[?1h=[39;49m[33m->[39;49m[37m Starting [39;49m[36mServer[39;49m[37m resource..
+[39;49m[39;49m[37mServer:[39;49m[37m loading scripts.. found 1 script(s)
+[39;49m[39;49m[37mServer:[39;49m[37m instantiating [39;49m[37mServerSide.MainClass[39;49m[37m..
+[39;49m[39;49m[37mServer:[39;49m[37m loading server events.. found 10 server event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 10 server events(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loading remote events.. found 183 remote event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 183 remote event(s)
+[39;49mServer started...
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[39;49m[32m->[39;49m[37m Resource [39;49m[36mServer[39;49m[37m started!
+[39;49m[39;49m[32mStarted! Waiting for connections..
+[39;49m[32m[DONE] [0mStarted resource transfer server at 22006 port.
+[32m[DONE] [0mClient-side packages weight: [33m239.959656 MB[0m (uncompressed: [33m385.341278 MB[0m).
+[33m[INFO] [0mMasterList: Announcing into master server...
+[33m[INFO] [0mInitializing networking...
+[32m[DONE] [0mNetworking has been started: (IPv4-only) at 127.0.0.1:22005
+[32m[DONE] [0mThe server is ready to accept connections.
+[32m[DONE] [0mMasterList: Connected to master list.
+[N] Incoming connection from 84.15.180.80
+[N] Incoming connection from 188.47.127.251
+[N] Incoming connection from 109.231.63.235
+84.15.180.80 edgar12345cake
+109.231.63.235 QuaVim
+188.47.127.251 RoCaVe89
+[39;49m[32m19:51 [1]Ametyst: witam widzów 
+[39;49m[37m[39;49m[32m19:51 [0]edi1: elo
+[39;49m[37m[N] Incoming connection from 89.64.93.18
+89.64.93.18 -slupek-
+[N] Incoming connection from 62.141.210.59
+[N] 62.141.210.59:60055 has been disconnected.
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[39;49m[32m19:54 [4]MeHow: to tankowanie może być lekutko niestabilne
+[39;49m[37m[39;49m[32m19:54 [4]MeHow: także błędy może wywalać
+[39;49m[37m[39;49m[32m19:55 [0]edi1: ok
+[39;49m[37m[39;49m[32m19:55 [1]Ametyst: dzieki działa 
+[39;49m[37m[39;49m[32m19:56 [1]Ametyst: daj po 6$ bede czuł się jak w polsce XDDD
+[39;49m[37m[N] Incoming connection from 62.141.210.59
+62.141.210.59 sallerek
+[39;49m[32m19:56 [4]MeHow: xd zrobie może dynamiczne ceny paliwa
+[39;49m[37m[39;49m[32m19:58 [1]Ametyst: jakis tuner dostpeny ?
+[39;49m[37m[39;49m[32m19:58 [5]sallerek: haj
+[39;49m[37m[39;49m[32m19:58 [4]MeHow: siema
+[39;49m[37m[39;49m[32m19:58 [5]sallerek: all
+[39;49m[37m[N] 62.141.210.59:60530 has been disconnected.
+[N] Incoming connection from 62.141.210.59
+62.141.210.59 sallerek
+[N] Incoming connection from 83.6.222.5
+[39;49m[32m19:59 [5]sallerek: haj2 XD
+[39;49m[37m[N] 83.6.222.5:65133 has been disconnected.
+[39;49m[32m19:59 [0]edi1: jade
+[39;49m[37m[N] 185.186.38.1:62355 has been disconnected.
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[39;49m[32m20:00 [1]Ametyst: diabolus R kupie ma ktos ?w
+[39;49m[37m[N] Incoming connection from 83.6.222.5
+83.6.222.5 Borowikens
+[39;49m[32m20:05 [4]MeHow: poprawka tego rick rolla wgrana
+[39;49m[37m[39;49m[32m20:06 [4]MeHow: po nastepnym restarcie nie powinno tego wywalac co chwile
+[39;49m[37m[39;49m[32m20:07 [0]edi1: czenu niema Qvin nie aidi nie poziomu
+[39;49m[37m[39;49m[32m20:07 [4]MeHow: hm/
+[39;49m[37m[N] 83.6.222.5:60160 has been disconnected.
+[39;49m[32m20:08 [2]QuaVin: ?
+[39;49m[37m[39;49m[32m20:10 [1]Ametyst: przeciez ma id 2 
+[39;49m[37m[39;49m[32m20:14 [5]sallerek: blad na tune visualu
+[39;49m[37m[39;49m[32m20:14 [5]sallerek: zmieniam nadkola a daje mi jakis panel nad szyba przednia
+[39;49m[37m[39;49m[32m20:15 [4]MeHow: to nie błąd
+[39;49m[37m[39;49m[32m20:15 [4]MeHow: to nazewnictwo w gta niejednoznaczne
+[39;49m[37m[39;49m[32m20:16 [4]MeHow: musielibyśmy do każdego auta osobno nazywać wszystkie części
+[39;49m[37m[39;49m[32m20:16 [4]MeHow: a średnio chcemy się w to bawić na razie
+[39;49m[37m[39;49m[32m20:17 [5]sallerek: aa, oki
+[39;49m[37m[39;49m[32m20:22 [5]sallerek: edi dawaj tune
+[39;49m[37m[N] 84.15.180.80:50949 has been disconnected.
+[N] Incoming connection from 84.15.180.80
+84.15.180.80 edgar12345cake
+[39;49m[32m20:23 [4]MeHow: poprawki gotowe
+[39;49m[37m[39;49m[32m20:23 [0]edi1: biegne do auta
+[39;49m[37m[39;49m[32m20:23 [4]MeHow: restartujemy
+[39;49m[37m[33m[INFO] [0mShutting down the server...
+Shutting down..
+[32m[DONE] [0mThe server has been terminated.
+terminate called without an active exception

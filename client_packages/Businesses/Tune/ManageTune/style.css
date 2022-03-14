@@ -1,0 +1,339 @@
+html, body{
+    height:auto;
+    background-color: transparent;
+    font-family:'PT Sans', sans-serif;
+    user-select: none;
+}
+.controls{
+    margin-top: 30vh;
+    height:auto;
+    width: 20vh;
+    overflow: auto;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    display: column;
+    background: radial-gradient(circle, rgba(55,55,55,0.95) 0%, rgba(29,30,34,0.95) 100%);
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.nameCol{
+    background-color: rgb(33, 34, 37);
+    width: 100%;
+    text-align: center;
+    padding: 0.9vh 0;
+    font-size: 1.9vh;
+    font-weight: 600;
+    color: white;
+    border-bottom: 1px solid #0c9;
+    margin-bottom: 1vh;
+}
+
+.buttons{
+    padding: 0.2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Katalog */
+.catalog{
+    width: 60vh;
+    height: auto;
+    max-width: 60vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(55,55,55,0.95) 0%, rgba(29,30,34,0.95) 100%);
+    display: none;
+}
+
+.scroll{
+    overflow-y: scroll;
+    max-height: 50vh;
+}
+.catalog-tabs{
+    height: 2vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 1vh;
+}
+.catalog-tabs .tab{
+    padding: 0.5vh; 
+    background: linear-gradient(180deg, rgba(66, 66, 66, 0.95) 0%, rgba(29,30,34,0.95) 100%);
+    color: white;
+    margin-right: 0.2vh;
+    width: auto;
+    font-size: 1vh;
+    cursor: pointer;
+    height: 2vh;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.catalog-tabs .tab:hover{
+    background: linear-gradient(180deg, #0c9 0%, rgba(29,30,34,0.95) 100%);
+}
+.category{
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow-y: scroll;
+    padding: 1vh;
+}
+
+.wheel{
+    margin-top: 1vh;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    width: 10vh;
+    height: 14vh;
+    padding: 1vh;
+    background: linear-gradient(180deg, rgba(66, 66, 66, 0.95) 0%, rgba(29,30,34,0.95) 100%);
+    cursor: pointer;
+}
+.confirmRow{
+    margin-top: 2vh;
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.confirmRow input{
+    background: linear-gradient(180deg, rgba(66, 66, 66, 0.95) 0%, rgba(29,30,34,0.95) 100%);
+    color: white;
+    text-align: center;
+    outline: none;
+    border: 1px solid #1d1e22;
+}
+.confirmRow input:focus{
+    outline: none;
+}
+.confirmRow p{
+    color: white;
+    margin: 0;
+}
+
+.selected{
+    box-shadow: 0 0 1vh 0 #0c9;
+}
+.wheel p{
+    color: white;
+    text-align: center;
+    margin: 0;
+    height: 4vh;
+}
+.wheel img{
+    width: 8vh;
+    height: 8vh;
+    transition: all 1s;
+}
+
+.wheel:hover img{
+    filter: blur(2px);
+}
+.wheel:hover{
+    box-shadow: 0 0 1vh 0 #0c9;
+}
+
+/* Posiadane */
+.owned{
+    width: 60vh;
+    height: auto;
+    max-width: 60vh;
+    position: absolute;
+    min-height: 20vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(55,55,55,0.95) 0%, rgba(29,30,34,0.95) 100%);
+    display: none;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.owned-wheel{
+    margin-top: 1vh;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    width: 10vh;
+    height: 14vh;
+    padding: 1vh;
+    background: linear-gradient(180deg, rgba(66, 66, 66, 0.95) 0%, rgba(29,30,34,0.95) 100%);
+    cursor: pointer;
+}
+
+.owned-wheels{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow-y: scroll;
+    padding: 1vh;
+}
+
+.owned-wheel p{
+    color: white;
+    text-align: center;
+    margin: 0;
+    text-overflow: ellipsis;
+    height: 4vh;
+}
+.owned-wheel img{
+    width: 8vh;
+    height: 8vh;
+    transition: all 1s;
+}
+
+.owned-buttons{
+    padding: 1vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+/* Dostawy */
+.shipment{
+    width: 60vh;
+    height: auto;
+    max-width: 60vh;
+    position: absolute;
+    min-height: 20vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(55,55,55,0.95) 0%, rgba(29,30,34,0.95) 100%);
+    display: none;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.shipment-wheels{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow-y: scroll;
+    padding: 1vh;
+}
+
+/* Zarządzanie */
+.manage{
+    width: 30vh;
+    height: auto;
+    max-width: 60vh;
+    position: absolute;
+    min-height: 20vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(55,55,55,0.95) 0%, rgba(29,30,34,0.95) 100%);
+    display: none;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.manage_col{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.manage p{
+    color: white;
+    display: inline-block;
+    margin-right: 1vh;
+    font-size: 1.3vh;
+    text-overflow: ellipsis;
+}
+
+.manage input{
+    background: linear-gradient(180deg, rgba(66, 66, 66, 0.95) 0%, rgba(29,30,34,0.95) 100%);
+    color: white;
+    text-align: center;
+    outline: none;
+    border: 1px solid #1d1e22;
+}
+.manage input:focus{
+    outline: none;
+}
+
+
+
+
+.button_select{
+    background: linear-gradient(180deg, rgba(66, 66, 66, 0.95) 0%, rgba(29,30,34,0.95) 100%);
+    border: none;
+    color: white;
+    padding: 0.6vh;
+    border-bottom: 1px solid #00cc99;
+    font-size: 1vh;
+    margin: 0.5vh;
+    width: 10vh;
+}
+
+.button_select:hover{
+    border-bottom: 1px solid transparent;
+    box-shadow: 0 0 1vh #0c9;
+}
+
+.button_select:focus{
+    outline: none;
+}
+
+.button_cancel{
+    background: linear-gradient(180deg, rgba(66, 66, 66, 0.95) 0%, rgba(29,30,34,0.95) 100%);
+    border: none;
+    color: white;
+    padding: 0.6vh;
+    border-bottom: 1px solid #cc0000;
+    font-size: 1vh;
+    margin: 1vh;
+    width: 10vh;
+}
+
+.button_cancel:hover{
+    border-bottom: 1px solid transparent;
+    box-shadow: 0 0 1vh rgb(204, 0, 0);
+}
+
+.button_cancel:focus{
+    outline: none;
+}
+
+::-webkit-scrollbar {
+    width: 1.4vh;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #00cc99; 
+    border: 4px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 9999px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #00cc99; 
+    border: 4px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 9999px;
+  }

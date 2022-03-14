@@ -1,0 +1,136 @@
+ body,html{
+   user-select: none;
+   overflow: hidden;
+ }
+
+ .main {
+    position: absolute;
+    width: auto;
+    height: auto;
+    padding: 0.8vh; 
+    border-right: none;
+    border-radius: 2vh 0 0 2vh ;
+    background: radial-gradient(circle, rgba(55,55,55,1) 0%, rgba(29,30,34,1) 100%);
+    color: #00cc99;
+    right: -1px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.6s right;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .hidden{
+    right: -10vh !important;
+  }
+  li {
+     color: #00CC99;
+     font-family: 'PT Sans', sans-serif;
+     font-size: 1.5vh;
+     list-style: none;
+     position: relative;
+     margin-top: 0.3vh;
+     margin-bottom: 0.3vh;
+  }
+
+  .box {
+    font-size: 1.0vh;
+    text-align: center;
+    padding: 0.3vh;
+    border: 1px solid #414144;
+    border-radius: 1vh;
+    color: #fff;
+    width: 4vh;
+    height: 4vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .box p{
+    margin: 0;
+    height: 30%;
+  }
+
+  .box div{
+    background-position:center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    width: 70%;
+    height: 70%;
+    border: none;
+    outline: none;
+  }
+
+  .lights.on div{
+   background-image: url("img/lights.png") !important;
+  }
+
+  .engine.on div{
+    background-image: url("img/engine.png") !important;
+  }
+
+  .handbrake.on div{
+    background-image: url("img/handbrake.png") !important;
+  }
+
+  .seatbelt.on div{
+    background-image: url("img/seatbelt.png") !important;
+   }
+
+   .doorlock.on div{
+    background-image: url("img/doorlock.png") !important;
+   }
+
+   .throw.on div{
+    background-image: url("img/throw.png") !important;
+   }
+
+
+  .selected {
+    -webkit-box-shadow: inset 1px 1px 4vh 1px rgba(0,0,0,0.45);
+    -moz-box-shadow: inset 1px 1px 4vh 1px rgba(0,0,0,0.45);
+    box-shadow: inset 1px 1px 4vh 1px rgba(0,0,0,0.45);
+    font-size: 1vh;
+    color: #fff;
+    border-radius: 1vh;
+    background: #1d1e22;
+  }
+  .selected::after {
+    position: absolute;
+    top: -4px; bottom: -4px;
+    left: -4px; right: -4px;
+    background: linear-gradient(-45deg, rgb(0, 0, 0), #fff, rgb(0, 0, 0));
+	  background-size: 400% 400%;
+	  animation: gradient 2s ease infinite;
+    content: '';
+    z-index: -1;
+    border-radius: 16px;
+}
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  .on{
+    background: linear-gradient(180deg, rgba(0, 204, 153, 0.95) 0%, rgba(0, 88, 66, 0.95) 100%);
+    color: white;
+    box-shadow: 0 0 0.5vh 0 #0c9;
+  }
+
+  .selected.on{
+    border-color: #8fffe3;
+  }
+  .throw div{
+    background-size: 60%;
+    background-position-x: 60%;
+  }

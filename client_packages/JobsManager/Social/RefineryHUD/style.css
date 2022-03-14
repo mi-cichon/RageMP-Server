@@ -1,0 +1,154 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    user-select: none;
+    overflow: hidden;
+    font-family: 'PT Sans', sans-serif;
+    background-color: transparent;
+}
+
+.selected{
+  outline: 1px solid #0c9;
+}
+
+.interface-main-body{
+    position: absolute;
+    width: 20vh;
+    height: auto;
+    left: 1vh;
+    bottom: 45vh;
+}
+.interface-body{
+  background: radial-gradient(circle, rgba(55,55,55,0.95) 0%, rgba(29,30,34,0.95) 100%);
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.2vh;
+  height: 8vh;
+  padding: 0.4vh 0.8vh;
+  justify-content: space-around;
+}
+
+.interface_type_stations .interface-body{
+  height: auto;
+  flex-direction: row;
+}
+
+.interface_job{
+  color: white;
+  font-size: 1.1vh;
+  border: 1px solid rgb(94, 97, 96);
+  padding: 0.2vh;
+  border-radius: 0.4vh;
+  transition: all 1s;
+  background-color: rgba(94, 97, 96, 0);
+}
+
+.interface_job:hover{
+  border: 1px solid #0c9;
+  background-color: rgba(94, 97, 96, 0.6);
+}
+
+.nameCol{
+  background-color: rgb(33, 34, 37);
+  width: 100%;
+  text-align: center;
+  padding: 0.2vh 0;
+  font-size: 1.1vh;
+  font-weight: 600;
+  color: white;
+  border-bottom: 1px solid #0c9;
+}
+
+.interface-left, .interface-right{
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  height: 100%;
+  color: white;
+  justify-content: space-around;
+}
+.interface-right{
+  text-align: right;
+}
+
+p{
+  margin: 0;
+  font-size: 1.2vh;
+}
+
+.interface-body > div > p{
+  margin: 0.2vh;
+}
+
+.interface-main-body .status{
+  position: absolute;
+  color: white;
+  top: 0;
+  padding: 2%;
+  width: 96%;
+  border-bottom: 1px solid white;
+  left: 0;
+  text-align: center;
+  font-size: 1.2vh;
+
+}
+
+
+  ::-webkit-scrollbar {
+    width: 1.4vh;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #00cc99; 
+    border: 4px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 9999px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #00cc99; 
+    border: 4px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 9999px;
+  }
+
+  .selectButton{
+    color: #fff;
+    background-color: #313131;
+    border-color: #00cc99;
+    user-select: none;
+    transition: all 1s;
+    font-size: 1.1vh;
+    height: auto;
+    border-radius: 0.8vh;
+    padding: 1vh;
+}
+
+.selectButton:hover{
+    border-radius: 1vh;
+    color: limegreen;
+}
+
+.closeButton{
+    color: #fff;
+    background-color: #313131;
+    border-color: #00cc99;
+    left:50%;
+    user-select: none;
+    transition: all 1s;
+    font-size: 1.1vh;
+    height: auto;
+    border-radius: 0.8vh;
+    padding: 1vh;
+}
+.closeButton:hover{
+    color: red;
+    border-radius: 1vh;
+}

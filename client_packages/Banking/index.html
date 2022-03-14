@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div class="bank_mainBody">
+            <div class="bank_name">
+                Bankomat
+            </div>
+            <div class="bank_infoBody">
+                <div class="bank_card">
+                    <p>4040 4040 4040 4040</p>
+                </div>
+                <div class="bank_info">
+                    <div class="bank_avatar"></div>
+                    <div class="bank_account">
+                        <p>Stan konta</p>
+                        <div class="bank_account_state">$ 123 345 344</div>
+                    </div>
+                </div>
+            </div>
+            <div class="bank_buttonsBody">
+                <div class="bank_buttonBody">
+                    <div class="bank_buttonText bank_deposit">
+                        <div class="bank_icon icon_deposit"></div>
+                        <p>Wpłać</p>
+                    </div>
+                </div>
+                <div class="bank_buttonBody">
+                    <div class="bank_buttonText bank_withdraw">
+                        <div class="bank_icon icon_withdraw"></div>
+                        <p>Wypłać</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bank_inputBody">
+                <input type="number" placeholder="Wpisz kwotę..." class="bank_input" value="">
+            </div>
+            <div class="bank_endButtonsBody">
+                <input type="button" value="Potwierdź" class="button_select bank_accept">
+                <input type="button" value="Zamknij" class="button_cancel bank_cancel">
+            </div>
+        </div>
+        <script src="seedrandom.js"></script>
+        <script src="banking.js"></script>
+
+    </body>
+</html>

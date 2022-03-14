@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- source -->
+    <link rel="stylesheet" type="text/css" href="src/vendor/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="src/vendor/css/font-awesome.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="src/style.css" />
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+    <div class="creator">
+        <div class="nameCol">Przebieralnia</div>
+        <div class="handler">
+            <div class="slides">
+                <div class="slide">
+                    <div class="scroll">
+                        <div class="clothes">
+                            <div class="cloth tops">
+                                <label>Topy</label>
+                                <div class="scroll-body"><div class="button-left top-left"><i class='far fa-arrow-alt-circle-left'></i></div><input type="range" class='slider top-slider' oninput="customize('top', 0, this.value)" value="0" min="0" max="75"><div class="button-right top-right"><i class='far fa-arrow-alt-circle-right'></i></div></div>
+                                <label>Warianty</label>
+                                <div class="scroll-body"><div class="button-left topv-left"><i class='far fa-arrow-alt-circle-left'></i></div><input type="range" class='slider mslider topv-slider' oninput="customize('topV', 1, this.value)" value="0" min="0" max="75"><div class="button-right topv-right"><i class='far fa-arrow-alt-circle-right'></i></div></div>
+                            </div>
+                            <div class="cloth torsos">
+                                <label>Torsy</label>
+                                <div class="scroll-body"><div class="button-left torso-left"><i class='far fa-arrow-alt-circle-left'></i></div><input type="range" class='slider torso-slider' oninput="customize('torso', 0, this.value)" min="0" value="0" max="75"><div class="button-right torso-right"><i class='far fa-arrow-alt-circle-right'></i></div></div>
+                            </div>
+                            <div class="cloth undershirts">
+                                <label>Podkoszulki</label>
+                                <div class="scroll-body"><div class="button-left undershirt-left"><i class='far fa-arrow-alt-circle-left'></i></div><input type="range" class='slider undershirt-slider' oninput="customize('undershirt', 0, this.value)" min="0" value="0" max="75"><div class="button-right undershirt-right"><i class='far fa-arrow-alt-circle-right'></i></div></div>
+                                <label>Warianty</label>
+                                <div class="scroll-body"><div class="button-left undershirtv-left"><i class='far fa-arrow-alt-circle-left'></i></div><input type="range" class='slider mslider undershirtv-slider' oninput="customize('undershirtV', 1, this.value)" value="0" min="0" max="75"><div class="button-right undershirtv-right"><i class='far fa-arrow-alt-circle-right'></i></div></div>
+                            </div>
+                            <div class="cloth pants">
+                                <label>Spodnie</label>
+                                <div class="scroll-body"><div class="button-left pants-left"><i class='far fa-arrow-alt-circle-left'></i></div><input type="range" class='slider pants-slider' oninput="customize('pants', 0, this.value)" value="0" min="0" max="75"><div class="button-right pants-right"><i class='far fa-arrow-alt-circle-right'></i></div></div>
+                                <label>Warianty</label>
+                                <div class="scroll-body"><div class="button-left pantsv-left"><i class='far fa-arrow-alt-circle-left'></i></div><input type="range" class='slider mslider pantsv-slider' oninput="customize('pantsV', 1, this.value)" value="0" min="0" max="75"><div class="button-right pantsv-right"><i class='far fa-arrow-alt-circle-right'></i></div></div>
+                            </div>
+                            <div class="cloth shoes">
+                                <label>Buty</label>
+                                <div class="scroll-body"><div class="button-left shoes-left"><i class='far fa-arrow-alt-circle-left'></i></div><input type="range" class='slider shoes-slider' oninput="customize('shoes', 0, this.value)" value="0" min="0" max="75"><div class="button-right shoes-right"><i class='far fa-arrow-alt-circle-right'></i></div></div>
+                                <label>Warianty</label>
+                                <div class="scroll-body"><div class="button-left shoesv-left"><i class='far fa-arrow-alt-circle-left'></i></div><input type="range" class='slider mslider shoesv-slider' oninput="customize('shoesV', 1, this.value)" value="0" min="0" max="75"><div class="button-right shoesv-right"><i class='far fa-arrow-alt-circle-right'></i></div></div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="confirm">
+                <input class="btn" type="button" value="Obróć postać" onclick="customization.rotate()">
+                <input class="btn" type="button" value="Zatwierdź ($1000)" onclick="customization.finish()">
+            </div>
+            <div class="confirm">
+                <input class="btn" type="button" value="Anuluj" onclick="customization.cancel()">
+            </div>
+        </div>
+    </div>
+
+    <!-- scripts -->
+
+    <script type="text/javascript" src="src/clothes/male_tops.js"></script>
+    <script type="text/javascript" src="src/clothes/male_undershirts.js"></script>
+    <script type="text/javascript" src="src/clothes/male_legs.js"></script>
+    <script type="text/javascript" src="src/clothes/male_shoes.js"></script>
+    <script type="text/javascript" src="src/clothes/female_tops.js"></script>
+    <script type="text/javascript" src="src/clothes/female_undershirts.js"></script>
+    <script type="text/javascript" src="src/clothes/female_legs.js"></script>
+    <script type="text/javascript" src="src/clothes/female_shoes.js"></script>
+    <script src="src/app.js"></script>
+</body>
+
+</html>

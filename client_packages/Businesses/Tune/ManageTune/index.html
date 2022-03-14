@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+        
+    </head>
+<body>
+    <div class="controls">
+        <div class="nameCol">
+            Zarządzanie
+        </div>
+        <div class="buttons">
+            <button type="button" id="catalog" class="button_select">Katalog felg</button>
+            <button type="button" id="owned" class="button_select">Posiadane felgi</button>
+            <button type="button" id="shipment" class="button_select">Dostawy</button>
+            <button type="button" id="manage" class="button_select">Zarządzaj</button>
+            <button type="button" id="jobstatus" class="button_select"></button>
+            <button type="button" id="close" class="button_cancel" >Zamknij</button>
+        </div>
+    </div>
+    <div class="catalog">
+        <div class="nameCol">Katalog felg</div>
+        <div class="catalog-tabs">
+            <div class="tab" onclick="$('.category').css('display', 'none'); $('.category#0').css('display', 'flex');">Sport</div>
+            <div class="tab" onclick="$('.category').css('display', 'none'); $('.category#1').css('display', 'flex');">Muscle</div>
+            <div class="tab" onclick="$('.category').css('display', 'none'); $('.category#2').css('display', 'flex');">Lowrider</div>
+            <div class="tab" onclick="$('.category').css('display', 'none'); $('.category#3').css('display', 'flex');">SUV</div>
+            <div class="tab" onclick="$('.category').css('display', 'none'); $('.category#4').css('display', 'flex');">Offroad</div>
+            <div class="tab" onclick="$('.category').css('display', 'none'); $('.category#5').css('display', 'flex');">Tuner</div>
+            <div class="tab" onclick="$('.category').css('display', 'none'); $('.category#6').css('display', 'flex');">Motocyklowe</div>
+            <div class="tab" onclick="$('.category').css('display', 'none'); $('.category#7').css('display', 'flex');">Luksusowe</div>
+            <div class="tab" onclick="$('.category').css('display', 'none'); $('.category#8').css('display', 'flex');">Benny's O'</div>
+            <div class="tab" onclick="$('.category').css('display', 'none'); $('.category#9').css('display', 'flex');">Benny's B'</div>
+        </div>
+        <div class="scroll">
+            <div class="category" id="0" style="display:flex"></div>
+            <div class="category" id="1"></div>
+            <div class="category" id="2"></div>
+            <div class="category" id="3"></div>
+            <div class="category" id="4"></div>
+            <div class="category" id="5"></div>
+            <div class="category" id="6"></div>
+            <div class="category" id="7"></div>
+            <div class="category" id="8"></div>
+            <div class="category" id="9"></div>
+        </div>
+        <div class="confirmRow">
+            <p>Ilość:</p>
+            <input class="amountInput" type="number" placeholder="Ilość" value="1" min="1" max="10"/>
+            <p class="price">Cena: 0$</p>
+            <button type="button" id="createOrder" class="button_select">Zamów</button>
+            <button type="button" id="closeCatalog" class="button_cancel" >Powrót</button>
+        </div>
+    </div>
+    <div class="owned">
+        <div class="nameCol">
+            Posiadane felgi
+        </div>
+        <div class="scroll">
+            <div class="owned-wheels">
+            </div>
+        </div>
+        
+        <div class="owned-buttons">
+            <button type="button" id="closeOwned" class="button_cancel" >Powrót</button>
+        </div>
+    </div>
+    <div class="shipment">
+        <div class="nameCol">
+            Dostawy
+        </div>
+        <div class="scroll">
+            <div class="shipment-wheels">
+            </div>
+        </div>
+        <div class="owned-buttons">
+            <button type="button" id="closeShipment" class="button_cancel" >Powrót</button>
+        </div>
+    </div>
+
+    <div class="manage">
+        <div class="nameCol">
+            Zarządzanie
+        </div>
+        <div class="manage_col">
+            <div><p>Działalność opłacona do:</p><p class="manage-date">24.02.2021 21:21</p></div>
+            <div><p>Koszt za 1 dzień:</p><p class="manage-price">$1500</p></div>
+            <div class="manage_buttons">
+                <input class="daysInput" type="number" placeholder="Ilość" value="1" min="1" max="14"/>
+                <button type="button" id="extendTime" class="button_select">Opłać</button>
+            </div>
+        </div>
+        
+        <div class="owned-buttons">
+            <button type="button" id="closeBusiness" class="button_cancel">ZREZYGNUJ</button>
+            <button type="button" id="closeManage" class="button_cancel" >Powrót</button>
+        </div>
+    </div>
+    <script src="manageTune.js" type="text/javascript"></script>
+    </body>
+</html>

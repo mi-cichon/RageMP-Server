@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+<div class="mainBody">
+    <div class="nameCol">Sprzedaż pojazdu</div>
+    <div class="mainRow">
+        <div class="mainCarsCol">
+            <h1 class="carHeadText">Twoje pojazdy</h1>
+            <div class="carHeadRow">
+                
+            </div>
+
+            <div class="carEndRow"></div>
+        </div>
+        <div class="mainPlayersCol">
+            <h1 class="playersHeadText">Gracze w pobliżu</h1>
+            <div class="playersHeadRow">
+                
+            </div>
+
+            <div class="playerEndRow"></div>
+        </div>
+    </div>
+    <div class="confirmRow">
+        <input class="priceInput" type="text" value=""/>
+        <button type="button" class="button_select" onclick="confirmTrade()">Wyślij ofertę</button>
+        <button type="button" class="button_cancel" onclick="closeCarTraderBrowser()">Zamknij</button>
+    </div>
+</div>
+
+
+<script src="carTrader.js"></script>
+</body>
+</html>

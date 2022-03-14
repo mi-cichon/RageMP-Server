@@ -1,0 +1,99 @@
+[33m[INFO] [0mStarting RAGE Multiplayer server...
+[0m[33m
+[============================================================]
+[33m[33m||
+[33m||[33m	MaxPlayers		[0m50[33m
+||	Sync rate		[0m40ms[33m
+||	Name			[0mBasicRPG.pl | W trakcie tworzenia | Wiecej na https://discord.gg/2vrMdXsdRW [PL][33m
+||	Gamemode		[0mrpg[33m
+||	Streaming distance	[0m500[33m
+||	Announcement		[0menabled[33m
+||	Voice chat		[0menabled[33m
+||	Address			[0m127.0.0.1:22005[33m
+||	Connection limits	[0mdisabled[33m
+||	Encryption		[0menabled[33m
+||	NodeJS			[0menabled[33m
+||	C#			[0menabled[33m
+||
+[============================================================]
+
+[0m
+[33m[INFO][0m Loading NodeJS packages...
+[33m[INFO][0m Starting packages...
+[32m[DONE][0m Server packages have been started.
+Initializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 10/10/2021 5:25:20 AM
+Unable to load acl.xml
+ACLEnabled: False
+Loaded 667 entries from vehicleData.json
+Loading resources..
+[?1h=[39;49m[33m->[39;49m[37m Starting [39;49m[36mServer[39;49m[37m resource..
+[39;49m[39;49m[37mServer:[39;49m[37m loading scripts.. found 1 script(s)
+[39;49m[39;49m[37mServer:[39;49m[37m instantiating [39;49m[37mServerSide.MainClass[39;49m[37m..
+[39;49mConnection refused [::1]:3306
+Connection refused [::1]:3306
+[39;49m[37mServer:[39;49m[37m loading server events.. found 10 server event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 10 server events(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loading remote events.. found 146 remote event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 146 remote event(s)
+[39;49mServer started...
+[39;49m[32m->[39;49m[37m Resource [39;49m[36mServer[39;49m[37m started!
+[39;49m[39;49m[32mStarted! Waiting for connections..
+[39;49m[32m[DONE] [0mStarted resource transfer server at 22006 port.
+[32m[DONE] [0mClient-side packages weight: [33m166.858154 MB[0m (uncompressed: [33m325.105469 MB[0m).
+[33m[INFO] [0mMasterList: Announcing into master server...
+[33m[INFO] [0mInitializing networking...
+[32m[DONE] [0mNetworking has been started: (IPv4-only) at 127.0.0.1:22005
+[32m[DONE] [0mThe server is ready to accept connections.
+[32m[DONE] [0mMasterList: Connected to master list.
+[N] Incoming connection from 2.99.38.201
+[N] Incoming connection from 185.186.38.1
+2.99.38.201 Jacho0o
+185.186.38.1 maciejooosek
+[N] Incoming connection from 87.101.35.161
+87.101.35.161 TomoHERE_3hunna
+[39;49m[32m05:26 [1]MeHow: git
+[39;49m[37m[39;49m[32m05:27 [1]MeHow: komu rollować?
+[39;49m[37m[N] Incoming connection from 83.29.0.44
+83.29.0.44 Drymaniusz
+[39;49m[32m05:29 [0]Jacho0o: mnie ale robie te prawko 
+[39;49m[37m[39;49m[32m05:29 [0]Jacho0o: po resetach bede to robic 6 raz xd
+[39;49m[37m[39;49m[32m05:29 [1]MeHow: testowałem pod pracę nową xD
+[39;49m[37m[39;49m[32m05:30 [1]MeHow: jakie auto chcesz
+[39;49m[37m[39;49m[32m05:30 [1]MeHow: to wyroluje i lece spac xD
+[39;49m[37m[39;49m[32m05:30 [3].Drymaniusz*: Pragne zaznaczyc ze w nazwie serwera jest pewien zapis pt. "W trakcie tworzenia"
+[39;49m[37m[39;49m[32m05:30 [1]MeHow: prawda
+[39;49m[37m[39;49m[32m05:32 [0]Jacho0o: motor bati ?
+[39;49m[37m[39;49m[32m05:33 [1]MeHow: git
+[39;49m[37m[39;49m[32m05:34 [1]MeHow: 3 fajne motorki masz na motocyklowym
+[39;49m[37m[39;49m[32m05:34 [1]MeHow: 2 godziny beda stac
+[39;49m[37m[39;49m[32m05:35 [0]Jacho0o: jade zobaczyc xd
+[39;49m[37m[39;49m[32m05:36 [0]Jacho0o: a raczej ide 
+[39;49m[37m[N] 87.101.35.161:27481 has been disconnected.
+[N] Incoming connection from 87.101.35.161
+87.101.35.161 TomoHERE_3hunna
+[N] 185.186.38.1:59166 has been disconnected.
+[N] 83.29.0.44:54268 has been disconnected.
+[N] 2.99.38.201:65215 has been disconnected.
+[N] Incoming connection from 2.99.38.201
+2.99.38.201 Jacho0o
+[N] 87.101.35.161:27481 has been disconnected.
+[N] 2.99.38.201:65215 has been disconnected.
+[N] Incoming connection from 213.134.172.92
+[N] 213.134.172.92:16632 has been disconnected.
+[N] Incoming connection from 178.252.56.146
+178.252.56.146 rafi0724
+[N] 178.252.56.146:60002 has been disconnected.
+[N] Incoming connection from 178.252.56.146
+178.252.56.146 rafi0724
+[N] 178.252.56.146:60002 has been disconnected.
+[N] Incoming connection from 178.252.56.146
+178.252.56.146 rafi0724
+[N] 178.252.56.146:60002 has been disconnected.
+[N] Incoming connection from 178.252.56.146
+178.252.56.146 rafi0724
+[N] 178.252.56.146:60002 has been disconnected.
+^C[33m[INFO] [0mShutting down the server...
+Shutting down..
+[32m[DONE] [0mThe server has been terminated.
+terminate called without an active exception

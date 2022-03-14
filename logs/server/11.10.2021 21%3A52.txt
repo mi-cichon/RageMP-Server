@@ -1,0 +1,212 @@
+[33m[INFO] [0mStarting RAGE Multiplayer server...
+[0m[33m
+[============================================================]
+[33m[33m||
+[33m||[33m	MaxPlayers		[0m50[33m
+||	Sync rate		[0m40ms[33m
+||	Name			[0mBasicRPG.pl | W trakcie tworzenia | Wiecej na https://discord.gg/2vrMdXsdRW [PL][33m
+||	Gamemode		[0mrpg[33m
+||	Streaming distance	[0m500[33m
+||	Announcement		[0menabled[33m
+||	Voice chat		[0menabled[33m
+||	Address			[0m127.0.0.1:22005[33m
+||	Connection limits	[0mdisabled[33m
+||	Encryption		[0menabled[33m
+||	NodeJS			[0menabled[33m
+||	C#			[0menabled[33m
+||
+[============================================================]
+
+[0m
+[33m[INFO][0m Loading NodeJS packages...
+[33m[INFO][0m Starting packages...
+[32m[DONE][0m Server packages have been started.
+Initializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 10/11/2021 9:52:55 PM
+Unable to load acl.xml
+ACLEnabled: False
+Loaded 667 entries from vehicleData.json
+Loading resources..
+[?1h=[39;49m[33m->[39;49m[37m Starting [39;49m[36mServer[39;49m[37m resource..
+[39;49m[39;49m[37mServer:[39;49m[37m loading scripts.. found 1 script(s)
+[39;49m[39;49m[37mServer:[39;49m[37m instantiating [39;49m[37mServerSide.MainClass[39;49m[37m..
+[39;49mConnection refused [::1]:3306
+Connection refused [::1]:3306
+[39;49m[37mServer:[39;49m[37m loading server events.. found 10 server event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 10 server events(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loading remote events.. found 148 remote event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 148 remote event(s)
+[39;49mServer started...
+[39;49m[32m->[39;49m[37m Resource [39;49m[36mServer[39;49m[37m started!
+[39;49m[39;49m[32mStarted! Waiting for connections..
+[39;49m[32m[DONE] [0mStarted resource transfer server at 22006 port.
+[32m[DONE] [0mClient-side packages weight: [33m166.869476 MB[0m (uncompressed: [33m325.129578 MB[0m).
+[33m[INFO] [0mMasterList: Announcing into master server...
+[33m[INFO] [0mInitializing networking...
+[32m[DONE] [0mNetworking has been started: (IPv4-only) at 127.0.0.1:22005
+[32m[DONE] [0mThe server is ready to accept connections.
+[32m[DONE] [0mMasterList: Connected to master list.
+[N] Incoming connection from 109.95.90.197
+[N] Incoming connection from 213.108.119.240
+[N] Incoming connection from 109.231.63.219
+109.95.90.197 kosapolska
+109.231.63.219 DevilSolution
+[N] Incoming connection from 188.47.3.47
+213.108.119.240 robotek019
+188.47.3.47 Adiniooo
+[N] 109.95.90.197:53806 has been disconnected.
+[N] Incoming connection from 83.4.165.25
+83.4.165.25 swirek1970544
+[39;49m[32m21:53 [1]robotek019: witam ponownie :D
+[39;49m[37m[N] Incoming connection from 109.95.90.197
+109.95.90.197 kosapolska
+[N] Incoming connection from 195.136.137.177
+[N] Incoming connection from 37.30.116.64
+37.30.116.64 XpiterroX
+[N] Incoming connection from 84.15.187.11
+195.136.137.177 Deemz_i
+84.15.187.11 edgar12345cake
+[N] Incoming connection from 79.186.37.106
+79.186.37.106 Piraciako
+[39;49m[32m21:54 [1]robotek019: gratki testera edi1 :D
+[39;49m[37m[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[39;49m[32m21:55 [9]MeHow: siemka
+[39;49m[37m[39;49m[32m21:55 [9]MeHow: praca nie działa
+[39;49m[37m[39;49m[32m21:55 [9]MeHow: jeszcze
+[39;49m[37m[39;49m[32m21:55 [1]robotek019: siema
+[39;49m[37m[39;49m[32m21:55 [9]MeHow: jutro bedzie gotowa
+[39;49m[37m[39;49m[32m21:55 [9]MeHow: także dla swojego dobra nie zaczynajcie jej bo dziwne rzeczy sie dzieja XD
+[39;49m[37m[39;49m[32m21:56 [5]Deemz_i: za prawko b sie coś płąci czy jest za free ?
+[39;49m[37m[39;49m[32m21:56 [9]MeHow: płaci się 
+[39;49m[37m[39;49m[32m21:56 [5]Deemz_i: ile ?
+[39;49m[37m[39;49m[32m21:56 [9]MeHow: 30$ teoria i 140$ praktyka
+[39;49m[37m[39;49m[32m21:56 [9]MeHow: ale za nieługo ma podrożeć
+[39;49m[37m[N] Incoming connection from 89.229.84.90
+[39;49m[32m21:57 [7]edi1: MeHow  dc
+[39;49m[37m[N] 83.4.165.25:61238 has been disconnected.
+[N] Incoming connection from 83.4.165.25
+83.4.165.25 swirek1970544
+89.229.84.90 Bombel3k
+[N] Incoming connection from 83.25.121.144
+[39;49m[32m21:57 [9]MeHow: nie mam nic
+[39;49m[37m[39;49m[32m21:57 [9]MeHow: dobra, wózki nie działają, jutro będą XD
+[39;49m[37m[N] 83.25.121.144:57260 has been disconnected.
+[39;49m[32m21:57 [1]robotek019: da się gdzieś kupić kanistry? :D
+[39;49m[37m[39;49m[32m21:58 [9]MeHow: jeszcze nie, ale moge ci ruzcic
+[39;49m[37m[39;49m[32m21:58 [1]robotek019: czy to tylko na razie w formie testowej jest?
+[39;49m[37m[N] 195.136.137.177:64023 has been disconnected.
+[N] Incoming connection from 195.136.137.177
+195.136.137.177 Deemz_i
+[N] Incoming connection from 83.25.121.144
+83.25.121.144 skibav12
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] 185.186.38.1:61494 has been disconnected.
+[39;49m[32m21:59 [5]Deemz_i: gdzie jest komis z najtańszymi autami ?
+[39;49m[37m[39;49m[32m22:00 [1]robotek019: szrot
+[39;49m[37m[39;49m[32m22:00 [7]edi1: paleto
+[39;49m[37m[39;49m[32m22:00 [1]robotek019: potem masz na paleto zwykłe najtańsze auta 
+[39;49m[37m[39;49m[32m22:00 [5]Deemz_i: dziękuje :D
+[39;49m[37m[39;49m[32m22:00 [2]DevilSolution: tu jest auto roll czy musze czekac na restart serwera ?
+[39;49m[37m[39;49m[32m22:01 [7]edi1: auta rolujonse co 2 godziny
+[39;49m[37m[39;49m[32m22:01 [2]DevilSolution: dzk
+[39;49m[37m[N] 37.30.116.64:61519 has been disconnected.
+[39;49m[32m22:05 [11]skibav12: jak voice miec tu
+[39;49m[37m[39;49m[32m22:05 [1]robotek019: capslock
+[39;49m[37m[N] 83.4.165.25:61238 has been disconnected.
+[N] Incoming connection from 83.4.165.25
+83.4.165.25 swirek1970544
+[39;49m[32m22:07 [11]skibav12: gdzie mam isc na prace 
+[39;49m[37m[N] 195.136.137.177:64023 has been disconnected.
+[N] Incoming connection from 195.136.137.177
+195.136.137.177 Deemz_i
+[39;49m[32m22:07 [10]Bombel3k: kosiarka
+[39;49m[37m[N] 83.4.165.25:61238 has been disconnected.
+[N] Incoming connection from 83.4.165.25
+83.4.165.25 swirek1970544
+[N] 188.47.3.47:59074 has been disconnected.
+[N] Incoming connection from 95.49.40.27
+95.49.40.27 kacpersidoruk204
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] Incoming connection from 89.64.116.123
+89.64.116.123 RafcioPanX
+[N] 109.231.63.219:62264 has been disconnected.
+[N] 89.64.116.123:26819 has been disconnected.
+[N] Incoming connection from 83.20.221.105
+[N] Incoming connection from 46.204.17.16
+Connection refused [::1]:3306
+83.20.221.105 MajsonTV
+Connection refused [::1]:3306
+[39;49m[32m22:15 [11]skibav12: co po zbieraniu smieci
+[39;49m[37m46.204.17.16 Puszin
+[N] 46.204.17.16:50733 has been disconnected.
+[N] Incoming connection from 89.64.116.123
+89.64.116.123 RafcioPanX
+[N] 89.64.116.123:26862 has been disconnected.
+[N] Incoming connection from 213.134.172.92
+213.134.172.92 ShoferoV
+[39;49m[32m22:18 [11]skibav12: ile czeba hajsu na prawo jazdy
+[39;49m[37m[N] Incoming connection from 89.64.116.123
+[N] Incoming connection from 46.175.230.75
+89.64.116.123 RafcioPanX
+46.175.230.75 Bartxkros
+[39;49m[32m22:20 [1]robotek019: 200?
+[39;49m[37m[39;49m[32m22:20 [10]Bombel3k: 30$ teoria i 140$ praktyka 
+[39;49m[37m[39;49m[32m22:21 [11]skibav12: jak zakończyc prace na zbieraniu smieci
+[39;49m[37m[39;49m[32m22:22 [10]Bombel3k: b tab esc
+[39;49m[37m[39;49m[32m22:22 [4]SWIREK13: klikasz B i zamykasz x
+[39;49m[37m[N] 83.25.121.144:59047 has been disconnected.
+[N] Incoming connection from 31.183.144.102
+[N] 83.4.165.25:61238 has been disconnected.
+[N] Incoming connection from 83.4.165.25
+83.4.165.25 swirek1970544
+[39;49m[32m22:25 [12]Bartxkros: jak wziąść pojazd publiczny?
+[39;49m[37m[N] 31.183.144.102:56412 has been disconnected.
+[39;49m[32m22:25 [10]Bombel3k: F 
+[39;49m[37m[N] Incoming connection from 83.25.146.198
+83.25.146.198 skibav12
+[N] 46.175.230.75:64099 has been disconnected.
+[N] 79.186.37.106:56109 has been disconnected.
+[N] Incoming connection from 31.60.154.58
+[N] 31.60.154.58:9419 has been disconnected.
+[N] Incoming connection from 213.134.179.74
+213.134.179.74 KubeczeGG
+[N] 195.136.137.177:64023 has been disconnected.
+[N] Incoming connection from 195.136.137.177
+195.136.137.177 Deemz_i
+[N] Incoming connection from 31.60.154.58
+31.60.154.58 gab123nt
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] 89.229.84.90:55926 has been disconnected.
+[N] 213.134.179.74:43384 has been disconnected.
+[N] Incoming connection from 89.229.84.90
+89.229.84.90 Bombel3k
+[N] 83.4.165.25:61238 has been disconnected.
+podwójna znajdźka: 120535402 170
+[39;49m[32m22:40 [9]RafcioPanX: dlugo ten serw jest?
+[39;49m[37m[39;49m[32m22:40 [0]kosapolska: Beta testy
+[39;49m[37m[N] Incoming connection from 185.238.122.45
+185.238.122.45 KtoTuToTakTo
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[39;49m[32m22:42 [9]RafcioPanX: to ile to jest ze tu takie fury
+[39;49m[37m[39;49m[32m22:43 [7]edi1: fury rurzne sou
+[39;49m[37m[N] 31.60.154.58:9585 has been disconnected.
+[N] Incoming connection from 31.60.154.58
+31.60.154.58 gab123nt
+Value cannot be null. (Parameter 'value')
+Exception has been thrown by the target of an invocation.
+Exception has been thrown by the target of an invocation.
+Unhandled exception. System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.ArgumentNullException: Value cannot be null. (Parameter 'value')
+   at object Newtonsoft.Json.JsonConvert.DeserializeObject(string value, Type type, JsonSerializerSettings settings)
+   at T Newtonsoft.Json.JsonConvert.DeserializeObject<T>(string value, JsonSerializerSettings settings)
+   at void ServerSide.VehicleDataManager.RefreshVehiclesTune(Vehicle vehicle) in F:/RAGEMP server/server-files/dotnet/resources/Server/Managers/VehicleDataManager.cs:line 523
+   at void ServerSide.MainClass.OnPlayerExitColShape(ColShape shape, Player player) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 1468
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at GTANetworkInternals.EventHandler.Parse(Event _event, Object[] arguments)

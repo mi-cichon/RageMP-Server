@@ -1,0 +1,337 @@
+[33m[INFO] [0mStarting RAGE Multiplayer server...
+[0m[33m
+[============================================================]
+[33m[33m||
+[33m||[33m	MaxPlayers		[0m50[33m
+||	Sync rate		[0m40ms[33m
+||	Name			[0mBasicRPG.pl | W trakcie tworzenia | Wiecej na https://discord.gg/2vrMdXsdRW [PL][33m
+||	Gamemode		[0mrpg[33m
+||	Streaming distance	[0m500[33m
+||	Announcement		[0menabled[33m
+||	Voice chat		[0menabled[33m
+||	Address			[0m127.0.0.1:22005[33m
+||	Connection limits	[0mdisabled[33m
+||	Encryption		[0menabled[33m
+||	NodeJS			[0menabled[33m
+||	C#			[0menabled[33m
+||
+[============================================================]
+
+[0m
+[33m[INFO][0m Loading NodeJS packages...
+[33m[INFO][0m Starting packages...
+[32m[DONE][0m Server packages have been started.
+Initializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 10/9/2021 5:49:44 AM
+Unable to load acl.xml
+ACLEnabled: False
+Loaded 667 entries from vehicleData.json
+Loading resources..
+[?1h=[39;49m[33m->[39;49m[37m Starting [39;49m[36mServer[39;49m[37m resource..
+[39;49m[39;49m[37mServer:[39;49m[37m loading scripts.. found 1 script(s)
+[39;49m[39;49m[37mServer:[39;49m[37m instantiating [39;49m[37mServerSide.MainClass[39;49m[37m..
+[39;49mConnection refused [::1]:3306
+Connection refused [::1]:3306
+[39;49m[37mServer:[39;49m[37m loading server events.. found 10 server event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 10 server events(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loading remote events.. found 146 remote event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 146 remote event(s)
+[39;49mServer started...
+[39;49m[32m->[39;49m[37m Resource [39;49m[36mServer[39;49m[37m started!
+[39;49m[39;49m[32mStarted! Waiting for connections..
+[39;49m[32m[DONE] [0mStarted resource transfer server at 22006 port.
+[32m[DONE] [0mClient-side packages weight: [33m166.849487 MB[0m (uncompressed: [33m325.072235 MB[0m).
+[33m[INFO] [0mMasterList: Announcing into master server...
+[33m[INFO] [0mInitializing networking...
+[32m[DONE] [0mNetworking has been started: (IPv4-only) at 127.0.0.1:22005
+[32m[DONE] [0mThe server is ready to accept connections.
+[32m[DONE] [0mMasterList: Connected to master list.
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[N] Incoming connection from 88.130.51.186
+88.130.51.186 SHOGUN_77
+[39;49m[32m05:52 [0]MeHow: pokazac ci co dodalem?
+[39;49m[37m[39;49m[32m05:52 [1]SHOGUN77: nom
+[39;49m[37m[39;49m[32m05:53 [0]MeHow: 3h robiłem
+[39;49m[37m[39;49m[32m05:53 [0]MeHow: fajne nie?
+[39;49m[37m[39;49m[32m05:56 [1]SHOGUN77: o tera
+[39;49m[37m[39;49m[32m05:56 [0]MeHow: XD
+[39;49m[37m[39;49m[32m05:57 [1]SHOGUN77: taki trolik hehe
+[39;49m[37m[39;49m[32m05:57 [0]MeHow: no a jak
+[39;49m[37m[39;49m[32m05:58 [1]SHOGUN77: przebieralnia w domku by byla spoko
+[39;49m[37m[39;49m[32m05:58 [0]MeHow: jak w domku, co sklep z ciuchami?
+[39;49m[37m[N] Incoming connection from 83.29.0.44
+83.29.0.44 Drymaniusz
+[39;49m[32m05:59 [1]SHOGUN77: no w sklepie robisz se ubior za tam 1000 i zapisujesz go pod jakas nazwa
+[39;49m[37m[39;49m[32m06:00 [0]MeHow: no moze
+[39;49m[37m[39;49m[32m06:00 [1]SHOGUN77: a w domku mozna by bylo je zmieniac
+[39;49m[37m[39;49m[32m06:00 [0]MeHow: pomysle
+[39;49m[37m[39;49m[32m06:00 [1]SHOGUN77: tak jak na fivem
+[39;49m[37m[N] 88.130.51.186:17962 has been disconnected.
+[N] 83.29.0.44:54862 has been disconnected.
+[N] 185.186.38.1:63453 has been disconnected.
+[N] Incoming connection from 46.204.71.100
+46.204.71.100 Besnaj29
+[39;49m[32m10:10 [0]Besnaj29: siema
+[39;49m[37m[N] Incoming connection from 46.76.13.198
+46.76.13.198 ZINIXXX
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] 46.76.13.198:55784 has been disconnected.
+[N] Incoming connection from 83.31.160.192
+[N] 83.31.160.192:61963 has been disconnected.
+[N] Incoming connection from 83.31.160.192
+[N] 83.31.160.192:61963 has been disconnected.
+[N] Incoming connection from 83.31.160.192
+[N] 83.31.160.192:61963 has been disconnected.
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[39;49m[32m12:24 [0]Besnaj29: siema
+[39;49m[37m[39;49m[32m12:24 [1]robotek019: siemka
+[39;49m[37m[39;49m[32m12:24 [0]Besnaj29: szukasz jajek?
+[39;49m[37m[39;49m[32m12:24 [1]robotek019: testuje prace :D
+[39;49m[37m[39;49m[32m12:24 [0]Besnaj29: okej
+[39;49m[37m[39;49m[32m12:25 [1]robotek019: znalazłem 50 jajek więc teraz czas na prace
+[39;49m[37m[39;49m[32m12:25 [0]Besnaj29: o kurde
+[39;49m[37m[39;49m[32m12:26 [0]Besnaj29: a masz może BMW w kompocie?
+[39;49m[37m[39;49m[32m12:27 [1]robotek019: nie :D ja gustuje w muscle :D
+[39;49m[37m[39;49m[32m12:27 [0]Besnaj29: szkoda bo jak byś miał to bym odkupił 
+[39;49m[37m[39;49m[32m12:29 [0]Besnaj29: ja mam to mitsubisi i kupie teraz BMW w kompoci i już nic nie kupuję tylko szukam jajek
+[39;49m[37m[N] Incoming connection from 157.25.43.218
+[N] 157.25.43.218:63516 has been disconnected.
+[N] 213.108.119.240:51130 has been disconnected.
+[N] Incoming connection from 84.15.187.11
+84.15.187.11 edgar12345cake
+[39;49m[32m13:04 [1]edi1: siema wszystkim
+[39;49m[37m[39;49m[32m13:04 [0]Besnaj29: siema
+[39;49m[37m[N] Incoming connection from 91.214.36.60
+[39;49m[32m13:05 [1]edi1: gdzie sou jaja
+[39;49m[37m91.214.36.60 Styslian
+[39;49m[32m13:05 [0]Besnaj29: musisz poszukać
+[39;49m[37m[N] 91.214.36.60:61346 has been disconnected.
+[N] Incoming connection from 91.214.36.60
+91.214.36.60 Styslian
+[N] Incoming connection from 176.103.168.98
+[N] 91.214.36.60:61346 has been disconnected.
+176.103.168.98 YamatoHacker
+[N] 176.103.168.98:60788 has been disconnected.
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[39;49m[32m13:17 [2]MeHow: siema
+[39;49m[37m[39;49m[32m13:17 [0]Besnaj29: siema
+[39;49m[37m[39;49m[32m13:18 [1]edi1: siema
+[39;49m[37m[N] 84.15.187.11:62404 has been disconnected.
+[N] Incoming connection from 84.15.187.11
+[N] 84.15.187.11:62404 has been disconnected.
+[N] Incoming connection from 88.130.51.186
+88.130.51.186 SHOGUN_77
+[N] Incoming connection from 89.64.95.94
+89.64.95.94 _Roko_
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] 89.64.95.94:12026 has been disconnected.
+[N] 88.130.51.186:18116 has been disconnected.
+[N] Incoming connection from 88.130.51.186
+88.130.51.186 SHOGUN_77
+[N] 88.130.51.186:18116 has been disconnected.
+[N] Incoming connection from 88.130.51.186
+88.130.51.186 SHOGUN_77
+[N] 185.186.38.1:49906 has been disconnected.
+[N] Incoming connection from 212.244.64.109
+[N] 212.244.64.109:57383 has been disconnected.
+[N] 46.204.71.100:23450 has been disconnected.
+[N] Incoming connection from 46.204.71.100
+46.204.71.100 Besnaj29
+[N] 88.130.51.186:18274 has been disconnected.
+[N] 46.204.71.100:23517 has been disconnected.
+[N] Incoming connection from 46.204.71.100
+46.204.71.100 Besnaj29
+[N] 46.204.71.100:23517 has been disconnected.
+[N] Incoming connection from 46.204.71.100
+46.204.71.100 Besnaj29
+[N] Incoming connection from 46.204.50.207
+46.204.50.207 Ardentowy
+[N] 46.204.50.207:57299 has been disconnected.
+[N] Incoming connection from 46.204.50.207
+46.204.50.207 Ardentowy
+[39;49m[32m14:37 [1]Ardent: Elo, jakiś tuner? :D
+[39;49m[37m[N] 46.204.50.207:57299 has been disconnected.
+[N] Incoming connection from 46.204.50.207
+46.204.50.207 Ardentowy
+[39;49m[32m14:41 [0]Besnaj29: nie wiem
+[39;49m[37m[39;49m[32m15:01 [1]Ardent: będzie kupowany jakis remaster gta? :D
+[39;49m[37m[39;49m[32m15:01 [0]Besnaj29: co?
+[39;49m[37m[39;49m[32m15:01 [1]Ardent: nie slyszales?
+[39;49m[37m[39;49m[32m15:02 [0]Besnaj29: ale jakiego gta
+[39;49m[37m[39;49m[32m15:02 [1]Ardent: Rockstar robi remaster gta 3, vice city i san andreas
+[39;49m[37m[39;49m[32m15:02 [1]Ardent: juz oficialnie
+[39;49m[37m[39;49m[32m15:02 [1]Ardent: oficjalnie
+[39;49m[37m[39;49m[32m15:02 [0]Besnaj29: nic nie kupię może sa ale to jak mnie coś przekona do zakupu
+[39;49m[37m[39;49m[32m15:02 [1]Ardent: spoczko :P
+[39;49m[37m[39;49m[32m15:03 [0]Besnaj29: szukasz jajek?
+[39;49m[37m[39;49m[32m15:04 [1]Ardent: czasami
+[39;49m[37m[39;49m[32m15:04 [0]Besnaj29: ja jeszcze dwa abym miał już te 400k i kończę bo mam dwa auta na ft moto i wole już sobie odkładać i nie szukać
+[39;49m[37m[39;49m[32m15:05 [1]Ardent: wiesz moze gdzie znajde jakies jajka?
+[39;49m[37m[39;49m[32m15:06 [0]Besnaj29: sendi
+[39;49m[37m[39;49m[32m15:07 [1]Ardent: dzieki, potem tam pojadę
+[39;49m[37m[39;49m[32m15:07 [1]Ardent: na ten moment spadam. trzymaj się
+[39;49m[37m[39;49m[32m15:07 [0]Besnaj29: pa
+[39;49m[37m[N] 46.204.50.207:57299 has been disconnected.
+[N] Incoming connection from 84.15.187.11
+84.15.187.11 edgar12345cake
+[N] 84.15.187.11:60929 has been disconnected.
+[N] 46.204.71.100:23416 has been disconnected.
+[N] Incoming connection from 46.204.71.100
+46.204.71.100 Besnaj29
+[N] Incoming connection from 178.252.56.146
+[N] 178.252.56.146:61497 has been disconnected.
+[N] 46.204.71.100:23416 has been disconnected.
+[N] Incoming connection from 46.204.71.100
+46.204.71.100 Besnaj29
+[N] Incoming connection from 37.30.115.130
+37.30.115.130 JaniaX135
+[N] 37.30.115.130:34024 has been disconnected.
+[N] Incoming connection from 178.252.56.146
+178.252.56.146 rafi0724
+[N] 178.252.56.146:62784 has been disconnected.
+[N] Incoming connection from 178.252.56.146
+178.252.56.146 rafi0724
+[N] Incoming connection from 87.205.35.19
+[N] 46.204.71.100:23416 has been disconnected.
+[N] 87.205.35.19:54285 has been disconnected.
+[N] Incoming connection from 87.205.35.19
+87.205.35.19 Pyzorek
+[N] Incoming connection from 46.204.50.207
+46.204.50.207 Ardentowy
+[N] 87.205.35.19:49258 has been disconnected.
+[N] Incoming connection from 87.205.35.19
+87.205.35.19 Pyzorek
+[N] 87.205.35.19:49258 has been disconnected.
+[N] Incoming connection from 87.205.35.19
+87.205.35.19 Pyzorek
+[N] 87.205.35.19:49258 has been disconnected.
+[N] Incoming connection from 87.205.35.19
+87.205.35.19 Pyzorek
+[N] 178.252.56.146:49993 has been disconnected.
+[N] Incoming connection from 178.252.56.146
+178.252.56.146 rafi0724
+[N] 87.205.35.19:49258 has been disconnected.
+[N] Incoming connection from 87.205.35.19
+87.205.35.19 Pyzorek
+[N] 87.205.35.19:49258 has been disconnected.
+[N] 178.252.56.146:49993 has been disconnected.
+[N] Incoming connection from 178.252.56.146
+178.252.56.146 rafi0724
+[N] 178.252.56.146:49993 has been disconnected.
+[N] Incoming connection from 83.29.0.44
+83.29.0.44 Drymaniusz
+[N] Incoming connection from 37.30.115.130
+37.30.115.130 JaniaX135
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[39;49m[32m18:48 [3]MeHow: hej
+[39;49m[37m[39;49m[32m18:48 [0].Drymaniusz*: chej
+[39;49m[37m[39;49m[32m18:48 [0].Drymaniusz*: komuchu
+[39;49m[37m[39;49m[32m18:48 [3]MeHow: :|
+[39;49m[37m[39;49m[32m18:48 [3]MeHow: są tylko dwie osoby zbanowane
+[39;49m[37m[39;49m[32m18:48 [3]MeHow: sory trzy
+[39;49m[37m[39;49m[32m18:49 [2]Ardent: michalku
+[39;49m[37m[39;49m[32m18:49 [2]Ardent: napraw glebe w t20 bo sie dac nie da
+[39;49m[37m[39;49m[32m18:49 [3]MeHow: a to juz nie moja wina
+[39;49m[37m[39;49m[32m18:49 [0].Drymaniusz*: ale dc jest komunistyczne nic zrobic nie mozna
+[39;49m[37m[39;49m[32m18:49 [3]MeHow: czm
+[39;49m[37m[39;49m[32m18:49 [0].Drymaniusz*: t20 nie ma gleby przeca
+[39;49m[37m[39;49m[32m18:49 [0].Drymaniusz*: co ty gadasz tym ardentem
+[39;49m[37m[39;49m[32m18:49 [2]Ardent: wyglada jak koza
+[39;49m[37m[39;49m[32m18:49 [3]MeHow: XD
+[39;49m[37m[39;49m[32m18:49 [2]Ardent: chodz mariuszku pojedziemy na seks
+[39;49m[37m[39;49m[32m18:50 [0].Drymaniusz*: to juz pretensje do zjeba r*
+[39;49m[37m[39;49m[32m18:53 [2]Ardent: michal kurwa wez tego majora xDD
+[39;49m[37m[39;49m[32m18:53 [3]MeHow: ja nic 
+[39;49m[37m[39;49m[32m18:54 [2]Ardent: michalku chodz mi zrolowac teren
+[39;49m[37m[39;49m[32m18:54 [3]MeHow: tjuner otwarty
+[39;49m[37m[39;49m[32m18:57 [0].Drymaniusz*: e
+[39;49m[37m[39;49m[32m18:57 [0].Drymaniusz*: pazdziernik dopiero
+[39;49m[37m[39;49m[32m18:57 [2]Ardent: michalek wkrecil sie w sluchanie jingle bels
+[39;49m[37m[39;49m[32m18:57 [3]MeHow: last kristmas aj gejw ju maj hart
+[39;49m[37m[39;49m[32m18:58 [3]MeHow: bat de wery nekst dej
+[39;49m[37m[39;49m[32m18:58 [3]MeHow: ju gejw it ałej
+[39;49m[37m[39;49m[32m18:58 [2]Ardent: ju giwit alaj
+[39;49m[37m[39;49m[32m18:58 [3]MeHow: dalej nie znam :((
+[39;49m[37m[39;49m[32m18:58 [3]MeHow: co by tu dziś nowego zrobic
+[39;49m[37m[39;49m[32m18:58 [2]Ardent: custom rejestracje pizdo rob
+[39;49m[37m[39;49m[32m18:58 [3]MeHow: o dzisiaj zrobie sklep z itemami
+[39;49m[37m[39;49m[32m18:58 [3]MeHow: :S
+[39;49m[37m[39;49m[32m18:59 [0].Drymaniusz*: pisac 2 tygodnie nowy panel gracza odporny na ddosy
+[39;49m[37m[39;49m[32m18:59 [0].Drymaniusz*: ktory przy pierwszym strzale sie wypierdala razem z serwerem
+[39;49m[37m[39;49m[32m18:59 [3]MeHow: dobra
+[39;49m[37m[39;49m[32m18:59 [0].Drymaniusz*: polecam
+[39;49m[37m[39;49m[32m18:59 [2]Ardent: xD
+[39;49m[37m[39;49m[32m18:59 [3]MeHow: .panelGracza{ddos: false}
+[39;49m[37m[39;49m[32m18:59 [3]MeHow: zrobione
+[39;49m[37m[39;49m[32m18:59 [0].Drymaniusz*: XD
+[39;49m[37m[39;49m[32m19:00 [2]Ardent: jedziemy sie stuningowac
+[39;49m[37m[39;49m[32m19:00 [2]Ardent: mehof cwelu jedz na tune
+[39;49m[37m[39;49m[32m19:00 [3]MeHow: do mnie?
+[39;49m[37m[39;49m[32m19:00 [0].Drymaniusz*: ale ze do admina tak?
+[39;49m[37m[39;49m[32m19:00 [2]Ardent: tak
+[39;49m[37m[39;49m[32m19:00 [0].Drymaniusz*: perma trza dac
+[39;49m[37m[39;49m[32m19:01 [2]Ardent: dzienki, bierz do renki
+[39;49m[37m[39;49m[32m19:05 [2]Ardent: bedziecie kupoawc remastery?
+[39;49m[37m[39;49m[32m19:06 [3]MeHow: moze san andreas
+[39;49m[37m[39;49m[32m19:06 [3]MeHow: jak bedzie do 80 zł
+[39;49m[37m[39;49m[32m19:06 [3]MeHow: a to osobno
+[39;49m[37m[39;49m[32m19:06 [3]MeHow: nie mozna
+[39;49m[37m[39;49m[32m19:06 [3]MeHow: nie wiem, jak bedzie osobno to san andreas kupie
+[39;49m[37m[39;49m[32m19:06 [3]MeHow: a jak razem za 300 zł to niech spierdalaja
+[39;49m[37m[39;49m[32m19:08 [3]MeHow: co merol tomo robi w oceanie? XD
+[39;49m[37m[39;49m[32m19:08 [0].Drymaniusz*: co
+[39;49m[37m[39;49m[32m19:08 [3]MeHow: no id 2
+[39;49m[37m[39;49m[32m19:08 [3]MeHow: w oceanie było
+[39;49m[37m[39;49m[32m19:08 [0].Drymaniusz*: em
+[39;49m[37m[39;49m[32m19:09 [0].Drymaniusz*: na torze latalismy
+[39;49m[37m[39;49m[32m19:09 [0].Drymaniusz*: to moze se wpadl
+[39;49m[37m[39;49m[32m19:09 [3]MeHow: a ma sens
+[39;49m[37m[39;49m[32m19:10 [3]MeHow: chujowy ten serwer
+[39;49m[37m[39;49m[32m19:10 [3]MeHow: idziemy do lysego?
+[39;49m[37m[N] 37.30.115.130:33857 has been disconnected.
+[39;49m[32m19:12 [3]MeHow: ja ide
+[39;49m[37m[39;49m[32m19:12 [3]MeHow: XD
+[39;49m[37m[39;49m[32m19:12 [0].Drymaniusz*: jebac jebac
+[39;49m[37m[39;49m[32m19:12 [0].Drymaniusz*: brak lspd
+[39;49m[37m[N] 185.186.38.1:56938 has been disconnected.
+[39;49m[32m19:12 [0].Drymaniusz*: brak marychy
+[39;49m[37m[39;49m[32m19:12 [0].Drymaniusz*: co to za chujowy serwer
+[39;49m[37m[N] Incoming connection from 46.204.71.100
+46.204.71.100 Besnaj29
+[39;49m[32m19:17 [2]Ardent: ja spierdalam
+[39;49m[37m[39;49m[32m19:17 [2]Ardent: eloo
+[39;49m[37m[39;49m[32m19:17 [1]Besnaj29: elooooooo
+[39;49m[37m[N] 46.204.50.207:57187 has been disconnected.
+[N] 83.29.0.44:64497 has been disconnected.
+[N] Incoming connection from 213.134.172.92
+[N] 213.134.172.92:16710 has been disconnected.
+[N] Incoming connection from 213.134.172.92
+[N] 213.134.172.92:16710 has been disconnected.
+[N] Incoming connection from 213.134.172.92
+[N] 213.134.172.92:16710 has been disconnected.
+[N] Incoming connection from 5.184.33.239
+[N] 5.184.33.239:6611 has been disconnected.
+[N] Incoming connection from 83.31.160.192
+[N] 83.31.160.192:60934 has been disconnected.
+[N] 46.204.71.100:23507 has been disconnected.
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[N] Incoming connection from 46.204.71.100
+46.204.71.100 Besnaj29
+[39;49m[32m19:52 [1]Besnaj29: ja jak coś pod moją chatą
+[39;49m[37m[N] Incoming connection from 87.101.35.161
+87.101.35.161 TomoHERE_3hunna
+[N] Incoming connection from 83.29.0.44
+83.29.0.44 Drymaniusz
+[N] Incoming connection from 83.31.160.192
+[N] 83.31.160.192:54567 has been disconnected.
+^C[33m[INFO] [0mShutting down the server...
+Shutting down..
+[32m[DONE] [0mThe server has been terminated.
+terminate called without an active exception

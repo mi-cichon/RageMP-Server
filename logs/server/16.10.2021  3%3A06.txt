@@ -1,0 +1,1647 @@
+[33m[INFO] [0mStarting RAGE Multiplayer server...
+[0m[33m
+[============================================================]
+[33m[33m||
+[33m||[33m	MaxPlayers		[0m50[33m
+||	Sync rate		[0m40ms[33m
+||	Name			[0mBasicRPG.pl | W trakcie tworzenia | Wiecej na https://discord.gg/2vrMdXsdRW [PL][33m
+||	Gamemode		[0mrpg[33m
+||	Streaming distance	[0m500[33m
+||	Announcement		[0menabled[33m
+||	Voice chat		[0menabled[33m
+||	Address			[0m127.0.0.1:22005[33m
+||	Connection limits	[0mdisabled[33m
+||	Encryption		[0menabled[33m
+||	NodeJS			[0menabled[33m
+||	C#			[0menabled[33m
+||
+[============================================================]
+
+[0m
+[33m[INFO][0m Loading NodeJS packages...
+[33m[INFO][0m Starting packages...
+[32m[DONE][0m Server packages have been started.
+Initializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 10/16/2021 3:06:09 AM
+Unable to load acl.xml
+ACLEnabled: False
+Loaded 667 entries from vehicleData.json
+Loading resources..
+[?1h=[39;49m[33m->[39;49m[37m Starting [39;49m[36mServer[39;49m[37m resource..
+[39;49m[39;49m[37mServer:[39;49m[37m loading scripts.. found 1 script(s)
+[39;49m[39;49m[37mServer:[39;49m[37m instantiating [39;49m[37mServerSide.MainClass[39;49m[37m..
+[39;49mConnection refused [::1]:3306
+Connection refused [::1]:3306
+[39;49m[37mServer:[39;49m[37m loading server events.. found 10 server event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 10 server events(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loading remote events.. found 159 remote event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 159 remote event(s)
+[39;49mServer started...
+[39;49m[32m->[39;49m[37m Resource [39;49m[36mServer[39;49m[37m started!
+[39;49m[39;49m[32mStarted! Waiting for connections..
+[39;49m[32m[DONE] [0mStarted resource transfer server at 22006 port.
+[32m[DONE] [0mClient-side packages weight: [33m183.167313 MB[0m (uncompressed: [33m366.801483 MB[0m).
+[33m[INFO] [0mMasterList: Announcing into master server...
+[33m[INFO] [0mInitializing networking...
+[32m[DONE] [0mNetworking has been started: (IPv4-only) at 127.0.0.1:22005
+[32m[DONE] [0mThe server is ready to accept connections.
+[32m[DONE] [0mMasterList: Connected to master list.
+[N] Incoming connection from 83.6.210.191
+[N] Incoming connection from 87.101.35.98
+[N] Incoming connection from 84.15.184.80
+83.6.210.191 Borowikens
+[N] Incoming connection from 79.186.37.95
+[N] Incoming connection from 213.108.119.240
+87.101.35.98 TomoHERE_3hunna
+84.15.184.80 edgar12345cake
+79.186.37.95 Piraciako
+213.108.119.240 robotek019
+[N] Incoming connection from 83.29.1.163
+83.29.1.163 Drymaniusz
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[N] 213.108.119.240:49272 has been disconnected.
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[N] 87.101.35.98:64011 has been disconnected.
+[N] Incoming connection from 87.101.35.98
+87.101.35.98 TomoHERE_3hunna
+[N] 79.186.37.95:54034 has been disconnected.
+[N] Incoming connection from 79.186.37.95
+79.186.37.95 Piraciako
+[N] 84.15.184.80:50278 has been disconnected.
+[N] Incoming connection from 84.15.184.80
+84.15.184.80 edgar12345cake
+[N] 79.186.37.95:54034 has been disconnected.
+[N] Incoming connection from 79.186.37.95
+79.186.37.95 Piraciako
+[39;49m[32m03:23 [2]edi1: kiedu rybak
+[39;49m[37m[N] 79.186.37.95:54034 has been disconnected.
+[N] Incoming connection from 79.186.37.95
+[39;49m[32m03:24 [1]TomoHERE: ale co kiedy?
+[39;49m[37m79.186.37.95 Piraciako
+[39;49m[32m03:25 [2]edi1: jusz nic
+[39;49m[37m[N] 83.6.210.191:58914 has been disconnected.
+[39;49m[32m03:34 [6]MeHow: chce ktoś pościg?
+[39;49m[37m[N] 79.186.37.95:54034 has been disconnected.
+[N] Incoming connection from 79.186.37.95
+Object reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at Player ServerSide.PlayerDataManager.GetPlayerByRemoteId(string remoteId) in F:/RAGEMP server/server-files/dotnet/resources/Server/Managers/PlayerDataManager.cs:line 200
+   at void ServerSide.CommandsManager.ExecuteCommand(Player player, string command, string arguments) in F:/RAGEMP server/server-files/dotnet/resources/Server/Managers/CommandsManager.cs:line 286
+   at void ServerSide.MainClass.PlayerCommandHandler(Player player, string command, string args) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 357
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+79.186.37.95 Piraciako
+Object reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at NetHandle GTANetworkAPI.Player.op_Implicit(Player c)
+   at void ServerSide.CommandsManager.ExecuteCommand(Player player, string command, string arguments) in F:/RAGEMP server/server-files/dotnet/resources/Server/Managers/CommandsManager.cs:line 289
+   at void ServerSide.MainClass.PlayerCommandHandler(Player player, string command, string args) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 357
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+[N] 84.15.184.80:50278 has been disconnected.
+[N] Incoming connection from 84.15.184.80
+84.15.184.80 edgar12345cake
+[39;49m[32m03:48 [4]robotek019: nie da się podnieść upolowanej zwierzyny mimo miejsca w EQ, brak kominikatów
+[39;49m[37m[39;49m[32m03:49 [6]MeHow: hm
+[39;49m[37m[39;49m[32m03:49 [6]MeHow: poprawie jutro
+[39;49m[37m[N] Incoming connection from 78.10.248.125
+78.10.248.125 Pyzorek
+[39;49m[32m03:53 [4]robotek019: występuje o odszkodowanie w formie gotówki za naruszenie nietykalności w trakcie trwania legalnej pracy!
+[39;49m[37m[39;49m[32m03:54 [6]MeHow: miałeś broń
+[39;49m[37m[39;49m[32m03:54 [4]robotek019: tak z 250k załatwi sprawę :D
+[39;49m[37m[39;49m[32m03:54 [4]robotek019: miałem, posiadam pozwolenie PZL oraz paszport polsatu
+[39;49m[37m[39;49m[32m03:56 [2]edi1: @ 4 tepnide domnie
+[39;49m[37m[39;49m[32m03:56 [2]edi1: @ 6 tepnide domnie
+[39;49m[37m[39;49m[32m03:57 [4]robotek019: znów nie mogę jelenia podnieść xD
+[39;49m[37m[39;49m[32m03:57 [6]MeHow: no psuje sie no
+[39;49m[37m[39;49m[32m03:57 [4]robotek019: dobra... przy pustym eq pisze nie mam miejsca, wywale wędke i podnoszę i nagle jest miejsce xD
+[39;49m[37m[39;49m[32m03:58 [6]MeHow: no
+[39;49m[37m[N] 185.186.38.1:61805 has been disconnected.
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[N] 79.186.37.95:54034 has been disconnected.
+[N] Incoming connection from 79.186.37.95
+79.186.37.95 Piraciako
+[39;49m[32m04:07 [4]robotek019: ten tuner na sendy to trochę za drogi xD
+[39;49m[37m[39;49m[32m04:07 [6]MeHow: nie dla ludzi którzy kupią i nie będą wchodzić
+[39;49m[37m[N] 78.10.248.125:63113 has been disconnected.
+[N] Incoming connection from 78.10.248.125
+[39;49m[32m04:08 [4]robotek019: w sensie lokalizacja słaba
+[39;49m[37m[39;49m[32m04:08 [5].Drymaniusz*: ok
+[39;49m[37m[39;49m[32m04:08 [6]MeHow: lokalizacja nie ma znaczenia
+[39;49m[37m[39;49m[32m04:08 [5].Drymaniusz*: to nie bierz
+[39;49m[37m78.10.248.125 Pyzorek
+[39;49m[32m04:08 [5].Drymaniusz*: prosta pila
+[39;49m[37m[39;49m[32m04:08 [5].Drymaniusz*: (:
+[39;49m[37m[39;49m[32m04:08 [6]MeHow: to nie mechanik na fl, że ceny są takie same
+[39;49m[37m[39;49m[32m04:10 [2]edi1: MeHoW TEPNI MNIE NAS MYSLIWEGO
+[39;49m[37m[39;49m[32m04:10 [6]MeHow: pojedź sobie
+[39;49m[37m[39;49m[32m04:10 [4]robotek019: miliona bym zaryzykował, 2 się tutaj nie odrobi po prostu ;D
+[39;49m[37m[39;49m[32m04:12 [6]MeHow: tu nie chodzi o odrabianie
+[39;49m[37m[39;49m[32m04:12 [6]MeHow: tylko o testy i fakt posiadania biznesu
+[39;49m[37m[39;49m[32m04:13 [3]Pyzorek: oddam 5 pojazdow za free okazja!
+[39;49m[37m[39;49m[32m04:14 [5].Drymaniusz*: Nie chce nic mowic ale przy dobrym bonusie zarabiasz 1kk na godzine
+[39;49m[37m[39;49m[32m04:14 [5].Drymaniusz*: Wiec nie wiem do czego bijesz 
+[39;49m[37m[39;49m[32m04:14 [4]robotek019: nikt nie chce "tracić" 2mln dorzućcie 500k i trafi przynajmniej w dobre ręce :D
+[39;49m[37m[39;49m[32m04:15 [5].Drymaniusz*: Nie (:
+[39;49m[37m[39;49m[32m04:15 [6]MeHow: ludzie dają 1,5kk za auto które stoi pod domkiem
+[39;49m[37m[39;49m[32m04:15 [6]MeHow: jeśli nie dadzą tyle na biznes to już nie wiem czego oni oczekują
+[39;49m[37m[39;49m[32m04:16 [1]TomoHERE: to testy, tu 2kk to jest godzina z hakiem przy premiach
+[39;49m[37m[39;49m[32m04:16 [4]robotek019: auta zbierają, a biznes musi się zwracać :P
+[39;49m[37m[39;49m[32m04:16 [4]robotek019: 2h :D
+[39;49m[37m[N] 79.186.37.95:54034 has been disconnected.
+[N] Incoming connection from 79.186.37.95
+[39;49m[32m04:16 [6]MeHow: czemu wy to kurwa traktujecie jakby to był już działajacy serwer po starcie xD
+[39;49m[37m79.186.37.95 Piraciako
+[39;49m[32m04:17 [1]TomoHERE: na testach macie testowac i uczyć sie mechanik serwera a nie zarabiac i robic profit
+[39;49m[37m[39;49m[32m04:17 [4]robotek019: tak, tylko że zakup zakładu za 2mln + opłacanie go + zakup felg :D 
+[39;49m[37m[39;49m[32m04:17 [6]MeHow: cena wysoka żeby osoba która to kupi faktycznie tego chciala
+[39;49m[37m[39;49m[32m04:18 [6]MeHow: tragedia, przy zarobkach 1kk/h nie wiem czy dacie rade
+[39;49m[37m[39;49m[32m04:18 [4]robotek019: .Drymaniusz najwidoczniej najbardziej potrzebował tego tunera :D
+[39;49m[37m[39;49m[32m04:18 [6]MeHow: nie chcecie to on weźmie
+[39;49m[37m[39;49m[32m04:18 [1]TomoHERE: to ma kupic osoba która chcialaby sie nauczyc przed startem funkcjonowania, ktora po starcie tez bedzie na to polować. a nie ktos kto na testach
+[39;49m[37m[39;49m[32m04:18 [1]TomoHERE: chce tylko profitu na kazdym kroku
+[39;49m[37m[39;49m[32m04:19 [5].Drymaniusz*: Wzialem zebys nie musial plakac ze 2kk to tak wiele na testach przy zarobkach 1kk/h
+[39;49m[37m[39;49m[32m04:19 [1]TomoHERE: zlitujcie sie, nie bylo premii to marudzenie ze znajdzki trudne, znajdzki off i premie ze po 1kk/h sie pizga - "duzo 2kk za biznes"
+[39;49m[37m[39;49m[32m04:20 [1]TomoHERE: bylyby zarobki 12kk/h i biznes kosztowal 100k i by bylo "ale czemu tak tanio, teraz jakis nolife bedie to trzymal rok"
+[39;49m[37m[39;49m[32m04:20 [6]MeHow: zawsze cos nie pasuje
+[39;49m[37m[39;49m[32m04:20 [5].Drymaniusz*: Juz pomine fakt ze testy sa od testowania a nie kupowania miliona aut
+[39;49m[37m[N] 79.186.37.95:54034 has been disconnected.
+[N] Incoming connection from 79.186.37.95
+79.186.37.95 Piraciako
+[39;49m[32m04:22 [3]Pyzorek: zwierzak zbugowany nie da sie oskurowac
+[39;49m[37m[39;49m[32m04:22 [6]MeHow: wiemy
+[39;49m[37m[N] 78.10.248.125:63113 has been disconnected.
+[N] Incoming connection from 78.10.248.125
+78.10.248.125 Pyzorek
+w[N] 79.186.37.95:54034 has been disconnected.
+[N] Incoming connection from 79.186.37.95
+79.186.37.95 Piraciako
+[N] 79.186.37.95:54034 has been disconnected.
+[N] Incoming connection from 79.186.37.95
+79.186.37.95 Piraciako
+[39;49m[32m04:37 [2]edi1: nie moge podniesc skury
+[39;49m[37m[39;49m[32m04:37 [6]MeHow: my spadamy siema
+[39;49m[37m[39;49m[32m04:37 [3]Pyzorek: siema
+[39;49m[37m[39;49m[32m04:37 [1]TomoHERE: elo
+[39;49m[37m[N] 185.186.38.1:61805 has been disconnected.
+[N] 87.101.35.98:64011 has been disconnected.
+[N] 83.29.1.163:61934 has been disconnected.
+[N] 79.186.37.95:54034 has been disconnected.
+[N] Incoming connection from 79.186.37.95
+79.186.37.95 Piraciako
+[N] 79.186.37.95:54034 has been disconnected.
+[N] Incoming connection from 79.186.37.95
+79.186.37.95 Piraciako
+[N] 84.15.184.80:50278 has been disconnected.
+[N] Incoming connection from 84.15.184.80
+[N] 79.186.37.95:54034 has been disconnected.
+[N] Incoming connection from 79.186.37.95
+84.15.184.80 edgar12345cake
+79.186.37.95 Piraciako
+[N] 213.108.119.240:49272 has been disconnected.
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[N] 84.15.184.80:50278 has been disconnected.
+[N] Incoming connection from 84.15.184.80
+84.15.184.80 edgar12345cake
+[N] 79.186.37.95:54034 has been disconnected.
+[N] Incoming connection from 79.186.37.95
+79.186.37.95 Piraciako
+[N] 79.186.37.95:54034 has been disconnected.
+[N] Incoming connection from 79.186.37.95
+79.186.37.95 Piraciako
+[N] 213.108.119.240:49272 has been disconnected.
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[N] 79.186.37.95:54034 has been disconnected.
+[N] Incoming connection from 79.186.37.95
+79.186.37.95 Piraciako
+[N] 79.186.37.95:54034 has been disconnected.
+[N] 78.10.248.125:63113 has been disconnected.
+[N] Incoming connection from 78.10.248.125
+78.10.248.125 Pyzorek
+[N] 213.108.119.240:49272 has been disconnected.
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[N] 213.108.119.240:49272 has been disconnected.
+[N] 78.10.248.125:63113 has been disconnected.
+[N] 84.15.184.80:50278 has been disconnected.
+[N] Incoming connection from 87.207.61.174
+87.207.61.174 -Wars-
+[N] Incoming connection from 83.5.117.40
+83.5.117.40 KNFCichy
+[N] Incoming connection from 77.45.40.180
+77.45.40.180 diabeu32
+[N] 83.5.117.40:59265 has been disconnected.
+[N] Incoming connection from 83.5.117.40
+83.5.117.40 KNFCichy
+[N] Incoming connection from 89.229.84.90
+89.229.84.90 Bombel3k
+[39;49m[32m10:08 [1]KNFCichy: pod jakim klawiszem jest eq?
+[39;49m[37m[39;49m[32m10:08 [3]Bombel3k: i
+[39;49m[37m[39;49m[32m10:08 [1]KNFCichy: ok dzieki
+[39;49m[37m[39;49m[32m10:18 [1]KNFCichy: jest moze jakis adm?
+[39;49m[37m[39;49m[32m10:18 [0]Wars: @ 1 Pod F4 masz listę graczy.
+[39;49m[37m[39;49m[32m10:19 [1]KNFCichy: a ok dzieki
+[39;49m[37m[N] 83.5.117.40:59265 has been disconnected.
+[N] Incoming connection from 83.5.117.40
+83.5.117.40 KNFCichy
+[N] 83.5.117.40:59265 has been disconnected.
+[N] Incoming connection from 83.5.117.40
+83.5.117.40 KNFCichy
+[39;49m[32m10:28 [1]KNFCichy: @3 mozna u ciebie na tunerze fele zalozyc?
+[39;49m[37m[39;49m[32m10:29 [3]Bombel3k: tak zaraz podjade
+[39;49m[37m[39;49m[32m10:29 [1]KNFCichy: a juz nie ma sory
+[39;49m[37m[39;49m[32m10:29 [1]KNFCichy: nie widac u mnie na mapie lol
+[39;49m[37m[39;49m[32m10:29 [1]KNFCichy: a dobra nwz XD
+[39;49m[37m[39;49m[32m10:29 [3]Bombel3k: mój tuner na plaży teraz jest bo lokalizacje zmienili
+[39;49m[37m[N] 77.45.40.180:65006 has been disconnected.
+[N] Incoming connection from 77.45.40.180
+77.45.40.180 diabeu32
+[39;49m[32m10:40 [3]Bombel3k: kupie krieger/ nero/ t20
+[39;49m[37m[N] 83.5.117.40:59265 has been disconnected.
+[N] Incoming connection from 89.64.93.4
+89.64.93.4 -slupek-
+[N] Incoming connection from 91.37.209.15
+91.37.209.15 SzamponikPLYT
+[N] 91.37.209.15:53289 has been disconnected.
+[N] Incoming connection from 81.219.115.54
+[N] Incoming connection from 178.214.21.59
+81.219.115.54 Kabess0
+[N] 178.214.21.59:54749 has been disconnected.
+[N] Incoming connection from 91.37.209.15
+91.37.209.15 SzamponikPLYT
+[N] Incoming connection from 213.134.168.147
+213.134.168.147 -_Chmielu_-
+[N] Incoming connection from 81.15.239.49
+81.15.239.49 zabraliminazwe
+[N] Incoming connection from 185.238.122.33
+[N] Incoming connection from 178.214.21.59
+178.214.21.59 Kuboro_esa
+185.238.122.33 KtoTuToTakTo
+[N] Incoming connection from 37.47.9.33
+37.47.9.33 CzarekDriver
+[N] 185.238.122.33:53223 has been disconnected.
+Connection refused [::1]:3306
+[N] 81.219.115.54:60634 has been disconnected.
+[N] Incoming connection from 81.219.115.54
+81.219.115.54 Kabess0
+[N] Incoming connection from 46.204.16.148
+46.204.16.148 Baldi1331
+[N] 81.219.115.54:60634 has been disconnected.
+[N] Incoming connection from 81.219.115.54
+81.219.115.54 Kabess0
+[N] 46.204.16.148:5272 has been disconnected.
+[N] Incoming connection from 46.204.16.148
+46.204.16.148 Baldi1331
+[N] 91.37.209.15:55675 has been disconnected.
+[N] Incoming connection from 91.37.209.15
+91.37.209.15 SzamponikPLYT
+[39;49m[32m11:35 [9]Kuboro: wie ktos jaki wczesniejszy bonus był?
+[39;49m[37m[39;49m[32m11:36 [3]Bombel3k: na trawniki
+[39;49m[37m[N] 81.15.239.49:51347 has been disconnected.
+[N] Incoming connection from 5.173.129.156
+5.173.129.156 0DEYMAN0
+[N] 91.37.209.15:55675 has been disconnected.
+[N] Incoming connection from 91.37.209.15
+91.37.209.15 SzamponikPLYT
+[N] Incoming connection from 79.186.37.95
+[N] 79.186.37.95:62764 has been disconnected.
+[N] Incoming connection from 79.186.37.95
+79.186.37.95 Piraciako
+[39;49m[32m11:45 [9]Kuboro: euros w salonie jakby ktos chcial
+[39;49m[37m[39;49m[32m11:45 [5]SzamponikPLYT: za ile
+[39;49m[37m[39;49m[32m11:45 [9]Kuboro: 200k
+[39;49m[37m[39;49m[32m11:45 [5]SzamponikPLYT: i gdzie
+[39;49m[37m[39;49m[32m11:45 [3]Bombel3k: simeon
+[39;49m[37m[N] 89.229.84.90:60265 has been disconnected.
+[N] Incoming connection from 89.229.84.90
+89.229.84.90 Bombel3k
+[N] 46.204.16.148:5272 has been disconnected.
+[N] Incoming connection from 46.204.16.148
+46.204.16.148 Baldi1331
+[N] 37.47.9.33:27137 has been disconnected.
+[N] 46.204.16.148:5272 has been disconnected.
+[N] Incoming connection from 46.204.16.148
+46.204.16.148 Baldi1331
+[N] 46.204.16.148:5272 has been disconnected.
+[N] Incoming connection from 46.204.16.148
+46.204.16.148 Baldi1331
+[N] Incoming connection from 31.61.182.163
+31.61.182.163 Abbycane_
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] 91.37.209.15:55675 has been disconnected.
+[N] Incoming connection from 109.231.63.235
+109.231.63.235 QuaVim
+[39;49m[32m12:02 [0]Wars: Kupię Thraxa
+[39;49m[37m[N] 213.134.168.147:15818 has been disconnected.
+[N] 31.61.182.163:17856 has been disconnected.
+[N] Incoming connection from 213.134.168.147
+[N] 213.134.168.147:15818 has been disconnected.
+[N] Incoming connection from 213.134.168.147
+213.134.168.147 -_Chmielu_-
+[N] 213.134.168.147:15818 has been disconnected.
+[N] Incoming connection from 213.134.168.147
+213.134.168.147 -_Chmielu_-
+[39;49m[32m12:06 [3]Bombel3k: wynajme jakiś ciekawy domek na mirror 
+[39;49m[37m[39;49m[32m12:06 [3]Bombel3k: i oddam swój bo mam podjazd za mały xD
+[39;49m[37m[N] 81.219.115.54:60634 has been disconnected.
+[N] Incoming connection from 81.219.115.54
+81.219.115.54 Kabess0
+[N] 79.186.37.95:63438 has been disconnected.
+[N] Incoming connection from 79.186.37.95
+79.186.37.95 Piraciako
+[N] Incoming connection from 88.130.51.28
+88.130.51.28 SHOGUN_77
+[N] 81.219.115.54:60634 has been disconnected.
+[N] Incoming connection from 185.155.43.172
+185.155.43.172 Don_Jacobo
+[N] 79.186.37.95:63438 has been disconnected.
+[39;49m[32m12:17 [4]Towarzyszu: Sprzedam: - Stirling GT (ID: 72) - Hermes (ID: 73) - Vigero RR (ID: 128) - Scout (ID: 219)
+[39;49m[37m[N] 88.130.51.28:25855 has been disconnected.
+[N] Incoming connection from 83.31.77.191
+83.31.77.191 Teeelu
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] 89.229.84.90:60265 has been disconnected.
+[N] Incoming connection from 89.229.84.90
+89.229.84.90 Bombel3k
+[N] 89.229.84.90:60265 has been disconnected.
+[N] 185.155.43.172:60978 has been disconnected.
+[N] Incoming connection from 89.229.84.90
+89.229.84.90 Bombel3k
+[N] Incoming connection from 185.155.43.172
+185.155.43.172 Don_Jacobo
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[39;49m[32m12:27 [11]MeHow: siema
+[39;49m[37m[39;49m[32m12:27 [6]-_Chmielu_-: witam
+[39;49m[37m[39;49m[32m12:28 [4]Towarzyszu: siema
+[39;49m[37m[39;49m[32m12:28 [3]Bombel3k: siema
+[39;49m[37m[39;49m[32m12:28 [11]MeHow: kurba 3 update'y wczoraj były
+[39;49m[37m[39;49m[32m12:28 [11]MeHow: kurba 3 updatey wczoraj były
+[39;49m[37m[39;49m[32m12:29 [4]Towarzyszu: @11 mozesz sprawdzic czy te bamkomaty obok parkingu w LS działaja ? bo u mnie cos srednio
+[39;49m[37m[39;49m[32m12:29 [4]Towarzyszu: znaczy nie parking tylko obok przechowalni
+[39;49m[37m[39;49m[32m12:29 [11]MeHow: taa, źle pozycja oznaczona
+[39;49m[37m[39;49m[32m12:29 [11]MeHow: pomiędzy nie trzeba podejść
+[39;49m[37m[39;49m[32m12:30 [11]MeHow: zrobimy pewnie nowe pozycje tych bankomatów bo te są do dupy
+[39;49m[37m[39;49m[32m12:30 [4]Towarzyszu: albo jak sa 2 to niech jedn tylko dziala
+[39;49m[37m[39;49m[32m12:30 [11]MeHow: zobaczymy
+[39;49m[37m[N] 83.31.77.191:60484 has been disconnected.
+[N] Incoming connection from 83.31.77.191
+83.31.77.191 Teeelu
+[N] Incoming connection from 176.113.207.65
+176.113.207.65 Wrzychol
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] 178.214.21.59:52924 has been disconnected.
+[N] Incoming connection from 178.214.21.59
+178.214.21.59 Kuboro_esa
+[N] 185.155.43.172:60978 has been disconnected.
+[N] Incoming connection from 185.155.43.172
+185.155.43.172 Don_Jacobo
+[N] 87.207.61.174:60560 has been disconnected.
+[N] Incoming connection from 87.207.61.174
+87.207.61.174 -Wars-
+[N] 109.231.63.235:58966 has been disconnected.
+[N] Incoming connection from 109.231.63.235
+109.231.63.235 QuaVim
+[N] 176.113.207.65:53873 has been disconnected.
+[N] Incoming connection from 79.186.37.95
+79.186.37.95 Piraciako
+[N] 79.186.37.95:60695 has been disconnected.
+[N] 83.31.77.191:60484 has been disconnected.
+[N] Incoming connection from 79.186.37.95
+79.186.37.95 Piraciako
+[N] 79.186.37.95:60695 has been disconnected.
+[N] Incoming connection from 79.186.37.95
+79.186.37.95 Piraciako
+[N] Incoming connection from 176.113.207.65
+176.113.207.65 Wrzychol
+[N] 5.173.129.156:22033 has been disconnected.
+[N] Incoming connection from 5.173.129.156
+5.173.129.156 0DEYMAN0
+[39;49m[32m12:58 [11]MeHow: synchronizacje tych gówien na pace poprawie
+[39;49m[37mObject must implement IConvertible.
+markVehicleAsNotTowed: System.InvalidCastException: Object must implement IConvertible.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+[N] 109.231.63.235:58966 has been disconnected.
+[N] Incoming connection from 109.231.63.235
+109.231.63.235 QuaVim
+[N] 185.155.43.172:60978 has been disconnected.
+[N] 178.214.21.59:52924 has been disconnected.
+[N] Incoming connection from 178.214.21.59
+178.214.21.59 Kuboro_esa
+[N] 178.214.21.59:52924 has been disconnected.
+[N] Incoming connection from 178.214.21.59
+178.214.21.59 Kuboro_esa
+[N] Incoming connection from 83.6.210.191
+[N] 83.6.210.191:53625 has been disconnected.
+[N] Incoming connection from 79.186.48.135
+79.186.48.135 TheMichauu
+[N] 79.186.37.95:60695 has been disconnected.
+[N] Incoming connection from 79.186.37.95
+79.186.37.95 Piraciako
+[39;49m[32m13:14 [3]Bombel3k: kupie t20/nero/krieger sprzedam reble
+[39;49m[37m[N] 79.186.37.95:60695 has been disconnected.
+[N] Incoming connection from 79.186.37.95
+79.186.37.95 Piraciako
+[N] Incoming connection from 83.6.210.191
+83.6.210.191 Borowikens
+[39;49m[32m13:16 [13]rado1229: eo
+[39;49m[37m[39;49m[32m13:16 [6]-_Chmielu_-: witam
+[39;49m[37m[39;49m[32m13:16 [11]MeHow: siema
+[39;49m[37m[39;49m[32m13:16 [10]Piraciako: siema
+[39;49m[37m[39;49m[32m13:16 [3]Bombel3k: eo
+[39;49m[37m[39;49m[32m13:16 [11]MeHow: nero na salonie
+[39;49m[37m[N] 79.186.37.95:60695 has been disconnected.
+[N] Incoming connection from 79.186.37.95
+79.186.37.95 Piraciako
+[39;49m[32m13:17 [9]WolnoLukasz: spoko
+[39;49m[37m[39;49m[32m13:17 [9]WolnoLukasz: elo
+[39;49m[37m[39;49m[32m13:17 [3]Bombel3k: zwykłe czy custom ?
+[39;49m[37m[39;49m[32m13:17 [0]Wars: 11 E tam tylko thrax ;)
+[39;49m[37m[39;49m[32m13:19 [10]Piraciako: jak zrobic przelew /przelwe id i co dalej?
+[39;49m[37m[39;49m[32m13:19 [11]MeHow: hmmm
+[39;49m[37m[39;49m[32m13:19 [11]MeHow: jak zrobić przelew jak napisane jest /przelew {id/nick}
+[39;49m[37m[39;49m[32m13:20 [11]MeHow: a może tylko /przelew id? xD
+[39;49m[37m[39;49m[32m13:20 [1]SLUPEK: id i kwota
+[39;49m[37m[39;49m[32m13:20 [11]MeHow: nie
+[39;49m[37m[N] 5.173.129.156:22033 has been disconnected.
+[39;49m[32m13:20 [9]WolnoLukasz: zarobki na wózkach widłowych są zwiększone?
+[39;49m[37m[39;49m[32m13:20 [11]MeHow: obecnie nie
+[39;49m[37m[39;49m[32m13:21 [10]Piraciako: dobra już czaje myślałem, że można na odległość
+[39;49m[37m[39;49m[32m13:21 [11]MeHow: /bonus
+[39;49m[37m[N] Incoming connection from 5.173.129.156
+5.173.129.156 0DEYMAN0
+[N] 79.186.37.95:60695 has been disconnected.
+[39;49m[32m13:21 [9]WolnoLukasz: aaa czaje
+[39;49m[37m[39;49m[32m13:21 [11]MeHow: na myśliwym zwierzęta się lubią zbugować i nie można podnieść skóry, poprawię to dzisiaj
+[39;49m[37m[N] Incoming connection from 79.186.37.95
+79.186.37.95 Piraciako
+[39;49m[32m13:21 [4]Kuboro: ja wale w nich 3 razy szogunem i juz sie podnoszą
+[39;49m[37m[39;49m[32m13:21 [4]Kuboro: magia
+[39;49m[37m[N] 176.113.207.65:61308 has been disconnected.
+[N] Incoming connection from 176.113.207.65
+176.113.207.65 Wrzychol
+[N] Incoming connection from 91.192.199.68
+[N] 46.204.16.148:5272 has been disconnected.
+[39;49m[32m13:26 [3]Bombel3k: sprzedam reble ft fv
+[39;49m[37m91.192.199.68 xAmarixYTx
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[39;49m[32m13:26 [9]WolnoLukasz: a ja se sprzedam zr350 ft fdv
+[39;49m[37m[39;49m[32m13:26 [6]-_Chmielu_-: za ile
+[39;49m[37m[39;49m[32m13:27 [13]rado1229: nie masz tyle januszek
+[39;49m[37m[39;49m[32m13:27 [9]WolnoLukasz: nw, z 450k
+[39;49m[37m[N] Incoming connection from 176.110.144.201
+176.110.144.201 SoSnOwYx69
+[39;49m[32m13:27 [6]-_Chmielu_-: i widzisz radziu, w bledzie jestes
+[39;49m[37m[39;49m[32m13:27 [13]rado1229: no jestem
+[39;49m[37m[39;49m[32m13:27 [6]-_Chmielu_-: ale musze budzet podreperowac
+[39;49m[37m[39;49m[32m13:28 [13]rado1229: śmiesznie to brzmi kiedy mam z tyłu głowy że są takie premie na pracki xd
+[39;49m[37m[N] 77.45.40.180:65006 has been disconnected.
+[39;49m[32m13:32 [14]xAmarixYTx: Jest tu jakaś tabela graczy ?
+[39;49m[37m[39;49m[32m13:32 [3]Bombel3k: f4
+[39;49m[37m[39;49m[32m13:33 [14]xAmarixYTx: dzięki
+[39;49m[37m[N] Incoming connection from 31.135.31.28
+31.135.31.28 Lentciak
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[39;49m[32m13:37 [12]Wrzychol: jaka najlepsza praca od 15xp
+[39;49m[37m[39;49m[32m13:37 [12]Wrzychol: 150xP
+[39;49m[37m[N] 79.186.37.95:60695 has been disconnected.
+[39;49m[32m13:40 [4]Kuboro: @9 ile za to retro retro chcesz?
+[39;49m[37m[N] 79.186.48.135:58041 has been disconnected.
+[N] Incoming connection from 79.186.48.135
+[N] 79.186.48.135:58041 has been disconnected.
+[N] 176.113.207.65:61308 has been disconnected.
+[N] Incoming connection from 79.186.48.135
+[N] Incoming connection from 176.113.207.65
+79.186.48.135 TheMichauu
+[N] 91.192.199.68:58373 has been disconnected.
+176.113.207.65 Wrzychol
+[N] 178.214.21.59:52924 has been disconnected.
+[N] Incoming connection from 178.214.21.59
+178.214.21.59 Kuboro_esa
+[39;49m[32m13:48 [9]WolnoLukasz: sprzedam zr350 ft fv
+[39;49m[37m[N] 213.134.168.147:15818 has been disconnected.
+[N] Incoming connection from 213.134.168.147
+213.134.168.147 -_Chmielu_-
+[N] 31.135.31.28:28183 has been disconnected.
+[N] 178.214.21.59:52924 has been disconnected.
+[N] 89.64.93.4:11221 has been disconnected.
+[39;49m[32m14:00 [3]Bombel3k: ktos tunera potrzebuje bo zwijam zaraz 
+[39;49m[37m[N] 176.113.207.65:61308 has been disconnected.
+[N] Incoming connection from 84.15.184.80
+84.15.184.80 edgar12345cake
+[39;49m[32m14:04 [1]edi1: siema
+[39;49m[37m[39;49m[32m14:04 [3]Bombel3k: siema
+[39;49m[37m[39;49m[32m14:06 [8]Sosnowy: Głupie te zające
+[39;49m[37m[N] 89.229.84.90:60265 has been disconnected.
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[39;49m[32m14:12 [9]WolnoLukasz: @11 jesteś?
+[39;49m[37m[39;49m[32m14:12 [2]robotek019: siemka
+[39;49m[37m[39;49m[32m14:12 [1]edi1: siema
+[39;49m[37m[N] 5.173.129.156:22033 has been disconnected.
+[N] 87.207.61.174:60560 has been disconnected.
+[N] 109.231.63.235:58966 has been disconnected.
+[N] Incoming connection from 109.231.63.235
+109.231.63.235 QuaVim
+[N] Incoming connection from 87.207.61.174
+87.207.61.174 -Wars-
+[N] 176.110.144.201:60064 has been disconnected.
+[N] Incoming connection from 5.173.129.156
+5.173.129.156 0DEYMAN0
+[39;49m[32m14:23 [9]WolnoLukasz: @11 zyjesz?
+[39;49m[37m[N] Incoming connection from 176.110.144.201
+176.110.144.201 SoSnOwYx69
+[N] 79.186.48.135:64644 has been disconnected.
+[N] Incoming connection from 79.186.48.135
+79.186.48.135 TheMichauu
+[N] 213.108.119.240:63343 has been disconnected.
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[N] Incoming connection from 83.29.1.163
+83.29.1.163 Drymaniusz
+[N] Incoming connection from 77.45.40.180
+77.45.40.180 diabeu32
+[N] Incoming connection from 89.64.93.4
+89.64.93.4 -slupek-
+[N] 5.173.129.156:38100 has been disconnected.
+[N] Incoming connection from 5.173.129.156
+5.173.129.156 0DEYMAN0
+[N] 176.110.144.201:58540 has been disconnected.
+[N] 79.186.48.135:64644 has been disconnected.
+[N] Incoming connection from 79.186.48.135
+[39;49m[32m14:54 [9]dobrygnuj: skory sprzedaje u pasera ?
+[39;49m[37m79.186.48.135 TheMichauu
+[39;49m[32m14:54 [8].Drymaniusz*: Skory sprzedajesz tam gdzie zaczynasz prace tylko zamiast E dajesz R
+[39;49m[37m[39;49m[32m14:54 [9]dobrygnuj: dzk
+[39;49m[37m[39;49m[32m14:57 [1]edi1: siema Drymaniusz
+[39;49m[37m[39;49m[32m14:57 [8].Drymaniusz*: siema
+[39;49m[37m[N] Incoming connection from 176.110.144.201
+176.110.144.201 SoSnOwYx69
+[N] 79.186.48.135:64644 has been disconnected.
+[N] Incoming connection from 79.186.48.135
+[39;49m[32m15:07 [11]MeHow: chcecie inny bonus? XD
+[39;49m[37m[39;49m[32m15:07 [13]rado1229: tak
+[39;49m[37m79.186.48.135 TheMichauu
+[39;49m[32m15:07 [6]-_Chmielu_-: zdecydowanie
+[39;49m[37m[39;49m[32m15:08 [10]SLUPEK: nie bo będe testtował
+[39;49m[37m[39;49m[32m15:09 [1]edi1: tak
+[39;49m[37m[39;49m[32m15:09 [11]MeHow: no i gituwa
+[39;49m[37m[39;49m[32m15:09 [11]MeHow: czy jeszcze?
+[39;49m[37m[39;49m[32m15:09 [5]WolnoLukasz: git
+[39;49m[37m[39;49m[32m15:09 [3]Wars: Ankiety dodać ;)
+[39;49m[37m[39;49m[32m15:09 [13]rado1229: jeszcze raz
+[39;49m[37m[39;49m[32m15:09 [11]MeHow: dodam
+[39;49m[37m[39;49m[32m15:10 [7]Sosnowy: +1 Ankiety byłyby spoko :d
+[39;49m[37m[N] 185.186.38.1:52614 has been disconnected.
+[39;49m[32m15:10 [1]edi1: +2
+[39;49m[37m[N] 5.173.129.156:22038 has been disconnected.
+[N] Incoming connection from 5.173.129.156
+5.173.129.156 0DEYMAN0
+[39;49m[32m15:11 [9]dobrygnuj: +2.5
+[39;49m[37m[N] 5.173.129.156:22038 has been disconnected.
+[N] Incoming connection from 5.173.129.156
+5.173.129.156 0DEYMAN0
+[N] Incoming connection from 88.130.51.28
+88.130.51.28 SHOGUN_77
+[39;49m[32m15:19 [7]Sosnowy: Ale zamiana bonusu xd z deszczu pod rynne xd
+[39;49m[37m[N] Incoming connection from 31.183.144.102
+31.183.144.102 Adasko26
+[N] 176.110.144.201:59473 has been disconnected.
+[N] 5.173.129.156:22038 has been disconnected.
+[N] Incoming connection from 5.173.129.156
+[N] Incoming connection from 83.21.55.10
+83.21.55.10 Hatrix77
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] 5.173.129.156:22038 has been disconnected.
+[N] Incoming connection from 5.173.129.156
+5.173.129.156 0DEYMAN0
+[N] Incoming connection from 79.186.37.95
+79.186.37.95 Piraciako
+[N] 5.173.129.156:4134 has been disconnected.
+[N] Incoming connection from 5.173.129.156
+5.173.129.156 0DEYMAN0
+[N] 83.21.55.10:50232 has been disconnected.
+[N] 77.45.40.180:52422 has been disconnected.
+[N] 79.186.37.95:59668 has been disconnected.
+[N] Incoming connection from 79.186.37.95
+79.186.37.95 Piraciako
+[N] 88.130.51.28:25827 has been disconnected.
+[N] Incoming connection from 83.26.211.86
+83.26.211.86 Bigczitos
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] Incoming connection from 89.229.84.90
+89.229.84.90 Bombel3k
+[N] Incoming connection from 46.204.17.246
+46.204.17.246 Baldi1331
+[N] 79.186.37.95:59668 has been disconnected.
+[N] Incoming connection from 79.186.37.95
+79.186.37.95 Piraciako
+[N] 31.183.144.102:52489 has been disconnected.
+[N] Incoming connection from 31.183.144.102
+31.183.144.102 Adasko26
+[39;49m[32m16:18 [5]WolnoLukasz: Kupie se Elegy Retro a sprzedam Zr350 FT FV
+[39;49m[37m[39;49m[32m16:23 [11]Bombel3k: sprzedam reble vstr i 190z wszystko w stocku
+[39;49m[37m[N] 213.108.119.240:63343 has been disconnected.
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[N] Incoming connection from 89.64.114.211
+89.64.114.211 BIGBOMBELEK
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] Incoming connection from 185.155.43.172
+185.155.43.172 Don_Jacobo
+[39;49m[32m16:27 [5]WolnoLukasz: na którym komisie sie respi Vigero RR czyt. Camaro?
+[39;49m[37m[39;49m[32m16:27 [8].Drymaniusz*: simeon
+[39;49m[37m[39;49m[32m16:27 [16]Towarzyszu: @5 moze chcesz kupic?
+[39;49m[37m[39;49m[32m16:27 [5]WolnoLukasz: chciałbym 
+[39;49m[37m[N] 89.229.84.90:53004 has been disconnected.
+[N] Incoming connection from 89.229.84.90
+[N] 89.229.84.90:53004 has been disconnected.
+[39;49m[32m16:28 [16]Towarzyszu: to czekaj chwiel
+[39;49m[37m[N] 185.155.43.172:55753 has been disconnected.
+[N] Incoming connection from 185.155.43.172
+185.155.43.172 Don_Jacobo
+[N] 79.186.37.95:59668 has been disconnected.
+[39;49m[32m16:29 [5]WolnoLukasz: czekam
+[39;49m[37m[N] 5.173.129.156:4134 has been disconnected.
+[N] 89.64.114.211:48810 has been disconnected.
+[N] Incoming connection from 89.229.84.90
+[39;49m[32m16:30 [11]Towarzyszu: to chodz pod urzad @5
+[39;49m[37m89.229.84.90 Bombel3k
+[39;49m[32m16:31 [5]WolnoLukasz: jestem
+[39;49m[37m[39;49m[32m16:31 [11]Towarzyszu: jade
+[39;49m[37m[N] 79.186.48.135:64644 has been disconnected.
+[N] Incoming connection from 79.186.48.135
+79.186.48.135 TheMichauu
+[39;49m[32m16:33 [2]robotek019: na paleto @5 się vigero respiło
+[39;49m[37m[N] 185.155.43.172:55753 has been disconnected.
+[N] Incoming connection from 185.155.43.172
+185.155.43.172 Don_Jacobo
+[N] 213.108.119.240:63343 has been disconnected.
+[N] 31.183.144.102:52489 has been disconnected.
+[N] Incoming connection from 81.15.239.49
+81.15.239.49 zabraliminazwe
+[N] 185.155.43.172:55753 has been disconnected.
+[N] 83.6.210.191:49766 has been disconnected.
+[N] 84.15.184.80:60405 has been disconnected.
+[N] Incoming connection from 84.15.184.80
+84.15.184.80 edgar12345cake
+[N] 89.229.84.90:55054 has been disconnected.
+[N] Incoming connection from 83.6.210.191
+83.6.210.191 Borowikens
+[N] 109.231.63.235:59505 has been disconnected.
+[N] Incoming connection from 109.231.63.235
+109.231.63.235 QuaVim
+[N] Incoming connection from 89.229.84.90
+[N] 89.229.84.90:55054 has been disconnected.
+[N] Incoming connection from 89.229.84.90
+89.229.84.90 Bombel3k
+Object reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at T GTANetworkAPI.Entity.GetSharedData<T>(string key)
+   at void ServerSide.VehicleDataManager.SavePersonalVehicleDataToDB(Vehicle vehicle, string dataName) in F:/RAGEMP server/server-files/dotnet/resources/Server/Managers/VehicleDataManager.cs:line 182
+   at void ServerSide.VehicleDataManager.UpdateVehiclesDirtLevel(Vehicle vehicle, float dirt) in F:/RAGEMP server/server-files/dotnet/resources/Server/Managers/VehicleDataManager.cs:line 218
+   at void ServerSide.MainClass.updateVehiclesDirtLevel(Player player, Vehicle vehicle, float dirtLevel) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 2697
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+Connection refused [::1]:3306
+Object reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at T GTANetworkAPI.Entity.GetSharedData<T>(string key)
+   at void ServerSide.VehicleDataManager.SavePersonalVehicleDataToDB(Vehicle vehicle, string dataName) in F:/RAGEMP server/server-files/dotnet/resources/Server/Managers/VehicleDataManager.cs:line 182
+   at void ServerSide.VehicleDataManager.UpdateVehiclesDirtLevel(Vehicle vehicle, float dirt) in F:/RAGEMP server/server-files/dotnet/resources/Server/Managers/VehicleDataManager.cs:line 218
+   at void ServerSide.MainClass.updateVehiclesDirtLevel(Player player, Vehicle vehicle, float dirtLevel) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 2697
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+Connection refused [::1]:3306
+Object reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at T GTANetworkAPI.Entity.GetSharedData<T>(string key)
+   at void ServerSide.VehicleDataManager.SavePersonalVehicleDataToDB(Vehicle vehicle, string dataName) in F:/RAGEMP server/server-files/dotnet/resources/Server/Managers/VehicleDataManager.cs:line 182
+   at void ServerSide.VehicleDataManager.UpdateVehiclesDirtLevel(Vehicle vehicle, float dirt) in F:/RAGEMP server/server-files/dotnet/resources/Server/Managers/VehicleDataManager.cs:line 218
+   at void ServerSide.MainClass.updateVehiclesDirtLevel(Player player, Vehicle vehicle, float dirtLevel) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 2697
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+Connection refused [::1]:3306
+Object reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at T GTANetworkAPI.Entity.GetSharedData<T>(string key)
+   at void ServerSide.VehicleDataManager.SavePersonalVehicleDataToDB(Vehicle vehicle, string dataName) in F:/RAGEMP server/server-files/dotnet/resources/Server/Managers/VehicleDataManager.cs:line 182
+   at void ServerSide.VehicleDataManager.UpdateVehiclesDirtLevel(Vehicle vehicle, float dirt) in F:/RAGEMP server/server-files/dotnet/resources/Server/Managers/VehicleDataManager.cs:line 218
+   at void ServerSide.MainClass.updateVehiclesDirtLevel(Player player, Vehicle vehicle, float dirtLevel) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 2697
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+Connection refused [::1]:3306
+Object reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at T GTANetworkAPI.Entity.GetSharedData<T>(string key)
+   at void ServerSide.VehicleDataManager.SavePersonalVehicleDataToDB(Vehicle vehicle, string dataName) in F:/RAGEMP server/server-files/dotnet/resources/Server/Managers/VehicleDataManager.cs:line 182
+   at void ServerSide.VehicleDataManager.UpdateVehiclesDirtLevel(Vehicle vehicle, float dirt) in F:/RAGEMP server/server-files/dotnet/resources/Server/Managers/VehicleDataManager.cs:line 218
+   at void ServerSide.MainClass.updateVehiclesDirtLevel(Player player, Vehicle vehicle, float dirtLevel) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 2697
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+Connection refused [::1]:3306
+Object reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at T GTANetworkAPI.Entity.GetSharedData<T>(string key)
+   at void ServerSide.VehicleDataManager.SavePersonalVehicleDataToDB(Vehicle vehicle, string dataName) in F:/RAGEMP server/server-files/dotnet/resources/Server/Managers/VehicleDataManager.cs:line 182
+   at void ServerSide.VehicleDataManager.UpdateVehiclesDirtLevel(Vehicle vehicle, float dirt) in F:/RAGEMP server/server-files/dotnet/resources/Server/Managers/VehicleDataManager.cs:line 218
+   at void ServerSide.MainClass.updateVehiclesDirtLevel(Player player, Vehicle vehicle, float dirtLevel) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 2697
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+Connection refused [::1]:3306
+Object reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at T GTANetworkAPI.Entity.GetSharedData<T>(string key)
+   at void ServerSide.VehicleDataManager.SavePersonalVehicleDataToDB(Vehicle vehicle, string dataName) in F:/RAGEMP server/server-files/dotnet/resources/Server/Managers/VehicleDataManager.cs:line 182
+   at void ServerSide.VehicleDataManager.UpdateVehiclesDirtLevel(Vehicle vehicle, float dirt) in F:/RAGEMP server/server-files/dotnet/resources/Server/Managers/VehicleDataManager.cs:line 218
+   at void ServerSide.MainClass.updateVehiclesDirtLevel(Player player, Vehicle vehicle, float dirtLevel) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 2697
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+Connection refused [::1]:3306
+Object reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at T GTANetworkAPI.Entity.GetSharedData<T>(string key)
+   at void ServerSide.VehicleDataManager.SavePersonalVehicleDataToDB(Vehicle vehicle, string dataName) in F:/RAGEMP server/server-files/dotnet/resources/Server/Managers/VehicleDataManager.cs:line 182
+   at void ServerSide.VehicleDataManager.UpdateVehiclesDirtLevel(Vehicle vehicle, float dirt) in F:/RAGEMP server/server-files/dotnet/resources/Server/Managers/VehicleDataManager.cs:line 218
+   at void ServerSide.MainClass.updateVehiclesDirtLevel(Player player, Vehicle vehicle, float dirtLevel) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 2697
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+Connection refused [::1]:3306
+Object reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at T GTANetworkAPI.Entity.GetSharedData<T>(string key)
+   at void ServerSide.VehicleDataManager.SavePersonalVehicleDataToDB(Vehicle vehicle, string dataName) in F:/RAGEMP server/server-files/dotnet/resources/Server/Managers/VehicleDataManager.cs:line 182
+   at void ServerSide.VehicleDataManager.UpdateVehiclesDirtLevel(Vehicle vehicle, float dirt) in F:/RAGEMP server/server-files/dotnet/resources/Server/Managers/VehicleDataManager.cs:line 218
+   at void ServerSide.MainClass.updateVehiclesDirtLevel(Player player, Vehicle vehicle, float dirtLevel) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 2697
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+Connection refused [::1]:3306
+[N] 46.204.17.246:32077 has been disconnected.
+[N] Incoming connection from 46.204.17.246
+46.204.17.246 Baldi1331
+[N] 79.186.48.135:64644 has been disconnected.
+[N] Incoming connection from 77.45.40.180
+77.45.40.180 diabeu32
+[39;49m[32m17:04 [1]edi1: lost
+[39;49m[37m[39;49m[32m17:06 [7]Bombel3k: ez
+[39;49m[37m[N] 89.229.84.90:55054 has been disconnected.
+[N] Incoming connection from 89.229.84.90
+89.229.84.90 Bombel3k
+[N] 77.45.40.180:51904 has been disconnected.
+[N] Incoming connection from 77.45.40.180
+77.45.40.180 diabeu32
+[N] Incoming connection from 176.110.144.201
+176.110.144.201 SoSnOwYx69
+[N] Incoming connection from 79.186.37.95
+79.186.37.95 Piraciako
+[N] 89.229.84.90:55054 has been disconnected.
+[N] Incoming connection from 89.229.84.90
+89.229.84.90 Bombel3k
+[N] 87.207.61.174:55685 has been disconnected.
+[N] Incoming connection from 87.207.61.174
+87.207.61.174 -Wars-
+[N] 84.15.184.80:60405 has been disconnected.
+[N] Incoming connection from 84.15.184.80
+84.15.184.80 edgar12345cake
+[N] 213.134.168.147:15818 has been disconnected.
+[N] Incoming connection from 213.134.168.147
+213.134.168.147 -_Chmielu_-
+[N] 46.204.17.246:32077 has been disconnected.
+[N] Incoming connection from 46.204.17.246
+46.204.17.246 Baldi1331
+[N] 83.6.210.191:49766 has been disconnected.
+[N] 46.204.17.246:32077 has been disconnected.
+[N] Incoming connection from 83.6.210.191
+83.6.210.191 Borowikens
+[N] Incoming connection from 109.173.148.84
+109.173.148.84 hiMV02
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] Incoming connection from 83.25.141.199
+83.25.141.199 NorbiOficjalnie
+[N] 84.15.184.80:60405 has been disconnected.
+[N] 109.173.148.84:13369 has been disconnected.
+[N] Incoming connection from 84.15.184.80
+84.15.184.80 edgar12345cake
+[N] Incoming connection from 88.130.51.28
+88.130.51.28 SHOGUN_77
+[N] 88.130.51.28:25634 has been disconnected.
+[N] 213.134.168.147:15818 has been disconnected.
+[N] Incoming connection from 213.134.168.147
+213.134.168.147 -_Chmielu_-
+[N] 83.25.141.199:49183 has been disconnected.
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[N] Incoming connection from 185.155.43.172
+185.155.43.172 Don_Jacobo
+[N] 84.15.184.80:61346 has been disconnected.
+[N] Incoming connection from 84.15.184.80
+84.15.184.80 edgar12345cake
+[N] 84.15.184.80:49384 has been disconnected.
+[N] Incoming connection from 84.15.184.80
+84.15.184.80 edgar12345cake
+[N] 84.15.184.80:49384 has been disconnected.
+[N] Incoming connection from 84.15.184.80
+84.15.184.80 edgar12345cake
+[N] 77.45.40.180:51904 has been disconnected.
+[N] Incoming connection from 77.45.40.180
+77.45.40.180 diabeu32
+Object reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at void ServerSide.MainClass.ForkliftBoxPickedUp(Player player, Object obj) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 3474
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+[N] 185.155.43.172:55246 has been disconnected.
+Object reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at void ServerSide.MainClass.ForkliftBoxPickedUp(Player player, Object obj) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 3474
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+Object reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at void ServerSide.MainClass.ForkliftBoxPickedUp(Player player, Object obj) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 3474
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+Object reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at void ServerSide.MainClass.ForkliftBoxPickedUp(Player player, Object obj) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 3474
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+Object reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at void ServerSide.MainClass.ForkliftBoxPickedUp(Player player, Object obj) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 3474
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+[39;49m[32m17:56 [12]Sosnowy: Jest jakiś tuner?
+[39;49m[37m[N] 89.229.84.90:55054 has been disconnected.
+[39;49m[32m17:57 [8].Drymaniusz*: Jest
+[39;49m[37m[39;49m[32m17:57 [12]Sosnowy: można prosić?
+[39;49m[37m[39;49m[32m17:57 [8].Drymaniusz*: Sandy zapraszam
+[39;49m[37m[N] Incoming connection from 89.229.84.90
+89.229.84.90 Bombel3k
+Object reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at void ServerSide.MainClass.ForkliftBoxPickedUp(Player player, Object obj) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 3474
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+[39;49m[32m17:59 [12]Sosnowy: jadę
+[39;49m[37mObject reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at void ServerSide.MainClass.ForkliftBoxPickedUp(Player player, Object obj) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 3474
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+[N] 83.29.1.163:59625 has been disconnected.
+Object reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at void ServerSide.MainClass.ForkliftBoxPickedUp(Player player, Object obj) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 3474
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+Object reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at void ServerSide.MainClass.ForkliftBoxPickedUp(Player player, Object obj) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 3474
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+[N] Incoming connection from 83.29.1.163
+83.29.1.163 Drymaniusz
+Object reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at void ServerSide.MainClass.ForkliftBoxPickedUp(Player player, Object obj) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 3474
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+[N] 81.15.239.49:54371 has been disconnected.
+[N] 87.207.61.174:53829 has been disconnected.
+[N] Incoming connection from 178.235.184.56
+178.235.184.56 Honereczek
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] Incoming connection from 85.221.146.129
+85.221.146.129 zegaro69
+[N] 213.108.119.240:55962 has been disconnected.
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[N] Incoming connection from 31.183.144.102
+31.183.144.102 Adasko26
+[N] 85.221.146.129:4362 has been disconnected.
+[N] Incoming connection from 195.191.163.50
+195.191.163.50 xVeRs0
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] Incoming connection from 85.221.146.129
+85.221.146.129 zegaro69
+[N] 178.235.184.56:9382 has been disconnected.
+Object reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at void ServerSide.MainClass.ForkliftBoxPickedUp(Player player, Object obj) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 3474
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+[N] 195.191.163.50:47968 has been disconnected.
+[N] 85.221.146.129:4583 has been disconnected.
+[N] Incoming connection from 5.173.129.156
+5.173.129.156 0DEYMAN0
+[N] 83.26.211.86:50648 has been disconnected.
+[N] Incoming connection from 83.26.211.86
+83.26.211.86 Bigczitos
+[N] 213.134.168.147:15827 has been disconnected.
+[N] Incoming connection from 213.134.168.147
+213.134.168.147 -_Chmielu_-
+[N] Incoming connection from 87.207.61.174
+87.207.61.174 -Wars-
+[N] 213.108.119.240:55962 has been disconnected.
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[N] 213.108.119.240:55962 has been disconnected.
+[N] Incoming connection from 5.173.242.104
+5.173.242.104 aimbotino
+[N] Incoming connection from 37.47.9.33
+37.47.9.33 CzarekDriver
+[39;49m[32m19:03 [2]DEYMAN: tuner
+[39;49m[37m[39;49m[32m19:03 [7]Bombel3k: za 5min
+[39;49m[37m[N] Incoming connection from 83.4.93.26
+83.4.93.26 swirek1970544
+[39;49m[32m19:10 [2]DEYMAN: tuner
+[39;49m[37m[39;49m[32m19:10 [7]Bombel3k: jade
+[39;49m[37m[N] 79.186.37.95:62112 has been disconnected.
+[N] Incoming connection from 79.186.37.95
+79.186.37.95 Piraciako
+[N] 83.26.211.86:50648 has been disconnected.
+[N] Incoming connection from 83.26.211.86
+[N] 83.26.211.86:50648 has been disconnected.
+[N] Incoming connection from 83.26.211.86
+[N] Incoming connection from 213.108.119.240
+83.26.211.86 Bigczitos
+213.108.119.240 robotek019
+[N] 37.47.9.33:18848 has been disconnected.
+[39;49m[32m19:15 [13]Piraciako: kupie eleżi retro
+[39;49m[37m[39;49m[32m19:15 [11]Foszik: ja tesz
+[39;49m[37m[N] Incoming connection from 80.238.108.82
+80.238.108.82 Adrianek1252
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] Incoming connection from 83.31.181.247
+83.31.181.247 rajder_
+[N] 79.186.37.95:62112 has been disconnected.
+[N] Incoming connection from 79.186.37.95
+79.186.37.95 Piraciako
+[N] Incoming connection from 109.95.90.197
+109.95.90.197 kosapolska
+[N] Incoming connection from 88.130.51.28
+88.130.51.28 SHOGUN_77
+[39;49m[32m19:30 [7]Bombel3k: kupie krieger/t20 sprzedam vstr i 190z
+[39;49m[37m[N] 88.130.51.28:25947 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] Incoming connection from 89.64.52.201
+89.64.52.201 jakubikson
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] 79.186.37.95:62112 has been disconnected.
+[N] Incoming connection from 79.186.37.95
+79.186.37.95 Piraciako
+[N] 109.95.90.197:63510 has been disconnected.
+[N] Incoming connection from 109.95.90.197
+109.95.90.197 kosapolska
+[N] Incoming connection from 185.242.254.72
+185.242.254.72 ArtiePlayer
+[N] 109.95.90.197:63510 has been disconnected.
+[N] Incoming connection from 109.95.90.197
+109.95.90.197 kosapolska
+[N] 89.64.52.201:8477 has been disconnected.
+[39;49m[32m19:43 [22]ArtiePlayer: witam
+[39;49m[37m[39;49m[32m19:43 [7]Bombel3k: cze cze
+[39;49m[37m[39;49m[32m19:43 [16]SWIREK13: siem
+[39;49m[37m[39;49m[32m19:44 [22]ArtiePlayer: pytanko mam jaka praca najelpiej sprawdzi się na początek?
+[39;49m[37m[39;49m[32m19:45 [9]Wars: @22 wpisz /bonus
+[39;49m[37mConnection refused [::1]:3306
+[N] Incoming connection from 83.5.117.40
+83.5.117.40 KNFCichy
+[N] 79.186.37.95:62112 has been disconnected.
+[N] Incoming connection from 79.186.37.95
+79.186.37.95 Piraciako
+[N] Incoming connection from 89.64.52.201
+[39;49m[32m19:53 [3]Naimad424: ile kosztuje Vigero czy jakoś tak? Chodzi mi o tego przypominającego Camaro 
+[39;49m[37m[39;49m[32m19:53 [7]Bombel3k: w komisie 300k niecałe
+[39;49m[37m[N] 89.64.52.201:8472 has been disconnected.
+[39;49m[32m19:53 [3]Naimad424: a od gracza? i gdzie sie respi?
+[39;49m[37m[39;49m[32m19:53 [7]Bombel3k: na simeonie
+[39;49m[37m[39;49m[32m19:54 [7]Bombel3k: a od gracza niewiem
+[39;49m[37m[39;49m[32m19:54 [7]Bombel3k: driver ma to mozesz sie z nim dogadac
+[39;49m[37m[N] Incoming connection from 89.64.52.201
+89.64.52.201 jakubikson
+[39;49m[32m19:55 [11]Foszik: gdzie sie tune montuje
+[39;49m[37m[39;49m[32m19:55 [13]Piraciako: na tunerze
+[39;49m[37m[39;49m[32m19:56 [7]Bombel3k: zapraszam na tunera obok plaży
+[39;49m[37m[N] 89.64.52.201:8574 has been disconnected.
+[39;49m[32m19:59 [11]Foszik: jade
+[39;49m[37m[N] Incoming connection from 94.254.176.248
+94.254.176.248 Bujol_junior
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[39;49m[32m20:01 [11]Foszik: halo gdzie ty
+[39;49m[37m[39;49m[32m20:01 [22]ArtiePlayer: ile kosztuje stratum i gdzie można go kupić?
+[39;49m[37m[39;49m[32m20:02 [11]Foszik: mozna prosic tunera?
+[39;49m[37m[39;49m[32m20:02 [7]Bombel3k: tak jade
+[39;49m[37m[N] Incoming connection from 89.64.52.201
+89.64.52.201 jakubikson
+[N] Incoming connection from 88.130.51.28
+88.130.51.28 SHOGUN_77
+[N] Incoming connection from 37.47.16.36
+37.47.16.36 MisiekMikke
+[N] 79.186.37.95:62112 has been disconnected.
+[N] Incoming connection from 79.186.37.95
+79.186.37.95 Piraciako
+[N] Incoming connection from 85.221.138.183
+85.221.138.183 Pudliszkowy
+[N] 85.221.138.183:17636 has been disconnected.
+[N] Incoming connection from 85.221.138.183
+85.221.138.183 Pudliszkowy
+[N] 5.173.129.156:18196 has been disconnected.
+[N] Incoming connection from 5.173.129.156
+5.173.129.156 0DEYMAN0
+[N] Incoming connection from 87.101.35.98
+87.101.35.98 TomoHERE_3hunna
+[N] 89.229.84.90:55054 has been disconnected.
+[N] 31.183.144.102:52492 has been disconnected.
+[N] Incoming connection from 31.183.144.102
+31.183.144.102 Adasko26
+[39;49m[32m20:13 [22]ArtiePlayer: od kiedy server już działa?
+[39;49m[37m[N] Incoming connection from 89.229.84.90
+89.229.84.90 Bombel3k
+[N] 5.173.242.104:16641 has been disconnected.
+[N] 83.5.117.40:56069 has been disconnected.
+[N] Incoming connection from 83.5.117.40
+83.5.117.40 KNFCichy
+[N] 89.229.84.90:57482 has been disconnected.
+[39;49m[32m20:22 [11]KNFCichy: tuner?
+[39;49m[37m[N] Incoming connection from 89.229.84.90
+89.229.84.90 Bombel3k
+[N] 79.186.37.95:62112 has been disconnected.
+[N] Incoming connection from 79.186.37.95
+[39;49m[32m20:23 [8].Drymaniusz*: Sandy zapraszam
+[39;49m[37m79.186.37.95 Piraciako
+[39;49m[32m20:24 [11]KNFCichy: jade
+[39;49m[37m[N] Incoming connection from 37.47.9.33
+37.47.9.33 CzarekDriver
+[N] 37.47.9.33:11147 has been disconnected.
+[N] Incoming connection from 37.47.9.33
+37.47.9.33 CzarekDriver
+[N] 83.26.211.86:50648 has been disconnected.
+[N] Incoming connection from 46.205.202.98
+46.205.202.98 Cubone_187
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] 5.173.129.156:18196 has been disconnected.
+[N] Incoming connection from 5.173.129.156
+5.173.129.156 0DEYMAN0
+[39;49m[32m20:30 [1]edi1: komus tunera
+[39;49m[37m[39;49m[32m20:31 [11]KNFCichy: mi
+[39;49m[37m[39;49m[32m20:31 [2]DEYMAN: ja potzrebuje
+[39;49m[37m[39;49m[32m20:31 [1]edi1: czekam
+[39;49m[37m[N] Incoming connection from 185.155.43.172
+185.155.43.172 Don_Jacobo
+[39;49m[32m20:32 [14]Bombel3k: kupie krieger/t20
+[39;49m[37m[N] 83.5.117.40:56069 has been disconnected.
+[N] Incoming connection from 83.5.117.40
+83.5.117.40 KNFCichy
+[N] 80.238.108.82:3139 has been disconnected.
+[N] Incoming connection from 80.238.108.82
+80.238.108.82 Adrianek1252
+[39;49m[32m20:36 [14]Bombel3k: sprzedam banshee 900R za 200k z felgami i turbo
+[39;49m[37m[N] 109.95.90.197:63510 has been disconnected.
+[39;49m[32m20:37 [20]VRS89: comet s2 w saloniku
+[39;49m[37m[N] 5.173.129.156:18196 has been disconnected.
+[N] Incoming connection from 5.173.129.156
+5.173.129.156 0DEYMAN0
+[N] Incoming connection from 109.95.90.197
+109.95.90.197 kosapolska
+[39;49m[32m20:39 [1]edi1: komus tunera
+[39;49m[37m[N] Incoming connection from 85.221.153.171
+[N] 5.173.129.156:18196 has been disconnected.
+[N] Incoming connection from 5.173.129.156
+5.173.129.156 0DEYMAN0
+[N] 85.221.153.171:18545 has been disconnected.
+[N] 109.95.90.197:52460 has been disconnected.
+[N] Incoming connection from 109.95.90.197
+109.95.90.197 kosapolska
+[N] 213.108.119.240:51186 has been disconnected.
+[N] 46.205.202.98:58545 has been disconnected.
+[N] 31.183.144.102:52492 has been disconnected.
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+Value was either too large or too small for an Int32.
+sendTrade: System.OverflowException: Value was either too large or too small for an Int32.
+   at int Convert.ToInt32(double value)
+   at int float.System.IConvertible.ToInt32(IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+[N] Incoming connection from 178.214.21.59
+178.214.21.59 Kuboro_esa
+[39;49m[32m20:49 [14]Bombel3k: sprzedam banshee 900R za 200k z felgami i turbo
+[39;49m[37m[39;49m[32m20:50 [1]edi1: komus tunera
+[39;49m[37m[N] 79.186.37.95:62112 has been disconnected.
+[N] Incoming connection from 79.186.37.95
+79.186.37.95 Piraciako
+[N] 79.186.37.95:62112 has been disconnected.
+[N] Incoming connection from 79.186.37.95
+79.186.37.95 Piraciako
+[N] 83.5.117.40:56069 has been disconnected.
+[N] 185.155.43.172:64074 has been disconnected.
+[39;49m[32m20:56 [20]VRS89: sell hellfire ft 500k 
+[39;49m[37m[N] 79.186.37.95:62112 has been disconnected.
+[N] Incoming connection from 79.186.37.95
+[N] 185.242.254.72:53958 has been disconnected.
+79.186.37.95 Piraciako
+[N] Incoming connection from 185.155.43.172
+[N] Incoming connection from 185.242.254.72
+185.155.43.172 Don_Jacobo
+185.242.254.72 ArtiePlayer
+[39;49m[32m20:56 [2]DEYMAN: @20 tuner ?
+[39;49m[37m[39;49m[32m20:57 [14]Bombel3k: sprzedam itali gto ft fv za 1kk
+[39;49m[37m[39;49m[32m20:58 [2]DEYMAN: @14 tuner ?
+[39;49m[37m[39;49m[32m20:58 [14]Bombel3k: zaraz bede
+[39;49m[37m[N] 213.108.119.240:51186 has been disconnected.
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[N] 185.155.43.172:64074 has been disconnected.
+[N] 94.254.176.248:15881 has been disconnected.
+[39;49m[32m21:04 [1]edi1: komus tunera
+[39;49m[37m[N] 213.108.119.240:51186 has been disconnected.
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[N] Incoming connection from 5.173.242.104
+5.173.242.104 aimbotino
+[N] 37.47.9.33:11147 has been disconnected.
+[N] Incoming connection from 37.47.9.33
+37.47.9.33 CzarekDriver
+[N] 84.15.184.80:49384 has been disconnected.
+[N] Incoming connection from 84.15.184.80
+[N] Incoming connection from 94.75.67.66
+84.15.184.80 edgar12345cake
+94.75.67.66 Not_Szymianek
+[N] Incoming connection from 94.254.176.248
+94.254.176.248 Bujol_junior
+[N] 89.229.84.90:60693 has been disconnected.
+[N] Incoming connection from 89.229.84.90
+[N] 5.173.129.156:18196 has been disconnected.
+[N] Incoming connection from 5.173.129.156
+89.229.84.90 Bombel3k
+5.173.129.156 0DEYMAN0
+[N] Incoming connection from 46.204.17.246
+[N] 79.186.37.95:62112 has been disconnected.
+[N] 46.204.17.246:32140 has been disconnected.
+[N] Incoming connection from 77.255.230.205
+77.255.230.205 MrMsciciel
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] Incoming connection from 83.23.153.158
+83.23.153.158 Daszek_
+[N] Incoming connection from 46.204.17.246
+46.204.17.246 Baldi1331
+[39;49m[32m21:15 [1]edi1: komus tunera bo ide na widlaki 
+[39;49m[37m[39;49m[32m21:16 [2]DEYMAN: przyjmie ktos raporta pls
+[39;49m[37m[39;49m[32m21:16 [14]Bombel3k: sprzedam banshee 900r turbo i felgi za 200k
+[39;49m[37m[N] 185.242.254.72:53958 has been disconnected.
+[N] 213.134.168.147:15901 has been disconnected.
+[N] Incoming connection from 185.242.254.72
+185.242.254.72 ArtiePlayer
+[N] Incoming connection from 213.134.168.147
+213.134.168.147 -_Chmielu_-
+[N] 94.75.67.66:60118 has been disconnected.
+Connection refused [::1]:3306
+[N] 37.47.16.36:24272 has been disconnected.
+[N] 83.23.153.158:60734 has been disconnected.
+[N] Incoming connection from 83.23.153.158
+[N] 83.4.93.26:54515 has been disconnected.
+83.23.153.158 Daszek_
+[N] Incoming connection from 83.4.93.26
+83.4.93.26 swirek1970544
+[N] 5.173.129.156:18196 has been disconnected.
+[N] Incoming connection from 5.173.129.156
+5.173.129.156 0DEYMAN0
+[N] Incoming connection from 94.75.67.66
+94.75.67.66 Not_Szymianek
+[39;49m[32m21:22 [1]edi1: komus tunera bo ide na widlaki 
+[39;49m[37m[N] 5.173.129.156:18196 has been disconnected.
+[N] Incoming connection from 5.173.129.156
+5.173.129.156 0DEYMAN0
+[N] 77.255.230.205:13406 has been disconnected.
+[N] Incoming connection from 77.255.230.205
+77.255.230.205 MrMsciciel
+[N] Incoming connection from 37.225.45.42
+[N] 94.75.67.66:53263 has been disconnected.
+37.225.45.42 szczurixo
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] Incoming connection from 94.75.67.66
+94.75.67.66 Not_Szymianek
+[N] 94.75.67.66:53263 has been disconnected.
+[N] 5.173.129.156:18196 has been disconnected.
+[N] Incoming connection from 5.173.129.156
+5.173.129.156 0DEYMAN0
+[N] 87.207.61.174:59092 has been disconnected.
+[N] Incoming connection from 94.75.67.66
+94.75.67.66 Not_Szymianek
+[N] 83.23.153.158:60734 has been disconnected.
+[N] 83.4.93.26:54515 has been disconnected.
+[N] 109.95.90.197:52460 has been disconnected.
+[N] Incoming connection from 83.4.93.26
+83.4.93.26 swirek1970544
+[N] 77.255.230.205:13406 has been disconnected.
+[N] Incoming connection from 77.255.230.205
+77.255.230.205 MrMsciciel
+[39;49m[32m21:32 [21]Driver: kupie zr350
+[39;49m[37m[39;49m[32m21:32 [7]Kuboro: ile dasz
+[39;49m[37m[39;49m[32m21:32 [11]Foszik: tez kupie
+[39;49m[37m[39;49m[32m21:32 [7]Kuboro: ile dasz
+[39;49m[37m[39;49m[32m21:32 [14]Bombel3k: @29 siema piesku :D
+[39;49m[37m[39;49m[32m21:32 [29]szczurixo: elo
+[39;49m[37m[39;49m[32m21:33 [21]Driver: o
+[39;49m[37m[39;49m[32m21:33 [20]VRS89: witam chromixo na serwerze xD
+[39;49m[37m[39;49m[32m21:33 [29]szczurixo: XD
+[39;49m[37m[N] 89.64.52.201:8437 has been disconnected.
+[N] Incoming connection from 89.64.52.201
+89.64.52.201 jakubikson
+[N] Incoming connection from 87.207.61.174
+87.207.61.174 -Wars-
+[N] 80.238.108.82:3139 has been disconnected.
+[N] Incoming connection from 37.30.113.150
+[N] Incoming connection from 46.204.51.205
+[N] 46.204.51.205:31704 has been disconnected.
+37.30.113.150 JaniaX135
+[N] 37.30.113.150:19658 has been disconnected.
+[N] Incoming connection from 37.30.113.150
+37.30.113.150 JaniaX135
+[N] 37.30.113.150:19658 has been disconnected.
+[N] 37.47.9.33:11147 has been disconnected.
+[N] Incoming connection from 37.30.113.150
+37.30.113.150 JaniaX135
+[N] Incoming connection from 46.204.51.205
+46.204.51.205 machcin1
+[N] 46.204.17.246:32249 has been disconnected.
+[N] Incoming connection from 46.204.17.246
+46.204.17.246 Baldi1331
+[N] 83.4.93.26:54515 has been disconnected.
+[N] Incoming connection from 83.4.93.26
+83.4.93.26 swirek1970544
+[39;49m[32m21:41 [11]Foszik: kupie zr350
+[39;49m[37m[39;49m[32m21:41 [7]Kuboro: ile dasz
+[39;49m[37m[39;49m[32m21:44 [11]Foszik: tuner?
+[39;49m[37m[39;49m[32m21:44 [14]Bombel3k: za 10min
+[39;49m[37m[39;49m[32m21:47 [6]ArtiePlayer: kupie streitera
+[39;49m[37m[39;49m[32m21:47 [14]Bombel3k: sprzedam banshee 900r turbo i felgi za 200k
+[39;49m[37m[N] 213.108.119.240:51186 has been disconnected.
+[N] 46.204.17.246:32249 has been disconnected.
+[39;49m[32m21:48 [6]ArtiePlayer: kogo streiter przy widlaku?
+[39;49m[37m[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[N] 37.225.45.42:2022 has been disconnected.
+[39;49m[32m21:48 [14]Bombel3k: człowieka
+[39;49m[37m[N] Incoming connection from 46.204.17.246
+[N] 46.204.17.246:32119 has been disconnected.
+[N] Incoming connection from 46.204.17.246
+[N] 46.204.17.246:32119 has been disconnected.
+[N] Incoming connection from 46.204.17.246
+[N] 46.204.51.205:31582 has been disconnected.
+[N] Incoming connection from 46.204.51.205
+46.204.51.205 machcin1
+[N] 46.204.17.246:32119 has been disconnected.
+[N] 94.75.67.66:53263 has been disconnected.
+[N] 83.4.93.26:54515 has been disconnected.
+[N] Incoming connection from 46.204.17.246
+[N] Incoming connection from 83.4.93.26
+83.4.93.26 swirek1970544
+[N] 46.204.17.246:32119 has been disconnected.
+[N] Incoming connection from 46.204.17.246
+[N] Incoming connection from 94.75.67.66
+[N] 94.75.67.66:53263 has been disconnected.
+[N] Incoming connection from 94.75.67.66
+94.75.67.66 Not_Szymianek
+[N] 46.204.17.246:32119 has been disconnected.
+[N] 85.221.138.183:17636 has been disconnected.
+[N] 94.75.67.66:53263 has been disconnected.
+[N] Incoming connection from 46.204.17.246
+46.204.17.246 Baldi1331
+[N] 83.4.93.26:54515 has been disconnected.
+[N] Incoming connection from 83.4.93.26
+[N] Incoming connection from 94.75.67.66
+83.4.93.26 swirek1970544
+[N] 94.75.67.66:53263 has been disconnected.
+[N] 213.108.119.240:51186 has been disconnected.
+[N] Incoming connection from 94.75.67.66
+[N] Incoming connection from 213.108.119.240
+94.75.67.66 Not_Szymianek
+213.108.119.240 robotek019
+[N] 94.254.176.248:15899 has been disconnected.
+[N] Incoming connection from 94.254.176.248
+[N] 83.4.93.26:54515 has been disconnected.
+94.254.176.248 Bujol_junior
+[N] Incoming connection from 83.4.93.26
+83.4.93.26 swirek1970544
+[N] 83.4.93.26:54515 has been disconnected.
+[N] Incoming connection from 83.4.93.26
+83.4.93.26 swirek1970544
+[N] 5.173.242.104:16656 has been disconnected.
+[N] 89.64.52.201:8437 has been disconnected.
+[N] 213.108.119.240:51186 has been disconnected.
+Connection refused [::1]:3306
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[N] 185.242.254.72:53958 has been disconnected.
+[N] Incoming connection from 81.15.239.49
+[N] Incoming connection from 185.242.254.72
+81.15.239.49 zabraliminazwe
+185.242.254.72 ArtiePlayer
+[N] 185.242.254.72:53958 has been disconnected.
+[N] Incoming connection from 185.242.254.72
+185.242.254.72 ArtiePlayer
+[N] 84.15.184.80:49384 has been disconnected.
+[N] Incoming connection from 84.15.184.80
+[39;49m[32m22:04 [11]ArtiePlayer: wie ktoś w którym komisie może zrespić się streiter?
+[39;49m[37m84.15.184.80 edgar12345cake
+[N] 77.45.40.180:51904 has been disconnected.
+[39;49m[32m22:05 [8].Drymaniusz*: srednim obok prawka
+[39;49m[37m[39;49m[32m22:05 [11]ArtiePlayer: ok dziekuje
+[39;49m[37m[N] 77.255.230.205:13406 has been disconnected.
+[N] Incoming connection from 77.255.230.205
+77.255.230.205 MrMsciciel
+[N] 5.173.129.156:18196 has been disconnected.
+[N] Incoming connection from 5.173.129.156
+5.173.129.156 0DEYMAN0
+[N] Incoming connection from 77.45.40.180
+[39;49m[32m22:06 [1]edi1: jade
+[39;49m[37m77.45.40.180 diabeu32
+[39;49m[32m22:07 [14]Bombel3k: kupie krieger/t20
+[39;49m[37m[N] 77.255.230.205:13406 has been disconnected.
+[N] Incoming connection from 77.255.230.205
+77.255.230.205 MrMsciciel
+[N] 5.173.129.156:18196 has been disconnected.
+[N] Incoming connection from 5.173.129.156
+5.173.129.156 0DEYMAN0
+[N] 83.31.181.247:60589 has been disconnected.
+[39;49m[32m22:13 [20]VRS89: vectra na srednim
+[39;49m[37m[N] 185.242.254.72:53958 has been disconnected.
+[N] 5.173.129.156:18196 has been disconnected.
+[N] Incoming connection from 5.173.129.156
+[39;49m[32m22:14 [1]edi1: komus tunera
+[39;49m[37m5.173.129.156 0DEYMAN0
+[N] 94.254.176.248:15899 has been disconnected.
+[N] 213.108.119.240:51186 has been disconnected.
+Connection refused [::1]:3306
+[N] 94.75.67.66:58256 has been disconnected.
+[N] 46.204.17.246:32009 has been disconnected.
+[N] 77.255.230.205:13406 has been disconnected.
+[N] 178.214.21.59:63136 has been disconnected.
+[N] Incoming connection from 185.238.122.33
+[N] 188.47.127.251:16384 has been disconnected.
+185.238.122.33 KtoTuToTakTo
+[N] Incoming connection from 77.255.230.205
+77.255.230.205 MrMsciciel
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 188.47.127.251:16384 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 5.173.129.156:18196 has been disconnected.
+[N] 89.229.84.90:60693 has been disconnected.
+[N] 77.45.40.180:51904 has been disconnected.
+[N] Incoming connection from 77.45.40.180
+77.45.40.180 diabeu32
+[N] Incoming connection from 89.229.84.90
+89.229.84.90 Bombel3k
+[N] 188.47.127.251:16384 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 77.255.230.205:14796 has been disconnected.
+[N] Incoming connection from 77.255.230.205
+77.255.230.205 MrMsciciel
+[N] 83.29.1.163:55240 has been disconnected.
+[N] 185.238.122.33:2403 has been disconnected.
+[N] Incoming connection from 185.238.122.33
+185.238.122.33 KtoTuToTakTo
+[39;49m[32m22:42 [28]TomoHERE: vigero rr na simeonie
+[39;49m[37m[39;49m[32m22:42 [5]VRS89: streiter na srednim kto tam chcial
+[39;49m[37m[N] 77.255.230.205:14796 has been disconnected.
+[N] 185.238.122.33:2403 has been disconnected.
+[39;49m[32m22:44 [11]Bombel3k: kupie krieger/t20
+[39;49m[37m[N] Incoming connection from 77.255.230.205
+77.255.230.205 MrMsciciel
+[N] Incoming connection from 83.29.1.163
+[39;49m[32m22:45 [5]VRS89: sell hellfire ft 
+[39;49m[37m83.29.1.163 Drymaniusz
+[39;49m[32m22:45 [1]edi1: komus tunera
+[39;49m[37m[N] 109.231.63.235:59505 has been disconnected.
+[N] 83.29.1.163:64894 has been disconnected.
+[39;49m[32m22:47 [7]dobrygnuj: łysy ile za ten helfire ?
+[39;49m[37m[39;49m[32m22:47 [1]edi1: zpszedam korume
+[39;49m[37m[N] Incoming connection from 109.231.63.235
+109.231.63.235 QuaVim
+[39;49m[32m22:47 [5]VRS89: ile masz
+[39;49m[37m[39;49m[32m22:47 [1]edi1: 15k
+[39;49m[37m[N] Incoming connection from 5.173.129.156
+5.173.129.156 0DEYMAN0
+[39;49m[32m22:50 [28]TomoHERE: tuner?
+[39;49m[37m[39;49m[32m22:50 [11]Bombel3k: jades
+[39;49m[37m[39;49m[32m22:51 [11]Bombel3k: jest na serwerze entity xxr 
+[39;49m[37m[39;49m[32m22:51 [11]Bombel3k: ?
+[39;49m[37m[39;49m[32m22:51 [5]VRS89: tak
+[39;49m[37m[N] 83.4.93.26:54515 has been disconnected.
+[39;49m[32m22:51 [11]Bombel3k: a wiesz ile kosztuje w komisie ?
+[39;49m[37m[N] Incoming connection from 83.4.93.26
+83.4.93.26 swirek1970544
+[39;49m[32m22:52 [1]edi1: jade
+[39;49m[37m[N] 109.231.63.235:59834 has been disconnected.
+[39;49m[32m22:53 [1]edi1: komus tunera
+[39;49m[37m[N] Incoming connection from 109.231.63.235
+109.231.63.235 QuaVim
+[N] 87.207.61.174:63458 has been disconnected.
+[N] Incoming connection from 87.207.61.174
+87.207.61.174 -Wars-
+[N] 37.30.113.150:19658 has been disconnected.
+[N] Incoming connection from 185.63.203.167
+185.63.203.167 Kill3rek
+[N] 176.110.144.201:53651 has been disconnected.
+[N] 185.63.203.167:52503 has been disconnected.
+[N] Incoming connection from 185.63.203.167
+185.63.203.167 Kill3rek
+[N] 89.229.84.90:60693 has been disconnected.
+[N] Incoming connection from 89.229.84.90
+89.229.84.90 Bombel3k
+[N] 5.173.129.156:22023 has been disconnected.
+[N] Incoming connection from 5.173.129.156
+[N] 5.173.129.156:22023 has been disconnected.
+[N] Incoming connection from 5.173.129.156
+5.173.129.156 0DEYMAN0
+[39;49m[32m23:13 [11]Bombel3k: streiter combi na średnim komisie 
+[39;49m[37m[N] 77.255.230.205:15409 has been disconnected.
+[N] Incoming connection from 77.255.230.205
+77.255.230.205 MrMsciciel
+[N] 83.6.210.191:56732 has been disconnected.
+[N] Incoming connection from 83.6.210.191
+83.6.210.191 Borowikens
+[N] 77.255.230.205:15409 has been disconnected.
+[N] Incoming connection from 77.255.230.205
+77.255.230.205 MrMsciciel
+[39;49m[32m23:19 [28]TomoHERE: Za ok 15-20minut restart serwera. Będzie wymagany RESTART GRY.
+[39;49m[37m[39;49m[32m23:19 [28]TomoHERE: Za ok 15-20minut restart serwera. Będzie wymagany RESTART GRY.
+[39;49m[37m[39;49m[32m23:19 [28]TomoHERE: Za ok 15-20minut restart serwera. Będzie wymagany RESTART GRY.
+[39;49m[37m[39;49m[32m23:19 [28]TomoHERE: Za ok 15-20minut restart serwera. Będzie wymagany RESTART GRY.
+[39;49m[37m[39;49m[32m23:20 [11]Bombel3k: dobrze szefie
+[39;49m[37m[N] Incoming connection from 178.176.146.238
+[N] Incoming connection from 84.70.62.27
+84.70.62.27 _SHWGR_
+[N] 213.134.168.147:15901 has been disconnected.
+[N] Incoming connection from 213.134.168.147
+213.134.168.147 -_Chmielu_-
+178.176.146.238 gestzex
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] 178.176.146.238:62903 has been disconnected.
+[39;49m[32m23:25 [11]Bombel3k: sell itali gto ft fv 1kk, banshe 900r fele i turbo 200k
+[39;49m[37m[39;49m[32m23:30 [25]SHOGUN77: po ile chodzi skora z psa?
+[39;49m[37m[39;49m[32m23:30 [5]VRS89: zalezy jaki stopien ma 
+[39;49m[37m[39;49m[32m23:30 [28]TomoHERE: drymaniusz jest bezcenny
+[39;49m[37m[39;49m[32m23:30 [5]VRS89: xD
+[39;49m[37m[N] 89.64.93.4:11207 has been disconnected.
+[N] Incoming connection from 89.64.93.4
+[39;49m[32m23:31 [5]VRS89: z Tomohere nawet nie biorą xD
+[39;49m[37m89.64.93.4 -slupek-
+[39;49m[32m23:33 [28]TomoHERE: Za około 5minut restart serwera - update. WYMAGANY RESTART GRY.
+[39;49m[37m[39;49m[32m23:33 [28]TomoHERE: Za około 5minut restart serwera - update. WYMAGANY RESTART GRY.
+[39;49m[37m[39;49m[32m23:33 [28]TomoHERE: Za około 5minut restart serwera - update. WYMAGANY RESTART GRY.
+[39;49m[37m[39;49m[32m23:33 [28]TomoHERE: Za około 5minut restart serwera - update. WYMAGANY RESTART GRY.
+[39;49m[37m[N] Incoming connection from 83.29.1.163
+83.29.1.163 Drymaniusz
+[39;49m[32m23:34 [13].Drymaniusz*: @28 Do bana jesteś typie
+[39;49m[37m[39;49m[32m23:34 [28]TomoHERE: ja Ciebie też kocham Dymaniusz
+[39;49m[37m[39;49m[32m23:34 [11]Bombel3k: /mute 28 24h spam wiadomościami
+[39;49m[37m[N] 83.4.93.26:54515 has been disconnected.
+[39;49m[32m23:36 [28]TomoHERE: Za 2minuty restart. Wymagany będzie RESTART GRY.
+[39;49m[37m[39;49m[32m23:36 [28]TomoHERE: Za 2minuty restart. Wymagany będzie RESTART GRY.w
+[39;49m[37m[N] 89.229.84.90:60693 has been disconnected.
+^C[33m[INFO] [0mShutting down the server...
+Shutting down..
+[32m[DONE] [0mThe server has been terminated.
+terminate called without an active exception

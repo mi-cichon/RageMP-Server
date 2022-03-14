@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <script src="itemShop.js"></script>
+        <div class="mainBody">
+            <div class="content">
+                <div class="nameCol">Sklep spożywczy</div>
+                <div class="scrollable">
+                    <div class="item">
+                        <div class="img" style="background-image: url('package://Equipment/img/bread.png')">
+                            
+                        </div>
+                        <div class="name">
+                            Chleb
+                        </div>
+                        <div class="price">
+                            20$
+                        </div>
+                        <input type="button" class="button_select" value="Kup" onclick="buyItem(1)"></input>
+                    </div>
+                    <div class="item">
+                        <div class="img wide" style="background-image: url('package://Equipment/img/water.png')">
+                            
+                        </div>
+                        <div class="name">
+                            Woda
+                        </div>
+                        <div class="price">
+                            20$
+                        </div>
+                        <input type="button" class="button_select" value="Kup" onclick="buyItem(0)"></input>
+                    </div>
+                    <div class="item">
+                        <div class="img" style="background-image: url('package://Equipment/img/apple.png')">
+                            
+                        </div>
+                        <div class="name">
+                            Jabłko
+                        </div>
+                        <div class="price">
+                            5$
+                        </div>
+                        <input type="button" class="button_select" value="Kup" onclick="buyItem(2)"></input>
+                    </div>
+                    <div class="item">
+                        <div class="img" style="background-image: url('package://Equipment/img/canister.png')">
+                            
+                        </div>
+                        <div class="name">
+                            Kanister
+                        </div>
+                        <div class="price">
+                            250$
+                        </div>
+                        <input type="button" class="button_select" value="Kup" onclick="buyItem(11)"></input>
+                    </div>
+                    <div class="item">
+                        <div class="img wide" style="background-image: url('package://Equipment/img/nitro.png')">
+                            
+                        </div>
+                        <div class="name">
+                            Nitro
+                        </div>
+                        <div class="price">
+                            150$
+                        </div>
+                        <input type="button" class="button_select" value="Kup" onclick="buyItem(12)"></input>
+                    </div>
+                </div>
+                <div class="buttons"><input type="button" class="button_cancel" value="Zamknij" onclick="closeBrowser()"></div>
+            </div>
+        </div>
+
+    </body>
+</html>

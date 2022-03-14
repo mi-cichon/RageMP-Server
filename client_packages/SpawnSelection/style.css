@@ -1,0 +1,129 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    user-select: none;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+body{
+    transition: background-color, 1s;
+}
+
+.mainContainer{
+    background-color: rgba(90,90,90, 0.8);
+    transition: width 2s, height 2s, background-color 2s;
+    overflow: hidden;
+    width: 300vh;
+    height: 300vh;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 gold, 0 0 1em rgb(90, 90, 90);
+}
+.mainBody{
+    flex-direction: row;
+    height:100vw;
+    padding: 2vw;
+    width: 100vh;
+    border-radius: 1vw;
+    border-width: 0.1vw;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+.mainRow{
+    width: 100%;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.distanceBlock{
+    padding: 2vh;
+}
+
+
+.spawnSandy{
+
+    background-image: url(img/sandy.jpg);
+}
+
+.spawnLS{
+
+    background-image: url(img/ls.jpg);
+}
+
+.spawnPaleto{
+
+    background-image: url(img/paleto.jpg);
+}
+
+.spawnLast{
+    background-image: url(img/location.png);
+}
+
+.spawnHouse{
+    background-image: url(img/house.png);
+}
+.spawnBlock{
+    position: relative;
+    background-size: 200%;
+    background-position: center;
+    height: 12vh;
+    width: 12vh;
+    border-radius: 5vh;
+    transition: all 1s;
+}
+
+
+.spawnBlock:hover{
+    border-radius: 7vh;
+    background-size: 180%;
+    
+}
+
+.cover:hover{
+
+    border-radius: 7vh;
+    opacity: 1
+}
+
+.cover{
+    transition: all 1s;
+    opacity: 0;
+    border-radius: 5vh;
+    height: 100%;
+    width: 100%;
+    overflow-wrap: break-word;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2vh;
+    text-align: center;
+    background-color: rgba(90,90,90, 0.5);
+}
+
+
+.textCover{
+    color: #fff;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.upperRow{
+    width: 100%;
+}
+.upperCol{
+    color: #fff;
+    font-size: 3vh;
+    text-align: center;
+}
+.houseBlock{
+    display:flex;
+}

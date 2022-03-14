@@ -1,0 +1,35 @@
+.panel_help_body{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-bottom: 1vh;
+}
+
+.panel_help_partial{
+    background-color: #1d1e22;
+    border-radius: 0.3vh;
+    padding: 0.8vh;
+    color: white;
+    font-size: 1.2vh;
+    text-align: center;
+    box-shadow: 0.3vh 0.5vh 0.5vh black;
+    width: 35vh;
+    height: 24vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin: 2vh;
+}
+.panel_help_partial p{
+    margin: 0;
+    margin-bottom: 0.5vh;
+    text-align: start;
+}
+
+.panel_scroll{
+    overflow-y: scroll;
+    padding: 0.4vh;
+    height: auto;
+}

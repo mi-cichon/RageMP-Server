@@ -1,0 +1,4 @@
+﻿<meta>
+  <info name="RPGMode" description="" />
+  <script src="bin/Debug/netcoreapp3.1/Server.dll" />
+</meta>

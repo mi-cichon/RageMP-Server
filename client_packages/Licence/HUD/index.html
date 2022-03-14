@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div class="interface-main-body">
+            <div class="interface-body info">
+                <div class="nameCol">Egzamin - Kategoria B</div>
+                <h4>Egzamin teoretyczny na prawo jazdy kategorii B.</h4>
+                <div class="info-text"><p>Czeka na Ciebie test teoretyczny na prawo jazdy kategorii B. Otrzymasz 12 losowych pytań. Aby uzyskać wynik pozytywny musisz udzielić dobrej odpowiedzi na 10 z nich. Na każde pytanie masz 45 sekund. Jeśli nie zaakceptujesz odpowiedzi nie będzie ona brana pod uwagę.</p></div>
+                <div class="spacer"></div>
+                <div class="buttons">
+                    
+                    <input type="button" class="button_select" value="Rozpocznij egzamin ($30)">
+                    <input type="button" class="button_cancel" value="Anuluj">
+                </div>
+            </div>
+            <div class="interface-body test">
+                <div class="nameCol">Egzamin - Kategoria B</div>
+                <div class="time"><h3></h3><b></b></div>
+                <h3 class="question"></h3>
+                <table>
+                    <colgroup width="10%">
+                    <tr>
+                        <td><label for="a">A )</label></td>
+                        <td><p class="answer a"></p></td>
+                    </tr>
+                    <tr>
+                        <td><label for="b">B )</label></td>
+                        <td><p class="answer b"></p></td>
+                    </tr>
+                    <tr>
+                        <td><label for="c">C )</label></td>
+                        <td><p class="answer c"></p></td>
+                    </tr>
+                </table>
+                <div class="spacer"></div>
+                <div class="buttons">
+                    <input type="button" class="button_cancel" value="Przerwij">
+                    <input type="button" class="button_select" value="Następne pytanie">
+                </div>
+            </div>
+        </div>
+        <script src="pytania.js"></script>
+        <script src="licence.js"></script>
+    </body>
+</html>

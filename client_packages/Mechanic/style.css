@@ -1,0 +1,458 @@
+html, body{
+    height:auto;
+    background-color: transparent;
+    font-family:'PT Sans', sans-serif;
+    height: 100%;
+    overflow: hidden;
+    user-select: none;
+}
+.mainBody{
+    height:auto;
+    width: 40vh;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow: auto;
+    position: relative;
+    user-select: none;
+    background: radial-gradient(circle, rgba(55,55,55,0.95) 0%, rgba(29,30,34,0.95) 100%);
+}
+
+.nameCol{
+    background-color: rgb(33, 34, 37);
+    width: 100%;
+    text-align: center;
+    padding: 0.9vh 0;
+    font-size: 1.9vh;
+    font-weight: 600;
+    color: white;
+    border-bottom: 1px solid #0c9;
+}
+
+.mainBody .bg{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: solid 1px rgba(31,31,31,0.8);
+    background-color: rgba(51, 51, 51, 0.8);
+    width: 100%;
+    height: 100%;
+}
+.infoRow{
+    margin-top: 1vh;
+    padding: 1.2vh;
+    user-select: none;
+    font-size: 1.2vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.mainRow{
+    padding: 1.2vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.infoText{
+    color: #fff;
+    font-size: 1.2vh;
+    font-weight: 700;
+    text-align: center;
+    width: 25%;
+}
+.mainText{
+    font-size: 1.2vh;
+    text-align: center; 
+    color: #fff;
+    width: 25%;
+}
+
+.priceText{
+    color: rgb(0, 190, 0);
+    font-weight: 500;
+    font-size: 1.2vh;
+}
+.text{
+    color: #fff;
+    font-size: 1.4vh;
+}
+
+.button_select{
+    background: linear-gradient(180deg, rgba(66, 66, 66, 0.95) 0%, rgba(29,30,34,0.95) 100%);
+    border: none;
+    color: white;
+    padding: 0.6vh;
+    border-bottom: 1px solid #00cc99;
+    font-size: 1vh;
+}
+
+.button_select:hover{
+    border-bottom: 1px solid transparent;
+    box-shadow: 0 0 1vh #0c9;
+}
+
+.button_select:focus{
+    outline: none;
+}
+
+.button_cancel{
+    background: linear-gradient(180deg, rgba(66, 66, 66, 0.95) 0%, rgba(29,30,34,0.95) 100%);
+    border: none;
+    color: white;
+    padding: 0.6vh;
+    border-bottom: 1px solid #cc0000;
+    font-size: 1vh;
+}
+
+.button_cancel:hover{
+    border-bottom: 1px solid transparent;
+    box-shadow: 0 0 1vh rgb(204, 0, 0);
+}
+
+.button_cancel:focus{
+    outline: none;
+}
+.endRow{
+    width: 100%;
+    display: flex;
+    padding: 2vh;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+.titleRow{
+    text-align: center;
+    color: #fff;
+    font-size: 2vh;
+    margin-bottom: 2vh;
+}
+.endCol{
+    padding: 2vh;
+    width: 50%;
+}
+
+.errorCol{
+    text-align: center;
+    color: rgb(165, 26, 26);
+    font-size: 1.3vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.spacer{
+    height: 14vh;
+    width: 0.1vh;
+    background-color: #00cc99;
+    margin: 0 1vh;
+}
+
+.mech_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1vh;
+    box-sizing: border-box;
+    background: linear-gradient(0deg,rgba(46, 46, 46, 0.95) 0%, rgba(29,30,34,0.95) 100%);
+    border-radius: 0.4vh;
+    margin: 1vh;
+}
+
+.mech_parts{
+    width: 45%;
+    height: 16vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    padding-right: 0.2vh;
+}
+
+.mech_parts_header{
+    width: 100%;
+    text-align: center;
+    padding: 0.3vh 0;
+    font-size: 1.1vh;
+    font-weight: 600;
+    color: white;
+}
+
+.mech_parts_part{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    direction: ltr;
+    height: 2vh;
+}
+
+.mech_parts_part:hover div{
+    display: block;
+}
+
+.mech_parts_part div{
+    width: 1.5vh;
+    height: 1.5vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('img/check_white.png');
+    display: none;
+}
+
+.checked{
+    background-image: url('img/check.png') !important;
+    display: block !important;
+}
+
+.mech_parts_part p{
+    color: white;
+    text-align: left;
+    padding: 0.3vh 0;
+    font-size: 1vh;
+    width: 80%;
+    margin: 0;
+}
+
+.scroll{
+    height: 16vh;
+    overflow-y: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    direction: rtl;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.car_container{
+    width: 18vh;
+    height: 18vh;
+    position: relative;
+    box-sizing: border-box;
+    transform: rotate(90deg);
+    border-radius: 0.4vh;
+}
+
+.car_wheel{
+    width: 15%;
+    height: 45%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.car_engine{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    transform: translateY(-50%) rotate(-90deg);
+    width: 15%;
+    height: 15%;
+    top: 50%;
+    left: 2%;
+    background-image: url('img/engine/engine_good.png');
+}
+
+
+
+/* MIDDLE */
+
+.car_part_middle{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+}
+
+.car_body_top{
+    background-image: url('img/body/top/body_good.png');
+    width: 63.15%;
+    height: 20.7%;
+    left: 52%;
+}
+
+.car_door_front{
+    background-image: url('img/doors/front/front_good.png');
+}
+
+.car_door_back{
+    background-image: url('img/doors/back/back_good.png');
+}
+
+.car_window_front{
+    background-image: url('img/windows/front/front_good.png');
+}
+
+.car_window_back{
+    background-image: url('img/windows/back/back_good.png');
+}
+
+
+
+/* RIGHT */
+
+.car_part_right{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 0;
+}
+
+.car_body_right{
+    top: 18%;
+    background-image: url('img/body/right/body_right_good.png');
+    width: 63.15%;
+    height: 20.7%;
+    left: 52%;
+}
+
+.car_door_right_front{
+    background-image: url('img/doors/right/front_good.png');
+}
+
+.car_door_right_back{
+    background-image: url('img/doors/right/back_good.png');
+}
+
+.car_window_right_front{
+    background-image: url('img/windows/right/front_good.png');
+}
+
+.car_window_right_back{
+    background-image: url('img/windows/right/back_good.png');
+}
+
+.car_wheel_right_front{
+    background-image: url('img/wheels/wheel_good.png');
+    left: 10%;
+    top: 12%;
+}
+
+.car_wheel_right_back{
+    background-image: url('img/wheels/wheel_good.png');
+    right: 0;
+    top: 12%;
+}
+
+
+/* LEFT */
+
+.car_part_left{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    bottom: 0;
+}
+
+
+.car_body_left{
+    bottom: 18%;
+    background-image: url('img/body/left/body_left_good.png');
+    width: 63.15%;
+    height: 20.7%;
+    left: 52%;
+}
+
+.car_door_left_front{
+    background-image: url('img/doors/left/front_good.png');
+}
+
+.car_door_left_back{
+    background-image: url('img/doors/left/back_good.png');
+}
+
+.car_window_left_front{
+    background-image: url('img/windows/left/front_good.png');
+}
+
+.car_window_left_back{
+    background-image: url('img/windows/left/back_good.png');
+}
+
+.car_wheel_left_front{
+    background-image: url('img/wheels/wheel_good.png');
+    left: 10%;
+    bottom: -33%;
+}
+
+.car_wheel_left_back{
+    background-image: url('img/wheels/wheel_good.png');
+    right: 0%;
+    bottom: -33%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+::-webkit-scrollbar {
+    width: 0.6vh;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #444; 
+    border: 6vh solid transparent;
+    border-radius: 1vh;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #444; 
+    border: 6vh solid transparent;
+    border-radius: 1vh;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }

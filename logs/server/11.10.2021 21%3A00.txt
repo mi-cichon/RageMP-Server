@@ -1,0 +1,141 @@
+[33m[INFO] [0mStarting RAGE Multiplayer server...
+[0m[33m
+[============================================================]
+[33m[33m||
+[33m||[33m	MaxPlayers		[0m50[33m
+||	Sync rate		[0m40ms[33m
+||	Name			[0mBasicRPG.pl | W trakcie tworzenia | Wiecej na https://discord.gg/2vrMdXsdRW [PL][33m
+||	Gamemode		[0mrpg[33m
+||	Streaming distance	[0m500[33m
+||	Announcement		[0menabled[33m
+||	Voice chat		[0menabled[33m
+||	Address			[0m127.0.0.1:22005[33m
+||	Connection limits	[0mdisabled[33m
+||	Encryption		[0menabled[33m
+||	NodeJS			[0menabled[33m
+||	C#			[0menabled[33m
+||
+[============================================================]
+
+[0m
+[33m[INFO][0m Loading NodeJS packages...
+[33m[INFO][0m Starting packages...
+[32m[DONE][0m Server packages have been started.
+Initializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 10/11/2021 9:00:14 PM
+Unable to load acl.xml
+ACLEnabled: False
+Loaded 667 entries from vehicleData.json
+Loading resources..
+[?1h=[39;49m[33m->[39;49m[37m Starting [39;49m[36mServer[39;49m[37m resource..
+[39;49m[39;49m[37mServer:[39;49m[37m loading scripts.. found 1 script(s)
+[39;49m[39;49m[37mServer:[39;49m[37m instantiating [39;49m[37mServerSide.MainClass[39;49m[37m..
+[39;49mConnection refused [::1]:3306
+Connection refused [::1]:3306
+[39;49m[37mServer:[39;49m[37m loading server events.. found 10 server event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 10 server events(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loading remote events.. found 147 remote event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 147 remote event(s)
+[39;49mServer started...
+[39;49m[32m->[39;49m[37m Resource [39;49m[36mServer[39;49m[37m started!
+[39;49m[39;49m[32mStarted! Waiting for connections..
+[39;49m[32m[DONE] [0mStarted resource transfer server at 22006 port.
+[32m[DONE] [0mClient-side packages weight: [33m166.868668 MB[0m (uncompressed: [33m325.127350 MB[0m).
+[33m[INFO] [0mMasterList: Announcing into master server...
+[33m[INFO] [0mInitializing networking...
+[32m[DONE] [0mNetworking has been started: (IPv4-only) at 127.0.0.1:22005
+[32m[DONE] [0mThe server is ready to accept connections.
+[32m[DONE] [0mMasterList: Connected to master list.
+[N] Incoming connection from 37.248.155.183
+37.248.155.183 Mateuszeqx
+[N] Incoming connection from 188.47.3.47
+[N] 188.47.3.47:51655 has been disconnected.
+[N] Incoming connection from 83.4.165.25
+83.4.165.25 swirek1970544
+[N] Incoming connection from 37.30.116.64
+[N] 37.30.116.64:61594 has been disconnected.
+[N] Incoming connection from 188.47.3.47
+[N] 188.47.3.47:49635 has been disconnected.
+[N] Incoming connection from 37.30.116.64
+37.30.116.64 XpiterroX
+[N] Incoming connection from 84.15.187.11
+84.15.187.11 edgar12345cake
+[N] 37.30.116.64:61519 has been disconnected.
+[N] Incoming connection from 37.30.116.64
+37.30.116.64 XpiterroX
+[N] Incoming connection from 89.229.84.90
+[N] Incoming connection from 188.47.3.47
+188.47.3.47 Adiniooo
+89.229.84.90 Bombel3k
+[39;49m[32m21:05 [4]Bombel3k: podbijesz na tunera edi?
+[39;49m[37m[39;49m[32m21:05 [3]edi1: za hwile bende 
+[39;49m[37m[N] 37.248.155.183:24078 has been disconnected.
+[N] Incoming connection from 37.248.155.183
+37.248.155.183 Mateuszeqx
+[N] Incoming connection from 178.37.84.102
+[39;49m[32m21:08 [0]Matix: jak ktos chce to itali rsx na simeonie 
+[39;49m[37m[39;49m[32m21:08 [0]Matix: koks fura
+[39;49m[37m178.37.84.102 mikkelshake89282
+[39;49m[32m21:08 [4]Bombel3k: za ile te itali?
+[39;49m[37m[39;49m[32m21:09 [0]Matix: 400k
+[39;49m[37m[N] Incoming connection from 91.245.82.80
+91.245.82.80 SNOWC4T
+[39;49m[32m21:10 [0]Matix: kupujesz?
+[39;49m[37m[39;49m[32m21:10 [4]Bombel3k: mam 120k
+[39;49m[37m[39;49m[32m21:10 [0]Matix: pozycz 
+[39;49m[37m[N] Incoming connection from 109.95.90.197
+109.95.90.197 kosapolska
+[N] Incoming connection from 79.186.37.106
+79.186.37.106 Piraciako
+[N] 37.248.155.183:24078 has been disconnected.
+[N] Incoming connection from 37.248.155.183
+37.248.155.183 Mateuszeqx
+[39;49m[32m21:13 [6]Johnymielony: daj mi prawo jazdy bo ja kurwa nie umiem
+[39;49m[37m[39;49m[32m21:14 [0]Matix: chce ktos moze kupic rsxa?
+[39;49m[37m[39;49m[32m21:16 [4]Bombel3k: za 110k wezme XD
+[39;49m[37m[N] 109.95.90.197:53806 has been disconnected.
+[N] Incoming connection from 109.95.90.197
+109.95.90.197 kosapolska
+[N] 91.245.82.80:60356 has been disconnected.
+[N] 37.30.116.64:61519 has been disconnected.
+[N] Incoming connection from 37.30.116.64
+37.30.116.64 XpiterroX
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[N] 178.37.84.102:63382 has been disconnected.
+[39;49m[32m21:27 [7]robotek019: siema
+[39;49m[37m[39;49m[32m21:28 [4]Bombel3k: siema
+[39;49m[37m[N] 79.186.37.106:58278 has been disconnected.
+[N] Incoming connection from 79.186.37.106
+79.186.37.106 Piraciako
+[N] Incoming connection from 83.31.181.28
+[N] 83.31.181.28:49170 has been disconnected.
+[N] 37.248.155.183:24078 has been disconnected.
+[N] 79.186.37.106:58278 has been disconnected.
+[N] Incoming connection from 83.31.181.28
+83.31.181.28 ZenekBlue
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] Incoming connection from 195.136.137.177
+195.136.137.177 Deemz_i
+[39;49m[32m21:48 [6]Deemz_i: siema
+[39;49m[37m[39;49m[32m21:48 [6]Deemz_i: ja nowy xD
+[39;49m[37m[39;49m[32m21:48 [4]Bombel3k: siema
+[39;49m[37m[39;49m[32m21:49 [6]Deemz_i: od czego zacząć ?
+[39;49m[37m[39;49m[32m21:49 [4]Bombel3k: szukanie znajdziek 
+[39;49m[37m[39;49m[32m21:49 [3]edi1: siema
+[39;49m[37m[39;49m[32m21:50 [7]robotek019: siema edi :D
+[39;49m[37m[39;49m[32m21:50 [7]robotek019: coraz więcej nas tutaj :D
+[39;49m[37m[39;49m[32m21:50 [6]Deemz_i: jest jakiś dsc serwera czy coś?
+[39;49m[37m[N] Incoming connection from 109.231.63.219
+[39;49m[32m21:51 [7]robotek019: jest ale chyba musisz przepisac bo nie ma komendy /dsc d;
+[39;49m[37m109.231.63.219 DevilSolution
+[39;49m[32m21:51 [9]DevilSolution: witma
+[39;49m[37m[39;49m[32m21:52 [4]Bombel3k: restart za 2min
+[39;49m[37m[39;49m[32m21:52 [3]edi1: za chvile restart 
+[39;49m[37m[39;49m[32m21:52 [7]robotek019: skąd wiesz? :D
+[39;49m[37m[39;49m[32m21:52 [4]Bombel3k: mam tajne informacje
+[39;49m[37m^C[33m[INFO] [0mShutting down the server...
+Shutting down..
+[32m[DONE] [0mThe server has been terminated.
+terminate called without an active exception

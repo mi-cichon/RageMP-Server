@@ -1,0 +1,4694 @@
+[
+    {
+       "name":"Deep Five",
+       "type":0,
+       "id":1,
+       "price":9158
+    },
+    {
+       "name":"Inferno",
+       "type":0,
+       "id":0,
+       "price":7766
+    },
+    {
+       "name":"Organic Type 0",
+       "type":0,
+       "id":9,
+       "price":10472
+    },
+    {
+       "name":"Endo v.1",
+       "type":0,
+       "id":10,
+       "price":14498
+    },
+    {
+       "name":"GT One",
+       "type":0,
+       "id":11,
+       "price":14983
+    },
+    {
+       "name":"Duper 7",
+       "type":0,
+       "id":12,
+       "price":8982
+    },
+    {
+       "name":"Uzer",
+       "type":0,
+       "id":13,
+       "price":13160
+    },
+    {
+       "name":"S Racer",
+       "type":0,
+       "id":15,
+       "price":13484
+    },
+    {
+       "name":"GroundRide",
+       "type":0,
+       "id":14,
+       "price":7322
+    },
+    {
+       "name":"Mercie",
+       "type":0,
+       "id":7,
+       "price":10077
+    },
+    {
+       "name":"Diamond Cut",
+       "type":0,
+       "id":3,
+       "price":7340
+    },
+    {
+       "name":"Synthetic Z",
+       "type":0,
+       "id":8,
+       "price":13684
+    },
+    {
+       "name":"Lozspeed Mk.V",
+       "type":0,
+       "id":2,
+       "price":7107
+    },
+    {
+       "name":"Chrono",
+       "type":0,
+       "id":4,
+       "price":5682
+    },
+    {
+       "name":"Feroci RR",
+       "type":0,
+       "id":5,
+       "price":13959
+    },
+    {
+       "name":"Venum",
+       "type":0,
+       "id":16,
+       "price":13037
+    },
+    {
+       "name":"Dash VIP",
+       "type":0,
+       "id":18,
+       "price":9686
+    },
+    {
+       "name":"Cosmo",
+       "type":0,
+       "id":17,
+       "price":6168
+    },
+    {
+       "name":"Ice Kid",
+       "type":0,
+       "id":19,
+       "price":11939
+    },
+    {
+       "name":"Ruff Weld",
+       "type":0,
+       "id":20,
+       "price":5785
+    },
+    {
+       "name":"Wangan Master",
+       "type":0,
+       "id":21,
+       "price":6779
+    },
+    {
+       "name":"Super Five",
+       "type":0,
+       "id":22,
+       "price":6235
+    },
+    {
+       "name":"Split Six",
+       "type":0,
+       "id":24,
+       "price":7898
+    },
+    {
+       "name":"Endo v.2",
+       "type":0,
+       "id":23,
+       "price":11426
+    },
+    {
+       "name":"Inferno",
+       "type":0,
+       "id":25,
+       "price":11140
+    },
+    {
+       "name":"Deep Five",
+       "type":0,
+       "id":26,
+       "price":10248
+    },
+    {
+       "name":"Lozspeed Mk.V",
+       "type":0,
+       "id":27,
+       "price":7279
+    },
+    {
+       "name":"Diamond Cut",
+       "type":0,
+       "id":28,
+       "price":5649
+    },
+    {
+       "name":"FiftyNine",
+       "type":0,
+       "id":31,
+       "price":5483
+    },
+    {
+       "name":"Chrono",
+       "type":0,
+       "id":29,
+       "price":14522
+    },
+    {
+       "name":"Feroci RR",
+       "type":0,
+       "id":30,
+       "price":10667
+    },
+    {
+       "name":"Synthetic Z",
+       "type":0,
+       "id":33,
+       "price":5031
+    },
+    {
+       "name":"Endo v.1",
+       "type":0,
+       "id":35,
+       "price":11606
+    },
+    {
+       "name":"GT One",
+       "type":0,
+       "id":36,
+       "price":8310
+    },
+    {
+       "name":"Mercie",
+       "type":0,
+       "id":32,
+       "price":6037
+    },
+    {
+       "name":"Organic Type 0",
+       "type":0,
+       "id":34,
+       "price":17689
+    },
+    {
+       "name":"Duper 7",
+       "type":0,
+       "id":37,
+       "price":5136
+    },
+    {
+       "name":"Uzer",
+       "type":0,
+       "id":38,
+       "price":7037
+    },
+    {
+       "name":"Venum",
+       "type":0,
+       "id":41,
+       "price":8049
+    },
+    {
+       "name":"S Racer",
+       "type":0,
+       "id":40,
+       "price":13646
+    },
+    {
+       "name":"GroundRide",
+       "type":0,
+       "id":39,
+       "price":14896
+    },
+    {
+       "name":"Cosmo",
+       "type":0,
+       "id":42,
+       "price":13670
+    },
+    {
+       "name":"Dash VIP",
+       "type":0,
+       "id":43,
+       "price":6887
+    },
+    {
+       "name":"Ice Kid",
+       "type":0,
+       "id":44,
+       "price":11982
+    },
+    {
+       "name":"Ruff Weld",
+       "type":0,
+       "id":45,
+       "price":14445
+    },
+    {
+       "name":"Wangan Master",
+       "type":0,
+       "id":46,
+       "price":7168
+    },
+    {
+       "name":"Super Five",
+       "type":0,
+       "id":47,
+       "price":12574
+    },
+    {
+       "name":"Endo v.2",
+       "type":0,
+       "id":48,
+       "price":11230
+    },
+    {
+       "name":"Split Six",
+       "type":0,
+       "id":49,
+       "price":6629
+    },
+    {
+       "name":"Kracka",
+       "type":1,
+       "id":3,
+       "price":11076
+    },
+    {
+       "name":"Azreal",
+       "type":1,
+       "id":4,
+       "price":6237
+    },
+    {
+       "name":"Default",
+       "type":1,
+       "id":-1,
+       "price":8980
+    },
+    {
+       "name":"Classic Five",
+       "type":1,
+       "id":0,
+       "price":10790
+    },
+    {
+       "name":"Dukes",
+       "type":1,
+       "id":1,
+       "price":12602
+    },
+    {
+       "name":"Mecha",
+       "type":1,
+       "id":5,
+       "price":14641
+    },
+    {
+       "name":"Muscle Freak",
+       "type":1,
+       "id":2,
+       "price":13794
+    },
+    {
+       "name":"Drag SPL",
+       "type":1,
+       "id":7,
+       "price":14836
+    },
+    {
+       "name":"Revolver",
+       "type":1,
+       "id":8,
+       "price":6105
+    },
+    {
+       "name":"Classic Rod",
+       "type":1,
+       "id":9,
+       "price":10995
+    },
+    {
+       "name":"Fairlie",
+       "type":1,
+       "id":10,
+       "price":8143
+    },
+    {
+       "name":"Spooner",
+       "type":1,
+       "id":11,
+       "price":10097
+    },
+    {
+       "name":"Five Star",
+       "type":1,
+       "id":12,
+       "price":14101
+    },
+    {
+       "name":"Old School",
+       "type":1,
+       "id":13,
+       "price":7817
+    },
+    {
+       "name":"El Jefe",
+       "type":1,
+       "id":14,
+       "price":8935
+    },
+    {
+       "name":"Dodman",
+       "type":1,
+       "id":15,
+       "price":10914
+    },
+    {
+       "name":"Six Gun",
+       "type":1,
+       "id":16,
+       "price":8583
+    },
+    {
+       "name":"Mercenary",
+       "type":1,
+       "id":17,
+       "price":11058
+    },
+    {
+       "name":"Classic Five",
+       "type":1,
+       "id":18,
+       "price":11907
+    },
+    {
+       "name":"Dukes",
+       "type":1,
+       "id":19,
+       "price":8532
+    },
+    {
+       "name":"Muscle Freak",
+       "type":1,
+       "id":20,
+       "price":10164
+    },
+    {
+       "name":"Kracka",
+       "type":1,
+       "id":21,
+       "price":14911
+    },
+    {
+       "name":"Azreal",
+       "type":1,
+       "id":22,
+       "price":10381
+    },
+    {
+       "name":"Mecha",
+       "type":1,
+       "id":23,
+       "price":10555
+    },
+    {
+       "name":"Drag SPL",
+       "type":1,
+       "id":25,
+       "price":13151
+    },
+    {
+       "name":"Black Top",
+       "type":1,
+       "id":24,
+       "price":5370
+    },
+    {
+       "name":"Classic Rod",
+       "type":1,
+       "id":27,
+       "price":11609
+    },
+    {
+       "name":"Revolver",
+       "type":1,
+       "id":26,
+       "price":8178
+    },
+    {
+       "name":"Fairlie",
+       "type":1,
+       "id":28,
+       "price":9242
+    },
+    {
+       "name":"Spooner",
+       "type":1,
+       "id":29,
+       "price":6234
+    },
+    {
+       "name":"Five Star",
+       "type":1,
+       "id":30,
+       "price":9936
+    },
+    {
+       "name":"El Jefe",
+       "type":1,
+       "id":32,
+       "price":8311
+    },
+    {
+       "name":"Old School",
+       "type":1,
+       "id":31,
+       "price":11282
+    },
+    {
+       "name":"Dodman",
+       "type":1,
+       "id":33,
+       "price":6668
+    },
+    {
+       "name":"Six Gun",
+       "type":1,
+       "id":34,
+       "price":10547
+    },
+    {
+       "name":"Mercenary",
+       "type":1,
+       "id":35,
+       "price":13949
+    },
+    {
+       "name":"Default",
+       "type":2,
+       "id":-1,
+       "price":6503
+    },
+    {
+       "name":"Flare",
+       "type":2,
+       "id":0,
+       "price":11266
+    },
+    {
+       "name":"Wired",
+       "type":2,
+       "id":1,
+       "price":5931
+    },
+    {
+       "name":"Triple Golds",
+       "type":2,
+       "id":2,
+       "price":14505
+    },
+    {
+       "name":"Big Worm",
+       "type":2,
+       "id":3,
+       "price":5116
+    },
+    {
+       "name":"Seven Fives",
+       "type":2,
+       "id":4,
+       "price":12063
+    },
+    {
+       "name":"Turbine",
+       "type":2,
+       "id":8,
+       "price":13194
+    },
+    {
+       "name":"Lead Sled",
+       "type":2,
+       "id":7,
+       "price":9316
+    },
+    {
+       "name":"Split Six",
+       "type":2,
+       "id":5,
+       "price":7061
+    },
+    {
+       "name":"Super Fin",
+       "type":2,
+       "id":9,
+       "price":11831
+    },
+    {
+       "name":"Dollar",
+       "type":2,
+       "id":11,
+       "price":11332
+    },
+    {
+       "name":"Classic Rod",
+       "type":2,
+       "id":10,
+       "price":5309
+    },
+    {
+       "name":"Dukes",
+       "type":2,
+       "id":12,
+       "price":5793
+    },
+    {
+       "name":"Low Five",
+       "type":2,
+       "id":13,
+       "price":10846
+    },
+    {
+       "name":"Wired",
+       "type":2,
+       "id":16,
+       "price":13778
+    },
+    {
+       "name":"Gooch",
+       "type":2,
+       "id":14,
+       "price":11585
+    },
+    {
+       "name":"Flare",
+       "type":2,
+       "id":15,
+       "price":10359
+    },
+    {
+       "name":"Triple Golds",
+       "type":2,
+       "id":17,
+       "price":13175
+    },
+    {
+       "name":"Big Worm",
+       "type":2,
+       "id":18,
+       "price":13588
+    },
+    {
+       "name":"Seven Fives",
+       "type":2,
+       "id":19,
+       "price":10861
+    },
+    {
+       "name":"Split Six",
+       "type":2,
+       "id":20,
+       "price":12497
+    },
+    {
+       "name":"Fresh Mesh",
+       "type":2,
+       "id":21,
+       "price":11713
+    },
+    {
+       "name":"Lead Sled",
+       "type":2,
+       "id":22,
+       "price":11533
+    },
+    {
+       "name":"Turbine",
+       "type":2,
+       "id":23,
+       "price":14446
+    },
+    {
+       "name":"Super Fin",
+       "type":2,
+       "id":24,
+       "price":8920
+    },
+    {
+       "name":"Classic Rod",
+       "type":2,
+       "id":25,
+       "price":8354
+    },
+    {
+       "name":"Dukes",
+       "type":2,
+       "id":27,
+       "price":12133
+    },
+    {
+       "name":"Dollar",
+       "type":2,
+       "id":26,
+       "price":13321
+    },
+    {
+       "name":"Low Five",
+       "type":2,
+       "id":28,
+       "price":12093
+    },
+    {
+       "name":"Gooch",
+       "type":2,
+       "id":29,
+       "price":11077
+    },
+    {
+       "name":"Default",
+       "type":3,
+       "id":-1,
+       "price":9695
+    },
+    {
+       "name":"VIP",
+       "type":3,
+       "id":0,
+       "price":9532
+    },
+    {
+       "name":"Benefactor",
+       "type":3,
+       "id":1,
+       "price":7248
+    },
+    {
+       "name":"Cosmo",
+       "type":3,
+       "id":2,
+       "price":6673
+    },
+    {
+       "name":"Bippu",
+       "type":3,
+       "id":3,
+       "price":9579
+    },
+    {
+       "name":"Royal Six",
+       "type":3,
+       "id":4,
+       "price":7389
+    },
+    {
+       "name":"Cognoscenti",
+       "type":3,
+       "id":8,
+       "price":9664
+    },
+    {
+       "name":"LozSpeed Ten",
+       "type":3,
+       "id":9,
+       "price":5678
+    },
+    {
+       "name":"Supernova",
+       "type":3,
+       "id":10,
+       "price":10362
+    },
+    {
+       "name":"Fagorme",
+       "type":3,
+       "id":5,
+       "price":13978
+    },
+    {
+       "name":"Iced Out",
+       "type":3,
+       "id":7,
+       "price":13327
+    },
+    {
+       "name":"Split Six",
+       "type":3,
+       "id":14,
+       "price":8352
+    },
+    {
+       "name":"Obey RS",
+       "type":3,
+       "id":11,
+       "price":5801
+    },
+    {
+       "name":"LozSpeed Baller",
+       "type":3,
+       "id":12,
+       "price":12539
+    },
+    {
+       "name":"Extravaganzo",
+       "type":3,
+       "id":13,
+       "price":5131
+    },
+    {
+       "name":"Empowered",
+       "type":3,
+       "id":15,
+       "price":5711
+    },
+    {
+       "name":"Sunrise",
+       "type":3,
+       "id":16,
+       "price":7650
+    },
+    {
+       "name":"Cutter",
+       "type":3,
+       "id":18,
+       "price":8421
+    },
+    {
+       "name":"VIP",
+       "type":3,
+       "id":19,
+       "price":8988
+    },
+    {
+       "name":"Benefactor",
+       "type":3,
+       "id":20,
+       "price":13184
+    },
+    {
+       "name":"Dash VIP",
+       "type":3,
+       "id":17,
+       "price":5756
+    },
+    {
+       "name":"Royal Six",
+       "type":3,
+       "id":23,
+       "price":9220
+    },
+    {
+       "name":"Fagorme",
+       "type":3,
+       "id":24,
+       "price":5350
+    },
+    {
+       "name":"Deluxe",
+       "type":3,
+       "id":25,
+       "price":6268
+    },
+    {
+       "name":"Cosmo",
+       "type":3,
+       "id":21,
+       "price":11814
+    },
+    {
+       "name":"Bippu",
+       "type":3,
+       "id":22,
+       "price":6660
+    },
+    {
+       "name":"Iced Out",
+       "type":3,
+       "id":26,
+       "price":12321
+    },
+    {
+       "name":"Cognoscenti",
+       "type":3,
+       "id":27,
+       "price":8458
+    },
+    {
+       "name":"Obey RS",
+       "type":3,
+       "id":30,
+       "price":5971
+    },
+    {
+       "name":"Empowered",
+       "type":3,
+       "id":34,
+       "price":13323
+    },
+    {
+       "name":"Supernova",
+       "type":3,
+       "id":29,
+       "price":8257
+    },
+    {
+       "name":"LozSpeed Baller",
+       "type":3,
+       "id":31,
+       "price":7934
+    },
+    {
+       "name":"Extravaganzo",
+       "type":3,
+       "id":32,
+       "price":8246
+    },
+    {
+       "name":"Sunrise",
+       "type":3,
+       "id":35,
+       "price":14398
+    },
+    {
+       "name":"LozSpeed Ten",
+       "type":3,
+       "id":28,
+       "price":14062
+    },
+    {
+       "name":"Split Six",
+       "type":3,
+       "id":33,
+       "price":10323
+    },
+    {
+       "name":"Dash VIP",
+       "type":3,
+       "id":36,
+       "price":11382
+    },
+    {
+       "name":"Cutter",
+       "type":3,
+       "id":37,
+       "price":13529
+    },
+    {
+       "name":"Raider",
+       "type":4,
+       "id":0,
+       "price":8651
+    },
+    {
+       "name":"Default",
+       "type":4,
+       "id":-1,
+       "price":14183
+    },
+    {
+       "name":"Mudslinger",
+       "type":4,
+       "id":1,
+       "price":6943
+    },
+    {
+       "name":"Nevis",
+       "type":4,
+       "id":2,
+       "price":5074
+    },
+    {
+       "name":"Cairngorm",
+       "type":4,
+       "id":3,
+       "price":11872
+    },
+    {
+       "name":"Amazon",
+       "type":4,
+       "id":4,
+       "price":9795
+    },
+    {
+       "name":"Challenger",
+       "type":4,
+       "id":5,
+       "price":9708
+    },
+    {
+       "name":"Five Star",
+       "type":4,
+       "id":7,
+       "price":7993
+    },
+    {
+       "name":"Rock Crawler",
+       "type":4,
+       "id":8,
+       "price":14169
+    },
+    {
+       "name":"Mil Spec Steelie",
+       "type":4,
+       "id":9,
+       "price":6051
+    },
+    {
+       "name":"Raider",
+       "type":4,
+       "id":10,
+       "price":14905
+    },
+    {
+       "name":"Challenger",
+       "type":4,
+       "id":15,
+       "price":6745
+    },
+    {
+       "name":"Dune Basher",
+       "type":4,
+       "id":16,
+       "price":7162
+    },
+    {
+       "name":"Five Star",
+       "type":4,
+       "id":17,
+       "price":5367
+    },
+    {
+       "name":"Mil Spec Steelie",
+       "type":4,
+       "id":19,
+       "price":10155
+    },
+    {
+       "name":"Rock Crawler",
+       "type":4,
+       "id":18,
+       "price":6201
+    },
+    {
+       "name":"Mudslinger",
+       "type":4,
+       "id":11,
+       "price":12573
+    },
+    {
+       "name":"Nevis",
+       "type":4,
+       "id":12,
+       "price":14160
+    },
+    {
+       "name":"Cairngorm",
+       "type":4,
+       "id":13,
+       "price":12667
+    },
+    {
+       "name":"Amazon",
+       "type":4,
+       "id":14,
+       "price":10027
+    },
+    {
+       "name":"Retro Steelie",
+       "type":4,
+       "id":20,
+       "price":12991
+    },
+    {
+       "name":"Heavy Duty Steelie",
+       "type":4,
+       "id":21,
+       "price":9605
+    },
+    {
+       "name":"Police Issue Steelie",
+       "type":4,
+       "id":23,
+       "price":9482
+    },
+    {
+       "name":"Lightweight Steelie",
+       "type":4,
+       "id":24,
+       "price":6653
+    },
+    {
+       "name":"Mountain Man",
+       "type":4,
+       "id":27,
+       "price":12917
+    },
+    {
+       "name":"Ridge Climber",
+       "type":4,
+       "id":28,
+       "price":7332
+    },
+    {
+       "name":"Concave 5",
+       "type":4,
+       "id":29,
+       "price":9380
+    },
+    {
+       "name":"Concave Steelie",
+       "type":4,
+       "id":22,
+       "price":12368
+    },
+    {
+       "name":"Dukes",
+       "type":4,
+       "id":25,
+       "price":13665
+    },
+    {
+       "name":"Avalanche",
+       "type":4,
+       "id":26,
+       "price":10739
+    },
+    {
+       "name":"Flat Six",
+       "type":4,
+       "id":30,
+       "price":7069
+    },
+    {
+       "name":"All Terrain Monster",
+       "type":4,
+       "id":31,
+       "price":6591
+    },
+    {
+       "name":"Drag SPL",
+       "type":4,
+       "id":32,
+       "price":6383
+    },
+    {
+       "name":"Super Mesh",
+       "type":5,
+       "id":1,
+       "price":12032
+    },
+    {
+       "name":"Concave Rally Master",
+       "type":4,
+       "id":33,
+       "price":7067
+    },
+    {
+       "name":"Rugged Snowflake",
+       "type":4,
+       "id":34,
+       "price":8504
+    },
+    {
+       "name":"Default",
+       "type":5,
+       "id":-1,
+       "price":12943
+    },
+    {
+       "name":"Cosmo",
+       "type":5,
+       "id":0,
+       "price":9610
+    },
+    {
+       "name":"Outsider",
+       "type":5,
+       "id":2,
+       "price":7817
+    },
+    {
+       "name":"Driftmeister",
+       "type":5,
+       "id":4,
+       "price":8822
+    },
+    {
+       "name":"Rollas",
+       "type":5,
+       "id":3,
+       "price":8453
+    },
+    {
+       "name":"Slicer",
+       "type":5,
+       "id":5,
+       "price":10929
+    },
+    {
+       "name":"Countersteer",
+       "type":5,
+       "id":12,
+       "price":10414
+    },
+    {
+       "name":"Dubbed",
+       "type":5,
+       "id":7,
+       "price":13328
+    },
+    {
+       "name":"Five Star",
+       "type":5,
+       "id":8,
+       "price":8841
+    },
+    {
+       "name":"Slideways",
+       "type":5,
+       "id":9,
+       "price":13357
+    },
+    {
+       "name":"Apex",
+       "type":5,
+       "id":10,
+       "price":14828
+    },
+    {
+       "name":"Stanced EG",
+       "type":5,
+       "id":11,
+       "price":10353
+    },
+    {
+       "name":"Endo v.1",
+       "type":5,
+       "id":13,
+       "price":10459
+    },
+    {
+       "name":"Endo v.2 Dish",
+       "type":5,
+       "id":14,
+       "price":13751
+    },
+    {
+       "name":"Gruppe Z",
+       "type":5,
+       "id":15,
+       "price":8426
+    },
+    {
+       "name":"Saisoku",
+       "type":5,
+       "id":18,
+       "price":10977
+    },
+    {
+       "name":"Fujiwara",
+       "type":5,
+       "id":20,
+       "price":5764
+    },
+    {
+       "name":"Zokusha",
+       "type":5,
+       "id":21,
+       "price":7922
+    },
+    {
+       "name":"Choku-Dori",
+       "type":5,
+       "id":16,
+       "price":6840
+    },
+    {
+       "name":"Chicane",
+       "type":5,
+       "id":17,
+       "price":9722
+    },
+    {
+       "name":"Dished Eight",
+       "type":5,
+       "id":19,
+       "price":10683
+    },
+    {
+       "name":"Battle VIII",
+       "type":5,
+       "id":22,
+       "price":11217
+    },
+    {
+       "name":"Rally Master",
+       "type":5,
+       "id":23,
+       "price":14725
+    },
+    {
+       "name":"Cosmo",
+       "type":5,
+       "id":24,
+       "price":12590
+    },
+    {
+       "name":"Super Mesh",
+       "type":5,
+       "id":25,
+       "price":5517
+    },
+    {
+       "name":"Rollas",
+       "type":5,
+       "id":27,
+       "price":6590
+    },
+    {
+       "name":"Outsider",
+       "type":5,
+       "id":26,
+       "price":5692
+    },
+    {
+       "name":"Slideways",
+       "type":5,
+       "id":33,
+       "price":11244
+    },
+    {
+       "name":"Driftmeister",
+       "type":5,
+       "id":28,
+       "price":10576
+    },
+    {
+       "name":"Slicer",
+       "type":5,
+       "id":29,
+       "price":12624
+    },
+    {
+       "name":"Five Star",
+       "type":5,
+       "id":32,
+       "price":7392
+    },
+    {
+       "name":"El Quatro",
+       "type":5,
+       "id":30,
+       "price":10562
+    },
+    {
+       "name":"Dubbed",
+       "type":5,
+       "id":31,
+       "price":13913
+    },
+    {
+       "name":"Apex",
+       "type":5,
+       "id":34,
+       "price":5520
+    },
+    {
+       "name":"Stanced EG",
+       "type":5,
+       "id":35,
+       "price":5225
+    },
+    {
+       "name":"Endo v.1",
+       "type":5,
+       "id":37,
+       "price":8605
+    },
+    {
+       "name":"Endo v.2 Dish",
+       "type":5,
+       "id":38,
+       "price":6107
+    },
+    {
+       "name":"Choku-Dori",
+       "type":5,
+       "id":40,
+       "price":13836
+    },
+    {
+       "name":"Countersteer",
+       "type":5,
+       "id":36,
+       "price":14324
+    },
+    {
+       "name":"Gruppe Z",
+       "type":5,
+       "id":39,
+       "price":11453
+    },
+    {
+       "name":"Dished Eight",
+       "type":5,
+       "id":43,
+       "price":7075
+    },
+    {
+       "name":"Chicane",
+       "type":5,
+       "id":41,
+       "price":5587
+    },
+    {
+       "name":"Fujiwara",
+       "type":5,
+       "id":44,
+       "price":6338
+    },
+    {
+       "name":"Saisoku",
+       "type":5,
+       "id":42,
+       "price":6237
+    },
+    {
+       "name":"Zokusha",
+       "type":5,
+       "id":45,
+       "price":6813
+    },
+    {
+       "name":"Battle VIII",
+       "type":5,
+       "id":46,
+       "price":14277
+    },
+    {
+       "name":"Rally Master",
+       "type":5,
+       "id":47,
+       "price":5469
+    },
+    {
+       "name":"Default",
+       "type":6,
+       "id":-1,
+       "price":9250
+    },
+    {
+       "name":"Speedway",
+       "type":6,
+       "id":0,
+       "price":10905
+    },
+    {
+       "name":"Street Special",
+       "type":6,
+       "id":1,
+       "price":7876
+    },
+    {
+       "name":"Racer",
+       "type":6,
+       "id":2,
+       "price":12880
+    },
+    {
+       "name":"Track Star",
+       "type":6,
+       "id":3,
+       "price":6372
+    },
+    {
+       "name":"Overlord",
+       "type":6,
+       "id":4,
+       "price":12489
+    },
+    {
+       "name":"Trident",
+       "type":6,
+       "id":5,
+       "price":11043
+    },
+    {
+       "name":"Stilleto",
+       "type":6,
+       "id":7,
+       "price":10655
+    },
+    {
+       "name":"Wires",
+       "type":6,
+       "id":8,
+       "price":5353
+    },
+    {
+       "name":"Bobber",
+       "type":6,
+       "id":9,
+       "price":8495
+    },
+    {
+       "name":"Ice Shield",
+       "type":6,
+       "id":11,
+       "price":5197
+    },
+    {
+       "name":"Solidus",
+       "type":6,
+       "id":10,
+       "price":6601
+    },
+    {
+       "name":"Loops",
+       "type":6,
+       "id":12,
+       "price":6984
+    },
+    {
+       "name":"Speedway",
+       "type":6,
+       "id":13,
+       "price":5687
+    },
+    {
+       "name":"Street Special",
+       "type":6,
+       "id":14,
+       "price":5013
+    },
+    {
+       "name":"Racer",
+       "type":6,
+       "id":15,
+       "price":8478
+    },
+    {
+       "name":"Track Star",
+       "type":6,
+       "id":16,
+       "price":8227
+    },
+    {
+       "name":"Trident",
+       "type":6,
+       "id":18,
+       "price":6528
+    },
+    {
+       "name":"Overlord",
+       "type":6,
+       "id":17,
+       "price":8701
+    },
+    {
+       "name":"Wires",
+       "type":6,
+       "id":21,
+       "price":7201
+    },
+    {
+       "name":"Triple Threat",
+       "type":6,
+       "id":19,
+       "price":10788
+    },
+    {
+       "name":"Stilleto",
+       "type":6,
+       "id":20,
+       "price":12083
+    },
+    {
+       "name":"Solidus",
+       "type":6,
+       "id":23,
+       "price":7132
+    },
+    {
+       "name":"Bobber",
+       "type":6,
+       "id":22,
+       "price":14190
+    },
+    {
+       "name":"Romper Racing",
+       "type":6,
+       "id":26,
+       "price":5860
+    },
+    {
+       "name":"Loops",
+       "type":6,
+       "id":25,
+       "price":7649
+    },
+    {
+       "name":"Warp Drive",
+       "type":6,
+       "id":27,
+       "price":14909
+    },
+    {
+       "name":"Ice Shield",
+       "type":6,
+       "id":24,
+       "price":7358
+    },
+    {
+       "name":"Snowflake",
+       "type":6,
+       "id":28,
+       "price":7141
+    },
+    {
+       "name":"Holy Spoke",
+       "type":6,
+       "id":29,
+       "price":10750
+    },
+    {
+       "name":"Old Skool Triple",
+       "type":6,
+       "id":30,
+       "price":8038
+    },
+    {
+       "name":"Futura",
+       "type":6,
+       "id":31,
+       "price":13502
+    },
+    {
+       "name":"Quarter Mile King",
+       "type":6,
+       "id":32,
+       "price":13383
+    },
+    {
+       "name":"Cartname",
+       "type":6,
+       "id":33,
+       "price":8703
+    },
+    {
+       "name":"Double Five",
+       "type":6,
+       "id":34,
+       "price":12601
+    },
+    {
+       "name":"Shuriken",
+       "type":6,
+       "id":35,
+       "price":14962
+    },
+    {
+       "name":"Simple Six",
+       "type":6,
+       "id":36,
+       "price":12006
+    },
+    {
+       "name":"Celtic",
+       "type":6,
+       "id":37,
+       "price":13282
+    },
+    {
+       "name":"Razer",
+       "type":6,
+       "id":38,
+       "price":10335
+    },
+    {
+       "name":"Twisted",
+       "type":6,
+       "id":39,
+       "price":5132
+    },
+    {
+       "name":"Morning Star",
+       "type":6,
+       "id":40,
+       "price":13260
+    },
+    {
+       "name":"Big Spokes",
+       "type":6,
+       "id":44,
+       "price":6832
+    },
+    {
+       "name":"Jagged Spokes",
+       "type":6,
+       "id":41,
+       "price":5514
+    },
+    {
+       "name":"Eidolon",
+       "type":6,
+       "id":42,
+       "price":9874
+    },
+    {
+       "name":"Enigma",
+       "type":6,
+       "id":43,
+       "price":10901
+    },
+    {
+       "name":"Webs",
+       "type":6,
+       "id":45,
+       "price":9985
+    },
+    {
+       "name":"Hotplate",
+       "type":6,
+       "id":46,
+       "price":6731
+    },
+    {
+       "name":"Bobsta",
+       "type":6,
+       "id":47,
+       "price":13650
+    },
+    {
+       "name":"Loops",
+       "type":6,
+       "id":48,
+       "price":12835
+    },
+    {
+       "name":"Romper Racing",
+       "type":6,
+       "id":49,
+       "price":10122
+    },
+    {
+       "name":"Warp Drive",
+       "type":6,
+       "id":50,
+       "price":10272
+    },
+    {
+       "name":"Snowflake",
+       "type":6,
+       "id":51,
+       "price":12547
+    },
+    {
+       "name":"Holy Spoke",
+       "type":6,
+       "id":52,
+       "price":7838
+    },
+    {
+       "name":"Old Skool Triple",
+       "type":6,
+       "id":53,
+       "price":10529
+    },
+    {
+       "name":"Futura",
+       "type":6,
+       "id":54,
+       "price":10725
+    },
+    {
+       "name":"Quarter Mile King",
+       "type":6,
+       "id":55,
+       "price":11085
+    },
+    {
+       "name":"Cartname",
+       "type":6,
+       "id":56,
+       "price":13006
+    },
+    {
+       "name":"Shuriken",
+       "type":6,
+       "id":58,
+       "price":10952
+    },
+    {
+       "name":"Double Five",
+       "type":6,
+       "id":57,
+       "price":12773
+    },
+    {
+       "name":"Simple Six",
+       "type":6,
+       "id":59,
+       "price":7102
+    },
+    {
+       "name":"Celtic",
+       "type":6,
+       "id":60,
+       "price":8396
+    },
+    {
+       "name":"Morning Star",
+       "type":6,
+       "id":63,
+       "price":9425
+    },
+    {
+       "name":"Razer",
+       "type":6,
+       "id":61,
+       "price":5776
+    },
+    {
+       "name":"Twisted",
+       "type":6,
+       "id":62,
+       "price":6865
+    },
+    {
+       "name":"Big Spokes",
+       "type":6,
+       "id":67,
+       "price":12718
+    },
+    {
+       "name":"Webs",
+       "type":6,
+       "id":68,
+       "price":13957
+    },
+    {
+       "name":"Jagged Spokes",
+       "type":6,
+       "id":64,
+       "price":5480
+    },
+    {
+       "name":"Hotplate",
+       "type":6,
+       "id":69,
+       "price":10543
+    },
+    {
+       "name":"Enigma",
+       "type":6,
+       "id":66,
+       "price":5348
+    },
+    {
+       "name":"Bobsta",
+       "type":6,
+       "id":70,
+       "price":12313
+    },
+    {
+       "name":"Eidolon",
+       "type":6,
+       "id":65,
+       "price":8734
+    },
+    {
+       "name":"Grouch",
+       "type":6,
+       "id":71,
+       "price":7207
+    },
+    {
+       "name":"Default",
+       "type":7,
+       "id":-1,
+       "price":8455
+    },
+    {
+       "name":"Shadow",
+       "type":7,
+       "id":0,
+       "price":5831
+    },
+    {
+       "name":"Diamond",
+       "type":7,
+       "id":3,
+       "price":6203
+    },
+    {
+       "name":"Supa Gee",
+       "type":7,
+       "id":4,
+       "price":6218
+    },
+    {
+       "name":"Hyper",
+       "type":7,
+       "id":1,
+       "price":8831
+    },
+    {
+       "name":"Blade",
+       "type":7,
+       "id":2,
+       "price":9519
+    },
+    {
+       "name":"Chromatic Z",
+       "type":7,
+       "id":5,
+       "price":29137
+    },
+    {
+       "name":"Obey RS",
+       "type":7,
+       "id":7,
+       "price":13180
+    },
+    {
+       "name":"GT Chrome",
+       "type":7,
+       "id":8,
+       "price":34521
+    },
+    {
+       "name":"Cheetah RR",
+       "type":7,
+       "id":9,
+       "price":6785
+    },
+    {
+       "name":"Solar",
+       "type":7,
+       "id":10,
+       "price":9281
+    },
+    {
+       "name":"Split Ten",
+       "type":7,
+       "id":11,
+       "price":12741
+    },
+    {
+       "name":"Dash VIP",
+       "type":7,
+       "id":12,
+       "price":7753
+    },
+    {
+       "name":"LozSpeed Ten",
+       "type":7,
+       "id":13,
+       "price":7926
+    },
+    {
+       "name":"Carbon Inferno",
+       "type":7,
+       "id":14,
+       "price":30116
+    },
+    {
+       "name":"Carbon Shadow",
+       "type":7,
+       "id":15,
+       "price":35240
+    },
+    {
+       "name":"Cheetah Carbon R",
+       "type":7,
+       "id":18,
+       "price":38778
+    },
+    {
+       "name":"Carbonic Z",
+       "type":7,
+       "id":16,
+       "price":39218
+    },
+    {
+       "name":"Carbon S Racer",
+       "type":7,
+       "id":19,
+       "price":38316
+    },
+    {
+       "name":"Shadow",
+       "type":7,
+       "id":20,
+       "price":12771
+    },
+    {
+       "name":"Carbon Solar",
+       "type":7,
+       "id":17,
+       "price":30495
+    },
+    {
+       "name":"Hypher",
+       "type":7,
+       "id":21,
+       "price":8998
+    },
+    {
+       "name":"Blade",
+       "type":7,
+       "id":22,
+       "price":6096
+    },
+    {
+       "name":"Diamond",
+       "type":7,
+       "id":23,
+       "price":13317
+    },
+    {
+       "name":"Supa Gee",
+       "type":7,
+       "id":24,
+       "price":10911
+    },
+    {
+       "name":"Obey RS",
+       "type":7,
+       "id":27,
+       "price":9418
+    },
+    {
+       "name":"Chromatic Z",
+       "type":7,
+       "id":25,
+       "price":30205
+    },
+    {
+       "name":"Mercie",
+       "type":7,
+       "id":26,
+       "price":6767
+    },
+    {
+       "name":"GT Chrome",
+       "type":7,
+       "id":28,
+       "price":29450
+    },
+    {
+       "name":"Cheetah RR",
+       "type":7,
+       "id":29,
+       "price":10564
+    },
+    {
+       "name":"Solar",
+       "type":7,
+       "id":30,
+       "price":12784
+    },
+    {
+       "name":"Split Ten",
+       "type":7,
+       "id":31,
+       "price":13650
+    },
+    {
+       "name":"Dash VIP",
+       "type":7,
+       "id":32,
+       "price":5326
+    },
+    {
+       "name":"LozSpeed Ten",
+       "type":7,
+       "id":33,
+       "price":6354
+    },
+    {
+       "name":"Carbon Inferno",
+       "type":7,
+       "id":34,
+       "price":39269
+    },
+    {
+       "name":"Carbon Shadow",
+       "type":7,
+       "id":35,
+       "price":31588
+    },
+    {
+       "name":"Carbonic Z",
+       "type":7,
+       "id":36,
+       "price":31769
+    },
+    {
+       "name":"Carbon Solar",
+       "type":7,
+       "id":37,
+       "price":39516
+    },
+    {
+       "name":"OG Hunnets (Chrome Lip)",
+       "type":8,
+       "id":1,
+       "price":26749
+    },
+    {
+       "name":"Cheetah Carbon R",
+       "type":7,
+       "id":38,
+       "price":32662
+    },
+    {
+       "name":"Default",
+       "type":8,
+       "id":-1,
+       "price":6898
+    },
+    {
+       "name":"OG Hunnets",
+       "type":8,
+       "id":0,
+       "price":6184
+    },
+    {
+       "name":"Carbon S Racer",
+       "type":7,
+       "id":39,
+       "price":32137
+    },
+    {
+       "name":"Knock-Offs (Chrome Lip)",
+       "type":8,
+       "id":3,
+       "price":35902
+    },
+    {
+       "name":"Knock-Offs",
+       "type":8,
+       "id":2,
+       "price":8757
+    },
+    {
+       "name":"Spoked Out",
+       "type":8,
+       "id":4,
+       "price":6386
+    },
+    {
+       "name":"Spoked Out (Chrome Lip)",
+       "type":8,
+       "id":5,
+       "price":28227
+    },
+    {
+       "name":"Vintage Wire (Chrome Lip)",
+       "type":8,
+       "id":7,
+       "price":29293
+    },
+    {
+       "name":"Smoothie",
+       "type":8,
+       "id":8,
+       "price":12565
+    },
+    {
+       "name":"Smoothie (Chrome Lip)",
+       "type":8,
+       "id":9,
+       "price":34833
+    },
+    {
+       "name":"Smoothie (Solid Color)",
+       "type":8,
+       "id":10,
+       "price":10358
+    },
+    {
+       "name":"Rod Me Up",
+       "type":8,
+       "id":11,
+       "price":7680
+    },
+    {
+       "name":"Rod Me Up (Solid Color)",
+       "type":8,
+       "id":13,
+       "price":6699
+    },
+    {
+       "name":"Rod Me Up (Chrome Lip)",
+       "type":8,
+       "id":12,
+       "price":26221
+    },
+    {
+       "name":"Clean",
+       "type":8,
+       "id":14,
+       "price":9095
+    },
+    {
+       "name":"Lotta Chrome",
+       "type":8,
+       "id":15,
+       "price":33369
+    },
+    {
+       "name":"Spindles",
+       "type":8,
+       "id":16,
+       "price":5162
+    },
+    {
+       "name":"Viking",
+       "type":8,
+       "id":17,
+       "price":10181
+    },
+    {
+       "name":"Triple Spoke",
+       "type":8,
+       "id":18,
+       "price":12363
+    },
+    {
+       "name":"Pharohe",
+       "type":8,
+       "id":19,
+       "price":8609
+    },
+    {
+       "name":"Tiger Style",
+       "type":8,
+       "id":20,
+       "price":13632
+    },
+    {
+       "name":"Three namein",
+       "type":8,
+       "id":21,
+       "price":6992
+    },
+    {
+       "name":"Biohazard",
+       "type":8,
+       "id":23,
+       "price":5219
+    },
+    {
+       "name":"Waves",
+       "type":8,
+       "id":24,
+       "price":6263
+    },
+    {
+       "name":"Spiralizer",
+       "type":8,
+       "id":26,
+       "price":7894
+    },
+    {
+       "name":"Lick Lick",
+       "type":8,
+       "id":25,
+       "price":9676
+    },
+    {
+       "name":"Big Bar",
+       "type":8,
+       "id":22,
+       "price":13661
+    },
+    {
+       "name":"Hypnotics",
+       "type":8,
+       "id":27,
+       "price":5918
+    },
+    {
+       "name":"Psycho-Delic",
+       "type":8,
+       "id":28,
+       "price":10790
+    },
+    {
+       "name":"Half Cut",
+       "type":8,
+       "id":29,
+       "price":5734
+    },
+    {
+       "name":"Super Electric",
+       "type":8,
+       "id":30,
+       "price":11524
+    },
+    {
+       "name":"OG Hunnets (Chrome Lip)",
+       "type":8,
+       "id":32,
+       "price":31731
+    },
+    {
+       "name":"OG Hunnets",
+       "type":8,
+       "id":31,
+       "price":7917
+    },
+    {
+       "name":"Knock-Offs",
+       "type":8,
+       "id":33,
+       "price":8135
+    },
+    {
+       "name":"Knock-Offs (Chrome Lip)",
+       "type":8,
+       "id":34,
+       "price":32573
+    },
+    {
+       "name":"Spoked Out",
+       "type":8,
+       "id":35,
+       "price":14122
+    },
+    {
+       "name":"Spoked Out (Chrome Lip)",
+       "type":8,
+       "id":36,
+       "price":34456
+    },
+    {
+       "name":"Vintage Wire",
+       "type":8,
+       "id":37,
+       "price":6822
+    },
+    {
+       "name":"Smoothie",
+       "type":8,
+       "id":39,
+       "price":6787
+    },
+    {
+       "name":"Vintage Wire (Chrome Lip)",
+       "type":8,
+       "id":38,
+       "price":35453
+    },
+    {
+       "name":"Smoothie (Chrome Lip)",
+       "type":8,
+       "id":40,
+       "price":34174
+    },
+    {
+       "name":"Rod Me Up (Chrome Lip)",
+       "type":8,
+       "id":43,
+       "price":27403
+    },
+    {
+       "name":"Rod Me Up (Solid Color)",
+       "type":8,
+       "id":44,
+       "price":8147
+    },
+    {
+       "name":"Smoothie (Solid Color)",
+       "type":8,
+       "id":41,
+       "price":8993
+    },
+    {
+       "name":"Rod Me Up",
+       "type":8,
+       "id":42,
+       "price":14688
+    },
+    {
+       "name":"Clean",
+       "type":8,
+       "id":45,
+       "price":8232
+    },
+    {
+       "name":"Lotta Chrome",
+       "type":8,
+       "id":46,
+       "price":31890
+    },
+    {
+       "name":"Spindles",
+       "type":8,
+       "id":47,
+       "price":13395
+    },
+    {
+       "name":"Viking",
+       "type":8,
+       "id":48,
+       "price":7436
+    },
+    {
+       "name":"Triple Spoke",
+       "type":8,
+       "id":49,
+       "price":6481
+    },
+    {
+       "name":"Pharohe",
+       "type":8,
+       "id":50,
+       "price":13868
+    },
+    {
+       "name":"Tiger Style",
+       "type":8,
+       "id":51,
+       "price":6596
+    },
+    {
+       "name":"Three namein",
+       "type":8,
+       "id":52,
+       "price":5647
+    },
+    {
+       "name":"Biohazard",
+       "type":8,
+       "id":54,
+       "price":11315
+    },
+    {
+       "name":"Big Bar",
+       "type":8,
+       "id":53,
+       "price":5528
+    },
+    {
+       "name":"Psycho-Delic",
+       "type":8,
+       "id":59,
+       "price":11454
+    },
+    {
+       "name":"Hypnotics",
+       "type":8,
+       "id":58,
+       "price":14180
+    },
+    {
+       "name":"Lick Lick",
+       "type":8,
+       "id":56,
+       "price":10901
+    },
+    {
+       "name":"Waves",
+       "type":8,
+       "id":55,
+       "price":13125
+    },
+    {
+       "name":"Spiralizer",
+       "type":8,
+       "id":57,
+       "price":8971
+    },
+    {
+       "name":"Half Cut",
+       "type":8,
+       "id":60,
+       "price":5829
+    },
+    {
+       "name":"Super Electric",
+       "type":8,
+       "id":61,
+       "price":14637
+    },
+    {
+       "name":"OG Hunnets",
+       "type":8,
+       "id":62,
+       "price":14098
+    },
+    {
+       "name":"Knock-Offs (Chrome Lip)",
+       "type":8,
+       "id":65,
+       "price":30093
+    },
+    {
+       "name":"OG Hunnets (Chrome Lip)",
+       "type":8,
+       "id":63,
+       "price":35571
+    },
+    {
+       "name":"Knock-Offs",
+       "type":8,
+       "id":64,
+       "price":11889
+    },
+    {
+       "name":"Smoothie",
+       "type":8,
+       "id":70,
+       "price":12025
+    },
+    {
+       "name":"Spoked Out",
+       "type":8,
+       "id":66,
+       "price":10826
+    },
+    {
+       "name":"Spoked Out (Chrome Lip)",
+       "type":8,
+       "id":67,
+       "price":26910
+    },
+    {
+       "name":"Vintage Wire",
+       "type":8,
+       "id":68,
+       "price":7235
+    },
+    {
+       "name":"Vintage Wire (Chrome Lip)",
+       "type":8,
+       "id":69,
+       "price":32174
+    },
+    {
+       "name":"Smoothie (Chrome Lip)",
+       "type":8,
+       "id":71,
+       "price":31602
+    },
+    {
+       "name":"Smoothie (Solid Color)",
+       "type":8,
+       "id":72,
+       "price":5656
+    },
+    {
+       "name":"Rod Me Up",
+       "type":8,
+       "id":73,
+       "price":10173
+    },
+    {
+       "name":"Rod Me Up (Chrome Lip)",
+       "type":8,
+       "id":74,
+       "price":28697
+    },
+    {
+       "name":"Rod Me Up (Solid Color)",
+       "type":8,
+       "id":75,
+       "price":9491
+    },
+    {
+       "name":"Lotta Chrome",
+       "type":8,
+       "id":77,
+       "price":32107
+    },
+    {
+       "name":"Clean",
+       "type":8,
+       "id":76,
+       "price":8488
+    },
+    {
+       "name":"Spindles",
+       "type":8,
+       "id":78,
+       "price":13837
+    },
+    {
+       "name":"Viking",
+       "type":8,
+       "id":79,
+       "price":11924
+    },
+    {
+       "name":"Pharohe",
+       "type":8,
+       "id":81,
+       "price":11049
+    },
+    {
+       "name":"Three namein",
+       "type":8,
+       "id":83,
+       "price":12527
+    },
+    {
+       "name":"Tiger Style",
+       "type":8,
+       "id":82,
+       "price":10744
+    },
+    {
+       "name":"Triple Spoke",
+       "type":8,
+       "id":80,
+       "price":6570
+    },
+    {
+       "name":"Big Bar",
+       "type":8,
+       "id":84,
+       "price":14128
+    },
+    {
+       "name":"Biohazard",
+       "type":8,
+       "id":85,
+       "price":7189
+    },
+    {
+       "name":"Waves",
+       "type":8,
+       "id":86,
+       "price":7345
+    },
+    {
+       "name":"Lick Lick",
+       "type":8,
+       "id":87,
+       "price":8864
+    },
+    {
+       "name":"Hypnotics",
+       "type":8,
+       "id":89,
+       "price":14869
+    },
+    {
+       "name":"Spiralizer",
+       "type":8,
+       "id":88,
+       "price":12381
+    },
+    {
+       "name":"Psycho-Delic",
+       "type":8,
+       "id":90,
+       "price":12204
+    },
+    {
+       "name":"OG Hunnets",
+       "type":8,
+       "id":93,
+       "price":14817
+    },
+    {
+       "name":"Half Cut",
+       "type":8,
+       "id":91,
+       "price":5959
+    },
+    {
+       "name":"Super Electric",
+       "type":8,
+       "id":92,
+       "price":10078
+    },
+    {
+       "name":"OG Hunnets (Chrome Lip)",
+       "type":8,
+       "id":94,
+       "price":31886
+    },
+    {
+       "name":"Knock-Offs",
+       "type":8,
+       "id":95,
+       "price":10799
+    },
+    {
+       "name":"Knock-Offs (Chrome Lip)",
+       "type":8,
+       "id":96,
+       "price":35567
+    },
+    {
+       "name":"Spoked Out",
+       "type":8,
+       "id":97,
+       "price":11316
+    },
+    {
+       "name":"Spoked Out (Chrome Lip)",
+       "type":8,
+       "id":98,
+       "price":27684
+    },
+    {
+       "name":"Vintage Wire",
+       "type":8,
+       "id":99,
+       "price":5061
+    },
+    {
+       "name":"Vintage Wire (Chrome Lip)",
+       "type":8,
+       "id":100,
+       "price":29469
+    },
+    {
+       "name":"Smoothie",
+       "type":8,
+       "id":101,
+       "price":12326
+    },
+    {
+       "name":"Smoothie (Solid Color)",
+       "type":8,
+       "id":103,
+       "price":9747
+    },
+    {
+       "name":"Rod Me Up (Chrome Lip)",
+       "type":8,
+       "id":105,
+       "price":33463
+    },
+    {
+       "name":"Rod Me Up",
+       "type":8,
+       "id":104,
+       "price":7569
+    },
+    {
+       "name":"Clean",
+       "type":8,
+       "id":107,
+       "price":5528
+    },
+    {
+       "name":"Smoothie (Chrome Lip)",
+       "type":8,
+       "id":102,
+       "price":34202
+    },
+    {
+       "name":"Lotta Chrome",
+       "type":8,
+       "id":108,
+       "price":28737
+    },
+    {
+       "name":"Rod Me Up (Solid Color)",
+       "type":8,
+       "id":106,
+       "price":5880
+    },
+    {
+       "name":"Spindles",
+       "type":8,
+       "id":109,
+       "price":8299
+    },
+    {
+       "name":"Viking",
+       "type":8,
+       "id":110,
+       "price":12609
+    },
+    {
+       "name":"Triple Spoke",
+       "type":8,
+       "id":111,
+       "price":7955
+    },
+    {
+       "name":"Pharohe",
+       "type":8,
+       "id":112,
+       "price":9326
+    },
+    {
+       "name":"Tiger Style",
+       "type":8,
+       "id":113,
+       "price":13464
+    },
+    {
+       "name":"Three namein",
+       "type":8,
+       "id":114,
+       "price":10185
+    },
+    {
+       "name":"Big Bar",
+       "type":8,
+       "id":115,
+       "price":5563
+    },
+    {
+       "name":"Biohazard",
+       "type":8,
+       "id":116,
+       "price":6154
+    },
+    {
+       "name":"Waves",
+       "type":8,
+       "id":117,
+       "price":9790
+    },
+    {
+       "name":"Spiralizer",
+       "type":8,
+       "id":119,
+       "price":7227
+    },
+    {
+       "name":"Super Electric",
+       "type":8,
+       "id":123,
+       "price":9644
+    },
+    {
+       "name":"Hypnotics",
+       "type":8,
+       "id":120,
+       "price":6806
+    },
+    {
+       "name":"Lick Lick",
+       "type":8,
+       "id":118,
+       "price":5423
+    },
+    {
+       "name":"Psycho-Delic",
+       "type":8,
+       "id":121,
+       "price":8219
+    },
+    {
+       "name":"Half Cut",
+       "type":8,
+       "id":122,
+       "price":5790
+    },
+    {
+       "name":"OG Hunnets",
+       "type":8,
+       "id":124,
+       "price":7293
+    },
+    {
+       "name":"OG Hunnets (Chrome Lip)",
+       "type":8,
+       "id":125,
+       "price":29619
+    },
+    {
+       "name":"Vintage Wire",
+       "type":8,
+       "id":130,
+       "price":6905
+    },
+    {
+       "name":"Knock-Offs (Chrome Lip)",
+       "type":8,
+       "id":127,
+       "price":28841
+    },
+    {
+       "name":"Knock-Offs",
+       "type":8,
+       "id":126,
+       "price":11549
+    },
+    {
+       "name":"Spoked Out",
+       "type":8,
+       "id":128,
+       "price":9160
+    },
+    {
+       "name":"Spoked Out (Chrome Lip)",
+       "type":8,
+       "id":129,
+       "price":28185
+    },
+    {
+       "name":"Vintage Wire (Chrome Lip)",
+       "type":8,
+       "id":131,
+       "price":33053
+    },
+    {
+       "name":"Smoothie",
+       "type":8,
+       "id":132,
+       "price":14066
+    },
+    {
+       "name":"Smoothie (Solid Color)",
+       "type":8,
+       "id":134,
+       "price":11038
+    },
+    {
+       "name":"Smoothie (Chrome Lip)",
+       "type":8,
+       "id":133,
+       "price":26717
+    },
+    {
+       "name":"Rod Me Up",
+       "type":8,
+       "id":135,
+       "price":10985
+    },
+    {
+       "name":"Rod Me Up (Chrome Lip)",
+       "type":8,
+       "id":136,
+       "price":26042
+    },
+    {
+       "name":"Rod Me Up (Solid Color)",
+       "type":8,
+       "id":137,
+       "price":10543
+    },
+    {
+       "name":"Clean",
+       "type":8,
+       "id":138,
+       "price":11263
+    },
+    {
+       "name":"Lotta Chrome",
+       "type":8,
+       "id":139,
+       "price":31862
+    },
+    {
+       "name":"Viking",
+       "type":8,
+       "id":141,
+       "price":6249
+    },
+    {
+       "name":"Pharohe",
+       "type":8,
+       "id":143,
+       "price":11870
+    },
+    {
+       "name":"Tiger Style",
+       "type":8,
+       "id":144,
+       "price":5245
+    },
+    {
+       "name":"Spindles",
+       "type":8,
+       "id":140,
+       "price":8832
+    },
+    {
+       "name":"Three namein",
+       "type":8,
+       "id":145,
+       "price":12034
+    },
+    {
+       "name":"Triple Spoke",
+       "type":8,
+       "id":142,
+       "price":6511
+    },
+    {
+       "name":"Big Bar",
+       "type":8,
+       "id":146,
+       "price":7753
+    },
+    {
+       "name":"Lick Lick",
+       "type":8,
+       "id":149,
+       "price":14757
+    },
+    {
+       "name":"Biohazard",
+       "type":8,
+       "id":147,
+       "price":12155
+    },
+    {
+       "name":"Waves",
+       "type":8,
+       "id":148,
+       "price":7584
+    },
+    {
+       "name":"Half Cut",
+       "type":8,
+       "id":153,
+       "price":6906
+    },
+    {
+       "name":"Spiralizer",
+       "type":8,
+       "id":150,
+       "price":7039
+    },
+    {
+       "name":"Hypnotics",
+       "type":8,
+       "id":151,
+       "price":6351
+    },
+    {
+       "name":"Psycho-Delic",
+       "type":8,
+       "id":152,
+       "price":9303
+    },
+    {
+       "name":"Super Electric",
+       "type":8,
+       "id":154,
+       "price":10517
+    },
+    {
+       "name":"OG Hunnets (Chrome Lip)",
+       "type":8,
+       "id":156,
+       "price":26308
+    },
+    {
+       "name":"OG Hunnets",
+       "type":8,
+       "id":155,
+       "price":6369
+    },
+    {
+       "name":"Knock-Offs",
+       "type":8,
+       "id":157,
+       "price":6219
+    },
+    {
+       "name":"Knock-Offs (Chrome Lip)",
+       "type":8,
+       "id":158,
+       "price":28432
+    },
+    {
+       "name":"Spoked Out",
+       "type":8,
+       "id":159,
+       "price":11212
+    },
+    {
+       "name":"Spoked Out (Chrome Lip)",
+       "type":8,
+       "id":160,
+       "price":31885
+    },
+    {
+       "name":"Vintage Wire",
+       "type":8,
+       "id":161,
+       "price":7623
+    },
+    {
+       "name":"Rod Me Up (Solid Color)",
+       "type":8,
+       "id":168,
+       "price":8449
+    },
+    {
+       "name":"Clean",
+       "type":8,
+       "id":169,
+       "price":8982
+    },
+    {
+       "name":"Smoothie",
+       "type":8,
+       "id":163,
+       "price":13375
+    },
+    {
+       "name":"Smoothie (Chrome Lip)",
+       "type":8,
+       "id":164,
+       "price":33818
+    },
+    {
+       "name":"Vintage Wire (Chrome Lip)",
+       "type":8,
+       "id":162,
+       "price":27151
+    },
+    {
+       "name":"Smoothie (Solid Color)",
+       "type":8,
+       "id":165,
+       "price":10550
+    },
+    {
+       "name":"Rod Me Up",
+       "type":8,
+       "id":166,
+       "price":10009
+    },
+    {
+       "name":"Rod Me Up (Chrome Lip)",
+       "type":8,
+       "id":167,
+       "price":32462
+    },
+    {
+       "name":"Lotta Chrome",
+       "type":8,
+       "id":170,
+       "price":33783
+    },
+    {
+       "name":"Spindles",
+       "type":8,
+       "id":171,
+       "price":7873
+    },
+    {
+       "name":"Viking",
+       "type":8,
+       "id":172,
+       "price":10789
+    },
+    {
+       "name":"Triple Spoke",
+       "type":8,
+       "id":173,
+       "price":8627
+    },
+    {
+       "name":"Pharohe",
+       "type":8,
+       "id":174,
+       "price":5656
+    },
+    {
+       "name":"Tiger Style",
+       "type":8,
+       "id":175,
+       "price":7198
+    },
+    {
+       "name":"Biohazard",
+       "type":8,
+       "id":178,
+       "price":12440
+    },
+    {
+       "name":"Three namein",
+       "type":8,
+       "id":176,
+       "price":11648
+    },
+    {
+       "name":"Big Bar",
+       "type":8,
+       "id":177,
+       "price":6018
+    },
+    {
+       "name":"Waves",
+       "type":8,
+       "id":179,
+       "price":13044
+    },
+    {
+       "name":"Lick Lick",
+       "type":8,
+       "id":180,
+       "price":13128
+    },
+    {
+       "name":"Spiralizer",
+       "type":8,
+       "id":181,
+       "price":14410
+    },
+    {
+       "name":"Hypnotics",
+       "type":8,
+       "id":182,
+       "price":7948
+    },
+    {
+       "name":"Psycho-Delic",
+       "type":8,
+       "id":183,
+       "price":6227
+    },
+    {
+       "name":"Half Cut",
+       "type":8,
+       "id":184,
+       "price":14516
+    },
+    {
+       "name":"Super Electric",
+       "type":8,
+       "id":185,
+       "price":12408
+    },
+    {
+       "name":"Knock-Offs (Chrome Lip)",
+       "type":8,
+       "id":189,
+       "price":28963
+    },
+    {
+       "name":"OG Hunnets",
+       "type":8,
+       "id":186,
+       "price":7025
+    },
+    {
+       "name":"Knock-Offs",
+       "type":8,
+       "id":188,
+       "price":12782
+    },
+    {
+       "name":"OG Hunnets (Chrome Lip)",
+       "type":8,
+       "id":187,
+       "price":33671
+    },
+    {
+       "name":"Spoked Out (Chrome Lip)",
+       "type":8,
+       "id":191,
+       "price":27878
+    },
+    {
+       "name":"Spoked Out",
+       "type":8,
+       "id":190,
+       "price":11085
+    },
+    {
+       "name":"Vintage Wire (Chrome Lip)",
+       "type":8,
+       "id":193,
+       "price":26373
+    },
+    {
+       "name":"Vintage Wire",
+       "type":8,
+       "id":192,
+       "price":12313
+    },
+    {
+       "name":"Smoothie",
+       "type":8,
+       "id":194,
+       "price":12239
+    },
+    {
+       "name":"Rod Me Up",
+       "type":8,
+       "id":197,
+       "price":10888
+    },
+    {
+       "name":"Rod Me Up (Chrome Lip)",
+       "type":8,
+       "id":198,
+       "price":26683
+    },
+    {
+       "name":"Smoothie (Chrome Lip)",
+       "type":8,
+       "id":195,
+       "price":29525
+    },
+    {
+       "name":"Smoothie (Solid Color)",
+       "type":8,
+       "id":196,
+       "price":7719
+    },
+    {
+       "name":"Rod Me Up (Solid Color)",
+       "type":8,
+       "id":199,
+       "price":11478
+    },
+    {
+       "name":"Spindles",
+       "type":8,
+       "id":202,
+       "price":12622
+    },
+    {
+       "name":"Clean",
+       "type":8,
+       "id":200,
+       "price":9465
+    },
+    {
+       "name":"Lotta Chrome",
+       "type":8,
+       "id":201,
+       "price":28010
+    },
+    {
+       "name":"Viking",
+       "type":8,
+       "id":203,
+       "price":12954
+    },
+    {
+       "name":"Triple Spoke",
+       "type":8,
+       "id":204,
+       "price":7063
+    },
+    {
+       "name":"Big Bar",
+       "type":8,
+       "id":208,
+       "price":11295
+    },
+    {
+       "name":"Pharohe",
+       "type":8,
+       "id":205,
+       "price":8513
+    },
+    {
+       "name":"Tiger Style",
+       "type":8,
+       "id":206,
+       "price":9986
+    },
+    {
+       "name":"Three namein",
+       "type":8,
+       "id":207,
+       "price":5908
+    },
+    {
+       "name":"Biohazard",
+       "type":8,
+       "id":209,
+       "price":5581
+    },
+    {
+       "name":"Waves",
+       "type":8,
+       "id":210,
+       "price":5130
+    },
+    {
+       "name":"Lick Lick",
+       "type":8,
+       "id":211,
+       "price":6982
+    },
+    {
+       "name":"Hypnotics",
+       "type":8,
+       "id":213,
+       "price":12463
+    },
+    {
+       "name":"Spiralizer",
+       "type":8,
+       "id":212,
+       "price":6650
+    },
+    {
+       "name":"Psycho-Delic",
+       "type":8,
+       "id":214,
+       "price":10346
+    },
+    {
+       "name":"Half Cut",
+       "type":8,
+       "id":215,
+       "price":8737
+    },
+    {
+       "name":"Super Electric",
+       "type":8,
+       "id":216,
+       "price":11937
+    },
+    {
+       "name":"Default",
+       "type":9,
+       "id":-1,
+       "price":14485
+    },
+    {
+       "name":"Chrome OG Hunnets",
+       "type":9,
+       "id":0,
+       "price":27729
+    },
+    {
+       "name":"Gold OG Hunnets",
+       "type":9,
+       "id":1,
+       "price":35000
+    },
+    {
+       "name":"Chrome Wires",
+       "type":9,
+       "id":2,
+       "price":28117
+    },
+    {
+       "name":"Chrome Vintage Wire",
+       "type":9,
+       "id":10,
+       "price":32388
+    },
+    {
+       "name":"Chrome Spoked Out",
+       "type":9,
+       "id":4,
+       "price":31030
+    },
+    {
+       "name":"Gold Knock-Offs",
+       "type":9,
+       "id":7,
+       "price":9600
+    },
+    {
+       "name":"Gold Spoked Out",
+       "type":9,
+       "id":5,
+       "price":13961
+    },
+    {
+       "name":"Gold Bigger Worm",
+       "type":9,
+       "id":9,
+       "price":14762
+    },
+    {
+       "name":"Chrome Bigger Worm",
+       "type":9,
+       "id":8,
+       "price":31738
+    },
+    {
+       "name":"Gold Wires",
+       "type":9,
+       "id":3,
+       "price":8651
+    },
+    {
+       "name":"Gold Vintage Wire",
+       "type":9,
+       "id":11,
+       "price":7031
+    },
+    {
+       "name":"Chrome Classic Wire",
+       "type":9,
+       "id":12,
+       "price":34777
+    },
+    {
+       "name":"Chrome Classic Rod",
+       "type":9,
+       "id":16,
+       "price":27176
+    },
+    {
+       "name":"Chrome Dollar",
+       "type":9,
+       "id":18,
+       "price":27192
+    },
+    {
+       "name":"Gold Classic Rod",
+       "type":9,
+       "id":17,
+       "price":6802
+    },
+    {
+       "name":"Gold Dollar",
+       "type":9,
+       "id":19,
+       "price":29831
+    },
+    {
+       "name":"Chrome Mighty Star",
+       "type":9,
+       "id":20,
+       "price":26925
+    },
+    {
+       "name":"Gold Smoothie",
+       "type":9,
+       "id":15,
+       "price":9661
+    },
+    {
+       "name":"Gold Classic Wire",
+       "type":9,
+       "id":13,
+       "price":7255
+    },
+    {
+       "name":"Chrome Smoothie",
+       "type":9,
+       "id":14,
+       "price":32426
+    },
+    {
+       "name":"Gold Mighty Star",
+       "type":9,
+       "id":21,
+       "price":5483
+    },
+    {
+       "name":"Chrome Decadent Dish",
+       "type":9,
+       "id":22,
+       "price":27157
+    },
+    {
+       "name":"Gold Decadent Dish",
+       "type":9,
+       "id":23,
+       "price":10239
+    },
+    {
+       "name":"Chrome Razor Style",
+       "type":9,
+       "id":24,
+       "price":34379
+    },
+    {
+       "name":"Gold Warrior Dish",
+       "type":9,
+       "id":29,
+       "price":9463
+    },
+    {
+       "name":"Gold Celtic Knot",
+       "type":9,
+       "id":27,
+       "price":9802
+    },
+    {
+       "name":"Gold Razor Style",
+       "type":9,
+       "id":25,
+       "price":12157
+    },
+    {
+       "name":"Chrome Warrior Dish",
+       "type":9,
+       "id":28,
+       "price":31883
+    },
+    {
+       "name":"Chrome Celtic Knot",
+       "type":9,
+       "id":26,
+       "price":31985
+    },
+    {
+       "name":"Gold Big Dog Spokes",
+       "type":9,
+       "id":30,
+       "price":14229
+    },
+    {
+       "name":"Gold OG Hunnets",
+       "type":9,
+       "id":32,
+       "price":5764
+    },
+    {
+       "name":"Chrome Wires",
+       "type":9,
+       "id":33,
+       "price":32212
+    },
+    {
+       "name":"Chrome OG Hunnets",
+       "type":9,
+       "id":31,
+       "price":34460
+    },
+    {
+       "name":"Gold Wires",
+       "type":9,
+       "id":34,
+       "price":14058
+    },
+    {
+       "name":"Gold Knock-Offs",
+       "type":9,
+       "id":38,
+       "price":6751
+    },
+    {
+       "name":"Chrome Knock-Offs",
+       "type":9,
+       "id":37,
+       "price":27623
+    },
+    {
+       "name":"Chrome Spoked Out",
+       "type":9,
+       "id":35,
+       "price":34496
+    },
+    {
+       "name":"Gold Bigger Worm",
+       "type":9,
+       "id":40,
+       "price":11697
+    },
+    {
+       "name":"Gold Spoked Out",
+       "type":9,
+       "id":36,
+       "price":9672
+    },
+    {
+       "name":"Chrome Bigger Worm",
+       "type":9,
+       "id":39,
+       "price":29370
+    },
+    {
+       "name":"Gold Vintage Wire",
+       "type":9,
+       "id":42,
+       "price":5364
+    },
+    {
+       "name":"Chrome Vintage Wire",
+       "type":9,
+       "id":41,
+       "price":29795
+    },
+    {
+       "name":"Chrome Classic Wire",
+       "type":9,
+       "id":43,
+       "price":31037
+    },
+    {
+       "name":"Chrome Smoothie",
+       "type":9,
+       "id":45,
+       "price":34597
+    },
+    {
+       "name":"Gold Classic Wire",
+       "type":9,
+       "id":44,
+       "price":11139
+    },
+    {
+       "name":"Gold Smoothie",
+       "type":9,
+       "id":46,
+       "price":14067
+    },
+    {
+       "name":"Chrome Classic Rod",
+       "type":9,
+       "id":47,
+       "price":32216
+    },
+    {
+       "name":"Gold Classic Rod",
+       "type":9,
+       "id":48,
+       "price":13053
+    },
+    {
+       "name":"Chrome Dollar",
+       "type":9,
+       "id":49,
+       "price":28924
+    },
+    {
+       "name":"Gold Dollar",
+       "type":9,
+       "id":50,
+       "price":6229
+    },
+    {
+       "name":"Chrome Mighty Star",
+       "type":9,
+       "id":51,
+       "price":27682
+    },
+    {
+       "name":"Gold Mighty Star",
+       "type":9,
+       "id":52,
+       "price":11338
+    },
+    {
+       "name":"Chrome Decadent Dish",
+       "type":9,
+       "id":53,
+       "price":27944
+    },
+    {
+       "name":"Gold Decadent Dish",
+       "type":9,
+       "id":54,
+       "price":5321
+    },
+    {
+       "name":"Chrome Razor Style",
+       "type":9,
+       "id":55,
+       "price":34508
+    },
+    {
+       "name":"Chrome Celtic Knot",
+       "type":9,
+       "id":57,
+       "price":30334
+    },
+    {
+       "name":"Gold Celtic Knot",
+       "type":9,
+       "id":58,
+       "price":9140
+    },
+    {
+       "name":"Gold Razor Style",
+       "type":9,
+       "id":56,
+       "price":10271
+    },
+    {
+       "name":"Gold Warrior Dish",
+       "type":9,
+       "id":60,
+       "price":12829
+    },
+    {
+       "name":"Gold Big Dog Spokes",
+       "type":9,
+       "id":61,
+       "price":12060
+    },
+    {
+       "name":"Chrome OG Hunnets",
+       "type":9,
+       "id":62,
+       "price":27951
+    },
+    {
+       "name":"Chrome Warrior Dish",
+       "type":9,
+       "id":59,
+       "price":26340
+    },
+    {
+       "name":"Gold OG Hunnets",
+       "type":9,
+       "id":63,
+       "price":6039
+    },
+    {
+       "name":"Chrome Wires",
+       "type":9,
+       "id":64,
+       "price":29771
+    },
+    {
+       "name":"Gold Wires",
+       "type":9,
+       "id":65,
+       "price":5149
+    },
+    {
+       "name":"Chrome Spoked Out",
+       "type":9,
+       "id":66,
+       "price":29081
+    },
+    {
+       "name":"Gold Spoked Out",
+       "type":9,
+       "id":67,
+       "price":12579
+    },
+    {
+       "name":"Chrome Knock-Offs",
+       "type":9,
+       "id":68,
+       "price":35380
+    },
+    {
+       "name":"Gold Knock-Offs",
+       "type":9,
+       "id":69,
+       "price":11703
+    },
+    {
+       "name":"Gold Bigger Worm",
+       "type":9,
+       "id":71,
+       "price":12441
+    },
+    {
+       "name":"Chrome Bigger Worm",
+       "type":9,
+       "id":70,
+       "price":32449
+    },
+    {
+       "name":"Gold Vintage Wire",
+       "type":9,
+       "id":73,
+       "price":6491
+    },
+    {
+       "name":"Chrome Vintage Wire",
+       "type":9,
+       "id":72,
+       "price":33252
+    },
+    {
+       "name":"Chrome Classic Wire",
+       "type":9,
+       "id":74,
+       "price":32147
+    },
+    {
+       "name":"Chrome Classic Rod",
+       "type":9,
+       "id":78,
+       "price":29323
+    },
+    {
+       "name":"Gold Classic Wire",
+       "type":9,
+       "id":75,
+       "price":8949
+    },
+    {
+       "name":"Chrome Smoothie",
+       "type":9,
+       "id":76,
+       "price":29382
+    },
+    {
+       "name":"Gold Smoothie",
+       "type":9,
+       "id":77,
+       "price":8904
+    },
+    {
+       "name":"Gold Classic Rod",
+       "type":9,
+       "id":79,
+       "price":14502
+    },
+    {
+       "name":"Chrome Dollar",
+       "type":9,
+       "id":80,
+       "price":28658
+    },
+    {
+       "name":"Gold Dollar",
+       "type":9,
+       "id":81,
+       "price":10848
+    },
+    {
+       "name":"Chrome Mighty Star",
+       "type":9,
+       "id":82,
+       "price":32366
+    },
+    {
+       "name":"Gold Mighty Star",
+       "type":9,
+       "id":83,
+       "price":5221
+    },
+    {
+       "name":"Chrome Razor Style",
+       "type":9,
+       "id":86,
+       "price":28018
+    },
+    {
+       "name":"Chrome Celtic Knot",
+       "type":9,
+       "id":88,
+       "price":30809
+    },
+    {
+       "name":"Chrome Decadent Dish",
+       "type":9,
+       "id":84,
+       "price":27688
+    },
+    {
+       "name":"Gold Decadent Dish",
+       "type":9,
+       "id":85,
+       "price":6530
+    },
+    {
+       "name":"Gold Celtic Knot",
+       "type":9,
+       "id":89,
+       "price":10401
+    },
+    {
+       "name":"Gold Razor Style",
+       "type":9,
+       "id":87,
+       "price":12812
+    },
+    {
+       "name":"Gold Warrior Dish",
+       "type":9,
+       "id":91,
+       "price":9678
+    },
+    {
+       "name":"Chrome Warrior Dish",
+       "type":9,
+       "id":90,
+       "price":30745
+    },
+    {
+       "name":"Chrome Wires",
+       "type":9,
+       "id":95,
+       "price":26487
+    },
+    {
+       "name":"Chrome OG Hunnets",
+       "type":9,
+       "id":93,
+       "price":32129
+    },
+    {
+       "name":"Gold Wires",
+       "type":9,
+       "id":96,
+       "price":9874
+    },
+    {
+       "name":"Gold OG Hunnets",
+       "type":9,
+       "id":94,
+       "price":13681
+    },
+    {
+       "name":"Gold Big Dog Spokes",
+       "type":9,
+       "id":92,
+       "price":12286
+    },
+    {
+       "name":"Chrome Spoked Out",
+       "type":9,
+       "id":97,
+       "price":26018
+    },
+    {
+       "name":"Gold Spoked Out",
+       "type":9,
+       "id":98,
+       "price":13528
+    },
+    {
+       "name":"Chrome Knock-Offs",
+       "type":9,
+       "id":99,
+       "price":31710
+    },
+    {
+       "name":"Gold Knock-Offs",
+       "type":9,
+       "id":100,
+       "price":5320
+    },
+    {
+       "name":"Chrome Bigger Worm",
+       "type":9,
+       "id":101,
+       "price":34750
+    },
+    {
+       "name":"Gold Bigger Worm",
+       "type":9,
+       "id":102,
+       "price":9098
+    },
+    {
+       "name":"Gold Vintage Wire",
+       "type":9,
+       "id":104,
+       "price":13612
+    },
+    {
+       "name":"Chrome Classic Wire",
+       "type":9,
+       "id":105,
+       "price":28745
+    },
+    {
+       "name":"Chrome Vintage Wire",
+       "type":9,
+       "id":103,
+       "price":28042
+    },
+    {
+       "name":"Chrome Smoothie",
+       "type":9,
+       "id":107,
+       "price":33454
+    },
+    {
+       "name":"Chrome Classic Rod",
+       "type":9,
+       "id":109,
+       "price":32348
+    },
+    {
+       "name":"Gold Classic Rod",
+       "type":9,
+       "id":110,
+       "price":8059
+    },
+    {
+       "name":"Gold Classic Wire",
+       "type":9,
+       "id":106,
+       "price":9260
+    },
+    {
+       "name":"Gold Smoothie",
+       "type":9,
+       "id":108,
+       "price":6821
+    },
+    {
+       "name":"Chrome Dollar",
+       "type":9,
+       "id":111,
+       "price":34214
+    },
+    {
+       "name":"Gold Dollar",
+       "type":9,
+       "id":112,
+       "price":12497
+    },
+    {
+       "name":"Chrome Mighty Star",
+       "type":9,
+       "id":113,
+       "price":29031
+    },
+    {
+       "name":"Gold Mighty Star",
+       "type":9,
+       "id":114,
+       "price":7433
+    },
+    {
+       "name":"Chrome Decadent Dish",
+       "type":9,
+       "id":115,
+       "price":34473
+    },
+    {
+       "name":"Gold Decadent Dish",
+       "type":9,
+       "id":116,
+       "price":7847
+    },
+    {
+       "name":"Chrome Razor Style",
+       "type":9,
+       "id":117,
+       "price":33380
+    },
+    {
+       "name":"Gold Celtic Knot",
+       "type":9,
+       "id":120,
+       "price":11283
+    },
+    {
+       "name":"Gold Razor Style",
+       "type":9,
+       "id":118,
+       "price":11224
+    },
+    {
+       "name":"Chrome Celtic Knot",
+       "type":9,
+       "id":119,
+       "price":31723
+    },
+    {
+       "name":"Chrome Warrior Dish",
+       "type":9,
+       "id":121,
+       "price":34813
+    },
+    {
+       "name":"Gold Warrior Dish",
+       "type":9,
+       "id":122,
+       "price":14440
+    },
+    {
+       "name":"Gold Big Dog Spokes",
+       "type":9,
+       "id":123,
+       "price":13829
+    },
+    {
+       "name":"Chrome OG Hunnets",
+       "type":9,
+       "id":124,
+       "price":35286
+    },
+    {
+       "name":"Gold OG Hunnets",
+       "type":9,
+       "id":125,
+       "price":14958
+    },
+    {
+       "name":"Chrome Wires",
+       "type":9,
+       "id":126,
+       "price":29223
+    },
+    {
+       "name":"Gold Wires",
+       "type":9,
+       "id":127,
+       "price":7623
+    },
+    {
+       "name":"Chrome Spoked Out",
+       "type":9,
+       "id":128,
+       "price":35640
+    },
+    {
+       "name":"Gold Spoked Out",
+       "type":9,
+       "id":129,
+       "price":9728
+    },
+    {
+       "name":"Chrome Knock-Offs",
+       "type":9,
+       "id":130,
+       "price":29299
+    },
+    {
+       "name":"Chrome Bigger Worm",
+       "type":9,
+       "id":132,
+       "price":27193
+    },
+    {
+       "name":"Gold Knock-Offs",
+       "type":9,
+       "id":131,
+       "price":7116
+    },
+    {
+       "name":"Gold Bigger Worm",
+       "type":9,
+       "id":133,
+       "price":10456
+    },
+    {
+       "name":"Chrome Vintage Wire",
+       "type":9,
+       "id":134,
+       "price":32443
+    },
+    {
+       "name":"Gold Vintage Wire",
+       "type":9,
+       "id":135,
+       "price":6170
+    },
+    {
+       "name":"Chrome Smoothie",
+       "type":9,
+       "id":138,
+       "price":35013
+    },
+    {
+       "name":"Chrome Classic Rod",
+       "type":9,
+       "id":140,
+       "price":31016
+    },
+    {
+       "name":"Chrome Classic Wire",
+       "type":9,
+       "id":136,
+       "price":30739
+    },
+    {
+       "name":"Gold Classic Wire",
+       "type":9,
+       "id":137,
+       "price":12238
+    },
+    {
+       "name":"Gold Smoothie",
+       "type":9,
+       "id":139,
+       "price":9617
+    },
+    {
+       "name":"Gold Classic Rod",
+       "type":9,
+       "id":141,
+       "price":7602
+    },
+    {
+       "name":"Chrome Mighty Star",
+       "type":9,
+       "id":144,
+       "price":31733
+    },
+    {
+       "name":"Gold Dollar",
+       "type":9,
+       "id":143,
+       "price":13403
+    },
+    {
+       "name":"Chrome Dollar",
+       "type":9,
+       "id":142,
+       "price":29254
+    },
+    {
+       "name":"Gold Mighty Star",
+       "type":9,
+       "id":145,
+       "price":8727
+    },
+    {
+       "name":"Chrome Decadent Dish",
+       "type":9,
+       "id":146,
+       "price":30510
+    },
+    {
+       "name":"Gold Decadent Dish",
+       "type":9,
+       "id":147,
+       "price":9718
+    },
+    {
+       "name":"Chrome Razor Style",
+       "type":9,
+       "id":148,
+       "price":26959
+    },
+    {
+       "name":"Chrome Celtic Knot",
+       "type":9,
+       "id":150,
+       "price":29662
+    },
+    {
+       "name":"Gold Celtic Knot",
+       "type":9,
+       "id":151,
+       "price":8096
+    },
+    {
+       "name":"Gold Razor Style",
+       "type":9,
+       "id":149,
+       "price":12168
+    },
+    {
+       "name":"Chrome OG Hunnets",
+       "type":9,
+       "id":155,
+       "price":26997
+    },
+    {
+       "name":"Chrome Warrior Dish",
+       "type":9,
+       "id":152,
+       "price":35566
+    },
+    {
+       "name":"Gold Warrior Dish",
+       "type":9,
+       "id":153,
+       "price":12249
+    },
+    {
+       "name":"Gold Big Dog Spokes",
+       "type":9,
+       "id":154,
+       "price":13770
+    },
+    {
+       "name":"Gold OG Hunnets",
+       "type":9,
+       "id":156,
+       "price":11572
+    },
+    {
+       "name":"Chrome Wires",
+       "type":9,
+       "id":157,
+       "price":28530
+    },
+    {
+       "name":"Gold Wires",
+       "type":9,
+       "id":158,
+       "price":11588
+    },
+    {
+       "name":"Chrome Spoked Out",
+       "type":9,
+       "id":159,
+       "price":26049
+    },
+    {
+       "name":"Chrome Knock-Offs",
+       "type":9,
+       "id":161,
+       "price":32080
+    },
+    {
+       "name":"Gold Knock-Offs",
+       "type":9,
+       "id":162,
+       "price":7092
+    },
+    {
+       "name":"Chrome Bigger Worm",
+       "type":9,
+       "id":163,
+       "price":29970
+    },
+    {
+       "name":"Chrome Vintage Wire",
+       "type":9,
+       "id":165,
+       "price":31592
+    },
+    {
+       "name":"Gold Spoked Out",
+       "type":9,
+       "id":160,
+       "price":13223
+    },
+    {
+       "name":"Gold Bigger Worm",
+       "type":9,
+       "id":164,
+       "price":12890
+    },
+    {
+       "name":"Gold Vintage Wire",
+       "type":9,
+       "id":166,
+       "price":8360
+    },
+    {
+       "name":"Chrome Classic Wire",
+       "type":9,
+       "id":167,
+       "price":35304
+    },
+    {
+       "name":"Gold Classic Wire",
+       "type":9,
+       "id":168,
+       "price":8850
+    },
+    {
+       "name":"Chrome Smoothie",
+       "type":9,
+       "id":169,
+       "price":34525
+    },
+    {
+       "name":"Gold Smoothie",
+       "type":9,
+       "id":170,
+       "price":11723
+    },
+    {
+       "name":"Gold Classic Rod",
+       "type":9,
+       "id":172,
+       "price":10092
+    },
+    {
+       "name":"Chrome Classic Rod",
+       "type":9,
+       "id":171,
+       "price":35903
+    },
+    {
+       "name":"Chrome Dollar",
+       "type":9,
+       "id":173,
+       "price":32307
+    },
+    {
+       "name":"Gold Dollar",
+       "type":9,
+       "id":174,
+       "price":13869
+    },
+    {
+       "name":"Chrome Mighty Star",
+       "type":9,
+       "id":175,
+       "price":26383
+    },
+    {
+       "name":"Gold Mighty Star",
+       "type":9,
+       "id":176,
+       "price":5341
+    },
+    {
+       "name":"Chrome Decadent Dish",
+       "type":9,
+       "id":177,
+       "price":34299
+    },
+    {
+       "name":"Gold Decadent Dish",
+       "type":9,
+       "id":178,
+       "price":7838
+    },
+    {
+       "name":"Chrome Warrior Dish",
+       "type":9,
+       "id":183,
+       "price":28822
+    },
+    {
+       "name":"Chrome Celtic Knot",
+       "type":9,
+       "id":181,
+       "price":28710
+    },
+    {
+       "name":"Chrome Razor Style",
+       "type":9,
+       "id":179,
+       "price":31767
+    },
+    {
+       "name":"Gold Razor Style",
+       "type":9,
+       "id":180,
+       "price":13927
+    },
+    {
+       "name":"Gold Celtic Knot",
+       "type":9,
+       "id":182,
+       "price":8240
+    },
+    {
+       "name":"Gold Warrior Dish",
+       "type":9,
+       "id":184,
+       "price":13894
+    },
+    {
+       "name":"Gold Big Dog Spokes",
+       "type":9,
+       "id":185,
+       "price":8393
+    },
+    {
+       "name":"Chrome OG Hunnets",
+       "type":9,
+       "id":186,
+       "price":33458
+    },
+    {
+       "name":"Gold OG Hunnets",
+       "type":9,
+       "id":187,
+       "price":14812
+    },
+    {
+       "name":"Chrome Wires",
+       "type":9,
+       "id":188,
+       "price":31469
+    },
+    {
+       "name":"Gold Bigger Worm",
+       "type":9,
+       "id":195,
+       "price":9936
+    },
+    {
+       "name":"Chrome Bigger Worm",
+       "type":9,
+       "id":194,
+       "price":27860
+    },
+    {
+       "name":"Gold Wires",
+       "type":9,
+       "id":189,
+       "price":8744
+    },
+    {
+       "name":"Chrome Vintage Wire",
+       "type":9,
+       "id":196,
+       "price":31691
+    },
+    {
+       "name":"Chrome Spoked Out",
+       "type":9,
+       "id":190,
+       "price":27952
+    },
+    {
+       "name":"Gold Spoked Out",
+       "type":9,
+       "id":191,
+       "price":13419
+    },
+    {
+       "name":"Chrome Knock-Offs",
+       "type":9,
+       "id":192,
+       "price":35787
+    },
+    {
+       "name":"Gold Knock-Offs",
+       "type":9,
+       "id":193,
+       "price":10894
+    },
+    {
+       "name":"Gold Vintage Wire",
+       "type":9,
+       "id":197,
+       "price":12403
+    },
+    {
+       "name":"Chrome Classic Wire",
+       "type":9,
+       "id":198,
+       "price":33441
+    },
+    {
+       "name":"Gold Classic Wire",
+       "type":9,
+       "id":199,
+       "price":7626
+    },
+    {
+       "name":"Gold Classic Rod",
+       "type":9,
+       "id":203,
+       "price":12629
+    },
+    {
+       "name":"Gold Dollar",
+       "type":9,
+       "id":205,
+       "price":7468
+    },
+    {
+       "name":"Chrome Smoothie",
+       "type":9,
+       "id":200,
+       "price":34130
+    },
+    {
+       "name":"Gold Smoothie",
+       "type":9,
+       "id":201,
+       "price":14696
+    },
+    {
+       "name":"Chrome Classic Rod",
+       "type":9,
+       "id":202,
+       "price":30201
+    },
+    {
+       "name":"Chrome Dollar",
+       "type":9,
+       "id":204,
+       "price":31265
+    },
+    {
+       "name":"Chrome Mighty Star",
+       "type":9,
+       "id":206,
+       "price":30527
+    },
+    {
+       "name":"Gold Mighty Star",
+       "type":9,
+       "id":207,
+       "price":6952
+    },
+    {
+       "name":"Chrome Decadent Dish",
+       "type":9,
+       "id":208,
+       "price":33959
+    },
+    {
+       "name":"Gold Decadent Dish",
+       "type":9,
+       "id":209,
+       "price":9128
+    },
+    {
+       "name":"Gold Razor Style",
+       "type":9,
+       "id":211,
+       "price":10690
+    },
+    {
+       "name":"Gold Celtic Knot",
+       "type":9,
+       "id":213,
+       "price":10534
+    },
+    {
+       "name":"Chrome Razor Style",
+       "type":9,
+       "id":210,
+       "price":32955
+    },
+    {
+       "name":"Chrome Warrior Dish",
+       "type":9,
+       "id":214,
+       "price":27028
+    },
+    {
+       "name":"Gold Warrior Dish",
+       "type":9,
+       "id":215,
+       "price":9601
+    },
+    {
+       "name":"Chrome Celtic Knot",
+       "type":9,
+       "id":212,
+       "price":33575
+    },
+    {
+       "name":"Gold Big Dog Spokes",
+       "type":9,
+       "id":216,
+       "price":5428
+    }
+ ]

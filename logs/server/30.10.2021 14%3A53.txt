@@ -1,0 +1,118 @@
+[33m[INFO] [0mStarting RAGE Multiplayer server...
+[0m[33m
+[============================================================]
+[33m[33m||
+[33m||[33m	MaxPlayers		[0m50[33m
+||	Sync rate		[0m40ms[33m
+||	Name			[0mBasicRPG.pl | W trakcie tworzenia | Wiecej na https://discord.gg/2vrMdXsdRW [PL][33m
+||	Gamemode		[0mrpg[33m
+||	Streaming distance	[0m500[33m
+||	Announcement		[0menabled[33m
+||	Voice chat		[0menabled[33m
+||	Address			[0m127.0.0.1:22005[33m
+||	Connection limits	[0mdisabled[33m
+||	Encryption		[0menabled[33m
+||	NodeJS			[0menabled[33m
+||	C#			[0menabled[33m
+||
+[============================================================]
+
+[0m
+[33m[INFO][0m Loading NodeJS packages...
+[33m[INFO][0m Starting packages...
+[32m[DONE][0m Server packages have been started.
+Initializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 10/30/2021 2:53:54 PM
+Unable to load acl.xml
+ACLEnabled: False
+Loaded 667 entries from vehicleData.json
+Loading resources..
+[?1h=[39;49m[33m->[39;49m[37m Starting [39;49m[36mServer[39;49m[37m resource..
+[39;49m[39;49m[37mServer:[39;49m[37m loading scripts.. found 1 script(s)
+[39;49m[39;49m[37mServer:[39;49m[37m instantiating [39;49m[37mServerSide.MainClass[39;49m[37m..
+[39;49m[39;49m[37mServer:[39;49m[37m loading server events.. found 10 server event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 10 server events(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loading remote events.. found 180 remote event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 180 remote event(s)
+[39;49mServer started...
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[39;49m[32m->[39;49m[37m Resource [39;49m[36mServer[39;49m[37m started!
+[39;49m[39;49m[32mStarted! Waiting for connections..
+[39;49m[32m[DONE] [0mStarted resource transfer server at 22006 port.
+[32m[DONE] [0mClient-side packages weight: [33m214.174850 MB[0m (uncompressed: [33m354.614929 MB[0m).
+[33m[INFO] [0mMasterList: Announcing into master server...
+[33m[INFO] [0mInitializing networking...
+[32m[DONE] [0mNetworking has been started: (IPv4-only) at 127.0.0.1:22005
+[32m[DONE] [0mThe server is ready to accept connections.
+[32m[DONE] [0mMasterList: Connected to master list.
+[N] Incoming connection from 88.130.51.154
+88.130.51.154 SHOGUN_77
+[N] Incoming connection from 84.15.190.168
+84.15.190.168 edgar12345cake
+[39;49m[32m15:23 [1]edi1: elo
+[39;49m[37m[N] Incoming connection from 89.64.92.93
+89.64.92.93 -slupek-
+[39;49m[32m15:24 [0]SHOGUN77: siemka
+[39;49m[37m[39;49m[32m15:24 [2]slupek77: siemaa
+[39;49m[37m[39;49m[32m15:24 [1]edi1: wbije na dc
+[39;49m[37m[N] 88.130.51.154:9650 has been disconnected.
+[N] 84.15.190.168:60108 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[39;49m[32m16:54 [2]slupek77: siema
+[39;49m[37m[N] 188.47.127.251:17104 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 188.47.127.251:17104 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 188.47.127.251:17104 has been disconnected.
+[N] Incoming connection from 84.15.190.168
+84.15.190.168 edgar12345cake
+[39;49m[32m17:21 [0]edi1: elo
+[39;49m[37m[N] 89.64.92.93:23640 has been disconnected.
+[N] Incoming connection from 89.64.92.93
+89.64.92.93 -slupek-
+[N] 89.64.92.93:23603 has been disconnected.
+[N] Incoming connection from 89.64.92.93
+89.64.92.93 -slupek-
+[N] 89.64.92.93:23603 has been disconnected.
+[N] Incoming connection from 89.64.92.93
+89.64.92.93 -slupek-
+[N] 84.15.190.168:56172 has been disconnected.
+[N] Incoming connection from 84.15.190.168
+84.15.190.168 edgar12345cake
+[N] 89.64.92.93:23603 has been disconnected.
+[N] Incoming connection from 89.64.92.93
+89.64.92.93 -slupek-
+[N] 84.15.190.168:56172 has been disconnected.
+[N] 89.64.92.93:23603 has been disconnected.
+[N] Incoming connection from 89.229.84.90
+[N] 89.229.84.90:62647 has been disconnected.
+[N] Incoming connection from 89.229.84.90
+89.229.84.90 Bombel3k
+[N] 89.229.84.90:52789 has been disconnected.
+[N] Incoming connection from 89.229.84.90
+89.229.84.90 Bombel3k
+[N] 89.229.84.90:52789 has been disconnected.
+[N] Incoming connection from 89.229.84.90
+89.229.84.90 Bombel3k
+[N] 89.229.84.90:52789 has been disconnected.
+[N] Incoming connection from 89.229.84.90
+89.229.84.90 Bombel3k
+[N] 89.229.84.90:52789 has been disconnected.
+[N] Incoming connection from 89.229.84.90
+89.229.84.90 Bombel3k
+[N] Incoming connection from 84.15.190.168
+84.15.190.168 edgar12345cake
+[39;49m[32m21:24 [1]edi1: siema
+[39;49m[37m[39;49m[32m21:28 [0]Bombel3k: siema
+[39;49m[37m[39;49m[32m21:30 [1]edi1: naco kampisz
+[39;49m[37m[39;49m[32m21:31 [0]Bombel3k: jakąś terenówke bym chciał jakiegoś helliona czy cos
+[39;49m[37m[39;49m[32m21:31 [0]Bombel3k: chcesz emerusa za 370k ? xD
+[39;49m[37m[39;49m[32m21:32 [1]edi1: niemam zlotuf 1 na gaedijana
+[39;49m[37m^C[33m[INFO] [0mShutting down the server...
+Shutting down..
+[32m[DONE] [0mThe server has been terminated.
+terminate called without an active exception

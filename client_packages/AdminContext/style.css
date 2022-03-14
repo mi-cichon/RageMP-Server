@@ -1,0 +1,32 @@
+html, body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    user-select: none;
+}
+
+.contextBody{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(29, 30, 34, 0.9);
+    color: white;
+    border: 1px solid #0c9;
+    transition: 1s background-color;
+    font-size: 1.4vh;
+    display: none;
+}
+.contextTab{
+    padding: 0.6vh;
+    border-top: 1px solid #0c9;
+    text-align: center;
+}
+
+.contextBody .contextTab:first-child{
+    border-top: none;
+}
+
+.contextTab:hover{
+    background-color: rgba(29, 30, 34, 0.9);
+}

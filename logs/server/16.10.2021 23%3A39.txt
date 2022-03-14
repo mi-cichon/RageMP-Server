@@ -1,0 +1,176 @@
+[33m[INFO] [0mStarting RAGE Multiplayer server...
+[0m[33m
+[============================================================]
+[33m[33m||
+[33m||[33m	MaxPlayers		[0m50[33m
+||	Sync rate		[0m40ms[33m
+||	Name			[0mBasicRPG.pl | W trakcie tworzenia | Wiecej na https://discord.gg/2vrMdXsdRW [PL][33m
+||	Gamemode		[0mrpg[33m
+||	Streaming distance	[0m500[33m
+||	Announcement		[0menabled[33m
+||	Voice chat		[0menabled[33m
+||	Address			[0m127.0.0.1:22005[33m
+||	Connection limits	[0mdisabled[33m
+||	Encryption		[0menabled[33m
+||	NodeJS			[0menabled[33m
+||	C#			[0menabled[33m
+||
+[============================================================]
+
+[0m
+[33m[INFO][0m Loading NodeJS packages...
+[33m[INFO][0m Starting packages...
+[32m[DONE][0m Server packages have been started.
+Initializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 10/16/2021 11:39:08 PM
+Unable to load acl.xml
+ACLEnabled: False
+Loaded 667 entries from vehicleData.json
+Loading resources..
+[?1h=[39;49m[33m->[39;49m[37m Starting [39;49m[36mServer[39;49m[37m resource..
+[39;49m[39;49m[37mServer:[39;49m[37m loading scripts.. found 1 script(s)
+[39;49m[39;49m[37mServer:[39;49m[37m instantiating [39;49m[37mServerSide.MainClass[39;49m[37m..
+[39;49mConnection refused [::1]:3306
+Connection refused [::1]:3306
+[39;49m[37mServer:[39;49m[37m loading server events.. found 10 server event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 10 server events(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loading remote events.. found 161 remote event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 161 remote event(s)
+[39;49mServer started...
+[39;49m[32m->[39;49m[37m Resource [39;49m[36mServer[39;49m[37m started!
+[39;49m[39;49m[32mStarted! Waiting for connections..
+[39;49m[32m[DONE] [0mStarted resource transfer server at 22006 port.
+[32m[DONE] [0mClient-side packages weight: [33m183.715118 MB[0m (uncompressed: [33m367.574097 MB[0m).
+[33m[INFO] [0mMasterList: Announcing into master server...
+[33m[INFO] [0mInitializing networking...
+[32m[DONE] [0mNetworking has been started: (IPv4-only) at 127.0.0.1:22005
+[32m[DONE] [0mThe server is ready to accept connections.
+[32m[DONE] [0mMasterList: Connected to master list.
+[N] Incoming connection from 213.134.168.147
+[N] Incoming connection from 83.6.210.191
+[N] Incoming connection from 5.173.129.156
+213.134.168.147 -_Chmielu_-
+[N] Incoming connection from 89.64.93.4
+83.6.210.191 Borowikens
+5.173.129.156 0DEYMAN0
+89.64.93.4 -slupek-
+[N] Incoming connection from 84.15.184.80
+84.15.184.80 edgar12345cake
+[N] Incoming connection from 109.231.63.235
+[N] Incoming connection from 81.15.239.49
+109.231.63.235 QuaVim
+81.15.239.49 zabraliminazwe
+[N] Incoming connection from 185.186.38.1
+[N] Incoming connection from 188.47.127.251
+[N] Incoming connection from 88.130.51.28
+185.186.38.1 maciejooosek
+[N] 5.173.129.156:22020 has been disconnected.
+[N] Incoming connection from 5.173.129.156
+188.47.127.251 RoCaVe89
+5.173.129.156 0DEYMAN0
+[N] 88.130.51.28:25828 has been disconnected.
+[39;49m[32m23:41 [7]MeHow: siema
+[39;49m[37m[N] Incoming connection from 87.207.61.174
+[N] Incoming connection from 89.229.84.90
+[39;49m[32m23:41 [8]VRS89: hei
+[39;49m[37m87.207.61.174 -Wars-
+[N] 84.15.184.80:49384 has been disconnected.
+[39;49m[32m23:41 [0]-_Chmielu_-: witam
+[39;49m[37m89.229.84.90 Bombel3k
+[N] Incoming connection from 83.29.1.163
+[N] 188.47.127.251:16557 has been disconnected.
+83.29.1.163 Drymaniusz
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[39;49m[32m23:41 [7]MeHow: XDDD
+[39;49m[37m[39;49m[32m23:41 [5]QuaVin: dobrze z tym vc ;d
+[39;49m[37m[N] Incoming connection from 87.101.35.98
+[39;49m[32m23:42 [4].Drymaniusz*: slyszalem ze na tym mozna jebac ludzi
+[39;49m[37m87.101.35.98 TomoHERE_3hunna
+[39;49m[32m23:42 [11]TomoHERE: bry
+[39;49m[37m[39;49m[32m23:42 [7]MeHow: mozna jak najbardziej
+[39;49m[37m[39;49m[32m23:42 [0]-_Chmielu_-: brzysia mozna?
+[39;49m[37m[N] Incoming connection from 88.130.51.28
+[N] Incoming connection from 84.15.184.80
+88.130.51.28 SHOGUN_77
+[39;49m[32m23:42 [10]Bombel3k: zmiany jak najbardziej na plus
+[39;49m[37m[N] 83.29.1.163:52666 has been disconnected.
+84.15.184.80 edgar12345cake
+[N] Incoming connection from 37.30.113.150
+37.30.113.150 JaniaX135
+[N] Incoming connection from 46.204.51.205
+46.204.51.205 machcin1
+[N] Incoming connection from 83.29.1.163
+83.29.1.163 Drymaniusz
+[N] 88.130.51.28:25676 has been disconnected.
+[N] 188.47.127.251:16557 has been disconnected.
+[39;49m[32m23:46 [2]DEYMAN: jest szansa na inny bonus?
+[39;49m[37m[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 89.64.93.4:11207 has been disconnected.
+[39;49m[32m23:46 [7]MeHow: zostawimy ten bo ludzie rybek nazbierali
+[39;49m[37m[N] Incoming connection from 89.64.93.4
+89.64.93.4 -slupek-
+[N] 89.64.93.4:11207 has been disconnected.
+[N] Incoming connection from 89.64.93.4
+[N] 188.47.127.251:16557 has been disconnected.
+89.64.93.4 -slupek-
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[39;49m[32m23:47 [10]Bombel3k: na premium zentorno i nero :D
+[39;49m[37m[39;49m[32m23:49 [13]edi1: jade na ryby
+[39;49m[37m[N] 81.15.239.49:64287 has been disconnected.
+[N] Incoming connection from 77.45.40.180
+[39;49m[32m23:50 [8]VRS89: XD
+[39;49m[37m77.45.40.180 diabeu32
+[39;49m[32m23:50 [4]JaniaX: bamdyta
+[39;49m[37m[N] 109.231.63.235:62526 has been disconnected.
+[39;49m[32m23:52 [7]MeHow: to była pomyłka 
+[39;49m[37m[39;49m[32m23:52 [7]MeHow: na niby było
+[39;49m[37m[N] 89.229.84.90:59984 has been disconnected.
+[N] Incoming connection from 109.231.63.235
+109.231.63.235 QuaVim
+[N] Incoming connection from 89.229.84.90
+89.229.84.90 Bombel3k
+[39;49m[32m23:54 [13]edi1: tp janiax
+[39;49m[37mThe given key 'fishernam' was not present in the dictionary.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.Collections.Generic.KeyNotFoundException: The given key 'fishernam' was not present in the dictionary.
+   at TValue System.Collections.Generic.Dictionary<TKey, TValue>.get_Item(TKey key)
+   at void ServerSide.PayoutManager.FisherJunkSold(Player player, List<string> junks) in F:/RAGEMP server/server-files/dotnet/resources/Server/Managers/PayoutManager.cs:line 240
+   at void ServerSide.MainClass.SellJunk(Player player) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 3291
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+[39;49m[32m00:00 [13]edi1: janiax tepni na rybaka
+[39;49m[37m[39;49m[32m00:01 [4]JaniaX: a nie masz samochodu?
+[39;49m[37m[39;49m[32m00:01 [11]TomoHERE: macie po 482 auta i jeszcze tepania potrzebujecie, zlitujcie sie
+[39;49m[37m[39;49m[32m00:03 [7]MeHow: poprawić muszę rybaka bo sprzedawanie przedmiotów nie działa
+[39;49m[37m[39;49m[32m00:03 [7]MeHow: jak chcecie mogę zrestartować teraz i naprawione będzie, albo przy okazji
+[39;49m[37m[39;49m[32m00:03 [10]Bombel3k: daj kilka minutek
+[39;49m[37m[39;49m[32m00:04 [7]MeHow: 00:10 restart, pasuje?
+[39;49m[37m[39;49m[32m00:04 [10]Bombel3k: tak
+[39;49m[37m[39;49m[32m00:04 [0]-_Chmielu_-: jo
+[39;49m[37m[N] 188.47.127.251:16557 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] Incoming connection from 88.130.51.28
+88.130.51.28 SHOGUN_77
+Connection refused [::1]:3306
+[39;49m[32m00:10 [7]MeHow: nowe domki na mirror
+[39;49m[37m[39;49m[32m00:10 [10]Bombel3k: superw
+[39;49m[37m[39;49m[32m00:10 [7]MeHow: walimy restart
+[39;49m[37m[39;49m[32m00:11 [10]Bombel3k: czj
+[39;49m[37m[39;49m[32m00:11 [13]edi1: nie 
+[39;49m[37m[39;49m[32m00:11 [7]MeHow: co nie
+[39;49m[37m[39;49m[32m00:12 [13]edi1: nie tszeba restartu
+[39;49m[37m[39;49m[32m00:12 [7]MeHow: trzeba
+[39;49m[37m[39;49m[32m00:12 [7]MeHow: restart :3
+[39;49m[37m[39;49m[32m00:12 [11]TomoHERE: trzeba
+[39;49m[37m^C[33m[INFO] [0mShutting down the server...
+Shutting down..
+[32m[DONE] [0mThe server has been terminated.
+terminate called without an active exception

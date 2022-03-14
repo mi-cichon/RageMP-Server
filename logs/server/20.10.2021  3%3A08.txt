@@ -1,0 +1,256 @@
+[33m[INFO] [0mStarting RAGE Multiplayer server...
+[0m[33m
+[============================================================]
+[33m[33m||
+[33m||[33m	MaxPlayers		[0m50[33m
+||	Sync rate		[0m40ms[33m
+||	Name			[0mBasicRPG.pl | W trakcie tworzenia | Wiecej na https://discord.gg/2vrMdXsdRW [PL][33m
+||	Gamemode		[0mrpg[33m
+||	Streaming distance	[0m500[33m
+||	Announcement		[0menabled[33m
+||	Voice chat		[0menabled[33m
+||	Address			[0m127.0.0.1:22005[33m
+||	Connection limits	[0mdisabled[33m
+||	Encryption		[0menabled[33m
+||	NodeJS			[0menabled[33m
+||	C#			[0menabled[33m
+||
+[============================================================]
+
+[0m
+[33m[INFO][0m Loading NodeJS packages...
+[33m[INFO][0m Starting packages...
+[32m[DONE][0m Server packages have been started.
+Initializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 10/20/2021 3:08:48 AM
+Unable to load acl.xml
+ACLEnabled: False
+Loaded 667 entries from vehicleData.json
+Loading resources..
+[?1h=[39;49m[33m->[39;49m[37m Starting [39;49m[36mServer[39;49m[37m resource..
+[39;49m[39;49m[37mServer:[39;49m[37m loading scripts.. found 1 script(s)
+[39;49m[39;49m[37mServer:[39;49m[37m instantiating [39;49m[37mServerSide.MainClass[39;49m[37m..
+[39;49mConnection refused [::1]:3306
+Connection refused [::1]:3306
+[39;49m[37mServer:[39;49m[37m loading server events.. found 10 server event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 10 server events(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loading remote events.. found 173 remote event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 173 remote event(s)
+[39;49mServer started...
+[39;49m[32m->[39;49m[37m Resource [39;49m[36mServer[39;49m[37m started!
+[39;49m[39;49m[32mStarted! Waiting for connections..
+[39;49m[32m[DONE] [0mStarted resource transfer server at 22006 port.
+[32m[DONE] [0mClient-side packages weight: [33m187.595840 MB[0m (uncompressed: [33m372.350098 MB[0m).
+[33m[INFO] [0mMasterList: Announcing into master server...
+[33m[INFO] [0mInitializing networking...
+[32m[DONE] [0mNetworking has been started: (IPv4-only) at 127.0.0.1:22005
+[32m[DONE] [0mThe server is ready to accept connections.
+[32m[DONE] [0mMasterList: Connected to master list.
+[N] Incoming connection from 185.186.38.1
+[N] Incoming connection from 87.101.35.98
+87.101.35.98 TomoHERE_3hunna
+185.186.38.1 maciejooosek
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[39;49m[32m03:15 [2]robotek019: o cie ciul
+[39;49m[37m[39;49m[32m03:15 [0]MeHow: siema
+[39;49m[37m[39;49m[32m03:16 [2]robotek019: ale wyjebiste zegary xD
+[39;49m[37m[39;49m[32m03:16 [1]TomoHERE: dzieki
+[39;49m[37m[39;49m[32m03:16 [0]MeHow: xD
+[39;49m[37m[39;49m[32m03:16 [0]MeHow: wszystko css + js
+[39;49m[37m[39;49m[32m03:17 [0]MeHow: stawia dynamicznie wszystkie kreski w zależności od vmaxu auta
+[39;49m[37m[39;49m[32m03:17 [2]robotek019: do tego jest w pełni customizowany przez to :D więc kolorki można zmieniać :D
+[39;49m[37m[39;49m[32m03:17 [0]MeHow: możliwe że będzie taka opcja
+[39;49m[37m[39;49m[32m03:18 [2]robotek019: te skróty co były na zapięcie pasów były mega ultra przydatne :D wystarczyło "k" resztę można by pod ALTem zostawić ale ten jeden skrót wróci? :D
+[39;49m[37m[39;49m[32m03:18 [0]MeHow: nie wróci
+[39;49m[37m[39;49m[32m03:19 [2]robotek019: ten procentowy wskaźnik paliwa to masakra jakaś... 3 minuty jazdy i 5% paliwa nie ma xD
+[39;49m[37m[39;49m[32m03:19 [0]MeHow: jak usune wskaźnik procentowy to też ci bedzie spalać wiesz?
+[39;49m[37m[39;49m[32m03:19 [0]MeHow: xD
+[39;49m[37m[39;49m[32m03:19 [2]robotek019: ale wtedy nie będę widział w jakim tempie to spada xD
+[39;49m[37m[39;49m[32m03:20 [1]TomoHERE: if robotek019 then spalanie 100%+
+[39;49m[37m[39;49m[32m03:20 [1]TomoHERE: zapomnielismy wylaczyc
+[39;49m[37m[39;49m[32m03:20 [0]MeHow: ostatnio właśnie narzekali że % nie pokazuje
+[39;49m[37m[39;49m[32m03:20 [2]robotek019: zmienią zdanie jak zobaczą tempo spadania xD
+[39;49m[37m[39;49m[32m03:20 [0]MeHow: polecam umiejętność eco driving jak przeszkadza
+[39;49m[37m[39;49m[32m03:21 [2]robotek019: naciśnij "W" - oo 99% , a teraz puść i naciśnij jeszcze raz "w" - o 97%? XD
+[39;49m[37m[39;49m[32m03:21 [0]MeHow: jakie auto?
+[39;49m[37m[39;49m[32m03:21 [2]robotek019: T20
+[39;49m[37m[39;49m[32m03:21 [0]MeHow: ft?
+[39;49m[37m[39;49m[32m03:21 [2]robotek019: ta
+[39;49m[37m[39;49m[32m03:21 [0]MeHow: to bym sie nie dziwil :(
+[39;49m[37m[39;49m[32m03:21 [2]robotek019: standardowy opis na giełdzie "ile pali? tyle ile wlejesz" XD
+[39;49m[37m[39;49m[32m03:22 [0]MeHow: xD
+[39;49m[37m[39;49m[32m03:22 [2]robotek019: nie no zegary sztos
+[39;49m[37m[39;49m[32m03:22 [0]MeHow: to dobrze
+[39;49m[37m[39;49m[32m03:22 [0]MeHow: bo roblismy je caly dzien
+[39;49m[37m[39;49m[32m03:23 [1]TomoHERE: a interakcja fury sie podoba? jak nie to ban bo wczoraj wylysialem przez to prawie
+[39;49m[37m[39;49m[32m03:24 [2]robotek019: no jedyne czego mi brakuje to własnie jakiegoś skrótu na zapięcie pasów - wygoda 
+[39;49m[37m[39;49m[32m03:24 [0]MeHow: za dobrze by było xD
+[39;49m[37m[39;49m[32m03:25 [2]robotek019: nie no siadło ładnie, ten panelik pod altem i zegary w opór sztoss :D
+[39;49m[37m[39;49m[32m03:26 [0]MeHow: git, dzięki
+[39;49m[37m[39;49m[32m03:26 [0]MeHow: staraliśmy się xD
+[39;49m[37m[39;49m[32m03:26 [2]robotek019: no i wyszło jak marzenie xD 
+[39;49m[37m[39;49m[32m03:26 [1]TomoHERE: oplacalo sie siedziec do 6 :D
+[39;49m[37m[39;49m[32m03:26 [1]TomoHERE: i dzis do 3
+[39;49m[37m[39;49m[32m03:29 [2]robotek019: lecę wam skrobnąć na dsc propozycję i w kimę bo rano mam nadania i odbiory zamówionego towaru :D ale liczniki dynamiczne musiałem zobaczyć xD
+[39;49m[37m[39;49m[32m03:29 [0]MeHow: git xD
+[39;49m[37m[N] 213.108.119.240:52256 has been disconnected.
+[N] 87.101.35.98:60568 has been disconnected.
+[N] 185.186.38.1:49159 has been disconnected.
+[N] Incoming connection from 84.15.184.80
+84.15.184.80 edgar12345cake
+[N] Incoming connection from 83.29.1.163
+83.29.1.163 Drymaniusz
+[N] 83.29.1.163:62424 has been disconnected.
+[N] Incoming connection from 83.29.1.163
+83.29.1.163 Drymaniusz
+[N] 83.29.1.163:61255 has been disconnected.
+[N] 84.15.184.80:59382 has been disconnected.
+[N] Incoming connection from 84.15.184.80
+84.15.184.80 edgar12345cake
+[N] Incoming connection from 31.60.144.206
+31.60.144.206 gab123nt
+[39;49m[32m08:32 [1]gab123nt: siema
+[39;49m[37m[39;49m[32m08:32 [0]edi1: siema dc
+[39;49m[37m[39;49m[32m08:32 [1]gab123nt: wesłem na chwile
+[39;49m[37m[39;49m[32m08:33 [0]edi1: lewolter jes na simonie
+[39;49m[37m[N] 31.60.144.206:2758 has been disconnected.
+Object reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at void ServerSide.MainClass.openMechHUD(Player player, ColShape colshape) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 3075
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+[N] Incoming connection from 89.64.93.4
+89.64.93.4 -slupek-
+[39;49m[32m08:47 [1]slupek77: siemandero
+[39;49m[37m[39;49m[32m08:48 [0]edi1: siema
+[39;49m[37m[39;49m[32m08:49 [1]slupek77: no licznik w furce lepszy nice
+[39;49m[37m[39;49m[32m08:49 [0]edi1: tak
+[39;49m[37m[39;49m[32m08:51 [1]slupek77: no pod altem inerakcja nice
+[39;49m[37m[N] Incoming connection from 91.237.225.85
+91.237.225.85 Tomigiuszek
+[N] 91.237.225.85:65458 has been disconnected.
+[N] Incoming connection from 31.61.178.84
+31.61.178.84 MisiekMikke
+[N] Incoming connection from 77.45.40.180
+77.45.40.180 diabeu32
+[39;49m[32m09:32 [2]MisiekMikke: tuner?
+[39;49m[37m[39;49m[32m09:33 [0]edi1: ja teras na mysliwym ale moge podjehac
+[39;49m[37m[N] 77.45.40.180:55428 has been disconnected.
+[39;49m[32m09:34 [2]MisiekMikke: jade
+[39;49m[37m[39;49m[32m09:36 [2]MisiekMikke: czekam na tune edi
+[39;49m[37m[N] 84.15.184.80:62373 has been disconnected.
+[N] Incoming connection from 84.15.184.80
+84.15.184.80 edgar12345cake
+[N] 31.61.178.84:7785 has been disconnected.
+[N] 89.64.93.4:11231 has been disconnected.
+[N] 84.15.184.80:62373 has been disconnected.
+[N] Incoming connection from 77.45.40.180
+77.45.40.180 diabeu32
+[N] Incoming connection from 89.64.93.4
+89.64.93.4 -slupek-
+[39;49m[32m11:25 [1]slupek77: siema
+[39;49m[37m[N] 77.45.40.180:51101 has been disconnected.
+[N] Incoming connection from 89.64.55.128
+89.64.55.128 AnonMODE
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] 89.64.55.128:4465 has been disconnected.
+[N] Incoming connection from 89.64.55.128
+89.64.55.128 AnonMODE
+[N] Incoming connection from 87.207.61.174
+87.207.61.174 -Wars-
+[39;49m[32m13:06 [0]AnonMODE: Zrob mi louda
+[39;49m[37m[39;49m[32m13:11 [0]AnonMODE: siupek
+[39;49m[37m[N] 89.64.55.128:4435 has been disconnected.
+[N] 87.207.61.174:65336 has been disconnected.
+[N] 89.64.93.4:11302 has been disconnected.
+[N] Incoming connection from 89.64.93.4
+89.64.93.4 -slupek-
+[N] Incoming connection from 78.11.34.206
+78.11.34.206 maciejooosek
+[39;49m[32m14:31 [1]MeHow: siema
+[39;49m[37m[39;49m[32m14:31 [0]slupek77: siema
+[39;49m[37m[39;49m[32m14:34 [0]slupek77: Llicznik wyszedł spoko, prosił o przekazanie Wars
+[39;49m[37m[39;49m[32m14:34 [1]MeHow: dzięki dzięki :D
+[39;49m[37m[39;49m[32m14:34 [1]MeHow: cieszę się że się podoba bo pisałem go wczoraj cały dzień xD
+[39;49m[37m[39;49m[32m14:45 [0]slupek77: a ja testuje furki sobie
+[39;49m[37m[39;49m[32m14:46 [1]MeHow: git
+[39;49m[37m[39;49m[32m14:46 [1]MeHow: sprawdzaj czy ten licznik działa :D
+[39;49m[37m[39;49m[32m14:47 [0]slupek77: właśnie sprawdzam puki co jest git
+[39;49m[37m[39;49m[32m14:47 [1]MeHow: kosk
+[39;49m[37m[N] 78.11.34.206:60163 has been disconnected.
+[39;49m[32m14:55 [0]slupek77: narazie wyszło tylko to że mam kipską klawiature bo na padzie robię bonczki a na klawiaturze nie chce mi robić
+[39;49m[37m[39;49m[32m14:56 [0]slupek77: bączki ale piszer
+[39;49m[37m[N] Incoming connection from 84.15.184.80
+84.15.184.80 edgar12345cake
+[39;49m[32m15:01 [1]edi1: siema
+[39;49m[37m[N] 89.64.93.4:11294 has been disconnected.
+[N] Incoming connection from 89.64.93.4
+89.64.93.4 -slupek-
+[N] 89.64.93.4:11294 has been disconnected.
+[N] Incoming connection from 213.134.168.147
+213.134.168.147 -_Chmielu_-
+[N] 213.134.168.147:15843 has been disconnected.
+[N] Incoming connection from 79.186.48.240
+[N] 79.186.48.240:59253 has been disconnected.
+[N] Incoming connection from 79.186.48.240
+79.186.48.240 TheMichauu
+[39;49m[32m15:51 [1]edi1: siema
+[39;49m[37m[39;49m[32m15:51 [0]WolnoLukasz: siem,
+[39;49m[37m[N] Incoming connection from 89.64.93.4
+89.64.93.4 -slupek-
+[N] 79.186.48.240:51383 has been disconnected.
+[39;49m[32m16:07 [2]slupek77: siema
+[39;49m[37m[39;49m[32m16:11 [1]edi1: to faine
+[39;49m[37m[N] Incoming connection from 87.207.61.174
+87.207.61.174 -Wars-
+[N] Incoming connection from 109.231.63.235
+109.231.63.235 QuaVim
+[39;49m[32m16:26 [1]edi1: siema
+[39;49m[37m[39;49m[32m16:26 [0]Wars: siemka
+[39;49m[37m[N] Incoming connection from 213.134.168.147
+[N] 213.134.168.147:15878 has been disconnected.
+[N] Incoming connection from 213.134.168.147
+213.134.168.147 -_Chmielu_-
+[N] 87.207.61.174:53133 has been disconnected.
+[N] Incoming connection from 87.207.61.174
+[N] Incoming connection from 5.173.252.89
+87.207.61.174 -Wars-
+[N] 89.64.93.4:11375 has been disconnected.
+[N] Incoming connection from 89.64.93.4
+89.64.93.4 -slupek-
+5.173.252.89 aimbotino
+[N] 5.173.252.89:7921 has been disconnected.
+[N] Incoming connection from 5.173.252.89
+5.173.252.89 aimbotino
+[39;49m[32m16:38 [1]edi1: @ 0 norzesz weisc na slurzbe nagrywam laiwa
+[39;49m[37m[N] Incoming connection from 79.186.48.240
+79.186.48.240 TheMichauu
+[N] Incoming connection from 81.15.239.49
+81.15.239.49 zabraliminazwe
+[39;49m[32m16:42 [5]Foszik: oplaca sie robienie zlomowiska z premia"?
+[39;49m[37m[39;49m[32m16:48 [0]Wars: edi możesz na tunka?
+[39;49m[37m[39;49m[32m16:49 [1]edi1: moge 
+[39;49m[37m[N] Incoming connection from 78.11.34.206
+78.11.34.206 maciejooosek
+[39;49m[32m16:52 [8]MeHow: hejka
+[39;49m[37m[39;49m[32m16:52 [6]WolnoLukasz: siema
+[39;49m[37m[39;49m[32m16:52 [8]MeHow: update zaraz wlatuje mały
+[39;49m[37m[39;49m[32m16:52 [4]-_Chmielu_-: witam
+[39;49m[37m[39;49m[32m16:52 [8]MeHow: restart gry nie bedzie wymagany
+[39;49m[37m[39;49m[32m16:52 [0]Wars: i gitarka.
+[39;49m[37m[39;49m[32m16:53 [8]MeHow: parę poprawek zgłaszanych błędów w przeciągu ostatnich dwóch dni
+[39;49m[37m[39;49m[32m16:53 [8]MeHow: i trochę wizualnych
+[39;49m[37m[39;49m[32m16:53 [8]MeHow: lista na dc będzie
+[39;49m[37m[39;49m[32m16:53 [8]MeHow: gotowi na szybki restart?
+[39;49m[37m[39;49m[32m16:54 [6]WolnoLukasz: dawaj
+[39;49m[37m^C[33m[INFO] [0mShutting down the server...
+Shutting down..
+[32m[DONE] [0mThe server has been terminated.
+terminate called without an active exception

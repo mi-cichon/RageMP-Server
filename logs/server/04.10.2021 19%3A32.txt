@@ -1,0 +1,684 @@
+[33m[INFO] [0mStarting RAGE Multiplayer server...
+[0m[33m
+[============================================================]
+[33m[33m||
+[33m||[33m	MaxPlayers		[0m50[33m
+||	Sync rate		[0m40ms[33m
+||	Name			[0mBasicRPG.pl | W trakcie tworzenia | Wiecej na https://discord.gg/Yr6JeUtEM7 [PL][33m
+||	Gamemode		[0mrpg[33m
+||	Streaming distance	[0m500[33m
+||	Announcement		[0menabled[33m
+||	Voice chat		[0menabled[33m
+||	Address			[0m127.0.0.1:22005[33m
+||	Connection limits	[0mdisabled[33m
+||	Encryption		[0menabled[33m
+||	NodeJS			[0menabled[33m
+||	C#			[0menabled[33m
+||
+[============================================================]
+
+[0m
+[33m[INFO][0m Loading NodeJS packages...
+[33m[INFO][0m Starting packages...
+[32m[DONE][0m Server packages have been started.
+Initializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 10/4/2021 7:32:14 PM
+Unable to load acl.xml
+ACLEnabled: False
+Loaded 667 entries from vehicleData.json
+Loading resources..
+[?1h=[39;49m[33m->[39;49m[37m Starting [39;49m[36mServer[39;49m[37m resource..
+[39;49m[39;49m[37mServer:[39;49m[37m loading scripts.. found 1 script(s)
+[39;49m[39;49m[37mServer:[39;49m[37m instantiating [39;49m[37mServerSide.MainClass[39;49m[37m..
+[39;49mConnection refused [::1]:3306
+Connection refused [::1]:3306
+[39;49m[37mServer:[39;49m[37m loading server events.. found 10 server event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 10 server events(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loading remote events.. found 145 remote event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 145 remote event(s)
+[39;49mServer started...
+[39;49m[32m->[39;49m[37m Resource [39;49m[36mServer[39;49m[37m started!
+[39;49m[39;49m[32mStarted! Waiting for connections..
+[39;49m[32m[DONE] [0mStarted resource transfer server at 22006 port.
+[32m[DONE] [0mClient-side packages weight: [33m101.883469 MB[0m (uncompressed: [33m256.176117 MB[0m).
+[33m[INFO] [0mMasterList: Announcing into master server...
+[33m[INFO] [0mInitializing networking...
+[32m[DONE] [0mNetworking has been started: (IPv4-only) at 127.0.0.1:22005
+[32m[DONE] [0mThe server is ready to accept connections.
+[32m[DONE] [0mMasterList: Connected to master list.
+[N] Incoming connection from 89.77.249.17
+[N] Incoming connection from 109.95.90.197
+[N] Incoming connection from 31.60.137.65
+89.77.249.17 1MatiiYT
+109.95.90.197 kosapolska
+31.60.137.65 _SzEfli
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[N] Incoming connection from 84.15.184.243
+84.15.184.243 edgar12345cake
+[N] 185.186.38.1:49285 has been disconnected.
+[N] 89.77.249.17:55082 has been disconnected.
+[N] Incoming connection from 89.77.249.17
+89.77.249.17 1MatiiYT
+[N] Incoming connection from 83.5.128.254
+[N] 83.5.128.254:53840 has been disconnected.
+[N] Incoming connection from 83.5.128.254
+83.5.128.254 Limfao23
+[N] 89.77.249.17:55082 has been disconnected.
+[N] Incoming connection from 89.77.249.17
+89.77.249.17 1MatiiYT
+[N] 89.77.249.17:55082 has been disconnected.
+[N] Incoming connection from 89.77.249.17
+89.77.249.17 1MatiiYT
+[39;49m[32m19:47 [2]_SzEfli: tu co chwilę pada xD
+[39;49m[37m[39;49m[32m19:47 [0]Matii: XD
+[39;49m[37m[N] 89.77.249.17:55082 has been disconnected.
+[N] Incoming connection from 89.77.249.17
+89.77.249.17 1MatiiYT
+[N] 109.95.90.197:54337 has been disconnected.
+[N] Incoming connection from 109.95.90.197
+109.95.90.197 kosapolska
+[N] 89.77.249.17:55082 has been disconnected.
+[N] Incoming connection from 89.77.249.17
+89.77.249.17 1MatiiYT
+[N] 83.5.128.254:56051 has been disconnected.
+[N] 89.77.249.17:55082 has been disconnected.
+[N] Incoming connection from 89.77.249.17
+89.77.249.17 1MatiiYT
+[N] 89.77.249.17:55082 has been disconnected.
+[N] Incoming connection from 89.77.249.17
+89.77.249.17 1MatiiYT
+[39;49m[32m19:59 [4]edi1: pomusz zaviesilemse
+[39;49m[37m[N] 89.77.249.17:55082 has been disconnected.
+[N] Incoming connection from 89.77.249.17
+89.77.249.17 1MatiiYT
+[N] 89.77.249.17:55082 has been disconnected.
+[N] Incoming connection from 89.77.249.17
+89.77.249.17 1MatiiYT
+[N] 31.60.137.65:27459 has been disconnected.
+[N] Incoming connection from 37.47.129.72
+37.47.129.72 kacper53161
+[N] 37.47.129.72:17350 has been disconnected.
+[N] 89.77.249.17:55082 has been disconnected.
+[N] Incoming connection from 188.47.121.5
+188.47.121.5 RumaK1982
+[39;49m[32m20:43 [1]kosapolska: Witam rumak
+[39;49m[37m[N] 109.95.90.197:54337 has been disconnected.
+[N] Incoming connection from 109.95.90.197
+109.95.90.197 kosapolska
+[39;49m[32m20:56 [4]edi1: siema rumak
+[39;49m[37m[39;49m[32m20:57 [0]RumaK1982: siema - uzbierałeś kasę edi ?
+[39;49m[37m[N] 84.15.184.243:64946 has been disconnected.
+[N] Incoming connection from 84.15.184.243
+84.15.184.243 edgar12345cake
+[N] Incoming connection from 89.77.249.17
+89.77.249.17 1MatiiYT
+[N] Incoming connection from 85.221.138.183
+85.221.138.183 Pudliszkowy
+[N] Incoming connection from 83.5.128.254
+[N] 83.5.128.254:56136 has been disconnected.
+[39;49m[32m21:22 [3]Matii: witam tuner dostepny
+[39;49m[37m[N] Incoming connection from 83.5.128.254
+83.5.128.254 Limfao23
+[39;49m[32m21:23 [3]Matii: @1 jesteś dc
+[39;49m[37m[39;49m[32m21:23 [1]kosapolska: No a co 
+[39;49m[37m[39;49m[32m21:24 [3]Matii: to dawaj
+[39;49m[37m[39;49m[32m21:24 [3]Matii: sws
+[39;49m[37m[N] Incoming connection from 31.60.137.65
+31.60.137.65 _SzEfli
+[39;49m[32m21:32 [5]Limfao23: ok
+[39;49m[37m[39;49m[32m21:32 [5]Limfao23: e dajta kaske
+[39;49m[37m[39;49m[32m21:32 [5]Limfao23: pls
+[39;49m[37m[39;49m[32m21:33 [3]Matii: masz na mapie jajka 1 jajko daje 100k
+[39;49m[37m[39;49m[32m21:33 [5]Limfao23: a gdzie jakies jajucho ujest?
+[39;49m[37m[39;49m[32m21:34 [4]Pudliszek: 100k daje ? xD kiedyś nie dawało xD
+[39;49m[37m[39;49m[32m21:35 [5]Limfao23: duze te jajo jest?
+[39;49m[37m[39;49m[32m21:35 [3]Matii: tak
+[39;49m[37m[39;49m[32m21:35 [4]Pudliszek: i w nocy łatwiej znaleść 
+[39;49m[37m[39;49m[32m21:36 [4]Pudliszek: bo się świeci na czerwono
+[39;49m[37m[39;49m[32m21:46 [6]_SzEfli: w jakich miejscach szukać tych jajek?
+[39;49m[37m[39;49m[32m21:46 [5]Limfao23: miedzy nogami poszukaj ez?
+[39;49m[37m[39;49m[32m21:46 [6]_SzEfli: to wtedy 2 znalazłem
+[39;49m[37m[39;49m[32m21:46 [4]Pudliszek: wszędzie na mapie gdzie możesz dojść z buta 
+[39;49m[37m[39;49m[32m21:46 [4]Pudliszek: i chyba jest ich 100 do danego gracza
+[39;49m[37m[N] Incoming connection from 213.108.119.240
+[N] 109.95.90.197:54337 has been disconnected.
+[N] 213.108.119.240:56396 has been disconnected.
+[N] Incoming connection from 213.108.119.240
+[N] 213.108.119.240:56396 has been disconnected.
+[N] 85.221.138.183:57708 has been disconnected.
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[39;49m[32m21:55 [1]robotek019: siema
+[39;49m[37m[39;49m[32m21:56 [1]robotek019: na starcie nie ma pojazdu publicznego :) nie respi się?
+[39;49m[37m[39;49m[32m21:56 [6]_SzEfli: chyba się zepsuło, bo wsiąść nie idzie
+[39;49m[37m[N] 83.5.128.254:56467 has been disconnected.
+[N] 31.60.137.65:6285 has been disconnected.
+[39;49m[32m22:19 [0]RumaK1982: jak z tunera skorzystać ?
+[39;49m[37m[39;49m[32m22:21 [2]edi1: mati ma tunera
+[39;49m[37m[N] Incoming connection from 87.123.195.226
+87.123.195.226 SHOGUN_77
+[39;49m[32m22:25 [0]RumaK1982: mati będziesz u siebie ?
+[39;49m[37m[39;49m[32m22:26 [2]edi1: zahwile bendze
+[39;49m[37m[39;49m[32m22:28 [4]SHOGUN77: siemka
+[39;49m[37m[39;49m[32m22:28 [3]Matii: siema
+[39;49m[37m[39;49m[32m22:29 [2]edi1: siema
+[39;49m[37m[39;49m[32m22:30 [3]Matii: szybko naprawie auto i już jade
+[39;49m[37m[39;49m[32m22:31 [4]SHOGUN77: gratulacje biznesu :)
+[39;49m[37m[39;49m[32m22:31 [3]Matii: Dzięki
+[39;49m[37m[39;49m[32m22:32 [4]SHOGUN77: masz felgi uliczne na magazynie?]
+[39;49m[37m[39;49m[32m22:32 [3]Matii: zaraz sprawdzę
+[39;49m[37m[39;49m[32m22:34 [3]Matii: jakieś tam mam
+[39;49m[37m[N] 89.77.249.17:63126 has been disconnected.
+[N] Incoming connection from 89.77.249.17
+[N] 89.77.249.17:63126 has been disconnected.
+[N] Incoming connection from 89.77.249.17
+89.77.249.17 1MatiiYT
+[39;49m[32m22:45 [1]robotek019: gdzie szukać znajdziek? :D
+[39;49m[37m[N] Incoming connection from 91.239.249.219
+91.239.249.219 brodwayline
+[N] 91.239.249.219:60282 has been disconnected.
+[N] 213.108.119.240:62453 has been disconnected.
+[N] 87.123.195.226:23668 has been disconnected.
+[39;49m[32m23:07 [0]RumaK1982: jak się wydostać z wody ?
+[39;49m[37m[N] 188.47.121.5:44951 has been disconnected.
+[N] Incoming connection from 188.47.121.5
+188.47.121.5 RumaK1982
+[39;49m[32m23:13 [2]edi1: niewiem 
+[39;49m[37m[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[N] Incoming connection from 83.22.119.245
+83.22.119.245 Drymaniusz
+[N] 213.108.119.240:53727 has been disconnected.
+[N] Incoming connection from 213.108.119.240
+[N] 213.108.119.240:53727 has been disconnected.
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[39;49m[32m23:29 [0]RumaK1982: tak 
+[39;49m[37m[39;49m[32m23:30 [0]RumaK1982: thx 
+[39;49m[37m[N] Incoming connection from 217.173.2.135
+217.173.2.135 Ksipko
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] Incoming connection from 87.101.35.161
+87.101.35.161 TomoHERE_3hunna
+[39;49m[32m23:36 [3]Matii: siema
+[39;49m[37m[39;49m[32m23:44 [5]Ksipko: ,
+[39;49m[37m[39;49m[32m23:44 [5]Ksipko: elo
+[39;49m[37mObject reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at void ServerSide.MainClass.ConfirmCarTrade(Player player, Player seller, int carId, int price) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 1658
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+Object reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at void ServerSide.MainClass.ConfirmCarTrade(Player player, Player seller, int carId, int price) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 1658
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+Object reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at void ServerSide.MainClass.ConfirmCarTrade(Player player, Player seller, int carId, int price) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 1658
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+Connection refused [::1]:3306
+[N] 188.47.121.5:44951 has been disconnected.
+[N] 89.77.249.17:54082 has been disconnected.
+[N] 84.15.184.243:64946 has been disconnected.
+[39;49m[32m23:56 [5]Wika: ELO
+[39;49m[37m[39;49m[32m23:56 [6]Tommo: elo
+[39;49m[37m[39;49m[32m23:57 [4].Drymaniusz*: Hejterów będziemy banować.
+[39;49m[37m[39;49m[32m23:57 [5]Wika: plis nie
+[39;49m[37mConnection refused [::1]:3306
+[39;49m[32m00:18 [4].Drymaniusz*: Hejterów będziemy banować.
+[39;49m[37m[39;49m[32m00:19 [4].Drymaniusz*: a ty leniu smierdzacy tez chcesz?
+[39;49m[37m[39;49m[32m00:20 [5]Wika: no pytasz
+[39;49m[37m[39;49m[32m00:21 [4].Drymaniusz*: pod f2 macie rozpisane prace
+[39;49m[37m[39;49m[32m00:25 [5]Wika: e e e
+[39;49m[37m[39;49m[32m00:25 [5]Wika: to mojjjeee
+[39;49m[37m[39;49m[32m00:26 [5]Wika: chuj łysy mnie zabił
+[39;49m[37m[39;49m[32m00:32 [5]Wika: ok
+[39;49m[37m[39;49m[32m00:32 [4].Drymaniusz*: ko
+[39;49m[37m[39;49m[32m00:32 [5]Wika: masz bana
+[39;49m[37m[39;49m[32m00:43 [5]Wika: e chuje jebane
+[39;49m[37m[39;49m[32m00:43 [6]TomoHERE: grzeczniej małolat
+[39;49m[37m[39;49m[32m00:43 [5]Wika: X D
+[39;49m[37m[39;49m[32m00:43 [5]Wika: dziadek
+[39;49m[37m[N] 213.108.119.240:61037 has been disconnected.
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[N] 217.173.2.135:45152 has been disconnected.
+[N] 87.101.35.161:27441 has been disconnected.
+[N] Incoming connection from 217.173.2.135
+217.173.2.135 Ksipko
+[39;49m[32m00:48 [1]Wika: es
+[39;49m[37m[N] Incoming connection from 87.101.35.161
+[N] Incoming connection from 185.186.38.1
+87.101.35.161 TomoHERE_3hunna
+185.186.38.1 maciejooosek
+[39;49m[32m00:50 [3]MeHow: sima
+[39;49m[37m[39;49m[32m00:50 [1]Wika: sima
+[39;49m[37m[39;49m[32m00:50 [2]TomoHERE: cześć
+[39;49m[37m[39;49m[32m00:50 [3]MeHow: chce ktos diamond cuty za 10k?
+[39;49m[37m[39;49m[32m00:51 [0]robotek019: nie wiem co to ale to nie dużo więc mogę wziąć xD
+[39;49m[37m[39;49m[32m00:51 [2]TomoHERE: ja chce takiego merolka jak ma dymaniusz 
+[39;49m[37m[39;49m[32m00:51 [3]MeHow: felgi xD
+[39;49m[37m[39;49m[32m00:52 [3]MeHow: tjuner otwarty zapraszam na diamond cuty w okazyjnej cenie
+[39;49m[37m[39;49m[32m00:52 [4].Drymaniusz*: to sa te kox felunie?
+[39;49m[37m[39;49m[32m00:52 [4].Drymaniusz*: unikatowe?
+[39;49m[37m[39;49m[32m00:52 [3]MeHow: tak, to te najlepsze
+[39;49m[37m[39;49m[32m00:52 [1]Wika: to ja do faggio poprosze
+[39;49m[37m[39;49m[32m00:53 [0]robotek019: pomaluje auto i wpadnę :D 
+[39;49m[37m[39;49m[32m00:53 [4].Drymaniusz*: kurde chyba nie jestem godzien aby je posiadac
+[39;49m[37m[39;49m[32m00:53 [3]MeHow: każdy kto ma 10k i auto jest godzien XD
+[39;49m[37m[39;49m[32m00:53 [3]MeHow: @0 wpadaj, czekam
+[39;49m[37m[39;49m[32m00:54 [0]robotek019: jak obsługuje się lakiernię? :D
+[39;49m[37m[39;49m[32m00:54 [3]MeHow: dajesz E
+[39;49m[37m[39;49m[32m00:54 [0]robotek019: to trąbie xD
+[39;49m[37m[39;49m[32m00:54 [3]MeHow: i wybierasz który kolor: podstawowy/drugi
+[39;49m[37m[39;49m[32m00:54 [3]MeHow: moment xD
+[39;49m[37m[39;49m[32m00:55 [0]robotek019: za 3 wjazdem zadziałało :D
+[39;49m[37m[39;49m[32m00:55 [3]MeHow: noo moze sie bugowac
+[39;49m[37m[39;49m[32m00:55 [3]MeHow: na razie nie poprawialem takich niedokonczonych rzeczy xD
+[39;49m[37m[39;49m[32m00:58 [2]TomoHERE: dymaniusz, tepnij mnie tam na tjunera
+[39;49m[37m[39;49m[32m01:12 [0]robotek019: @3 jesteś jeszcze? może coś z tym dominatorem się da ogarnać
+[39;49m[37m[39;49m[32m01:13 [2]TomoHERE: sadge nie moge pumy podniesc
+[39;49m[37m[39;49m[32m01:13 [1]Wika: co ma jaja z gumy
+[39;49m[37m[39;49m[32m01:13 [3]MeHow: zara podjade
+[39;49m[37m[39;49m[32m01:13 [3]MeHow: a daj I i zobacz ile masz miejsca na skóry
+[39;49m[37m[39;49m[32m01:13 [0]robotek019: jestem przy nim więc jak coś to tp
+[39;49m[37m[39;49m[32m01:14 [3]MeHow: czej chwile
+[39;49m[37m[39;49m[32m01:14 [2]TomoHERE: to tu jest eq? XD
+[39;49m[37m[39;49m[32m01:14 [3]MeHow: tak xD
+[39;49m[37m[39;49m[32m01:14 [3]MeHow: i umiejętności pod U
+[39;49m[37m[39;49m[32m01:16 [0]robotek019: w sumie przeglądam tabelę kar, gdzie w takim razie można pisać ogłoszenia? :D
+[39;49m[37m[39;49m[32m01:16 [3]MeHow: obecnie możesz wszędzie
+[39;49m[37m[39;49m[32m01:16 [3]MeHow: xD
+[39;49m[37m[39;49m[32m01:17 [2]TomoHERE: eee
+[39;49m[37m[39;49m[32m01:17 [2]TomoHERE: czemu fura zrobila bum XD
+[39;49m[37m[39;49m[32m01:17 [1]Wika: XDDD
+[39;49m[37m[39;49m[32m01:17 [3]MeHow: która? xD
+[39;49m[37m[39;49m[32m01:17 [2]TomoHERE: ta co mi sprzedales XD
+[39;49m[37m[39;49m[32m01:17 [3]MeHow: o kjurba
+[39;49m[37m[39;49m[32m01:18 [3]MeHow: nie wiem xDD
+[39;49m[37m[39;49m[32m01:18 [2]TomoHERE: zdechlem se
+[39;49m[37m[39;49m[32m01:18 [3]MeHow: a walnales w stacje?
+[39;49m[37m[39;49m[32m01:18 [2]TomoHERE: strzelalem do niej z pompy z pracy
+[39;49m[37m[39;49m[32m01:18 [3]MeHow: aj
+[39;49m[37m[39;49m[32m01:18 [3]MeHow: nie powinno być tak
+[39;49m[37m[39;49m[32m01:18 [2]TomoHERE: dymaniusz tepnij mnie do wiki 
+[39;49m[37m[39;49m[32m01:18 [1]Wika: '' wiesz że strzelając w auto robisz jeszcze wieksza glebe?'' - TOMO
+[39;49m[37m[39;49m[32m01:18 [2]TomoHERE: no nie XD bo mozna komus fure wyjebac XD
+[39;49m[37m[39;49m[32m01:19 [3]MeHow: no xD poprawie to .soon
+[39;49m[37m[39;49m[32m01:19 [2]TomoHERE: ogolnie da sie fury niszczyc ta bronia xd
+[39;49m[37m[39;49m[32m01:20 [3]MeHow: to wiemw
+[39;49m[37m[39;49m[32m01:20 [3]MeHow: musze to ogarnac xD
+[39;49m[37m[39;49m[32m01:21 [1]Wika: a znajdzki juz sa?
+[39;49m[37m[39;49m[32m01:21 [0]robotek019: są :)
+[39;49m[37m[39;49m[32m01:22 [1]Wika: o kuurde
+[39;49m[37m[39;49m[32m01:22 [0]robotek019: ale boje się gdzie one będą bo są takie miejsca że ... da się gdzieś wejść ale to akrobatyka lvl master :D
+[39;49m[37m[39;49m[32m01:23 [3]MeHow: wiedz jedno, robił je janiax
+[39;49m[37m[39;49m[32m01:23 [3]MeHow: a janiax to chuj
+[39;49m[37m[39;49m[32m01:23 [4].Drymaniusz*: tak
+[39;49m[37m[39;49m[32m01:23 [2]TomoHERE: dymaniusz problem jest
+[39;49m[37m[39;49m[32m01:23 [4].Drymaniusz*: comuwisz
+[39;49m[37m[39;49m[32m01:23 [1]Wika: widzisz mnie
+[39;49m[37m[39;49m[32m01:23 [2]TomoHERE: utkłem
+[39;49m[37m[39;49m[32m01:23 [2]TomoHERE: pomusz
+[39;49m[37m[39;49m[32m01:26 [0]robotek019: kazda znajdźka ma tę samą wartość?
+[39;49m[37m[39;49m[32m01:35 [4].Drymaniusz*: Hejterów będziemy banować.
+[39;49m[37m[39;49m[32m01:35 [3]MeHow: Hejterów będziemy banować.
+[39;49m[37m[39;49m[32m01:35 [4].Drymaniusz*: i chuj
+[39;49m[37m[39;49m[32m01:47 [0]robotek019: ten deszcz jest za często... xD
+[39;49m[37m[39;49m[32m01:47 [4].Drymaniusz*: @3 widzisz chuju nie tylko ja jestem tego zdania
+[39;49m[37m[39;49m[32m01:49 [2]TomoHERE: tez chce
+[39;49m[37m[39;49m[32m01:50 [3]MeHow: o i jeszcze bmw seria 8 jest
+[39;49m[37m[39;49m[32m01:50 [2]TomoHERE: poka
+[39;49m[37m[39;49m[32m01:50 [1]Wika: poooka
+[39;49m[37m[39;49m[32m01:53 [0]robotek019: @3 jak blisko trzeba być znajdźki żeby usłyszeć dźwięk?
+[39;49m[37m[39;49m[32m01:53 [4].Drymaniusz*: masz szosty zmysl?
+[39;49m[37m[39;49m[32m01:53 [4].Drymaniusz*: jezeli nie to wcale nie uslyszysz
+[39;49m[37m[39;49m[32m01:53 [4].Drymaniusz*: a jezeli tak to 25m
+[39;49m[37m[39;49m[32m01:56 [0]robotek019: to do zwiększenia jest wtedy :P bo szybciej ją zobaczysz niż usłyszysz ;/
+[39;49m[37m[39;49m[32m01:56 [0]robotek019: albo nie działa :D
+[39;49m[37m[39;49m[32m01:56 [3]MeHow: działa
+[39;49m[37m[39;49m[32m01:56 [4].Drymaniusz*: dziala dziala
+[39;49m[37m[39;49m[32m01:56 [3]MeHow: i jest nawet za op
+[39;49m[37m[39;49m[32m01:57 [0]robotek019: nie możliwe bo stałem chwile temu i patrzyłem się na nią xD i nic nie słyszałem ;D
+[39;49m[37m[39;49m[32m01:57 [3]MeHow: dziwne
+[39;49m[37m[39;49m[32m01:58 [0]robotek019: dużo szybciej widać światło niż dźwięk... dźwięk mógłby być cichszy ale za to z większej odległości (coś w stylu voice) im bliżej tym głośniej
+[39;49m[37m[39;49m[32m01:58 [3]MeHow: działa dobrze, możliwe że cos ci sie zbugowalo
+[39;49m[37m[39;49m[32m01:58 [0]robotek019: jak ją oderałem to usłyszałem ;D ale skoro widziałem już ją wyraźnie to bez sensu ten dźwięk xD
+[39;49m[37m[39;49m[32m01:58 [3]MeHow: dźwięk jest co 4 sekundu
+[39;49m[37m[39;49m[32m01:58 [3]MeHow: z 25 metrów
+[39;49m[37mObject reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at void ServerSide.MainClass.ConfirmCarTrade(Player player, Player seller, int carId, int price) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 1658
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+[39;49m[32m02:00 [0]robotek019: mówię moje odczucia to już 2 znajdźka która najpierw była widoczna potem słyszalna, i czekałem chwile na ten gong ;d
+[39;49m[37m[39;49m[32m02:00 [3]MeHow: bo to nie jest po to żeby cię za rączke prowadziło do znajdziek
+[39;49m[37m[39;49m[32m02:00 [4].Drymaniusz*: ja 2 znalazlem robiac rapsy wiec normalnie dziala
+[39;49m[37m[39;49m[32m02:01 [3]MeHow: to ma byc podpowiedz, niekiedy sytuacyjna
+[39;49m[37m[39;49m[32m02:01 [3]MeHow: to nie sa znajdzki eventowe, tylko normalna serwerowa aktywnosc
+[39;49m[37m[39;49m[32m02:01 [3]MeHow: nie mozemy ich rozdać tak żeby gracz je znalazł w 2 dni
+[39;49m[37m[39;49m[32m02:02 [0]robotek019: to jest beta? jeszcze będzie WIPE? :D
+[39;49m[37m[39;49m[32m02:02 [3]MeHow: tak
+[39;49m[37m[39;49m[32m02:03 [0]robotek019: a jakies ramówki czasowe masz określone?
+[39;49m[37mObject must implement IConvertible.
+previewWheelTune: System.InvalidCastException: Object must implement IConvertible.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+Object must implement IConvertible.
+sendWheelTuneOffer: System.InvalidCastException: Object must implement IConvertible.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+[39;49m[32m02:23 [1]Wika: co jest z tym deszczem nie tak
+[39;49m[37m[39;49m[32m02:23 [3]MeHow: jest git przeciez pada
+[39;49m[37m[39;49m[32m02:23 [3]MeHow: wielka angolia
+[39;49m[37m[39;49m[32m02:24 [3]MeHow: deszcz musi padac zeby sie woda na herbate nie skonczyla
+[39;49m[37m[39;49m[32m02:24 [1]Wika: xD
+[39;49m[37m[N] Incoming connection from 87.123.195.226
+87.123.195.226 SHOGUN_77
+[39;49m[32m02:25 [5]SHOGUN77: siemka
+[39;49m[37m[39;49m[32m02:25 [3]MeHow: siema
+[39;49m[37m[39;49m[32m02:25 [1]Wika: elo
+[39;49m[37m[39;49m[32m02:25 [2]TomoHERE: elo
+[39;49m[37m[39;49m[32m02:25 [2]TomoHERE: @3 da rade mechaniczny?d
+[39;49m[37m[39;49m[32m02:25 [3]MeHow: da rade
+[39;49m[37m[39;49m[32m02:27 [0]robotek019: 9/100 a liczyłem że w labirycie z żywopłotu będzie 10-ta xD
+[39;49m[37m[N] Incoming connection from 84.15.184.243
+84.15.184.243 edgar12345cake
+[39;49m[32m02:29 [4].Drymaniusz*: obraza administracji? jak to perm chyba
+[39;49m[37m[39;49m[32m02:29 [1]Wika: ale ze kto
+[39;49m[37m[39;49m[32m02:29 [4].Drymaniusz*: nwm
+[39;49m[37m[39;49m[32m02:29 [3]MeHow: obraza administracji > obraza gracza pamietaj
+[39;49m[37m[39;49m[32m02:29 [2]TomoHERE: ona to z milosci
+[39;49m[37m[39;49m[32m02:29 [1]Wika: no ja z miłości zawsze
+[39;49m[37m[39;49m[32m02:29 [2]TomoHERE: jak ona pisze ze jestes chuj to znaczy ze cie lubi
+[39;49m[37m[39;49m[32m02:30 [2]TomoHERE: randomom tego nei pisze, ich wyzywa od kurew i innych takich
+[39;49m[37m[39;49m[32m02:30 [1]Wika: nie słuchajcie go ja nikogo nie wyzywam :)
+[39;49m[37m[39;49m[32m02:30 [1]Wika: SIEMA EDI1
+[39;49m[37m[39;49m[32m02:32 [6]edi1: siema
+[39;49m[37m[39;49m[32m02:33 [1]Wika: Serwer jest w fazie testowej/tworzenia! Prosimy o wyrozumiałość i zgładzanie weentualnych błędów :)
+[39;49m[37m[39;49m[32m02:33 [3]MeHow: czm odgapiasz
+[39;49m[37m[39;49m[32m02:33 [1]Wika: ja zmieniłam
+[39;49m[37m[39;49m[32m02:33 [4].Drymaniusz*: Hejterów będziemy banować.
+[39;49m[37m[39;49m[32m02:33 [3]MeHow: widze
+[39;49m[37m[39;49m[32m02:33 [3]MeHow: Hejterów będziemy banować.
+[39;49m[37m[39;49m[32m02:33 [1]Wika: czyli dymaniusz do bana
+[39;49m[37m[39;49m[32m02:33 [3]MeHow: wpisz se /proklin
+[39;49m[37m[N] 87.123.195.226:23676 has been disconnected.
+[39;49m[32m02:33 [1]Wika: Hejterów będziemy banować.
+[39;49m[37m[39;49m[32m02:33 [0]robotek019: Hejterów będziemy banować.
+[39;49m[37m[39;49m[32m02:33 [2]TomoHERE: Hejterów będziemy banować.
+[39;49m[37m[N] Incoming connection from 87.123.195.226
+[39;49m[32m02:33 [4].Drymaniusz*: Hejterów będziemy banować.
+[39;49m[37m87.123.195.226 SHOGUN_77
+[39;49m[32m02:33 [1]Wika: xD
+[39;49m[37m[39;49m[32m02:33 [3]MeHow: Hejterów będziemy banować.
+[39;49m[37m[39;49m[32m02:34 [1]Wika: proklin kiedy rotka ubrań
+[39;49m[37m[39;49m[32m02:34 [3]MeHow: to jest razem z gta v taka funkcja ja nie robilem
+[39;49m[37m[39;49m[32m02:34 [3]MeHow: .soon
+[39;49m[37m[N] 84.15.184.243:50182 has been disconnected.
+[N] Incoming connection from 84.15.184.243
+84.15.184.243 edgar12345cake
+[N] 87.123.195.226:23676 has been disconnected.
+[N] Incoming connection from 87.123.195.226
+87.123.195.226 SHOGUN_77
+[39;49m[32m02:36 [5]SHOGUN77: ten voice ucina jak do urzedu sie wchodzi
+[39;49m[37m[39;49m[32m02:37 [3]MeHow: nie ma to raczej nzaczenia
+[39;49m[37m[39;49m[32m02:37 [3]MeHow: voice ucina jak cache sie zapelania pewnie
+[39;49m[37m[39;49m[32m02:37 [3]MeHow: niby go czyszcze ale no
+[39;49m[37m[39;49m[32m02:37 [3]MeHow: #justragempthing
+[39;49m[37m[39;49m[32m02:37 [3]MeHow: s
+[39;49m[37m[39;49m[32m02:38 [5]SHOGUN77: wejscie do urzedu ucina
+[39;49m[37m[39;49m[32m02:39 [5]SHOGUN77: sprawdz
+[39;49m[37m[39;49m[32m02:39 [5]SHOGUN77: trzeba reconnect robic
+[39;49m[37m[N] 87.123.195.226:23676 has been disconnected.
+[N] Incoming connection from 87.123.195.226
+87.123.195.226 SHOGUN_77
+[39;49m[32m02:43 [3]MeHow: mozliwe ze ucina
+[39;49m[37m[39;49m[32m02:43 [3]MeHow: ten voice to od ragemp
+[39;49m[37m[39;49m[32m02:43 [3]MeHow: nie moja kwestia
+[39;49m[37m[N] 185.186.38.1:59228 has been disconnected.
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[39;49m[32m02:44 [3]MeHow: admin chuj
+[39;49m[37m[39;49m[32m02:45 [4].Drymaniusz*: +1
+[39;49m[37m[39;49m[32m02:45 [3]MeHow: na szczescie go nie ma
+[39;49m[37m[39;49m[32m02:46 [5]SHOGUN77: a da sie cos innego na rage wgrac?
+[39;49m[37m[39;49m[32m02:46 [3]MeHow: da sie wgrac plugin oparty na ts3
+[39;49m[37m[39;49m[32m02:46 [3]MeHow: ale mega opoznienia i jest niestabilny
+[39;49m[37m[39;49m[32m02:47 [3]MeHow: wiem że można kosić chodnik
+[39;49m[37m[39;49m[32m02:51 [5]SHOGUN77: MeHow felgi wczoraj zamawialem, kurier byl?
+[39;49m[37m[39;49m[32m02:51 [3]MeHow: był xD
+[39;49m[37m[39;49m[32m02:51 [5]SHOGUN77: jade
+[39;49m[37m[39;49m[32m02:51 [6]edi1: obeic calou
+[39;49m[37m[39;49m[32m02:53 [5]SHOGUN77: tylko znowu problem bo mi kombiacza id 38 kosmici porwali
+[39;49m[37m[39;49m[32m02:54 [1]Wika: Hejterów będziemy banować.
+[39;49m[37m[39;49m[32m02:54 [0]robotek019: Hejterów będziemy banować.
+[39;49m[37m[39;49m[32m02:54 [5]SHOGUN77: kosmitow :P
+[39;49m[37m[39;49m[32m02:55 [1]Wika: Serwer jest w fazie testowej/tworzenia! Prosimy o wyrozumiałość i zgłaszanie ewentualnych błędów :)
+[39;49m[37m[39;49m[32m02:58 [5]SHOGUN77: dobra jestem na warsztacie i zw ide po pifo
+[39;49m[37m[39;49m[32m02:58 [6]edi1: zrup reloga
+[39;49m[37m[39;49m[32m02:59 [1]Wika: ed edd i eddy
+[39;49m[37m[N] 84.15.184.243:50182 has been disconnected.
+[N] Incoming connection from 84.15.184.243
+84.15.184.243 edgar12345cake
+[39;49m[32m02:59 [2]TomoHERE: wika to ed
+[39;49m[37m[39;49m[32m02:59 [1]Wika: a tomo to zgred
+[39;49m[37m[39;49m[32m02:59 [5]SHOGUN77: jestem
+[39;49m[37m[39;49m[32m02:59 [2]TomoHERE: nie wyzywaj krasnalu
+[39;49m[37m[39;49m[32m03:00 [1]Wika: wyzsza od was wszystkich jestem 
+[39;49m[37m[39;49m[32m03:00 [2]TomoHERE: jak staniesz na wieży eiffla chyba
+[39;49m[37m[39;49m[32m03:00 [4].Drymaniusz*: prosze utkac tym przedszkolem
+[39;49m[37m[N] 87.123.195.226:23676 has been disconnected.
+[N] Incoming connection from 87.123.195.226
+87.123.195.226 SHOGUN_77
+[N] 84.15.184.243:50182 has been disconnected.
+[N] Incoming connection from 84.15.184.243
+Object reference not set to an instance of an object.
+84.15.184.243 edgar12345cake
+[N] 213.108.119.240:61037 has been disconnected.
+[39;49m[32m03:12 [2]TomoHERE: scam
+[39;49m[37m[39;49m[32m03:13 [1]Wika: XDD
+[39;49m[37m[39;49m[32m03:13 [1]Wika: jak tam spadochron
+[39;49m[37m[39;49m[32m03:13 [2]TomoHERE: spierdalaj
+[39;49m[37m[39;49m[32m03:18 [2]TomoHERE: rip
+[39;49m[37m[N] 217.173.2.135:43557 has been disconnected.
+[N] Incoming connection from 217.173.2.135
+217.173.2.135 Ksipko
+[39;49m[32m03:20 [0]Wika: elooo
+[39;49m[37m[39;49m[32m03:21 [3]MeHow: za brak kasku zabieram prawko
+[39;49m[37m[39;49m[32m03:21 [4].Drymaniusz*: kakakasku?
+[39;49m[37m[39;49m[32m03:22 [5]SHOGUN77: ok, a za lysine?
+[39;49m[37m[39;49m[32m03:22 [4].Drymaniusz*: Hejterów będziemy banować.
+[39;49m[37m[39;49m[32m03:22 [0]Wika: Hejterów będziemy banować.
+[39;49m[37m[39;49m[32m03:22 [5]SHOGUN77: xd
+[39;49m[37m[39;49m[32m03:23 [0]Wika: kupie 4x czarna felga
+[39;49m[37m[39;49m[32m03:24 [2]TomoHERE: XD
+[39;49m[37m[39;49m[32m03:28 [2]TomoHERE: ej dawajcie paleto i wyscig robimy
+[39;49m[37m[39;49m[32m03:28 [0]Wika: juz wygrałam i tak
+[39;49m[37m[39;49m[32m03:34 [2]TomoHERE: es
+[39;49m[37m[39;49m[32m03:34 [2]TomoHERE: 1
+[39;49m[37m[39;49m[32m03:35 [3]MeHow: es 2
+[39;49m[37m[39;49m[32m03:35 [2]TomoHERE: dymaniusz przegral lamus
+[39;49m[37m[39;49m[32m03:35 [2]TomoHERE: XD
+[39;49m[37m[N] 87.123.195.226:23676 has been disconnected.
+[39;49m[32m03:45 [6]edi1: MeHow jestes
+[39;49m[37m[39;49m[32m03:45 [3]MeHow: jestem
+[39;49m[37m[39;49m[32m03:45 [2]TomoHERE: e no admin jak to tak. gracza bum bum
+[39;49m[37m[39;49m[32m03:51 [3]MeHow: calico na sport
+[39;49m[37m[39;49m[32m03:52 [3]MeHow: kto chce zdawać prawko od nowa
+[39;49m[37m[39;49m[32m03:53 [3]MeHow: chyba @4
+[39;49m[37m[39;49m[32m03:53 [4].Drymaniusz*: :(
+[39;49m[37m[39;49m[32m03:53 [3]MeHow: chyba nie chce
+[39;49m[37m[39;49m[32m03:53 [3]MeHow: :<
+[39;49m[37m[39;49m[32m03:54 [3]MeHow: chce ktos felgi?
+[39;49m[37m[39;49m[32m03:54 [3]MeHow: bo ide spac
+[39;49m[37m[39;49m[32m03:54 [2]TomoHERE: piniondza nie mam a bym zrobil
+[39;49m[37m[39;49m[32m03:54 [3]MeHow: ile masz
+[39;49m[37m[39;49m[32m03:54 [2]TomoHERE: 5k
+[39;49m[37m[39;49m[32m03:54 [3]MeHow: to nie mam takich
+[39;49m[37m[39;49m[32m03:58 [6]edi1: dobranoc do dzis
+[39;49m[37m[39;49m[32m03:58 [0]Wika: dobranoc edi
+[39;49m[37m[39;49m[32m03:58 [3]MeHow: siema
+[39;49m[37m[39;49m[32m03:58 [2]TomoHERE: dobranoc
+[39;49m[37m[N] 185.186.38.1:59228 has been disconnected.
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[N] 84.15.184.243:50182 has been disconnected.
+[39;49m[32m04:07 [0]Wika: Hejterów będziemy banować.
+[39;49m[37m[39;49m[32m04:08 [2]TomoHERE: Hejterów będziemy banować.
+[39;49m[37m[39;49m[32m04:18 [2]TomoHERE: czemu to zadupca 300
+[39;49m[37m[39;49m[32m04:19 [1]MeHow: coś robisz źle, jedzie 540
+[39;49m[37m[39;49m[32m04:19 [2]TomoHERE: mmm jakbym na wyspierp gral 2lata temu XD
+[39;49m[37m[39;49m[32m04:19 [2]TomoHERE: chuju
+[39;49m[37m[39;49m[32m04:19 [1]MeHow: mam czarn yekran xD
+[39;49m[37m[39;49m[32m04:20 [1]MeHow: dobra ja spierdalam spac, trzymajcie sie
+[39;49m[37m[39;49m[32m04:20 [2]TomoHERE: naura
+[39;49m[37m[39;49m[32m04:20 [0]Wika: siemanoo
+[39;49m[37m[39;49m[32m04:20 [0]Wika: dobra ja też spierdalam
+[39;49m[37m[N] 185.186.38.1:59228 has been disconnected.
+[39;49m[32m04:20 [2]TomoHERE: ja tez
+[39;49m[37m[39;49m[32m04:21 [0]Wika: eluwina dymaniusz
+[39;49m[37m[39;49m[32m04:21 [4].Drymaniusz*: kazdy 
+[39;49m[37m[39;49m[32m04:21 [2]TomoHERE: dobranoc pajonki na noc wikus
+[39;49m[37m[39;49m[32m04:21 [0]Wika: fnoju
+[39;49m[37m[39;49m[32m04:21 [4].Drymaniusz*: naura
+[39;49m[37m[39;49m[32m04:21 [0]Wika: gnoju
+[39;49m[37m[39;49m[32m04:21 [2]TomoHERE: naura
+[39;49m[37m[N] 217.173.2.135:43557 has been disconnected.
+[N] 87.101.35.161:27269 has been disconnected.
+[N] 83.22.119.245:52299 has been disconnected.
+[N] Incoming connection from 188.47.103.19
+[N] 188.47.103.19:54296 has been disconnected.
+[N] Incoming connection from 188.47.103.19
+188.47.103.19 Pluto_NOWY
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] Incoming connection from 188.47.121.5
+188.47.121.5 RumaK1982
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[N] Incoming connection from 37.30.51.33
+37.30.51.33 RogatyBogaty
+[N] 37.30.51.33:27021 has been disconnected.
+[N] Incoming connection from 37.30.51.33
+37.30.51.33 RogatyBogaty
+[N] 37.30.51.33:27021 has been disconnected.
+[N] 188.47.103.19:59166 has been disconnected.
+[39;49m[32m13:00 [1]RumaK1982: Hejterów będziemy banować.
+[39;49m[37m[N] Incoming connection from 83.22.119.245
+83.22.119.245 Drymaniusz
+[N] 83.22.119.245:50955 has been disconnected.
+[N] Incoming connection from 79.186.226.95
+[N] 79.186.226.95:53923 has been disconnected.
+[N] 188.47.121.5:22639 has been disconnected.
+[N] Incoming connection from 91.245.82.80
+[N] 91.245.82.80:54887 has been disconnected.
+[N] Incoming connection from 91.245.82.80
+[N] 91.245.82.80:54142 has been disconnected.
+[N] Incoming connection from 91.245.82.80
+[N] 91.245.82.80:58086 has been disconnected.
+[N] Incoming connection from 91.245.82.80
+[N] 91.245.82.80:58086 has been disconnected.
+[N] Incoming connection from 188.47.103.19
+[N] 188.47.103.19:63394 has been disconnected.
+[N] 213.108.119.240:64523 has been disconnected.
+[N] Incoming connection from 91.245.82.80
+91.245.82.80 SNOWC4T
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[39;49m[32m17:21 [1]MeHow: siema
+[39;49m[37m[39;49m[32m17:23 [1]MeHow: chcesz jakis tune mechaniczny? albo felgi?
+[39;49m[37m[N] 91.245.82.80:60998 has been disconnected.
+[N] 185.186.38.1:54836 has been disconnected.
+[N] Incoming connection from 91.239.249.163
+91.239.249.163 brodwayline
+[N] 91.239.249.163:55116 has been disconnected.
+[N] Incoming connection from 89.229.84.90
+89.229.84.90 Bombel3k
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[39;49m[32m18:19 [0]Bombel3k: siema
+[39;49m[37m[N] 89.229.84.90:60301 has been disconnected.
+[N] Incoming connection from 89.229.84.90
+89.229.84.90 Bombel3k
+[N] 89.229.84.90:60301 has been disconnected.
+[N] Incoming connection from 89.229.84.90
+89.229.84.90 Bombel3k
+[39;49m[32m18:32 [1]robotek019: siema
+[39;49m[37m[N] Incoming connection from 89.77.249.17
+89.77.249.17 1MatiiYT
+[N] 89.77.249.17:62163 has been disconnected.
+[N] Incoming connection from 89.77.249.17
+89.77.249.17 1MatiiYT
+[N] 89.229.84.90:60301 has been disconnected.
+[N] Incoming connection from 89.229.84.90
+89.229.84.90 Bombel3k
+[39;49m[32m18:58 [1]robotek019: najpierw znajdźki ;D
+[39;49m[37m[39;49m[32m19:00 [1]robotek019: hajsu brak, dominatora kupiłem :D
+[39;49m[37m[39;49m[32m19:01 [2]Matii: Wraźe czego to jak bedziesz chciał ft to pisz do mnie bo mam tunera :)
+[39;49m[37m[N] 89.77.249.17:62163 has been disconnected.
+[N] Incoming connection from 89.77.249.17
+[N] 89.77.249.17:62163 has been disconnected.
+[N] Incoming connection from 89.77.249.17
+89.77.249.17 1MatiiYT
+[N] 89.77.249.17:62163 has been disconnected.
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[39;49m[32m19:34 [2]MeHow: siema
+[39;49m[37m[39;49m[32m19:34 [0]Bombel3k: siema
+[39;49m[37m[N] 89.229.84.90:60301 has been disconnected.
+[N] Incoming connection from 89.229.84.90
+89.229.84.90 Bombel3k
+[39;49m[32m19:41 [0]Bombel3k: to był restart czy mi internet wywaliło ? XD
+[39;49m[37m[39;49m[32m19:43 [2]MeHow: internet xD
+[39;49m[37m[39;49m[32m19:54 [0]Bombel3k: w której pracy zdobywa się punkty społeczne ?
+[39;49m[37m[N] 185.186.38.1:54976 has been disconnected.
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[N] 185.186.38.1:54976 has been disconnected.
+[N] Incoming connection from 91.245.82.80
+91.245.82.80 SNOWC4T
+[N] Incoming connection from 188.47.121.5
+188.47.121.5 RumaK1982
+[N] Incoming connection from 87.101.35.161
+87.101.35.161 TomoHERE_3hunna
+[N] 87.101.35.161:27434 has been disconnected.
+[N] 91.245.82.80:62052 has been disconnected.
+[39;49m[32m20:52 [1]robotek019: jest jakiś deadline na zamknięcie bety/alfy?
+[39;49m[37m[N] Incoming connection from 89.77.249.17
+89.77.249.17 1MatiiYT
+[N] 89.77.249.17:54823 has been disconnected.
+[N] Incoming connection from 89.77.249.17
+89.77.249.17 1MatiiYT
+[N] Incoming connection from 109.173.131.119
+109.173.131.119 AlfPacinoo
+^C[33m[INFO] [0mShutting down the server...
+Shutting down..
+[32m[DONE] [0mThe server has been terminated.
+terminate called without an active exception

@@ -1,0 +1,4 @@
+[22.08.2021 22:09:22] Gracz otrzymał ostrzeżenie, powód: chuj
+[22.08.2021 22:09:28] Gracz otrzymał ostrzeżenie, powód: chuj
+[22.08.2021 22:10:23] Gracz otrzymał ostrzeżenie, powód: chujjjjj
+[22.08.2021 22:10:30] Gracz stracił uprawenienia do prowadzenia pojazdów do 22.08.2021 22:10:30, powód: chuj

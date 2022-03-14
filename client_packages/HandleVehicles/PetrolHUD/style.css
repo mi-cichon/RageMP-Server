@@ -1,0 +1,62 @@
+body, html{
+    font-family: 'PT Sans';
+    user-select: none;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body{
+    position: relative;
+}
+
+
+.petrolHUD_body{
+    width: 20vh;
+    background: radial-gradient(circle, rgba(55,55,55,0.95) 0%, rgba(29,30,34,0.95) 100%);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    animation: slide-from-bottom 1.5s;
+    border-radius: 0.4vh;
+    overflow: hidden;
+}
+
+.nameCol{
+    background-color: rgb(33, 34, 37);
+    width: 100%;
+    text-align: center;
+    padding: 0.9vh 0;
+    font-size: 1.2vh;
+    font-weight: 600;
+    color: white;
+    border-bottom: 1px solid #0c9;
+}
+
+.petrolHUD_content{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0.5vh 1vh;
+    box-sizing: border-box;
+    font-size: 1.1vh;
+    color: white;
+}
+
+.petrolHUD_content > div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.petrolHUD_content > div > b{
+    width: 60%;
+}
+
+.petrolHUD_content > div >p{
+    margin: 0;
+    text-align: right;
+    width: 30%;
+}

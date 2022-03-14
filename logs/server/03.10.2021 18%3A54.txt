@@ -1,0 +1,421 @@
+[33m[INFO] [0mStarting RAGE Multiplayer server...
+[0m[33m
+[============================================================]
+[33m[33m||
+[33m||[33m	MaxPlayers		[0m50[33m
+||	Sync rate		[0m40ms[33m
+||	Name			[0mBasicRPG.pl | W trakcie tworzenia | Wiecej na https://discord.gg/Yr6JeUtEM7 [PL][33m
+||	Gamemode		[0mrpg[33m
+||	Streaming distance	[0m500[33m
+||	Announcement		[0menabled[33m
+||	Voice chat		[0menabled[33m
+||	Address			[0m127.0.0.1:22005[33m
+||	Connection limits	[0mdisabled[33m
+||	Encryption		[0menabled[33m
+||	NodeJS			[0menabled[33m
+||	C#			[0menabled[33m
+||
+[============================================================]
+
+[0m
+[33m[INFO][0m Loading NodeJS packages...
+[33m[INFO][0m Starting packages...
+[32m[DONE][0m Server packages have been started.
+Initializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 10/3/2021 6:54:22 PM
+Unable to load acl.xml
+ACLEnabled: False
+Loaded 667 entries from vehicleData.json
+Loading resources..
+[?1h=[39;49m[33m->[39;49m[37m Starting [39;49m[36mServer[39;49m[37m resource..
+[39;49m[39;49m[37mServer:[39;49m[37m loading scripts.. found 1 script(s)
+[39;49m[39;49m[37mServer:[39;49m[37m instantiating [39;49m[37mServerSide.MainClass[39;49m[37m..
+[39;49mConnection refused [::1]:3306
+10/4/2021 12:14:31 AMXD
+10/4/2021 12:14:31 AMXD
+10/4/2021 1:22:07 AMXD
+10/4/2021 1:22:10 AMXD
+10/4/2021 1:25:02 AMXD
+10/4/2021 1:25:02 AMXD
+10/4/2021 1:25:04 AMXD
+10/4/2021 1:25:04 AMXD
+10/4/2021 1:25:06 AMXD
+10/4/2021 1:25:06 AMXD
+10/4/2021 1:25:07 AMXD
+10/4/2021 1:25:07 AMXD
+10/4/2021 1:25:08 AMXD
+10/4/2021 1:25:08 AMXD
+Connection refused [::1]:3306
+[39;49m[37mServer:[39;49m[37m loading server events.. found 10 server event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 10 server events(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loading remote events.. found 141 remote event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 141 remote event(s)
+[39;49mServer started...
+[39;49m[32m->[39;49m[37m Resource [39;49m[36mServer[39;49m[37m started!
+[39;49m[39;49m[32mStarted! Waiting for connections..
+[39;49m[32m[DONE] [0mStarted resource transfer server at 22006 port.
+[32m[DONE] [0mClient-side packages weight: [33m98.718170 MB[0m (uncompressed: [33m252.788315 MB[0m).
+[33m[INFO] [0mMasterList: Announcing into master server...
+[33m[INFO] [0mInitializing networking...
+[32m[DONE] [0mNetworking has been started: (IPv4-only) at 127.0.0.1:22005
+[32m[DONE] [0mThe server is ready to accept connections.
+[N] Incoming connection from 89.77.249.17
+[32m[DONE] [0mMasterList: Connected to master list.
+89.77.249.17 1MatiiYT
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[N] Incoming connection from 84.15.184.243
+84.15.184.243 edgar12345cake
+[39;49m[32m18:54 [1]MeHow: chce ktoś felgi zamontować dla testu? xD
+[39;49m[37m[N] Incoming connection from 37.30.112.69
+37.30.112.69 JaniaX135
+[39;49m[32m18:55 [1]MeHow: nieważne
+[39;49m[37m[N] Incoming connection from 91.245.82.80
+91.245.82.80 SNOWC4T
+[N] 37.30.112.69:7121 has been disconnected.
+[N] Incoming connection from 46.238.234.224
+46.238.234.224 DeHektor2
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] Incoming connection from 83.4.93.114
+83.4.93.114 swirek1970544
+[N] 83.4.93.114:57369 has been disconnected.
+[N] 91.245.82.80:49676 has been disconnected.
+[N] 46.238.234.224:56427 has been disconnected.
+[N] Incoming connection from 91.245.82.80
+91.245.82.80 SNOWC4T
+[39;49m[32m19:46 [1]MeHow: chce ktoś felgi Diamond Cut za 11k?
+[39;49m[37m[N] Incoming connection from 91.239.249.214
+91.239.249.214 brodwayline
+[N] Incoming connection from 91.214.36.60
+91.214.36.60 Styslian
+[N] 91.214.36.60:61136 has been disconnected.
+[N] Incoming connection from 91.214.36.60
+91.214.36.60 Styslian
+[N] Incoming connection from 185.155.43.172
+185.155.43.172 Don_Jacobo
+[N] 91.214.36.60:61136 has been disconnected.
+[N] 91.245.82.80:59616 has been disconnected.
+[39;49m[32m20:18 [1]MeHow: @6 siema prosze przyjdz i kup ode mnie felgi bo nikt nie chce :((
+[39;49m[37m[39;49m[32m20:18 [6]Towarzyszu: dobra ide juz 
+[39;49m[37m[39;49m[32m20:18 [1]MeHow: autem najlepiej XDD
+[39;49m[37m[39;49m[32m20:18 [6]Towarzyszu: dobrze
+[39;49m[37m[N] 91.239.249.214:54449 has been disconnected.
+[N] Incoming connection from 91.239.249.214
+91.239.249.214 brodwayline
+[39;49m[32m20:22 [1]MeHow: ktoś jeszcze chce felunie gamingowe?
+[39;49m[37m[39;49m[32m20:24 [6]Towarzyszu: @maper wez sciane zdemontuj
+[39;49m[37mpower: 23, speed:189
+power: 23, speed:189
+power: 23, speed:189
+[39;49m[32m20:31 [3]banasiur: a ten w jesterze w grillach sie swiatla zmienia, wiec cos chujowo opisane
+[39;49m[37m[39;49m[32m20:31 [1]MeHow: to są opisy z GTA
+[39;49m[37m[39;49m[32m20:31 [1]MeHow: przetłumaczone przez janiaxa
+[39;49m[37m[39;49m[32m20:31 [3]banasiur: zmień tłumacza xD
+[39;49m[37m[39;49m[32m20:31 [1]MeHow: a on myśli że rear to prawy
+[39;49m[37m[39;49m[32m20:32 [6]Towarzyszu: no a co lewy
+[39;49m[37m[39;49m[32m20:32 [1]MeHow: xD
+[39;49m[37m[39;49m[32m20:32 [6]Towarzyszu: tlumacz google lepszy niz anglista 
+[39;49m[37m[N] Incoming connection from 83.22.119.245
+83.22.119.245 Drymaniusz
+Object reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at void ServerSide.MainClass.ConfirmCarTrade(Player player, Player seller, int carId, int price) in /home/ragemp/ragemp-srv/dotnet/resources/Server/MainClass.cs:line 1424
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+[N] Incoming connection from 83.4.93.114
+[39;49m[32m20:46 [3]banasiur: te pojazdy na salonach to sie zmieniaja co jakis czas czy jedynie przy restartach albo jak ktoś kupi?
+[39;49m[37m[39;49m[32m20:46 [4].Drymaniusz*: czas
+[39;49m[37mObject reference not set to an instance of an object.
+[N] 83.4.93.114:64872 has been disconnected.
+[N] Incoming connection from 83.4.93.114
+83.4.93.114 swirek1970544
+Connection refused [::1]:3306
+[39;49m[32m20:50 [1]MeHow: zmieniaja sie co 2 godziny
+[39;49m[37m[39;49m[32m20:50 [1]MeHow: a przynajmniej powinny
+[39;49m[37m[39;49m[32m20:50 [1]MeHow: i po restarcie
+[39;49m[37m[39;49m[32m20:50 [1]MeHow: co 2 godziny oczywiscie tylko na czas testów ;p
+[39;49m[37m[N] 185.155.43.172:55371 has been disconnected.
+[N] Incoming connection from 37.47.0.251
+37.47.0.251 CzarekDriver
+[39;49m[32m21:05 [1]MeHow: moge zrolować jakiś komis jak chcecie
+[39;49m[37m[N] Incoming connection from 185.155.43.172
+185.155.43.172 Don_Jacobo
+[N] 91.239.249.214:54449 has been disconnected.
+Value was either too large or too small for an Int32.
+applyCarToMarket: System.OverflowException: Value was either too large or too small for an Int32.
+   at int Convert.ToInt32(double value)
+   at int float.System.IConvertible.ToInt32(IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+Value was either too large or too small for an Int32.
+applyCarToMarket: System.OverflowException: Value was either too large or too small for an Int32.
+   at int Convert.ToInt32(double value)
+   at int float.System.IConvertible.ToInt32(IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+Value was either too large or too small for an Int32.
+applyCarToMarket: System.OverflowException: Value was either too large or too small for an Int32.
+   at int Convert.ToInt32(double value)
+   at int float.System.IConvertible.ToInt32(IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+[N] 185.186.38.1:62148 has been disconnected.
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+Value was either too large or too small for an Int32.
+applyCarToMarket: System.OverflowException: Value was either too large or too small for an Int32.
+   at int Convert.ToInt32(double value)
+   at int float.System.IConvertible.ToInt32(IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+Value was either too large or too small for an Int32.
+applyCarToMarket: System.OverflowException: Value was either too large or too small for an Int32.
+   at int Convert.ToInt32(double value)
+   at int float.System.IConvertible.ToInt32(IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+[39;49m[32m21:19 [7]Towarzyszu: chyba gielde zepsulem
+[39;49m[37m[39;49m[32m21:19 [1]MeHow: tak
+[39;49m[37m[39;49m[32m21:19 [1]MeHow: ktoś dał za wysoką cenę 
+[39;49m[37m[39;49m[32m21:20 [1]MeHow: i się w biednym int nie zmiescila
+[39;49m[37m[39;49m[32m21:20 [4].Drymaniusz*: a to chyba ja XD
+[39;49m[37m[39;49m[32m21:20 [1]MeHow: xD
+[39;49m[37m[39;49m[32m21:23 [7]Towarzyszu: ACHA 
+[39;49m[37m[39;49m[32m21:23 [6]CzarekDriver: porsze szybkie
+[39;49m[37m[39;49m[32m21:23 [7]Towarzyszu: dobra
+[39;49m[37m[39;49m[32m21:30 [7]Towarzyszu: i co teraz
+[39;49m[37m[39;49m[32m21:30 [1]MeHow: @6 co tam?
+[39;49m[37m[39;49m[32m21:30 [7]Towarzyszu: brak godnosci i samochdi
+[39;49m[37m[39;49m[32m21:30 [1]MeHow: xD
+[39;49m[37m[39;49m[32m21:30 [6]CzarekDriver: i oc teraz
+[39;49m[37m[39;49m[32m21:30 [4].Drymaniusz*: XD
+[39;49m[37m[39;49m[32m21:30 [1]MeHow: powinien byc w przecho
+[39;49m[37m[39;49m[32m21:30 [7]Towarzyszu: powtorka
+[39;49m[37m[39;49m[32m21:30 [1]MeHow: @6 co teraz?
+[39;49m[37m[39;49m[32m21:31 [7]Towarzyszu: z tune
+[39;49m[37m[39;49m[32m21:31 [7]Towarzyszu: to bmw
+[39;49m[37m[N] 37.47.0.251:22745 has been disconnected.
+[N] Incoming connection from 37.47.0.251
+37.47.0.251 CzarekDriver
+[39;49m[32m21:33 [3]CzarekDriver: tepnij me how
+[39;49m[37m[N] 185.155.43.172:51293 has been disconnected.
+[N] Incoming connection from 185.155.43.172
+185.155.43.172 Don_Jacobo
+[39;49m[32m21:34 [6]Towarzyszu: czemu why
+[39;49m[37m[39;49m[32m21:34 [4].Drymaniusz*: co
+[39;49m[37m[39;49m[32m21:34 [6]Towarzyszu: baller
+[39;49m[37m[39;49m[32m21:34 [4].Drymaniusz*: co
+[39;49m[37m[N] Incoming connection from 91.245.82.80
+91.245.82.80 SNOWC4T
+[N] 37.47.0.251:22745 has been disconnected.
+[N] Incoming connection from 37.47.0.251
+37.47.0.251 CzarekDriver
+power: 54, speed:219
+[N] 185.155.43.172:51293 has been disconnected.
+power: 21, speed:194
+[39;49m[32m21:52 [3]CzarekDriver: @4 znalazlem
+[39;49m[37m[39;49m[32m21:53 [4].Drymaniusz*: to git
+[39;49m[37mpower: 21, speed:194
+power: 21, speed:194
+[N] Incoming connection from 89.64.35.189
+89.64.35.189 oskar3742
+[N] Incoming connection from 88.130.51.81
+88.130.51.81 SHOGUN_77
+[N] Incoming connection from 62.46.233.74
+62.46.233.74 xuti13
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] 91.245.82.80:61827 has been disconnected.
+[39;49m[32m22:08 [3]CzarekDriver: @4 spalil mi sie 
+[39;49m[37m[N] Incoming connection from 188.47.122.63
+188.47.122.63 0CzErNi0
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] Incoming connection from 83.23.145.93
+83.23.145.93 Miszor08
+power: 22, speed:196
+power: 40, speed:188
+power: 40, speed:188
+power: 40, speed:188
+power: 40, speed:188
+power: 24, speed:196
+[N] 62.46.233.74:63427 has been disconnected.
+[N] 89.77.249.17:55697 has been disconnected.
+Connection refused [::1]:3306
+[N] Incoming connection from 89.77.249.17
+89.77.249.17 1MatiiYT
+power: 24, speed:196
+[39;49m[32m22:24 [10]Wampuski: da mi ktoś autko?
+[39;49m[37mpower: 40, speed:188
+[39;49m[32m22:25 [1]MeHow: nie rozdajemy pieniedzy
+[39;49m[37m[39;49m[32m22:25 [1]MeHow: na mapie są losowo rozrzucone znajdźki
+[39;49m[37m[39;49m[32m22:25 [1]MeHow: jedna daje na chwile testów 100k
+[39;49m[37m[39;49m[32m22:25 [1]MeHow: i 1000 expa
+[39;49m[37mpower: 40, speed:188
+[39;49m[32m22:27 [7]0CzErNi0: witam
+[39;49m[37mpower: 40, speed:188
+[39;49m[32m22:27 [10]Wampuski: ola
+[39;49m[37m[39;49m[32m22:29 [7]0CzErNi0: gdzie jest dc tego serwa?
+[39;49m[37m[39;49m[32m22:29 [4].Drymaniusz*: w nazwie serwera masz np
+[39;49m[37m[39;49m[32m22:29 [7]0CzErNi0: a dzkw
+[39;49m[37m[39;49m[32m22:30 [4].Drymaniusz*: tzn na liscie serwerow w nazwie serwera
+[39;49m[37m[39;49m[32m22:30 [7]0CzErNi0: a okey
+[39;49m[37m[N] Incoming connection from 37.47.38.67
+[39;49m[32m22:30 [5]SWIREK13: a konta beda czyszczone po testach?
+[39;49m[37mObject reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at T GTANetworkAPI.Entity.GetSharedData<T>(string key)
+   at void ServerSide.VehicleDataManager.SavePersonalVehicleDataToDB(Vehicle vehicle, string dataName) in /home/ragemp/ragemp-srv/dotnet/resources/Server/Managers/VehicleDataManager.cs:line 173
+   at void ServerSide.VehicleDataManager.UpdateVehiclesDirtLevel(Vehicle vehicle, float dirt) in /home/ragemp/ragemp-srv/dotnet/resources/Server/Managers/VehicleDataManager.cs:line 209
+   at void ServerSide.MainClass.updateVehiclesDirtLevel(Player player, Vehicle vehicle, float dirtLevel) in /home/ragemp/ragemp-srv/dotnet/resources/Server/MainClass.cs:line 2205
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+Connection refused [::1]:3306
+[N] Incoming connection from 109.95.90.197
+[N] 188.47.122.63:39602 has been disconnected.
+[N] Incoming connection from 188.47.122.63
+37.47.38.67 Szopuuu
+188.47.122.63 0CzErNi0
+Object reference not set to an instance of an object.
+[N] 109.95.90.197:57015 has been disconnected.
+[N] Incoming connection from 109.95.90.197
+109.95.90.197 kosapolska
+power: 20, speed:193
+[39;49m[32m22:33 [8]SHOGUN77: tak
+[39;49m[37m[39;49m[32m22:33 [3]Driver: ei
+[39;49m[37m[39;49m[32m22:34 [4].Drymaniusz*: ei
+[39;49m[37m[N] 188.47.122.63:39602 has been disconnected.
+power: 48, speed:218
+power: 20, speed:193
+power: 20, speed:193
+power: 20, speed:193
+[N] 37.47.0.251:22745 has been disconnected.
+[N] Incoming connection from 37.47.0.251
+37.47.0.251 CzarekDriver
+power: 20, speed:193
+power: 20, speed:193
+power: 20, speed:193
+power: 20, speed:193
+power: 20, speed:193
+[N] 83.23.145.93:64509 has been disconnected.
+[N] 37.47.0.251:22745 has been disconnected.
+[N] 88.130.51.81:17747 has been disconnected.
+[N] Incoming connection from 88.130.51.81
+88.130.51.81 SHOGUN_77
+[N] 88.130.51.81:17747 has been disconnected.
+[N] Incoming connection from 88.130.51.81
+88.130.51.81 SHOGUN_77
+power: 64, speed:225
+[N] Incoming connection from 87.205.35.19
+[N] 89.64.35.189:50638 has been disconnected.
+[N] 87.205.35.19:62246 has been disconnected.
+power: 48, speed:223
+power: 48, speed:223
+[39;49m[32m22:47 [3]SHOGUN77: raporty dzialaja?
+[39;49m[37m[39;49m[32m22:48 [4].Drymaniusz*: dzialaja
+[39;49m[37m[N] 83.4.93.114:58654 has been disconnected.
+power: 20, speed:179
+power: 20, speed:179
+power: 27, speed:184
+[N] 37.47.38.67:18508 has been disconnected.
+[39;49m[32m23:01 [1]MeHow: po prostu admin chujowy i raportów nie robi
+[39;49m[37m[39;49m[32m23:01 [4].Drymaniusz*: sadge
+[39;49m[37mpower: 20, speed:156
+power: 28, speed:180
+power: 32, speed:153
+[N] Incoming connection from 91.239.249.214
+91.239.249.214 brodwayline
+power: 32, speed:153
+[39;49m[32m23:10 [5]banasiur: kurwa utkłem xD
+[39;49m[37m[39;49m[32m23:11 [5]banasiur: Ta mamba to sie coś zrolować nie chce
+[39;49m[37m[39;49m[32m23:12 [4].Drymaniusz*: sportowki sie zrolowaly 
+[39;49m[37m[39;49m[32m23:12 [4].Drymaniusz*: wiec moze jeszcze chwila
+[39;49m[37m[39;49m[32m23:12 [4].Drymaniusz*: ewentualnie z mamby zrolowalo sie na mambe
+[39;49m[37m[39;49m[32m23:12 [4].Drymaniusz*: bo tak tez moze byc
+[39;49m[37m[N] 91.239.249.214:60497 has been disconnected.
+[N] Incoming connection from 91.239.249.214
+91.239.249.214 brodwayline
+[N] 185.186.38.1:62148 has been disconnected.
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+power: 27, speed:186
+power: 27, speed:186
+power: 27, speed:186
+power: 27, speed:186
+Unable to cast object of type 'System.Int32' to type 'System.Single'.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.Single'.
+   at T GTANetworkAPI.Entity.GetSharedData<T>(string key)
+   at void ServerSide.MainClass.UseItem(Player player, int typeId, int itemId) in /home/ragemp/ragemp-srv/dotnet/resources/Server/MainClass.cs:line 1534
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+Unable to cast object of type 'System.Int32' to type 'System.Single'.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.Single'.
+   at T GTANetworkAPI.Entity.GetSharedData<T>(string key)
+   at void ServerSide.MainClass.UseItem(Player player, int typeId, int itemId) in /home/ragemp/ragemp-srv/dotnet/resources/Server/MainClass.cs:line 1534
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+Unable to cast object of type 'System.Int32' to type 'System.Single'.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.Single'.
+   at T GTANetworkAPI.Entity.GetSharedData<T>(string key)
+   at void ServerSide.MainClass.UseItem(Player player, int typeId, int itemId) in /home/ragemp/ragemp-srv/dotnet/resources/Server/MainClass.cs:line 1534
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+power: 20, speed:175
+Unable to cast object of type 'System.Int32' to type 'System.Single'.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.Single'.
+   at T GTANetworkAPI.Entity.GetSharedData<T>(string key)
+   at void ServerSide.MainClass.UseItem(Player player, int typeId, int itemId) in /home/ragemp/ragemp-srv/dotnet/resources/Server/MainClass.cs:line 1534
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+Unable to cast object of type 'System.Int32' to type 'System.Single'.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.Single'.
+   at T GTANetworkAPI.Entity.GetSharedData<T>(string key)
+   at void ServerSide.MainClass.UseItem(Player player, int typeId, int itemId) in /home/ragemp/ragemp-srv/dotnet/resources/Server/MainClass.cs:line 1534
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+power: 33, speed:215
+[N] Incoming connection from 94.101.22.201
+94.101.22.201 _SzEfli
+[39;49m[32m23:26 [1]MeHow: za 3 minuty restart
+[39;49m[37m[39;49m[32m23:26 [1]MeHow: i możliwe że więcej restartów z poprawkami
+[39;49m[37m[N] 91.239.249.214:60497 has been disconnected.
+^C[33m[INFO] [0mShutting down the server...
+Shutting down..
+[32m[DONE] [0mThe server has been terminated.
+terminate called without an active exception

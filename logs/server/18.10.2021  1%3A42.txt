@@ -1,0 +1,869 @@
+[33m[INFO] [0mStarting RAGE Multiplayer server...
+[0m[33m
+[============================================================]
+[33m[33m||
+[33m||[33m	MaxPlayers		[0m50[33m
+||	Sync rate		[0m40ms[33m
+||	Name			[0mBasicRPG.pl | W trakcie tworzenia | Wiecej na https://discord.gg/2vrMdXsdRW [PL][33m
+||	Gamemode		[0mrpg[33m
+||	Streaming distance	[0m500[33m
+||	Announcement		[0menabled[33m
+||	Voice chat		[0menabled[33m
+||	Address			[0m127.0.0.1:22005[33m
+||	Connection limits	[0mdisabled[33m
+||	Encryption		[0menabled[33m
+||	NodeJS			[0menabled[33m
+||	C#			[0menabled[33m
+||
+[============================================================]
+
+[0m
+[33m[INFO][0m Loading NodeJS packages...
+[33m[INFO][0m Starting packages...
+[32m[DONE][0m Server packages have been started.
+Initializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 10/18/2021 1:42:56 AM
+Unable to load acl.xml
+ACLEnabled: False
+Loaded 667 entries from vehicleData.json
+Loading resources..
+[?1h=[39;49m[33m->[39;49m[37m Starting [39;49m[36mServer[39;49m[37m resource..
+[39;49m[39;49m[37mServer:[39;49m[37m loading scripts.. found 1 script(s)
+[39;49m[39;49m[37mServer:[39;49m[37m instantiating [39;49m[37mServerSide.MainClass[39;49m[37m..
+[39;49mConnection refused [::1]:3306
+Connection refused [::1]:3306
+[39;49m[37mServer:[39;49m[37m loading server events.. found 10 server event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 10 server events(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loading remote events.. found 167 remote event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 167 remote event(s)
+[39;49mServer started...
+[39;49m[32m->[39;49m[37m Resource [39;49m[36mServer[39;49m[37m started!
+[39;49m[39;49m[32mStarted! Waiting for connections..
+[39;49m[32m[DONE] [0mStarted resource transfer server at 22006 port.
+[32m[DONE] [0mClient-side packages weight: [33m186.718552 MB[0m (uncompressed: [33m370.821503 MB[0m).
+[33m[INFO] [0mMasterList: Announcing into master server...
+[33m[INFO] [0mInitializing networking...
+[32m[DONE] [0mNetworking has been started: (IPv4-only) at 127.0.0.1:22005
+[32m[DONE] [0mThe server is ready to accept connections.
+[32m[DONE] [0mMasterList: Connected to master list.
+[N] Incoming connection from 83.29.1.163
+[N] Incoming connection from 185.186.38.1
+[N] Incoming connection from 87.101.35.98
+[N] Incoming connection from 84.15.184.80
+[N] 84.15.184.80:54938 has been disconnected.
+[N] Incoming connection from 84.15.184.80
+185.186.38.1 maciejooosek
+84.15.184.80 edgar12345cake
+87.101.35.98 TomoHERE_3hunna
+83.29.1.163 Drymaniusz
+WARNING: "GetPlayerWeapons" function is not implemented yet.
+WARNING: "IsPlayerShooting" function is not implemented yet.
+DEPRECATE: GetPlayerNametag is deprecated.
+WARNING: "GetVehicleBulletproofTyres" function is not implemented yet.
+WARNING: "GetVehicleTyreSmokeColor" function is not implemented yet.
+WARNING: "GetVehicleEnginePowerMultiplier" function is not implemented yet.
+WARNING: "GetVehicleEngineTorqueMultiplier" function is not implemented yet.
+WARNING: "GetPlayerWeapons" function is not implemented yet.
+WARNING: "IsPlayerShooting" function is not implemented yet.
+DEPRECATE: GetPlayerNametag is deprecated.
+WARNING: "GetVehicleBulletproofTyres" function is not implemented yet.
+WARNING: "GetVehicleTyreSmokeColor" function is not implemented yet.
+WARNING: "GetVehicleEnginePowerMultiplier" function is not implemented yet.
+WARNING: "GetVehicleEngineTorqueMultiplier" function is not implemented yet.
+WARNING: "GetPlayerWeapons" function is not implemented yet.
+WARNING: "IsPlayerShooting" function is not implemented yet.
+DEPRECATE: GetPlayerNametag is deprecated.
+WARNING: "GetVehicleBulletproofTyres" function is not implemented yet.
+WARNING: "GetVehicleTyreSmokeColor" function is not implemented yet.
+WARNING: "GetVehicleEnginePowerMultiplier" function is not implemented yet.
+WARNING: "GetVehicleEngineTorqueMultiplier" function is not implemented yet.
+[N] 87.101.35.98:51854 has been disconnected.
+[N] 185.186.38.1:59962 has been disconnected.
+[N] Incoming connection from 194.125.89.182
+[N] 83.29.1.163:57511 has been disconnected.
+[N] 194.125.89.182:64290 has been disconnected.
+[N] 84.15.184.80:54938 has been disconnected.
+[N] Incoming connection from 194.125.89.182
+194.125.89.182 MasterX.
+[N] 194.125.89.182:59497 has been disconnected.
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] Incoming connection from 84.15.184.80
+84.15.184.80 edgar12345cake
+Connection refused [::1]:3306
+[N] Incoming connection from 83.8.175.25
+83.8.175.25 _fifi_96_
+[N] 83.8.175.25:63408 has been disconnected.
+[N] Incoming connection from 83.8.175.25
+[N] 83.8.175.25:63408 has been disconnected.
+[N] Incoming connection from 89.64.72.51
+89.64.72.51 Rafaello9393
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[39;49m[32m07:44 [0]edi1: siema
+[39;49m[37m[N] 89.64.72.51:7402 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[39;49m[32m08:47 [2]MeHow: siema
+[39;49m[37m[39;49m[32m08:49 [1]VRS89: witam poteznego zarzadce tworce oto tego dzieła 
+[39;49m[37m[39;49m[32m08:49 [2]MeHow: siema
+[39;49m[37m[39;49m[32m08:49 [0]edi1: siema
+[39;49m[37m[39;49m[32m08:53 [1]VRS89: MeHow chciałbym tu biznes otworzyc w tym garazu niedaleko lspd 
+[39;49m[37m[39;49m[32m08:53 [2]MeHow: jaki biznes
+[39;49m[37m[39;49m[32m08:54 [1]VRS89: tunerski malowanie zarówek i felg ;3
+[39;49m[37m[39;49m[32m08:55 [0]edi1: tuner jest 3
+[39;49m[37m[39;49m[32m08:56 [0]edi1: otkup od drymanjusza
+[39;49m[37m[39;49m[32m08:56 [1]VRS89: no w sumie łatwiej im dopisac kolorowe lampy i felgi niz tworzyc  nowy punkt co nie ?
+[39;49m[37m[39;49m[32m08:56 [0]edi1: wbi na dc
+[39;49m[37m[N] Incoming connection from 46.204.48.179
+46.204.48.179 machcin1
+[N] Incoming connection from 77.45.40.180
+77.45.40.180 diabeu32
+[N] Incoming connection from 87.207.61.174
+87.207.61.174 -Wars-
+[39;49m[32m09:36 [5]Wars: Siemka 㼿㼿
+[39;49m[37m[39;49m[32m09:36 [2]MeHow: siema
+[39;49m[37m[N] 87.207.61.174:62710 has been disconnected.
+[N] Incoming connection from 87.207.61.174
+87.207.61.174 -Wars-
+[39;49m[32m09:40 [4]dobrygnuj: elo
+[39;49m[37m[39;49m[32m09:40 [0]edi1: siema
+[39;49m[37m[N] Incoming connection from 89.64.93.4
+89.64.93.4 -slupek-
+[N] 87.207.61.174:62710 has been disconnected.
+[N] Incoming connection from 87.207.61.174
+87.207.61.174 -Wars-
+[39;49m[32m09:48 [0]edi1: niewiem jestem na lawetah
+[39;49m[37m[N] 89.64.93.4:11366 has been disconnected.
+[39;49m[32m09:50 [0]edi1: niema takih felg wogule
+[39;49m[37m[N] Incoming connection from 89.64.93.4
+89.64.93.4 -slupek-
+[N] 188.47.127.251:16507 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 185.186.38.1:59891 has been disconnected.
+[N] Incoming connection from 37.47.16.36
+37.47.16.36 MisiekMikke
+[39;49m[32m09:55 [0]edi1: sori
+[39;49m[37m[39;49m[32m09:56 [0]edi1: dc
+[39;49m[37m[N] 84.15.184.80:63826 has been disconnected.
+[N] Incoming connection from 84.15.184.80
+84.15.184.80 edgar12345cake
+[39;49m[32m10:07 [0]edi1: niemam takih felg
+[39;49m[37m[39;49m[32m10:14 [0]edi1: znalazlem te felgi 
+[39;49m[37m[39;49m[32m10:15 [0]edi1: pszyjec zamuntuie
+[39;49m[37m[39;49m[32m10:15 [4]dobrygnuj: git skolko za komplet ?
+[39;49m[37m[N] 77.45.40.180:51446 has been disconnected.
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[39;49m[32m10:24 [4]MeHow: jakby co piszcie na g to mnie zawolaja
+[39;49m[37m[39;49m[32m10:29 [0]edi1: komus tunera
+[39;49m[37m[N] Incoming connection from 77.45.40.180
+77.45.40.180 diabeu32
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[39;49m[32m10:51 [0]edi1: komus tunera
+[39;49m[37m[39;49m[32m10:55 [2]MisiekMikke: edi gdzie ty?
+[39;49m[37m[39;49m[32m10:56 [0]edi1: jade
+[39;49m[37m[39;49m[32m10:58 [0]edi1: komus tunera
+[39;49m[37m[N] 37.47.16.36:20944 has been disconnected.
+[39;49m[32m11:00 [8]robotek019: 556 do przecho można prosić? 
+[39;49m[37m[N] 77.45.40.180:62190 has been disconnected.
+[N] 213.108.119.240:53533 has been disconnected.
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[39;49m[32m11:14 [0]edi1: komus tunera
+[39;49m[37m[N] Incoming connection from 94.75.70.162
+94.75.70.162 kgoryl
+[N] 213.108.119.240:53533 has been disconnected.
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[N] 213.108.119.240:53533 has been disconnected.
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[N] Incoming connection from 46.205.205.198
+46.205.205.198 Husaria98
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] 213.108.119.240:53533 has been disconnected.
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[N] 84.15.184.80:63826 has been disconnected.
+[N] Incoming connection from 84.15.184.80
+84.15.184.80 edgar12345cake
+[N] 213.108.119.240:53533 has been disconnected.
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[N] 89.64.93.4:11277 has been disconnected.
+[N] 94.75.70.162:57916 has been disconnected.
+[N] Incoming connection from 94.75.70.162
+94.75.70.162 kgoryl
+[N] Incoming connection from 87.123.195.236
+87.123.195.236 SHOGUN_77
+[N] 87.123.195.236:17833 has been disconnected.
+[N] 94.75.70.162:57916 has been disconnected.
+[N] Incoming connection from 94.75.70.162
+94.75.70.162 kgoryl
+[N] Incoming connection from 31.11.128.149
+31.11.128.149 AdrianAideN
+[N] Incoming connection from 46.204.51.197
+46.204.51.197 Mixolek
+Connection refused [::1]:3306
+[N] Incoming connection from 89.64.93.4
+89.64.93.4 -slupek-
+[N] 94.75.70.162:57916 has been disconnected.
+[N] Incoming connection from 94.75.70.162
+94.75.70.162 kgoryl
+[N] 46.204.51.197:8051 has been disconnected.
+[N] 46.205.205.198:41133 has been disconnected.
+[N] Incoming connection from 46.205.205.198
+46.205.205.198 Husaria98
+[N] Incoming connection from 46.204.51.197
+46.204.51.197 Mixolek
+[N] 46.205.205.198:41133 has been disconnected.
+[N] Incoming connection from 46.205.205.198
+46.205.205.198 Husaria98
+[N] 46.205.205.198:41133 has been disconnected.
+[N] 46.204.51.197:8039 has been disconnected.
+[N] 185.186.38.1:55819 has been disconnected.
+[N] 94.75.70.162:57916 has been disconnected.
+[N] 31.11.128.149:17878 has been disconnected.
+[N] 213.108.119.240:53533 has been disconnected.
+[39;49m[32m12:28 [0]edi1: komus tuner 
+[39;49m[37m[N] Incoming connection from 79.186.48.240
+[N] Incoming connection from 83.29.1.163
+[N] 79.186.48.240:52036 has been disconnected.
+[39;49m[32m12:30 [0]edi1: komus tuner  bende za 5 min
+[39;49m[37m83.29.1.163 Drymaniusz
+[N] 188.47.127.251:16507 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] Incoming connection from 79.186.48.240
+79.186.48.240 TheMichauu
+[39;49m[32m12:45 [0]edi1: komus tuner  
+[39;49m[37m[N] Incoming connection from 91.237.225.85
+91.237.225.85 Tomigiuszek
+[N] Incoming connection from 86.168.74.75
+86.168.74.75 QueenMisia
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] 86.168.74.75:57205 has been disconnected.
+[N] 84.15.184.80:63826 has been disconnected.
+[N] Incoming connection from 84.15.184.80
+84.15.184.80 edgar12345cake
+[39;49m[32m13:19 [0]edi1: wywala mnie z auta 
+[39;49m[37m[N] Incoming connection from 86.168.74.75
+86.168.74.75 QueenMisia
+[N] 91.237.225.85:55250 has been disconnected.
+[N] Incoming connection from 91.237.225.85
+91.237.225.85 Tomigiuszek
+[N] 188.47.127.251:16507 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[39;49m[32m13:33 [0]edi1: komus tuner
+[39;49m[37m[N] 86.168.74.75:62950 has been disconnected.
+[N] Incoming connection from 86.168.74.75
+[N] 79.186.48.240:50373 has been disconnected.
+86.168.74.75 QueenMisia
+[N] Incoming connection from 83.8.175.25
+83.8.175.25 Wierzba159
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] 83.8.175.25:61970 has been disconnected.
+[N] Incoming connection from 213.134.168.147
+213.134.168.147 -_Chmielu_-
+[N] Incoming connection from 2.204.78.221
+2.204.78.221 lucas8487
+[N] 84.15.184.80:63826 has been disconnected.
+[N] Incoming connection from 176.103.168.198
+176.103.168.198 YamatoHacker
+[N] 86.168.74.75:62950 has been disconnected.
+[N] Incoming connection from 86.168.74.75
+86.168.74.75 QueenMisia
+[N] 91.237.225.85:55250 has been disconnected.
+[N] 2.204.78.221:53871 has been disconnected.
+[N] 89.64.93.4:11272 has been disconnected.
+[N] 46.204.48.179:60103 has been disconnected.
+[N] 87.207.61.174:56674 has been disconnected.
+[N] Incoming connection from 87.207.61.174
+87.207.61.174 -Wars-
+[N] 87.207.61.174:56674 has been disconnected.
+[N] Incoming connection from 87.207.61.174
+87.207.61.174 -Wars-
+[N] 87.207.61.174:56674 has been disconnected.
+[N] Incoming connection from 87.207.61.174
+87.207.61.174 -Wars-
+[N] 86.168.74.75:62950 has been disconnected.
+[N] Incoming connection from 86.168.74.75
+86.168.74.75 QueenMisia
+[N] 213.134.168.147:15836 has been disconnected.
+[39;49m[32m14:43 [0]YamatoHacker: dobry
+[39;49m[37m[39;49m[32m14:48 [5]QueenMisia: Hey!
+[39;49m[37m[39;49m[32m15:02 [0]YamatoHacker: Panie Drymaniusz zyje pan?
+[39;49m[37m[N] 87.207.61.174:56674 has been disconnected.
+[N] Incoming connection from 87.207.61.174
+87.207.61.174 -Wars-
+[N] Incoming connection from 83.26.211.233
+83.26.211.233 Bigczitos
+Connection refused [::1]:3306
+[39;49m[32m15:19 [0]YamatoHacker: Siema Naimad
+[39;49m[37m[39;49m[32m15:19 [3]Naimad424: siema
+[39;49m[37m[N] Incoming connection from 89.64.93.4
+89.64.93.4 -slupek-
+[N] 83.29.1.163:59106 has been disconnected.
+Connection refused [::1]:3306
+[39;49m[32m15:27 [0]Yaroshi: o lepiej
+[39;49m[37m[39;49m[32m15:28 [3]Naimad424: można tu tempeste kupić?
+[39;49m[37m[39;49m[32m15:28 [0]Yaroshi: chyba ta rolki co 30min w salonach 
+[39;49m[37m[39;49m[32m15:29 [1]VRS89: w salonie tempeste 
+[39;49m[37m[39;49m[32m15:29 [5]Queen: oddajcie mi drzwi zlodzieje ;c
+[39;49m[37m[39;49m[32m15:29 [3]Naimad424: no ta ale nie widziałem chyba jeszcze żeby ktoś tu tym jeździł
+[39;49m[37m[39;49m[32m15:29 [3]Naimad424: tym na rock? @1
+[39;49m[37m[39;49m[32m15:29 [1]VRS89: tak tym na rock maja postawione pod domkami pewnie 
+[39;49m[37m[39;49m[32m15:29 [3]Naimad424: kox
+[39;49m[37m[N] Incoming connection from 31.183.144.102
+[39;49m[32m15:30 [0]Yaroshi: ta myjnia cos ten tego slabo myje
+[39;49m[37m[39;49m[32m15:30 [3]Naimad424: a widziałem na spawnie ls takiego mercedesa E albo S klase starą add on wie ktoś jak to sie nazywa?
+[39;49m[37m31.183.144.102 Adasko26
+[39;49m[32m15:30 [0]Yaroshi: juz 3 raz bede brac mycie proto ;x
+[39;49m[37m[39;49m[32m15:31 [3]Naimad424: jak błoto to nie umyje @0 
+[39;49m[37m[39;49m[32m15:31 [0]Yaroshi: iks de
+[39;49m[37m[39;49m[32m15:31 [3]Naimad424: błoto ponoć działa jak rysa wiec najlepszym wyjsciem jest wsadzenie do przecho 
+[39;49m[37m[N] Incoming connection from 109.231.63.235
+109.231.63.235 QuaVim
+[39;49m[32m15:32 [5]Queen: te postacie silne sa Yaro sobie auto naprawil i drzwi odpdaja
+[39;49m[37m[39;49m[32m15:35 [6]slupek77: zr 350 na komisie
+[39;49m[37m[39;49m[32m15:36 [0]Yaroshi: where
+[39;49m[37m[39;49m[32m15:36 [6]slupek77: średni
+[39;49m[37m[N] 109.231.63.235:62407 has been disconnected.
+[N] Incoming connection from 109.231.63.235
+109.231.63.235 QuaVim
+[N] Incoming connection from 91.237.225.85
+91.237.225.85 Tomigiuszek
+[N] Incoming connection from 31.60.144.206
+31.60.144.206 gab123nt
+[39;49m[32m15:56 [9]gab123nt: siema
+[39;49m[37m[39;49m[32m15:57 [8]Tomigiuszek: siema
+[39;49m[37m[N] 31.60.144.206:17723 has been disconnected.
+[N] Incoming connection from 31.60.144.206
+31.60.144.206 gab123nt
+[N] 31.60.144.206:17723 has been disconnected.
+[N] Incoming connection from 31.60.144.206
+31.60.144.206 gab123nt
+[N] Incoming connection from 84.15.184.80
+84.15.184.80 edgar12345cake
+[N] Incoming connection from 89.64.47.167
+[39;49m[32m16:03 [10]edi1: siema
+[39;49m[37m[N] 89.64.47.167:35802 has been disconnected.
+[N] Incoming connection from 83.29.1.163
+83.29.1.163 Drymaniusz
+[N] Incoming connection from 31.0.124.176
+[N] 31.0.124.176:15104 has been disconnected.
+[N] 83.29.1.163:52707 has been disconnected.
+[N] Incoming connection from 31.0.124.176
+31.0.124.176 Mateuszeqx
+[39;49m[32m16:12 [10]edi1: komus tunera
+[39;49m[37m[N] 109.231.63.235:62407 has been disconnected.
+[N] Incoming connection from 109.231.63.235
+[N] 31.0.124.176:15109 has been disconnected.
+[N] Incoming connection from 31.0.124.176
+109.231.63.235 QuaVim
+[N] 31.0.124.176:15109 has been disconnected.
+[N] Incoming connection from 31.0.124.176
+31.0.124.176 Mateuszeqx
+[N] 31.183.144.102:9657 has been disconnected.
+[N] Incoming connection from 31.183.144.102
+31.183.144.102 Adasko26
+[N] 84.15.184.80:60895 has been disconnected.
+[N] Incoming connection from 84.15.184.80
+84.15.184.80 edgar12345cake
+[39;49m[32m16:19 [10]edi1: komus tunera
+[39;49m[37m[N] 83.26.211.233:50768 has been disconnected.
+[N] 109.231.63.235:62407 has been disconnected.
+[N] Incoming connection from 109.231.63.235
+109.231.63.235 QuaVim
+[N] Incoming connection from 178.235.191.167
+178.235.191.167 IIVXOII
+[N] 109.231.63.235:62407 has been disconnected.
+[N] Incoming connection from 109.231.63.235
+109.231.63.235 QuaVim
+[39;49m[32m16:27 [10]edi1: komus tunera
+[39;49m[37m[N] 86.168.74.75:62950 has been disconnected.
+[N] 109.231.63.235:62407 has been disconnected.
+[N] Incoming connection from 109.231.63.235
+109.231.63.235 QuaVim
+[N] 109.231.63.235:62407 has been disconnected.
+[N] Incoming connection from 109.231.63.235
+109.231.63.235 QuaVim
+[N] 31.0.124.176:15106 has been disconnected.
+[N] Incoming connection from 31.0.124.176
+31.0.124.176 Mateuszeqx
+[N] Incoming connection from 83.26.211.233
+83.26.211.233 Bigczitos
+[39;49m[32m16:35 [10]edi1: komus tunera
+[39;49m[37m[N] 87.207.61.174:56674 has been disconnected.
+[N] 109.231.63.235:62407 has been disconnected.
+[N] Incoming connection from 109.231.63.235
+109.231.63.235 QuaVim
+[N] 109.231.63.235:62407 has been disconnected.
+[N] Incoming connection from 87.207.61.174
+87.207.61.174 -Wars-
+[N] Incoming connection from 109.231.63.235
+109.231.63.235 QuaVim
+[N] Incoming connection from 213.134.168.147
+213.134.168.147 -_Chmielu_-
+[N] Incoming connection from 89.68.42.171
+89.68.42.171 Hubero25
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] 31.0.124.176:15106 has been disconnected.
+[N] Incoming connection from 31.0.124.176
+[N] Incoming connection from 176.110.144.201
+31.0.124.176 Mateuszeqx
+176.110.144.201 SoSnOwYx69
+[N] 31.0.124.176:15106 has been disconnected.
+[N] Incoming connection from 31.0.124.176
+31.0.124.176 Mateuszeqx
+[N] Incoming connection from 77.45.40.180
+[39;49m[32m16:43 [10]edi1: komus tunera czy moge jehac na lawety
+[39;49m[37m77.45.40.180 diabeu32
+[N] 178.235.191.167:36496 has been disconnected.
+[39;49m[32m16:43 [0]Yaroshi: zezwalamy ci na to zebys mogl na spokojnie leciec na lawety ;v
+[39;49m[37m[N] 31.0.124.176:15106 has been disconnected.
+[N] 109.231.63.235:62407 has been disconnected.
+[N] 89.68.42.171:52671 has been disconnected.
+[N] 91.237.225.85:58026 has been disconnected.
+[N] Incoming connection from 91.237.225.85
+91.237.225.85 Tomigiuszek
+[N] 176.110.144.201:59120 has been disconnected.
+[39;49m[32m16:53 [10]edi1: lol wioze buzarda
+[39;49m[37m[N] Incoming connection from 83.8.175.25
+83.8.175.25 Wierzba159
+[N] 83.8.175.25:63457 has been disconnected.
+[N] Incoming connection from 185.155.43.172
+185.155.43.172 Don_Jacobo
+[N] Incoming connection from 89.68.42.171
+89.68.42.171 Hubero25
+[N] 31.60.144.206:17723 has been disconnected.
+[N] Incoming connection from 31.60.144.206
+31.60.144.206 gab123nt
+[39;49m[32m16:59 [5]Towarzyszu: dobry
+[39;49m[37m[39;49m[32m16:59 [1]VRS89: ema
+[39;49m[37m[39;49m[32m16:59 [11]Naimad424: witam
+[39;49m[37m[39;49m[32m16:59 [3]Tomigiuszek: siema
+[39;49m[37m[39;49m[32m16:59 [0]Yaroshi: Czesc // @Wars zapros na dc ;v
+[39;49m[37m[N] Incoming connection from 109.231.63.235
+[N] 109.231.63.235:49733 has been disconnected.
+Connection refused [::1]:3306
+[N] Incoming connection from 109.231.63.235
+109.231.63.235 QuaVim
+[N] 109.231.63.235:52502 has been disconnected.
+[N] 185.155.43.172:55765 has been disconnected.
+[N] Incoming connection from 109.231.63.235
+109.231.63.235 QuaVim
+[N] Incoming connection from 185.155.43.172
+185.155.43.172 Don_Jacobo
+[N] 185.155.43.172:55765 has been disconnected.
+[N] 91.237.225.85:58026 has been disconnected.
+[N] Incoming connection from 83.8.175.25
+83.8.175.25 Wierzba159
+[N] 83.8.175.25:56656 has been disconnected.
+[N] 31.183.144.102:9657 has been disconnected.
+[N] 213.134.168.147:15804 has been disconnected.
+[N] Incoming connection from 213.134.168.147
+213.134.168.147 -_Chmielu_-
+[N] 213.134.168.147:15804 has been disconnected.
+[N] Incoming connection from 213.134.168.147
+213.134.168.147 -_Chmielu_-
+[N] 31.60.144.206:22578 has been disconnected.
+[N] Incoming connection from 46.204.18.223
+46.204.18.223 Baldi1331
+[N] 89.68.42.171:63695 has been disconnected.
+[39;49m[32m17:25 [0]Yaroshi: Siema @4
+[39;49m[37m[39;49m[32m17:25 [4]Baldi: siema
+[39;49m[37m[N] Incoming connection from 176.110.144.201
+176.110.144.201 SoSnOwYx69
+[N] Incoming connection from 83.29.110.55
+83.29.110.55 tomek2901
+[N] 83.26.211.233:50635 has been disconnected.
+[N] Incoming connection from 83.26.211.233
+[N] Incoming connection from 188.241.25.16
+188.241.25.16 0DEYMAN0
+83.26.211.233 Bigczitos
+[39;49m[32m17:33 [7]Sosnowy: Jest jakiś tuner?
+[39;49m[37m[39;49m[32m17:33 [15]dobrygnuj: kto te wraki zostawia na drodze xd
+[39;49m[37m[39;49m[32m17:34 [1]VRS89: to taki błąd bedzie naprawiony 
+[39;49m[37m[39;49m[32m17:34 [10]edi1: jest ale na lawecie
+[39;49m[37m[39;49m[32m17:35 [7]Sosnowy: Okay, to ja czekam pod warsztatem jak skończy lawety
+[39;49m[37m[N] 46.204.18.223:25431 has been disconnected.
+[N] Incoming connection from 46.204.18.223
+46.204.18.223 Baldi1331
+[N] Incoming connection from 77.255.237.29
+77.255.237.29 MrMsciciel
+[N] 84.15.184.80:60895 has been disconnected.
+[N] Incoming connection from 84.15.184.80
+84.15.184.80 edgar12345cake
+[N] 213.134.168.147:15804 has been disconnected.
+[39;49m[32m17:43 [10]edi1: wszyscy na ryby
+[39;49m[37m[39;49m[32m17:47 [10]edi1: komus tunera 
+[39;49m[37m[39;49m[32m17:48 [9]Naimad424: mi czekaj tam
+[39;49m[37m[39;49m[32m17:48 [10]edi1: czekam
+[39;49m[37m[N] 77.45.40.180:63803 has been disconnected.
+[N] Incoming connection from 77.45.40.180
+[N] 46.204.18.223:25431 has been disconnected.
+77.45.40.180 diabeu32
+[N] Incoming connection from 46.204.18.223
+46.204.18.223 Baldi1331
+[N] 77.45.40.180:63803 has been disconnected.
+[N] Incoming connection from 77.45.40.180
+77.45.40.180 diabeu32
+[N] Incoming connection from 83.8.175.25
+83.8.175.25 Wierzba159
+[N] 83.8.175.25:64915 has been disconnected.
+[39;49m[32m18:02 [10]edi1: komus tunera  czy pozwolice na rypki jehac
+[39;49m[37m[39;49m[32m18:02 [7]Sosnowy: spokojnie rybki łów
+[39;49m[37m[N] 84.15.184.80:60895 has been disconnected.
+[N] Incoming connection from 84.15.184.80
+84.15.184.80 edgar12345cake
+[N] Incoming connection from 178.235.191.167
+178.235.191.167 IIVXOII
+[N] 176.103.168.198:15875 has been disconnected.
+[N] Incoming connection from 176.103.168.198
+176.103.168.198 YamatoHacker
+[N] 77.45.40.180:63803 has been disconnected.
+[N] Incoming connection from 77.45.40.180
+77.45.40.180 diabeu32
+[N] 46.204.18.223:25431 has been disconnected.
+[N] Incoming connection from 46.204.18.223
+46.204.18.223 Baldi1331
+[N] 46.204.18.223:25431 has been disconnected.
+[N] Incoming connection from 46.204.18.223
+46.204.18.223 Baldi1331
+[N] Incoming connection from 31.60.144.206
+31.60.144.206 gab123nt
+[N] 31.60.144.206:1514 has been disconnected.
+[N] 83.29.110.55:62349 has been disconnected.
+[N] Incoming connection from 31.0.126.201
+31.0.126.201 Mateuszeqx
+[N] 89.64.93.4:11249 has been disconnected.
+[39;49m[32m18:34 [10]edi1: siema
+[39;49m[37m[N] 188.47.127.251:16507 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 46.204.18.223:25431 has been disconnected.
+[N] Incoming connection from 46.204.18.223
+46.204.18.223 Baldi1331
+[N] 46.204.18.223:25431 has been disconnected.
+[N] Incoming connection from 46.204.18.223
+46.204.18.223 Baldi1331
+[N] 84.15.184.80:60895 has been disconnected.
+[N] Incoming connection from 84.15.184.80
+84.15.184.80 edgar12345cake
+[N] 176.103.168.198:15875 has been disconnected.
+[N] Incoming connection from 176.103.168.198
+176.103.168.198 YamatoHacker
+[N] Incoming connection from 185.49.203.5
+185.49.203.5 Milox43
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] 178.235.191.167:45575 has been disconnected.
+[N] 46.204.18.223:25431 has been disconnected.
+[N] Incoming connection from 178.235.191.167
+178.235.191.167 IIVXOII
+[N] 188.241.25.16:55130 has been disconnected.
+[N] Incoming connection from 5.173.249.28
+5.173.249.28 aimbotino
+[39;49m[32m19:22 [11]Foszik: witam, kupie retro elegy lub zr350
+[39;49m[37m[N] Incoming connection from 185.149.2.127
+185.149.2.127 oliwierkaczor
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] 31.0.126.201:19639 has been disconnected.
+[N] Incoming connection from 31.0.126.201
+31.0.126.201 Mateuszeqx
+[N] 188.47.127.251:16507 has been disconnected.
+[N] Incoming connection from 87.101.35.98
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+87.101.35.98 TomoHERE_3hunna
+[N] 31.0.126.201:19639 has been disconnected.
+Connection refused [::1]:3306
+[N] Incoming connection from 93.191.60.83
+93.191.60.83 Nudoksa
+Connection refused [::1]:3306
+[N] 185.149.2.127:51481 has been disconnected.
+[N] 93.191.60.83:52160 has been disconnected.
+[39;49m[32m19:38 [9]Naimad424: T20 w salonie
+[39;49m[37m[39;49m[32m19:40 [6]edi1: komus potszebny tuner
+[39;49m[37m[N] 176.103.168.198:15875 has been disconnected.
+[N] Incoming connection from 176.103.168.198
+[N] 176.103.168.198:15875 has been disconnected.
+[39;49m[32m19:48 [1]TomoHERE: tuner?w
+[39;49m[37m[N] Incoming connection from 89.64.93.4
+89.64.93.4 -slupek-
+[N] Incoming connection from 46.215.219.252
+46.215.219.252 Vegetablegranie
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] Incoming connection from 31.183.144.102
+31.183.144.102 Adasko26
+[N] Incoming connection from 37.47.9.33
+37.47.9.33 CzarekDriver
+[N] 188.47.127.251:16507 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 37.47.9.33:19305 has been disconnected.
+Object reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at T GTANetworkAPI.Entity.GetSharedData<T>(string key)
+   at void ServerSide.MainClass.StartCarWash(Player player, Vehicle vehicle, ColShape colshape) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 3276
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+[N] 46.215.219.252:53564 has been disconnected.
+[N] 87.101.35.98:63925 has been disconnected.
+[N] Incoming connection from 91.237.225.85
+91.237.225.85 Tomigiuszek
+[N] Incoming connection from 37.47.9.33
+37.47.9.33 CzarekDriver
+[N] 83.26.211.233:50635 has been disconnected.
+[N] 109.231.63.235:52502 has been disconnected.
+[N] Incoming connection from 109.231.63.235
+[N] 109.231.63.235:52502 has been disconnected.
+[N] Incoming connection from 109.231.63.235
+109.231.63.235 QuaVim
+[N] 37.47.9.33:3193 has been disconnected.
+[N] Incoming connection from 37.47.9.33
+[N] 37.47.9.33:3193 has been disconnected.
+[N] Incoming connection from 37.47.9.33
+37.47.9.33 CzarekDriver
+[N] 37.47.9.33:14867 has been disconnected.
+[N] Incoming connection from 37.47.9.33
+37.47.9.33 CzarekDriver
+[N] 37.47.9.33:14867 has been disconnected.
+[39;49m[32m20:22 [13]Adasko26: tuner?
+[39;49m[37m[N] Incoming connection from 37.47.9.33
+37.47.9.33 CzarekDriver
+[N] Incoming connection from 77.253.2.103
+77.253.2.103 mikkelshake89282
+[39;49m[32m20:26 [9]Johnymielony: siema kurewki
+[39;49m[37m[N] 185.49.203.5:57377 has been disconnected.
+[N] Incoming connection from 90.252.47.221
+90.252.47.221 _SHWGR_
+[39;49m[32m20:26 [9]Johnymielony: @wars jarekia sie pyta czy długo robiłes loda wirlusiowi 
+[39;49m[37m[39;49m[32m20:27 [0]slupek77: i już przyszedł zjeb
+[39;49m[37m[39;49m[32m20:28 [9]Johnymielony: ty sie szmato nie odzywaj wypierdalaj na lekcje logopedy
+[39;49m[37m[39;49m[32m20:29 [9]Johnymielony: wypierdalaj na holowniki
+[39;49m[37m[39;49m[32m20:29 [0]slupek77: hahaha
+[39;49m[37m[39;49m[32m20:30 [9]Johnymielony: pdw wariacik
+[39;49m[37m[39;49m[32m20:30 [9]Johnymielony: i jex
+[39;49m[37m[39;49m[32m20:30 [10]_SHWGR_: boli, że tu nic nie możesz, tylko na czacie poszczekać :P
+[39;49m[37m[39;49m[32m20:30 [9]Johnymielony: napierdala
+[39;49m[37m[39;49m[32m20:31 [11]Foszik: ale on jest fajny bo wiecie... przeklina :O
+[39;49m[37m[39;49m[32m20:31 [10]_SHWGR_: tia
+[39;49m[37m[39;49m[32m20:31 [9]Johnymielony: sory jusz nie bende
+[39;49m[37m[39;49m[32m20:32 [9]Johnymielony: jakie zadanie dzienne?
+[39;49m[37m[N] Incoming connection from 87.101.35.98
+87.101.35.98 TomoHERE_3hunna
+[N] 37.47.9.33:14867 has been disconnected.
+[39;49m[32m20:33 [14]VRS89: zrob reloga 
+[39;49m[37m[N] 77.253.2.103:60560 has been disconnected.
+[39;49m[32m20:34 [10]_SHWGR_: +1 Tomo czuwa 
+[39;49m[37mConnection refused [::1]:3306
+[N] 77.45.40.180:63803 has been disconnected.
+[N] Incoming connection from 77.45.40.180
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+77.45.40.180 diabeu32
+[N] 213.108.119.240:57668 has been disconnected.
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[N] 77.255.237.29:23676 has been disconnected.
+[N] Incoming connection from 194.125.77.164
+194.125.77.164 MasterX.
+[N] Incoming connection from 77.255.237.29
+77.255.237.29 MrMsciciel
+[39;49m[32m20:43 [8]robotek019: byłem na zestawie maty w macu, nie polecam xD
+[39;49m[37m[39;49m[32m20:44 [10]_SHWGR_: czemu?w
+[39;49m[37m[39;49m[32m20:44 [7]Sosnowy: Ja ogólnie maka nie polecam
+[39;49m[37m[39;49m[32m20:44 [7]Sosnowy: Siema Szwagier! :d
+[39;49m[37m[39;49m[32m20:44 [10]_SHWGR_: ooo Sosnowy sieema
+[39;49m[37m[39;49m[32m20:44 [11]Foszik: nie no maczek fajna sprawa tylko zalezy co sie bierze
+[39;49m[37m[39;49m[32m20:44 [10]_SHWGR_: czasem mozna
+[39;49m[37m[39;49m[32m20:44 [6]edi1: komus tunera
+[39;49m[37m[39;49m[32m20:44 [8]robotek019: to matcha latte jest słabe smakuje wodą xD 
+[39;49m[37m[39;49m[32m20:44 [7]Sosnowy: @11 Ja to mam w d... wolę w domu zrobić sobie smaczniejsze i zdrowsze jedzenie :D @10 co Ty tu robisz? :d
+[39;49m[37m[39;49m[32m20:45 [10]_SHWGR_: testuję :D
+[39;49m[37m[39;49m[32m20:45 [7]Sosnowy: @10 chcesz jakieś autko?
+[39;49m[37m[39;49m[32m20:45 [10]_SHWGR_: i już mi się tam wracać nie chce
+[39;49m[37m[39;49m[32m20:45 [10]_SHWGR_: mam coś tam @7
+[39;49m[37m[39;49m[32m20:45 [11]Foszik: @7 tzn wiadomo ze jedzonko domowe jest fajne, ale od czasu do czasu mozna jakiegos fast fooda zjesc
+[39;49m[37m[39;49m[32m20:45 [9]MasterX.: Fosik daj hajs
+[39;49m[37m[39;49m[32m20:45 [11]Foszik: spierdalaj xD
+[39;49m[37m[39;49m[32m20:46 [11]Foszik: mam 1k na koncie
+[39;49m[37m[N] Incoming connection from 194.125.77.164
+[39;49m[32m20:46 [15]TomoHERE: polecam /bonus i do pracki
+[39;49m[37m194.125.77.164 karolek69420
+[39;49m[32m20:46 [11]Foszik: te wozki sa pobugowane, wjezdzam w punkt i mi nie zalicza
+[39;49m[37m[39;49m[32m20:46 [10]_SHWGR_: ja nie mam lvl na lepsze prace :(w
+[39;49m[37m[39;49m[32m20:46 [9]MasterX.: ta ale na widlaki inemoge bo punkty xD
+[39;49m[37m[N] Incoming connection from 188.241.25.16
+188.241.25.16 0DEYMAN0
+[39;49m[32m20:48 [7]Sosnowy: o co biega z tymi punktami? Ja mogłem od razu po wejściu na serwa wbić na wózki widlowe xd
+[39;49m[37m[39;49m[32m20:48 [7]Sosnowy: a widzę, że to już druga osoba o tym pisze
+[39;49m[37m[39;49m[32m20:48 [7]Sosnowy: napisała*
+[39;49m[37m[39;49m[32m20:49 [6]edi1: komus tunera
+[39;49m[37m[39;49m[32m20:50 [9]MasterX.: co to jest LP ?
+[39;49m[37m[N] 91.237.225.85:50961 has been disconnected.
+[N] 5.173.249.28:50234 has been disconnected.
+[N] Incoming connection from 5.173.249.28
+[N] Incoming connection from 91.237.225.85
+91.237.225.85 Tomigiuszek
+5.173.249.28 aimbotino
+[39;49m[32m20:51 [5]QuaVin: punkty logistyczne?
+[39;49m[37m[39;49m[32m20:51 [9]MasterX.: jak sprawdzic ile mam ? xD
+[39;49m[37m[39;49m[32m20:51 [5]QuaVin: f3 i prace
+[39;49m[37m[N] Incoming connection from 185.155.43.172
+185.155.43.172 Don_Jacobo
+[39;49m[32m20:52 [5]QuaVin: pod f2 poradnik
+[39;49m[37m[39;49m[32m20:53 [18]Towarzyszu: Kylie give me just a chance Let's go out and dance
+[39;49m[37m[39;49m[32m20:53 [18]Towarzyszu: Kylie give me just a chance Let's go out and dance
+[39;49m[37m[39;49m[32m20:53 [18]Towarzyszu: Kylie give me just a chance Let's go out and dance
+[39;49m[37m[39;49m[32m20:53 [18]Towarzyszu: Kylie give me just a chance 
+[39;49m[37m[39;49m[32m20:54 [18]Towarzyszu: Let's go out and dance
+[39;49m[37m[39;49m[32m20:54 [18]Towarzyszu: Let's go out and dance
+[39;49m[37m[N] 5.173.249.28:50234 has been disconnected.
+[N] Incoming connection from 5.173.249.28
+5.173.249.28 aimbotino
+[N] 84.15.184.80:60895 has been disconnected.
+[39;49m[32m20:56 [7]Sosnowy: jaki kolor pasuje do czarnego i niebieskiego?
+[39;49m[37m[39;49m[32m20:56 [18]Towarzyszu: kontrastujący z nimi
+[39;49m[37m[39;49m[32m20:56 [7]Sosnowy: czyli?
+[39;49m[37m[39;49m[32m20:56 [7]Sosnowy: bo nie ma tutaj złotego
+[39;49m[37m[39;49m[32m20:57 [7]Sosnowy: a ciężko dobrać podobny odcień
+[39;49m[37m[39;49m[32m20:57 [18]Towarzyszu: mozesz na necie szukac
+[39;49m[37m[N] Incoming connection from 84.15.184.80
+84.15.184.80 edgar12345cake
+[N] 77.255.237.29:23676 has been disconnected.
+[39;49m[32m20:57 [17]DEYMAN: jakis tuner ma s racer zwykle nie karbon
+[39;49m[37m[39;49m[32m20:58 [9]MasterX.: ile tu mech kosztuje ?
+[39;49m[37m[39;49m[32m20:58 [10]_SHWGR_: grosze
+[39;49m[37m[39;49m[32m20:58 [9]MasterX.: no mam 6k to cos zaloze ? xD
+[39;49m[37m[39;49m[32m20:58 [7]Sosnowy: Kurde na tej lakierni to chujowe światło jest :x
+[39;49m[37m[39;49m[32m20:58 [15]TomoHERE: @17 nie wiem czy s racery sa w rotce, ale chyba je dodalem. choć nie wiem czy zamówienia tunerom doszły już.
+[39;49m[37m[N] 90.252.47.221:60125 has been disconnected.
+[N] Incoming connection from 90.252.47.221
+90.252.47.221 _SHWGR_
+[N] Incoming connection from 91.245.82.80
+[N] 91.237.225.85:50961 has been disconnected.
+91.245.82.80 SNOWC4T
+[39;49m[32m21:00 [6]edi1: ja cos tam zamuwilem ale dostawa jutro
+[39;49m[37m[39;49m[32m21:00 [6]edi1: komus tunera
+[39;49m[37m[39;49m[32m21:01 [9]MasterX.: @6 ile moze kosztowac tune do bmw seri 1 ?
+[39;49m[37m[39;49m[32m21:01 [3]dobrygnuj: +/- 100k
+[39;49m[37m[39;49m[32m21:02 [15]TomoHERE: pytasz o mech czy wizu?
+[39;49m[37m[39;49m[32m21:02 [14]VRS89: wizu mozesz sprawdzic sam przeciez 
+[39;49m[37m[39;49m[32m21:02 [9]MasterX.: mech
+[39;49m[37m[N] 5.173.249.28:50234 has been disconnected.
+[39;49m[32m21:02 [15]TomoHERE: mech do cyphera siedzi chyba lekko ponad 100k
+[39;49m[37m[39;49m[32m21:04 [7]Sosnowy: Wars czekaj
+[39;49m[37m[N] Incoming connection from 37.30.113.150
+37.30.113.150 JaniaX135
+[N] 176.110.144.201:52648 has been disconnected.
+[N] 90.252.47.221:60125 has been disconnected.
+[N] Incoming connection from 90.252.47.221
+90.252.47.221 _SHWGR_
+[39;49m[32m21:10 [9]MasterX.: jest tuner ?
+[39;49m[37m[N] 37.30.113.150:19594 has been disconnected.
+[39;49m[32m21:11 [6]edi1: jade
+[39;49m[37m[N] 188.47.127.251:16507 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[39;49m[32m21:13 [15]TomoHERE: dobra koniec tego dobrego, zdupcam robic panel pojazdu. jak co to piszcie na dc jakby znowu jakis przeszczep wszedl
+[39;49m[37m[N] 87.101.35.98:63397 has been disconnected.
+[39;49m[32m21:17 [6]edi1: komus tuner
+[39;49m[37m[N] 178.235.191.167:45575 has been disconnected.
+[N] Incoming connection from 178.235.191.167
+178.235.191.167 IIVXOII
+[N] Incoming connection from 77.255.237.29
+77.255.237.29 MrMsciciel
+[N] 31.183.144.102:9675 has been disconnected.
+[N] Incoming connection from 31.128.22.92
+31.128.22.92 TeamF0rEver
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[39;49m[32m21:22 [9]MasterX.: sa jakies czarne felgi ?
+[39;49m[37m[39;49m[32m21:23 [6]edi1: kto zbagowal palete
+[39;49m[37m[N] 185.155.43.172:49604 has been disconnected.
+[N] 31.128.22.92:60758 has been disconnected.
+[N] Incoming connection from 31.128.22.92
+31.128.22.92 TeamF0rEver
+[N] 77.255.237.29:26782 has been disconnected.
+[N] Incoming connection from 5.173.34.63
+5.173.34.63 misek2136
+[N] 5.173.34.63:61717 has been disconnected.
+[N] 90.252.47.221:60125 has been disconnected.
+[39;49m[32m21:43 [6]edi1: komus tuner
+[39;49m[37m[N] 188.241.25.16:52708 has been disconnected.
+[N] Incoming connection from 188.241.25.16
+188.241.25.16 0DEYMAN0
+[39;49m[32m21:45 [0]slupek77: sultan rs potrzebny
+[39;49m[37m[39;49m[32m21:46 [0]slupek77: gdzie się respi
+[39;49m[37m[N] 194.125.77.164:59582 has been disconnected.
+[N] Incoming connection from 194.125.77.164
+[N] 31.128.22.92:60758 has been disconnected.
+[N] Incoming connection from 31.128.22.92
+194.125.77.164 MasterX.
+31.128.22.92 TeamF0rEver
+[N] 194.125.77.164:61626 has been disconnected.
+[N] Incoming connection from 194.125.77.164
+194.125.77.164 karolek69420
+[N] 31.128.22.92:60758 has been disconnected.
+[N] Incoming connection from 31.128.22.92
+31.128.22.92 TeamF0rEver
+[N] 89.64.93.4:11260 has been disconnected.
+[N] 31.128.22.92:60758 has been disconnected.
+[N] Incoming connection from 89.64.93.4
+89.64.93.4 -slupek-
+[N] 188.241.25.16:52708 has been disconnected.
+[N] Incoming connection from 188.241.25.16
+188.241.25.16 0DEYMAN0
+[N] 188.241.25.16:52708 has been disconnected.
+[N] Incoming connection from 188.241.25.16
+188.241.25.16 0DEYMAN0
+[N] Incoming connection from 81.15.239.49
+81.15.239.49 zabraliminazwe
+[N] 194.125.77.164:61626 has been disconnected.
+[N] 194.125.77.164:59582 has been disconnected.
+[N] Incoming connection from 83.31.215.45
+83.31.215.45 MikokosPL
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] Incoming connection from 185.186.38.1
+[N] 185.186.38.1:62074 has been disconnected.
+[N] 109.231.63.235:63255 has been disconnected.
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[39;49m[32m22:20 [5]MeHow: siema
+[39;49m[37m[39;49m[32m22:20 [5]MeHow: sprawa jest
+[39;49m[37m[39;49m[32m22:20 [7]DEYMAN: siema
+[39;49m[37m[39;49m[32m22:20 [5]MeHow: update
+[39;49m[37m[39;49m[32m22:20 [5]MeHow: trzeba bedzie gierke resetowac
+[39;49m[37m[39;49m[32m22:20 [1]VRS89: siema cieply 
+[39;49m[37m[39;49m[32m22:21 [1]VRS89: CO
+[39;49m[37m[39;49m[32m22:21 [7]DEYMAN: beda kolory felg
+[39;49m[37m[39;49m[32m22:21 [5]MeHow: nie beda
+[39;49m[37m[39;49m[32m22:21 [5]MeHow: ale to .soon
+[39;49m[37m[39;49m[32m22:21 [5]MeHow: dla was wiele sie nie zmieni
+[39;49m[37m[39;49m[32m22:22 [5]MeHow: leci restart
+[39;49m[37m^C[33m[INFO] [0mShutting down the server...
+Shutting down..
+[32m[DONE] [0mThe server has been terminated.
+terminate called without an active exception

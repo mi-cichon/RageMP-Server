@@ -1,0 +1,240 @@
+body{
+    font-family: 'PT Sans';
+    user-select: none;
+}
+
+
+.bank_mainBody{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 45vh;
+    height: 40vh;
+    background: radial-gradient(circle, rgba(55,55,55,0.95) 0%, rgba(29,30,34,0.95) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 3vh;
+}
+
+
+.bank_name{
+    background-color: rgb(33, 34, 37);
+    width: 100%;
+    text-align: center;
+    padding: 0.9vh 0;
+    font-size: 1.9vh;
+    font-weight: 600;
+    color: white;
+    border-bottom: 1px solid #0c9;
+}
+
+.bank_infoBody{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.bank_card{
+    width: 15vh;
+    height: 9vh;
+    background-image: url('img/kartabasic.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.bank_card p{
+    color: white;
+    position: absolute;
+    font-size: 1.1vh;
+    left: 10%;
+    bottom: 20%;
+    font-weight: bold;
+}
+
+.bank_info{
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    height: 6vh;
+    margin-left: 3vh;
+    background: linear-gradient(180deg, rgba(66, 66, 66, 0.95) 0%, rgba(29,30,34,0.95) 100%);
+    border-bottom: 1px solid #0c9;
+}
+
+.bank_avatar{
+    height: 6vh;
+    width: 6vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.bank_account{
+    padding: 1.2vh 0.7vh;
+}
+
+.bank_account p{
+    color: white;
+    font-size: 1.1vh;
+    font-weight: 600;
+    color: #0c9;
+    margin: 0;
+}
+
+.bank_account_state{
+    color: white;
+    font-size: 1.6vh;
+    letter-spacing: 0px;
+}
+
+.bank_buttonsBody{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bank_buttonBody{
+    width: 12vh;
+    height: 5vh;
+    position: relative;
+}
+
+.bank_button{
+    width: 100%;
+    height: 100%;
+}
+
+.bank_buttonText:hover{
+    box-shadow: 0 0 1vh #0c9;
+    border-bottom: none;
+}
+
+.bank_buttonText{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.4vh;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.4vh;
+    background: linear-gradient(180deg, rgba(66, 66, 66, 0.95) 0%, rgba(29,30,34,0.95) 100%);
+    border: none;
+    border-bottom: 1px solid #0c9;
+    border-radius: 0.3vh;
+}
+
+.bank_icon{
+    width: 5vh;
+    height: 3vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70%;
+}
+
+.bank_buttonText p{
+    margin: 0;
+    padding: 0.2vh;
+}
+
+.icon_withdraw{
+    background-image: url('img/wyplac.png');
+}
+
+.icon_deposit{
+    background-image: url('img/wplac.png');
+}
+
+.bank_inputBody{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.bank_input{
+    width: 30%;
+    height: 1.7vh;
+    background-color: #292929;
+    border: 1px solid #00cc99;
+    color: white;
+    padding: 0.4vh;
+    border-radius: 0.3vh;
+    text-align: center;
+    font-size: 1.2vh;
+}
+
+.bank_input::-webkit-outer-spin-button, .bank_input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.bank_input:focus{
+    outline: none;
+}
+
+.bank_endButtonsBody{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.bank_selected{
+    border-bottom: 1px solid transparent;
+    box-shadow: 0 0 1vh #0c9;
+    background: linear-gradient(180deg, rgba(37, 37, 37, 0.95) 0%, rgba(29,30,34,0.95) 100%);
+}
+
+
+
+.button_select{
+    background: linear-gradient(180deg, rgba(66, 66, 66, 0.95) 0%, rgba(29,30,34,0.95) 100%);
+    border: none;
+    color: white;
+    padding: 0.6vh;
+    border-bottom: 1px solid #00cc99;
+    font-size: 1vh;
+}
+
+.button_select:hover{
+    border-bottom: 1px solid transparent;
+    box-shadow: 0 0 1vh #0c9;
+}
+
+.button_select:focus{
+    outline: none;
+}
+
+.button_cancel{
+    background: linear-gradient(180deg, rgba(66, 66, 66, 0.95) 0%, rgba(29,30,34,0.95) 100%);
+    border: none;
+    color: white;
+    padding: 0.6vh;
+    border-bottom: 1px solid #cc0000;
+    font-size: 1vh;
+}
+
+.button_cancel:hover{
+    border-bottom: 1px solid transparent;
+    box-shadow: 0 0 1vh rgb(204, 0, 0);
+}
+
+.button_cancel:focus{
+    outline: none;
+}

@@ -1,0 +1,200 @@
+[33m[INFO] [0mStarting RAGE Multiplayer server...
+[0m[33m
+[============================================================]
+[33m[33m||
+[33m||[33m	MaxPlayers		[0m50[33m
+||	Sync rate		[0m40ms[33m
+||	Name			[0mBasicRPG.pl | W trakcie tworzenia | Wiecej na https://discord.gg/2vrMdXsdRW [PL][33m
+||	Gamemode		[0mrpg[33m
+||	Streaming distance	[0m500[33m
+||	Announcement		[0menabled[33m
+||	Voice chat		[0menabled[33m
+||	Address			[0m127.0.0.1:22005[33m
+||	Connection limits	[0mdisabled[33m
+||	Encryption		[0menabled[33m
+||	NodeJS			[0menabled[33m
+||	C#			[0menabled[33m
+||
+[============================================================]
+
+[0m
+[33m[INFO][0m Loading NodeJS packages...
+[33m[INFO][0m Starting packages...
+[32m[DONE][0m Server packages have been started.
+Initializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 10/20/2021 4:54:13 PM
+Unable to load acl.xml
+ACLEnabled: False
+Loaded 667 entries from vehicleData.json
+Loading resources..
+[?1h=[39;49m[33m->[39;49m[37m Starting [39;49m[36mServer[39;49m[37m resource..
+[39;49m[39;49m[37mServer:[39;49m[37m loading scripts.. found 1 script(s)
+[39;49m[39;49m[37mServer:[39;49m[37m instantiating [39;49m[37mServerSide.MainClass[39;49m[37m..
+[39;49mConnection refused [::1]:3306
+Connection refused [::1]:3306
+[39;49m[37mServer:[39;49m[37m loading server events.. found 10 server event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 10 server events(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loading remote events.. found 173 remote event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 173 remote event(s)
+[39;49mServer started...
+[39;49m[32m->[39;49m[37m Resource [39;49m[36mServer[39;49m[37m started!
+[39;49m[39;49m[32mStarted! Waiting for connections..
+[39;49m[32m[DONE] [0mStarted resource transfer server at 22006 port.
+[32m[DONE] [0mClient-side packages weight: [33m187.596405 MB[0m (uncompressed: [33m372.352631 MB[0m).
+[33m[INFO] [0mMasterList: Announcing into master server...
+[33m[INFO] [0mInitializing networking...
+[32m[DONE] [0mNetworking has been started: (IPv4-only) at 127.0.0.1:22005
+[32m[DONE] [0mThe server is ready to accept connections.
+[32m[DONE] [0mMasterList: Connected to master list.
+[N] Incoming connection from 81.15.239.49
+81.15.239.49 zabraliminazwe
+[N] Incoming connection from 213.134.168.147
+213.134.168.147 -_Chmielu_-
+[N] Incoming connection from 79.186.48.240
+[N] Incoming connection from 84.15.184.80
+[N] Incoming connection from 78.11.34.206
+[N] 213.134.168.147:15862 has been disconnected.
+79.186.48.240 TheMichauu
+84.15.184.80 edgar12345cake
+78.11.34.206 maciejooosek
+[N] Incoming connection from 213.134.168.147
+213.134.168.147 -_Chmielu_-
+[N] Incoming connection from 89.64.93.4
+[39;49m[32m16:55 [3]edi1: siema
+[39;49m[37m89.64.93.4 -slupek-
+[39;49m[32m16:55 [4]MeHow: siema
+[39;49m[37m[N] Incoming connection from 109.231.63.235
+109.231.63.235 QuaVim
+[N] Incoming connection from 87.207.61.174
+87.207.61.174 -Wars-
+[39;49m[32m16:56 [3]edi1: komus tuner
+[39;49m[37m[N] 79.186.48.240:53599 has been disconnected.
+[N] Incoming connection from 79.186.48.240
+79.186.48.240 TheMichauu
+[39;49m[32m17:00 [2]WolnoLukasz: edi poczekasz na tunerze?
+[39;49m[37m[39;49m[32m17:00 [3]edi1: czekam
+[39;49m[37m[N] 213.134.168.147:15862 has been disconnected.
+[N] Incoming connection from 94.101.22.116
+[N] 94.101.22.116:51813 has been disconnected.
+[N] Incoming connection from 94.101.22.116
+94.101.22.116 szamanoza69699
+[N] 94.101.22.116:60650 has been disconnected.
+[N] Incoming connection from 94.101.22.116
+94.101.22.116 szamanoza69699
+[N] Incoming connection from 83.29.1.163
+83.29.1.163 Drymaniusz
+[39;49m[32m17:17 [1]szaman: siema
+[39;49m[37m[39;49m[32m17:17 [4]MeHow: siema
+[39;49m[37m[N] Incoming connection from 46.204.17.195
+46.204.17.195 Baldi1331
+[N] 46.204.17.195:41023 has been disconnected.
+[N] 81.15.239.49:62598 has been disconnected.
+[39;49m[32m17:21 [3]edi1: MeHow rol losu iny dac
+[39;49m[37m[39;49m[32m17:21 [1]szaman: ej a na jakieś pracy nie miały być podniesione zarobki?
+[39;49m[37m[39;49m[32m17:21 [4]MeHow: są
+[39;49m[37m[39;49m[32m17:21 [1]szaman: na jakiej?
+[39;49m[37m[39;49m[32m17:22 [2]WolnoLukasz: komunikart u góy czytaj
+[39;49m[37m[39;49m[32m17:22 [1]szaman: a te premie są dla każdego takie same czy jak?
+[39;49m[37m[39;49m[32m17:23 [2]WolnoLukasz: tak
+[39;49m[37m[39;49m[32m17:23 [1]szaman: i co ile się zmieniają?
+[39;49m[37m[39;49m[32m17:23 [4]MeHow: 2 godziny, albo kiedy ja ręcznie zmienie
+[39;49m[37m[39;49m[32m17:23 [7]Wars: Wpisz /bonus
+[39;49m[37m[39;49m[32m17:23 [1]szaman: a ta od kiedy jest?
+[39;49m[37m[39;49m[32m17:24 [1]szaman: ok
+[39;49m[37m[39;49m[32m17:24 [1]szaman: dzienki
+[39;49m[37m[39;49m[32m17:24 [2]WolnoLukasz: 18:54 - 2 godziny to 16:54
+[39;49m[37m[N] Incoming connection from 188.47.121.5
+188.47.121.5 RumaK1982
+\ [N] 83.29.1.163:59860 has been disconnected.
+[N] Incoming connection from 83.29.1.163
+83.29.1.163 Drymaniusz
+[39;49m[32m17:43 [3]edi1: zare bende jak cos
+[39;49m[37m[N] 79.186.48.240:53599 has been disconnected.
+[N] Incoming connection from 94.101.22.65
+94.101.22.65 _SzEfli
+[N] 94.101.22.65:58538 has been disconnected.
+[N] Incoming connection from 94.101.22.65
+94.101.22.65 _SzEfli
+[39;49m[32m17:57 [2]_SzEfli: było coś robione z autami na serwie?
+[39;49m[37m[39;49m[32m17:57 [2]_SzEfli: t20 mi znikło 
+[39;49m[37m[39;49m[32m17:58 [4]MeHow: jakie id
+[39;49m[37m[39;49m[32m17:58 [4]MeHow: dobry miesiac temu usuwalismy pojazdy i dalismy 2kk rekompensaty
+[39;49m[37m[39;49m[32m17:58 [4]MeHow: tak to nie usuwalismy
+[39;49m[37m[39;49m[32m18:02 [2]_SzEfli: sorka, musiałem odejśc od kompa
+[39;49m[37m[39;49m[32m18:03 [2]_SzEfli: jeszcze z 2-3 dni temu nim jeździłem
+[39;49m[37m[39;49m[32m18:03 [2]_SzEfli: id nie pamiętam
+[39;49m[37m[39;49m[32m18:05 [4]MeHow: w przecho nie ma?
+[39;49m[37m[39;49m[32m18:06 [4]MeHow: musi być albo w przecho albo na mapie gdzieś
+[39;49m[37m[39;49m[32m18:06 [2]_SzEfli: nie
+[39;49m[37m[39;49m[32m18:06 [4]MeHow: pod wózkami widłowymi co stoi?
+[39;49m[37m[39;49m[32m18:06 [2]_SzEfli: możliwe że blipa nie widzę?
+[39;49m[37m[39;49m[32m18:06 [4]MeHow: może
+[39;49m[37m[39;49m[32m18:06 [4]MeHow: ale stoi pod wózkami
+[39;49m[37m[N] Incoming connection from 194.125.77.164
+194.125.77.164 karolek69420
+[N] 194.125.77.164:50125 has been disconnected.
+[N] Incoming connection from 194.125.77.164
+194.125.77.164 karolek69420
+[N] 194.125.77.164:50125 has been disconnected.
+[N] Incoming connection from 194.125.77.164
+194.125.77.164 karolek69420
+[39;49m[32m18:22 [9]karolek69420: jak dziala ten panel na alt ? 
+[39;49m[37m[39;49m[32m18:22 [4]MeHow: przytrzymujesz alt i przyciskami myszy lub strzałkami przesuwasz się po nim, to na czym puścisz alt zostaje "kliknięte"
+[39;49m[37m[39;49m[32m18:23 [9]karolek69420: Strzalki mi nie dzialaja ale myszka sie da
+[39;49m[37m[39;49m[32m18:23 [9]karolek69420: aaa prawo lewo myslalam ze gora dol
+[39;49m[37m[39;49m[32m18:23 [4]MeHow: chwila
+[39;49m[37m[39;49m[32m18:23 [4]MeHow: no xD
+[39;49m[37m[39;49m[32m18:23 [9]karolek69420: nie lepiej gora dol ? jak menu jest od gory do dolu ?
+[39;49m[37m[N] 94.101.22.65:58538 has been disconnected.
+[39;49m[32m18:24 [4]MeHow: moim zdaniem jak jest prawy przycisk myszy i lewy to bardziej sie kojarzy z prawa i lewa strzalka
+[39;49m[37m[39;49m[32m18:24 [9]karolek69420: a mi wlasnie sie wydaje ze myszka to spoko ale strzalki powiny byc gora dol xD
+[39;49m[37m[39;49m[32m18:24 [9]karolek69420: jakas tak bardziej intuicyjne
+[39;49m[37m[39;49m[32m18:25 [7]Wars: Mnie bardziej zaciekawiło, czemu myszką wolniej zmienia niż strzałkami.
+[39;49m[37m[39;49m[32m18:26 [9]karolek69420: czasem trzeba 2 razy kliknac zeby dzialalo u mnie
+[39;49m[37m[N] 194.125.77.164:50125 has been disconnected.
+[N] Incoming connection from 194.125.77.164
+194.125.77.164 karolek69420
+[39;49m[32m18:30 [4]MeHow: wolniejsza zmiana myszką to kwestia opóźnienia w evencie rage, nie moja kwestia
+[39;49m[37m[39;49m[32m18:31 [4]MeHow: dlatego spamowanie może nie działać :/
+[39;49m[37m[39;49m[32m18:31 [4]MeHow: spróbuję to na scrolla zmienić
+[39;49m[37m[39;49m[32m18:31 [4]MeHow: ale nie wiem czy się uda
+[39;49m[37m[39;49m[32m18:31 [2]karolek69420: ale nawet jak powoli to czasem przy 1 kliku mi nie dziala
+[39;49m[37m[39;49m[32m18:31 [4]MeHow: bo jak przytrzymujesz alt to nie jest nic zaznaczone :/
+[39;49m[37m[39;49m[32m18:31 [4]MeHow: dopiero po pierwszym kliku zaznaczasię pierwsza opcjaw
+[39;49m[37m[39;49m[32m18:32 [2]karolek69420: Ale to nie tylko 1 raz
+[39;49m[37m[39;49m[32m18:32 [4]MeHow: to nie wiem
+[39;49m[37m[39;49m[32m18:32 [2]karolek69420: jak zmieniam nawet na srodku menu
+[39;49m[37m[N] 188.47.121.5:46538 has been disconnected.
+[39;49m[32m18:32 [2]karolek69420: na scroll daj master ma u siebie na scroll i dziala perfekto
+[39;49m[37m[N] Incoming connection from 188.47.121.5
+188.47.121.5 RumaK1982
+[39;49m[32m18:32 [4]MeHow: co
+[39;49m[37m[39;49m[32m18:32 [4]MeHow: xD
+[39;49m[37m[39;49m[32m18:33 [2]karolek69420: No master u siebie jak pisze serwer to ma na scroll zrobione i dziala normalnie
+[39;49m[37m[39;49m[32m18:33 [4]MeHow: a myszka jest włączona czy nie?
+[39;49m[37m[39;49m[32m18:33 [2]karolek69420: nie bez kursora
+[39;49m[37m[39;49m[32m18:34 [2]karolek69420: jak to jest zrobione to niewiem bo ja sobie tylko testuje xD
+[39;49m[37m[39;49m[32m18:34 [4]MeHow: spoko, ale nie oczekuj ze bede robil tak jak gdzies indziej
+[39;49m[37m[39;49m[32m18:35 [2]karolek69420: ale tylko mowie ze na scroll dziala dobrze xD
+[39;49m[37m[N] 84.15.184.80:65013 has been disconnected.
+[N] Incoming connection from 84.15.184.80
+84.15.184.80 edgar12345cake
+[39;49m[32m18:36 [4]MeHow: no fajnie
+[39;49m[37m[N] 78.11.34.206:63085 has been disconnected.
+[N] 188.47.121.5:46538 has been disconnected.
+[N] Incoming connection from 77.45.40.180
+77.45.40.180 diabeu32
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[39;49m[32m18:52 [4]MeHow: moge zrobic restart i bedzie na scrollu\
+[39;49m[37m[39;49m[32m18:52 [4]MeHow: moge zrobic restart i bedzie na scrollu
+[39;49m[37m[39;49m[32m18:53 [3]edi1: auto naprawie
+[39;49m[37m[39;49m[32m18:53 [4]MeHow: za 2 minuty restart szybki
+[39;49m[37m[39;49m[32m18:53 [3]edi1: ok
+[39;49m[37m[39;49m[32m18:54 [3]edi1: gre restartowac
+[39;49m[37m[39;49m[32m18:55 [4]MeHow: nie
+[39;49m[37m[39;49m[32m18:55 [4]MeHow: no to restart
+[39;49m[37m^C[33m[INFO] [0mShutting down the server...
+Shutting down..
+[32m[DONE] [0mThe server has been terminated.
+terminate called without an active exception

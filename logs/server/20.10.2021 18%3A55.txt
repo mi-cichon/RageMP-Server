@@ -1,0 +1,397 @@
+[33m[INFO] [0mStarting RAGE Multiplayer server...
+[0m[33m
+[============================================================]
+[33m[33m||
+[33m||[33m	MaxPlayers		[0m50[33m
+||	Sync rate		[0m40ms[33m
+||	Name			[0mBasicRPG.pl | W trakcie tworzenia | Wiecej na https://discord.gg/2vrMdXsdRW [PL][33m
+||	Gamemode		[0mrpg[33m
+||	Streaming distance	[0m500[33m
+||	Announcement		[0menabled[33m
+||	Voice chat		[0menabled[33m
+||	Address			[0m127.0.0.1:22005[33m
+||	Connection limits	[0mdisabled[33m
+||	Encryption		[0menabled[33m
+||	NodeJS			[0menabled[33m
+||	C#			[0menabled[33m
+||
+[============================================================]
+
+[0m
+[33m[INFO][0m Loading NodeJS packages...
+[33m[INFO][0m Starting packages...
+[32m[DONE][0m Server packages have been started.
+Initializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 10/20/2021 6:55:22 PM
+Unable to load acl.xml
+ACLEnabled: False
+Loaded 667 entries from vehicleData.json
+Loading resources..
+[?1h=[39;49m[33m->[39;49m[37m Starting [39;49m[36mServer[39;49m[37m resource..
+[39;49m[39;49m[37mServer:[39;49m[37m loading scripts.. found 1 script(s)
+[39;49m[39;49m[37mServer:[39;49m[37m instantiating [39;49m[37mServerSide.MainClass[39;49m[37m..
+[39;49mConnection refused [::1]:3306
+Connection refused [::1]:3306
+[39;49m[37mServer:[39;49m[37m loading server events.. found 10 server event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 10 server events(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loading remote events.. found 173 remote event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 173 remote event(s)
+[39;49mServer started...
+[39;49m[32m->[39;49m[37m Resource [39;49m[36mServer[39;49m[37m started!
+[39;49m[39;49m[32mStarted! Waiting for connections..
+[39;49m[32m[DONE] [0mStarted resource transfer server at 22006 port.
+[32m[DONE] [0mClient-side packages weight: [33m187.596451 MB[0m (uncompressed: [33m372.352905 MB[0m).
+[33m[INFO] [0mMasterList: Announcing into master server...
+[33m[INFO] [0mInitializing networking...
+[32m[DONE] [0mNetworking has been started: (IPv4-only) at 127.0.0.1:22005
+[32m[DONE] [0mThe server is ready to accept connections.
+[32m[DONE] [0mMasterList: Connected to master list.
+[N] Incoming connection from 83.29.1.163
+[N] Incoming connection from 84.15.184.80
+[N] Incoming connection from 185.186.38.1
+84.15.184.80 edgar12345cake
+83.29.1.163 Drymaniusz
+[N] Incoming connection from 87.207.61.174
+185.186.38.1 maciejooosek
+87.207.61.174 -Wars-
+[N] Incoming connection from 109.231.63.235
+109.231.63.235 QuaVim
+[N] 109.231.63.235:53414 has been disconnected.
+[N] Incoming connection from 109.231.63.235
+109.231.63.235 QuaVim
+[N] Incoming connection from 89.64.93.4
+[N] 89.64.93.4:11375 has been disconnected.
+[39;49m[32m18:56 [4]QuaVin: lepiej
+[39;49m[37m[39;49m[32m18:56 [2]MeHow: no lepiej
+[39;49m[37m[39;49m[32m18:56 [3]Wars: o panie, ale popitala
+[39;49m[37m[39;49m[32m18:56 [2]MeHow: bo ten event na myszce był do wywalenia, ale znalazłem rozwiązanie w końcu
+[39;49m[37m[39;49m[32m18:57 [1]edi1: tak lepi +1
+[39;49m[37m[N] Incoming connection from 77.45.40.180
+77.45.40.180 diabeu32
+[N] Incoming connection from 89.64.93.4
+89.64.93.4 -slupek-
+[39;49m[32m18:58 [5]dobrygnuj: bondziorno
+[39;49m[37m[39;49m[32m18:58 [2]MeHow: siema
+[39;49m[37m[39;49m[32m18:58 [1]edi1: siema
+[39;49m[37m[39;49m[32m18:58 [3]Wars: Siemasz @5
+[39;49m[37m[39;49m[32m18:59 [6]slupek77: witaj
+[39;49m[37m[39;49m[32m19:03 [2]MeHow: Witam graczy :)
+[39;49m[37m[39;49m[32m19:03 [1]edi1: siema
+[39;49m[37m[39;49m[32m19:03 [0].Drymaniusz*: Lesniczy czy to ty?
+[39;49m[37m[N] Incoming connection from 94.101.22.116
+94.101.22.116 szamanoza69699
+[N] Incoming connection from 83.28.211.15
+[39;49m[32m19:03 [2]MeHow: kto dał pozwolenie na wjazd quadem do lasu
+[39;49m[37m83.28.211.15 Kazik0
+[39;49m[32m19:04 [5]dobrygnuj: xd
+[39;49m[37m[39;49m[32m19:12 [6]slupek77: edi tune potrzeba
+[39;49m[37m[39;49m[32m19:12 [1]edi1: jestem na lawetah
+[39;49m[37m[39;49m[32m19:13 [5]dobrygnuj: sprzedam komode za 50k ,kupie sloty na fury 
+[39;49m[37m[N] 83.28.211.15:23345 has been disconnected.
+[39;49m[32m19:14 [2]MeHow: na jakies 20 osób aktywnie grających jest 750 aut
+[39;49m[37m[39;49m[32m19:14 [0].Drymaniusz*: ciekawe dlaczego
+[39;49m[37m[39;49m[32m19:14 [5]dobrygnuj: slupek za 10 min bede na tunerze
+[39;49m[37m[39;49m[32m19:14 [0].Drymaniusz*: admin daj sloty ok?
+[39;49m[37mObject reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at void ServerSide.MainClass.openMechHUD(Player player, ColShape colshape) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 3075
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+[39;49m[32m19:14 [0].Drymaniusz*: dobije tylko do 800 aut
+[39;49m[37mObject reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at void ServerSide.MainClass.openMechHUD(Player player, ColShape colshape) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 3075
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] Incoming connection from 91.245.82.80
+91.245.82.80 SNOWC4T
+[39;49m[32m19:23 [6]slupek77: ok
+[39;49m[37m[N] 87.207.61.174:53133 has been disconnected.
+[N] Incoming connection from 87.207.61.174
+87.207.61.174 -Wars-
+[39;49m[32m19:31 [6]slupek77: 2 trafiółem jeden od razu poszedł
+[39;49m[37m[39;49m[32m19:32 [6]slupek77: niecałe 300
+[39;49m[37m[39;49m[32m19:32 [8]VRS89: siemanko gracze 
+[39;49m[37m[39;49m[32m19:32 [3]Wars: siemasz
+[39;49m[37m[39;49m[32m19:32 [8]VRS89: licznik mnie dyma o 10 w lawecie ;/ xD brakuje tego radyjka z gta klimatycznego  
+[39;49m[37m[39;49m[32m19:33 [6]slupek77: karbonowe fale
+[39;49m[37m[N] Incoming connection from 5.173.252.89
+[N] 87.207.61.174:53133 has been disconnected.
+5.173.252.89 aimbotino
+[N] Incoming connection from 87.207.61.174
+87.207.61.174 -Wars-
+[39;49m[32m19:35 [0].Drymaniusz*: predkosc na tarczy zalezna jest od vmaxu pojazdu i jest wyswietlana co 20
+[39;49m[37m[39;49m[32m19:35 [0].Drymaniusz*: dlatego jest 100 jak jest vmax 90 -,-
+[39;49m[37m[39;49m[32m19:35 [5]dobrygnuj: siema łysy
+[39;49m[37m[39;49m[32m19:36 [8]VRS89: siema wasiel robimy napad na bankomat ?
+[39;49m[37m[39;49m[32m19:37 [5]dobrygnuj: spk tylo wpłać troche gotówki i możemy robić xd
+[39;49m[37m[39;49m[32m19:46 [8]VRS89: łoo panie 11 online osob
+[39;49m[37m[39;49m[32m19:46 [10]Foszik: premia na lawety to trzeba pozarabiac
+[39;49m[37m[39;49m[32m19:50 [2]MeHow: siema trucker
+[39;49m[37m[39;49m[32m19:51 [10]Foszik: mihau zrup mi tunera
+[39;49m[37m[39;49m[32m19:52 [2]MeHow: drymaniusz moze ci zwolnic
+[39;49m[37m[39;49m[32m19:52 [2]MeHow: ale pierwsza oplata tunera to 2kk
+[39;49m[37m[39;49m[32m19:52 [8]VRS89: nie no super auto pod wodą imlovinit 
+[39;49m[37m[39;49m[32m19:52 [10]Foszik: O_O
+[39;49m[37m[39;49m[32m19:53 [10]Foszik: edi
+[39;49m[37m[39;49m[32m19:53 [10]Foszik: edi chodz na tunera zaraz
+[39;49m[37m[N] 94.101.22.116:60650 has been disconnected.
+[39;49m[32m20:00 [8]VRS89: na mysliwym jest juz podmieniona weapon ?
+[39;49m[37m[39;49m[32m20:00 [2]MeHow: nie
+[39;49m[37m[N] 84.15.184.80:65013 has been disconnected.
+[N] Incoming connection from 84.15.184.80
+84.15.184.80 edgar12345cake
+[39;49m[32m20:02 [8]VRS89: emm a czy w przyszłości pod alt bedzie tez do wyobru mozliwość otwarcia drzwi oraz maski ? 
+[39;49m[37m[39;49m[32m20:02 [2]MeHow: może
+[39;49m[37m[N] 91.245.82.80:55539 has been disconnected.
+[39;49m[32m20:03 [8]VRS89: jugular wsalonie jakby ktos marzyl o nim
+[39;49m[37m[39;49m[32m20:04 [1]edi1: niemam zlotuf  xd
+[39;49m[37m[39;49m[32m20:05 [10]Foszik: da sie zmienic kolor swiatel?
+[39;49m[37m[39;49m[32m20:05 [8]VRS89: jeszcze nie
+[39;49m[37m[39;49m[32m20:05 [2]MeHow: nie jeszcze
+[39;49m[37m[39;49m[32m20:05 [10]Foszik: to eins kurła bo do retro potrzebuje dac ksekony jakies
+[39;49m[37m[39;49m[32m20:06 [2]MeHow: tak
+[39;49m[37m[39;49m[32m20:09 [1]edi1: MeHow sosi zlotuf jakies 3
+[39;49m[37m[39;49m[32m20:09 [2]MeHow: nie rozdajemy slotów na auta
+[39;49m[37mObject reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at T GTANetworkAPI.Entity.GetSharedData<T>(string key)
+   at void ServerSide.MainClass.StartCarWash(Player player, Vehicle vehicle, ColShape colshape) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 3465
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+Object reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at T GTANetworkAPI.Entity.GetSharedData<T>(string key)
+   at void ServerSide.MainClass.StartCarWash(Player player, Vehicle vehicle, ColShape colshape) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 3465
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+[39;49m[32m20:12 [5]dobrygnuj: czy skrypty z fivem idzie przerobić ma rage'a ?
+[39;49m[37m[39;49m[32m20:16 [8]VRS89: dlatego taki skup by się zdał z limitem ofc 
+[39;49m[37m[39;49m[32m20:16 [5]dobrygnuj: czy skrypty z fivem idzie przerobić ma rage'a ?
+[39;49m[37m[39;49m[32m20:16 [5]dobrygnuj: czy skrypty z fivem idzie przerobić ma rage'a 
+[39;49m[37m[39;49m[32m20:16 [5]dobrygnuj: czy skrypty z fivem idzie przerobić na rage'a 
+[39;49m[37m[39;49m[32m20:17 [5]dobrygnuj: czy skrypty z fivem idzie przerobić na rage'a 
+[39;49m[37m[39;49m[32m20:18 [1]edi1: komus tunera
+[39;49m[37m[39;49m[32m20:21 [8]VRS89: no fajnie wieksza ta dolna proteza z latajacym zabkiem na rybaku xD
+[39;49m[37m[N] 5.173.252.89:41175 has been disconnected.
+[N] Incoming connection from 94.75.95.23
+94.75.95.23 Leyer_PL
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[39;49m[32m20:24 [7]Leyer_PL: witam gdzie w pierwszej kolejnosci praca?
+[39;49m[37m[39;49m[32m20:25 [0].Drymaniusz*: witam, f2
+[39;49m[37m[39;49m[32m20:25 [2]MeHow: sprawdz sobie /bonu
+[39;49m[37m[39;49m[32m20:25 [2]MeHow: sprawdz sobie /bonus
+[39;49m[37m[39;49m[32m20:25 [2]MeHow: na lawety trzeba punktów na złomowisku nabić
+[39;49m[37m[39;49m[32m20:25 [2]MeHow: pod F2 masz napisane
+[39;49m[37m[39;49m[32m20:26 [7]Leyer_PL: nick ma sie taki jak na rockstar launcher?
+[39;49m[37m[39;49m[32m20:26 [2]MeHow: tak
+[39;49m[37m[39;49m[32m20:26 [2]MeHow: i logowanie jest na podstawie rockstara
+[39;49m[37m[39;49m[32m20:26 [2]MeHow: nie wiem czy dziala zmiana nicku w urzedzie, mozesz sprawdzic xD
+[39;49m[37m[39;49m[32m20:27 [7]Leyer_PL: na rockstarze zmienic jedynie moge?
+[39;49m[37m[39;49m[32m20:27 [2]MeHow: w urzedzie
+[39;49m[37mConnection refused [::1]:3306
+[39;49m[32m20:27 [2]jajco: widzisz?
+[39;49m[37m[39;49m[32m20:27 [2]MeHow: o
+[39;49m[37m[39;49m[32m20:28 [7]Desto: dzieki bardzo
+[39;49m[37m[39;49m[32m20:28 [2]MeHow: dobra zawijamy robić update
+[39;49m[37m[39;49m[32m20:28 [2]MeHow: siema
+[39;49m[37m[39;49m[32m20:28 [4]QuaVin: cze
+[39;49m[37m[N] 185.186.38.1:62954 has been disconnected.
+[N] 83.29.1.163:59860 has been disconnected.
+[39;49m[32m20:29 [7]Desto: jakie id teraz jest?
+[39;49m[37m[39;49m[32m20:30 [4]QuaVin: 700+
+[39;49m[37m[39;49m[32m20:30 [8]VRS89: przed 1k pewnie 
+[39;49m[37m[39;49m[32m20:30 [7]Desto: a ile najtansze auto?w
+[39;49m[37m[39;49m[32m20:30 [4]QuaVin: sztor 1600
+[39;49m[37m[39;49m[32m20:31 [8]VRS89: szrot w sandy 
+[39;49m[37m[39;49m[32m20:31 [5]dobrygnuj: niekupuj szrotów ,tu sie szybko zarabia
+[39;49m[37m[39;49m[32m20:33 [5]dobrygnuj: chcesz jakie sauto na start Desto /
+[39;49m[37m[39;49m[32m20:33 [7]Desto: tak
+[39;49m[37m[39;49m[32m20:33 [8]VRS89: no tak bo bonusy na testy są w 20k+ % wiec tylko nabic punkty w 1 drzewkach 
+[39;49m[37m[39;49m[32m20:33 [5]dobrygnuj: zglos sie do Ediego
+[39;49m[37m[39;49m[32m20:33 [8]VRS89: czekaj dam ci camaro xd
+[39;49m[37m[39;49m[32m20:33 [5]dobrygnuj: łysy jakie masz camaro ?
+[39;49m[37m[39;49m[32m20:34 [8]VRS89: nowe
+[39;49m[37m[39;49m[32m20:34 [5]dobrygnuj: tego addona ?
+[39;49m[37m[39;49m[32m20:34 [7]Desto: a np. hellfire po ile jest?
+[39;49m[37m[39;49m[32m20:34 [8]VRS89: tag addona
+[39;49m[37m[39;49m[32m20:34 [8]VRS89: hellfire po 290k sie respi
+[39;49m[37m[39;49m[32m20:34 [5]dobrygnuj: to ja wezme a nowemu damy komode 
+[39;49m[37m[39;49m[32m20:35 [7]Desto: jakies znajdzki jest kasa?
+[39;49m[37m[39;49m[32m20:35 [8]VRS89: znajdzki wyłaczone zostały wzamian jest premia do prac 20k+procent 
+[39;49m[37m[39;49m[32m20:36 [7]Desto: mozna sie na /g oglaszac?
+[39;49m[37m[39;49m[32m20:36 [8]VRS89: a czemu nie ? xd to są testy póki co nie ma osobnej komendy 
+[39;49m[37m[39;49m[32m20:36 [7]Desto: to tak ma ktos szrota na sell jakiegos?
+[39;49m[37m[39;49m[32m20:37 [5]dobrygnuj: dawaj na urząd
+[39;49m[37m[39;49m[32m20:37 [7]Desto: dawaj na plaze :/
+[39;49m[37m[39;49m[32m20:37 [8]VRS89: prawko musisz kolego zrobić 
+[39;49m[37m[39;49m[32m20:37 [7]Desto: domyslam sie
+[39;49m[37m[39;49m[32m20:38 [7]Desto: ale kupic moge? 
+[39;49m[37m[39;49m[32m20:38 [7]Desto: @5 dawaj na plaze bo z buta to ciezko :/
+[39;49m[37m[N] Incoming connection from 90.255.4.12
+[N] 90.255.4.12:51175 has been disconnected.
+[39;49m[32m20:39 [7]Desto: jest tabela graczy?
+[39;49m[37m[39;49m[32m20:40 [8]VRS89: F4
+[39;49m[37m[N] Incoming connection from 90.255.4.12
+90.255.4.12 _SHWGR_
+[39;49m[32m20:40 [7]Desto: @1 masz szrota na sell podobno
+[39;49m[37m[39;49m[32m20:41 [1]edi1: mam
+[39;49m[37m[39;49m[32m20:41 [7]Desto: ile chcesz?
+[39;49m[37m[39;49m[32m20:43 [8]VRS89: wasiel
+[39;49m[37m[39;49m[32m20:43 [5]dobrygnuj: co ?
+[39;49m[37m[39;49m[32m20:43 [8]VRS89: dawaj urzad
+[39;49m[37m[39;49m[32m20:43 [5]dobrygnuj: jade
+[39;49m[37mConnection refused [::1]:3306
+[39;49m[32m20:48 [6]slupek77: sandking na terenowym
+[39;49m[37m[39;49m[32m20:49 [5]dobrygnuj: do mnie na tune
+[39;49m[37m[39;49m[32m20:54 [8]Ametyst: teraz rybki to easy ;3
+[39;49m[37m[39;49m[32m20:55 [5]dobrygnuj: desto chcesz to brioso od ediego ?
+[39;49m[37m[39;49m[32m20:56 [7]Desto: narazie nie dostalem komode
+[39;49m[37m[39;49m[32m20:57 [5]dobrygnuj: ok jakby co edi ma brioso dla cb niskie id
+[39;49m[37m[39;49m[32m20:57 [8]Ametyst: prosze wasiel nie pisz o id XDDDD
+[39;49m[37m[39;49m[32m20:57 [5]dobrygnuj: xD
+[39;49m[37m[N] 77.45.40.180:49163 has been disconnected.
+[39;49m[32m20:59 [7]Desto: to prawko mnie wykonczy ;/
+[39;49m[37m[39;49m[32m21:00 [0]_SHWGR_: dasz rade
+[39;49m[37m[39;49m[32m21:00 [7]Desto: nie da sie 
+[39;49m[37m[N] Incoming connection from 77.45.40.180
+77.45.40.180 diabeu32
+[N] 84.15.184.80:65013 has been disconnected.
+[N] Incoming connection from 84.15.184.80
+84.15.184.80 edgar12345cake
+[39;49m[32m21:01 [7]Desto: 5 proba :cc
+[39;49m[37m[N] Incoming connection from 94.101.22.116
+[39;49m[32m21:06 [7]Desto: jakies tipy na to ? xD
+[39;49m[37m[N] 94.101.22.116:58677 has been disconnected.
+[39;49m[32m21:06 [8]Ametyst: ale na co ? xd pytania ?
+[39;49m[37m[39;49m[32m21:06 [7]Desto: prawko 
+[39;49m[37m[N] Incoming connection from 178.214.21.59
+178.214.21.59 Kuboro_esa
+[N] Incoming connection from 94.101.22.116
+94.101.22.116 szamanoza69699
+[N] 94.75.95.23:59150 has been disconnected.
+[N] 178.214.21.59:52794 has been disconnected.
+[N] Incoming connection from 178.214.21.59
+178.214.21.59 Kuboro_esa
+[N] Incoming connection from 94.75.95.23
+94.75.95.23 Leyer_PL
+[N] 94.75.95.23:58684 has been disconnected.
+[N] 109.231.63.235:53414 has been disconnected.
+[N] Incoming connection from 109.231.63.235
+109.231.63.235 QuaVim
+[N] 94.101.22.116:60170 has been disconnected.
+[39;49m[32m21:47 [2]dobrygnuj: nie 
+[39;49m[37m[N] 109.231.63.235:53414 has been disconnected.
+[N] Incoming connection from 109.231.63.235
+109.231.63.235 QuaVim
+[N] 188.47.127.251:16641 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+[N] 188.47.127.251:16641 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 90.255.4.12:63706 has been disconnected.
+[N] Incoming connection from 90.255.4.12
+90.255.4.12 _SHWGR_
+[N] 109.231.63.235:53414 has been disconnected.
+[N] 90.255.4.12:63706 has been disconnected.
+[N] 87.207.61.174:53133 has been disconnected.
+[N] 89.64.93.4:11365 has been disconnected.
+[N] Incoming connection from 89.64.93.4
+89.64.93.4 -slupek-
+[N] Incoming connection from 91.245.82.80
+91.245.82.80 SNOWC4T
+[N] 89.64.93.4:11365 has been disconnected.
+[N] Incoming connection from 89.64.93.4
+89.64.93.4 -slupek-
+[N] 84.15.184.80:65013 has been disconnected.
+[N] Incoming connection from 84.15.184.80
+84.15.184.80 edgar12345cake
+[N] Incoming connection from 83.29.1.163
+83.29.1.163 Drymaniusz
+[N] 91.245.82.80:51123 has been disconnected.
+[N] 83.29.1.163:51778 has been disconnected.
+[N] 89.64.93.4:11365 has been disconnected.
+[N] Incoming connection from 89.64.93.4
+89.64.93.4 -slupek-
+[N] 178.214.21.59:52794 has been disconnected.
+[N] 188.47.127.251:17287 has been disconnected.
+[N] 89.64.93.4:11365 has been disconnected.
+[N] Incoming connection from 81.15.239.49
+[N] 81.15.239.49:50752 has been disconnected.
+[N] 77.45.40.180:57766 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[39;49m[32m23:16 [1]edi1: siema
+[39;49m[37m[N] 188.47.127.251:17039 has been disconnected.
+[N] Incoming connection from 89.64.93.4
+89.64.93.4 -slupek-
+[39;49m[32m23:26 [1]edi1: siema
+[39;49m[37m[N] Incoming connection from 5.173.154.11
+[39;49m[32m23:26 [1]edi1: siema
+[39;49m[37m5.173.154.11 Looki12
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[39;49m[32m23:27 [0]slupek77: a siemqa
+[39;49m[37m[N] 84.15.184.80:65013 has been disconnected.
+[N] Incoming connection from 84.15.184.80
+84.15.184.80 edgar12345cake
+[N] Incoming connection from 77.45.40.180
+77.45.40.180 diabeu32
+[N] 77.45.40.180:52022 has been disconnected.
+[N] Incoming connection from 77.45.40.180
+77.45.40.180 diabeu32
+[N] 5.173.154.11:6482 has been disconnected.
+[N] Incoming connection from 213.134.168.147
+[N] 213.134.168.147:15825 has been disconnected.
+[N] Incoming connection from 213.134.168.147
+213.134.168.147 -_Chmielu_-
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[39;49m[32m00:32 [4]robotek019: siema
+[39;49m[37m[39;49m[32m00:32 [0]slupek77: elo
+[39;49m[37m[39;49m[32m00:34 [3]dobrygnuj: siema
+[39;49m[37m[39;49m[32m00:34 [1]edi1: siema
+[39;49m[37m[N] 213.108.119.240:53632 has been disconnected.
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[N] 213.108.119.240:53632 has been disconnected.
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[N] 213.134.168.147:15854 has been disconnected.
+[N] 213.108.119.240:53632 has been disconnected.
+[N] 89.64.93.4:11242 has been disconnected.
+[N] Incoming connection from 79.186.37.95
+79.186.37.95 Piraciako
+[N] 79.186.37.95:56839 has been disconnected.
+[N] Incoming connection from 79.186.37.95
+79.186.37.95 Piraciako
+[N] 79.186.37.95:56839 has been disconnected.
+[N] 77.45.40.180:52022 has been disconnected.
+[N] 84.15.184.80:65013 has been disconnected.
+^[OA^[OB        ^[[5~     ^[OD^[OC        ^[OA^C[33m[INFO] [0mShutting down the server...
+Shutting down..
+[32m[DONE] [0mThe server has been terminated.
+terminate called without an active exception

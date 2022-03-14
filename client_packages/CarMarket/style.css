@@ -1,0 +1,187 @@
+html, body{
+    height:auto;
+    background-color: transparent;
+    font-family:'PT Sans', sans-serif;
+}
+.mainBody{
+    margin-top: 20vh;
+    height:auto;
+    padding: 2vh;
+    width: 50vh;
+    overflow: auto;
+    flex-direction: row;
+    display: column;
+    background-color: #1d1e22;
+    border: 1px solid #00cc99;
+    border-style:solid;
+    border-width: 0.1vh;
+    user-select: none;
+}
+
+.mainRow{
+    padding: 0.5vw;
+    height: 8vh;
+}
+
+.btn-secondary{
+    background-color: #4c4c4c;
+}
+
+input[type="color"] {
+	-webkit-appearance: none;
+	border: none;
+	width: 5vh;
+}
+
+.paintStyleCol{
+    padding: 2vh;
+}
+
+.priceRow{
+    padding: 2vh;
+}
+
+.nameLabel{
+    color: #fff;
+    font-size: 1.4vh;
+    margin-right: 1vh;
+}
+
+.moneyText{
+    color: lime;
+    font-size: 1.9vh;
+    margin-left: 1vh;
+}
+
+.nameText{
+    color: rgb(255, 255, 255);
+    font-size: 1.9vh;
+    margin-left: 1vh;
+}
+
+.nameCol{
+    padding: 1vh;
+    border-bottom: 1px solid #0c9;
+}
+.selectButton{
+    color: #fff;
+    background-color: #313131;
+    border-color: #00cc99;
+    user-select: none;
+    transition: all 1s;
+    font-size: 1.1vh;
+    margin-left: 0.8vh;
+    height: 3vh !important;
+    width: auto;
+}
+
+.closeCol{
+    display: flex;
+    justify-content: space-around;
+}
+
+.selectButton:hover{
+    border-radius: 1vh;
+    color: limegreen;
+}
+
+.closeButton{
+    color: #fff;
+    background-color: #313131;
+    border-color: #00cc99;
+    left:50%;
+    user-select: none;
+    transition: all 1s;
+    font-size: 1.1vh;
+    height: 3vh !important;
+    width: 20%;
+}
+.closeButton:hover{
+    color: red;
+    border-radius: 1vh;
+}
+
+.priceCol{
+    padding-top: 2vh;
+}
+
+.daysCol{
+    margin-top: 2vh;
+}
+
+.buttonRow{
+    padding: 1vh;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #444; 
+    border: 3vw solid transparent;
+    border-radius: 0.5vw;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+  .btn-check:active+.btn-secondary, .btn-check:checked+.btn-secondary, .btn-secondary.active, .btn-secondary:active, .show>.btn-secondary.dropdown-toggle{
+    background-color: #1a1a1a !important;
+  }
+
+
+  .priceInput{
+      background-color: #363638;
+      border-radius: 1vh;
+      text-align: center;
+      border: 1px solid #00cc99;
+      color: white;
+      width: 14vh;
+  }
+
+  .priceInput:focus{
+    outline: none;
+}
+.descInput:focus{
+    outline: none;
+}
+
+    .descInput{
+    background-color: #363638;
+    border-radius: 1vh;
+    border: 1px solid #00cc99;
+    color: white;
+    width: 14vh;
+    resize: none;
+  }
+
+  .colorPickRow{
+      margin-top: 4vh;
+  }
+
+  .errorCol{
+      display: none;
+      color: rgb(173, 0, 0);
+      font-weight: bold;
+      font-size: 1.6vh;
+      text-align: center;
+  }
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

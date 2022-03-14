@@ -1,0 +1,360 @@
+[33m[INFO] [0mStarting RAGE Multiplayer server...
+[0m[33m
+[============================================================]
+[33m[33m||
+[33m||[33m	MaxPlayers		[0m50[33m
+||	Sync rate		[0m40ms[33m
+||	Name			[0mBasicRPG.pl | W trakcie tworzenia | Wiecej na https://discord.gg/2vrMdXsdRW [PL][33m
+||	Gamemode		[0mrpg[33m
+||	Streaming distance	[0m500[33m
+||	Announcement		[0menabled[33m
+||	Voice chat		[0menabled[33m
+||	Address			[0m127.0.0.1:22005[33m
+||	Connection limits	[0mdisabled[33m
+||	Encryption		[0menabled[33m
+||	NodeJS			[0menabled[33m
+||	C#			[0menabled[33m
+||
+[============================================================]
+
+[0m
+[33m[INFO][0m Loading NodeJS packages...
+[33m[INFO][0m Starting packages...
+[32m[DONE][0m Server packages have been started.
+Initializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 10/23/2021 3:01:54 PM
+Unable to load acl.xml
+ACLEnabled: False
+Loaded 667 entries from vehicleData.json
+Loading resources..
+[?1h=[39;49m[33m->[39;49m[37m Starting [39;49m[36mServer[39;49m[37m resource..
+[39;49m[39;49m[37mServer:[39;49m[37m loading scripts.. found 1 script(s)
+[39;49m[39;49m[37mServer:[39;49m[37m instantiating [39;49m[37mServerSide.MainClass[39;49m[37m..
+[39;49m[39;49m[37mServer:[39;49m[37m loading server events.. found 10 server event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 10 server events(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loading remote events.. found 181 remote event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 181 remote event(s)
+[39;49mServer started...
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[39;49m[32m->[39;49m[37m Resource [39;49m[36mServer[39;49m[37m started!
+[39;49m[39;49m[32mStarted! Waiting for connections..
+[39;49m[32m[DONE] [0mStarted resource transfer server at 22006 port.
+[32m[DONE] [0mClient-side packages weight: [33m213.827118 MB[0m (uncompressed: [33m354.264252 MB[0m).
+[33m[INFO] [0mMasterList: Announcing into master server...
+[33m[INFO] [0mInitializing networking...
+[32m[DONE] [0mNetworking has been started: (IPv4-only) at 127.0.0.1:22005
+[32m[DONE] [0mThe server is ready to accept connections.
+[32m[DONE] [0mMasterList: Connected to master list.
+[N] Incoming connection from 109.231.63.235
+109.231.63.235 QuaVim
+[N] Incoming connection from 87.207.61.174
+87.207.61.174 -Wars-
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] Incoming connection from 89.64.93.4
+[N] Incoming connection from 83.29.1.163
+89.64.93.4 -slupek-
+83.29.1.163 Drymaniusz
+[N] Incoming connection from 87.123.195.0
+87.123.195.0 SHOGUN_77
+[39;49m[32m15:12 [5]SHOGUN77: nakrycia glowy mozna juz gdzies kupic?
+[39;49m[37m[39;49m[32m15:12 [4].Drymaniusz*: nie
+[39;49m[37m[39;49m[32m15:15 [2]Ametyst: witam graczy 
+[39;49m[37m[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[39;49m[32m15:15 [6]MeHow: siema
+[39;49m[37m[N] 87.123.195.0:19107 has been disconnected.
+[N] 185.186.38.1:50816 has been disconnected.
+[39;49m[32m15:18 [2]Ametyst: o co kaman zwiekszono znaczenie pojazdów terenowych ? 
+[39;49m[37m[39;49m[32m15:18 [3]slupek77: czy utopione auto nadel się nie odrespia 
+[39;49m[37m[39;49m[32m15:19 [4].Drymaniusz*: nadal, nie robilismy tego jeszcze
+[39;49m[37m[39;49m[32m15:20 [3]slupek77: cholercia bo utopiłem
+[39;49m[37m[N] 188.47.127.251:17106 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[39;49m[32m15:21 [4].Drymaniusz*: @2 Wjedz zwyklym autem bez terenowych felg na trawe i przejedz sie po niej to zobaczysz
+[39;49m[37m[39;49m[32m15:22 [4].Drymaniusz*: @3 id?
+[39;49m[37m[39;49m[32m15:22 [2]Ametyst: czy inne rodzaje felg beda mialy znaczenie na jazde pojazdów ?
+[39;49m[37m[39;49m[32m15:24 [3]slupek77: 761 id
+[39;49m[37m[39;49m[32m15:24 [4].Drymaniusz*: przecho
+[39;49m[37m[N] Incoming connection from 37.30.101.0
+37.30.101.0 JaniaX135
+[39;49m[32m15:25 [4].Drymaniusz*: Aktualnie tylko terenowe, nie myslelismy nad innymi
+[39;49m[37m[N] Incoming connection from 77.45.40.180
+77.45.40.180 diabeu32
+[39;49m[32m15:31 [6]dobrygnuj: siemano
+[39;49m[37m[39;49m[32m15:31 [4].Drymaniusz*: siema
+[39;49m[37m[39;49m[32m15:31 [6]dobrygnuj: slupek felgi sa dla cb do caracary
+[39;49m[37m[39;49m[32m15:39 [3]slupek77: dobry możesz tune
+[39;49m[37m[39;49m[32m15:39 [6]dobrygnuj: jestem
+[39;49m[37m[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[39;49m[32m15:40 [7]MeHow: siema
+[39;49m[37m[39;49m[32m15:40 [1]Wars: siemka
+[39;49m[37m[39;49m[32m15:41 [7]MeHow: jak sie po offroadzie jeździ? xD
+[39;49m[37m[39;49m[32m15:41 [1]Wars: kozacko
+[39;49m[37m[39;49m[32m15:42 [7]MeHow: teoretycznie teraz byle fura bez felg odpowiednich nie pojezdzi fajnie po offroadzie
+[39;49m[37m[39;49m[32m15:43 [7]MeHow: a offroadowe zestawy kół dają teraz nawet lepsze wyniki niż normalnie
+[39;49m[37m[39;49m[32m15:44 [1]Wars: Spoko opcja teraz będzie widać sportowe bryki z klasą i bryki które do odwalania ludzie tylko mają i oszpecają je.
+[39;49m[37m[39;49m[32m15:45 [0]QuaVin: a pojazdy publincze np z ogrodnika bede sie slizgac ?
+[39;49m[37m[39;49m[32m15:45 [7]MeHow: to właśnie ogarnę w next update
+[39;49m[37m[39;49m[32m15:45 [7]MeHow: żeby lawety i kalahari miały offroadówki
+[39;49m[37m[39;49m[32m15:45 [0]QuaVin: mysliwy
+[39;49m[37m[39;49m[32m15:45 [7]MeHow: o właśnie xD
+[39;49m[37m[N] 185.186.38.1:54412 has been disconnected.
+[39;49m[32m15:51 [5]JaniaX: ma ktos offroadowe felgi zamontowac?
+[39;49m[37m[39;49m[32m15:51 [6]dobrygnuj: co stam mam
+[39;49m[37m[39;49m[32m15:54 [6]dobrygnuj: pp 522 do przecho
+[39;49m[37m[39;49m[32m15:55 [6]dobrygnuj: dzk
+[39;49m[37m[N] 188.47.127.251:17106 has been disconnected.
+[39;49m[32m16:03 [3]slupek77: ofroady mam we flashu i testuje
+[39;49m[37m[N] Incoming connection from 84.15.187.227
+84.15.187.227 edgar12345cake
+[N] 37.30.101.0:14958 has been disconnected.
+[39;49m[32m16:06 [2]edi1: siema
+[39;49m[37m[39;49m[32m16:06 [6]dobrygnuj: elo
+[39;49m[37m[N] 83.29.1.163:62946 has been disconnected.
+[N] Incoming connection from 79.191.0.188
+[N] 79.191.0.188:60966 has been disconnected.
+[N] 77.45.40.180:49652 has been disconnected.
+[N] Incoming connection from 77.45.40.180
+77.45.40.180 diabeu32
+Object reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at T GTANetworkAPI.Entity.GetSharedData<T>(string key)
+   at void ServerSide.MainClass.StartCarWash(Player player, Vehicle vehicle, ColShape colshape) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 3555
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+Object reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at T GTANetworkAPI.Entity.GetSharedData<T>(string key)
+   at void ServerSide.MainClass.StartCarWash(Player player, Vehicle vehicle, ColShape colshape) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 3555
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+[39;49m[32m16:29 [3]slupek77: dobry dasz rade tune
+[39;49m[37m[39;49m[32m16:30 [4]dobrygnuj: 5min
+[39;49m[37m[39;49m[32m16:33 [4]dobrygnuj: skup ryb sie baguje ,sprzdałem ryby kilka razy xd
+[39;49m[37m[N] 84.15.187.227:58070 has been disconnected.
+[N] Incoming connection from 84.15.187.227
+84.15.187.227 edgar12345cake
+[39;49m[32m16:35 [4]dobrygnuj: jestem slupek
+[39;49m[37m[N] 109.231.63.235:51840 has been disconnected.
+[N] Incoming connection from 109.231.63.235
+109.231.63.235 QuaVim
+[N] 77.45.40.180:49652 has been disconnected.
+[N] 109.231.63.235:51840 has been disconnected.
+[N] Incoming connection from 109.231.63.235
+109.231.63.235 QuaVim
+[N] 109.231.63.235:51840 has been disconnected.
+[N] Incoming connection from 109.231.63.235
+109.231.63.235 QuaVim
+[N] 109.231.63.235:57427 has been disconnected.
+[N] Incoming connection from 109.231.63.235
+109.231.63.235 QuaVim
+[39;49m[32m17:08 [1]Wars: edi help na komisariacie skuliśmy się ;)
+[39;49m[37m[39;49m[32m17:23 [2]edi1: zare bende
+[39;49m[37m[N] 89.64.93.4:11223 has been disconnected.
+[N] Incoming connection from 89.64.93.4
+89.64.93.4 -slupek-
+[N] 89.64.93.4:11223 has been disconnected.
+[N] Incoming connection from 89.64.93.4
+89.64.93.4 -slupek-
+[N] 84.15.187.227:58070 has been disconnected.
+[N] 109.231.63.235:61032 has been disconnected.
+[N] Incoming connection from 109.231.63.235
+109.231.63.235 QuaVim
+[N] 87.207.61.174:54179 has been disconnected.
+[N] 89.64.93.4:11253 has been disconnected.
+[N] 109.231.63.235:59813 has been disconnected.
+[N] Incoming connection from 83.29.1.163
+83.29.1.163 Drymaniusz
+[N] Incoming connection from 79.186.227.32
+[N] 79.186.227.32:64650 has been disconnected.
+[N] Incoming connection from 79.186.227.32
+[N] 79.186.227.32:64650 has been disconnected.
+[N] Incoming connection from 79.186.227.32
+79.186.227.32 Piraciako
+[N] Incoming connection from 89.64.93.4
+89.64.93.4 -slupek-
+[N] 79.186.227.32:49826 has been disconnected.
+[N] Incoming connection from 79.186.227.32
+79.186.227.32 Piraciako
+[N] Incoming connection from 84.15.187.227
+84.15.187.227 edgar12345cake
+[39;49m[32m18:47 [3]edi1: siema
+[39;49m[37m[39;49m[32m18:47 [1]Piraciako: bry
+[39;49m[37m[39;49m[32m18:47 [2]slupek77: elo
+[39;49m[37m[N] Incoming connection from 91.240.130.247
+91.240.130.247 xgucciflipflops
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] 79.186.227.32:49826 has been disconnected.
+[N] Incoming connection from 79.186.227.32
+79.186.227.32 Piraciako
+[N] Incoming connection from 188.241.25.16
+[N] 188.241.25.16:58193 has been disconnected.
+[N] 91.240.130.247:52284 has been disconnected.
+[N] 79.186.227.32:49826 has been disconnected.
+[N] Incoming connection from 79.186.227.32
+79.186.227.32 Piraciako
+[39;49m[32m19:01 [0].Drymaniusz*: @3 Podjedziesz tuner?
+[39;49m[37m[N] 79.186.227.32:49826 has been disconnected.
+[N] Incoming connection from 79.186.227.32
+79.186.227.32 Piraciako
+[39;49m[32m19:16 [1]Piraciako: D:
+[39;49m[37m[N] Incoming connection from 195.136.73.127
+[N] 79.186.227.32:49826 has been disconnected.
+[N] 195.136.73.127:52528 has been disconnected.
+[N] Incoming connection from 195.136.73.127
+[N] 83.29.1.163:59914 has been disconnected.
+[N] 195.136.73.127:52528 has been disconnected.
+[39;49m[32m19:27 [3]edi1: slupek hoc na dc
+[39;49m[37m[N] Incoming connection from 87.123.195.0
+87.123.195.0 SHOGUN_77
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[39;49m[32m19:49 [1]Ametyst: macie zbugowane liczniki tez ?
+[39;49m[37m[39;49m[32m19:51 [0]SHOGUN77: u mnie normalnie dziala
+[39;49m[37m[39;49m[32m19:52 [3]edi1: siema
+[39;49m[37m[39;49m[32m19:52 [1]Ametyst: siema
+[39;49m[37m[N] 89.64.93.4:11247 has been disconnected.
+[N] Incoming connection from 89.64.93.4
+89.64.93.4 -slupek-
+[N] 188.47.127.251:16864 has been disconnected.
+[N] 87.123.195.0:19203 has been disconnected.
+[39;49m[32m20:22 [2]slupek77: szkoda ż nie mam slotu to byśmy calico potestowali
+[39;49m[37m[39;49m[32m20:26 [3]edi1: jatesz niem zlotuf brrr
+[39;49m[37m[N] 89.64.93.4:11221 has been disconnected.
+[N] Incoming connection from 89.64.93.4
+89.64.93.4 -slupek-
+[39;49m[32m20:40 [3]edi1: ide sie polorze jakos zle czuiese
+[39;49m[37m[N] 84.15.187.227:64610 has been disconnected.
+[N] 89.64.93.4:11221 has been disconnected.
+[N] Incoming connection from 178.216.136.221
+[N] 178.216.136.221:58248 has been disconnected.
+[N] Incoming connection from 178.216.136.221
+[N] 178.216.136.221:53395 has been disconnected.
+[N] Incoming connection from 84.15.187.227
+84.15.187.227 edgar12345cake
+[N] Incoming connection from 83.29.1.163
+83.29.1.163 Drymaniusz
+[39;49m[32m21:05 [0]edi1: elo
+[39;49m[37m[39;49m[32m21:05 [1].Drymaniusz*: siema
+[39;49m[37m[39;49m[32m21:06 [0]edi1: co testujesz
+[39;49m[37m[N] Incoming connection from 213.134.168.147
+213.134.168.147 -_Chmielu_-
+[39;49m[32m21:10 [1].Drymaniusz*: nic
+[39;49m[37m[N] 213.134.168.147:15963 has been disconnected.
+[N] Incoming connection from 213.134.168.147
+213.134.168.147 -_Chmielu_-
+[N] 84.15.187.227:63367 has been disconnected.
+[N] Incoming connection from 84.15.187.227
+84.15.187.227 edgar12345cake
+[N] Incoming connection from 91.227.219.125
+91.227.219.125 vevoniusz
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] 213.134.168.147:15963 has been disconnected.
+[N] 84.15.187.227:63367 has been disconnected.
+[N] Incoming connection from 84.15.187.227
+84.15.187.227 edgar12345cake
+[N] Incoming connection from 213.134.168.147
+213.134.168.147 -_Chmielu_-
+[N] 84.15.187.227:63367 has been disconnected.
+[N] Incoming connection from 89.64.93.4
+89.64.93.4 -slupek-
+[N] 91.227.219.125:59883 has been disconnected.
+[39;49m[32m21:38 [0]slupek77: witam
+[39;49m[37m[39;49m[32m21:40 [0]slupek77: można tepnąć utopioną fure ids 764
+[39;49m[37m[39;49m[32m21:41 [1].Drymaniusz*: halo kurba
+[39;49m[37m[39;49m[32m21:41 [1].Drymaniusz*: czemu to plywa w moim basenie
+[39;49m[37m[39;49m[32m21:41 [0]slupek77: sprawdzałem czy pływa
+[39;49m[37m[39;49m[32m21:42 [1].Drymaniusz*: mhm
+[39;49m[37m[39;49m[32m21:42 [1].Drymaniusz*: przecho 
+[39;49m[37m[39;49m[32m21:42 [0]slupek77: thx
+[39;49m[37m[N] Incoming connection from 87.123.195.0
+87.123.195.0 SHOGUN_77
+[N] 87.123.195.0:19125 has been disconnected.
+[N] Incoming connection from 87.123.195.0
+87.123.195.0 SHOGUN_77
+[N] Incoming connection from 95.49.122.79
+95.49.122.79 Kadniz
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] Incoming connection from 83.31.156.58
+[N] 83.31.156.58:65494 has been disconnected.
+[N] Incoming connection from 83.31.156.58
+[N] 83.31.156.58:65494 has been disconnected.
+[N] Incoming connection from 83.31.156.58
+[N] 83.31.156.58:65494 has been disconnected.
+[N] 213.134.168.147:15963 has been disconnected.
+[N] Incoming connection from 213.134.168.147
+213.134.168.147 -_Chmielu_-
+[N] Incoming connection from 83.31.156.58
+[N] 213.134.168.147:15963 has been disconnected.
+83.31.156.58 rajder_
+[N] Incoming connection from 213.134.168.147
+213.134.168.147 -_Chmielu_-
+[N] 89.64.93.4:11287 has been disconnected.
+[N] Incoming connection from 89.64.93.4
+89.64.93.4 -slupek-
+[N] 89.64.93.4:11287 has been disconnected.
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[N] 83.31.156.58:63195 has been disconnected.
+[N] 87.123.195.0:19125 has been disconnected.
+[N] Incoming connection from 87.123.195.0
+87.123.195.0 SHOGUN_77
+[N] Incoming connection from 83.6.222.5
+83.6.222.5 Borowikens
+[N] 83.6.222.5:51881 has been disconnected.
+[N] Incoming connection from 83.6.222.5
+83.6.222.5 Borowikens
+[N] 213.108.119.240:50902 has been disconnected.
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[N] Incoming connection from 89.64.46.251
+89.64.46.251 Siup523
+[N] 87.123.195.0:19125 has been disconnected.
+[N] Incoming connection from 87.123.195.0
+87.123.195.0 SHOGUN_77
+[N] 213.108.119.240:50902 has been disconnected.
+[N] Incoming connection from 213.108.119.240
+[N] 213.108.119.240:52635 has been disconnected.
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[N] 89.64.46.251:39253 has been disconnected.
+[N] 213.134.168.147:15963 has been disconnected.
+[N] 213.108.119.240:61754 has been disconnected.
+[N] 87.123.195.0:19125 has been disconnected.
+[N] Incoming connection from 84.15.187.227
+84.15.187.227 edgar12345cake
+[39;49m[32m23:55 [0]edi1: siema
+[39;49m[37m[39;49m[32m23:56 [4]Kadniz: siema
+[39;49m[37m[N] 95.49.122.79:62061 has been disconnected.
+[39;49m[32m00:26 [0]edi1: drymaniusz report pszyimiesz
+[39;49m[37m[N] Incoming connection from 5.173.248.37
+5.173.248.37 SpeedMaster_
+[N] Incoming connection from 188.47.122.63
+188.47.122.63 0CzErNi0
+Object reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+Exception has been thrown by the target of an invocation.
+Unhandled exception. System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at void ServerSide.MainClass.OnPlayerExitVehicle(Player player, Vehicle vehicle) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 1876
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at GTANetworkInternals.EventHandler.Parse(Event _event, Object[] arguments)

@@ -1,0 +1,231 @@
+[33m[INFO] [0mStarting RAGE Multiplayer server...
+[0m[33m
+[============================================================]
+[33m[33m||
+[33m||[33m	MaxPlayers		[0m50[33m
+||	Sync rate		[0m40ms[33m
+||	Name			[0mBasicRPG.pl | W trakcie tworzenia | Wiecej na https://discord.gg/2vrMdXsdRW [PL][33m
+||	Gamemode		[0mrpg[33m
+||	Streaming distance	[0m500[33m
+||	Announcement		[0menabled[33m
+||	Voice chat		[0menabled[33m
+||	Address			[0m127.0.0.1:22005[33m
+||	Connection limits	[0mdisabled[33m
+||	Encryption		[0menabled[33m
+||	NodeJS			[0menabled[33m
+||	C#			[0menabled[33m
+||
+[============================================================]
+
+[0m
+[33m[INFO][0m Loading NodeJS packages...
+[33m[INFO][0m Starting packages...
+[32m[DONE][0m Server packages have been started.
+Initializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 10/24/2021 4:58:50 AM
+Unable to load acl.xml
+ACLEnabled: False
+Loaded 667 entries from vehicleData.json
+Loading resources..
+[?1h=[39;49m[33m->[39;49m[37m Starting [39;49m[36mServer[39;49m[37m resource..
+[39;49m[39;49m[37mServer:[39;49m[37m loading scripts.. found 1 script(s)
+[39;49m[39;49m[37mServer:[39;49m[37m instantiating [39;49m[37mServerSide.MainClass[39;49m[37m..
+[39;49m[39;49m[37mServer:[39;49m[37m loading server events.. found 10 server event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 10 server events(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loading remote events.. found 181 remote event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 181 remote event(s)
+[39;49mServer started...
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[39;49m[32m->[39;49m[37m Resource [39;49m[36mServer[39;49m[37m started!
+[39;49m[39;49m[32mStarted! Waiting for connections..
+[39;49m[32m[DONE] [0mStarted resource transfer server at 22006 port.
+[32m[DONE] [0mClient-side packages weight: [33m214.151260 MB[0m (uncompressed: [33m354.594086 MB[0m).
+[33m[INFO] [0mMasterList: Announcing into master server...
+[33m[INFO] [0mInitializing networking...
+[32m[DONE] [0mNetworking has been started: (IPv4-only) at 127.0.0.1:22005
+[32m[DONE] [0mThe server is ready to accept connections.
+[32m[DONE] [0mMasterList: Connected to master list.
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[39;49m[32m05:07 [0]MeHow: siema
+[39;49m[37m[N] 185.186.38.1:64798 has been disconnected.
+[N] Incoming connection from 90.255.4.12
+90.255.4.12 _SHWGR_
+[N] 90.255.4.12:51392 has been disconnected.
+[N] Incoming connection from 90.255.4.12
+90.255.4.12 _SHWGR_
+[N] 90.255.4.12:51392 has been disconnected.
+[N] Incoming connection from 90.255.4.12
+90.255.4.12 _SHWGR_
+[N] 90.255.4.12:51392 has been disconnected.
+[N] Incoming connection from 90.255.4.12
+[N] 90.255.4.12:51392 has been disconnected.
+[N] Incoming connection from 89.64.93.4
+89.64.93.4 -slupek-
+[N] 89.64.93.4:11317 has been disconnected.
+[N] Incoming connection from 89.64.93.4
+89.64.93.4 -slupek-
+[N] 89.64.93.4:11317 has been disconnected.
+[N] Incoming connection from 87.207.61.174
+87.207.61.174 -Wars-
+[N] 87.207.61.174:60162 has been disconnected.
+[N] Incoming connection from 188.47.122.63
+188.47.122.63 0CzErNi0
+[N] Incoming connection from 89.64.115.254
+[N] 89.64.115.254:62432 has been disconnected.
+[N] 188.47.122.63:17898 has been disconnected.
+[N] Incoming connection from 89.64.93.4
+89.64.93.4 -slupek-
+[N] Incoming connection from 178.216.136.221
+178.216.136.221 dame4n
+[N] 89.64.93.4:11245 has been disconnected.
+[N] Incoming connection from 89.64.115.254
+89.64.115.254 kubson454
+[N] 178.216.136.221:62782 has been disconnected.
+[N] 89.64.115.254:62484 has been disconnected.
+[N] Incoming connection from 89.64.115.254
+89.64.115.254 kubson454
+[N] 89.64.115.254:62484 has been disconnected.
+[N] Incoming connection from 77.45.40.180
+77.45.40.180 diabeu32
+[N] Incoming connection from 79.186.51.189
+79.186.51.189 TheMichauu
+[N] Incoming connection from 91.237.225.85
+91.237.225.85 Tomigiuszek
+[39;49m[32m13:28 [2]Tomigiuszek: myśliwy teraz jest dostępny od 750 punktó czy po staremu?
+[39;49m[37m[N] 91.237.225.85:58354 has been disconnected.
+[39;49m[32m13:38 [0]dobrygnuj: od 750
+[39;49m[37m[N] 79.186.51.189:55361 has been disconnected.
+[N] 77.45.40.180:59043 has been disconnected.
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[N] 185.186.38.1:64262 has been disconnected.
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+Connection refused [::1]:3306
+[N] 185.186.38.1:64262 has been disconnected.
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[N] Incoming connection from 77.45.40.180
+77.45.40.180 diabeu32
+[39;49m[32m14:27 [1]dobrygnuj: siemano
+[39;49m[37m[39;49m[32m14:28 [0]MeHow: siema
+[39;49m[37m[N] 185.186.38.1:64262 has been disconnected.
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[39;49m[32m14:32 [0]MeHow: jaki widzisz u mnie awatar?
+[39;49m[37m[N] 185.186.38.1:64262 has been disconnected.
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[39;49m[32m14:34 [1]dobrygnuj: ok felga deluxe
+[39;49m[37m[N] Incoming connection from 109.231.63.235
+109.231.63.235 QuaVim
+[N] 185.186.38.1:64262 has been disconnected.
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+Connection refused [::1]:3306
+[N] Incoming connection from 217.196.161.62
+[N] 185.186.38.1:64262 has been disconnected.
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+Connection refused [::1]:3306
+217.196.161.62 Sania_01_200
+Connection refused [::1]:3306
+[N] 185.186.38.1:64262 has been disconnected.
+[N] Incoming connection from 87.207.61.174
+[N] Incoming connection from 185.186.38.1
+87.207.61.174 -Wars-
+185.186.38.1 maciejooosek
+[39;49m[32m14:42 [4]MeHow: jej
+[39;49m[37m[39;49m[32m14:42 [4]MeHow: jaki awatar u mnie widzicie?
+[39;49m[37m[N] 217.196.161.62:60601 has been disconnected.
+[39;49m[32m14:42 [2]QuaVin: garnek
+[39;49m[37m[39;49m[32m14:42 [4]MeHow: koks
+[39;49m[37m[39;49m[32m14:42 [0]Wars: Dobry
+[39;49m[37m[39;49m[32m14:42 [1]dobrygnuj: yo
+[39;49m[37m[N] 77.45.40.180:59946 has been disconnected.
+[N] Incoming connection from 77.45.40.180
+77.45.40.180 diabeu32
+[N] 185.186.38.1:60017 has been disconnected.
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+Connection refused [::1]:3306
+[39;49m[32m14:44 [3]MeHow: jezu działa
+[39;49m[37m[N] Incoming connection from 188.47.0.31
+[N] Incoming connection from 89.64.93.4
+89.64.93.4 -slupek-
+188.47.0.31 Adiniooo
+[N] 188.47.0.31:65532 has been disconnected.
+[N] 87.207.61.174:55737 has been disconnected.
+[N] Incoming connection from 188.47.0.31
+188.47.0.31 Adiniooo
+[N] Incoming connection from 87.207.61.174
+87.207.61.174 -Wars-
+[39;49m[32m14:45 [4]slupek77: witam
+[39;49m[37m[39;49m[32m14:46 [1]dobrygnuj: siema
+[39;49m[37m[39;49m[32m14:46 [2]QuaVin: awatary samemu bedzie sie wgrywać czy korzystać z gotowców
+[39;49m[37m[39;49m[32m14:48 [1]dobrygnuj: jak ustawic sb avatar /
+[39;49m[37m[N] 188.47.0.31:65532 has been disconnected.
+[N] Incoming connection from 83.29.1.163
+83.29.1.163 Drymaniusz
+Connection refused [::1]:3306
+[39;49m[32m15:05 [3]MeHow: nie da się jeszcze
+[39;49m[37m[39;49m[32m15:05 [3]MeHow: awatary będą z discorda brane po weryfikacji
+[39;49m[37m[39;49m[32m15:06 [3]MeHow: wpiszecie .avatar i wam zsynchronizuje awatar z discorda
+[39;49m[37m[39;49m[32m15:06 [3]MeHow: potem dopoki nie wpiszecie tego znowu to sie nie zmieni
+[39;49m[37m[39;49m[32m15:06 [3]MeHow: jedyne co mi zostalo do zrobienia to jakas lepsza synchronizacja
+[39;49m[37m[39;49m[32m15:06 [3]MeHow: bo na razie nie jest bezpieczna
+[39;49m[37m[N] 77.45.40.180:59946 has been disconnected.
+[N] Incoming connection from 77.45.40.180
+77.45.40.180 diabeu32
+[N] 87.207.61.174:55737 has been disconnected.
+[N] Incoming connection from 87.207.61.174
+[N] 109.231.63.235:51095 has been disconnected.
+87.207.61.174 -Wars-
+[N] Incoming connection from 109.231.63.235
+109.231.63.235 QuaVim
+[N] 185.186.38.1:60017 has been disconnected.
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[N] Incoming connection from 84.15.188.62
+84.15.188.62 edgar12345cake
+[39;49m[32m15:19 [6]edi1: siema
+[39;49m[37m[39;49m[32m15:20 [1]dobrygnuj: siema edi
+[39;49m[37m[N] 185.186.38.1:60017 has been disconnected.
+[39;49m[32m15:22 [6]edi1: jade
+[39;49m[37m[N] Incoming connection from 5.173.241.183
+5.173.241.183 SpeedMaster_
+[N] 5.173.241.183:59101 has been disconnected.
+[N] 77.45.40.180:59946 has been disconnected.
+[N] Incoming connection from 194.125.77.164
+[N] 194.125.77.164:58266 has been disconnected.
+[N] Incoming connection from 194.125.77.164
+194.125.77.164 MasterX.
+[N] Incoming connection from 194.125.77.164
+194.125.77.164 karolek69420
+[N] 194.125.77.164:64017 has been disconnected.
+[N] Incoming connection from 194.125.77.164
+194.125.77.164 MasterX.
+[N] 194.125.77.164:56420 has been disconnected.
+[N] 194.125.77.164:64017 has been disconnected.
+[N] 83.29.1.163:51072 has been disconnected.
+[N] Incoming connection from 88.130.51.166
+88.130.51.166 SHOGUN_77
+[N] 88.130.51.166:8748 has been disconnected.
+[N] Incoming connection from 83.29.1.163
+83.29.1.163 Drymaniusz
+[N] Incoming connection from 77.45.40.180
+77.45.40.180 diabeu32
+[N] 83.29.1.163:56283 has been disconnected.
+[N] 89.64.93.4:11365 has been disconnected.
+[N] 77.45.40.180:50616 has been disconnected.
+[N] Incoming connection from 77.45.40.180
+77.45.40.180 diabeu32
+[N] Incoming connection from 213.134.168.147
+213.134.168.147 -_Chmielu_-
+[N] 77.45.40.180:50616 has been disconnected.
+^C[33m[INFO] [0mShutting down the server...
+Shutting down..
+[32m[DONE] [0mThe server has been terminated.
+terminate called without an active exception

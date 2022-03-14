@@ -1,0 +1,191 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    user-select: none;
+    overflow: hidden;
+    font-family: 'PT Sans', sans-serif;
+    background-color: transparent;
+}
+
+.interface-main-body{
+    position: absolute;
+    width: 30vh;
+    height: auto;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    background: radial-gradient(circle, rgba(55,55,55,0.95) 0%, rgba(29,30,34,0.95) 100%);
+}
+
+.nameCol{
+  background-color: rgb(33, 34, 37);
+  width: 100%;
+  text-align: center;
+  padding: 0.9vh 0;
+  font-size: 1.9vh;
+  font-weight: 600;
+  color: white;
+  border-bottom: 1px solid #0c9;
+}
+
+.interface-body{
+  width: 100%;
+  height: 14vh;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.interface-body > div{
+  width: 50%;
+}
+
+.pressure_slider{
+  position: relative;
+  width: 100%;
+  height: 50%;
+  padding: 1vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.pressure_slider p{
+  color: white;
+  margin: 0;
+  font-size: 1.2vh;
+}
+
+
+.pressure_graph{
+  position: relative;
+  width: 100%;
+  height: 50%;
+  padding: 1vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.pressure_graph svg{
+  outline: 1px solid black;
+  width: 10vh !important;
+  height: 2vh !important;
+}
+
+.pressure_graph input{
+  position: absolute;
+  bottom: -3.5vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.pressure_graph p{
+  color: white;
+  margin: 0;
+  font-size: 1.2vh;
+}
+
+.pressure_info{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1.2vh;
+  box-sizing: border-box;
+  color: white;
+  font-size: 1vh;
+  text-align: left;
+}
+
+.pressure_info div{
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.pressure_info div p{
+  margin: 0;
+}
+
+
+
+
+
+
+  .buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 1vh 0;
+  }
+
+  .button_select{
+    background: linear-gradient(180deg, rgba(66, 66, 66, 0.95) 0%, rgba(29,30,34,0.95) 100%);
+    border: none;
+    color: white;
+    padding: 0.6vh;
+    border-bottom: 1px solid #00cc99;
+    font-size: 1vh;
+}
+
+.button_select:hover{
+    border-bottom: 1px solid transparent;
+    box-shadow: 0 0 1vh #0c9;
+}
+
+.button_select:focus{
+    outline: none;
+}
+
+.button_cancel{
+    background: linear-gradient(180deg, rgba(66, 66, 66, 0.95) 0%, rgba(29,30,34,0.95) 100%);
+    border: none;
+    color: white;
+    padding: 0.6vh;
+    border-bottom: 1px solid #cc0000;
+    font-size: 1vh;
+}
+
+.button_cancel:hover{
+    border-bottom: 1px solid transparent;
+    box-shadow: 0 0 1vh rgb(204, 0, 0);
+}
+
+.button_cancel:focus{
+    outline: none;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 80%;
+  background: #1d1d1d;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  height: 1.4vh;
+  border: 1px solid #00cc99;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #8bffd5;
+  cursor: pointer;
+  width: 1.5vh;
+  height: 1.5vh;
+}

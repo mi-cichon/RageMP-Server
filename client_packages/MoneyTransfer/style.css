@@ -1,0 +1,169 @@
+body{
+    font-family: 'PT Sans';
+    user-select: none;
+}
+
+.tabs{
+    height: 12%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.container{
+    position: absolute;
+    width: 30vh;
+    height: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.mainBody{
+    height: 88%;
+    font-family: 'PT Sans';
+    user-select: none;
+    background: linear-gradient(180deg, rgba(66, 66, 66, 0.95) 0%, rgba(29,30,34,0.95) 100%);
+    display: flex;
+    flex-direction: column;
+}
+
+.nameCol{
+    background-color: rgb(33, 34, 37);
+    width: 100%;
+    text-align: center;
+    padding: 0.9vh 0;
+    font-size: 1.9vh;
+    font-weight: 600;
+    color: white;
+    border-bottom: 1px solid #0c9;
+}
+
+.content{
+    padding: 1vh;
+}
+
+.target{
+    color: white;
+    font-size: 1.2vh;
+    font-weight: bold;
+}
+
+.target p{
+    margin: 0;
+    display: inline-block;
+    padding-left: 1vh;
+    font-weight: normal;
+    font-size: 1.2vh;
+}
+
+.title p{
+    color: white;
+    font-weight: bold;
+    font-size: 1.2vh;
+}
+
+.title textarea{
+    resize: none;
+    overflow: hidden;
+    width: 80%;
+    margin-left: 10%;
+    background-color: #1d1e22;
+    box-shadow: 0 0 0.5vh 0 #0c9;
+    color: white;
+    padding: 0.8vh;
+    border-radius: 0.3vh;
+    font-size: 1.1vh;
+}
+
+.title textarea:focus{
+    outline: none;
+}
+
+.end{
+    display: flex;
+    flex-direction: row;
+}
+
+.buttonRow{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.amount{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.amount p{
+    color: white;
+    font-weight: bold;
+    font-size: 1.2vh;
+}
+.amount input{
+    width: 50%;
+    height: 1.7vh;
+    background-color: #1d1e22;
+    box-shadow: 0 0 0.5vh 0 #0c9;
+    color: white;
+    padding: 0.4vh;
+    border-radius: 0.3vh;
+    text-align: center;
+    font-size: 1.3vh;
+    margin-left: 20%;
+}
+
+.amount input::-webkit-outer-spin-button, .amount input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.amount input:focus{
+    outline: none;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+.button_select{
+    background: linear-gradient(180deg, rgba(66, 66, 66, 0.95) 0%, rgba(29,30,34,0.95) 100%);
+    border: none;
+    color: white;
+    padding: 0.6vh;
+    border-bottom: 1px solid #00cc99;
+    font-size: 1vh;
+}
+
+.button_select:hover{
+    border-bottom: 1px solid transparent;
+    box-shadow: 0 0 1vh #0c9;
+}
+
+.button_select:focus{
+    outline: none;
+}
+
+.button_cancel{
+    background: linear-gradient(180deg, rgba(66, 66, 66, 0.95) 0%, rgba(29,30,34,0.95) 100%);
+    border: none;
+    color: white;
+    padding: 0.6vh;
+    border-bottom: 1px solid #cc0000;
+    font-size: 1vh;
+    width: 40%;
+    margin: 1vh auto;
+}
+
+.button_cancel:hover{
+    border-bottom: 1px solid transparent;
+    box-shadow: 0 0 1vh rgb(204, 0, 0);
+}
+
+.button_cancel:focus{
+    outline: none;
+}

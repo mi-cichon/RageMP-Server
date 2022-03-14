@@ -1,0 +1,81 @@
+[33m[INFO] [0mStarting RAGE Multiplayer server...
+[0m[33m
+[============================================================]
+[33m[33m||
+[33m||[33m	MaxPlayers		[0m50[33m
+||	Sync rate		[0m40ms[33m
+||	Name			[0mBasicRPG.pl | W trakcie tworzenia | Wiecej na https://discord.gg/2vrMdXsdRW [PL][33m
+||	Gamemode		[0mrpg[33m
+||	Streaming distance	[0m500[33m
+||	Announcement		[0menabled[33m
+||	Voice chat		[0menabled[33m
+||	Address			[0m127.0.0.1:22005[33m
+||	Connection limits	[0mdisabled[33m
+||	Encryption		[0menabled[33m
+||	NodeJS			[0menabled[33m
+||	C#			[0menabled[33m
+||
+[============================================================]
+
+[0m
+[33m[INFO][0m Loading NodeJS packages...
+[33m[INFO][0m Starting packages...
+[32m[DONE][0m Server packages have been started.
+Initializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 10/7/2021 12:42:41 AM
+Unable to load acl.xml
+ACLEnabled: False
+Loaded 667 entries from vehicleData.json
+Loading resources..
+[?1h=[39;49m[33m->[39;49m[37m Starting [39;49m[36mServer[39;49m[37m resource..
+[39;49m[39;49m[37mServer:[39;49m[37m loading scripts.. found 1 script(s)
+[39;49m[39;49m[37mServer:[39;49m[37m instantiating [39;49m[37mServerSide.MainClass[39;49m[37m..
+[39;49mConnection refused [::1]:3306
+Connection refused [::1]:3306
+[39;49m[37mServer:[39;49m[37m loading server events.. found 10 server event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 10 server events(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loading remote events.. found 145 remote event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 145 remote event(s)
+[39;49mServer started...
+[39;49m[32m->[39;49m[37m Resource [39;49m[36mServer[39;49m[37m started!
+[39;49m[39;49m[32mStarted! Waiting for connections..
+[39;49m[32m[DONE] [0mStarted resource transfer server at 22006 port.
+[32m[DONE] [0mClient-side packages weight: [33m120.414566 MB[0m (uncompressed: [33m275.013885 MB[0m).
+[33m[INFO] [0mMasterList: Announcing into master server...
+[33m[INFO] [0mInitializing networking...
+[32m[DONE] [0mNetworking has been started: (IPv4-only) at 127.0.0.1:22005
+[32m[DONE] [0mThe server is ready to accept connections.
+[32m[DONE] [0mMasterList: Connected to master list.
+[N] Incoming connection from 83.29.0.44
+[N] Incoming connection from 185.186.38.1
+[N] Incoming connection from 188.47.121.5
+83.29.0.44 Drymaniusz
+185.186.38.1 maciejooosek
+188.47.121.5 RumaK1982
+[39;49m[32m00:45 [1]MeHow: ratbike naprawiony
+[39;49m[37m[N] 185.186.38.1:49693 has been disconnected.
+[N] 83.29.0.44:54310 has been disconnected.
+[39;49m[32m01:13 [2]RumaK1982: nie da się zebrać pojazdem jaja
+[39;49m[37m[39;49m[32m01:14 [2]RumaK1982: dziwne - najpierw rozbiłem na nim auto 2x a teraz się dało 
+[39;49m[37m[N] 188.47.121.5:13963 has been disconnected.
+[N] Incoming connection from 83.29.0.44
+83.29.0.44 Drymaniusz
+Connection refused [::1]:3306
+[N] 83.29.0.44:59023 has been disconnected.
+[N] Incoming connection from 84.15.187.11
+84.15.187.11 edgar12345cake
+Connection refused [::1]:3306
+[N] 84.15.187.11:56787 has been disconnected.
+[N] Incoming connection from 5.184.80.88
+5.184.80.88 _SzEfli
+Connection refused [::1]:3306
+[N] 5.184.80.88:27253 has been disconnected.
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+Connection refused [::1]:3306
+^C[33m[INFO] [0mShutting down the server...
+Shutting down..
+[32m[DONE] [0mThe server has been terminated.
+terminate called without an active exception

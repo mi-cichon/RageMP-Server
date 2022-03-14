@@ -1,0 +1,111 @@
+.panel_vehicles_body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.panel_vehicles_list{
+    background-color: #1d1e22;
+    border-radius: 0.3vh;
+    padding: 0.8vh;
+    color: white;
+    font-size: 1.2vh;
+    text-align: center;
+    box-shadow: 0.3vh 0.5vh 0.5vh black;
+    width: 60%;
+    height: 50vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin: 2vh;
+}
+
+.panel_vehicles_info{
+    background-color: #1d1e22;
+    border-radius: 0.3vh;
+    padding: 2vh 4vh;
+    color: white;
+    font-size: 1.4vh;
+    text-align: center;
+    box-shadow: 0.3vh 0.5vh 0.5vh black;
+    width: 20%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin: 2vh;
+    min-height: 25vh;
+}
+
+.panel_vehicles_vehicles{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.panel_vehicles_vehicle{
+    width: 20vh;
+    height: 14vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 0.3vh;
+    border: 1px solid rgb(17, 17, 17);
+    position: relative;
+    overflow: hidden;
+    margin: 1vh;
+}
+
+.panel_vehicle_id{
+    background: linear-gradient(180deg, #0c9 0%, rgba(50, 51, 56, 0.95) 100%);
+    width: 20%;
+    border-radius: 0 0 0.3vh 0.3vh;
+    border: 1px solid #1d1e22;
+    border-top: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    font-size: 1.2vh;
+}
+
+.panel_vehicle_name{
+    background: linear-gradient(180deg, rgb(59, 59, 59) 0%, rgba(50, 51, 56, 0.95) 100%);
+    width: 100%;
+    border-radius: 0 0 0.3vh 0.3vh;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    padding-bottom: 0.2vh;
+    color: white;
+    font-weight: 600;
+    font-size: 1.2vh;
+}
+
+.panel_vehicle_info{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    flex-direction: column;
+}
+
+.panel_vehicle_info p{
+    margin: 0;
+    margin-bottom: 0.3vh;
+    text-align: left;
+}
+
+.panel_vehicles_vehicle:hover{
+    box-shadow: 0 0 1vh 0 #0c9;
+}
+
+.panel_vehicle_selected{
+    box-shadow: 0 0 1vh 0 #0c9;
+    filter: blur(1px);
+}

@@ -1,0 +1,2 @@
+[18.09.2021 17:51:17] Zakupiono pojazd z komisu o ID: 70 za 955540
+[18.09.2021 18:10:24] Zakupiono pojazd z komisu o ID: 74 za 200000

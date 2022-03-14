@@ -1,0 +1,3 @@
+[24.08.2021 21:59:05] Zarejestrowano gracza
+[24.08.2021 21:59:05] Zalogowano z IP: 95.52.81.32
+[24.08.2021 22:02:34] Opuszczono serwer z IP: 95.52.81.32

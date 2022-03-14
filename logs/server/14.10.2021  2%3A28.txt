@@ -1,0 +1,591 @@
+[33m[INFO] [0mStarting RAGE Multiplayer server...
+[0m[33m
+[============================================================]
+[33m[33m||
+[33m||[33m	MaxPlayers		[0m50[33m
+||	Sync rate		[0m40ms[33m
+||	Name			[0mBasicRPG.pl | W trakcie tworzenia | Wiecej na https://discord.gg/2vrMdXsdRW [PL][33m
+||	Gamemode		[0mrpg[33m
+||	Streaming distance	[0m500[33m
+||	Announcement		[0menabled[33m
+||	Voice chat		[0menabled[33m
+||	Address			[0m127.0.0.1:22005[33m
+||	Connection limits	[0mdisabled[33m
+||	Encryption		[0menabled[33m
+||	NodeJS			[0menabled[33m
+||	C#			[0menabled[33m
+||
+[============================================================]
+
+[0m
+[33m[INFO][0m Loading NodeJS packages...
+[33m[INFO][0m Starting packages...
+[32m[DONE][0m Server packages have been started.
+Initializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 10/14/2021 2:28:28 AM
+Unable to load acl.xml
+ACLEnabled: False
+Loaded 667 entries from vehicleData.json
+Loading resources..
+[?1h=[39;49m[33m->[39;49m[37m Starting [39;49m[36mServer[39;49m[37m resource..
+[39;49m[39;49m[37mServer:[39;49m[37m loading scripts.. found 1 script(s)
+[39;49m[39;49m[37mServer:[39;49m[37m instantiating [39;49m[37mServerSide.MainClass[39;49m[37m..
+[39;49mConnection refused [::1]:3306
+Connection refused [::1]:3306
+[39;49m[37mServer:[39;49m[37m loading server events.. found 10 server event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 10 server events(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loading remote events.. found 156 remote event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 156 remote event(s)
+[39;49mServer started...
+[39;49m[32m->[39;49m[37m Resource [39;49m[36mServer[39;49m[37m started!
+[39;49m[39;49m[32mStarted! Waiting for connections..
+[39;49m[32m[DONE] [0mStarted resource transfer server at 22006 port.
+[32m[DONE] [0mClient-side packages weight: [33m181.856262 MB[0m (uncompressed: [33m364.905670 MB[0m).
+[33m[INFO] [0mMasterList: Announcing into master server...
+[33m[INFO] [0mInitializing networking...
+[32m[DONE] [0mNetworking has been started: (IPv4-only) at 127.0.0.1:22005
+[32m[DONE] [0mThe server is ready to accept connections.
+[32m[DONE] [0mMasterList: Connected to master list.
+[N] Incoming connection from 84.15.188.220
+[N] Incoming connection from 87.205.35.19
+84.15.188.220 edgar12345cake
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[N] Incoming connection from 83.29.0.44
+83.29.0.44 Drymaniusz
+[39;49m[32m02:29 [0]edi1: siema
+[39;49m[37m87.205.35.19 Pyzorek
+[39;49m[32m02:30 [2]MeHow: siema
+[39;49m[37m[39;49m[32m02:32 [0]edi1: co hciales potestowac
+[39;49m[37m[39;49m[32m02:32 [0]edi1: ok
+[39;49m[37m[N] 84.15.188.220:65508 has been disconnected.
+[N] Incoming connection from 84.15.188.220
+84.15.188.220 edgar12345cake
+[N] 185.186.38.1:54853 has been disconnected.
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[N] Incoming connection from 79.191.246.71
+79.191.246.71 Borczaz
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[N] 84.15.188.220:65508 has been disconnected.
+[N] Incoming connection from 84.15.188.220
+84.15.188.220 edgar12345cake
+[39;49m[32m02:56 [4]Borczaz: witam all
+[39;49m[37m[N] 79.191.246.71:56878 has been disconnected.
+[39;49m[32m03:04 [2]MeHow: pyza chcesz poscg?
+[39;49m[37m[39;49m[32m03:04 [1]Pyzorek: kiedy
+[39;49m[37m[39;49m[32m03:05 [2]MeHow: teraz
+[39;49m[37m[39;49m[32m03:05 [1]Pyzorek: ok
+[39;49m[37m[39;49m[32m03:06 [2]MeHow: na lotnisku
+[39;49m[37m[39;49m[32m03:06 [1]Pyzorek: tp?
+[39;49m[37m[N] 84.15.188.220:65508 has been disconnected.
+[N] Incoming connection from 84.15.189.137
+84.15.189.137 edgar12345cake
+[N] 213.108.119.240:49160 has been disconnected.
+[N] 84.15.189.137:65508 has been disconnected.
+[N] Incoming connection from 84.15.189.137
+84.15.189.137 edgar12345cake
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[39;49m[32m03:20 [4]robotek019: długo coś  xD
+[39;49m[37m[39;49m[32m03:21 [4]robotek019: bezradna ta policja na szybsze furki xD
+[39;49m[37m[39;49m[32m03:24 [4]robotek019: może jednak wam pomóc policemajstrzy? XD
+[39;49m[37m[39;49m[32m03:27 [1]Pyzorek: es?
+[39;49m[37m[39;49m[32m03:27 [1]Pyzorek: zabiles mnie xD
+[39;49m[37m[39;49m[32m03:28 [1]Pyzorek: nie na ksiezycu a na lotnisku
+[39;49m[37m[39;49m[32m03:28 [1]Pyzorek: to byl zuber z sarna
+[39;49m[37m[39;49m[32m03:28 [2]MeHow: xd
+[39;49m[37m[39;49m[32m03:28 [1]Pyzorek: tp mnie
+[39;49m[37m[N] 87.205.35.19:57915 has been disconnected.
+[N] Incoming connection from 87.205.35.19
+87.205.35.19 Pyzorek
+[39;49m[32m03:32 [1]Pyzorek: @2 jak bede zakuty i zgine to moge wejsc do pojazdu ale juz wyjsc nie moge
+[39;49m[37m[39;49m[32m03:33 [2]MeHow: a
+[39;49m[37m[39;49m[32m03:33 [2]MeHow: poprawie xDw
+[39;49m[37m[39;49m[32m03:41 [1]Pyzorek: chyba ze nadasz mi i robotkowi tazera?
+[39;49m[37m[39;49m[32m03:41 [2]MeHow: nie moge
+[39;49m[37m[N] 84.15.189.137:65508 has been disconnected.
+[N] Incoming connection from 84.15.189.137
+84.15.189.137 edgar12345cake
+[39;49m[32m03:56 [1]Pyzorek: @2 mozesz tp?
+[39;49m[37m[N] 213.108.119.240:49160 has been disconnected.
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[N] 185.186.38.1:54853 has been disconnected.
+[39;49m[32m04:16 [4]robotek019: burzę można wyłaczyć? napierdala w nocy i ludzi budzi
+[39;49m[37m[N] 83.29.0.44:64806 has been disconnected.
+[N] 213.108.119.240:49160 has been disconnected.
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[N] 213.108.119.240:49160 has been disconnected.
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[N] 213.108.119.240:49160 has been disconnected.
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[N] 87.205.35.19:57915 has been disconnected.
+[N] Incoming connection from 87.205.35.19
+[N] 213.108.119.240:49160 has been disconnected.
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+87.205.35.19 Pyzorek
+[N] 213.108.119.240:49160 has been disconnected.
+[N] 87.205.35.19:57915 has been disconnected.
+[N] 84.15.189.137:65508 has been disconnected.
+[N] Incoming connection from 94.75.66.19
+94.75.66.19 Not_Szymianek
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] 94.75.66.19:57352 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 188.47.127.251:16867 has been disconnected.
+[N] Incoming connection from 31.0.126.110
+31.0.126.110 Mateuszeqx
+[N] 31.0.126.110:18709 has been disconnected.
+[N] Incoming connection from 31.0.126.110
+[N] 31.0.126.110:18709 has been disconnected.
+[N] Incoming connection from 31.0.126.110
+31.0.126.110 Mateuszeqx
+[N] Incoming connection from 87.207.61.174
+87.207.61.174 -Wars-
+[N] 31.0.126.110:18877 has been disconnected.
+[N] Incoming connection from 79.186.48.135
+79.186.48.135 TheMichauu
+[39;49m[32m10:46 [0]WolnoLukasz: siema wars
+[39;49m[37m[39;49m[32m10:47 [1]Wars: siemka
+[39;49m[37m[N] Incoming connection from 89.229.84.90
+89.229.84.90 Bombel3k
+[39;49m[32m10:49 [2]Bombel3k: siema
+[39;49m[37m[39;49m[32m10:51 [0]WolnoLukasz: elo
+[39;49m[37m[N] Incoming connection from 77.253.156.233
+77.253.156.233 KwasnyDoor
+[N] Incoming connection from 37.130.55.52
+37.130.55.52 Tofifik
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] Incoming connection from 109.231.63.235
+109.231.63.235 QuaVim
+[N] 77.253.156.233:52989 has been disconnected.
+[N] Incoming connection from 89.64.93.4
+89.64.93.4 -slupek-
+[39;49m[32m11:24 [2]Bombel3k: potrzebny tuner ?
+[39;49m[37m[N] Incoming connection from 185.244.214.21
+185.244.214.21 _MagiCk
+[N] Incoming connection from 46.204.48.179
+46.204.48.179 machcin1
+[N] Incoming connection from 83.29.0.44
+83.29.0.44 Drymaniusz
+[N] 185.244.214.21:61881 has been disconnected.
+[N] Incoming connection from 83.31.116.218
+83.31.116.218 KNFCichy
+[N] 37.130.55.52:50451 has been disconnected.
+[N] Incoming connection from 37.47.9.33
+37.47.9.33 CzarekDriver
+[39;49m[32m11:52 [7]machcin1: @6 @4 siema siema
+[39;49m[37m[N] 87.207.61.174:65048 has been disconnected.
+[N] Incoming connection from 87.207.61.174
+[N] 87.207.61.174:65048 has been disconnected.
+[N] Incoming connection from 87.207.61.174
+87.207.61.174 -Wars-
+[N] 87.207.61.174:65048 has been disconnected.
+[N] Incoming connection from 87.207.61.174
+87.207.61.174 -Wars-
+[39;49m[32m12:02 [6]KNFCichy: na jakim komisie respi sie w140?
+[39;49m[37m[39;49m[32m12:02 [8].Drymaniusz*: srednim
+[39;49m[37m[39;49m[32m12:02 [7]machcin1: gdzie najlepiej zaczac?
+[39;49m[37m[39;49m[32m12:02 [8].Drymaniusz*: kolo prawka
+[39;49m[37m[39;49m[32m12:02 [6]KNFCichy: @8 dzieki
+[39;49m[37m[N] 87.207.61.174:65048 has been disconnected.
+[N] Incoming connection from 87.207.61.174
+87.207.61.174 -Wars-
+[39;49m[32m12:04 [8].Drymaniusz*: Z prac poczatkowych poki co najlepsze jest zbieranie odpadow
+[39;49m[37m[39;49m[32m12:04 [8].Drymaniusz*: z tego co ludzie pisali
+[39;49m[37m[39;49m[32m12:05 [7]machcin1: dzieki
+[39;49m[37m[N] 83.31.116.218:65330 has been disconnected.
+[N] Incoming connection from 46.204.66.183
+46.204.66.183 Besnaj29
+[N] 46.204.66.183:17695 has been disconnected.
+[N] Incoming connection from 46.204.84.41
+46.204.84.41 Besnaj29
+[39;49m[32m12:12 [6]Besnaj29: siema wszystkim
+[39;49m[37m[39;49m[32m12:13 [8].Drymaniusz*: siema
+[39;49m[37m[39;49m[32m12:13 [6]Besnaj29: dlaczego nie mamojej chaty?
+[39;49m[37m[N] 46.204.84.41:37113 has been disconnected.
+[N] Incoming connection from 46.204.84.41
+46.204.84.41 Besnaj29
+[39;49m[32m12:14 [8].Drymaniusz*: Wszystkie domy zostaly usuniete i dodane nowe jedynie na mirror
+[39;49m[37m[N] 46.204.84.41:37113 has been disconnected.
+[N] Incoming connection from 46.204.84.41
+46.204.84.41 Besnaj29
+[39;49m[32m12:18 [6]Besnaj29: skąd macie helki?
+[39;49m[37m[39;49m[32m12:19 [4]Driver: nie wiem wlasnie
+[39;49m[37m[39;49m[32m12:19 [2]Bombel3k: o driver XD
+[39;49m[37m[N] Incoming connection from 31.0.126.244
+31.0.126.244 Vadis1337
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[39;49m[32m12:20 [6]Besnaj29: chce ktoś kupić merca kombi FT 235 jedzie oddam tanio w cenie czystego
+[39;49m[37m[39;49m[32m12:28 [7]machcin1: za ile kupie najtansze auto typu szrot
+[39;49m[37m[39;49m[32m12:29 [2]Bombel3k: 2k
+[39;49m[37m[N] Incoming connection from 5.173.89.179
+[39;49m[32m12:30 [8].Drymaniusz*: aktualnie na gruzach jest voodoo za 1.8 i emperor za 2.1
+[39;49m[37m5.173.89.179 misek2136
+[39;49m[32m12:30 [7]machcin1: ok
+[39;49m[37m[39;49m[32m12:32 [6]Besnaj29: dlaczego mi auta z pod domu wyparowały
+[39;49m[37m[39;49m[32m12:33 [6]Besnaj29: aha siedziałem w aucie i mi znikło i nie ma go na parkingu
+[39;49m[37m[39;49m[32m12:34 [6]Besnaj29: halo admin
+[39;49m[37m[39;49m[32m12:34 [8].Drymaniusz*: rage zjadlo
+[39;49m[37m[39;49m[32m12:34 [6]Besnaj29: co
+[39;49m[37m[39;49m[32m12:34 [6]Besnaj29: ?
+[39;49m[37m[39;49m[32m12:35 [8].Drymaniusz*: znamy ten blad i myslismy jak go naprawic
+[39;49m[37m[39;49m[32m12:35 [10]misek2136: jak telefon wyciągnąć?
+[39;49m[37m[39;49m[32m12:35 [8].Drymaniusz*: a co do auta to musisz czekac az mehow wbije
+[39;49m[37m[39;49m[32m12:35 [2]Bombel3k: nie ma tel
+[39;49m[37m[39;49m[32m12:35 [6]Besnaj29: ok a dalej jest 100k za jedno jajko?
+[39;49m[37m[39;49m[32m12:35 [8].Drymaniusz*: Tak
+[39;49m[37m[39;49m[32m12:35 [6]Besnaj29: ok
+[39;49m[37m[39;49m[32m12:36 [6]Besnaj29: ską driver ma helke?
+[39;49m[37m[39;49m[32m12:36 [4]Driver: mwn
+[39;49m[37m[39;49m[32m12:36 [8].Drymaniusz*: Nie ma juz
+[39;49m[37m[39;49m[32m12:36 [2]Bombel3k: cheaty ma
+[39;49m[37m[39;49m[32m12:36 [8].Drymaniusz*: Usunieta zostala
+[39;49m[37m[39;49m[32m12:37 [6]Besnaj29: dalej sa v maxy takie same jakie były?
+[39;49m[37m[39;49m[32m12:37 [8].Drymaniusz*: Tak
+[39;49m[37m[39;49m[32m12:38 [6]Besnaj29: ja nmie szukam tych jajek bo mi się już nie chce
+[39;49m[37m[39;49m[32m12:39 [8].Drymaniusz*: Ok
+[39;49m[37m[N] 46.204.84.41:37113 has been disconnected.
+[N] 37.47.9.33:11335 has been disconnected.
+[N] Incoming connection from 37.120.211.124
+37.120.211.124 ____majczi
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] 89.64.93.4:11245 has been disconnected.
+[N] Incoming connection from 89.64.93.4
+89.64.93.4 -slupek-
+[N] 37.120.211.124:58898 has been disconnected.
+podwójna znajdźka: 92702544 215
+[39;49m[32m12:55 [9]Vadis1337: Ile kosztuje galant i gdzie jest dostępny?
+[39;49m[37m[39;49m[32m12:57 [7]machcin1: gdzie najczesciej sie znajduja te jaja? na dachu tez moga byc?
+[39;49m[37m[39;49m[32m12:57 [0]WolnoLukasz: tak
+[39;49m[37m[39;49m[32m12:57 [7]machcin1: ło Boże t
+[39;49m[37m[39;49m[32m12:57 [7]machcin1: ty moj
+[39;49m[37m[N] 89.64.93.4:11245 has been disconnected.
+[N] Incoming connection from 89.64.93.4
+89.64.93.4 -slupek-
+[N] Incoming connection from 5.173.249.145
+5.173.249.145 Xteczek
+[39;49m[32m13:01 [4]Xteczek: E mod, gdzie mój civic?
+[39;49m[37m[N] 109.231.63.235:56875 has been disconnected.
+[39;49m[32m13:02 [8].Drymaniusz*: przecho
+[39;49m[37m[39;49m[32m13:02 [4]Xteczek: aaa
+[39;49m[37m[39;49m[32m13:02 [4]Xteczek: No kuźwa
+[39;49m[37m[N] 5.173.249.145:41212 has been disconnected.
+[39;49m[32m13:03 [8].Drymaniusz*: @9 galant na simeonie z tego co pamietam
+[39;49m[37m[39;49m[32m13:03 [8].Drymaniusz*: ale ile to nwm
+[39;49m[37m[N] Incoming connection from 5.173.249.145
+5.173.249.145 Xteczek
+[N] Incoming connection from 46.204.84.41
+46.204.84.41 Besnaj29
+[39;49m[32m13:06 [5]Besnaj29: jest sultan RS na serwie?
+[39;49m[37m[N] 46.204.84.41:37052 has been disconnected.
+[N] Incoming connection from 46.204.84.41
+46.204.84.41 Besnaj29
+[39;49m[32m13:07 [5]Besnaj29: chce ktoś kupić merca kombi FT za cene czystego?
+[39;49m[37m[39;49m[32m13:07 [4]Xteczek: Jakiego merca?
+[39;49m[37m[39;49m[32m13:08 [5]Besnaj29: kombi merc 
+[39;49m[37m[39;49m[32m13:08 [4]Xteczek: Model w gta powiedz kurwa
+[39;49m[37m[39;49m[32m13:08 [5]Besnaj29: v max ma 235
+[39;49m[37m[39;49m[32m13:08 [8].Drymaniusz*: addon
+[39;49m[37m[39;49m[32m13:09 [4]Xteczek: moge się wymienić, mam civica
+[39;49m[37m[39;49m[32m13:09 [5]Besnaj29: jaki v max?
+[39;49m[37m[39;49m[32m13:09 [0]WolnoLukasz: moge wziac, chodz urzad
+[39;49m[37m[39;49m[32m13:09 [5]Besnaj29: dawaj na parking
+[39;49m[37m[39;49m[32m13:09 [0]WolnoLukasz: na urzędzie mozesz handel zrobić tylko
+[39;49m[37m[39;49m[32m13:09 [4]Xteczek: @5 V max 220 około
+[39;49m[37m[39;49m[32m13:10 [4]Xteczek: Ale civic ft mechanicznie
+[39;49m[37m[39;49m[32m13:10 [5]Besnaj29: a jak mi to auto wyparowało przez błąd serwera to mogę tez się wymienić 
+[39;49m[37m[39;49m[32m13:10 [4]Xteczek: Admin tepniesz auto do mnie? Wyjebało mnie aż do szpitala
+[39;49m[37m[N] Incoming connection from 83.28.212.36
+83.28.212.36 Kazik0
+[39;49m[32m13:12 [5]Besnaj29: jestem na urzędzie
+[39;49m[37m[39;49m[32m13:12 [2]Bombel3k: chodziło mi na stano obok XD
+[39;49m[37m[N] 5.173.89.179:26677 has been disconnected.
+[39;49m[32m13:14 [4]Xteczek: Jak wy tak szybko zarabiacie?
+[39;49m[37m[39;49m[32m13:14 [7]machcin1: jest tu jakis tempomat na egzaminie kat B?
+[39;49m[37m[39;49m[32m13:14 [4]Xteczek: nie ma
+[39;49m[37m[39;49m[32m13:14 [8].Drymaniusz*: Nie ma
+[39;49m[37m[39;49m[32m13:15 [8].Drymaniusz*: Nikt tu praktycznie nie zarabia
+[39;49m[37m[39;49m[32m13:15 [8].Drymaniusz*: Szukaja znajdziek
+[39;49m[37m[39;49m[32m13:15 [5]Besnaj29: w przecho powinieneś mieć
+[39;49m[37m[39;49m[32m13:15 [5]Besnaj29: kurwa kolejne mi wyparowało 
+[39;49m[37m[39;49m[32m13:15 [8].Drymaniusz*: XD
+[39;49m[37m[N] 46.204.84.41:37052 has been disconnected.
+[39;49m[32m13:15 [8].Drymaniusz*: id?
+[39;49m[37m[39;49m[32m13:15 [4]Xteczek: Są znajdźki w Paleto?
+[39;49m[37m[39;49m[32m13:15 [8].Drymaniusz*: Wszedzie sa
+[39;49m[37m[N] Incoming connection from 46.204.84.41
+46.204.84.41 Besnaj29
+[39;49m[32m13:16 [7]machcin1: jedno jajo znajde i bede ustawiony cos mysle
+[39;49m[37m[39;49m[32m13:16 [1]Wars: @4 Szukaj jajek dają po 100k
+[39;49m[37m[39;49m[32m13:16 [5]Besnaj29: jest na serwie sultan rs ten taki co był od początku w gta?
+[39;49m[37m[39;49m[32m13:16 [8].Drymaniusz*: Jest
+[39;49m[37m[39;49m[32m13:16 [8].Drymaniusz*: simeon
+[39;49m[37m[39;49m[32m13:16 [4]Xteczek: Na dachach są cnie? @1
+[39;49m[37m[39;49m[32m13:16 [8].Drymaniusz*: @4 tez
+[39;49m[37m[39;49m[32m13:17 [0]WolnoLukasz: Dryman, kupiłem auto a nnigdzie go nie ma pomozesz? xd
+[39;49m[37m[39;49m[32m13:17 [0]WolnoLukasz: 229 id chyba
+[39;49m[37m[39;49m[32m13:17 [8].Drymaniusz*: Moga byc wszedzie tam gdzie twoja postac moze wejsc
+[39;49m[37m[39;49m[32m13:17 [0]WolnoLukasz: @8 wrzucisz do przecho id 229?
+[39;49m[37m[N] 5.173.249.145:41212 has been disconnected.
+[39;49m[32m13:17 [8].Drymaniusz*: Moment
+[39;49m[37m[N] Incoming connection from 5.173.249.145
+5.173.249.145 Xteczek
+[39;49m[32m13:18 [0]WolnoLukasz: dzieki
+[39;49m[37m[39;49m[32m13:19 [5]Besnaj29: @8 jest na serwie sultan rs?
+[39;49m[37m[39;49m[32m13:19 [8].Drymaniusz*: Kurwa mac
+[39;49m[37m[39;49m[32m13:19 [8].Drymaniusz*: Jest pierdolony sultan rs
+[39;49m[37m[39;49m[32m13:19 [8].Drymaniusz*: Ile razy mam to jeszcze razy napisac
+[39;49m[37m[N] Incoming connection from 185.125.5.139
+185.125.5.139 takainspiracja
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[39;49m[32m13:19 [2]Bombel3k: XDD
+[39;49m[37m[39;49m[32m13:19 [5]Besnaj29: @8 gdzie go kupie
+[39;49m[37m[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[39;49m[32m13:20 [8].Drymaniusz*: SIMEON
+[39;49m[37m[39;49m[32m13:20 [8].Drymaniusz*: tez pisalem
+[39;49m[37m[39;49m[32m13:20 [11]MeHow: siema
+[39;49m[37m[39;49m[32m13:20 [8].Drymaniusz*: serwus
+[39;49m[37m[39;49m[32m13:20 [2]Bombel3k: siema
+[39;49m[37m[39;49m[32m13:20 [7]machcin1: te jaja moga byc na wzgorzach lasach?
+[39;49m[37m[39;49m[32m13:20 [2]Bombel3k: tak
+[39;49m[37m[N] 31.0.126.244:16421 has been disconnected.
+[N] Incoming connection from 31.0.126.244
+[N] 89.64.93.4:11245 has been disconnected.
+[N] 31.0.126.244:16421 has been disconnected.
+[N] Incoming connection from 31.0.126.244
+31.0.126.244 Vadis1337
+[39;49m[32m13:24 [5]Besnaj29: jest już LSPD na serwie?
+[39;49m[37m[39;49m[32m13:24 [8].Drymaniusz*: nie
+[39;49m[37m[39;49m[32m13:25 [5]Besnaj29: zroluje mi ktoś do sultana RS?
+[39;49m[37m[39;49m[32m13:25 [11]MeHow: jak trzeba bedzie cie zakuc to bedzie lspd
+[39;49m[37m[N] 5.173.249.145:41212 has been disconnected.
+[N] Incoming connection from 5.173.249.145
+5.173.249.145 Xteczek
+[N] 31.0.126.244:16421 has been disconnected.
+[N] Incoming connection from 31.0.126.244
+31.0.126.244 Vadis1337
+[39;49m[32m13:26 [5]Besnaj29: ile kosztuje sultan RS?
+[39;49m[37m[39;49m[32m13:27 [11]MeHow: nie ma sultana rs
+[39;49m[37m[39;49m[32m13:27 [5]Besnaj29: a jaki jest?
+[39;49m[37m[39;49m[32m13:27 [11]MeHow: sultan rs classic retro combi
+[39;49m[37m[39;49m[32m13:28 [5]Besnaj29: no to rs clasic ile on kosztuje?
+[39;49m[37m[39;49m[32m13:28 [11]MeHow: nie ma
+[39;49m[37m[39;49m[32m13:28 [2]Bombel3k: XD
+[39;49m[37m[39;49m[32m13:28 [5]Besnaj29: to jakie są na serwie XDDDD
+[39;49m[37m[39;49m[32m13:28 [11]MeHow: sultan rs classic retro combi
+[39;49m[37m[39;49m[32m13:28 [3]Vadis1337: Jest opcja rollnąć średni komis żeby galant się zrespił? xD
+[39;49m[37m[N] Incoming connection from 31.183.144.102
+[39;49m[32m13:28 [11]MeHow: jasne
+[39;49m[37m[39;49m[32m13:29 [5]Besnaj29: no to jest sultan rs 
+[39;49m[37m[N] 31.183.144.102:54068 has been disconnected.
+[39;49m[32m13:29 [0]WolnoLukasz: a rolniesz premium? :>
+[39;49m[37m[39;49m[32m13:30 [5]Besnaj29: ty to we mi po nim do sultana
+[39;49m[37m[N] Incoming connection from 31.183.144.102
+31.183.144.102 Adasko26
+[39;49m[32m13:33 [4]Xteczek: Kurwicy od tych jajek zaraz dostane
+[39;49m[37m[39;49m[32m13:33 [2]Bombel3k: ok
+[39;49m[37m[39;49m[32m13:33 [0]WolnoLukasz: w nocy jest bardzo łątwo je znaleźć, bo się świecą
+[39;49m[37m[39;49m[32m13:34 [4]Xteczek: admin jebnij śnieg
+[39;49m[37m[N] Incoming connection from 91.245.82.80
+91.245.82.80 SNOWC4T
+[39;49m[32m13:36 [9]Adasko26: jak zgasić auto?
+[39;49m[37m[39;49m[32m13:36 [8].Drymaniusz*: Przy wysiadaniu sie gasi
+[39;49m[37m[39;49m[32m13:36 [9]Adasko26: no właśnie nie
+[39;49m[37m[N] 185.125.5.139:52109 has been disconnected.
+[N] Incoming connection from 185.125.5.139
+[N] 185.125.5.139:52109 has been disconnected.
+[N] Incoming connection from 185.125.5.139
+185.125.5.139 takainspiracja
+[N] 46.204.48.179:60028 has been disconnected.
+[N] Incoming connection from 46.204.48.179
+46.204.48.179 machcin1
+[N] 5.173.249.145:41212 has been disconnected.
+[39;49m[32m13:42 [5]Besnaj29: jest tuner?
+[39;49m[37m[39;49m[32m13:42 [2]Bombel3k: zaraz podjade
+[39;49m[37m[N] 91.245.82.80:59897 has been disconnected.
+[N] Incoming connection from 94.254.160.4
+94.254.160.4 0DEYMAN0
+[39;49m[32m13:45 [5]Besnaj29: da się zdemontowac czarny dach? i z odzyskaniem kasy za to?
+[39;49m[37m[39;49m[32m13:46 [11]MeHow: :|
+[39;49m[37m[39;49m[32m13:46 [4]DEYMAN: siema
+[39;49m[37m[39;49m[32m13:46 [11]MeHow: siema
+[39;49m[37m[39;49m[32m13:46 [2]Bombel3k: siema
+[39;49m[37m[39;49m[32m13:46 [7]machcin1: siema kaskader
+[39;49m[37m[39;49m[32m13:47 [4]DEYMAN: pieknie powiedziane
+[39;49m[37m[39;49m[32m13:47 [4]DEYMAN: *napisane
+[39;49m[37m[39;49m[32m13:47 [7]machcin1: ja wale 1 jajo znalazlem xD
+[39;49m[37m[39;49m[32m13:47 [10]takainspiracja: za ile kupie najtaniej autko ?
+[39;49m[37m[39;49m[32m13:47 [4]DEYMAN: brawo ty
+[39;49m[37m[39;49m[32m13:47 [2]Bombel3k: @0 podjedz na simeona coś ci pokaże
+[39;49m[37m[39;49m[32m13:48 [9]Adasko26: 1600 chyba
+[39;49m[37m[39;49m[32m13:48 [11]MeHow: najtańsze autko za 2k xD
+[39;49m[37m[39;49m[32m13:48 [11]MeHow: no moze i 1600
+[39;49m[37m[39;49m[32m13:48 [11]MeHow: ale to są testy więc za znajdźki jest troche kasy żeby sobie cos lepszego kupic
+[39;49m[37m[39;49m[32m13:48 [10]takainspiracja: trochu na pracowac sie trzeb huehue
+[39;49m[37m[39;49m[32m13:48 [11]MeHow: i nie tracic za duzo czasu na nudny grind jak i tak to wszystko zniknie
+[39;49m[37m[39;49m[32m13:49 [10]takainspiracja: a te znajdzki to losowo na mapie sa ?
+[39;49m[37m[39;49m[32m13:49 [11]MeHow: powiedzmy
+[39;49m[37m[39;49m[32m13:49 [11]MeHow: ogólnie masz 100 wylosowanych z dostępnych 1500
+[39;49m[37m[39;49m[32m13:49 [3]Vadis1337: Ile kosztuje tune mechaniczny?
+[39;49m[37m[39;49m[32m13:49 [11]MeHow: i mogą być wszędzie gdzie dasz rade z buta wejść
+[39;49m[37m[39;49m[32m13:50 [10]takainspiracja: jak te znajdzka wyglada blyszczy sie swieci ?
+[39;49m[37m[39;49m[32m13:51 [11]MeHow: w nocy ma czerwoną poświatę 
+[39;49m[37m[39;49m[32m13:51 [11]MeHow: a sama jest zielonym jajkiem
+[39;49m[37m[39;49m[32m13:51 [11]MeHow: które podskakuje
+[39;49m[37m[39;49m[32m13:51 [5]Besnaj29: wyłącz to 
+[39;49m[37m[39;49m[32m13:51 [9]Adasko26: wie ktoś jak zakończyć pracę na lawetach?
+[39;49m[37m[39;49m[32m13:51 [11]MeHow: B, tylda i masz tam X po prawej u góry
+[39;49m[37m[39;49m[32m13:52 [9]Adasko26: o dzięki wielkie
+[39;49m[37m[39;49m[32m13:52 [5]Besnaj29: pomoże ktoś znaleść jedno jajko?
+[39;49m[37m[39;49m[32m13:52 [11]MeHow: musze to lepiej oznaczyć xD
+[39;49m[37m[N] 185.125.5.139:60234 has been disconnected.
+[N] Incoming connection from 185.125.5.139
+185.125.5.139 takainspiracja
+[39;49m[32m13:54 [5]Besnaj29: ej dajcie noc
+[39;49m[37m[39;49m[32m13:54 [11]MeHow: siema kto chce zostać zakutty
+[39;49m[37m[39;49m[32m13:54 [2]Bombel3k: a dostane kinder niespodziankę ?
+[39;49m[37m[39;49m[32m13:54 [5]Besnaj29: jak mi podpowiesz gdzie mam jedno jajko to ja
+[39;49m[37m[39;49m[32m13:55 [11]MeHow: dobra, jajko jest na mapiedw
+[39;49m[37m[39;49m[32m13:55 [2]Bombel3k: XDD
+[39;49m[37m[39;49m[32m13:55 [3]Vadis1337: Ile kosztuje tune mechaniczny?
+[39;49m[37m[39;49m[32m13:55 [2]Bombel3k: jakie auto ?
+[39;49m[37m[39;49m[32m13:55 [8].Drymaniusz*: Zaleznie od modelu
+[39;49m[37m[39;49m[32m13:55 [3]Vadis1337: Galant (vincent)
+[39;49m[37m[39;49m[32m13:56 [2]Bombel3k: chcesz możemy sprawdzić
+[39;49m[37m[39;49m[32m13:56 [3]Vadis1337: To zaraz tam do ciebie podjadę
+[39;49m[37m[39;49m[32m13:56 [0]WolnoLukasz: ft do t20 to jakieś 200k tyle moge powiedziec
+[39;49m[37m[39;49m[32m13:57 [5]Besnaj29: @11 auto mi wybuchło
+[39;49m[37m[39;49m[32m13:59 [11]MeHow: jakie id?
+[39;49m[37m[39;49m[32m13:59 [5]Besnaj29: już mi drymaniusz pomógł
+[39;49m[37m[39;49m[32m14:00 [5]Besnaj29: powiem tak ta podpowiedz do jajek nic nie daje
+[39;49m[37m[39;49m[32m14:00 [10]takainspiracja: 30 min juz jestem na servie ani 1 jajka nie ma xd
+[39;49m[37m[39;49m[32m14:00 [2]Bombel3k: to źle szukasz
+[39;49m[37m[39;49m[32m14:00 [8].Drymaniusz*: Musisz byc taki irytujacy? @5
+[39;49m[37m[39;49m[32m14:01 [2]Bombel3k: ja w 30min to 6jajek znalazłem wczoraj
+[39;49m[37m[39;49m[32m14:01 [10]takainspiracja: fajnie by bylo jak by ktos mape zrobil na discord
+[39;49m[37m[39;49m[32m14:01 [2]Bombel3k: chciałbyś XD
+[39;49m[37m[39;49m[32m14:01 [5]Besnaj29: @8 nie
+[39;49m[37m[39;49m[32m14:03 [5]Besnaj29: jeżeli ktoś szuka jajek to uliczki 
+[39;49m[37m[N] 185.125.5.139:60234 has been disconnected.
+[N] Incoming connection from 185.125.5.139
+185.125.5.139 takainspiracja
+[39;49m[32m14:08 [5]Besnaj29: mam jajo
+[39;49m[37m[39;49m[32m14:08 [10]takainspiracja: ta
+[39;49m[37m[39;49m[32m14:09 [0]WolnoLukasz: @2 wpadniesz na tunera?
+[39;49m[37m[39;49m[32m14:09 [2]Bombel3k: oczywiście
+[39;49m[37m[39;49m[32m14:09 [2]Bombel3k: mała obsuwa bedzie bo sie zabiłem XDD
+[39;49m[37m[39;49m[32m14:09 [10]takainspiracja: ehh zlagowane te na mapie players zeby ogarnac
+[39;49m[37m[39;49m[32m14:10 [5]Besnaj29: @2 dwiie minuty i jestem 
+[39;49m[37m[39;49m[32m14:12 [11]MeHow: @10 w czym rzecz?
+[39;49m[37m[39;49m[32m14:13 [10]takainspiracja: @11 chcialem namierzyc gracza na mapie ale jak zmieniam na mapie players to laguje to strasznie
+[39;49m[37m[39;49m[32m14:13 [0]WolnoLukasz: @11 spojrz na dsc błędy
+[39;49m[37m[39;49m[32m14:14 [11]MeHow: @10 to kwestia systemu synchronizacji blipów, niewiele moge z tym zrobic
+[39;49m[37m[39;49m[32m14:14 [10]takainspiracja: to przy 10 graczach jest troche lipa nie mowie co przy 100 by bylo huehue
+[39;49m[37m[39;49m[32m14:14 [11]MeHow: to kwestia ogarnięcia
+[39;49m[37m[39;49m[32m14:15 [8].Drymaniusz*: hihi
+[39;49m[37m[39;49m[32m14:15 [11]MeHow: na razie są poważniejsze problemy
+[39;49m[37m[39;49m[32m14:16 [10]takainspiracja: dobra na ta chwile wale xloga 44 min bez jaja
+[39;49m[37m[N] 31.0.126.244:16421 has been disconnected.
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[N] 213.108.119.240:53756 has been disconnected.
+[N] Incoming connection from 213.108.119.240
+Object reference not set to an instance of an object.
+213.108.119.240 robotek019
+[N] Incoming connection from 89.64.93.4
+89.64.93.4 -slupek-
+[39;49m[32m14:20 [2]Bombel3k: ups XD
+[39;49m[37m[39;49m[32m14:21 [7]machcin1: tunerzy doliaczja dole? jesli tak to ile maks moga zeby nie zsotac wydupczonym na samym starcie
+[39;49m[37m[39;49m[32m14:21 [2]Bombel3k: max dola to 500$
+[39;49m[37m[39;49m[32m14:22 [8].Drymaniusz*: mech 500$ a felgi 10% katalogowej
+[39;49m[37m[39;49m[32m14:22 [7]machcin1: ok dzieki
+[39;49m[37m[39;49m[32m14:23 [1]Wars: Żyje ;)
+[39;49m[37m[N] 185.125.5.139:60234 has been disconnected.
+[39;49m[32m14:28 [5]Besnaj29: @11 zrespisz mi moją  chyphre w kompocie 
+[39;49m[37m[39;49m[32m14:28 [5]Besnaj29: bo mi wyparowała
+[39;49m[37m[39;49m[32m14:28 [8].Drymaniusz*: Teraz robimy cos innego to raz
+[39;49m[37m[39;49m[32m14:28 [8].Drymaniusz*: a dwa podaj id z laski swojej
+[39;49m[37m[39;49m[32m14:29 [5]Besnaj29: nie pamiętam 
+[39;49m[37m[39;49m[32m14:29 [5]Besnaj29: id
+[39;49m[37m[N] Incoming connection from 84.15.189.137
+[39;49m[32m14:29 [8].Drymaniusz*: to zycko
+[39;49m[37m84.15.189.137 edgar12345cake
+[39;49m[32m14:29 [8].Drymaniusz*: przy najblizszym restarcie wroci
+[39;49m[37m[39;49m[32m14:29 [10]edi1: siema
+[39;49m[37m[39;49m[32m14:30 [0]WolnoLukasz: @11 dasz mi chrom na 406? Jesli mozna oczywiscie :>
+[39;49m[37m[39;49m[32m14:31 [5]Besnaj29: id pojazdu 224 
+[39;49m[37m[39;49m[32m14:31 [3]robotek019: 198 też full chrom poproszę :D
+[39;49m[37m[39;49m[32m14:32 [11]MeHow: 224 w przecho
+[39;49m[37m[39;49m[32m14:32 [5]Besnaj29: dziena
+[39;49m[37m[39;49m[32m14:35 [3]robotek019: są spadochrony ? :D przydałby się teraz XD
+[39;49m[37m[N] 46.204.84.41:37052 has been disconnected.
+[N] Incoming connection from 46.204.84.41
+46.204.84.41 Besnaj29
+[39;49m[32m14:37 [11]MeHow: nie maa
+[39;49m[37m[N] Incoming connection from 91.239.182.14
+91.239.182.14 JeleQxd
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[39;49m[32m14:37 [5]Besnaj29: co jest 
+[39;49m[37m[39;49m[32m14:37 [5]Besnaj29: dlaczego galand jest bez tiuningu a był an FT
+[39;49m[37m[39;49m[32m14:38 [5]Besnaj29: dobra już naprawiłem
+[39;49m[37m[N] 46.204.84.41:37052 has been disconnected.
+[N] Incoming connection from 46.204.84.41
+46.204.84.41 Besnaj29
+[N] 46.204.84.41:37052 has been disconnected.
+[N] Incoming connection from 46.204.84.41
+46.204.84.41 Besnaj29
+[39;49m[32m14:44 [2]Bombel3k: wyłączysz deszcz prosze ?
+[39;49m[37mConnection refused [::1]:3306
+[39;49m[32m14:51 [11]MeHow: jak komuś zniknie auto to niech od razu pisze na globalu
+[39;49m[37m[39;49m[32m14:51 [11]MeHow: bo nie moge tego namierzyc
+[39;49m[37m[39;49m[32m14:51 [11]MeHow: możliwe że auto znika jak ktoś kończy pracę itp
+[39;49m[37m[39;49m[32m14:51 [11]MeHow: tzn auto czyjeś znika jak inna osoba kończy pracę, także postarajcie się proszę jakoś do zdiagnozować wspólnie
+[39;49m[37m[N] 83.28.212.36:31332 has been disconnected.
+[N] 89.64.93.4:11380 has been disconnected.
+[N] Incoming connection from 89.64.93.4
+89.64.93.4 -slupek-
+[39;49m[32m14:55 [11]MeHow: MAM
+[39;49m[37m[N] 89.64.93.4:11380 has been disconnected.
+[N] Incoming connection from 89.64.93.4
+89.64.93.4 -slupek-
+[39;49m[32m14:57 [5]Besnaj29: jade przetestować lawety
+[39;49m[37m[39;49m[32m14:57 [5]Besnaj29: @11 dodacie carradio?
+[39;49m[37m[N] 91.239.182.14:65480 has been disconnected.
+[39;49m[32m15:03 [9]Adasko26: jechałem autem i nagle mi zniknęło co jest?
+[39;49m[37m[39;49m[32m15:03 [3]robotek019: zgłoś to na DC, jest z tym problem od jakiegoś czasu
+[39;49m[37m[39;49m[32m15:03 [5]Besnaj29: @11 rozpoczołem prace i komuś auto znikło
+[39;49m[37m[39;49m[32m15:03 [11]MeHow: wiemy o tym
+[39;49m[37m[39;49m[32m15:03 [11]MeHow: juz poprawka wlatuje
+[39;49m[37m[39;49m[32m15:04 [5]Besnaj29: ok
+[39;49m[37m[39;49m[32m15:05 [5]Besnaj29: do bana te lawety czemu ja mam graczowi z posesji zabrać auto
+[39;49m[37m[39;49m[32m15:05 [11]MeHow: bo nie umył
+[39;49m[37m[39;49m[32m15:06 [5]Besnaj29: jak wziąść auto na lawete?
+[39;49m[37m[39;49m[32m15:06 [11]MeHow: popatrz na to z tej strony: ktoś wchodzi na serwer, wystawia autka na posesje i nie gra. Auta stoja i ściągają z graczy FPS + obciążają serwer
+[39;49m[37m[39;49m[32m15:06 [11]MeHow: lawety są potrzebne
+[39;49m[37m[39;49m[32m15:06 [11]MeHow: jak ktos nie wsiada do auta przez 24h bodajze to mozna je odholowac
+[39;49m[37m[39;49m[32m15:06 [11]MeHow: odlawetować
+[39;49m[37m[39;49m[32m15:06 [5]Besnaj29: ok
+[39;49m[37m[39;49m[32m15:06 [11]MeHow: dobra szybki restart, mam nadzieje ze problem znikajacych aut zazegnany
+[39;49m[37m[39;49m[32m15:07 [5]Besnaj29: pytanko jak zabrać auto na lawete
+[39;49m[37m[39;49m[32m15:07 [11]MeHow: alt F4
+[39;49m[37m^C[33m[INFO] [0mShutting down the server...
+Shutting down..
+[32m[DONE] [0mThe server has been terminated.
+terminate called without an active exception

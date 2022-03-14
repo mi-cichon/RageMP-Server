@@ -1,0 +1,2 @@
+[24.08.2021 20:58:05] Zakupiono pojazd z komisu o ID: 21 za 305500
+[24.08.2021 21:14:35] Zakupiono pojazd z komisu o ID: 23 za 555000

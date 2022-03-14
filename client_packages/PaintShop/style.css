@@ -1,0 +1,221 @@
+html, body{
+    height:auto;
+    background-color: transparent;
+    font-family:'PT Sans', sans-serif;
+    user-select: none;
+}
+
+.paintshop_mainBody{
+    position: absolute;
+    right: 3%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40vh;
+    height: 50vh;
+    background: radial-gradient(circle, rgba(55,55,55,0.95) 0%, rgba(29,30,34,0.95) 100%);
+    border-radius: 0.4vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+.paintshop_body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1vh;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.paintshop_name{
+    background-color: rgb(33, 34, 37);
+    width: 100%;
+    text-align: center;
+    padding: 0.9vh 0;
+    font-size: 1.8vh;
+    font-weight: 600;
+    color: white;
+    border-bottom: 1px solid #0c9;
+}
+
+.paintshop_colorBody{
+    width: 100%;
+    background: linear-gradient(180deg, rgba(56, 56, 56, 0.95) 0%, rgba(29,30,34,0.95) 100%);
+    border: 1px solid rgb(34, 34, 34);
+    border-radius: 0.2vh;
+    padding: 1.4vh;
+    color: white;
+    font-size: 1.2vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.paintshop_colorBody p{
+    margin: 0;
+}
+
+.paintshop_sliderBody{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.paintshop_buttonsBody{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 1vh;
+}
+
+.paintshop_selected{
+    border-bottom: 1px solid transparent;
+    box-shadow: 0 0 1vh #0c9;
+    background: linear-gradient(180deg, rgba(37, 37, 37, 0.95) 0%, rgba(29,30,34,0.95) 100%);
+}
+
+
+/* slider */
+
+.picker_sliders{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.picker_preview{
+    height: 7vh;
+    width: 7vh;
+    border-radius: 0.4vh;
+}
+
+label{
+    color: #1f1f1f;
+    text-align: center;
+    border-radius: 6px;
+    box-shadow: inset 0 0 2px #333333;
+    padding: 0.2vh;
+}
+
+input[type=number], label{
+    display: inline-block;
+}
+
+/* ====== Number Input ====== */
+.picker_body input[type=number]{
+    width: 4vh;
+    outline: none;
+    text-align: center;
+    border-radius: 0.4vh;
+    background: #1f1f1f;
+    color: white;
+    padding: 0.2vh;
+    transition: border 0.2s ease;
+    box-shadow: 0 0 2px #333333;
+    border: 2px solid transparent;
+    margin-left: 1vh;
+    font-size: 1vh;
+}
+
+.picker_body input[type=number]:focus{
+    border: 2px solid #494949;
+}
+
+/* ====== Color Sliders ====== */
+.picker_body{
+    padding: 1vh;
+    width: 60%;
+}
+
+.picker_body div{
+    padding: 0.3vh;
+}
+
+/* ====== Range Sliders ====== */
+.picker_body input[type=range]{
+    height: 0.7vh;
+    width: 100%;
+    outline: none;
+    border-radius: 0.2vh;
+    box-shadow: 0 0 2px #444444, inset 0 0 2px #444444;
+}
+
+.picker_body input[type=range], input[type=range]::-webkit-slider-thumb{
+    appearance: none;
+    -webkit-appearance: none;
+} 
+
+/* ====== Slider Thumb ====== */
+.picker_body input[type=range]::-webkit-slider-thumb{
+    width: 2vh;
+    height: 1.7vh;
+    cursor: pointer;
+    border-radius: 20%;
+    background: #1f1f1f;
+    border: 2px solid #4b4b4b;
+    box-shadow: 0 0 4px #444444, inset 0 0 2px #444444;
+} 
+
+.color_input::-webkit-outer-spin-button, .color_input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.button_select{
+    background: linear-gradient(180deg, rgba(66, 66, 66, 0.95) 0%, rgba(29,30,34,0.95) 100%);
+    border: none;
+    color: white;
+    padding: 0.6vh;
+    border-bottom: 1px solid #00cc99;
+    font-size: 1vh;
+}
+
+.button_select:hover{
+    border-bottom: 1px solid transparent;
+    box-shadow: 0 0 1vh #0c9;
+}
+
+.button_select:focus{
+    outline: none;
+}
+
+.button_cancel{
+    background: linear-gradient(180deg, rgba(66, 66, 66, 0.95) 0%, rgba(29,30,34,0.95) 100%);
+    border: none;
+    color: white;
+    padding: 0.6vh;
+    border-bottom: 1px solid #cc0000;
+    font-size: 1vh;
+}
+
+.button_cancel:hover{
+    border-bottom: 1px solid transparent;
+    box-shadow: 0 0 1vh rgb(204, 0, 0);
+}
+
+.button_cancel:focus{
+    outline: none;
+}

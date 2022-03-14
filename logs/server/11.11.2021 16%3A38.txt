@@ -1,0 +1,148 @@
+[33m[INFO] [0mStarting RAGE Multiplayer server...
+[0m[33m
+[============================================================]
+[33m[33m||
+[33m||[33m	MaxPlayers		[0m50[33m
+||	Sync rate		[0m40ms[33m
+||	Name			[0mBasicRPG.pl | W trakcie tworzenia | Wiecej na https://discord.gg/2vrMdXsdRW [PL][33m
+||	Gamemode		[0mrpg[33m
+||	Streaming distance	[0m500[33m
+||	Announcement		[0menabled[33m
+||	Voice chat		[0menabled[33m
+||	Address			[0m127.0.0.1:22005[33m
+||	Connection limits	[0mdisabled[33m
+||	Encryption		[0menabled[33m
+||	NodeJS			[0menabled[33m
+||	C#			[0menabled[33m
+||
+[============================================================]
+
+[0m
+[33m[INFO][0m Loading NodeJS packages...
+[33m[INFO][0m Starting packages...
+[32m[DONE][0m Server packages have been started.
+Initializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 11/11/2021 4:38:14 PM
+Unable to load acl.xml
+ACLEnabled: False
+Loaded 667 entries from vehicleData.json
+Loading resources..
+[?1h=[39;49m[33m->[39;49m[37m Starting [39;49m[36mServer[39;49m[37m resource..
+[39;49m[39;49m[37mServer:[39;49m[37m loading scripts.. found 1 script(s)
+[39;49m[39;49m[37mServer:[39;49m[37m instantiating [39;49m[37mServerSide.MainClass[39;49m[37m..
+[39;49mConnection refused [::1]:3306
+[39;49m[37mServer:[39;49m[37m loading server events.. found 10 server event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 10 server events(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loading remote events.. found 192 remote event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 192 remote event(s)
+[39;49mServer started...
+Connection refused [::1]:3306
+[39;49m[32m->[39;49m[37m Resource [39;49m[36mServer[39;49m[37m started!
+[39;49m[39;49m[32mStarted! Waiting for connections..
+[39;49m[32m[DONE] [0mStarted resource transfer server at 22006 port.
+[32m[DONE] [0mClient-side packages weight: [33m236.957718 MB[0m (uncompressed: [33m411.282837 MB[0m).
+[33m[INFO] [0mMasterList: Announcing into master server...
+[33m[INFO] [0mInitializing networking...
+[32m[DONE] [0mNetworking has been started: (IPv4-only) at 127.0.0.1:22005
+[32m[DONE] [0mThe server is ready to accept connections.
+[32m[DONE] [0mMasterList: Connected to master list.
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[N] 185.186.38.1:56418 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 188.47.127.251:16410 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] Incoming connection from 89.229.84.90
+89.229.84.90 Bombel3k
+[39;49m[32m17:34 [1]Bombel3k: siema
+[39;49m[37m[39;49m[32m17:35 [0]Ametyst: hei
+[39;49m[37msiema
+[39;49m[32m17:38 [1]Bombel3k: siema
+[39;49m[37m[39;49m[32m17:38 [0]Ametyst: naura
+[39;49m[37m[N] Incoming connection from 109.173.131.119
+109.173.131.119 AlfPacinoo
+[39;49m[32m17:39 [2]Blancior: siemano :)
+[39;49m[37m[39;49m[32m17:40 [1]Bombel3k: o siema
+[39;49m[37msiema
+[39;49m[32m17:40 [0]Ametyst: jakis tuner ?
+[39;49m[37m[39;49m[32m17:40 [1]Bombel3k: jade
+[39;49m[37m[39;49m[32m17:41 [0]Ametyst: dokad ?
+[39;49m[37m[39;49m[32m17:41 [1]Bombel3k: plaza
+[39;49m[37m[39;49m[32m17:41 [0]Ametyst: halo admin kiedy nenony kolory lampkuf i felg ? 
+[39;49m[37m[N] 109.173.131.119:50919 has been disconnected.
+[N] Incoming connection from 109.173.131.119
+109.173.131.119 AlfPacinoo
+[39;49m[32m17:45 [1]Bombel3k: MeHow jesteś ?
+[39;49m[37m/dp 925
+[39;49m[33m17:49 - Pojazd o ID: 925 został przeniesiony do przechowalni!
+[39;49m[37mjestem
+[39;49m[32m17:49 [0]Ametyst: fajnie
+[39;49m[37m[39;49m[32m17:49 [1]Bombel3k: gamingowy chrom na retro retro poproszę 
+[39;49m[37m/dp[N] 109.173.131.119:50919 has been disconnected.
+ [N] Incoming connection from 109.173.131.119
+925
+[39;49m[33m18:06 - Pojazd o ID: 925 został przeniesiony do przechowalni!
+[39;49m[37m109.173.131.119 AlfPacinoo
+[N] 188.47.127.251:16410 has been disconnected.
+[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 188.47.127.251:16410 has been disconnected.
+[N] 109.173.131.119:50919 has been disconnected.
+[N] Incoming connection from 94.101.16.164
+[N] Incoming connection from 93.175.86.48
+93.175.86.48 Radek231109
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] Incoming connection from 51.68.228.174
+[N] 94.101.16.164:59101 has been disconnected.
+[N] Incoming connection from 84.15.188.115
+84.15.188.115 edgar12345cake
+[N] 51.68.228.174:43769 has been disconnected.
+[39;49m[32m18:30 [0]edi1: siema
+[39;49m[37m[39;49m[32m18:30 [1]Bombel3k: siem
+[39;49m[37m[N] Incoming connection from 176.221.120.62
+176.221.120.62 _Arrow222_
+Connection refused [::1]:3306
+[N] 93.175.86.48:59034 has been disconnected.
+[N] Incoming connection from 94.101.16.164
+94.101.16.164 szamanoza69699
+[39;49m[32m18:35 [2]szaman: elo
+[39;49m[37m[39;49m[32m18:35 [1]Bombel3k: siema
+[39;49m[37m[39;49m[32m18:36 [3]Arrow: Siema
+[39;49m[37m[39;49m[32m18:37 [0]edi1: siema
+[39;49m[37m[N] 94.101.16.164:52219 has been disconnected.
+[39;49m[32m19:00 [3]Arrow: Jak podnieść przedmiot z ziemi ?
+[39;49m[37m[39;49m[32m19:00 [3]Arrow: Juz mam 
+[39;49m[37m[N] 84.15.188.115:54674 has been disconnected.
+[N] Incoming connection from 84.15.188.115
+84.15.188.115 edgar12345cake
+[39;49m[32m19:23 [0]edi1: jak cos ja spadam do potem
+[39;49m[37m[39;49m[32m19:23 [1]Bombel3k: naura
+[39;49m[37m[N] 84.15.188.115:54674 has been disconnected.
+[N] 176.221.120.62:10767 has been disconnected.
+[N] 89.229.84.90:64593 has been disconnected.
+[31m[ERROR] [0mMasterlist: connection lost...
+[31m[ERROR] [0mMasterList: couldn't connect to master server! Trying again...
+[31m[ERROR] [0mMasterList: couldn't connect to master server! Trying again...
+[31m[ERROR] [0mMasterList: couldn't connect to master server! Trying again...
+[31m[ERROR] [0mMasterList: couldn't connect to master server! Trying again...
+[31m[ERROR] [0mMasterList: couldn't connect to master server! Trying again...
+[31m[ERROR] [0mMasterList: couldn't connect to master server! Trying again...
+[31m[ERROR] [0mMasterList: couldn't connect to master server! Trying again...
+[31m[ERROR] [0mMasterList: couldn't connect to master server! Trying again...
+[31m[ERROR] [0mMasterList: couldn't connect to master server! Trying again...
+[31m[ERROR] [0mMasterList: couldn't connect to master server! Trying again...
+[32m[DONE] [0mMasterList: Connected to master list.
+[31m[ERROR] [0mMasterlist: connection lost...
+[32m[DONE] [0mMasterList: Connected to master list.
+[31m[ERROR] [0mMasterlist: connection lost...
+[32m[DONE] [0mMasterList: Connected to master list.
+[31m[ERROR] [0mMasterlist: connection lost...
+[32m[DONE] [0mMasterList: Connected to master list.
+[33m[INFO] [0mShutting down the server...
+Shutting down..
+[32m[DONE] [0mThe server has been terminated.
+terminate called without an active exception

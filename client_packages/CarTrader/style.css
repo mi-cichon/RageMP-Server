@@ -1,0 +1,182 @@
+html body{
+    background: transparent;
+    font-family:'PT Sans', sans-serif;
+}
+
+.mainBody{
+    height:auto;
+    width: 50vh;
+    background: radial-gradient(circle, rgba(55,55,55,0.95) 0%, rgba(29,30,34,0.95) 100%);
+    user-select: none;
+    max-height: 60vh;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.nameCol{
+    background-color: rgb(33, 34, 37);
+    width: 100%;
+    text-align: center;
+    padding: 0.9vh 0;
+    font-size: 1.9vh;
+    font-weight: 600;
+    color: white;
+    border-bottom: 1px solid #0c9;
+    margin-bottom: 1vh;
+}
+
+.mainRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.carHeadText{
+    font-size: 1.3vh;
+    color: #fff;
+    text-align: center;
+}
+
+.playersHeadText{
+    font-size: 1.3vh;
+    color: #fff;
+    text-align: center;
+}
+
+.carCol{
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2vh;
+    display:inline-block;
+    width: 50%;
+}
+
+.carRow{
+    margin-top: 0.2vh;
+    background-color: rgb(40, 40, 40);
+    transition:all 1s;
+    border-radius: 0vh;
+    width: 95%;
+    padding: 0 2vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+
+
+.mainCarsCol, .mainPlayersCol{
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+    height: 30vh;
+    padding: 2vh;
+}
+
+.playerEndRow, .carEndRow{
+    overflow-y: scroll;
+    max-height: 25vh;
+}
+
+.playerCol{
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2vh;
+    width: 50%;
+}
+
+.playerRow{
+    margin-top: 0.2vh;
+    background-color: rgba(40,40,40, 1);
+    transition:all 1s;
+    border-radius: 0vh;
+    width: 95%;
+    padding: 0 2vh;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+.confirmRow{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    padding: 1vh;
+}
+
+
+
+
+
+*::-webkit-scrollbar{
+    display:none;
+}
+
+.priceInput{
+    background-color:rgba(73, 73, 73, 0.9);
+    border-radius: 1vh;
+    text-align: center;
+    font-size: 1.2vh;
+    text-shadow: 0 0 1px #000000, 0 0 2px #000000;
+    color: white;
+    margin-right: 0.8vh;
+    height: 80%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+
+  .btn-check:active+.btn-secondary, .btn-check:checked+.btn-secondary, .btn-secondary.active, .btn-secondary:active, .show>.btn-secondary.dropdown-toggle{
+    background-color: #1a1a1a !important;
+  }
+
+
+  .button_select{
+    background: linear-gradient(180deg, rgba(66, 66, 66, 0.95) 0%, rgba(29,30,34,0.95) 100%);
+    border: none;
+    color: white;
+    padding: 0.6vh;
+    border-bottom: 1px solid #00cc99;
+    font-size: 1vh;
+}
+
+.button_select:hover{
+    border-bottom: 1px solid transparent;
+    box-shadow: 0 0 1vh #0c9;
+}
+
+.button_select:focus{
+    outline: none;
+}
+
+.button_cancel{
+    background: linear-gradient(180deg, rgba(66, 66, 66, 0.95) 0%, rgba(29,30,34,0.95) 100%);
+    border: none;
+    color: white;
+    padding: 0.6vh;
+    border-bottom: 1px solid #cc0000;
+    font-size: 1vh;
+}
+
+.button_cancel:hover{
+    border-bottom: 1px solid transparent;
+    box-shadow: 0 0 1vh rgb(204, 0, 0);
+}
+
+.button_cancel:focus{
+    outline: none;
+}
+
+.carCol, .playerCol{
+    text-align: left;
+    width: 30%
+}
+
+.carCol:nth-child(2n), .playerCol:nth-child(2n){
+    text-align: right;
+    width: 70%
+}

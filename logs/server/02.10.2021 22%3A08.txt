@@ -1,0 +1,81 @@
+[33m[INFO] [0mStarting RAGE Multiplayer server...
+[0m[33m
+[============================================================]
+[33m[33m||
+[33m||[33m	MaxPlayers		[0m50[33m
+||	Sync rate		[0m40ms[33m
+||	Name			[0mBasicRPG.pl | W trakcie tworzenia | Wiecej na https://discord.gg/Yr6JeUtEM7 [PL][33m
+||	Gamemode		[0mrpg[33m
+||	Streaming distance	[0m500[33m
+||	Announcement		[0menabled[33m
+||	Voice chat		[0menabled[33m
+||	Address			[0m127.0.0.1:22005[33m
+||	Connection limits	[0mdisabled[33m
+||	Encryption		[0menabled[33m
+||	NodeJS			[0menabled[33m
+||	C#			[0menabled[33m
+||
+[============================================================]
+
+[0m
+[33m[INFO][0m Loading NodeJS packages...
+[33m[INFO][0m Starting packages...
+[32m[DONE][0m Server packages have been started.
+Initializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 10/2/2021 10:08:31 PM
+Unable to load acl.xml
+ACLEnabled: False
+Loaded 667 entries from vehicleData.json
+Loading resources..
+[?1h=[39;49m[33m->[39;49m[37m Starting [39;49m[36mServer[39;49m[37m resource..
+[39;49m[39;49m[37mServer:[39;49m[37m loading scripts.. found 1 script(s)
+[39;49m[39;49m[37mServer:[39;49m[37m instantiating [39;49m[37mServerSide.MainClass[39;49m[37m..
+[39;49m[39;49m[37mServer:[39;49m[37m loading server events.. found 10 server event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 10 server events(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loading remote events.. found 130 remote event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 130 remote event(s)
+[39;49mServer started...
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[39;49m[32m->[39;49m[37m Resource [39;49m[36mServer[39;49m[37m started!
+[39;49m[39;49m[32mStarted! Waiting for connections..
+[39;49m[32m[DONE] [0mStarted resource transfer server at 22006 port.
+[32m[DONE] [0mClient-side packages weight: [33m94.013626 MB[0m (uncompressed: [33m244.174255 MB[0m).
+[33m[INFO] [0mMasterList: Announcing into master server...
+[33m[INFO] [0mInitializing networking...
+[32m[DONE] [0mNetworking has been started: (IPv4-only) at 127.0.0.1:22005
+[32m[DONE] [0mThe server is ready to accept connections.
+[32m[DONE] [0mMasterList: Connected to master list.
+[N] Incoming connection from 185.136.132.132
+[N] Incoming connection from 91.245.82.80
+[N] Incoming connection from 185.186.38.1
+185.136.132.132 __Santa-Claus__
+91.245.82.80 SNOWC4T
+185.186.38.1 maciejooosek
+[39;49m[32m22:09 [0]__Santa-Claus__: restarty robisz czy mi net szwankuje?
+[39;49m[37m[39;49m[32m22:10 [1]MeHow: restarty
+[39;49m[37m[39;49m[32m22:10 [0]__Santa-Claus__: teraz git przy zbieraniu na plaży
+[39;49m[37m[39;49m[32m22:11 [1]MeHow: kozak
+[39;49m[37m[39;49m[32m22:11 [1]MeHow: to zostaie
+[39;49m[37m[39;49m[32m22:11 [0]__Santa-Claus__: jak chcesz to się tepnij i sam zobacz bo wg mnie jest ok
+[39;49m[37m[N] Incoming connection from 94.251.205.132
+94.251.205.132 classyjeans
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] 94.251.205.132:61568 has been disconnected.
+[39;49m[32m22:39 [0]__Santa-Claus__: problem na lawecie prowadzi do punktu gdzie nie ma pojazdu i dostępu
+[39;49m[37mValue cannot be null. (Parameter 'value')
+Exception has been thrown by the target of an invocation.
+Exception has been thrown by the target of an invocation.
+Unhandled exception. System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.ArgumentNullException: Value cannot be null. (Parameter 'value')
+   at void Newtonsoft.Json.Utilities.ValidationUtils.ArgumentNotNull(object value, string parameterName)
+   at object Newtonsoft.Json.JsonConvert.DeserializeObject(string value, Type type, JsonSerializerSettings settings)
+   at T Newtonsoft.Json.JsonConvert.DeserializeObject<T>(string value, JsonSerializerSettings settings)
+   at T Newtonsoft.Json.JsonConvert.DeserializeObject<T>(string value)
+   at void ServerSide.VehicleDataManager.RefreshVehiclesTune(Vehicle vehicle) in /home/ragemp/ragemp-srv/dotnet/resources/Server/Managers/VehicleDataManager.cs:line 474
+   at void ServerSide.MainClass.OnPlayerExitColShape(ColShape shape, Player player) in /home/ragemp/ragemp-srv/dotnet/resources/Server/MainClass.cs:line 883
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at GTANetworkInternals.EventHandler.Parse(Event _event, Object[] arguments)

@@ -1,0 +1,220 @@
+[33m[INFO] [0mStarting RAGE Multiplayer server...
+[0m[33m
+[============================================================]
+[33m[33m||
+[33m||[33m	MaxPlayers		[0m50[33m
+||	Sync rate		[0m40ms[33m
+||	Name			[0mBasicRPG.pl | W trakcie tworzenia | Wiecej na https://discord.gg/2vrMdXsdRW [PL][33m
+||	Gamemode		[0mrpg[33m
+||	Streaming distance	[0m500[33m
+||	Announcement		[0menabled[33m
+||	Voice chat		[0menabled[33m
+||	Address			[0m127.0.0.1:22005[33m
+||	Connection limits	[0mdisabled[33m
+||	Encryption		[0menabled[33m
+||	NodeJS			[0menabled[33m
+||	C#			[0menabled[33m
+||
+[============================================================]
+
+[0m
+[33m[INFO][0m Loading NodeJS packages...
+[33m[INFO][0m Starting packages...
+[32m[DONE][0m Server packages have been started.
+Initializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 10/24/2021 12:37:22 AM
+Unable to load acl.xml
+ACLEnabled: False
+Loaded 667 entries from vehicleData.json
+Loading resources..
+[?1h=[39;49m[33m->[39;49m[37m Starting [39;49m[36mServer[39;49m[37m resource..
+[39;49m[39;49m[37mServer:[39;49m[37m loading scripts.. found 1 script(s)
+[39;49m[39;49m[37mServer:[39;49m[37m instantiating [39;49m[37mServerSide.MainClass[39;49m[37m..
+[39;49m[39;49m[37mServer:[39;49m[37m loading server events.. found 10 server event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 10 server events(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loading remote events.. found 181 remote event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 181 remote event(s)
+[39;49mServer started...
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[39;49m[32m->[39;49m[37m Resource [39;49m[36mServer[39;49m[37m started!
+[39;49m[39;49m[32mStarted! Waiting for connections..
+[39;49m[32m[DONE] [0mStarted resource transfer server at 22006 port.
+[32m[DONE] [0mClient-side packages weight: [33m213.827118 MB[0m (uncompressed: [33m354.264252 MB[0m).
+[33m[INFO] [0mMasterList: Announcing into master server...
+[33m[INFO] [0mInitializing networking...
+[32m[DONE] [0mNetworking has been started: (IPv4-only) at 127.0.0.1:22005
+[32m[DONE] [0mThe server is ready to accept connections.
+[32m[DONE] [0mMasterList: Connected to master list.
+[N] Incoming connection from 83.6.222.5
+[N] 83.6.222.5:51881 has been disconnected.
+[N] Incoming connection from 83.29.1.163
+83.29.1.163 Drymaniusz
+[N] Incoming connection from 89.64.115.132
+89.64.115.132 kubson454
+Connection refused [::1]:3306
+[N] Incoming connection from 84.15.187.227
+[N] 84.15.187.227:65395 has been disconnected.
+[N] Incoming connection from 84.15.187.227
+84.15.187.227 edgar12345cake
+[N] 84.15.187.227:51973 has been disconnected.
+[N] Incoming connection from 84.15.187.227
+84.15.187.227 edgar12345cake
+[39;49m[32m00:43 [2]edi1: siema
+[39;49m[37m[N] 89.64.115.132:38424 has been disconnected.
+[N] Incoming connection from 89.64.115.132
+89.64.115.132 kubson454
+[39;49m[32m00:44 [1]kubson454: siemka
+[39;49m[37m[N] Incoming connection from 89.229.84.90
+89.229.84.90 Bombel3k
+[39;49m[32m00:45 [3]Bombel3k: cześć
+[39;49m[37m[39;49m[32m00:46 [1]kubson454: jaka praca na 1 lvl xd ?
+[39;49m[37m[39;49m[32m00:46 [2]edi1: czesc
+[39;49m[37m[39;49m[32m00:46 [2]edi1: wpisz / bonus
+[39;49m[37m[39;49m[32m00:47 [1]kubson454: daleko to ale sie przejade xdw
+[39;49m[37m[39;49m[32m00:52 [0].Drymaniusz*: Na sam poczatek polecam poczytac f2
+[39;49m[37m[39;49m[32m00:52 [1]kubson454: ogolnie fajnie ze sa premie ale nie mam prawka xd 
+[39;49m[37m[39;49m[32m00:52 [1]kubson454: wlasnie to robie 
+[39;49m[37m[39;49m[32m00:52 [0].Drymaniusz*: Tam masz wszystkie prace rozpisane razem z ich wymaganiami
+[39;49m[37m[39;49m[32m00:53 [0].Drymaniusz*: I duzo przydatnych informacji 
+[39;49m[37m[39;49m[32m00:53 [1]kubson454: wait reconnecta walne
+[39;49m[37m[N] 89.64.115.132:38424 has been disconnected.
+[N] Incoming connection from 89.64.115.132
+89.64.115.132 kubson454
+[39;49m[32m01:03 [1]kubson454: fajny serwer kurcze
+[39;49m[37m[39;49m[32m01:03 [1]kubson454: ile kosztuje prawko ?
+[39;49m[37m[39;49m[32m01:03 [3]Bombel3k: niecałe 200$
+[39;49m[37m[39;49m[32m01:03 [3]Bombel3k: 30teoria praktyka 140 chyba
+[39;49m[37m[39;49m[32m01:04 [1]kubson454: pytanie czy teroia jest ez xd
+[39;49m[37m[39;49m[32m01:05 [3]Bombel3k: zależy dla kogo xD
+[39;49m[37m[39;49m[32m01:06 [1]kubson454: to pewnie nie zdam xdddd
+[39;49m[37m[39;49m[32m01:07 [2]edi1: dasz rade
+[39;49m[37m[39;49m[32m01:10 [1]kubson454: podwiezie ktos na prawko z odpadow ?
+[39;49m[37m[39;49m[32m01:11 [2]edi1: jest publiczny skuter
+[39;49m[37m[39;49m[32m01:11 [1]kubson454: no wiem ale nie chce mi sie pol godziny jechac ale jak nikt nie podjedzie to trudno
+[39;49m[37m[N] 89.64.115.132:38424 has been disconnected.
+[39;49m[32m01:12 [3]Bombel3k: zrób reloga i zresp sie na spawnie w ls to bedziesz miał bliżej xD
+[39;49m[37m[N] Incoming connection from 89.64.115.132
+89.64.115.132 kubson454
+[N] Incoming connection from 89.64.93.4
+89.64.93.4 -slupek-
+[39;49m[32m01:13 [4]slupek77: elo
+[39;49m[37m[39;49m[32m01:13 [3]Bombel3k: siema
+[39;49m[37m[39;49m[32m01:13 [2]edi1: elo
+[39;49m[37mObject reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at T GTANetworkAPI.Entity.GetSharedData<T>(string key)
+   at void ServerSide.VehicleDataManager.SavePersonalVehicleDataToDB(Vehicle vehicle, string dataName) in F:/RAGEMP server/server-files/dotnet/resources/Server/Managers/VehicleDataManager.cs:line 192
+   at void ServerSide.VehicleDataManager.UpdateVehiclesPetrol(Vehicle vehicle, float petrol) in F:/RAGEMP server/server-files/dotnet/resources/Server/Managers/VehicleDataManager.cs:line 388
+   at void ServerSide.MainClass.RefuelVehicle(Player player, Vehicle vehicle) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 2107
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+Connection refused [::1]:3306
+Object reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at T GTANetworkAPI.Entity.GetSharedData<T>(string key)
+   at void ServerSide.VehicleDataManager.SavePersonalVehicleDataToDB(Vehicle vehicle, string dataName) in F:/RAGEMP server/server-files/dotnet/resources/Server/Managers/VehicleDataManager.cs:line 192
+   at void ServerSide.VehicleDataManager.UpdateVehiclesPetrol(Vehicle vehicle, float petrol) in F:/RAGEMP server/server-files/dotnet/resources/Server/Managers/VehicleDataManager.cs:line 388
+   at void ServerSide.MainClass.RefuelVehicle(Player player, Vehicle vehicle) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 2107
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+Connection refused [::1]:3306
+Object reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at T GTANetworkAPI.Entity.GetSharedData<T>(string key)
+   at void ServerSide.VehicleDataManager.SavePersonalVehicleDataToDB(Vehicle vehicle, string dataName) in F:/RAGEMP server/server-files/dotnet/resources/Server/Managers/VehicleDataManager.cs:line 192
+   at void ServerSide.VehicleDataManager.UpdateVehiclesPetrol(Vehicle vehicle, float petrol) in F:/RAGEMP server/server-files/dotnet/resources/Server/Managers/VehicleDataManager.cs:line 388
+   at void ServerSide.MainClass.RefuelVehicle(Player player, Vehicle vehicle) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 2107
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+Connection refused [::1]:3306
+Object reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at T GTANetworkAPI.Entity.GetSharedData<T>(string key)
+   at void ServerSide.VehicleDataManager.SavePersonalVehicleDataToDB(Vehicle vehicle, string dataName) in F:/RAGEMP server/server-files/dotnet/resources/Server/Managers/VehicleDataManager.cs:line 192
+   at void ServerSide.VehicleDataManager.UpdateVehiclesPetrol(Vehicle vehicle, float petrol) in F:/RAGEMP server/server-files/dotnet/resources/Server/Managers/VehicleDataManager.cs:line 388
+   at void ServerSide.MainClass.RefuelVehicle(Player player, Vehicle vehicle) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 2107
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+Connection refused [::1]:3306
+Object reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at T GTANetworkAPI.Entity.GetSharedData<T>(string key)
+   at void ServerSide.VehicleDataManager.SavePersonalVehicleDataToDB(Vehicle vehicle, string dataName) in F:/RAGEMP server/server-files/dotnet/resources/Server/Managers/VehicleDataManager.cs:line 192
+   at void ServerSide.VehicleDataManager.UpdateVehiclesPetrol(Vehicle vehicle, float petrol) in F:/RAGEMP server/server-files/dotnet/resources/Server/Managers/VehicleDataManager.cs:line 388
+   at void ServerSide.MainClass.RefuelVehicle(Player player, Vehicle vehicle) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 2107
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+Connection refused [::1]:3306
+Object reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at T GTANetworkAPI.Entity.GetSharedData<T>(string key)
+   at void ServerSide.VehicleDataManager.SavePersonalVehicleDataToDB(Vehicle vehicle, string dataName) in F:/RAGEMP server/server-files/dotnet/resources/Server/Managers/VehicleDataManager.cs:line 192
+   at void ServerSide.VehicleDataManager.UpdateVehiclesPetrol(Vehicle vehicle, float petrol) in F:/RAGEMP server/server-files/dotnet/resources/Server/Managers/VehicleDataManager.cs:line 388
+   at void ServerSide.MainClass.RefuelVehicle(Player player, Vehicle vehicle) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 2107
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+Connection refused [::1]:3306
+[N] 84.15.187.227:51973 has been disconnected.
+[N] Incoming connection from 84.15.187.227
+84.15.187.227 edgar12345cake
+[N] 89.229.84.90:63449 has been disconnected.
+[N] 89.64.93.4:11206 has been disconnected.
+[N] Incoming connection from 89.64.93.4
+89.64.93.4 -slupek-
+[N] 89.64.115.132:38424 has been disconnected.
+[N] Incoming connection from 83.31.224.237
+83.31.224.237 MikokosPL
+[N] 83.31.224.237:58805 has been disconnected.
+[N] Incoming connection from 83.31.224.237
+83.31.224.237 MikokosPL
+[N] 83.31.224.237:58805 has been disconnected.
+[N] 89.64.93.4:11206 has been disconnected.
+[39;49m[32m02:08 [2]edi1: tuner jest
+[39;49m[37m[39;49m[32m02:18 [2]edi1: dobranoc 
+[39;49m[37m[39;49m[32m02:18 [0].Drymaniusz*: siemano
+[39;49m[37m[N] 84.15.187.227:51973 has been disconnected.
+[N] 83.29.1.163:61648 has been disconnected.
+[N] Incoming connection from 83.29.1.163
+83.29.1.163 Drymaniusz
+[N] 83.29.1.163:63680 has been disconnected.
+[N] Incoming connection from 83.29.1.163
+83.29.1.163 Drymaniusz
+[N] 83.29.1.163:55876 has been disconnected.
+[N] Incoming connection from 83.29.1.163
+83.29.1.163 Drymaniusz
+[N] 83.29.1.163:63569 has been disconnected.
+^C[33m[INFO] [0mShutting down the server...
+Shutting down..
+[32m[DONE] [0mThe server has been terminated.
+terminate called without an active exception

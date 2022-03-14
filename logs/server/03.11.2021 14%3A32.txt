@@ -1,0 +1,242 @@
+[33m[INFO] [0mStarting RAGE Multiplayer server...
+[0m[33m
+[============================================================]
+[33m[33m||
+[33m||[33m	MaxPlayers		[0m50[33m
+||	Sync rate		[0m40ms[33m
+||	Name			[0mBasicRPG.pl | W trakcie tworzenia | Wiecej na https://discord.gg/2vrMdXsdRW [PL][33m
+||	Gamemode		[0mrpg[33m
+||	Streaming distance	[0m500[33m
+||	Announcement		[0menabled[33m
+||	Voice chat		[0menabled[33m
+||	Address			[0m127.0.0.1:22005[33m
+||	Connection limits	[0mdisabled[33m
+||	Encryption		[0menabled[33m
+||	NodeJS			[0menabled[33m
+||	C#			[0menabled[33m
+||
+[============================================================]
+
+[0m
+[33m[INFO][0m Loading NodeJS packages...
+[33m[INFO][0m Starting packages...
+[32m[DONE][0m Server packages have been started.
+Initializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 11/3/2021 2:32:48 PM
+Unable to load acl.xml
+ACLEnabled: False
+Loaded 667 entries from vehicleData.json
+Loading resources..
+[?1h=[39;49m[33m->[39;49m[37m Starting [39;49m[36mServer[39;49m[37m resource..
+[39;49m[39;49m[37mServer:[39;49m[37m loading scripts.. found 1 script(s)
+[39;49m[39;49m[37mServer:[39;49m[37m instantiating [39;49m[37mServerSide.MainClass[39;49m[37m..
+[39;49m[39;49m[37mServer:[39;49m[37m loading server events.. found 10 server event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 10 server events(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loading remote events.. found 183 remote event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 183 remote event(s)
+[39;49mServer started...
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[39;49m[32m->[39;49m[37m Resource [39;49m[36mServer[39;49m[37m started!
+[39;49m[39;49m[32mStarted! Waiting for connections..
+[39;49m[32m[DONE] [0mStarted resource transfer server at 22006 port.
+[32m[DONE] [0mClient-side packages weight: [33m243.354568 MB[0m (uncompressed: [33m388.813049 MB[0m).
+[33m[INFO] [0mMasterList: Announcing into master server...
+[33m[INFO] [0mInitializing networking...
+[32m[DONE] [0mNetworking has been started: (IPv4-only) at 127.0.0.1:22005
+[32m[DONE] [0mThe server is ready to accept connections.
+[32m[DONE] [0mMasterList: Connected to master list.
+ro[6n  
+[N] Incoming connection from 83.3.249.202
+83.3.249.202 Xteczek
+The remote server returned an error: (404) Not Found.
+The remote server returned an error: (404) Not Found.
+The remote server returned an error: (404) Not Found.
+The remote server returned an error: (404) Not Found.
+The remote server returned an error: (404) Not Found.
+The remote server returned an error: (404) Not Found.
+Connection refused [::1]:3306
+[N] 83.3.249.202:58621 has been disconnected.
+The remote server returned an error: (404) Not Found.[N] Incoming connection from 92.38.133.42
+92.38.133.42 -slupek-
+The remote server returned an error: (404) Not Found.[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[39;49m[32m14:54 [1]MeHow: coś nie działa
+[39;49m[37m[N] Incoming connection from 79.186.227.149
+79.186.227.149 Piraciako
+[39;49m[32m14:57 [2]Piraciako: siema
+[39;49m[37m[N] 79.186.227.149:64195 has been disconnected.
+[N] Incoming connection from 79.186.227.149
+79.186.227.149 Piraciako
+dp [39;49m[32m14:57 [1]MeHow: siema
+[39;49m[37m[39;49m[32m15:02 [2]Piraciako: ale mech ciekawy 
+[39;49m[37m[39;49m[32m15:05 [1]MeHow: no spoko
+[39;49m[37m[39;49m[32m15:05 [1]MeHow: tylko na razie mi sie nie klei coś ten model pojazdu
+[39;49m[37m[39;49m[32m15:05 [1]MeHow: ale ciul na razie
+[39;49m[37m[39;49m[32m15:05 [2]Piraciako: no tak do caracary nie pasuje i innych pojazdów tego typu 
+[39;49m[37m[39;49m[32m15:05 [1]MeHow: to nie o to chodzi
+[39;49m[37m[39;49m[32m15:05 [1]MeHow: chodzi o wygląd
+[39;49m[37m[39;49m[32m15:05 [2]Piraciako: a to ze 2d?
+[39;49m[37m[39;49m[32m15:06 [1]MeHow: no
+[39;49m[37m[39;49m[32m15:06 [1]MeHow: to jest tylko wizualizacja uszkodzeńt
+[39;49m[37m[39;49m[32m15:06 [1]MeHow: to nie ma pasować xD
+[39;49m[37m[39;49m[32m15:06 [1]MeHow: do auta
+[39;49m[37m[39;49m[32m15:06 [1]MeHow: widziałeś f2
+[39;49m[37m[39;49m[32m15:06 [1]MeHow: jakie gamingowe?
+[39;49m[37m[39;49m[32m15:06 [2]Piraciako: widziałem 
+[39;49m[37m[39;49m[32m15:07 [2]Piraciako: trochę mi ten obrazek się wczytuje ale git
+[39;49m[37m[39;49m[32m15:07 [1]MeHow: mi też
+[39;49m[37m[39;49m[32m15:07 [1]MeHow: poprawie to
+[39;49m[37m[N] 79.186.227.149:64195 has been disconnected.
+[N] Incoming connection from 79.186.227.149
+79.186.227.149 Piraciako
+[N] 79.186.227.149:64195 has been disconnected.
+[N] Incoming connection from 79.186.227.149
+79.186.227.149 Piraciako
+[N] 79.186.227.149:64195 has been disconnected.
+[N] Incoming connection from 79.186.227.149
+79.186.227.149 Piraciako
+[39;49m[32m15:21 [0]slupek77: ten obrazek przypomina mi takie z krtonu 
+[39;49m[37m[39;49m[32m15:21 [1]MeHow: no troche tak jest
+[39;49m[37m[39;49m[32m15:22 [0]slupek77: dla dzieci kiedyś takie były
+[39;49m[37m[39;49m[32m15:23 [0]slupek77: ale jest wizualizacja trochę to lepsze 
+[39;49m[37m[39;49m[32m15:23 [1]MeHow: no i można wybierać co naprawić
+[39;49m[37m[39;49m[32m15:24 [0]slupek77: dokładnie
+[39;49m[37m[39;49m[32m15:24 [1]MeHow: troche to poprawie jeszcze zeby ladniejsze bylo
+[39;49m[37m[N] 79.186.227.149:64195 has been disconnected.
+[N] Incoming connection from 79.186.227.149
+79.186.227.149 Piraciako
+[N] 79.186.227.149:64195 has been disconnected.
+[N] Incoming connection from 79.186.227.149
+[N] 79.186.227.149:64195 has been disconnected.
+[N] Incoming connection from 79.186.227.149
+79.186.227.149 Piraciako
+[39;49m[32m15:29 [1]MeHow: imo to naprawianie komus jest git
+[39;49m[37m[39;49m[32m15:29 [2]Piraciako: +1
+[39;49m[37m[39;49m[32m15:29 [1]MeHow: rozwalisz komus fure to mozesz mu naprawic sam, a nie dawac kase
+[39;49m[37m[39;49m[32m15:30 [0]slupek77: to jest dobre
+[39;49m[37m[N] 79.186.227.149:64255 has been disconnected.
+[N] Incoming connection from 79.186.227.149
+79.186.227.149 Piraciako
+[39;49m[32m15:34 [1]MeHow: tuner?
+[39;49m[37m[39;49m[32m15:34 [2]Piraciako: moge zaraz podjechac
+[39;49m[37m[39;49m[32m15:34 [1]MeHow: to bede za 3 min
+[39;49m[37m[39;49m[32m15:34 [2]Piraciako: na zadupie
+[39;49m[37m[N] 79.186.227.149:64255 has been disconnected.
+[N] Incoming connection from 79.186.227.149
+79.186.227.149 Piraciako
+[N] Incoming connection from 109.231.63.235
+109.231.63.235 QuaVim
+[39;49m[32m15:40 [2]Piraciako: a gdzie taki infek z se sie respi?
+[39;49m[37m[39;49m[32m15:40 [1]MeHow: sport
+[39;49m[37m[39;49m[32m15:40 [1]MeHow: zaraz podjade i ci wyroluje
+[39;49m[37m[39;49m[32m15:46 [2]Piraciako: 351 do przecho jestes w stanie dac 
+[39;49m[37m[39;49m[32m15:46 [1]MeHow: tak
+[39;49m[37m[39;49m[32m15:46 [2]Piraciako: thx
+[39;49m[37m[N] 79.186.227.149:64255 has been disconnected.
+[N] Incoming connection from 93.190.37.21
+93.190.37.21 Grubonidas
+[N] 109.231.63.235:61233 has been disconnected.
+[N] 92.38.133.42:56459 has been disconnected.
+[39;49m[32m16:28 [2]Grubonek: tej gdzie sie kwiatki oddaje
+[39;49m[37m[39;49m[32m16:28 [2]Grubonek: ja pierdole 
+[39;49m[37m[39;49m[32m16:29 [2]Grubonek: juz wiem 
+[39;49m[37m[N] Incoming connection from 89.64.93.138
+89.64.93.138 -slupek-
+[N] 93.190.37.21:1348 has been disconnected.
+[N] Incoming connection from 93.190.37.21
+93.190.37.21 Grubonidas
+[N] 93.190.37.21:1348 has been disconnected.
+[N] Incoming connection from 93.190.37.21
+93.190.37.21 Grubonidas
+[N] Incoming connection from 79.186.227.149
+[N] 79.186.227.149:61982 has been disconnected.
+[N] 89.64.93.138:5316 has been disconnected.
+[39;49m[32m17:36 [1]MeHow: xD
+[39;49m[37m[39;49m[32m17:36 [1]MeHow: działają te kwiatki?
+[39;49m[37m[N] 185.186.38.1:51344 has been disconnected.
+[N] Incoming connection from 91.237.225.85
+91.237.225.85 Tomigiuszek
+[39;49m[32m17:45 [2]Grubonek: co
+[39;49m[37m[39;49m[32m17:45 [2]Grubonek: ze to co pytałem ?
+[39;49m[37m[N] 91.237.225.85:49244 has been disconnected.
+[N] Incoming connection from 89.64.93.138
+89.64.93.138 -slupek-
+[N] 89.64.93.138:5237 has been disconnected.
+ [6n noo
+[N] Incoming connection from 89.229.84.90
+89.229.84.90 Bombel3k
+[39;49m[32m18:10 [0]Bombel3k: siems
+[39;49m[37m[39;49m[32m18:10 [2]Grubonek: witam
+[39;49m[37m[39;49m[32m18:21 [2]Grubonek: @0 masz tunera ?
+[39;49m[37m[39;49m[32m18:22 [0]Bombel3k: mam zara podjade
+[39;49m[37m[N] Incoming connection from 89.64.93.138
+89.64.93.138 -slupek-
+[N] 93.190.37.21:1348 has been disconnected.
+[39;49m[32m18:35 [1]slupek77: siema
+[39;49m[37m[39;49m[32m18:35 [0]Bombel3k: cześć
+[39;49m[37m[39;49m[32m18:53 [0]Bombel3k: nie chcesz może guardiana ft za 150k ?
+[39;49m[37m[39;49m[32m19:03 [1]slupek77: nie gb200 bym wzioł
+[39;49m[37m[39;49m[32m19:04 [0]Bombel3k: jakby był rsx to mów :D
+[39;49m[37m[39;49m[32m19:07 [1]slupek77: oli
+[39;49m[37m[39;49m[32m19:07 [1]slupek77: oki
+[39;49m[37m[N] Incoming connection from 84.15.180.80
+84.15.180.80 edgar12345cake
+[39;49m[32m19:16 [2]edi1: siema 
+[39;49m[37m[39;49m[32m19:16 [0]Bombel3k: siema
+[39;49m[37m[39;49m[32m19:16 [1]slupek77: elo
+[39;49m[37m[39;49m[32m19:17 [2]edi1: ja wbijam na hvile oplacic tunera i spadam bo mam gosci
+[39;49m[37m[39;49m[32m19:17 [0]Bombel3k: oke
+[39;49m[37m[39;49m[32m19:21 [2]edi1: do puzniei pa
+[39;49m[37m[39;49m[32m19:21 [0]Bombel3k: naura
+[39;49m[37m[N] 84.15.180.80:53368 has been disconnected.
+[N] Incoming connection from 93.190.37.21
+93.190.37.21 Grubonidas
+[N] 89.229.84.90:56213 has been disconnected.
+[N] 89.64.93.138:5226 has been disconnected.
+[N] 93.190.37.21:7254 has been disconnected.
+[N] Incoming connection from 93.190.37.21
+93.190.37.21 Grubonidas
+[N] 93.190.37.21:7254 has been disconnected.
+[N] Incoming connection from 93.190.37.21
+93.190.37.21 Grubonidas
+[N] 93.190.37.21:7254 has been disconnected.
+[N] Incoming connection from 93.190.37.21
+93.190.37.21 Grubonidas
+[N] 93.190.37.21:7254 has been disconnected.
+[N] Incoming connection from 93.190.37.21
+93.190.37.21 Grubonidas
+[N] 93.190.37.21:7254 has been disconnected.
+:o
+[N] Incoming connection from 89.229.84.90
+89.229.84.90 Bombel3k
+[N] Incoming connection from 93.190.37.21
+93.190.37.21 Grubonidas
+[N] 93.190.37.21:7026 has been disconnected.
+[N] Incoming connection from 91.237.225.85
+91.237.225.85 Tomigiuszek
+[N] Incoming connection from 93.190.37.21
+93.190.37.21 Grubonidas
+[N] 93.190.37.21:7026 has been disconnected.
+[N] Incoming connection from 93.190.37.21
+93.190.37.21 Grubonidas
+[N] 91.237.225.85:64585 has been disconnected.
+[N] Incoming connection from 213.134.169.7
+213.134.169.7 -_Chmielu_-
+[N] Incoming connection from 87.239.174.193
+87.239.174.193 LasDupallas
+Connection refused [::1]:3306
+[N] 87.239.174.193:52026 has been disconnected.
+[N] 213.134.169.7:53086 has been disconnected.
+[N] 93.190.37.21:7026 has been disconnected.
+[N] Incoming connection from 79.186.227.149
+79.186.227.149 Piraciako
+[39;49m[32m22:51 [0]Bombel3k: siema noobie
+[39;49m[37m[N] 89.229.84.90:62904 has been disconnected.
+[N] 79.186.227.149:57186 has been disconnected.
+[N] Incoming connection from 89.64.93.138
+89.64.93.138 -slupek-
+[33m[INFO] [0mShutting down the server...
+Shutting down..
+[32m[DONE] [0mThe server has been terminated.
+terminate called without an active exception

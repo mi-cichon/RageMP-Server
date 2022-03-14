@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="style/loader.css">
+        <link rel="stylesheet" href="style/main.css">
+        <link rel="stylesheet" href="style/rules.css">
+        <link rel="stylesheet" href="style/user.css">
+        <link rel="stylesheet" href="style/help.css">
+        <link rel="stylesheet" href="style/penalties.css">
+        <link rel="stylesheet" href="style/vehicles.css">
+        <link rel="stylesheet" href="style/settings.css">
+        <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div class="panel_tablet_body">
+            <div class="panel_tablet_button"></div>
+            <div class="panel_tablet_camera"></div>
+            <div class="panel_container">
+                <div class="panel_tablet_top">
+                    <p class="panel_tablet_time">12:12</p>
+                    <div class="panel_tablet_top_right"><div class="panel_tablet_wifi"></div><div class="panel_tablet_battery"></div></div>
+                </div>
+                <div class="panel_content">
+                    <div class="panel_controls">
+                        <div class="panel_control panel_control_selected">
+                            <div class="panel_control_header">Regulamin</div>
+                            <div class="panel_control_sprite" style="background-image: url('img/icons/rules.png')"></div>
+                        </div>
+                        <div class="panel_control">
+                            <div class="panel_control_header">Poradnik</div>
+                            <div class="panel_control_sprite" style="background-image: url('img/icons/help.png')"></div>
+                        </div>
+                        <div class="panel_control">
+                            <div class="panel_control_header">Tabela kar</div>
+                            <div class="panel_control_sprite" style="background-image: url('img/icons/penalties.png')"></div>
+                        </div>
+                        <div class="panel_control">
+                            <div class="panel_control_header">Postać</div>
+                            <div class="panel_control_sprite" style="background-image: url('img/icons/user.png')"></div>
+                        </div>
+                        <div class="panel_control">
+                            <div class="panel_control_header">Pojazdy</div>
+                            <div class="panel_control_sprite" style="background-image: url('img/icons/vehicles.png')"></div>
+                        </div>
+                        <div class="panel_control">
+                            <div class="panel_control_header">Opcje</div>
+                            <div class="panel_control_sprite" style="background-image: url('img/icons/settings.png')"></div>
+                        </div>
+                    </div>
+                    <div class="clickText"><div>Naciśnij przycisk</div></div>
+                    <div class="panel_panel">
+                        <div class="panel_rules_body">
+                            <div class="panel_rules_partial panel_rules_changelog">
+                                <p style="font-weight: 600">Changelog</p>
+                                <p style="font-size: 1.3vh">16:60 11.11.2021</p>
+                                <div class="panel_changelog_partials">
+                                    <div>-Pole na nurku od teraz powinno wskazywać dokładniej teren poszukiwań</div>
+                                    <div>-Gdy jesteś w pobliżu przedmiotu do znalezienia na nurku, usłyszysz dźwięki</div>
+                                    <div>-Wyjście ze skutera na nurku zatrzymuje go</div>
+                                    <div>-Poprawiono błąd powodujący brak obrazów ryb w ekwipunku</div>
+                                </div>
+                            </div>
+                            <div class="panel_rules_partial panel_rules_rules">
+                                <p style="font-weight: 600">Regulamin serwera</p>
+                                <div class="panel_rules_rules_partials">
+                                    <div><b>§1.</b> Gracz rejestruje się automatycznie używając swojego konta Rockstar Games.</div>
+                                    <div><b>§2.</b> Zabrania się korzystania z wszelakich wspomagaczy, lub programów pozwalających modyfikować zawartość gry. Wszelkie próby, niezależnie od powodzenia, będą karane.</div>
+                                    <div><b>§3.</b> Zabrania się podszywania się pod członków administracji i innych użytkowników.</div>
+                                    <div><b>§4.</b> Każdy gracz serwera jest zobowiązany zachowywać się zgodnie z powszechnie uznawanymi zasadami kultury osobistej.</div>
+                                    <div><b>§5.</b> Zabrania się spamowania i innych podobnych prób zaszkodzenia innym graczom.</div>
+                                    <div><b>§6.</b> Zabrania się wykorzystywania błędów gry. Gracze którzy umyślnie będą wywoływać błędy nie zgłaszając tego administracji zostaną ukarani.</div>
+                                    <div><b>§7.</b> Wszelkie próby oszustwa innych graczy będą karane.</div>
+                                </div>
+                                <div class="panel_rules_rules_bottom">Administracja zastrzega sobie prawo do modyfikacji regulaminu.</div>
+                            </div>
+                            <div class="panel_rules_partial panel_rules_social">
+                                <p style="font-weight: 600">Social media</p>
+                                <div class="panel_social_partials">
+                                    <div class="panel_social_discord">
+                                        <div class="panel_social_discord_logo" style="background-image: url('img/icons/discord.png')"></div>
+                                        <p>Discord</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel_panel">
+                        <div class="panel_help_body">
+                            <div class="panel_help_partial">
+                                <h2>Witaj na BASIC RPG!</h2>
+                                <p>Serwer jest w trakcie produkcji, także wszystkie postępy zostaną usunięte wraz z jego startem!</p>
+                                <p> Motywem wiodącym serwera jest RPG (nie mylić z RP). Wcielamy się w postać której przyszłość zależy tylko od nas. 
+                                    Możemy rozwijać się na różnych ścieżkach i zdobywać doświadczenie w różnych dziedzinach, aby rozgrywka pokrywała się z naszymi zainteresowaniami.</p>
+                                <h4>Serwer jest tworzony w 100% przez nas. Nie znajdziesz tu takich samych modyfikacji jak na innych serwerach. Dzięki temu każdy może przyczynić się do jego tworzenia!</h4>
+                            </div>
+                            <div class="panel_help_partial">
+                                <h2>Komendy</h2>
+                                <div class="panel_scroll">
+                                    <p><b>/reconnect</b> - komenda pozwalająca na ponowne połączenie się z serwerem</p>
+                                    <p><b>/g {tekst}</b> - wysłanie wiadomości na czat globalny (do wszystkich graczy)</p>
+                                    <p><b>/pm {nick/id} {tekst}</b> - wysłanie wiadomości prywatnej do wskazanego gracza</p>
+                                    <p><b>/przelew {nick/id}</b> - otwiera okno przelewu do pobliskiego gracza (gracz musi być w pobliżu)</p>
+                                    <p><b>/bonus</b> - wyświetla obecny bonus</p>
+                                    <p><b>/kierowcy</b> - wyświetla ostatnich pięciu kierowców pojazdu osobistego</p>
+                                    <p><b>/report {nick/id} {powód}</b> - wysłanie zgłoszenia na gracza (w przypadku potrzeby pomocy wskaż siebie)</p>
+                                    <p><b>/time</b> - wyświetla obecną datę (CET)</p>
+                                </div>
+                            </div>
+                            <div class="panel_help_partial">
+                                <h2>Skróty klawiszowe</h2>
+                                <div class="panel_scroll">
+                                    <p>
+                                        <kbd>F2</kbd> - otwiera tablet.
+                                    </p>
+                                    <p>
+                                        <kbd>F4</kbd> - otwiera listę graczy online.
+                                    </p>
+                                    <p>
+                                        <kbd>I</kbd> - otwiera ekwipunek lub bagażnik pojazdu.
+                                    </p>
+                                    <p>
+                                        <kbd>B</kbd> - przełącza HUD pracy podczas wykonywania pracy dorywczej.
+                                    </p>
+                                    <p>
+                                        <kbd>Z</kbd> - przełącza tryb minimapy.
+                                    </p>
+                                    <p>
+                                        <kbd>X</kbd> - domyślny przycisk voice chatu (push to talk), aby zmienić zobacz opcje w opcjach tabletu.
+                                    </p>
+                                    <p>
+                                        <kbd>ALT</kbd> - otwiera panel interakcji z pojazdem.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="panel_help_partial">
+                                <h2>Prace</h2>
+                                <div class="panel_scroll">
+                                    <p>Obecnie na serwerze są 4 "drzewka rozwojowe" prac:</p>
+                                
+                                    <h4>Prace wodne:</h4>
+                                    
+                                        <p>
+                                            <b>Zbieranie odpadów:</b> Praca polega na oczyszczaniu plaży Del Perro w zachodniej części Los Santos. Nie wymaga ona żadnego doświadczenia, czyli możemy podjąć się tej pracy zaraz po dołączeniu na serwer. Każdy pracownik otrzymuje worek na śmieci i wyznaczone miejsca do zebrania odpadów. Po wypełnieniu worka opróżniamy go przy kontenerze.
+                                        </p>
+                                        <p>
+                                            <b>Nurek:</b> Druga praca oparta na środowisku wodnym. Podjęcie jej wymaga 150 punktów pracy. Jako nurek otrzymasz strój do nurkowania wyposażony w oddycharkę i służbowy skuter wodny. Twoim zdaniem jest udanie się do oznaczonego celu i odnalezienie w jego obrębach przedmiotu. Za każdy znaleziony przedmiot otrzymasz odpowiednią mu nagrodę!
+                                        </p>
+                                        <p>
+                                            <b>Wędkarstwo:</b> Praca ta wymaga posiadania 750 punktów pracy w środowisku wodnym. Aby zostać wędkarzem, potrzebujemy odpowiedniego sprzętu, a konkretnie wędki. Możemy ją nabyć w porcie. Następnie musimy udać się w jedno z wyznaczonych łowisk. Po rozpoczęciu pracy oczekujemy na połów. Gdy ryba zacznie brać naszym oczom ukaże się mały interfejs. Polega on na utrzymaniu białego punktu w granicach szarej strefy przy użyciu przycisków A i D lub strzałek. Trudność utrzymania ryby wzrasta wraz z jej rodzajem, także możemy spodziewać się solidnej nagrody po wymagającym połowie!
+                                        </p>
+                                    
+    
+                                    <h4>Prace społeczne:</h4>
+                                    
+                                        <p>
+                                            <b>Złomowisko:</b> Praca polega na przynoszeniu przedmiotów do kierownika obiektu, znajdującego się we wschodnim Sandy Shores. Nie wymaga ona żadnego doświadczenia, czyli możemy podjąć się tej pracy zaraz po dołączeniu na serwer. 
+                                        </p>
+                                        <p>
+                                            <b>Lawety:</b> Praca ta wymaga posiadania 250 punktów pracy w drzewie społecznym. Aby zostać kierowcą lawety musimy udać się na doki w południowym Los Santos. Tam otrzymamy pojazd służbowy i wyznaczony cel. Jeśli nie ma dostępnych pojazdów do odholowania, zostanie nam przydzielony nieco mniej dochodowy wrak!
+                                        </p>
+                                        <p>
+                                            <b>Rafineria:</b> Trzecia z kolei praca społeczna, wymagająca 750 punktów społecznych. Jako pracownik rafinerii otrzymujesz cysternę i możliwość wyboru rodzaju zlecenia. Większe zlecenia są lepiej płatne, także wybierz rozsądnie! Następnie musisz udać się na pola naftowe (El Burro lub Grand Senora - oznaczone ogniem na mapie) aby zapełnić bak pojazdu i zaopatrzyć wyznaczone stacje benzynowe w benzynę. Każde zaopatrzenie jest znaczące dla ceny paliwa na danej stacji!
+                                        </p>
+                                    
+    
+                                    <h4>Prace naturalne</h4>
+                                    
+                                        <p>
+                                            <b>Koszenie trawników:</b> Jest to praca początkowa, nie wymagająca żadnego doświadczenia. Jesteśmy operatorami kosiarki na terenie pola golfowego w Los Santos. Naszym zadaniem jest koszenie trawników na jego terenie. Po zapełnieniu kosza kosiarki należy udać się do wyznaczonego kontenera, a następnie wysiąść, wziąć trawę z tyłu kosiarki i wyrzucić ją do owego kontenera.
+                                        </p>
+                                        <p>
+                                            <b>Ogrodnik:</b> Aby rozpocząć pracę musisz posiadać 150 punktów w drzewie natury. Rozpoczniesz ją na małej farmie, położonej na południowy zachód od zakładu karnego Bolingbroke. Po rozpoczęciu pracy i wybraniu zlecenia, otrzymasz służbowy pojazd wyposażony w niemały bagażnik. Teraz pozostało Ci już tylko udanie się na łąki i pola, aby skompletować swoje zlecenie! Gdy uznasz że czas oddać zebrane rośliny, udaj się do zleceniodawcy oznaczonego na mapie!
+                                        </p>
+                                        <p>
+                                            <b>Myśliwy:</b> Praca ta wymaga posiadania 750 punktów pracy w środowisku naturalnym. Aby rozpocząć pracę udajemy się do Myśliwego znajdującego się w lasach na południowy zachód od Mount Chilliad. Od niego dostaniemy strzelbę i quada. Przy pomocy podpowiedzi znajdującej się u dołu ekranu musimy zlokalizować zwierzę, a następnie je upolować. Zebraną skórę możemy zobaczyć w naszym ekwipunku. Skóry sprzedajemy u myśliwego. Ceny różnią się w zależności od upolowanego zwierzęcia.
+                                        </p>
+                                    
+        
+                                    <h4>Prace logistyczne</h4>
+                                    
+                                        <p>
+                                            <b>Magazynier:</b> Praca początkowa, nie wymagająca żadnego doświadczenia. Wcielamy się w rolę magazyniera w Paleto Bay, którego zadaniem jest odstawienie paczek z okolicznych naczep na wózek. W grę wchodzi praca zespołowa, także wszyscy pracownicy otrzymają mały bonus za każde dostarczone 30 paczek!
+                                        </p>
+                                        <p>
+                                            <b>Wózki widłowe:</b> Pracę możemy rozpocząć na dokach w Los Santos, niedaleko plaży. Dostajemy własny wózek widłowy i naszym zadaniem jest przewiezienie paczek z punktów odbioru do wyznaczonych pozycji na półkach na magazynie. Praca wymaga 250 punktów logistycznych i prawa jazdy kategorii B.
+                                        </p>
+                                    
+                                    
+                                    <p>Aby zakończyć pracę, należy otworzyć HUD pracy <kbd>B</kbd> i nacisnąć <kbd>End</kbd></p>
+                                </div>
+                            </div>
+                            <div class="panel_help_partial">
+                                <h2>Pojazdy</h2>
+                                <div class="panel_scroll">
+                                    <p>Na serwerze możemy wejść w posiadanie różnego rodzaju pojazdów lądowych. Od motocykli po pojazdy wyścigowe! Aby je zakupić udaj się na jeden z oznaczonych na mapie komisów lub salonów. Na pewno znajdziesz coś dla siebie!</p>
+        
+                                    <p>Wszystkie pojazdy mają tylko jedną wersję silnikową, jednakże przewidujemy obecność rzadszych, mocniejszych wersji pojazdów. </p>
+                                    
+                                    <p>W każdym pojeździe osobistym możemy ujrzeć panel sterowania przytrzymując <kbd>Alt</kbd>. Naszym oczom ukażą się kontrolki umożliwiające sterowanie pojazdem, np. zaciągnięcie ręcznego. Aby poruszać się po panelu możemy używać kółka myszy lub strzałek. Puszczenie przycisku <kbd>Alt</kbd> spowoduje wykonanie zaznaczonej opcji</p>
+                                    
+                                    <p>Pojazd osobisty możemy naprawić na jednej z kilku dostępnych stacji naprawczych. Aby przystąpić do naprawy należy zaparkować pojazd na stanowisku, zaciągnąć ręczny, a następnie podejść do mechanika i zatwierdzić naprawę. Po wyznaczonym czasie pojazd będzie gotowy do jazdy!</p>
+                                    
+                                    <p>Aby zmienić kolor naszego pojazdu musimy udać się na lakiernię. Można wybrać tam malowanie i jeden z dostępnych typów. Kolor dostępny jest w modelu RGB, także bez problemu znajdziecie odpowiedni! Kolor podstawowy i dodatkowy należy malować osobno.</p>
+                                    
+                                    <p>Aby umyć pojazd należy udać się do najbliższej myjni samochodowej. Po dokonaniu wpłaty i odczekaniu kilku chwil, nasz pojazd zacznie lśnić przez najbliższe 24 godziny!</p>
+                                    
+                                    <p>Każdy pojazd ma inną pojemność baku i mnożnik spalania. Aby uzupełnić paliwo w pojeździe udajemy się na stację benzynową i parkujemy go na stanowisku napełniania. Następnie opuszczamy pojazd i przy odpowiednim dystrybutorze trzymamy <kbd>E</kbd> po pojawieniu się panelu tankowania nad pojazdem</p>
+                                    
+                                    <p>Każdy początkujący gracz może posiadać maksymalnie 3 pojazdy. Ilość slotów można zwiększać przy użyciu punktów umiejętności.</p>
+    
+                                    <p>Tuning wizualny naszego pojazdu możemy wykonać własnoręcznie w warsztacie <i>Benny's Original Motor Works</i>.</p>
+    
+                                    <p>Tuning mechaniczny i zmianę felg możemy dokonać w jednym z dostępnych warsztatów tuningowych, będących częścią biznesów na serwerze.</p>
+                                </div>
+                            </div>
+                            <div class="panel_help_partial">
+                                <h2>Informacje ogólne</h2>
+                                <div class="panel_scroll">
+                                    <h3>Ekwipunek</h3>
+                                    <p>Ekwipunek na serwerze jest zaprojektowany w formie siatki. O tym ile jesteśmy w stanie przenieść świadczy ilość kratek naszego ekwipunku. Przedmioty dostępne na serwerze mają różne wielkości, także upewnij się że masz na nie miejsce!</p>
+                                
+                                    <p>Aby otworzyć ekwipunek naciśnij przycisk <kbd>I</kbd>  Otwarcie ekwipunku w pojeździe osobistym skutkuje otwarciem bagażnika.</p>
+                                    
+                                    <p>Aby przenosić przedmiot w ekwipunku kliknij na niego <kbd>LPM</kbd> Następnie za pomocą ruchów myszy wybierz odpowiednie miejsce w ekwipunku i naciśnij znowu <kbd>LPM</kbd> aby odłożyć przedmiot.</p>
+                                    
+                                    <p>Aby otworzyć menu przedmiotu kliknij na niego <kbd>PPM</kbd>.</p>
+                                    
+                                    <p>Przedmioty można upuszczać na ziemię. Wtedy każdy gracz będzie mógł je podnieść. UWAGA! Przedmioty upuszczone na ziemi usuwają się po restarcie serwera!</p>    
+    
+                                    <h3>Urząd miasta</h3>
+                                    <p>W urzędzie miasta, zlokalizowanym w zachodnim Los Santos, możemy załatwić kilka spraw administracyjnych.</p>
+                                
+                                    <p>Za sowitą opłatą możemy zmienić tam swoją nazwę gracza. Pierwsza zmiana natomiast, zawsze jest darmowa!</p>
+                                    
+                                    <p>W urzędzie możemy także przeprowadzić sprzedaż pojazdu innemu graczowi. Obie osoby muszą znajdować się w urzędzie, a transakcja musi zostać zaakceptowana przez kupującego.</p>
+    
+                                    <p>Spotkamy tu również system zarządzania organizacjami. Możemy tutaj stworzyć organizację i zarządzać nią, lub dołaczyć do istniejącej. Koszt złożenia podania do organizacji to $500!</p>
+    
+                                    <h3>Znajdźki</h3>
+                                    <p><b>Wyłączone na czas testów!</b></p>
+                                    <p>Na serwerze dostępne są tzw. znajdźki. Są one dostępne w całym San Andreas. Nie ograniczajcie się, mogą być niemal wszędzie gdzie dacie radę wejść o własnych siłach! Każdy gracz ma do odnalezienia 100 z nich! Za znalezienie wszystkich przewidziana jest wysoka nagroda!</p>    
+                                    
+                                    <h3>Umiejętności postaci</h3>
+                                    <p>W głównym panelu pod <kbd>F2</kbd> można ujrzeć panel umiejętności postaci. Umiejętności możemy przydzielać za konkretną ilość punktów umiejętności, które zdobywamy za każdy poziom naszej postaci. Każda umiejętność w inny sposób wpływa na naszą rozgrywkę:</p>
+                                    <p>Ekwipunek - każdy punkt tej umiejętności zwiększa pojemność naszego ekwipunku o 10 slotów.</p>
+                                    <p>Zarobki - każdy punkt tej umiejętności zwiększa nasze zarobki w każdej pracy o 1%.</p>
+                                    <p>Eco Driving - za każdy punkt spalamy o 2% mniej paliwa w naszych pojazdach osobistych.</p>
+                                    <p>Sloty na pojazdy - każdy punkt tej umiejętności zwiększa ilość naszych slotów na pojazdy o 1.</p>
+                                    <p>Szósty zmysł - ta umiejętność sprawia że słyszymy dźwięki gdy jesteśmy blisko znajdźki.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel_panel">
+                        <div class="panel_penalties_body">
+                            <div class="panel_penalties_partial">
+                                <table class="penalties-table">
+                                    <colgroup>
+                                        <col width="40%"><col width="60%">
+                                    </colgroup>
+                                    <tr>
+                                        <th>Przewinienie</th>
+                                        <th>Kara</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Cheaty / wspomagacze</td>
+                                        <td>Ban - do 3 lat</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Całkowity brak kultury</td>
+                                        <td>Ostrzeżenie lub wyciszenie do 14 dni</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Wykorzystywanie błędów</td>
+                                        <td>Ostrzeżenie lub ban do 3 lat</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Spam / flood</td>
+                                        <td>Ostrzeżenie lub wyciszenie do 2 dni</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Taranowanie / odwalanie</td>
+                                        <td>Ostrzeżenie lub utrata prawa jazdy do 14 dni</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Handel poza serwerem</td>
+                                        <td>Ban permanentny</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ogłoszenia na czacie globalnym</td>
+                                        <td>Ostrzeżenie lub wyciszenie do 7 dni</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nadużywanie czatu głosowego</td>
+                                        <td>Ostrzeżenie lub wyciszenie do 14 dni</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Odwalanie pojazdem publicznym</td>
+                                        <td>Wyrzucenie lub ban do 7 dni</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Spam reportami</td>
+                                        <td>Ostrzeżenie lub ban do 7 dni</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Utrudnianie rozgrywki</td>
+                                        <td>Ostrzeżenie lub ban do 30 dni</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Niestosowny nick</td>
+                                        <td>Ostrzeżenie lub ban do 30 dni</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel_panel">
+                        <div class="panel_user_body">
+                            <div class="panel_user_partial panel_user_jobs">
+                                <h2>Punkty prac</h2>
+                                
+                            </div>
+                            <div class="panel_user_partial panel_user_general">
+                                <h2>Informacje ogólne</h2>
+                                
+                            </div>
+                            <div class="panel_user_partial panel_user_skills">
+                                <h2>Umiejętności</h2>
+                                <table class="interface-table">
+                                    <colgroup>
+                                        <col width="45%">
+                                        <col width="20%">
+                                        <col width="15%">
+                                        <col width="20%">
+                                    </colgroup>
+                                    <tr>
+                                        <th>Umiejętność</th>
+                                        <th>Poziom</th>
+                                        <th>Koszt</th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
+                                        <td class="tooltip">Ekwipunek<span class="tooltiptext">Powiększa ekwipunek postaci o 1 pasek</span></td>
+                                        <td class="eqLvl">0/4</td>
+                                        <td>5</td>
+                                        <td class="eqAdd"><div class="addPoint hide"><div class="plush"></div><div class="plusv"></div></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tooltip">Zarobki<span class="tooltiptext">Zwiększa zarobki o 1%</span></td>
+                                        <td class="zarobkiLvl">0/15</td>
+                                        <td>2</td>
+                                        <td class="zarobkiAdd"><div class="addPoint hide"><div class="plush"></div><div class="plusv"></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tooltip">Eco Driving<span class="tooltiptext">Zmniejsza spalanie pojazdów o 2%</span></td>
+                                        <td class="edLvl">0/10</td>
+                                        <td>1</td>
+                                        <td class="edAdd"><div class="addPoint hide"><div class="plush"></div><div class="plusv"></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tooltip">Sloty na pojazdy<span class="tooltiptext">Zwiększa sloty na pojazd o 1</span></td>
+                                        <td class="slotyLvl">0/20</td>
+                                        <td>1</td>
+                                        <td class="slotyAdd"><div class="addPoint hide"><div class="plush"></div><div class="plusv"></div></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="tooltip">Szósty zmysł<span class="tooltiptext">Ułatwia szukanie znajdziek</span></td>
+                                        <td class="szLvl">0/1</td>
+                                        <td>18</td>
+                                        <td class="szAdd"><div class="addPoint hide"><div class="plush"></div><div class="plusv"></div></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel_panel">
+                        <div class="panel_vehicles_body">
+                            <div class="panel_vehicles_list">
+                                <h2>Lista pojazdów</h2>
+                                <div class="panel_scroll">
+                                    <div class="panel_vehicles_vehicles">
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel_vehicles_info">
+                                <h3>Opis pojazdu</h3>
+                                <div class="panel_vehicle_info">
+                                    <h4>Wybierz pojazd...</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel_panel">
+                        <div class="panel_settings_body">
+                            <div class="panel_settings_partial panel_settings_discord">
+                                <h2>Autoryzacja Discord</h2>
+                                <p>Kliknij poniższy przycisk aby skopiować swój kod autoryzacji Discord. Pamiętaj aby nie pokazywać/podawać go innym!</p>
+                                <input type="button" class="panel_settings_discordButton" value="Kopiuj kod">
+                            </div>
+                            <div class="panel_settings_partial">
+                                <h2>Ustawienia ogólne</h2> 
+                                <div class="displayNick">
+                                    <p class="title">Wyświetlanie swojego nicku:</p>
+                                    <div class="radios">
+                                        <label class="radio">
+                                            <p>Tak</p>
+                                            <input type="radio" name="nick" checked="checked" value="true">
+                                            <span class="checkmark">
+                                                <div class="dot"></div>
+                                            </span>
+                                        </label>
+                                        <label class="radio">
+                                            <p>Nie</p>
+                                            <input type="radio" name="nick" value="false">
+                                            <span class="checkmark">
+                                                <div class="dot"></div>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="globalChat">
+                                    <p class="title">Wyświetlanie czatu globalnego:</p>
+                                    <div class="radios">
+                                        <label class="radio">
+                                            <p>Tak</p>
+                                            <input type="radio" name="global" checked="checked" value="true">
+                                            <span class="checkmark">
+                                                <div class="dot"></div>
+                                            </span>
+                                        </label>
+                                        <label class="radio">
+                                            <p>Nie</p>
+                                            <input type="radio" name="global" value="false">
+                                            <span class="checkmark">
+                                                <div class="dot"></div>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="voiceChat">
+                                    <p class="title">Używaj czatu głosowego:</p>
+                                    <div class="radios">
+                                        <label class="radio">
+                                            <p>Tak</p>
+                                            <input type="radio" name="voice" checked="checked" value="true">
+                                            <span class="checkmark">
+                                                <div class="dot"></div>
+                                            </span>
+                                        </label>
+                                        <label class="radio">
+                                            <p>Nie</p>
+                                            <input type="radio" name="voice" value="false">
+                                            <span class="checkmark">
+                                                <div class="dot"></div>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="voiceBind">
+                                    <p class="title">Przycisk czatu głosowego:</p>
+                                    <div class="voiceBlock">
+                                        <kbd class="voiceKey">X</kbd>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel_settings_partial">
+                                <h2>Ustawienia interfejsu</h2> 
+                                <div class="hudSize">
+                                    <p class="title">Wielkość HUD'u:</p>
+                                    <input type="range" min="1" max="100" value="50" class="slider" id="hudSize">
+                                </div>
+                                <div class="chatSize">
+                                    <p class="title">Wielkość czatu:</p>
+                                    <input type="range" min="1" max="100" value="50" class="slider" id="chatSize">
+                                </div>
+                                <div class="speedometerSize">
+                                    <p class="title">Wielkość licznika:</p>
+                                    <input type="range" min="1" max="100" value="50" class="slider" id="speedometerSize">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script src="panel_main.js"></script>
+        <script src="panel_data.js"></script>
+    </body>
+</html>

@@ -1,0 +1,185 @@
+.panel_settings_body{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100%;
+}
+
+.panel_settings_partial{
+    background-color: #1d1e22;
+    border-radius: 0.3vh;
+    padding: 0.8vh;
+    color: white;
+    font-size: 1.2vh;
+    text-align: center;
+    box-shadow: 0.3vh 0.5vh 0.5vh black;
+    width: 20vh;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin: 2vh;
+}
+
+.panel_settings_discordButton{
+    width: 50%;
+    margin: auto auto;
+    margin-top: 1vh;
+    padding: 0.5vh;
+    border-radius: 0.3vh;
+    background-color: rgb(114, 137, 218);
+    color: white;
+    font-size: 1.2vh;
+    transition: all 1s;
+}
+
+.panel_settings_discordButton:hover{
+    border-radius: 0.5vh;
+    background-color: rgb(104, 134, 243);
+}
+
+.title{
+    color: white;
+    display: inline-block;
+    margin: 1vh 0;
+    font-size: 1.2vh;
+    font-weight: 500;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 80%;
+    margin-left: 10%;
+    background: #1d1d1d;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    height: 2vh;
+    border: 1px solid #00cc99;
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #8bffd5;
+    cursor: pointer;
+    width: 1.5vh;
+    height: 1.5vh;
+  }
+
+  .radios{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 80%;
+      margin-left: 10%;
+  }
+
+  .radio{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 15%;
+      align-items: center;
+  }
+  .radio p{
+      display: inline-block;
+      margin: 0;
+      color: white;
+      font-size: 1.1vh;
+  }
+  .radio input{
+      position: absolute;
+      display: none;
+  }
+
+  .radio span{
+    height: 2vh;
+    width: 2vh;
+    background-color: #1d1d1d;
+    border-radius: 50%;
+    transition: all 0.2s;
+    position: relative;
+    margin-left: 1vh;
+  }
+  
+  .radio input:checked ~ .checkmark {
+    background-color: #202020;
+  }
+  
+  .radio:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .radio input:checked ~ .checkmark .dot {
+    display: block;
+  }
+  
+  .radio .checkmark:after {
+      width: 2px;
+      height: 2px;
+      background: white;
+  }
+
+  .dot{
+      position: absolute;
+      display: none;
+      width: 0.6vh;
+      height: 0.6vh;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #0c9;
+      border-radius: 50%;
+  }
+  .voiceBind{
+      flex-direction: row;
+  }
+  .voiceBlock{
+      width: auto;
+      display:inline-flex;
+      justify-content: center;
+      margin-left: 1vh;
+  }
+
+  .clickText{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 2.6vh;
+    color: white;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgb(37, 37, 37) 0%, rgba(50, 51, 56, 0.95) 100%);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 10;
+}
+
+
+.hidden *{
+    display: none;
+}
+
+
+.amount input::-webkit-outer-spin-button, .amount input::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.amount input:focus{
+  outline: none;
+}

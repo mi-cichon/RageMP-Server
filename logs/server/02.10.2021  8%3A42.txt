@@ -1,0 +1,219 @@
+[33m[INFO] [0mStarting RAGE Multiplayer server...
+[0m[33m
+[============================================================]
+[33m[33m||
+[33m||[33m	MaxPlayers		[0m50[33m
+||	Sync rate		[0m40ms[33m
+||	Name			[0mBasicRPG.pl | W trakcie tworzenia | Wiecej na https://discord.gg/Yr6JeUtEM7 [PL VOICE][33m
+||	Gamemode		[0mrpg[33m
+||	Streaming distance	[0m500[33m
+||	Announcement		[0menabled[33m
+||	Voice chat		[0menabled[33m
+||	Address			[0m127.0.0.1:22005[33m
+||	Connection limits	[0mdisabled[33m
+||	Encryption		[0menabled[33m
+||	NodeJS			[0menabled[33m
+||	C#			[0menabled[33m
+||
+[============================================================]
+
+[0m
+[33m[INFO][0m Loading NodeJS packages...
+[33m[INFO][0m Starting packages...
+[32m[DONE][0m Server packages have been started.
+Initializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 10/2/2021 8:42:00 AM
+Unable to load acl.xml
+ACLEnabled: False
+Loaded 667 entries from vehicleData.json
+Loading resources..
+[?1h=[39;49m[33m->[39;49m[37m Starting [39;49m[36mServer[39;49m[37m resource..
+[39;49m[39;49m[37mServer:[39;49m[37m loading scripts.. found 1 script(s)
+[39;49m[39;49m[37mServer:[39;49m[37m instantiating [39;49m[37mServerSide.MainClass[39;49m[37m..
+[39;49m[39;49m[37mServer:[39;49m[37m loading server events.. found 10 server event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 10 server events(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loading remote events.. found 128 remote event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 128 remote event(s)
+[39;49mServer started...
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[39;49m[32m->[39;49m[37m Resource [39;49m[36mServer[39;49m[37m started!
+[39;49m[39;49m[32mStarted! Waiting for connections..
+[39;49m[32m[DONE] [0mStarted resource transfer server at 22006 port.
+[32m[DONE] [0mClient-side packages weight: [33m93.948196 MB[0m (uncompressed: [33m243.921249 MB[0m).
+[33m[INFO] [0mMasterList: Announcing into master server...
+[33m[INFO] [0mInitializing networking...
+[32m[DONE] [0mNetworking has been started: (IPv4-only) at 127.0.0.1:22005
+[32m[DONE] [0mThe server is ready to accept connections.
+[32m[DONE] [0mMasterList: Connected to master list.
+^C[33m[INFO] [0mShutting down the server...
+Shutting down..
+[32m[DONE] [0mThe server has been terminated.
+terminate called without an active exception
+[33m[INFO] [0mStarting RAGE Multiplayer server...
+[0m[33m
+[============================================================]
+[33m[33m||
+[33m||[33m	MaxPlayers		[0m50[33m
+||	Sync rate		[0m40ms[33m
+||	Name			[0mBasicRPG.pl | W trakcie tworzenia | Wiecej na https://discord.gg/Yr6JeUtEM7 [PL][33m
+||	Gamemode		[0mrpg[33m
+||	Streaming distance	[0m500[33m
+||	Announcement		[0menabled[33m
+||	Voice chat		[0menabled[33m
+||	Address			[0m127.0.0.1:22005[33m
+||	Connection limits	[0mdisabled[33m
+||	Encryption		[0menabled[33m
+||	NodeJS			[0menabled[33m
+||	C#			[0menabled[33m
+||
+[============================================================]
+
+[0m
+[33m[INFO][0m Loading NodeJS packages...
+[33m[INFO][0m Starting packages...
+[32m[DONE][0m Server packages have been started.
+Initializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 10/2/2021 8:42:45 AM
+Unable to load acl.xml
+ACLEnabled: False
+Loaded 667 entries from vehicleData.json
+Loading resources..
+[?1h=[39;49m[33m->[39;49m[37m Starting [39;49m[36mServer[39;49m[37m resource..
+[39;49m[39;49m[37mServer:[39;49m[37m loading scripts.. found 1 script(s)
+[39;49m[39;49m[37mServer:[39;49m[37m instantiating [39;49m[37mServerSide.MainClass[39;49m[37m..
+[39;49m[39;49m[37mServer:[39;49m[37m loading server events.. found 10 server event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 10 server events(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loading remote events.. found 128 remote event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 128 remote event(s)
+[39;49mServer started...
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[39;49m[32m->[39;49m[37m Resource [39;49m[36mServer[39;49m[37m started!
+[39;49m[39;49m[32mStarted! Waiting for connections..
+[39;49m[32m[DONE] [0mStarted resource transfer server at 22006 port.
+[32m[DONE] [0mClient-side packages weight: [33m93.948196 MB[0m (uncompressed: [33m243.921249 MB[0m).
+[33m[INFO] [0mMasterList: Announcing into master server...
+[33m[INFO] [0mInitializing networking...
+[32m[DONE] [0mNetworking has been started: (IPv4-only) at 127.0.0.1:22005
+[32m[DONE] [0mThe server is ready to accept connections.
+[32m[DONE] [0mMasterList: Connected to master list.
+[N] Incoming connection from 91.214.36.60
+91.214.36.60 Styslian
+Connection refused [::1]:3306
+[N] 91.214.36.60:56226 has been disconnected.
+[N] Incoming connection from 91.214.36.60
+91.214.36.60 Styslian
+[N] Incoming connection from 85.222.43.21
+85.222.43.21 Cichy_PL_1
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] 91.214.36.60:56226 has been disconnected.
+[N] 85.222.43.21:53458 has been disconnected.
+[N] Incoming connection from 37.47.0.251
+37.47.0.251 CzarekDriver
+Connection refused [::1]:3306
+[N] Incoming connection from 85.222.43.21
+85.222.43.21 Cichy_PL_1
+[N] Incoming connection from 83.11.203.215
+[N] 83.11.203.215:55013 has been disconnected.
+[N] 37.47.0.251:28202 has been disconnected.
+[N] Incoming connection from 83.11.203.215
+83.11.203.215 Zobercik
+[N] 85.222.43.21:65095 has been disconnected.
+[N] 83.11.203.215:64759 has been disconnected.
+[N] Incoming connection from 83.11.203.215
+83.11.203.215 Zobercik
+[N] Incoming connection from 91.239.249.196
+91.239.249.196 brodwayline
+[N] 91.239.249.196:54013 has been disconnected.
+[N] 83.11.203.215:64759 has been disconnected.
+[N] Incoming connection from 83.11.203.215
+83.11.203.215 Zobercik
+[N] 83.11.203.215:64759 has been disconnected.
+[N] Incoming connection from 83.11.203.215
+83.11.203.215 Zobercik
+[N] Incoming connection from 88.130.51.102
+88.130.51.102 SHOGUN_77
+Connection refused [::1]:3306
+[N] 83.11.203.215:56938 has been disconnected.
+[N] Incoming connection from 185.136.132.132
+[N] 185.136.132.132:62756 has been disconnected.
+[N] Incoming connection from 185.136.132.132
+[N] 185.136.132.132:62756 has been disconnected.
+[N] Incoming connection from 185.136.132.132
+185.136.132.132 __Santa-Claus__
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[N] Incoming connection from 85.222.43.21
+85.222.43.21 Cichy_PL_1
+Object reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at int ServerSide.VehicleDataManager.GetVehicleModelPrice(Vehicle vehicle) in /home/ragemp/ragemp-srv/dotnet/resources/Server/Managers/VehicleDataManager.cs:line 415
+   at decimal[] ServerSide.VehicleDataManager.getVehiclesFixPriceAndTime(Vehicle vehicle) in /home/ragemp/ragemp-srv/dotnet/resources/Server/Managers/VehicleDataManager.cs:line 696
+   at void ServerSide.MainClass.openMechHUD(Player player, ColShape colshape) in /home/ragemp/ragemp-srv/dotnet/resources/Server/MainClass.cs:line 1826
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+Object reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at int ServerSide.VehicleDataManager.GetVehicleModelPrice(Vehicle vehicle) in /home/ragemp/ragemp-srv/dotnet/resources/Server/Managers/VehicleDataManager.cs:line 415
+   at decimal[] ServerSide.VehicleDataManager.getVehiclesFixPriceAndTime(Vehicle vehicle) in /home/ragemp/ragemp-srv/dotnet/resources/Server/Managers/VehicleDataManager.cs:line 696
+   at void ServerSide.MainClass.openMechHUD(Player player, ColShape colshape) in /home/ragemp/ragemp-srv/dotnet/resources/Server/MainClass.cs:line 1826
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+Object reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at int ServerSide.VehicleDataManager.GetVehicleModelPrice(Vehicle vehicle) in /home/ragemp/ragemp-srv/dotnet/resources/Server/Managers/VehicleDataManager.cs:line 415
+   at decimal[] ServerSide.VehicleDataManager.getVehiclesFixPriceAndTime(Vehicle vehicle) in /home/ragemp/ragemp-srv/dotnet/resources/Server/Managers/VehicleDataManager.cs:line 696
+   at void ServerSide.MainClass.openMechHUD(Player player, ColShape colshape) in /home/ragemp/ragemp-srv/dotnet/resources/Server/MainClass.cs:line 1826
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+[N] 85.222.43.21:49910 has been disconnected.
+[N] Incoming connection from 85.222.43.21
+85.222.43.21 Cichy_PL_1
+[N] 85.222.43.21:49910 has been disconnected.
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[39;49m[32m15:38 [2]MeHow: siema
+[39;49m[37m[39;49m[32m15:38 [1]SHOGUN77: siemka
+[39;49m[37m[39;49m[32m15:39 [1]SHOGUN77: bedzie restart?
+[39;49m[37m[39;49m[32m15:39 [2]MeHow: nie bedzie
+[39;49m[37m[39;49m[32m15:40 [1]SHOGUN77: bo kolega prawko robi
+[39;49m[37m[N] Incoming connection from 85.222.43.21
+85.222.43.21 Cichy_PL_1
+[39;49m[32m15:40 [2]MeHow: bez problemu
+[39;49m[37m[N] 85.222.43.21:59630 has been disconnected.
+[39;49m[32m15:53 [1]SHOGUN77: lepiej by bylo zrobic praktyczny bezkolizyjny z innymi graczami bo moga trolowac
+[39;49m[37m[39;49m[32m15:54 [2]MeHow: brak kolizji działa do dupy w rage
+[39;49m[37m[39;49m[32m15:54 [2]MeHow: jak beda trollować to dostana bana i tyle
+[39;49m[37m[39;49m[32m15:54 [2]MeHow: stwierdzilem ze lepiej zeby kolizja była, niż polegać na czymś co nie działa do końca i niepotrzebnie obciąża gre
+[39;49m[37m[39;49m[32m15:56 [1]SHOGUN77: albo tym co beda trolowac pierw prawko zabierac, a za drugim ban
+[39;49m[37m[39;49m[32m15:56 [2]MeHow: no to oczywiste
+[39;49m[37m[39;49m[32m15:56 [2]MeHow: po prostu bede karać za to
+[39;49m[37m[39;49m[32m16:01 [1]SHOGUN77: niechcace wypadki tez pewnie beda, wtedy by gracz musial oddac za egzamin
+[39;49m[37m[39;49m[32m16:01 [2]MeHow: no tak, to logiczne
+[39;49m[37m[N] Incoming connection from 83.22.119.245
+83.22.119.245 Drymaniusz
+[39;49m[32m16:31 [2]MeHow: restart robiony bedzie
+[39;49m[37m[39;49m[32m16:31 [2]MeHow: konczcie prace i egzaminy
+[39;49m[37m[39;49m[32m16:31 [2]MeHow: iwogule
+[39;49m[37m[39;49m[32m16:31 [3].Drymaniusz*: Hejterów będziemy banować.
+[39;49m[37m^C[33m[INFO] [0mShutting down the server...
+Shutting down..
+[32m[DONE] [0mThe server has been terminated.
+terminate called without an active exception

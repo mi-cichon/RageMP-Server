@@ -1,0 +1,700 @@
+[33m[INFO] [0mStarting RAGE Multiplayer server...
+[0m[33m
+[============================================================]
+[33m[33m||
+[33m||[33m	MaxPlayers		[0m50[33m
+||	Sync rate		[0m40ms[33m
+||	Name			[0mBasicRPG.pl | W trakcie tworzenia | Wiecej na https://discord.gg/2vrMdXsdRW [PL][33m
+||	Gamemode		[0mrpg[33m
+||	Streaming distance	[0m500[33m
+||	Announcement		[0menabled[33m
+||	Voice chat		[0menabled[33m
+||	Address			[0m127.0.0.1:22005[33m
+||	Connection limits	[0mdisabled[33m
+||	Encryption		[0menabled[33m
+||	NodeJS			[0menabled[33m
+||	C#			[0menabled[33m
+||
+[============================================================]
+
+[0m
+[33m[INFO][0m Loading NodeJS packages...
+[33m[INFO][0m Starting packages...
+[32m[DONE][0m Server packages have been started.
+Initializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 10/30/2021 9:32:48 PM
+Unable to load acl.xml
+ACLEnabled: False
+Loaded 667 entries from vehicleData.json
+Loading resources..
+[?1h=[39;49m[33m->[39;49m[37m Starting [39;49m[36mServer[39;49m[37m resource..
+[39;49m[39;49m[37mServer:[39;49m[37m loading scripts.. found 1 script(s)
+[39;49m[39;49m[37mServer:[39;49m[37m instantiating [39;49m[37mServerSide.MainClass[39;49m[37m..
+[39;49m[39;49m[37mServer:[39;49m[37m loading server events.. found 10 server event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 10 server events(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loading remote events.. found 180 remote event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 180 remote event(s)
+[39;49mServer started...
+Connection refused [::1]:3306
+Connection refused [::1]:3306
+[39;49m[32m->[39;49m[37m Resource [39;49m[36mServer[39;49m[37m started!
+[39;49m[39;49m[32mStarted! Waiting for connections..
+[39;49m[32m[DONE] [0mStarted resource transfer server at 22006 port.
+[32m[DONE] [0mClient-side packages weight: [33m214.312500 MB[0m (uncompressed: [33m354.707001 MB[0m).
+[33m[INFO] [0mMasterList: Announcing into master server...
+[33m[INFO] [0mInitializing networking...
+[32m[DONE] [0mNetworking has been started: (IPv4-only) at 127.0.0.1:22005
+[32m[DONE] [0mThe server is ready to accept connections.
+[32m[DONE] [0mMasterList: Connected to master list.
+[N] Incoming connection from 84.15.190.168
+84.15.190.168 edgar12345cake
+[N] Incoming connection from 89.229.84.90
+89.229.84.90 Bombel3k
+[39;49m[32m21:34 [1]Bombel3k: wezme jakieś auta za darmo xD
+[39;49m[37m[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[39;49m[32m21:34 [2]MeHow: siema
+[39;49m[37m[39;49m[32m21:35 [0]edi1: siema 
+[39;49m[37m[39;49m[32m21:35 [1]Bombel3k: siema
+[39;49m[37m[39;49m[32m21:35 [0]edi1: restar gry tszeba
+[39;49m[37m[39;49m[32m21:35 [2]MeHow: nie nie 
+[39;49m[37m[39;49m[32m21:35 [2]MeHow: nie trzeba
+[39;49m[37m[39;49m[32m21:40 [0]edi1: poluie na gardiana jusz 2 dzien
+[39;49m[37m[39;49m[32m21:40 [1]Bombel3k: a ile guardian ma pojemności bagażnika ?
+[39;49m[37m[39;49m[32m21:41 [1]Bombel3k: @2 wiesz jakie auto ma najwiecej miejsca w bagaju ?
+[39;49m[37m[39;49m[32m21:41 [0]edi1: 36 
+[39;49m[37m[39;49m[32m21:42 [2]MeHow: lost czy cosw
+[39;49m[37m[39;49m[32m21:42 [2]MeHow: nie wiem
+[39;49m[37m[39;49m[32m21:43 [2]MeHow: guardian na premium
+[39;49m[37m[39;49m[32m21:47 [1]Bombel3k: zniknął jak mój stary z domu
+[39;49m[37m[39;49m[32m21:47 [0]edi1: dupsta 6/6 ma 36 pojemnosc
+[39;49m[37m[39;49m[32m21:55 [0]edi1: resp lawet git
+[39;49m[37m[N] 89.229.84.90:52789 has been disconnected.
+[N] Incoming connection from 89.229.84.90
+89.229.84.90 Bombel3k
+[N] 89.229.84.90:52789 has been disconnected.
+[N] Incoming connection from 89.229.84.90
+89.229.84.90 Bombel3k
+[N] 89.229.84.90:52789 has been disconnected.
+[N] Incoming connection from 89.229.84.90
+89.229.84.90 Bombel3k
+[39;49m[32m22:11 [1]Bombel3k: mehow sprawdziłbyś co jest na terenowym ?
+[39;49m[37m[39;49m[32m22:14 [2]MeHow: samochód jest
+[39;49m[37m[39;49m[32m22:14 [1]Bombel3k: a jaki ?
+[39;49m[37m[39;49m[32m22:14 [2]MeHow: spory całkiem
+[39;49m[37m[39;49m[32m22:14 [1]Bombel3k: a dokładny model ?
+[39;49m[37m[39;49m[32m22:14 [2]MeHow: model auta
+[39;49m[37m[39;49m[32m22:14 [2]MeHow: kurba przyjedź i se sprawdź
+[39;49m[37m[39;49m[32m22:14 [2]MeHow: co ja jestem
+[39;49m[37m[39;49m[32m22:14 [2]MeHow: nie no sandking
+[39;49m[37m[39;49m[32m22:14 [1]Bombel3k: xD
+[39;49m[37m[39;49m[32m22:15 [1]Bombel3k: kurwa kursu nie mam to nie chce mi sie jechać xD
+[39;49m[37m[39;49m[32m22:15 [2]MeHow: co xD
+[39;49m[37m[39;49m[32m22:15 [1]Bombel3k: nie chce mi sie jechać jak nie mam kursu w tamtą strone xD
+[39;49m[37m[39;49m[32m22:15 [2]MeHow: chcecie bonus na ogrodnika?
+[39;49m[37m[39;49m[32m22:15 [1]Bombel3k: a na rybaka może ?
+[39;49m[37m[39;49m[32m22:15 [2]MeHow: może
+[39;49m[37m[39;49m[32m22:16 [2]MeHow: o
+[39;49m[37m[39;49m[32m22:16 [1]Bombel3k: 
+[39;49m[37m[39;49m[32m22:16 [0]edi1: git
+[39;49m[37m[N] Incoming connection from 83.29.2.20
+83.29.2.20 Drymaniusz
+[39;49m[32m22:17 [2]MeHow: 
+[39;49m[37m[39;49m[32m22:17 [2]MeHow: ups
+[39;49m[37m[39;49m[32m22:17 [2]MeHow: xD
+[39;49m[37m[39;49m[32m22:17 [1]Bombel3k: xD
+[39;49m[37m[39;49m[32m22:18 [2]MeHow: 
+[39;49m[37m[39;49m[32m22:18 [2]MeHow: 
+[39;49m[37m[39;49m[32m22:19 [0]edi1: co sie stalo
+[39;49m[37m[39;49m[32m22:19 [2]MeHow: co?
+[39;49m[37m[39;49m[32m22:19 [1]Bombel3k: a co sie mialo stac
+[39;49m[37m[39;49m[32m22:19 [3].Drymaniusz*: 
+[39;49m[37m[39;49m[32m22:19 [2]MeHow: .
+[39;49m[37m[39;49m[32m22:19 [1]Bombel3k: siema drymek
+[39;49m[37m[39;49m[32m22:19 [3].Drymaniusz*: serwus
+[39;49m[37m[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[39;49m[32m22:20 [0]edi1: siema Drymaniusz
+[39;49m[37m[N] Incoming connection from 77.45.40.180
+77.45.40.180 diabeu32
+[N] 77.45.40.180:53102 has been disconnected.
+[N] 188.47.127.251:16471 has been disconnected.
+[N] Incoming connection from 77.45.40.180
+77.45.40.180 diabeu32
+[N] 77.45.40.180:52181 has been disconnected.
+[39;49m[32m22:29 [0]edi1: zw zare bende
+[39;49m[37m[39;49m[32m22:29 [2]MeHow: ok
+[39;49m[37m[N] 83.29.2.20:58115 has been disconnected.
+[N] Incoming connection from 83.29.2.20
+83.29.2.20 Drymaniusz
+[N] 83.29.2.20:58115 has been disconnected.
+[N] Incoming connection from 83.29.2.20
+83.29.2.20 Drymaniusz
+[N] 84.15.190.168:56287 has been disconnected.
+[N] Incoming connection from 84.15.190.168
+84.15.190.168 edgar12345cake
+[N] Incoming connection from 89.64.36.30
+89.64.36.30 oskar3742
+Connection refused [::1]:3306
+[N] 185.186.38.1:52790 has been disconnected.
+[N] 84.15.190.168:56287 has been disconnected.
+[N] Incoming connection from 84.15.190.168
+84.15.190.168 edgar12345cake
+[N] 89.64.36.30:23211 has been disconnected.
+[N] 83.29.2.20:58115 has been disconnected.
+[N] 89.229.84.90:52789 has been disconnected.
+[N] Incoming connection from 89.229.84.90
+89.229.84.90 Bombel3k
+[39;49m[32m23:04 [0]edi1: ja jusz bagai zglosilem
+[39;49m[37m[39;49m[32m23:04 [1]Bombel3k: wiem
+[39;49m[37m[39;49m[32m23:05 [1]Bombel3k: ale teraz jest dowód że dzieje sie tak cały czas a nie tylko jednej osobie
+[39;49m[37m[39;49m[32m23:05 [0]edi1: zgadzamsie natym
+[39;49m[37m[39;49m[32m23:07 [0]edi1: z sadu kwiat nie pszelorzyc 
+[39;49m[37m[39;49m[32m23:10 [1]Bombel3k: ty masz guardiana ?
+[39;49m[37m[39;49m[32m23:10 [1]Bombel3k: stoi na premce teraz 
+[39;49m[37m[39;49m[32m23:10 [0]edi1: mam 
+[39;49m[37m[39;49m[32m23:10 [0]edi1: on ma 30
+[39;49m[37m[N] 89.229.84.90:52789 has been disconnected.
+[N] Incoming connection from 89.229.84.90
+89.229.84.90 Bombel3k
+[39;49m[32m23:20 [0]edi1: jade
+[39;49m[37m[N] Incoming connection from 83.4.96.36
+83.4.96.36 swirek1970544
+[39;49m[32m23:21 [1]Bombel3k: siema swirek
+[39;49m[37m[39;49m[32m23:22 [2]SWIREK13: siemanko :)
+[39;49m[37m[N] 83.4.96.36:55482 has been disconnected.
+[N] Incoming connection from 83.4.96.36
+83.4.96.36 swirek1970544
+[39;49m[32m23:31 [1]Bombel3k: sprzedam pakiet sultan rs, comet retro, itali gto, emerus, diabolus custom za 1kk
+[39;49m[37m[N] 89.229.84.90:52789 has been disconnected.
+[N] Incoming connection from 89.229.84.90
+89.229.84.90 Bombel3k
+[N] 89.229.84.90:52789 has been disconnected.
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[39;49m[32m23:41 [1]MeHow: siem
+[39;49m[37m[N] Incoming connection from 87.101.35.98
+87.101.35.98 TomoHERE_3hunna
+Connection refused [::1]:3306
+[N] Incoming connection from 83.29.2.20
+[39;49m[32m23:42 [0]edi1: siema
+[39;49m[37m83.29.2.20 Drymaniusz
+[N] Incoming connection from 89.229.84.90
+89.229.84.90 Bombel3k
+[39;49m[32m23:53 [2]SWIREK13: siewmka mehow
+[39;49m[37m[39;49m[32m23:53 [1]MeHow: siema swirek
+[39;49m[37m[39;49m[32m23:53 [3]TomoHERE: siema czaty
+[39;49m[37m[39;49m[32m23:54 [0]edi1: robimy sad
+[39;49m[37m[39;49m[32m23:54 [1]MeHow: bez bagażnika mzoe ciezko byc xd
+[39;49m[37m[39;49m[32m23:54 [5]Bombel3k: to fchuj xD
+[39;49m[37m[39;49m[32m23:55 [3]TomoHERE: admin umarłem
+[39;49m[37m[39;49m[32m23:55 [4].Drymaniusz*: git
+[39;49m[37m[39;49m[32m23:56 [1]MeHow: mech rock?
+[39;49m[37m[39;49m[32m23:56 [5]Bombel3k: ok jade
+[39;49m[37m[N] 89.229.84.90:51394 has been disconnected.
+[N] Incoming connection from 89.229.84.90
+[N] 89.229.84.90:51394 has been disconnected.
+[N] Incoming connection from 83.6.222.5
+[N] 83.6.222.5:65343 has been disconnected.
+[N] Incoming connection from 213.108.119.240
+Object must implement IConvertible.
+admin_flipCar: System.InvalidCastException: Object must implement IConvertible.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+213.108.119.240 robotek019
+[N] Incoming connection from 83.6.222.5
+83.6.222.5 Borowikens
+Connection refused [::1]:3306
+[N] 83.4.96.36:55482 has been disconnected.
+[N] Incoming connection from 5.173.10.30
+5.173.10.30 Bombel3k
+[39;49m[32m00:11 [2]Bombel3k: ruter mi zaraz wybuchnie
+[39;49m[37m[39;49m[32m00:11 [1]MeHow: :(
+[39;49m[37m[N] 83.29.2.20:63245 has been disconnected.
+[39;49m[32m00:12 [5]robotek019: siema
+[39;49m[37m[39;49m[32m00:12 [0]edi1: siema 
+[39;49m[37m[39;49m[32m00:12 [2]Bombel3k: co crasha to musze restartować ruter bo rockstar mi sie nie wczytuje xD
+[39;49m[37m[39;49m[32m00:12 [2]Bombel3k: siems
+[39;49m[37m[N] 83.6.222.5:49974 has been disconnected.
+[N] Incoming connection from 83.6.222.5
+83.6.222.5 Borowikens
+[39;49m[32m00:13 [1]MeHow: sim
+[39;49m[37m[N] 185.186.38.1:55730 has been disconnected.
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[39;49m[32m00:16 [3]TomoHERE: admin umarlem
+[39;49m[37m[N] Incoming connection from 83.29.2.20
+83.29.2.20 Drymaniusz
+[N] 83.6.222.5:49974 has been disconnected.
+[N] Incoming connection from 83.6.222.5
+[N] 83.6.222.5:49974 has been disconnected.
+[39;49m[32m00:30 [0]edi1: tuner jest
+[39;49m[37m[N] Incoming connection from 83.6.222.5
+83.6.222.5 Borowikens
+[N] Incoming connection from 88.130.51.154
+88.130.51.154 SHOGUN_77
+[39;49m[32m00:32 [0]edi1: @6 rzyjesz 
+[39;49m[37m[39;49m[32m00:32 [1]MeHow: jade
+[39;49m[37m[39;49m[32m00:32 [6].Drymaniusz*: nie
+[39;49m[37m[39;49m[32m00:32 [6].Drymaniusz*: a co
+[39;49m[37m[39;49m[32m00:32 [0]edi1: tuner 
+[39;49m[37m[39;49m[32m00:32 [5]robotek019: ma ktoś na sell thraxa albo x80 proto?
+[39;49m[37m[39;49m[32m00:33 [1]MeHow: ja mam thraxa
+[39;49m[37m[39;49m[32m00:33 [5]robotek019: ooo a za jedyne? :D
+[39;49m[37m[39;49m[32m00:33 [1]MeHow: 1kk
+[39;49m[37m[39;49m[32m00:33 [6].Drymaniusz*: jade
+[39;49m[37m[N] Incoming connection from 89.64.92.93
+89.64.92.93 -slupek-
+[39;49m[32m00:33 [7]SHOGUN77: elo
+[39;49m[37m[39;49m[32m00:33 [5]robotek019: to jade pod urząd
+[39;49m[37m[39;49m[32m00:33 [2]Bombel3k: siema
+[39;49m[37m[39;49m[32m00:34 [2]Bombel3k: zapraszamy na kanał na discordzie bo nuda troche
+[39;49m[37m[N] 213.108.119.240:62912 has been disconnected.
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[N] 89.64.92.93:23679 has been disconnected.
+[N] 213.108.119.240:62912 has been disconnected.
+[39;49m[32m00:36 [7]SHOGUN77: jest tunner?
+[39;49m[37m[N] Incoming connection from 213.108.119.240
+[39;49m[32m00:36 [2]Bombel3k: drymek jest
+[39;49m[37m[39;49m[32m00:36 [6].Drymaniusz*: plaza
+[39;49m[37m[N] 213.108.119.240:62912 has been disconnected.
+[39;49m[32m00:36 [7]SHOGUN77: to jade po furke i zara bede
+[39;49m[37m[39;49m[32m00:37 [0]edi1: jak cos ja jade na tunera
+[39;49m[37m[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[N] 213.108.119.240:61519 has been disconnected.
+[N] Incoming connection from 213.108.119.240
+[N] 213.108.119.240:61519 has been disconnected.
+[N] Incoming connection from 213.108.119.240
+213.108.119.240 robotek019
+[39;49m[32m00:42 [5]robotek019: jestem w urzędzie :D
+[39;49m[37m[N] 87.101.35.98:49512 has been disconnected.
+[N] 5.173.10.30:35668 has been disconnected.
+[N] Incoming connection from 5.173.10.30
+5.173.10.30 Bombel3k
+[39;49m[32m00:51 [1]MeHow: EDIII
+[39;49m[37m[39;49m[32m00:51 [1]MeHow: tune poczebne
+[39;49m[37m[39;49m[32m00:51 [1]MeHow: za 5 min
+[39;49m[37m[39;49m[32m00:53 [2]Bombel3k: mehow dał byś premie na rybki albo na widlaki ?
+[39;49m[37m[39;49m[32m00:54 [1]MeHow: git
+[39;49m[37m[39;49m[32m00:54 [2]Bombel3k: nie no nie złoka
+[39;49m[37m[39;49m[32m00:54 [2]Bombel3k: złomka
+[39;49m[37m[39;49m[32m00:55 [7]SHOGUN77: mysliwy
+[39;49m[37m[N] 5.173.10.30:27197 has been disconnected.
+[N] Incoming connection from 5.173.10.30
+5.173.10.30 Bombel3k
+[39;49m[32m00:55 [2]Bombel3k: dzieki
+[39;49m[37m[39;49m[32m00:57 [0]edi1: tuner jest
+[39;49m[37m[N] 213.108.119.240:55313 has been disconnected.
+[N] Incoming connection from 89.64.92.93
+89.64.92.93 -slupek-
+[N] 83.29.2.20:59103 has been disconnected.
+[N] Incoming connection from 83.29.2.20
+83.29.2.20 Drymaniusz
+[N] 88.130.51.154:9789 has been disconnected.
+[N] 83.29.2.20:59103 has been disconnected.
+[N] Incoming connection from 83.29.2.20
+83.29.2.20 Drymaniusz
+[39;49m[32m01:21 [0]edi1: za ile sie respi trax
+[39;49m[37m[39;49m[32m01:22 [1]MeHow: 1.6kk ?
+[39;49m[37m[39;49m[32m01:22 [0]edi1: ups
+[39;49m[37m[39;49m[32m01:31 [2]Bombel3k: itali gto na simeonie
+[39;49m[37m[N] 185.186.38.1:55730 has been disconnected.
+[N] 89.64.92.93:23634 has been disconnected.
+[N] Incoming connection from 89.64.92.93
+89.64.92.93 -slupek-
+[39;49m[32m02:16 [2]Bombel3k: sell helfire ft fv 450k
+[39;49m[37m[39;49m[32m02:26 [1]slupek77: sorki dobryu
+[39;49m[37m[39;49m[32m02:29 [2]Bombel3k: caracara 4x4 na terenowym
+[39;49m[37m[N] 5.173.10.30:27197 has been disconnected.
+[39;49m[32m02:37 [0]edi1: yuner rzyie czy spi
+[39;49m[37m[39;49m[32m02:38 [0]edi1: tuner jest
+[39;49m[37m[N] 84.15.190.168:49279 has been disconnected.
+[N] Incoming connection from 84.15.190.168
+84.15.190.168 edgar12345cake
+[39;49m[32m02:47 [5].Drymaniusz*: spi a co potrzeba
+[39;49m[37m[39;49m[32m02:47 [0]edi1: ft
+[39;49m[37mData too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> MySqlConnector.MySqlException (0x80004005): Data too long for column 'wheelorders' at row 1
+ ---> MySqlConnector.MySqlException (0x80004005): Data too long for column 'wheelorders' at row 1
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 118
+   at async Task<MySqlDataReader> MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary<string, CachedProcedure> cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 437
+   at async Task<MySqlDataReader> MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList<IMySqlCommand> commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 60
+   at async Task<int> MySqlConnector.MySqlCommand.ExecuteNonQueryAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 264
+   at int MySqlConnector.MySqlCommand.ExecuteNonQuery() in /_/src/MySqlConnector/MySqlCommand.cs:line 100
+   at void ServerSide.TuneBusiness.SaveBusinessToDB() in F:/RAGEMP server/server-files/dotnet/resources/Server/Businesses/TuneBusiness.cs:line 183
+   at void ServerSide.MainClass.CreateWheelsOrder(Player player, int businessId, int currentType, int currentId, int currentAmount, int currentPrice) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 881
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+Connection refused [::1]:3306
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> MySqlConnector.MySqlException (0x80004005): Data too long for column 'wheelorders' at row 1
+ ---> MySqlConnector.MySqlException (0x80004005): Data too long for column 'wheelorders' at row 1
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 118
+   at async Task<MySqlDataReader> MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary<string, CachedProcedure> cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 437
+   at async Task<MySqlDataReader> MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList<IMySqlCommand> commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 60
+   at async Task<int> MySqlConnector.MySqlCommand.ExecuteNonQueryAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 264
+   at int MySqlConnector.MySqlCommand.ExecuteNonQuery() in /_/src/MySqlConnector/MySqlCommand.cs:line 100
+   at void ServerSide.TuneBusiness.SaveBusinessToDB() in F:/RAGEMP server/server-files/dotnet/resources/Server/Businesses/TuneBusiness.cs:line 183
+   at void ServerSide.MainClass.CreateWheelsOrder(Player player, int businessId, int currentType, int currentId, int currentAmount, int currentPrice) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 881
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+Connection refused [::1]:3306
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> MySqlConnector.MySqlException (0x80004005): Data too long for column 'wheelorders' at row 1
+ ---> MySqlConnector.MySqlException (0x80004005): Data too long for column 'wheelorders' at row 1
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 118
+   at async Task<MySqlDataReader> MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary<string, CachedProcedure> cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 437
+   at async Task<MySqlDataReader> MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList<IMySqlCommand> commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 60
+   at async Task<int> MySqlConnector.MySqlCommand.ExecuteNonQueryAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 264
+   at int MySqlConnector.MySqlCommand.ExecuteNonQuery() in /_/src/MySqlConnector/MySqlCommand.cs:line 100
+   at void ServerSide.TuneBusiness.SaveBusinessToDB() in F:/RAGEMP server/server-files/dotnet/resources/Server/Businesses/TuneBusiness.cs:line 183
+   at void ServerSide.MainClass.CreateWheelsOrder(Player player, int businessId, int currentType, int currentId, int currentAmount, int currentPrice) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 881
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+Connection refused [::1]:3306
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> MySqlConnector.MySqlException (0x80004005): Data too long for column 'wheelorders' at row 1
+ ---> MySqlConnector.MySqlException (0x80004005): Data too long for column 'wheelorders' at row 1
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 118
+   at async Task<MySqlDataReader> MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary<string, CachedProcedure> cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 437
+   at async Task<MySqlDataReader> MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList<IMySqlCommand> commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 60
+   at async Task<int> MySqlConnector.MySqlCommand.ExecuteNonQueryAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 264
+   at int MySqlConnector.MySqlCommand.ExecuteNonQuery() in /_/src/MySqlConnector/MySqlCommand.cs:line 100
+   at void ServerSide.TuneBusiness.SaveBusinessToDB() in F:/RAGEMP server/server-files/dotnet/resources/Server/Businesses/TuneBusiness.cs:line 183
+   at void ServerSide.MainClass.CreateWheelsOrder(Player player, int businessId, int currentType, int currentId, int currentAmount, int currentPrice) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 881
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+Connection refused [::1]:3306
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> MySqlConnector.MySqlException (0x80004005): Data too long for column 'wheelorders' at row 1
+ ---> MySqlConnector.MySqlException (0x80004005): Data too long for column 'wheelorders' at row 1
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 118
+   at async Task<MySqlDataReader> MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary<string, CachedProcedure> cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 437
+   at async Task<MySqlDataReader> MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList<IMySqlCommand> commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 60
+   at async Task<int> MySqlConnector.MySqlCommand.ExecuteNonQueryAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 264
+   at int MySqlConnector.MySqlCommand.ExecuteNonQuery() in /_/src/MySqlConnector/MySqlCommand.cs:line 100
+   at void ServerSide.TuneBusiness.SaveBusinessToDB() in F:/RAGEMP server/server-files/dotnet/resources/Server/Businesses/TuneBusiness.cs:line 183
+   at void ServerSide.MainClass.CreateWheelsOrder(Player player, int businessId, int currentType, int currentId, int currentAmount, int currentPrice) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 881
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+Connection refused [::1]:3306
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> MySqlConnector.MySqlException (0x80004005): Data too long for column 'wheelorders' at row 1
+ ---> MySqlConnector.MySqlException (0x80004005): Data too long for column 'wheelorders' at row 1
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 118
+   at async Task<MySqlDataReader> MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary<string, CachedProcedure> cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 437
+   at async Task<MySqlDataReader> MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList<IMySqlCommand> commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 60
+   at async Task<int> MySqlConnector.MySqlCommand.ExecuteNonQueryAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 264
+   at int MySqlConnector.MySqlCommand.ExecuteNonQuery() in /_/src/MySqlConnector/MySqlCommand.cs:line 100
+   at void ServerSide.TuneBusiness.SaveBusinessToDB() in F:/RAGEMP server/server-files/dotnet/resources/Server/Businesses/TuneBusiness.cs:line 183
+   at void ServerSide.MainClass.CreateWheelsOrder(Player player, int businessId, int currentType, int currentId, int currentAmount, int currentPrice) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 881
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+Connection refused [::1]:3306
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> MySqlConnector.MySqlException (0x80004005): Data too long for column 'wheelorders' at row 1
+ ---> MySqlConnector.MySqlException (0x80004005): Data too long for column 'wheelorders' at row 1
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 118
+   at async Task<MySqlDataReader> MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary<string, CachedProcedure> cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 437
+   at async Task<MySqlDataReader> MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList<IMySqlCommand> commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 60
+   at async Task<int> MySqlConnector.MySqlCommand.ExecuteNonQueryAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 264
+   at int MySqlConnector.MySqlCommand.ExecuteNonQuery() in /_/src/MySqlConnector/MySqlCommand.cs:line 100
+   at void ServerSide.TuneBusiness.SaveBusinessToDB() in F:/RAGEMP server/server-files/dotnet/resources/Server/Businesses/TuneBusiness.cs:line 183
+   at void ServerSide.MainClass.CreateWheelsOrder(Player player, int businessId, int currentType, int currentId, int currentAmount, int currentPrice) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 881
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+Connection refused [::1]:3306
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> MySqlConnector.MySqlException (0x80004005): Data too long for column 'wheelorders' at row 1
+ ---> MySqlConnector.MySqlException (0x80004005): Data too long for column 'wheelorders' at row 1
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 118
+   at async Task<MySqlDataReader> MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary<string, CachedProcedure> cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 437
+   at async Task<MySqlDataReader> MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList<IMySqlCommand> commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 60
+   at async Task<int> MySqlConnector.MySqlCommand.ExecuteNonQueryAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 264
+   at int MySqlConnector.MySqlCommand.ExecuteNonQuery() in /_/src/MySqlConnector/MySqlCommand.cs:line 100
+   at void ServerSide.TuneBusiness.SaveBusinessToDB() in F:/RAGEMP server/server-files/dotnet/resources/Server/Businesses/TuneBusiness.cs:line 183
+   at void ServerSide.MainClass.CreateWheelsOrder(Player player, int businessId, int currentType, int currentId, int currentAmount, int currentPrice) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 881
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+Connection refused [::1]:3306
+[N] 89.64.92.93:23645 has been disconnected.
+[39;49m[32m02:53 [0]edi1: 284
+[39;49m[37m[39;49m[32m02:55 [0]edi1: jak cos hlopaczki do dzis  
+[39;49m[37m[39;49m[32m02:56 [0]edi1: dobranos
+[39;49m[37m[39;49m[32m02:56 [5].Drymaniusz*: branoc
+[39;49m[37m[N] 84.15.190.168:49279 has been disconnected.
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> MySqlConnector.MySqlException (0x80004005): Data too long for column 'wheelorders' at row 1
+ ---> MySqlConnector.MySqlException (0x80004005): Data too long for column 'wheelorders' at row 1
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 118
+   at async Task<MySqlDataReader> MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary<string, CachedProcedure> cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 437
+   at async Task<MySqlDataReader> MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList<IMySqlCommand> commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 60
+   at async Task<int> MySqlConnector.MySqlCommand.ExecuteNonQueryAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 264
+   at int MySqlConnector.MySqlCommand.ExecuteNonQuery() in /_/src/MySqlConnector/MySqlCommand.cs:line 100
+   at void ServerSide.TuneBusiness.SaveBusinessToDB() in F:/RAGEMP server/server-files/dotnet/resources/Server/Businesses/TuneBusiness.cs:line 183
+   at void ServerSide.MainClass.AcceptWheelsTuneOffer(Player player, int businessId, int wheelType, int wheelId, int wheelPrice, bool state, int partId) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 1165
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+Connection refused [::1]:3306
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Data too long for column 'wheelorders' at row 1
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> MySqlConnector.MySqlException (0x80004005): Data too long for column 'wheelorders' at row 1
+ ---> MySqlConnector.MySqlException (0x80004005): Data too long for column 'wheelorders' at row 1
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 118
+   at async Task<MySqlDataReader> MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary<string, CachedProcedure> cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 437
+   at async Task<MySqlDataReader> MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList<IMySqlCommand> commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 60
+   at async Task<int> MySqlConnector.MySqlCommand.ExecuteNonQueryAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 264
+   at int MySqlConnector.MySqlCommand.ExecuteNonQuery() in /_/src/MySqlConnector/MySqlCommand.cs:line 100
+   at void ServerSide.TuneBusiness.SaveBusinessToDB() in F:/RAGEMP server/server-files/dotnet/resources/Server/Businesses/TuneBusiness.cs:line 183
+   at void ServerSide.MainClass.AcceptWheelsTuneOffer(Player player, int businessId, int wheelType, int wheelId, int wheelPrice, bool state, int partId) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 1165
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+Connection refused [::1]:3306
+[N] 83.29.2.20:59103 has been disconnected.
+[N] 83.6.222.5:60175 has been disconnected.
+[N] Incoming connection from 89.64.92.93
+89.64.92.93 -slupek-
+[N] 89.64.92.93:23662 has been disconnected.
+[N] Incoming connection from 84.15.190.168
+84.15.190.168 edgar12345cake
+[N] 84.15.190.168:63640 has been disconnected.
+[N] Incoming connection from 89.64.92.180
+89.64.92.180 -slupek-
+[N] 89.64.92.180:56096 has been disconnected.
+[N] Incoming connection from 89.64.92.180
+89.64.92.180 -slupek-
+[N] 89.64.92.180:56015 has been disconnected.
+[N] Incoming connection from 84.15.190.168
+84.15.190.168 edgar12345cake
+[N] Incoming connection from 89.229.84.90
+89.229.84.90 Bombel3k
+[39;49m[32m12:43 [1]Bombel3k: cześć
+[39;49m[37m[39;49m[32m12:44 [0]edi1: elo
+[39;49m[37m[39;49m[32m12:44 [0]edi1: rypki
+[39;49m[37m[39;49m[32m12:44 [1]Bombel3k: o to zajebiscie
+[39;49m[37m[39;49m[32m12:46 [0]edi1: wbic na dc
+[39;49m[37m[39;49m[32m12:46 [1]Bombel3k: za 5min
+[39;49m[37m[N] 89.229.84.90:58158 has been disconnected.
+[N] Incoming connection from 5.173.3.196
+5.173.3.196 Bombel3k
+[N] Incoming connection from 83.28.212.1
+83.28.212.1 Kazik0
+Connection refused [::1]:3306
+[N] 83.28.212.1:23174 has been disconnected.
+[N] Incoming connection from 77.45.40.180
+77.45.40.180 diabeu32
+[N] 77.45.40.180:62607 has been disconnected.
+[N] Incoming connection from 89.64.92.180
+89.64.92.180 -slupek-
+[39;49m[32m13:45 [2]slupek77: witam
+[39;49m[37m[39;49m[32m13:45 [1]Bombel3k: siemka
+[39;49m[37m[39;49m[32m13:47 [2]slupek77: tuner mi pootrzebny
+[39;49m[37m[39;49m[32m13:49 [0]edi1: jade
+[39;49m[37m[N] 5.173.3.196:46542 has been disconnected.
+[N] Incoming connection from 5.173.3.196
+5.173.3.196 Bombel3k
+[39;49m[32m14:06 [2]slupek77: i tu co chwile burzav masakra\
+[39;49m[37m[39;49m[32m14:06 [2]slupek77: i tu co chwile burza maskra
+[39;49m[37m[N] 5.173.3.196:46542 has been disconnected.
+[N] Incoming connection from 5.173.3.196
+5.173.3.196 Bombel3k
+[N] Incoming connection from 79.186.227.149
+79.186.227.149 Piraciako
+[N] 79.186.227.149:56246 has been disconnected.
+[N] 89.64.92.180:56042 has been disconnected.
+[N] 5.173.3.196:46542 has been disconnected.
+[N] Incoming connection from 5.173.3.196
+5.173.3.196 Bombel3k
+[N] 5.173.3.196:46542 has been disconnected.
+[N] Incoming connection from 89.229.84.90
+89.229.84.90 Bombel3k
+[N] Incoming connection from 188.47.127.251
+[N] 188.47.127.251:17065 has been disconnected.
+[N] 89.229.84.90:58158 has been disconnected.
+[N] Incoming connection from 89.64.92.180
+89.64.92.180 -slupek-
+[39;49m[32m18:08 [1]slupek77: wiyam
+[39;49m[37m[39;49m[32m18:08 [0]edi1: elo
+[39;49m[37m[N] Incoming connection from 188.47.127.251
+188.47.127.251 RoCaVe89
+[N] 188.47.127.251:17394 has been disconnected.
+[N] 89.64.92.180:56036 has been disconnected.
+[N] Incoming connection from 89.64.92.180
+89.64.92.180 -slupek-
+[39;49m[32m19:18 [1]slupek77: no zajabiście bagazniki w furach nie działają
+[39;49m[37m[N] 89.64.92.180:56051 has been disconnected.
+[N] Incoming connection from 89.64.92.180
+89.64.92.180 -slupek-
+[N] 89.64.92.180:56051 has been disconnected.
+[N] Incoming connection from 89.64.92.180
+89.64.92.180 -slupek-
+[39;49m[32m19:19 [0]edi1: czytac tszeba blendy bagaje zgloszone wczorai 
+[39;49m[37m[39;49m[32m19:22 [1]slupek77: tak mogło mi pracy nie zablokować i tera nie mam gdzi się pozbyć kwiatków ehh
+[39;49m[37m[39;49m[32m19:22 [0]edi1: to zpszedai u dilera 
+[39;49m[37m[39;49m[32m19:23 [1]slupek77: teraz już się nie da
+[39;49m[37m[39;49m[32m19:24 [1]slupek77: jak tracisz prace tp pomaż sobie
+[39;49m[37m[N] 89.64.92.180:56051 has been disconnected.
+[N] Incoming connection from 5.173.3.196
+5.173.3.196 Bombel3k
+[39;49m[32m19:46 [1]Bombel3k: witam ponownie
+[39;49m[37m[39;49m[32m19:47 [0]edi1: elo
+[39;49m[37m[39;49m[32m19:47 [0]edi1: rup sad  wbic na dc
+[39;49m[37m[39;49m[32m19:48 [1]Bombel3k: nie moge teraz
+[39;49m[37m[N] Incoming connection from 83.6.123.5
+[N] 83.6.123.5:60265 has been disconnected.
+[39;49m[32m20:27 [0]edi1: masz pig 2603
+[39;49m[37m[39;49m[32m20:28 [1]Bombel3k: wiem XD
+[39;49m[37m[39;49m[32m20:29 [0]edi1: a zrup relog morze padnie czy cos pobierasz
+[39;49m[37m[39;49m[32m20:32 [1]Bombel3k: es
+[39;49m[37m[39;49m[32m20:35 [0]edi1: zaczekam morze rebla sie zrespise
+[39;49m[37m[39;49m[32m20:35 [1]Bombel3k: moge ci sprzedac
+[39;49m[37m[39;49m[32m20:35 [1]Bombel3k: 600k ft fv
+[39;49m[37m[N] 5.173.3.196:7822 has been disconnected.
+[N] Incoming connection from 5.173.3.196
+5.173.3.196 Bombel3k
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[39;49m[32m20:58 [2]MeHow: siema
+[39;49m[37m[39;49m[32m20:58 [1]Bombel3k: siema szefiku
+[39;49m[37m[39;49m[32m20:58 [2]MeHow: restart zaraz, wymagany restart gry bedzie
+[39;49m[37m[39;49m[32m20:58 [0]edi1: siema
+[39;49m[37m[39;49m[32m20:58 [1]Bombel3k: dobrze 
+[39;49m[37mObject reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at void ServerSide.MainClass.RemovePointedVehicle(Player player, Vehicle vehicle) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 2112
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+Object reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at void ServerSide.MainClass.RemovePointedVehicle(Player player, Vehicle vehicle) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 2112
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+[N] 5.173.3.196:59147 has been disconnected.
+[39;49m[32m21:00 [0]edi1: gre tesz restaetowac
+[39;49m[37m[39;49m[32m21:00 [2]MeHow: tak
+[39;49m[37m[N] 84.15.190.168:58342 has been disconnected.
+^C[33m[INFO] [0mShutting down the server...
+Shutting down..
+[32m[DONE] [0mThe server has been terminated.
+terminate called without an active exception

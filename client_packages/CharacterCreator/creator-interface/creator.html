@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- source -->
+    <link rel="stylesheet" type="text/css" href="src/vendor/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="src/vendor/css/font-awesome.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="src/style.css" />
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+    <div class="creator">
+        <div class="nameCol">Kreator postaci</div>
+        <ul class="navigation">
+            <li onclick="sliders.open(0)"> <i class="icon fas fa-user-alt"></i> </li>
+            <li onclick="sliders.open(1)"> <i class="icon far fa-eye"></i> </li>
+            <li onclick="sliders.open(2)"> <i class="icon fas fa-ellipsis-h"></i> </li>
+        </ul>
+
+        <div class="handler">
+            <div class="slides">
+                <div class="slide">
+                    <div class="header">
+                        <h2 data-before="">Wygląd ogólny</h2>
+                    </div>
+                    <div class="genders">
+                        <label>Płeć</label>
+                        <h2 onclick='gender(this, 0)'>Mężczyzna</h2>
+                        <h2 onclick='gender(this, 1)'>Kobieta</h2>
+                    </div>
+                    <div class="scroll">
+                        <div class="dna">
+                            <div class="blendData"> </div>
+
+                            <div class="hair">
+                                <label>Styl fryzury</label>
+                                <div class="scroll-body"><div class="button-left hair-left"><i class='far fa-arrow-alt-circle-left'></i></div><input type="range" class='slider hair-slider' oninput="customize('hair', 0, this.value)" min="0" value="0" max="75"><div class="button-right hair-right"><i class='far fa-arrow-alt-circle-right'></i></div></div>
+                                <datalist id="hairStyles"> </datalist>
+
+                                <div class="hairStyle"> </div>
+                                <label>Kolor włosów</label>
+                                <ul class="hairColors-1"> </ul>
+                                <label>Odcień włosów</label>
+                                <ul class="hairColors-2"> </ul>
+                            </div>
+
+                            <div class="beard">
+                                <label>Styl zarostu</label>
+                                <button class="btn" onclick="customize('beard', 0, 255)">Zresetuj zarost</button>
+                                <div class="scroll-body"><div class="button-left beard-left"><i class='far fa-arrow-alt-circle-left'></i></div><input type="range" class='slider beard-slider' oninput="customize('beard', 0, this.value)" min="0" value="0" max="28"><div class="button-right beard-right"><i class='far fa-arrow-alt-circle-right'></i></div></div>
+                                <label>Kolor zarostu</label>
+                                <ul class="beardColors"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class="header">
+                        <h2 data-before="">Wygląd twarzy</h2>
+                    </div>
+                    <div class="scrollDefault">
+                        <div class="faceFeatures"> </div>
+                    </div>
+
+                </div>
+
+                <div class="slide">
+                    <div class="header">
+                        <h2 data-before="">Detale</h2>
+                    </div>
+                    <div class="scrollDefault">
+                        <div class="headOverlays"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="confirm">
+            <input class="btn" type="button" value="Zatwierdź postać" onclick="customization.finish()">
+        </div>
+    </div>
+
+    <!-- scripts -->
+    <script src="src/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+[33m[INFO] [0mStarting RAGE Multiplayer server...
+[0m[33m
+[============================================================]
+[33m[33m||
+[33m||[33m	MaxPlayers		[0m50[33m
+||	Sync rate		[0m40ms[33m
+||	Name			[0mBasicRPG.pl | W trakcie tworzenia | Wiecej na https://discord.gg/2vrMdXsdRW [PL][33m
+||	Gamemode		[0mrpg[33m
+||	Streaming distance	[0m500[33m
+||	Announcement		[0menabled[33m
+||	Voice chat		[0menabled[33m
+||	Address			[0m127.0.0.1:22005[33m
+||	Connection limits	[0mdisabled[33m
+||	Encryption		[0menabled[33m
+||	NodeJS			[0menabled[33m
+||	C#			[0menabled[33m
+||
+[============================================================]
+
+[0m
+[33m[INFO][0m Loading NodeJS packages...
+[33m[INFO][0m Starting packages...
+[32m[DONE][0m Server packages have been started.
+Initializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 10/14/2021 1:34:02 AM
+Unable to load acl.xml
+ACLEnabled: False
+Loaded 667 entries from vehicleData.json
+Loading resources..
+[?1h=[39;49m[33m->[39;49m[37m Starting [39;49m[36mServer[39;49m[37m resource..
+[39;49m[39;49m[37mServer:[39;49m[37m loading scripts.. found 1 script(s)
+[39;49m[39;49m[37mServer:[39;49m[37m instantiating [39;49m[37mServerSide.MainClass[39;49m[37m..
+[39;49mConnection refused [::1]:3306
+Connection refused [::1]:3306
+[39;49m[37mServer:[39;49m[37m loading server events.. found 10 server event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 10 server events(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loading remote events.. found 156 remote event(s)
+[39;49m[39;49m[37mServer:[39;49m[37m loaded 156 remote event(s)
+[39;49mServer started...
+[39;49m[32m->[39;49m[37m Resource [39;49m[36mServer[39;49m[37m started!
+[39;49m[39;49m[32mStarted! Waiting for connections..
+[39;49m[32m[DONE] [0mStarted resource transfer server at 22006 port.
+[32m[DONE] [0mClient-side packages weight: [33m181.856262 MB[0m (uncompressed: [33m364.905731 MB[0m).
+[33m[INFO] [0mMasterList: Announcing into master server...
+[33m[INFO] [0mInitializing networking...
+[32m[DONE] [0mNetworking has been started: (IPv4-only) at 127.0.0.1:22005
+[32m[DONE] [0mThe server is ready to accept connections.
+[32m[DONE] [0mMasterList: Connected to master list.
+[N] Incoming connection from 87.205.35.19
+[N] Incoming connection from 94.254.160.4
+[N] Incoming connection from 109.231.63.235
+109.231.63.235 QuaVim
+[N] Incoming connection from 84.15.188.220
+[N] Incoming connection from 81.15.239.49
+84.15.188.220 edgar12345cake
+81.15.239.49 zabraliminazwe
+[N] 94.254.160.4:42493 has been disconnected.
+[N] Incoming connection from 94.254.160.4
+Object reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at void ServerSide.MainClass.RequestShipmentWheels(Player player, int businessId) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 515
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[39;49m[32m01:35 [5]MeHow: siema
+[39;49m[37m[39;49m[32m01:35 [5]MeHow: restart był ale polecam jednak zresetować gre
+[39;49m[37m[39;49m[32m01:35 [5]MeHow: bo wgrałem pare nowych autek
+[39;49m[37m[39;49m[32m01:36 [5]MeHow: i nie bedziecie ich widzieć :(
+[39;49m[37m[39;49m[32m01:36 [4]zabraliminazwe: Ok
+[39;49m[37m[N] 87.205.35.19:65328 has been disconnected.
+[N] Incoming connection from 87.205.35.19
+[N] 81.15.239.49:50172 has been disconnected.
+[N] Incoming connection from 83.29.0.44
+[N] 94.254.160.4:42493 has been disconnected.
+[N] Incoming connection from 94.254.160.4
+83.29.0.44 Drymaniusz
+[N] 87.205.35.19:65328 has been disconnected.
+[N] 84.15.188.220:49156 has been disconnected.
+[N] 94.254.160.4:42493 has been disconnected.
+[N] Incoming connection from 81.15.239.49
+81.15.239.49 zabraliminazwe
+[N] Incoming connection from 94.254.160.4
+94.254.160.4 0DEYMAN0
+[N] Incoming connection from 84.15.188.220
+84.15.188.220 edgar12345cake
+[N] 185.186.38.1:54331 has been disconnected.
+[N] Incoming connection from 87.205.35.19
+87.205.35.19 Pyzorek
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[N] 83.29.0.44:64806 has been disconnected.
+[N] Incoming connection from 83.29.0.44
+83.29.0.44 Drymaniusz
+[39;49m[32m01:47 [6]MeHow: edit
+[39;49m[37m[39;49m[32m01:47 [6]MeHow: zmienisz mi felgi?
+[39;49m[37m[39;49m[32m01:47 [3]edi1: tak
+[39;49m[37m[39;49m[32m01:48 [6]MeHow: a resetowales gre?
+[39;49m[37m[39;49m[32m01:48 [3]edi1: tak
+[39;49m[37m[39;49m[32m01:49 [6]MeHow: git jedziemy
+[39;49m[37m[N] 81.15.239.49:53532 has been disconnected.
+[N] 87.205.35.19:57915 has been disconnected.
+[N] Incoming connection from 87.205.35.19
+Object reference not set to an instance of an object.
+Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at void ServerSide.MainClass.RequestShipmentWheels(Player player, int businessId) in F:/RAGEMP server/server-files/dotnet/resources/Server/MainClass.cs:line 515
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+   at void GTANetworkInternals.RemoteEventHandler.Parse(Player sender, ulong eventNameHash, params object[] arguments)
+87.205.35.19 Pyzorek
+[N] 84.15.188.220:65508 has been disconnected.
+[N] Incoming connection from 84.15.188.220
+84.15.188.220 edgar12345cake
+[N] Incoming connection from 87.123.195.170
+87.123.195.170 SHOGUN_77
+[39;49m[32m02:03 [5]SHOGUN77: Zatrzymaj sie tu LSPD! Zjedz na pobocze, zaciagnij reczny i zgas silnik!
+[39;49m[37m[39;49m[32m02:03 [0]Pyzorek: ok
+[39;49m[37m[39;49m[32m02:03 [5]SHOGUN77: XD
+[39;49m[37m[N] 109.231.63.235:54514 has been disconnected.
+[39;49m[32m02:07 [6]MeHow: bedzie mandat za brak pasow
+[39;49m[37m[39;49m[32m02:07 [0]Pyzorek: xD
+[39;49m[37m[N] 185.186.38.1:54853 has been disconnected.
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[39;49m[32m02:18 [0]Pyzorek: @2 mozesz na chwile tp bo chce cos sprawdzic?
+[39;49m[37m[N] 185.186.38.1:54853 has been disconnected.
+[N] Incoming connection from 185.186.38.1
+185.186.38.1 maciejooosek
+[39;49m[32m02:21 [0]Pyzorek: prosze mnie tam wrocic
+[39;49m[37m[39;49m[32m02:27 [2]MeHow: trzeba restart
+[39;49m[37m[39;49m[32m02:27 [0]Pyzorek: ok dawaj
+[39;49m[37m[N] 94.254.160.4:19896 has been disconnected.
+^C[33m[INFO] [0mShutting down the server...
+Shutting down..
+[32m[DONE] [0mThe server has been terminated.
+terminate called without an active exception

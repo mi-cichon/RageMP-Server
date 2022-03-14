@@ -1,0 +1,252 @@
+body{
+    font-family: 'PT Sans';
+    user-select: none;
+    background: transparent;
+}
+
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 400;
+    src: url("../fonts/sf.woff");
+  }
+
+html, body{
+    overflow: hidden;
+    margin: 0;
+    height: 100%;
+}
+
+.panel_tablet_body{
+    position: absolute;
+    left: -50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 75vh;
+    width: 100vh;
+    padding: 4vh 10vh;
+    border-radius: 5vh;
+    border: 0.2vh solid silver;
+    background: linear-gradient(#000000, #090909);
+    transition: left 1s;
+}
+.panel_tablet_camera{
+    position: absolute;
+    right: 2.3%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.5vh;
+    height: 1.5vh;
+    border-radius: 50%;
+    background-color: rgb(19, 19, 19);
+    border: 2px solid rgb(51, 51, 51);
+}
+
+.panel_tablet_camera::after{
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 0.8vh;
+    height: 0.8vh;
+    border-radius: 50%;
+    background: radial-gradient(1px 1px, #3c2b90 25%, rgba(60, 43, 144, 0.75) 50%), radial-gradient(1px 1px, rgba(43, 93, 144, 0.75) 25%, rgba(43, 93, 144, 0) 50%), radial-gradient(1px 1px, rgba(43, 93, 144, 0.75) 25%, rgba(43, 93, 144, 0) 50%), radial-gradient(#07131b 40%, #1b3d70 60%);
+    content: "";
+}
+
+.panel_tablet_button{
+    position: absolute;
+    left: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4.5vh;
+    height: 4.5vh;
+    border-radius: 50%;
+    background-color: rgb(14, 14, 14);
+    border: 2px solid rgb(109, 109, 109);
+}
+.panel_tablet_button::after{
+    display: block;
+    position: absolute;
+    left: 53%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    width: 1.8vh;
+    height: 1.8vh;
+    content: "";
+    background: url('../img/icons/house.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.panel_tablet_button:hover{
+    background-color: black;
+}
+
+.panel_tablet_button:hover::after{
+    background-image: url('../img/icons/house_white.png');
+}
+
+.panel_tablet_top{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 0.4vh 0.8vh;
+    font-size: 1.3vh;
+    text-shadow: black 1px 1px;
+    font-family: 'San Francisco';
+    box-sizing: border-box;
+}
+.panel_tablet_top_right{
+    display: flex;
+    justify-content: space-around;
+    width: 5vh;
+    align-items: center;
+}
+.panel_tablet_battery{
+    width: 2vh;
+    height: 1vh;
+    background-image: url('../img/icons/battery.png');
+    background-size: cover;
+    background-position: center;
+}
+.panel_tablet_wifi{
+    width: 1.3vh;
+    height: 1.3vh;
+    background-image: url('../img/icons/wifi.png');
+    background-size: cover;
+    background-position: center;
+}
+.panel_tablet_top p{
+    margin: 0;
+}
+
+.panel_container{
+    /* background: radial-gradient(circle, rgba(55,55,55,1) 0%, rgba(29,30,34,1) 100%); */
+    background: rgba(32, 32, 32, 1) url('../img/background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: 100%;
+    border: 1px solid #202020;
+    position: relative;
+    overflow: hidden;
+}
+
+.panel_content{
+    width: 100%;
+    height: 100%;
+    padding: 3vh;
+    box-sizing: border-box;
+}
+
+.panel_controls{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    box-sizing: border-box;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.panel_control{
+    padding: 1vh;
+    width: 5vh;
+    height: 5vh;
+    background: radial-gradient(circle, rgba(55,55,55,0.95) 0%, rgba(29,30,34,0.95) 100%);
+    border-radius: 2vh;
+    position: relative;
+}
+
+.panel_control:hover{
+    box-shadow: 0 0 1vh 0 white;
+}
+
+.panel_control_header{
+    position: absolute;
+    top: 110%;
+    color: white;
+    font-size: 1.4vh;
+    font-weight: 400;
+    text-shadow: black 1px 1px;
+    font-family: 'San Francisco';
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+}
+
+.panel_control_text{
+    color: white;
+    font-size: 0.9vh;
+    margin-top: 0.3vh;
+}
+
+.panel_control_sprite{
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
+.panel_panel{
+    width: 100%;
+    height: 65vh;
+    padding: 2vh;
+    box-sizing: border-box;
+    display: none;
+    overflow-y: auto;
+}
+
+.panel_panel_show{
+    display: block;
+}
+
+kbd{
+    background-color: white;
+    border: 0.2vh solid gray;
+    color: black;
+    padding-left: 0.2vh;
+    padding-right: 0.2vh;
+    font-weight: bold;
+    font-size: 1.1vh;
+  }
+
+
+
+::-webkit-scrollbar {
+    width: 1.2vh;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #313131; 
+    border: 4px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 9999px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #1e3d36; 
+    border: 4px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 9999px;
+  }

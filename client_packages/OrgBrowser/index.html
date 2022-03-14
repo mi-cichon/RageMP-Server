@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div class="interface-main-body">
+            <div class="nameCol">Organizacje</div>
+            <div class="interface-body">
+                <div class="interface-tabs">
+                    <div class="interface-tab listTab">Lista organizacji</div>
+                    <div class="interface-tab createTab">Stwórz organizację</div>
+                </div>
+                <div class="scroll">
+                    <div class="interface-text-body list">
+                        <table class="interface-table list-table">
+                            <colgroup><col width="10%"><col width="45%"><col width="25%"><col width="30%"></colgroup>
+                            <tr>
+                                <th>Tag</th>
+                                <th>Nazwa</th>
+                                <th>Członkowie</th>
+                                <th></th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+           
+                <div class="interface-text-body create">
+                    <div class="createForm">
+                        <p>Pamiętaj że nazwa i tag organizacji nie mogą zawierać obraźliwych słów lub wulgaryzmów! Utworzenie takiej ogranizacji będzie skutkowało banem.</p>
+                        <table class="interface-table create-table">
+                            <colgroup><col width="50%"><col width="50%"></colgroup>
+                            <tr>
+                                <td>Nazwa</td>
+                                <td><input type="text" class="text name"></td>
+                            </tr>
+                            <tr>
+                                <td>Tag</td>
+                                <td><input type="text" class="text tag"></td>
+                            </tr>
+                        </table>
+                        <div class="buttons-create">
+                            <p class="error"></p>
+                            <input type="button" value="Stwórz ($35 000)" class="button_select createButton">
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="buttons">
+                    <input type="button" class="button_cancel" value="Zamknij">
+                </div>
+            </div> 
+        </div>
+        <script src="orgManager.js" type="text/javascript"></script>
+    </body>
+</html>

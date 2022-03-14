@@ -1,0 +1,13 @@
+{
+	"maxplayers" : 50,
+	"name" : "BasicRPG.pl | W trakcie tworzenia | Wiecej na https://discord.gg/2vrMdXsdRW [PL]", 
+	"gamemode" : "rpg", 
+	"voice-chat" : true,
+	"stream-distance" : 500.0,
+	"announce" : true,
+	"csharp" : "enabled",
+	"port" : 22005,
+	"language" : "pl",
+	"api-threading-debugging" : false,
+	"url" : "discord.gg/2vrMdXsdRW"
+}
