@@ -138,8 +138,10 @@ function startMowing(){
                 if(lawnMower.getSpeed() > 12/3.6){
                     grassAmount += 0.005;
                 }
-                if(grassAmount >= 1){
+                if(grassAmount >= 0.8 && !(containerCol != null && mp.colshapes.exists(containerCol))){
                     createContainer();
+                }
+                if(grassAmount >= 1){
                     clearInterval(mowingInterval);
                     mowingInterval = null;
                 }
@@ -198,3 +200,17 @@ function getClosestVehicle()
     });
     return closestVehicle;
 }
+
+mp.events.add("saveData_lawnmowing_load", (data) => {
+    let saveData = JSON.parse(data);
+    grassAmount = saveData[2];
+    mp.events.callRemote("saveData_giveJobVeh", "lawnmowing", JSON.parse(saveData[1]), "");
+});
+
+mp.events.add("saveData_lawnmowing_save", () => {
+    
+    if(mp.vehicles.exists(lawnMower)){
+        let saveData = ["lawnmowing", JSON.stringify(lawnMower.position), grassAmount];
+        mp.events.callRemote("saveData_saveJobData", JSON.stringify(saveData));
+    }
+});

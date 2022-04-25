@@ -17,6 +17,7 @@ mp.events.add('render', () => {
             let streetName = street.lastStreet == street.crossingRoad ? street.crossingRoad : street.streetName;
             lastStreet = streetName;
             let rpm = player.vehicle.getIsEngineRunning() ? player.vehicle.rpm * 0.85 : 0;
+            
             speedometerBrowser.execute(`setVars(${player.vehicle.getSpeed() * 3.6}, ${rpm}, ${petrol}, "${mp.game.ui.getStreetNameFromHashKey(streetName)}", ${player.vehicle.hasVariable("veh_trip") ? player.vehicle.getVariable("veh_trip") : -1});`);
         }
     }
@@ -27,7 +28,7 @@ mp.events.add("settings_setSpeedometerScale", scale => {
         speedometerBrowser.execute(`setScale(${scale})`);
     }
 });
- 
+
 mp.events.add("playerEnterVehicle", (vehicle, seat) => {
     if(player.hasVariable("settings")){
         if(speedometerBrowser != null && mp.browsers.exists(speedometerBrowser)){
@@ -38,8 +39,9 @@ mp.events.add("playerEnterVehicle", (vehicle, seat) => {
         if(vehicle.hasVariable("speed")){
             maxSpeed = round(vehicle.getVariable("speed"), 20, 0);
         }
+        let speedometer = player.vehicle.hasVariable("speedometer") ? player.vehicle.getVariable("speedometer") : "#0c9";
         speedometerBrowser = mp.browsers.new('package://Speedometers/Speedometer0/index.html');
-        speedometerBrowser.execute(`instantiate(${maxSpeed}, ${vehicle.hasVariable("petrol")}, ${player.getVariable("settings_SpeedometerSize")}, '${player.vehicle.hasVariable("name") ? player.vehicle.getVariable("name") : mp.game.vehicle.getDisplayNameFromVehicleModel(player.vehicle.model)}', ${player.vehicle.hasVariable('veh_trip')})`);
+        speedometerBrowser.execute(`instantiate(${maxSpeed}, ${vehicle.hasVariable("petrol")}, ${player.getVariable("settings_SpeedometerSize")}, '${player.vehicle.hasVariable("name") ? player.vehicle.getVariable("name") : mp.game.vehicle.getDisplayNameFromVehicleModel(player.vehicle.model)}', ${player.vehicle.hasVariable('veh_trip')}, "${speedometer}")`);
         alive = true;
     }
  });
@@ -78,3 +80,10 @@ mp.events.add("console", (text) => {
 function round(number, increment, offset) {
     return Math.ceil((number - offset) / increment ) * increment + offset;
 }
+
+
+mp.events.add("speedometer_setColor", color => {
+    if(speedometerBrowser!=null && mp.browsers.exists(speedometerBrowser)){
+        speedometerBrowser.execute(`setColor("${color}")`);
+    }
+});

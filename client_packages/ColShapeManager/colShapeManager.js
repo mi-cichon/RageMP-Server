@@ -30,6 +30,9 @@ mp.events.add('render', () => {
                 case "paintshop":
                     mp.events.call("openPaintShopBrowser", player.vehicle);
                     break;
+                case "speedoColor":
+                    mp.events.call("speedoColor_openBrowser", player.vehicle);
+                    break;
                 case "teleport":
                     player.position = colShape.getVariable("position");
                     player.setHeading(colShape.getVariable("heading"));
@@ -501,6 +504,13 @@ mp.events.add('playerEnterColshape', (shape) => {
                 if(player.vehicle != null && player.vehicle.hasVariable("owner") && player.vehicle.getVariable("owner").toString() === player.getVariable("socialclub")){
                     colShapeType = type;
                     mp.events.call("showNotification", "Naciśnij E aby otworzyć lakiernię!");
+                    colShape = shape;
+                }
+                break;
+            case "speedoColor":
+                if(player.vehicle != null && player.vehicle.hasVariable("owner") && player.vehicle.getVariable("owner").toString() === player.getVariable("socialclub")){
+                    colShapeType = type;
+                    mp.events.call("showNotification", "Naciśnij E aby zmienić kolor licznika!");
                     colShape = shape;
                 }
                 break;

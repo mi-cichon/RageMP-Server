@@ -184,7 +184,7 @@ let itemsJson = `{
             "name": "Krąp",
             "width": "1",
             "height": "1",
-            "url": "img/fisherman/slonowodne/krąp.png"
+            "url": "img/fisherman/slonowodne/krap.png"
         },
         "1013":{
             "name": "Dorsz",

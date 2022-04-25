@@ -1,16 +1,42 @@
 let playersPower = 0;
 
+let useEmoji = true;
+
+const emojis = [
+    {id: 0, name: ":angry:", code: `<div class="emoji" style="background-image: url(img/emojis/angry.png)"></div>`},
+    {id: 1, name: ":o", code: `<div class="emoji" style="background-image: url(img/emojis/astonished.png)"></div>`},
+    {id: 2, name: ":boom:", code: `<div class="emoji" style="background-image: url(img/emojis/boom.png)"></div>`},
+    {id: 3, name: ":cowboy:", code: `<div class="emoji" style="background-image: url(img/emojis/cowboy.png)"></div>`},
+    {id: 4, name: ":devil:", code: `<div class="emoji" style="background-image: url(img/emojis/devil.png)"></div>`},
+    {id: 5, name: ":/", code: `<div class="emoji" style="background-image: url(img/emojis/diagonal.png)"></div>`},
+    {id: 6, name: ":|", code: `<div class="emoji" style="background-image: url(img/emojis/expressionless.png)"></div>`},
+    {id: 7, name: ":D", code: `<div class="emoji" style="background-image: url(img/emojis/laugh.png)"></div>`},
+    {id: 8, name: ":rofl:", code: `<div class="emoji" style="background-image: url(img/emojis/rofl.png)"></div>`},
+    {id: 9, name: ":sad:", code: `<div class="emoji" style="background-image: url(img/emojis/sad.png)"></div>`},
+    {id: 10, name: ":smile:", code: `<div class="emoji" style="background-image: url(img/emojis/smile.png)"></div>`},
+
+    {id: 11, name: ":lmao:", code: `<div class="emoji" style="background-image: url(img/emojis/lmao.png)"></div>`},
+    {id: 12, name: ":yawn:", code: `<div class="emoji" style="background-image: url(img/emojis/yawn.png)"></div>`},
+    {id: 13, name: ":*", code: `<div class="emoji" style="background-image: url(img/emojis/kiss.png)"></div>`},
+    {id: 14, name: ":liar:", code: `<div class="emoji" style="background-image: url(img/emojis/liar.png)"></div>`},
+    {id: 15, name: ":x", code: `<div class="emoji" style="background-image: url(img/emojis/x.png)"></div>`},
+    {id: 16, name: ":puke:", code: `<div class="emoji" style="background-image: url(img/emojis/puke.png)"></div>`},
+    {id: 17, name: ":shush:", code: `<div class="emoji" style="background-image: url(img/emojis/shush.png)"></div>`},
+    {id: 18, name: ":zzz:", code: `<div class="emoji" style="background-image: url(img/emojis/zzz.png)"></div>`},
+    {id: 19, name: "<3", code: `<div class="emoji" style="background-image: url(img/emojis/heart.png)"></div>`}
+];
+
 const userCommands = {
     "g": "g {wiadomość}",
     "o": "o {wiadomość}",
-    "pm": "pm {nick/id} {wiadomość}",
+    // "pm": "pm {nick/id} {wiadomość}",
     "report": "report {nick/id} {powód}",
     "bonus": "bonus",
     "przelew" : "przelew {nick/id}",
     "kierowcy": "kierowcy",
     "reconnect": "reconnect",
-    "pmoff": "pmoff {powód}",
-    "pmon": "pmon",
+    // "pmoff": "pmoff {powód}",
+    // "pmon": "pmon",
     "time": "time"
 };
 
@@ -79,11 +105,16 @@ let playerid = 0;
 let hidden = true;
 let messages = new Array();
 let currentIndex = -1;
-function sendMessage(id, username, text, type, usertype = "", time, social){
+function sendMessage(id, username, txt, type, usertype = "", time, social){
+    let text = stripHtml(txt);
+    text = checkForEmojis(text);
+    if(text.length == 0){
+        return;
+    }
     let scroll = $(".chat_scroll").scrollTop();
     let height = $(".chat_scroll").height();
     let chatHeight = $(".chat_body").height();
-    let avatarString = `http://51.38.135.199/avatars/${social}/avatar.png`;
+    let avatarString = `http://51.38.128.119/avatars/${social}/avatar.png`;
     let moveDown = scroll + height > chatHeight ? true : false;
     var color = "";
     switch(usertype)
@@ -147,6 +178,28 @@ function sendMessage(id, username, text, type, usertype = "", time, social){
     }
 }
 
+function useEmojis(state){
+    useEmoji = state;
+}
+
+function checkForEmojis(txt){
+    let text = txt;
+    if(useEmoji){
+        emojis.forEach(emoji => {
+            text = replaceAll(text, emoji.name, emoji.code);
+        });
+    }
+    
+    return text;
+}
+
+function replaceAll(text, from, to){
+    while(text.includes(from)){
+        text = text.replace(from, to);
+    }
+    return text;
+}
+
 function showLocalMessage(id, username, text, color, time, avatar){
     let bcolor = "transparent";
     let tcolor = "#fff";
@@ -154,8 +207,6 @@ function showLocalMessage(id, username, text, color, time, avatar){
     if(text.includes("@" + playerid.toString() + " ") || text.endsWith("@" + playerid.toString())){
         mentioned = true;
     }
-    
-    text = stripHtml(text);
     $(".messageBefore").before(`
     <div class="chat_message">
         <div class="chat_avatarBody" style="background-image: url(${avatar}); border: 1px solid #${color};"></div>
@@ -183,7 +234,6 @@ function showGlobalMessage(id, username, text, color, time, avatar){
     if(text.includes("@" + playerid.toString() + " ") || text.endsWith("@" + playerid.toString())){
         mentioned = true;
     }
-    text = stripHtml(text);
     $(".messageBefore").before(`
     <div class="chat_message">
         <div class="chat_avatarBody" style="background-image: url(${avatar}); border: 1px solid #${color};"></div>
@@ -210,7 +260,6 @@ function showAdminMessage(id, username, text, color, time, avatar){
     if(text.includes("@" + playerid.toString() + " ") || text.endsWith("@" + playerid.toString())){
         mentioned = true;
     }
-    text = stripHtml(text);
     $(".messageBefore").before(`
     <div class="chat_message">
         <div class="chat_avatarBody" style="background-image: url(${avatar}); border: 1px solid #${color};"></div>
@@ -237,7 +286,6 @@ function showOrgMessage(id, username, text, color, time, avatar){
     if(text.includes("@" + playerid.toString() + " ") || text.endsWith("@" + playerid.toString())){
         mentioned = true;
     }
-    text = stripHtml(text);
     $(".messageBefore").before(`
     <div class="chat_message">
         <div class="chat_avatarBody" style="background-image: url(${avatar}); border: 1px solid #${color};"></div>
@@ -258,7 +306,6 @@ function showOrgMessage(id, username, text, color, time, avatar){
     `);
 }
 function showPrivateMessage(id, username, text, color, time, avatar,){
-    text = stripHtml(text);
     username = JSON.parse(username);
     let pm;
     switch(username[1]){
@@ -289,7 +336,6 @@ function showPrivateMessage(id, username, text, color, time, avatar,){
     `);
 }
 function showInfoMessage(text, time, avatar){
-    text = stripHtml(text);
     $(".messageBefore").before(`
     <div class="chat_message">
         <div class="chat_avatarBody chat_infoBody" style="background-image: url(${avatar})"></div>
@@ -311,7 +357,6 @@ function showInfoMessage(text, time, avatar){
 }
 function showPenalty(text, time, avatar)
 {
-    text = stripHtml(text);
     $(".messageBefore").before(`
     <div class="chat_message">
         <div class="chat_avatarBody chat_penaltyBody" style="background-image: url(${avatar})"></div>
@@ -333,7 +378,6 @@ function showPenalty(text, time, avatar)
 }
 
 function showConsoleMessage(text, time, avatar){
-    text = stripHtml(text);
     $(".messageBefore").before(`
     <div class="chat_message">
         <div class="chat_avatarBody chat_penaltyBody" style="background-image: url(${avatar})"></div>
@@ -402,8 +446,10 @@ document.getElementById("myinput").addEventListener("keyup", function(event){
     {
         let text = document.getElementById("myinput").value;
         document.getElementById("myinput").value = "";
-        if(text!="")
+        if(replaceAll(text, ' ', '') != ""){
             mp.trigger("messageSent", text);
+        }
+
         hideChatInput();
         mp.trigger("setChatEnabled", false);
         messages.unshift(text);
@@ -411,27 +457,30 @@ document.getElementById("myinput").addEventListener("keyup", function(event){
 }, true);
  
 function showChatInput(){
-    let input = document.getElementById("myinput");
-    input.style = "display: block";
-    input.focus();
+    
+    let input = $(".inputBody");
+    input.css("display", "block");
+    $(".inputBlock").trigger("focus");
+    $(".inputBlock").val("");
     hidden = false;
     currentIndex = -1;
+    $(".emojisList_list").css("display", "none");
 }   
 
 function showChatInputWithSlash(){
-    let input = document.getElementById("myinput");
-    input.style = "display: block";
-    input.focus();
+    let input = $(".inputBody");
+    input.css("display", "block");
+    $(".inputBlock").trigger("focus");
     hidden = false;
     currentIndex = -1;
-    input.value = "/";
+    $(".inputBlock").val("/");
+    $(".emojisList_list").css("display", "none");
 }   
 
 function hideChatInput(){
-    let input = document.getElementById("myinput");
-    input.value = "";
+    let input = $(".inputBody");
+    input.css("display", "none");
     document.activeElement.blur();
-    input.style = "display: none";
     hidden = true;
     $(".commandsBlock").empty();
     mp.trigger("setTexting", false);
@@ -559,3 +608,23 @@ var rgbToHex = function (rgb) {
       }
       return true;
   }
+
+  $(".emojisList_button").on("click", () => {
+    $(".emojisList_list").css("display", $(".emojisList_list").css("display") == "none" ? "grid" : "none");
+    let input = $(".inputBlock");
+    input.trigger("focus");
+})
+
+  $(window).on("load", () => {
+    emojis.forEach(emoji => {
+        let element = $(emoji.code);
+        element.attr("id", emoji.id);
+        $(".emojisList_list").append(element);
+    });
+    $(".emojisList_list > .emoji").on("click", function(){
+        let id = $(this).attr("id");
+        $(".inputBlock").val($(".inputBlock").val() + emojis.find(emoji => emoji.id == parseInt(id)).name);
+        let input = $(".inputBlock");
+        input.trigger("focus");
+    });
+  })

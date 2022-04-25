@@ -3,14 +3,14 @@ let changingPanel = false;
 
 $(".panel_control").on('click', function (){
     if(!changingPanel){
-        let index = $('.panel_controls .panel_control').index($(this));
+        let index = $(this).attr("index");
         let currentPanel = $('.panel_panel_show');
         let selectedPanel = $('.panel_content').find(`.panel_panel:eq(${index})`);
-        $(".panel_controls").css("display", "none");
+        $(".panel_controls_main").css("display", "none");
         currentPanel.removeClass("panel_panel_show");
         selectedPanel.addClass("panel_panel_show");
-        if(selectedPanel.hasClass("tetris")){
-            tetris_run(document.querySelector('.tetris_game'));
+        if(index == "6"){
+            requestConversationsData();
         }
     }
 });
@@ -18,7 +18,7 @@ $(".panel_control").on('click', function (){
 $(".panel_tablet_button").on("click", function(){
     if(!listenToKey){
         $('*').removeClass("panel_panel_show");
-        $(".panel_controls").css("display", "flex");
+        $(".panel_controls_main").css("display", "block");
     }
 });
 

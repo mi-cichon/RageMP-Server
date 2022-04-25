@@ -62,13 +62,12 @@ mp.keys.bind(0x42, true, function (){
 
 //TOGGLE CURSOR
 mp.keys.bind(0xC0, true, function (){
-    if(lplayer.getVariable("power") >= 3)
-        mp.gui.cursor.show(!mp.gui.cursor.visible, !mp.gui.cursor.visible);
+    mp.gui.cursor.show(!mp.gui.cursor.visible, !mp.gui.cursor.visible);
 })
 
 //CHAT INPUT
 mp.keys.bind(0x54, true, function (){
-    if(!chatEnabled){
+    if(!chatEnabled && !lplayer.getVariable("gui")){
         chatEnabled = true;
         mp.events.callRemote("setPlayerTexting", true);
         mp.events.call("showChatInput");

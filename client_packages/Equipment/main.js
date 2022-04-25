@@ -39,6 +39,9 @@ mp.events.add("dropItem", (typeId, name) => {
 mp.events.add("changeEquipmentSize", size => {
     if(equipmentBrowser){
         equipmentBrowser.execute(`equipmentGrid.changeSize(${size})`);
+        setTimeout(()=>{
+            equipmentBrowser.execute(`refreshEquipment('${player.getVariable("equipment")}')`);
+        }, 1000)
     }
 });
 

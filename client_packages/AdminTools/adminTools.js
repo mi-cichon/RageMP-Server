@@ -150,5 +150,4 @@ function getDistance(vec1, vec2){
 
 mp.events.add("test_createObject", model => {
     mp.objects.new(model, player.position);
-    mp.console.logInfo("object created");
 });

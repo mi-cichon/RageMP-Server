@@ -2,6 +2,7 @@ let player = mp.players.local;
 let currentOrder = null;
 let orderState = null;
 let areaBlips = [];
+let gardenerVeh = null;
 mp.events.addDataHandler("job", (entity, value, oldvalue) => {
     if(value == "gardener" && entity == player){
         areaBlips.push(mp.blips.new(535, new mp.Vector3(2605.381, 4875.1772, 35.280144), {
@@ -53,6 +54,7 @@ mp.events.addDataHandler("job", (entity, value, oldvalue) => {
                 blip.destroy();
             }
         });
+        gardenerVeh = null;
         areaBlips = [];
     }
 });
@@ -81,5 +83,32 @@ mp.events.add("gardener_updateOrder", order => {
 mp.events.add("gardener_sellPlants", () => {
     if(currentOrder && orderState){
         mp.events.callRemote("gardener_sellPlants", JSON.stringify(currentOrder), JSON.stringify(orderState));
+    }
+});
+
+
+mp.events.add("saveData_gardener_load", (data) => {
+    let saveData = JSON.parse(data);
+    currentOrder = JSON.parse(saveData[1]);
+    orderState = JSON.parse(saveData[1]);
+    mp.events.call("openGardenerHUDBrowser", saveData[1]);
+    mp.events.callRemote("saveData_giveJobVeh", "gardener", JSON.parse(saveData[2]), saveData[3]);
+});
+
+mp.events.add("saveData_gardener_save", () => {
+    if(mp.vehicles.exists(gardenerVeh) && currentOrder != null){
+        let saveData = ["gardener", JSON.stringify(currentOrder), JSON.stringify(gardenerVeh.position), gardenerVeh.getVariable("trunk")];
+        mp.events.callRemote("saveData_saveJobData", JSON.stringify(saveData));
+    }
+});
+
+mp.events.addDataHandler("jobveh", (entity, value, oldvalue) => {
+    if(mp.players.local.getVariable("job") == "gardener"){
+        if(entity == mp.players.local && value != -1111){
+            let v = mp.vehicles.atRemoteId(value);
+            if(v != null && mp.vehicles.exists(v) && v.hasVariable("jobtype") && v.getVariable("jobtype") == entity.getVariable("job")){
+                gardenerVeh = v;
+            }
+        }
     }
 });

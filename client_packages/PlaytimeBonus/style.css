@@ -1,0 +1,136 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    user-select: none;
+    overflow: hidden;
+    font-family: 'PT Sans', sans-serif;
+    background-color: transparent;
+}
+
+.interface-main-body{
+    position: absolute;
+    width: 50vh;
+    height: auto;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    background: radial-gradient(circle, rgba(55,55,55,0.95) 0%, rgba(29,30,34,0.95) 100%);
+}
+
+.roller_scrollbody{
+  width: 90%;
+  height: 10vh;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.roller_img{
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: 40%;
+}
+
+.roller_body{
+  width: auto;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  display: flex;
+  flex-direction: row;
+  }
+
+.roller_item{
+  width: 9vh;
+  height: 9vh;
+  background-color: #0c9;
+  margin: 0.5vh;
+  line-height: 9vh;
+  text-align: center;
+  font-size: 1vh;
+  border-radius: 0.6vh;
+  box-shadow: inset 0 0 2vh rgb(184, 184, 184);
+}
+
+.nameCol{
+  background-color: rgb(33, 34, 37);
+  width: 100%;
+  text-align: center;
+  padding: 0.9vh 0;
+  font-size: 1.9vh;
+  font-weight: 600;
+  color: white;
+  border-bottom: 1px solid #0c9;
+}
+
+.interface-body{
+    height: 18vh;
+    color: white;
+    overflow: hidden;
+    position: relative;
+}
+
+.buttons{
+  margin-top: 1vh;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1vh;
+  box-sizing: border-box;
+}
+
+  .button_select{
+    background: linear-gradient(180deg, rgba(66, 66, 66, 0.95) 0%, rgba(29,30,34,0.95) 100%);
+    border: none;
+    color: white;
+    padding: 0.6vh;
+    border-bottom: 1px solid #00cc99;
+    font-size: 1vh;
+}
+
+.button_select:hover{
+    border-bottom: 1px solid transparent;
+    box-shadow: 0 0 1vh #0c9;
+}
+
+.button_select:focus{
+    outline: none;
+}
+
+.button_cancel{
+    background: linear-gradient(180deg, rgba(66, 66, 66, 0.95) 0%, rgba(29,30,34,0.95) 100%);
+    border: none;
+    color: white;
+    padding: 0.6vh;
+    border-bottom: 1px solid #cc0000;
+    font-size: 1vh;
+}
+
+.button_cancel:hover{
+    border-bottom: 1px solid transparent;
+    box-shadow: 0 0 1vh rgb(204, 0, 0);
+}
+
+.button_cancel:focus{
+    outline: none;
+}
+
+.roller_pointer{
+  position: absolute;
+  color: white;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}

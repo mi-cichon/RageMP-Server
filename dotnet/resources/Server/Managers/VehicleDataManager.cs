@@ -121,7 +121,7 @@ namespace ServerSide
             vehicle.SetSharedData("damage", defaultDamage);
             vehicle.SetSharedData("dirt", 0);
             vehicle.SetSharedData("washtime", DateTime.Now.ToString());
-            vehicle.SetSharedData("speedometer", "{\"licznik\":0}");
+            vehicle.SetSharedData("speedometer", "#0c9");
             vehicle.SetSharedData("trunk", "[]");
             vehicle.SetSharedData("mechtune", "[0,0,0,0,0]");
             vehicle.SetSharedData("wheels", "[0, -1, 0]");
@@ -469,6 +469,20 @@ namespace ServerSide
             }
             dataBase.connection.Close();
             return vehString;
+        }
+
+
+        public void GiveSpecialVehicleToPlayer(Player player, string vehType)
+        {
+            switch (vehType)
+            {
+                case "bonus":
+                    DBConnection dataBase = new DBConnection();
+                    dataBase.command.CommandText = $"INSERT INTO vehicles (owner, model, name, color1, color2, spawned, lastpos, lastrot, damage, used, tune, petrol, speedometer, dirt, washtime, trunk, mechtune, wheels, drivers, trip) VALUES ('{player.SocialClubId}', '3025077634', 'Bonusowy Blazer', '[0,0,0,0]', '[0,0,0,0]', 'False', '[119.26427,-1069.8783,28.48527]', '[-0.006499935,0.11400143,3.0413654]', '{defaultDamage}', '{DateTime.Now.ToString()}', '{defaultTune}', '10', '{"licznik":0}', '{0}', '{DateTime.Now.ToString()}', '[]', '[0,0,0,0,0]', '[0, -1, 0]', '[]', 0);";
+                    dataBase.command.ExecuteNonQuery();
+                    dataBase.connection.Close();
+                    break;
+            }
         }
 
         public bool IsVehicleDamaged(Vehicle vehicle)

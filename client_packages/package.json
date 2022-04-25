@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/ragemp-c": "https://github.com/CocaColaBear/types-ragemp-c/tarball/master"
+    "@types/ragemp-c": "github:CocaColaBear/types-ragemp-c#v2.0"
   },
   "dependencies": {
     "bootstrap": "^5.0.0-beta2",

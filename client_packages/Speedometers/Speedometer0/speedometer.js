@@ -3,7 +3,7 @@ const defaultScale = 1.5;
 let maxSpeed = 0;
 ;
 let body = $(".speedometer_Body");
-function instantiate(maxS, petrol, scale, carName, trip){
+function instantiate(maxS, petrol, scale, carName, trip, color){
     if(trip){
         $(".speedometer_Trip").css("display", "flex");
     }
@@ -16,6 +16,18 @@ function instantiate(maxS, petrol, scale, carName, trip){
     maxSpeed = maxS;
     createLines(maxS);
     $(".speedometer_Name").text(carName);
+
+    //color
+    instantiateRPM(color);
+
+    $(".speedometer_Pointer").css("border", `1px solid ${color}`);
+    $(".speedometer_Pointer").css("box-shadow", `inset 0 0 0 gold, 0 0 0.4em 1px ${color}`);
+
+    $(".speedometer_Needle").css("background-color", `${color}`);
+    $(".speedometer_Needle").css("box-shadow", `inset 0 0 0 gold, 0 0 20px 1px ${color}`);
+
+    $(".line").css("box-shadow", `inset 0 0 0 gold, 0 0 1em 1px ${color}`);
+    $(".line").css("background-color", `${color}`);
 }
 
 function setVars(speed, rpm, petrol, street, trip){
@@ -32,6 +44,20 @@ function setVars(speed, rpm, petrol, street, trip){
         $(".speedometer_PetrolAmount").text(Math.round(petrol * 100) + "%");
     }
     $(".speedometer_Street").text(street);
+}
+
+function setColor(color){
+
+    instantiateRPM(color);
+
+    $(".speedometer_Pointer").css("border", `1px solid ${color}`);
+    $(".speedometer_Pointer").css("box-shadow", `inset 0 0 0 gold, 0 0 0.4em 1px ${color}`);
+
+    $(".speedometer_Needle").css("background-color", `${color}`);
+    $(".speedometer_Needle").css("box-shadow", `inset 0 0 0 gold, 0 0 20px 1px ${color}`);
+
+    $(".line").css("box-shadow", `inset 0 0 0 gold, 0 0 1em 1px ${color}`);
+    $(".line").css("background-color", `${color}`);
 }
 
 function setScale(scale){
@@ -83,28 +109,34 @@ function createLines(maxSpeed){
     speedStep = 270/maxSpeed;
 }
 
+let rpmProgress = null;
+function instantiateRPM(color){
+    if(rpmProgress != null){
+        rpmProgress.destroy();
+    }
+        rpmProgress = new ProgressBar.SemiCircle('.speedometer_RPM', {
+        strokeWidth: 3,
+        easing: 'easeInOut',
+        duration: 10,
+        color: 'url(#gradient)',
+        trailColor: 'rgba(51,51,51,1)',
+        trailWidth: 2,
+        svgStyle: null
+      });
+      let linearGradient = `
+      <defs>
+        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="userSpaceOnUse">
+          <stop offset="50%" stop-color="${color}"/>
+          <stop offset="80%" stop-color="#520008"/>
+        </linearGradient>
+      </defs>
+    `
+    rpmProgress.svg.insertAdjacentHTML('afterBegin', linearGradient);
+}
 
 
-  let rpmProgress = new ProgressBar.SemiCircle('.speedometer_RPM', {
-    strokeWidth: 3,
-    easing: 'easeInOut',
-    duration: 10,
-    color: 'url(#gradient)',
-    trailColor: 'rgba(51,51,51,1)',
-    trailWidth: 2,
-    svgStyle: null
-  });
 
-  let linearGradient = `
-  <defs>
-    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="userSpaceOnUse">
-      <stop offset="50%" stop-color="#0c9"/>
-      <stop offset="80%" stop-color="#520008"/>
-    </linearGradient>
-  </defs>
-`
 
-rpmProgress.svg.insertAdjacentHTML('afterBegin', linearGradient);
 
 let petrolBackProgress = new ProgressBar.SemiCircle('.speedometer_PetrolBack', {
     strokeWidth: 1,

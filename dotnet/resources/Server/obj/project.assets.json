@@ -111,19 +111,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Michał\\.nuget\\packages\\": {}
+    "C:\\Users\\MeHow\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\RAGEMP server\\server-files\\dotnet\\resources\\Server\\Server.csproj",
+      "projectUniqueName": "E:\\Server\\dotnet\\resources\\Server\\Server.csproj",
       "projectName": "Server",
-      "projectPath": "F:\\RAGEMP server\\server-files\\dotnet\\resources\\Server\\Server.csproj",
-      "packagesPath": "C:\\Users\\Michał\\.nuget\\packages\\",
-      "outputPath": "F:\\RAGEMP server\\server-files\\dotnet\\resources\\Server\\obj\\",
+      "projectPath": "E:\\Server\\dotnet\\resources\\Server\\Server.csproj",
+      "packagesPath": "C:\\Users\\MeHow\\.nuget\\packages\\",
+      "outputPath": "E:\\Server\\dotnet\\resources\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Michał\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\MeHow\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -177,7 +177,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
       }
     }
   }

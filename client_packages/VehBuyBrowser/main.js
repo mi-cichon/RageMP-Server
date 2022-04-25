@@ -28,5 +28,6 @@ mp.events.add("closeVehBuyBrowser", () => {
 });
 
 mp.events.add("buyVehicleHUD", () => {
-    mp.events.callRemote("confirmVehicleBuy", vehicle);
+    if(mp.vehicles.exists(vehicle))
+        mp.events.callRemote("confirmVehicleBuy", vehicle);
 });

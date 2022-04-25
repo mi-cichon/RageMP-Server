@@ -14,7 +14,7 @@ function insertData(data, tank){
         let value = station[1];
         let index = station[0];
         $('.interface-left').append(`<p>Stacja ${numberToLetter(parseInt(index))}:</p>`);
-        $('.interface-right').append(`<p>${value} L</p>`);
+        $('.interface-right').append(`<p>${Math.floor(value)} L</p>`);
     })
     $('.interface-left').append(`<p>W pojeździe:</p>`);
     $('.interface-right').append(`<p>${tank} L</p>`);

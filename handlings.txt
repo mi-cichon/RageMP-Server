@@ -1,7 +1,0 @@
-{"name":"972671128","power":20,"maxspeed":173}
-{"name":"330661258","power":"default","maxspeed":"default"}
-{"name":"330661258","power":20,"maxspeed":195}
-{"name":"330661258","power":20,"maxspeed":195}
-{"name":"330661258","power":20,"maxspeed":167}
-{"name":"1177543287","power":32,"maxspeed":180}
-{"name":"1177543287","power":24,"maxspeed":152}

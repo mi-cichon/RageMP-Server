@@ -5,7 +5,7 @@ function insertVehicles(data){
         let name = vehicle[1];
         let model = vehicle[2];
         $('.panel_vehicles_vehicles').append(`
-            <div class="panel_vehicles_vehicle" id="veh_${id}" style="background-image: url('http://51.38.135.199/img/${model}.png')">
+            <div class="panel_vehicles_vehicle" id="veh_${id}" style="background-image: url('http://51.38.128.119/img/${model}.png')">
                 <div class="panel_vehicle_id">${id}</div>
                 <div class="panel_vehicle_name">${name}</div>
             </div>
@@ -80,6 +80,7 @@ function insertPlayerData(playersData, skillsData){
         <p><b>Ilość pojazdów: </b>${playersData[6]}</p>
         <p class="panel_skillPoints"><b>Dostępne punkty umiejętności: </b>${playersData[7]}</p>
         <p><b>Postęp znajdziek: </b>${playersData[8]}</p>
+        <p><b>Do bonusu dziennego: </b> ${playersData[14]}m</p>
     `);
 
     $('.panel_user_jobs').append(`
@@ -286,7 +287,8 @@ let settings = {
     displayNick: true,
     displayGlobal: true,
     voiceChat: false,
-    voiceKey: 88
+    voiceKey: 88,
+    useEmojis: true
 }
 
 function insertSettings(set){
@@ -304,6 +306,8 @@ function insertSettings(set){
 
     $('input[type=radio][name=voice]').filter(function(){return this.value == settings.voiceChat.toString()}).attr("checked", "checked");
 
+    $('input[type=radio][name=useEmoji]').filter(function(){return this.value == settings.useEmojis.toString()}).attr("checked", "checked");
+    
     $(".voiceKey").text(keyCodes[settings.voiceKey].toUpperCase());
 }
 
@@ -334,6 +338,11 @@ $('input[type=radio][name=global]').on("change", function() {
 
 $('input[type=radio][name=voice]').on("change", function() {
     settings.voiceChat = $(this).val() === "true";
+    saveSettings();
+});
+
+$('input[type=radio][name=useEmoji]').on("change", function() {
+    settings.useEmojis = $(this).val() === "true";
     saveSettings();
 });
 

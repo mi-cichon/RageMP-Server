@@ -20,7 +20,7 @@ function setScales(hudScale, chatScale){
     $("html").css("font-size", (defaultHudScale + (hudScale/100 -0.5)).toString() + "vh");
 }
 function setAvatar(social){
-    let avatarString = `http://51.38.135.199/avatars/${social}/avatar.png`;
+    let avatarString = `http://51.38.128.119/avatars/${social}/avatar.png`;
     $(".hud_avatar").css("background-image", `url(${avatarString})`);
 }
 function UpdateInfo(nickname, money, level = "0", exp="0/0"){
@@ -207,6 +207,11 @@ function warn(){
     audio.play();
 }
 
+function notification(){
+    var audio = new Audio('notification.mp3');
+    audio.play();
+}
+
 function playmusic(){
     let m = new Audio("pnp.mp3");
     m.play();
@@ -217,3 +222,37 @@ $("body").on("keyup", function (e) {
         terminateJob();
     }
 })
+
+function setNewMessages(amount){
+    if(amount > 0){
+        $(".hud_messages").css("display", "block");
+    }
+    else{
+        $(".hud_messages").css("display", "none");
+    }
+    
+}
+
+// setInterval(() => {
+//     let icon = $(".hud_messages");
+//     if(icon.css("display") == "block"){
+//         if(parseFloat(icon.attr("shadow")) > 1.2 && icon.attr("dir") == "up"){
+//             icon.attr("dir", "down"); 
+//         }
+//         else if(parseFloat(icon.attr("shadow")) < 0.7 && icon.attr("dir") == "down"){
+//             icon.attr("dir", "up"); 
+//         }
+//         else if(icon.attr("dir") == "down"){
+//             let val = parseFloat(icon.attr("shadow"));
+//             val -= 0.005;
+//             icon.attr("shadow", val.toString());
+//             $(".hud_messages > div").css("box-shadow", `0 0 0 red, 0 0 ${val.toFixed(2)}em 0.6em rgba(255,0,0,0.6)`);
+//         }
+//         else if(icon.attr("dir") == "up"){
+//             let val = parseFloat(icon.attr("shadow"));
+//             val += 0.005;
+//             icon.attr("shadow", val.toString());
+//             $(".hud_messages > div").css("box-shadow", `0 0 0 red, 0 0 ${val.toFixed(2)}em 0.6em rgba(255,0,0,0.6)`);
+//         }
+//     }
+// },10);

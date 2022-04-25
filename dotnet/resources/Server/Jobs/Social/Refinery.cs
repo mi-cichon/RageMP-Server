@@ -80,7 +80,7 @@ namespace ServerSide
         public Refinery(ref PlayerDataManager playerDataManager)
         {
             this.playerDataManager = playerDataManager;
-            Vector3 startPos = new Vector3(2768.5208f, 1391.1855f, 24.541874f);
+            Vector3 startPos = new Vector3(2747.9456f, 1332.1823f, 25.136633f);
             ColShape start = NAPI.ColShape.CreateCylinderColShape(startPos, 1.0f, 2.0f);
             start.SetSharedData("type", "refinery");
             new CustomMarkers().CreateJobMarker(startPos, "Rafineria");
@@ -107,6 +107,7 @@ namespace ServerSide
                     if (player.GetSharedData<string>("job") == "" && !(player.HasSharedData("lspd_duty") && player.GetSharedData<bool>("lspd_duty")))
                     {
                         player.SetSharedData("job", "refinery");
+                        player.TriggerEvent("refinery_openHUDBrowser");
                         player.TriggerEvent("startJob", "Rafineria", "PS");
                     }
                     else

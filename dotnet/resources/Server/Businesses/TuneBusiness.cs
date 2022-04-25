@@ -17,15 +17,14 @@ namespace ServerSide
         public int Id { get; set; }
         public GTANetworkAPI.Object Gate { get; set; }
         public ColShape StartShape { get; set; }
-        public ColShape WheelsShape { get; set; }
         public ColShape WheelsStation { get; set; }
-        public ColShape MechColshape { get; set; }
+        public ColShape VehColshape { get; set; }
         public ColShape MechStation { get; set; }
         public ColShape CenterShape { get; set; }
         public Blip StartBlip { get; set; }
         public CustomMarker StartMarker { get; set; }
 
-        TextLabel mechLabel, wheelsLabel;
+        TextLabel mechLabel;
 
         public ulong Owner { get; set; }
         public string OwnerName { get; set; }
@@ -33,11 +32,10 @@ namespace ServerSide
         public List<int[]> AvailableWheels { get; set; }
         public List<KeyValuePair<int[], DateTime>> WheelOrders { get; set; }
 
-        public Vehicle WheelStationVeh { get; set; }
-        public Vehicle MechStationVeh { get; set; }
+        public Vehicle StationVeh { get; set; }
 
-        Vector3 mechText, wheelsText;
-        public TuneBusiness(int id, Vector3 startPosition, Vector3 wheelsPosition, Vector3 wheelsStation, Vector3 mechPosition, Vector3 mechStation, Vector3 centerPosition)
+        Vector3 mechText;
+        public TuneBusiness(int id, Vector3 startPosition, Vector3 vehPosition, Vector3 wheelsStation, Vector3 mechStation, Vector3 centerPosition)
         {
             Id = id;
             StartPos = startPosition;
@@ -47,17 +45,14 @@ namespace ServerSide
             StartMarker = customMarkers.CreateBusinessMarker(startPosition, "Biznes: Tuner", "");
             StartBlip = NAPI.Blip.CreateBlip(490, startPosition, 0.8f, 22, name: "Biznes: Tuner (wolny)", shortRange: true);
 
-            WheelsShape = NAPI.ColShape.CreateCylinderColShape(wheelsPosition, 2.0f, 2.0f);
-            WheelsShape.SetSharedData("type", "business-wheels");
-            WheelsShape.SetSharedData("business-id", Id);
 
             WheelsStation = NAPI.ColShape.CreateCylinderColShape(wheelsStation, 1.0f, 2.0f);
             WheelsStation.SetSharedData("type", "business-wheels-station");
             WheelsStation.SetSharedData("business-id", Id);
 
-            MechColshape = NAPI.ColShape.CreateCylinderColShape(mechPosition, 2.0f, 2.0f);
-            MechColshape.SetSharedData("type", "business-mech");
-            MechColshape.SetSharedData("business-id", Id);
+            VehColshape = NAPI.ColShape.CreateCylinderColShape(vehPosition, 2.0f, 2.0f);
+            VehColshape.SetSharedData("type", "business-veh");
+            VehColshape.SetSharedData("business-id", Id);
 
             MechStation = NAPI.ColShape.CreateCylinderColShape(mechStation, 1.0f, 2.0f);
             MechStation.SetSharedData("type", "business-mech-station");
@@ -67,8 +62,7 @@ namespace ServerSide
             CenterShape.SetSharedData("type", "business-tune-center");
             CenterShape.SetSharedData("business-id", Id);
 
-            mechText = mechPosition;
-            wheelsText = wheelsPosition;
+            mechText = vehPosition;
 
             LoadBusinessFromDB();
         }
@@ -153,12 +147,12 @@ namespace ServerSide
             if (state)
             {
                 StartBlip.Color = 15;
-                CreateTextLabels();
+                CreateTextLabel();
             }
             else
             {
                 StartBlip.Color = 6;
-                DeleteTextLabels();
+                DeleteTextLabel();
             }
         }
 
@@ -184,21 +178,16 @@ namespace ServerSide
             dataBase.connection.Close();
         }
 
-        private void CreateTextLabels()
+        private void CreateTextLabel()
         {
-            mechLabel = NAPI.TextLabel.CreateTextLabel("Tuning mechaniczny", mechText, 6.0f, 2.0f, 4, new Color(255, 255, 255), dimension: 0, entitySeethrough: true);
-            wheelsLabel = NAPI.TextLabel.CreateTextLabel("Montaż felg", wheelsText, 6.0f, 2.0f, 4, new Color(255, 255, 255), dimension: 0, entitySeethrough: true);
+            mechLabel = NAPI.TextLabel.CreateTextLabel("Tuning mechaniczny i montaż felg", mechText, 6.0f, 2.0f, 4, new Color(255, 255, 255), dimension: 0, entitySeethrough: true);
         }
 
-        private void DeleteTextLabels()
+        private void DeleteTextLabel()
         {
             if(mechLabel.Exists)
             {
                 mechLabel.Delete();
-            }
-            if(wheelsLabel.Exists)
-            {
-                wheelsLabel.Delete();
             }
         }
     }

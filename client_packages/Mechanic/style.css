@@ -168,10 +168,24 @@ html, body{
     height: 16vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-around;
     align-items: center;
     overflow: hidden;
     padding-right: 0.2vh;
+}
+
+.mech_parts_all{
+    font-size: 1.2vh;
+    color: white;
+    background-color: #0c9;
+    padding: 0.2vh 1vh;
+    outline: 1px solid black;
+    margin-top: 0.5vh;
+    transition: outline 0.6s;
+}
+
+.mech_parts_all:hover{
+    outline: 3px solid black;
 }
 
 .mech_parts_header{

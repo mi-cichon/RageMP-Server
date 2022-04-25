@@ -46,3 +46,13 @@ F:\RAGEMP server\server-files\dotnet\resources\Server\obj\Debug\netcoreapp3.1\Se
 F:\RAGEMP server\server-files\dotnet\resources\Server\obj\Debug\netcoreapp3.1\Server.dll
 F:\RAGEMP server\server-files\dotnet\resources\Server\obj\Debug\netcoreapp3.1\Server.pdb
 F:\RAGEMP server\server-files\dotnet\resources\Server\obj\Debug\netcoreapp3.1\Server.csproj.AssemblyReference.cache
+E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Server.deps.json
+E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Server.dll
+E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Server.pdb
+E:\Server\dotnet\resources\Server\obj\Debug\netcoreapp3.1\Server.csproj.AssemblyReference.cache
+E:\Server\dotnet\resources\Server\obj\Debug\netcoreapp3.1\Server.GeneratedMSBuildEditorConfig.editorconfig
+E:\Server\dotnet\resources\Server\obj\Debug\netcoreapp3.1\Server.AssemblyInfoInputs.cache
+E:\Server\dotnet\resources\Server\obj\Debug\netcoreapp3.1\Server.AssemblyInfo.cs
+E:\Server\dotnet\resources\Server\obj\Debug\netcoreapp3.1\Server.csproj.CoreCompileInputs.cache
+E:\Server\dotnet\resources\Server\obj\Debug\netcoreapp3.1\Server.dll
+E:\Server\dotnet\resources\Server\obj\Debug\netcoreapp3.1\Server.pdb

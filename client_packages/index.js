@@ -2,6 +2,7 @@ require('./CarStorage/main.js');
 require('./HandleVehicles/handleVehicles.js');
 require('./ActionManager/actionManager.js');
 require('./Speedometers/main.js');
+require('./SpeedometerColor/main.js');
 require('./GuiManager/guiManager.js');
 require('./BlipsManager/blipsManager.js');
 require('./MainHUD/main.js');
@@ -119,3 +120,7 @@ require('./VehSellPanel/main.js');
 require('./JobsManager/Social/RefineryBrowser/main.js');
 
 require('./CarTrader/ConfirmCarTradeBrowser/main.js');
+
+require('./PlaytimeBonus/main.js');
+
+require('./AntiAFK/antiAFK.js');

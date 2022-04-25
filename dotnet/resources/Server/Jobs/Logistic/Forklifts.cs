@@ -4,18 +4,18 @@ using System.Linq;
 using System.Text;
 using GTANetworkAPI;
 
-namespace ServerSide.Jobs
+namespace ServerSide
 {
     public class Forklifts
     {
 
         public List<KeyValuePair<Vector3, float>> boxPositions = new List<KeyValuePair<Vector3, float>>()
         {
-            new KeyValuePair<Vector3, float>(new Vector3(-529.6666, -2372.479, 12.71449), 50f),
-            new KeyValuePair<Vector3, float>(new Vector3(-527.0472, -2374.652, 12.71449), 50f),
-            new KeyValuePair<Vector3, float>(new Vector3(-524.5622, -2376.737, 12.71451), 50f),
-            new KeyValuePair<Vector3, float>(new Vector3(-613.2684, -2461.813, 12.71449), 50f),
-            new KeyValuePair<Vector3, float>(new Vector3(-610.6491, -2463.985, 12.71449), 50f)
+            new KeyValuePair<Vector3, float>(new Vector3(-529.8499, -2372.777, 13.1299629), 50f),
+            new KeyValuePair<Vector3, float>(new Vector3(-527.1217, -2375.06616, 13.1299629), 50f),
+            new KeyValuePair<Vector3, float>(new Vector3(-524.5464, -2377.44531, 13.1299629), 50f),
+            new KeyValuePair<Vector3, float>(new Vector3(-609.570068, -2463.342, 13.1175718), 50f),
+            new KeyValuePair<Vector3, float>(new Vector3(-612.2968, -2461.13257, 13.1175718), 50f)
         };
 
         public List<Vector3> dropPositions = new List<Vector3>()

@@ -24,7 +24,108 @@ namespace ServerSide
         readonly int[] maxSkillLevels = new int[] { 4, 15, 10, 20, 18 };
         readonly int[] skillCosts = new int[] { 5, 2, 1, 1, 18 };
         readonly string avatarsPath;
-        
+        List<int> levels = new List<int>()
+            {
+                0,
+                83,
+                174,
+                276,
+                388,
+                512,
+                650,
+                801,
+                969,
+                1154,
+                1358,
+                1584,
+                1833,
+                2107,
+                2411,
+                2746,
+                3115,
+                3523,
+                3973,
+                4470,
+                5018,
+                5624,
+                6291,
+                7028,
+                7842,
+                8740,
+                9730,
+                10824,
+                12031,
+                13363,
+                14833,
+                16456,
+                18247,
+                20224,
+                22406,
+                24815,
+                27473,
+                30408,
+                33648,
+                37224,
+                41171,
+                45529,
+                50339,
+                55649,
+                61512,
+                67983,
+                75127,
+                83014,
+                91721,
+                101333,
+                111945,
+                123660,
+                136594,
+                150872,
+                166636,
+                184040,
+                203254,
+                224466,
+                247886,
+                273742,
+                302288,
+                333804,
+                368599,
+                407015,
+                449428,
+                496254,
+                547953,
+                605032,
+                668051,
+                737627,
+                814445,
+                899257,
+                992895,
+                1096278,
+                1210421,
+                1336443,
+                1475581,
+                1629200,
+                1798808,
+                1986068,
+                2192818,
+                2421087,
+                2673114,
+                2951373,
+                3258594,
+                3597792,
+                3972294,
+                4385776,
+                4842295,
+                5346332,
+                5902831,
+                6517253,
+                7195629,
+                7944614,
+                8771558,
+                9684577,
+                10692629,
+                11805606,
+                13034431
+            };
         public PlayerDataManager()
         {
             if(RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
@@ -77,6 +178,9 @@ namespace ServerSide
                     player.SetSharedData("jobveh", -1111);
                     player.SetSharedData("vehsold", reader.GetString(18));
                     player.SetSharedData("pmoff", "");
+
+                    player.SetSharedData("afk", false);
+                    player.SetSharedData("bonustime", 0);
                     if(reader.GetString(17) == "")
                     {
                         GenerateNewAuthCode(player);
@@ -141,7 +245,7 @@ namespace ServerSide
         {   
             string startingEq = "[]";
             DBConnection dataBase = new DBConnection();
-            string defaultSettings = "{\"hudSize\":50,\"chatSize\":50,\"speedometerSize\":50,\"displayNick\":true,\"displayGlobal\":true,\"voiceChat\":false,\"voiceKey\":88}";
+            string defaultSettings = "{\"hudSize\":50,\"chatSize\":50,\"speedometerSize\":50,\"displayNick\":true,\"displayGlobal\":true,\"voiceChat\":false,\"voiceKey\":88,\"useEmojis\":true}";
             string startSkills = "{\"0\":0,\"1\":0,\"2\":0,\"3\":0,\"4\":0}";
             dataBase.command.CommandText = $"INSERT INTO users (login, type, username, `character`, lastpos, money, bank, exp, registered, playtime, equipment, collectibles, skills, clothes, settings) VALUES ('{player.SocialClubId}', 'user', '{player.SocialClubName}', '', '[1894.2115, 3715.0637, 32.762226]', 0, 0, 0, '{DateTime.Now.ToString()}', 0, '{startingEq}', '{collectibleManager.GetRandomCollectibles()}', '{startSkills}', '', '{defaultSettings}')";
             dataBase.command.ExecuteNonQuery();
@@ -529,7 +633,17 @@ namespace ServerSide
 
         public void SendPlayerDataToMainHUD(Player player)
         {
-            player.TriggerEvent("updateMainHUD", player.GetSharedData<string>("username"), player.GetSharedData<Int32>("money").ToString(), player.GetSharedData<Int32>("level").ToString(), $"{player.GetSharedData<Int32>("exp")}/{player.GetSharedData<Int32>("nextlevel")}");
+            int currentLVLEXP = 0;
+
+            for(int i = 0; i<levels.Count; i++)
+            {
+                if (player.GetSharedData<Int32>("exp") < levels[i])
+                {
+                    currentLVLEXP = levels[i - 1];
+                    break;
+                }
+            }
+            player.TriggerEvent("updateMainHUD", player.GetSharedData<string>("username"), player.GetSharedData<Int32>("money").ToString(), player.GetSharedData<Int32>("level").ToString(), $"{player.GetSharedData<Int32>("exp")-currentLVLEXP}/{player.GetSharedData<Int32>("nextlevel")-currentLVLEXP}");
         }
 
         public void NotifyPlayer(Player player, string text)
@@ -1484,6 +1598,16 @@ namespace ServerSide
             }
         }
 
+        public void SetUseEmojis(Player player)
+        {
+            if(player.Exists)
+            {
+                if (player.HasSharedData("settings_UseEmojis"))
+                {
+                    player.TriggerEvent("mainHUD_useEmojis", player.GetSharedData<bool>("settings_UseEmojis"));
+                }
+            }
+        }
         public void SetPlayersConnectValues(Player player, string currentWeather)
         {
             player.TriggerEvent("freezeFor2Sec");
@@ -1609,6 +1733,7 @@ namespace ServerSide
                 player.SetSharedData("settings_DisplayNick", settings.DisplayNick);
                 player.SetSharedData("settings_DisplayGlobal", settings.DisplayGlobal);
                 player.SetSharedData("settings_VoiceKey", settings.VoiceKey);
+                player.SetSharedData("settings_UseEmojis", settings.UseEmojis);
             }
         }
 
@@ -1624,9 +1749,12 @@ namespace ServerSide
                 player.SetSharedData("settings_DisplayNick", settings.DisplayNick);
                 player.SetSharedData("settings_DisplayGlobal", settings.DisplayGlobal);
                 player.SetSharedData("settings_VoiceKey", settings.VoiceKey);
-
+                player.SetSharedData("settings_UseEmojis", settings.UseEmojis);
                 player.SetSharedData("settings", set);
+
                 SavePlayerDataToDB(player, "settings");
+
+                SetUseEmojis(player);
 
             }
         }
@@ -1710,113 +1838,13 @@ namespace ServerSide
             playerData.Add(player.GetSharedData<Int32>("waterpoints").ToString());
             playerData.Add(player.GetSharedData<Int32>("socialpoints").ToString());
             playerData.Add(player.GetSharedData<string>("authcode"));
+            playerData.Add((60-player.GetSharedData<Int32>("bonustime")).ToString());
             return JsonConvert.SerializeObject(playerData);
         }
 
         public int[] getLevelByExp(int exp)
         {
-            List<int> levels = new List<int>()
-            {
-                0,
-                83,
-                174,
-                276,
-                388,
-                512,
-                650,
-                801,
-                969,
-                1154,
-                1358,
-                1584,
-                1833,
-                2107,
-                2411,
-                2746,
-                3115,
-                3523,
-                3973,
-                4470,
-                5018,
-                5624,
-                6291,
-                7028,
-                7842,
-                8740,
-                9730,
-                10824,
-                12031,
-                13363,
-                14833,
-                16456,
-                18247,
-                20224,
-                22406,
-                24815,
-                27473,
-                30408,
-                33648,
-                37224,
-                41171,
-                45529,
-                50339,
-                55649,
-                61512,
-                67983,
-                75127,
-                83014,
-                91721,
-                101333,
-                111945,
-                123660,
-                136594,
-                150872,
-                166636,
-                184040,
-                203254,
-                224466,
-                247886,
-                273742,
-                302288,
-                333804,
-                368599,
-                407015,
-                449428,
-                496254,
-                547953,
-                605032,
-                668051,
-                737627,
-                814445,
-                899257,
-                992895,
-                1096278,
-                1210421,
-                1336443,
-                1475581,
-                1629200,
-                1798808,
-                1986068,
-                2192818,
-                2421087,
-                2673114,
-                2951373,
-                3258594,
-                3597792,
-                3972294,
-                4385776,
-                4842295,
-                5346332,
-                5902831,
-                6517253,
-                7195629,
-                7944614,
-                8771558,
-                9684577,
-                10692629,
-                11805606,
-                13034431
-            };
+            
             int lvl = 0;
             foreach (int level in levels)
             {
@@ -1928,6 +1956,157 @@ namespace ServerSide
             dataBase.command.ExecuteNonQuery();
             dataBase.connection.Close();
         }
+
+
+
+
+
+
+        //MESSENGER
+        public string GetPlayersConversations(Player player)
+        {
+            DBConnection dataBase = new DBConnection();
+            List<List<string>> conversations = new List<List<string>>();
+            dataBase.command.CommandText = $"SELECT * FROM messenger WHERE sender = '{player.SocialClubId}' OR receiver = '{player.SocialClubId}' ORDER BY id DESC";
+            using (MySqlDataReader reader = dataBase.command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    if(conversations.Count > 0)
+                    {
+                        for(int i=0; i<conversations.Count; i++)
+                        {
+                            bool breakLoop = false;
+                            var conversation = conversations[i];
+                            foreach(List<string> conv in conversations)
+                            {
+                                if(conv.Contains(reader.GetString(1)) || conv.Contains(reader.GetString(2)))
+                                {
+                                    breakLoop = true;
+                                    break;
+                                }
+                            }
+                            if (!breakLoop)
+                            {
+                                string playerId = reader.GetString(1) == player.SocialClubId.ToString() ? reader.GetString(2) : reader.GetString(1);
+                                conversations.Add(new List<string>()
+                                {
+                                    playerId
+                                });
+                            }
+                        }
+                    }
+                    else
+                    {
+                        string playerId = reader.GetString(1) == player.SocialClubId.ToString() ? reader.GetString(2) : reader.GetString(1);
+                        conversations.Add(new List<string>()
+                        {
+                            playerId
+                        });
+                    }
+                }
+            }
+
+            if(conversations.Count > 0)
+            {
+                for(int i=0; i<conversations.Count; i++)
+                {
+                    dataBase.command.CommandText = $"SELECT count(id) FROM messenger WHERE sender = '{conversations[i][0]}' AND receiver = '{player.SocialClubId}' AND received = 'False'";
+                    Int64 amount = (Int64)dataBase.command.ExecuteScalar();
+                    if(amount > 0)
+                    {
+                        conversations[i].Add("true");
+                    }
+                    else
+                    {
+                        conversations[i].Add("false");
+                    }
+
+                    dataBase.command.CommandText = $"SELECT username FROM users WHERE login = '{conversations[i][0]}'";
+                    string username = (string)dataBase.command.ExecuteScalar();
+                    conversations[i].Add(username);
+                }
+            }
+            dataBase.connection.Close();
+            return conversations.Count > 0 ? JsonConvert.SerializeObject(conversations) : "";
+        }
+
+        public string GetPlayersMessages(Player player, string playerID)
+        {
+            DBConnection dataBase = new DBConnection();
+            List<List<string>> messages = new List<List<string>>();
+            dataBase.command.CommandText = $"SELECT * FROM messenger WHERE (sender = '{player.SocialClubId}' AND receiver = '{playerID}') OR (sender = '{playerID}' AND receiver = '{player.SocialClubId}')";
+            using (MySqlDataReader reader = dataBase.command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    string type = "to";
+                    if(reader.GetString(1) == playerID)
+                    {
+                        type = "from";
+                    }
+                    string message = reader.GetString(3);
+                    string date = reader.GetString(4);
+                    messages.Add(new List<string>()
+                    {
+                        type, message, date
+                    });
+                }
+            }
+            dataBase.command.CommandText = $"UPDATE messenger SET received = 'True' WHERE sender = '{playerID}' AND receiver = '{player.SocialClubId}' AND received = 'False'";
+            dataBase.command.ExecuteNonQuery();
+            dataBase.connection.Close();
+            
+            return messages.Count > 0 ? JsonConvert.SerializeObject(messages) : "";
+        }
+
+        public void SendMessageToPlayer(Player player, string playerToId, string message)
+        {
+            DBConnection dataBase = new DBConnection();
+            List<List<string>> messages = new List<List<string>>();
+            dataBase.command.CommandText = $"INSERT INTO messenger (sender, receiver, message, date, received) VALUES ('{player.SocialClubId}', '{playerToId}', '{message}', '{DateTime.Now}', 'False')";
+            dataBase.command.ExecuteNonQuery();
+            dataBase.connection.Close();
+        }
+
+        public string HasPlayerNewMessages(Player player)
+        {
+            List<int> messageIds = new List<int>();
+            DBConnection dataBase = new DBConnection();
+            dataBase.command.CommandText = $"SELECT id FROM messenger WHERE receiver = '{player.SocialClubId}' AND received = 'False'";
+            using (MySqlDataReader reader = dataBase.command.ExecuteReader())
+            {
+                while(reader.Read())
+                {
+                    messageIds.Add(reader.GetInt32(0));
+                }
+            }
+
+            dataBase.connection.Close();
+            return messageIds.Count == 0 ? "" : JsonConvert.SerializeObject(messageIds);
+        }
+
+        public string SearchForPlayers(Player player, string keyword)
+        {
+            List<List<string>> players = new List<List<string>>();
+
+            DBConnection dataBase = new DBConnection();
+            dataBase.command.CommandText = $"SELECT login, username FROM users WHERE login NOT LIKE '{player.SocialClubId}' AND UPPER(username) LIKE UPPER('%{keyword}%');";
+            using (MySqlDataReader reader = dataBase.command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    players.Add(new List<string>()
+                    {
+                        reader.GetString(0),
+                        reader.GetString(1)
+                    });
+                }
+            }
+
+            dataBase.connection.Close();
+            return players.Count > 0 ? JsonConvert.SerializeObject(players) : "";
+        }
     }
 }
 
@@ -1952,8 +2131,9 @@ public class Settings
     public bool DisplayGlobal { get; set; }
     public bool VoiceChat { get; set; }
     public int VoiceKey { get; set; }
+    public bool UseEmojis { get; set; }
 
-    public Settings(int HudSize, int ChatSize, int SpeedometerSize, bool DisplayNick, bool DisplayGlobal, bool VoiceChat, int VoiceKey)
+    public Settings(int HudSize, int ChatSize, int SpeedometerSize, bool DisplayNick, bool DisplayGlobal, bool VoiceChat, int VoiceKey, bool UseEmojis)
     {
         this.HudSize = HudSize;
         this.ChatSize = ChatSize;
@@ -1962,6 +2142,7 @@ public class Settings
         this.DisplayGlobal = DisplayGlobal;
         this.VoiceChat = VoiceChat;
         this.VoiceKey = VoiceKey;
+        this.UseEmojis = UseEmojis;
     }
 }
 

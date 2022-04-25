@@ -68,6 +68,31 @@ body{
     height: auto;
 }
 
+.hud_messages{
+    display: none;
+    height: 1.2rem;
+    width: 1.2rem;
+    background-image: url(img/message.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 0.3rem;
+    position: absolute;
+    bottom: -1.8rem;
+    left: 90%;
+}
+
+/* .hud_messages > div{
+    width: 1px;
+    height: 1px;
+    background-color: transparent;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: inset 0 0 0 gold, 0 0 1em 2px rgba(255,0,0,0.6);
+} */
+
 .hud_info{
     min-width: 7rem;
     background: linear-gradient(180deg, rgba(55,55,55,0.95) 0%, rgba(29,30,34,0.95) 100%);
@@ -169,9 +194,11 @@ body{
 
 .inputBody{
     padding:0;
+    position: relative;
+    display: none;
 }
 .inputBlock{
-    margin-top: 1em;
+
     background-color: rgba(29, 30, 34, 0.9);
     border: none;
     border-radius: 0.4em;
@@ -180,22 +207,64 @@ body{
     height: 60%;
     color: #fff;
     padding-left: 0.5em;
-    display: none;
     font-size: 1.2em;
+    padding-right: 3em;
 }
+
+.input{
+    margin-top: 1em;
+    position: relative;
+}
+
 input:focus{
     outline: none;
 }
 
+.emojisList_button{
+    position: absolute;
+    right: 0.5em;
+    height: 2em;
+    width: 2em;
+    background-image: url(img/emojis/smile.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.emojisList_list{
+    background-color: #1d1e22;
+    padding: 0.6em;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    display: none;
+}
+
+.emojisList_list > .emoji{
+    width: 2em;
+    height: 2em;
+    margin: 0.1em;
+}
+
+.input_utils{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    align-items: flex-start;
+}
 
 .globalContainer{
     width: 50vh;
-    position: fixed;
+    position: absolute;
     top: 1vh;
     left: 0.2vh;
     height: auto;
     font-size: 1vh;
     overflow: hidden;
+    z-index: 2;
 }
 
 .chat_body{
@@ -264,6 +333,17 @@ input:focus{
     color: white;
     font-size: 1.3em;
     padding: 0.2em;
+}
+
+.emoji{
+    display: inline-block;
+    width: 1.3em;
+    height: 1.3em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #0c9;
+    vertical-align: text-bottom;
 }
 
 

@@ -9,7 +9,6 @@ mp.events.add("render", () => {
                 if(player.hasVariable("job") && player.getVariable("job") == "diver" && object != null && object.obj != null && mp.objects.exists(object.obj) && getDistance(player.position, object.obj.getCoords(true)) <= 15){
                     let pos = object.obj.getCoords(true);
                     mp.game.audio.playSoundFrontend(-1, "Power_Down", "DLC_HEIST_HACKING_SNAKE_SOUNDS", true);
-                    mp.console.logInfo("całe tew");
                 }
                 else{
                     clearInterval(soundHint);

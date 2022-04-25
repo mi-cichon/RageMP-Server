@@ -87,32 +87,32 @@ namespace ServerSide
                         else
                             playerDataManager.NotifyPlayer(player, "Jesteś wyciszony do: " + player.GetSharedData<string>("mutedto"));
                         break;
-                    case "pm":
-                        if (!player.GetSharedData<bool>("muted"))
-                        {
-                            if (argsCount > 1)
-                            {
-                                string p = args[0];
-                                string t = argText.Replace(p + " ", "");
-                                if (t.Replace(" ", "").Length > 0)
-                                {
-                                    playerDataManager.SendPrivateMessage(player, p, t);
-                                }
-                                else
-                                {
-                                    playerDataManager.NotifyPlayer(player, "Wiadomość nie może być pusta!");
-                                }
-                            }
-                            else
-                            {
-                                playerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
-                            }
-                        }
-                        else
-                        {
-                            playerDataManager.NotifyPlayer(player, "Jesteś wyciszony do: " + player.GetSharedData<string>("mutedto"));
-                        }
-                        break;
+                    //case "pm":
+                    //    if (!player.GetSharedData<bool>("muted"))
+                    //    {
+                    //        if (argsCount > 1)
+                    //        {
+                    //            string p = args[0];
+                    //            string t = argText.Replace(p + " ", "");
+                    //            if (t.Replace(" ", "").Length > 0)
+                    //            {
+                    //                playerDataManager.SendPrivateMessage(player, p, t);
+                    //            }
+                    //            else
+                    //            {
+                    //                playerDataManager.NotifyPlayer(player, "Wiadomość nie może być pusta!");
+                    //            }
+                    //        }
+                    //        else
+                    //        {
+                    //            playerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
+                    //        }
+                    //    }
+                    //    else
+                    //    {
+                    //        playerDataManager.NotifyPlayer(player, "Jesteś wyciszony do: " + player.GetSharedData<string>("mutedto"));
+                    //    }
+                    //    break;
                     case "report":
                         if (argsCount > 1)
                         {
@@ -247,25 +247,25 @@ namespace ServerSide
                             }
                         }
                         break;
-                    case "pmoff":
-                        if(args.Count > 0)
-                        {
-                            player.SetSharedData("pmoff", argText);
-                            playerDataManager.NotifyPlayer(player, "Blokowanie wiadomości prywatnych włączone!");
-                        }
-                        else if(arguments == null)
-                        {
-                            player.SetSharedData("pmoff", "Brak.");
-                            playerDataManager.NotifyPlayer(player, "Blokowanie wiadomości prywatnych włączone!");
-                        }
-                        break;
-                    case "pmon":
-                        if(arguments != null)
-                        {
-                            player.SetSharedData("pmoff", "");
-                            playerDataManager.NotifyPlayer(player, "Wyłączono blokowanie wiadomości prywatnych!");
-                        }
-                        break;
+                    //case "pmoff":
+                    //    if(args.Count > 0)
+                    //    {
+                    //        player.SetSharedData("pmoff", argText);
+                    //        playerDataManager.NotifyPlayer(player, "Blokowanie wiadomości prywatnych włączone!");
+                    //    }
+                    //    else if(arguments == null)
+                    //    {
+                    //        player.SetSharedData("pmoff", "Brak.");
+                    //        playerDataManager.NotifyPlayer(player, "Blokowanie wiadomości prywatnych włączone!");
+                    //    }
+                    //    break;
+                    //case "pmon":
+                    //    if(arguments != null)
+                    //    {
+                    //        player.SetSharedData("pmoff", "");
+                    //        playerDataManager.NotifyPlayer(player, "Wyłączono blokowanie wiadomości prywatnych!");
+                    //    }
+                    //    break;
                 }
             }
 
@@ -442,7 +442,7 @@ namespace ServerSide
                         }
                         break;
                     case "cars":
-                        player.Position = new Vector3(228.35027f, -984.62695f, -98.99994f);
+                        player.Position = new Vector3(-113.45276f, -944.86304f, 465.4191f);
                         player.TriggerEvent("showCars", vehicleDataManager.GetAllVehiclesModels());
                         break;
                     case "hash":
@@ -795,7 +795,16 @@ namespace ServerSide
                     case "getpos":
                         if (argsCount > 0)
                         {
-                            string position = $"new Vector3({player.Position.X.ToString().Replace(',', '.')}f, {player.Position.Y.ToString().Replace(',', '.')}f, {player.Position.Z.ToString().Replace(',', '.')}f); heading: {player.Heading.ToString().Replace(',', '.')}f  -  {argText}";
+                            string position = "";
+                            if(player.Vehicle != null)
+                            {
+                                position = $"new Vector3({player.Vehicle.Position.X.ToString().Replace(',', '.')}f, {player.Vehicle.Position.Y.ToString().Replace(',', '.')}f, {player.Vehicle.Position.Z.ToString().Replace(',', '.')}f); heading: {player.Vehicle.Heading.ToString().Replace(',', '.')}f  -  {argText} (pojazd)";
+                            }
+                            else
+                            {
+                                position = $"new Vector3({player.Position.X.ToString().Replace(',', '.')}f, {player.Position.Y.ToString().Replace(',', '.')}f, {player.Position.Z.ToString().Replace(',', '.')}f); heading: {player.Heading.ToString().Replace(',', '.')}f  -  {argText}";
+                            }
+                            
                             File.AppendAllText(@"positions.txt", position + Environment.NewLine, new UTF8Encoding(false, true));
                             playerDataManager.NotifyPlayer(player, "Pozycja zapisana w pliku!");
                         }
@@ -1382,6 +1391,14 @@ namespace ServerSide
 
             switch(command)
             {
+                case "newbonus":
+                    if (arguments == null)
+                    {
+                        string[] bonus = payoutManager.SetNewBonus();
+                        playerDataManager.SendInfoMessageToAllPlayers($"Wylosowano nowy bonus {float.Parse(bonus[1]) * 100}% na: {bonus[0]} do: {payoutManager.bonusTime}");
+                        playerDataManager.SendInfoToConsole($"Wylosowano nowy bonus {float.Parse(bonus[1]) * 100}% na: {bonus[0]} do: {payoutManager.bonusTime}");
+                    }
+                    break;
                 case "warn":
                     if (argsCount >= 2)
                     {

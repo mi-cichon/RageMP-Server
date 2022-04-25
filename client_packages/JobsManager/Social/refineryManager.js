@@ -10,9 +10,9 @@ let stations = [];
 let pumpBlips = [];
 let pumpBlipsInterval = null;
 let currentOrder = null;
+let orderData = null;
 mp.events.addDataHandler("job", (entity, value, oldvalue) => {
     if(entity == player && value == "refinery"){
-        mp.events.call("refinery_openHUDBrowser");
         createPumpBlips();
     }
     else if(entity == player && oldvalue == "refinery"){
@@ -53,6 +53,7 @@ mp.events.addDataHandler("job", (entity, value, oldvalue) => {
         jobTruck = null;
         inShape = false;
         currentOrder = null;
+        orderData = null;
         mp.events.call("refinery_closeHUDBrowser");
         mp.events.call("refinery_closeBrowser");
     }
@@ -141,10 +142,10 @@ mp.keys.bind(0x45, true, function(){
 
 mp.events.add("refinery_setNewStations", (data, job, order) => {
     currentOrder = order;
+    orderData = data;
     let index = 0;
     orderType = job;
     orderLiters = 0;
-    mp.console.logInfo(data);
     data = JSON.parse(data);
     for(let key in data){
         let pos = keyToPos(key);
@@ -202,7 +203,7 @@ function startPumping(state, index){
                             oilToPump = stations[index].value;
                         }
                         stations[index].value -= oilToPump;
-                        mp.events.callRemote("refinery_updateTruckOil", jobTruck, jobTruck.getVariable("oiltank") - oilToPump)
+                        mp.events.callRemote("refinery_updateTruckOil", jobTruck, jobTruck.getVariable("oiltank") - oilToPump);
                     }
                     else{
                         clearInterval(pumpingInterval);
@@ -223,7 +224,6 @@ function startPumping(state, index){
                 clearInterval(pumpingInterval);
                 pumpingInterval = null;
                 mp.events.call("showNotification", "Wystąpił problem z pojazdem!");
-                
             }
         },1000)
     }
@@ -237,19 +237,24 @@ function startPumping(state, index){
 
 function checkStatus(){
     if(stations.length > 0){
-        let status = stations.every(station => {return station.value == 0});
-        if(status){
-            stations.forEach(station => {
+        stations.forEach(station => {
+            if(station.value == 0){
                 if(station.marker != null){
                     station.marker.destroy();
+                    station.marker = null;
                 }
                 if(station.colshape != null){
                     station.colshape.destroy();
+                    station.colshape = null;
                 }
                 if(station.blip != null){
                     station.blip.destroy();
+                    station.blip = null;
                 }
-            });
+            }
+        });
+        let status = stations.every(station => {return station.value == 0});
+        if(status){
             stations = [];
             mp.events.callRemote("refinery_payment", orderLiters, orderType, currentOrder);
             mp.events.call("refinery_selectJob");
@@ -271,4 +276,51 @@ function createPumpBlips(){
         name: "Pole naftowe Grand Senora"
     }))
 }
+
+mp.events.add("saveData_refinery_load", (data) => {
+    let saveData = JSON.parse(data);
+
+    mp.events.call("refinery_openHUDBrowser");
+    mp.gui.cursor.show(false, false);
+    currentOrder = JSON.parse(saveData[1]);
+    orderData = JSON.parse(saveData[2]);
+    let index = 0;
+    orderType = saveData[3];
+    orderLiters = saveData[4];
+    let stationValues = JSON.parse(saveData[5]);
+    data = JSON.parse(data);
+    for(let key in orderData){
+        let pos = keyToPos(key);
+        let marker = mp.markers.new(0, new mp.Vector3(pos.x, pos.y, pos.z + 2), 0.8, {
+            color: [255, 0, 0, 255]
+        });
+        let blip = mp.blips.new(535 + index, pos, {
+            color: 49,
+            name: "Zbiornik do napełnienia",
+            scale: 0.8
+        });
+        let colshape = mp.colshapes.newTube(pos.x, pos.y, pos.z, 2.0, 3.0);
+        stations.push({colshape: colshape, blip: blip, marker: marker, value: stationValues[index]});
+        index++;
+    }
+
+    refreshStationValues();
+    checkStatus();
+    orderData = saveData[2];
+    mp.events.callRemote("saveData_giveJobVeh", "refinery", JSON.parse(saveData[7]), "", JSON.parse(saveData[6]));
+    setTimeout(()=>{
+        refreshStationValues();
+    },1000)
+});
+
+mp.events.add("saveData_refinery_save", () => {
+    if(mp.vehicles.exists(jobTruck) && currentOrder != null && jobTruck.getVariable("oiltank") != null){
+        let stationValues = [];
+        stations.forEach(station => {
+            stationValues.push(station.value);
+        })
+        let saveData = ["refinery", JSON.stringify(currentOrder), orderData, orderType, orderLiters, JSON.stringify(stationValues), JSON.stringify(jobTruck.getVariable("oiltank")), JSON.stringify(jobTruck.position)];
+        mp.events.callRemote("saveData_saveJobData", JSON.stringify(saveData));
+    }
+});
 

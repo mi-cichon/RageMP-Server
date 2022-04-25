@@ -90,6 +90,7 @@ html, body{
 
 .panel_tablet_top{
     width: 100%;
+    height: 4%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -126,7 +127,7 @@ html, body{
 
 .panel_container{
     /* background: radial-gradient(circle, rgba(55,55,55,1) 0%, rgba(29,30,34,1) 100%); */
-    background: rgba(32, 32, 32, 1) url('../img/background.png');
+    background: rgba(32, 32, 32, 1) url('../img/background1.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -141,8 +142,7 @@ html, body{
 
 .panel_content{
     width: 100%;
-    height: 100%;
-    padding: 3vh;
+    height: 96%;
     box-sizing: border-box;
 }
 
@@ -150,17 +150,23 @@ html, body{
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     box-sizing: border-box;
     align-items: center;
     flex-wrap: wrap;
+    margin-bottom: 5vh;
+    padding: 0 2vh;
+}
+
+.panel_controls_main{
+    padding: 3vh;
 }
 
 .panel_control{
     padding: 1vh;
     width: 5vh;
     height: 5vh;
-    background: radial-gradient(circle, rgba(55,55,55,0.95) 0%, rgba(29,30,34,0.95) 100%);
+    background: radial-gradient(circle, rgba(55,55,55,0.95) 0%, rgba(29, 29, 32, 0.95) 100%);
     border-radius: 2vh;
     position: relative;
 }
@@ -203,11 +209,10 @@ html, body{
 
 .panel_panel{
     width: 100%;
-    height: 65vh;
-    padding: 2vh;
+    height: 96%;
+    padding: 0;
     box-sizing: border-box;
     display: none;
-    overflow-y: auto;
 }
 
 .panel_panel_show{

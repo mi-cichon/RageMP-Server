@@ -4,7 +4,8 @@
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
-    padding-bottom: 1vh;
+    overflow-y: scroll;
+    height: 100%;
 }
 
 .panel_help_partial{
@@ -32,4 +33,15 @@
     overflow-y: scroll;
     padding: 0.4vh;
     height: auto;
+}
+
+.panel_help_scroll{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-bottom: 3vh;
 }

@@ -174,19 +174,28 @@ mp.keys.bind(0x27, true, function() {
 });
 
 mp.keys.bind(0x0D, true, function() {
-    if(currentCars != null){
-        mp.events.callRemote("saveShowroomVehicle");
+    if(showCamera != null && mp.cameras.exists(showCamera)){
+        mp.gui.takeScreenshot(`${currentCars[currentIndex]}.png`, 1, 100, 0);
+        mp.events.call("showNotification", "Zrzut ekranu został zapisany!");
     }
 });
 
+let showCamera = null;
 mp.events.add("showCars", cars => {
-    currentCars = JSON.parse(cars);
-    currentIndex = 0;
-    let camera = mp.cameras.new("showCarsCam", new mp.Vector3(228.59344, -989.3078, -98.99988), new mp.Vector3(0,0,177), 75);
-    camera.setActive(true);
-    mp.game.cam.renderScriptCams(true, false, 0, true, false);
-
-    mp.events.callRemote("createShowroomVehicle", currentCars[currentIndex]);
+    mp.game.gameplay.setWindSpeed(0);
+    if(showCamera != null && mp.cameras.exists(showCamera)){
+        showCamera.setActive(false);
+        showCamera.destroy();
+        mp.game.cam.renderScriptCams(false, false, 3000, true, true);
+    }
+    else{
+        currentCars = JSON.parse(cars);
+        currentIndex = 0;
+        showCamera = mp.cameras.new("showCarsCam", new mp.Vector3(-104.855545, -948.3743, 466.69275), new mp.Vector3(-20,0,0), 75);
+        showCamera.setActive(true);
+        mp.game.cam.renderScriptCams(true, false, 0, true, false);
+        mp.events.callRemote("createShowroomVehicle", currentCars[currentIndex]);
+    }
 });
 
 function getDistance(vec1, vec2){

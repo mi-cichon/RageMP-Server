@@ -11,7 +11,9 @@ function setInfo(id, model, damage, modelPrice){
     $(".modelText").text(model);
     $(".priceText").text("0$");
     $(".timeText").text("0 s.");
+    copyToClipboard(`setInfo('${id}', '${model}', '${damage}', ${modelPrice});`)
 }
+
 
 function confirmRepair(){
     if(price > 0){
@@ -255,24 +257,26 @@ function insertPartsToTable(){
                 break;
         }
         $('.scroll').append(`
-            <div class="mech_parts_part" id="part_${index}"><p>${name}</p><div></div></div>
+            <div class="mech_parts_part" id="part_${part.type}"><p>${name}</p><div></div></div>
         `);
 
-        $(`#part_${index}`).on("click", function(){
+        $(`#part_${part.type}`).on("click", function(){
             if(partsToRepair.includes(part)){
                 partsToRepair.splice(partsToRepair.indexOf(part), 1);
-                $(`#part_${index} div`).removeClass('checked');
+                $(`#part_${part.type} div`).removeClass('checked');
                 setPriceAndTime();
             }
             else{
                 partsToRepair.push(part);
-                $(`#part_${index} div`).addClass('checked');
+                $(`#part_${part.type} div`).addClass('checked');
                 setPriceAndTime();
             }
         });
         //<div class="mech_parts_part"><p></p><div></div></div>
     });
 }
+
+
 
 function setPriceAndTime(){
     time = 0;
@@ -292,3 +296,39 @@ function getPartsNames(){
     });
     return names;
 }
+
+const copyToClipboard = str => {
+    const el = document.createElement('textarea');
+    el.value = str;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+  };
+
+
+
+  $(window).on("load", () =>{
+    $(".mech_parts_all").on("click", function(){
+        let everySelected = true;
+        repairParts.forEach(part => {
+            if(!partsToRepair.includes(part)){
+                everySelected = false;
+            }
+        });
+        if(everySelected){
+            $(".mech_parts_part > div").removeClass("checked");
+            partsToRepair = [];
+            setPriceAndTime();
+        }
+        else{
+            $(".mech_parts_part > div").removeClass("checked");
+            $(".mech_parts_part > div").addClass("checked");
+            partsToRepair = [];
+            repairParts.forEach((part)=>{
+                partsToRepair.push(part);
+                setPriceAndTime();
+            });
+        }
+    });
+  })

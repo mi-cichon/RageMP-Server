@@ -25,6 +25,16 @@ namespace ServerSide
         VehicleDataManager vehicleDataManager;
         const int blipColor = 28;
         int[] tripExtr;
+
+        private List<Vector3> colors = new List<Vector3>()
+        {
+            new Vector3(251, 226, 18),
+            new Vector3(17, 37, 82),
+            new Vector3(222, 15, 24),
+            new Vector3(153, 157, 160),
+            new Vector3(50, 56, 61),
+            new Vector3(255, 255, 251)
+        };
         public CarDealer(Vector3 position, float rotation, string type, bool blip, ref VehicleDataManager vehicleDataManager, int[] tripExt)
         {
             this.vehicleDataManager = vehicleDataManager;
@@ -54,8 +64,9 @@ namespace ServerSide
             customVehicle = probVehs[rnd.Next(0, probVehs.Count)];
 
             vehicle = NAPI.Vehicle.CreateVehicle((uint)customVehicle.model, position, rotation, 55, 55, numberPlate: "BASICRPG", locked: false, engine: false);
-            NAPI.Vehicle.SetVehicleCustomPrimaryColor(vehicle.Handle, 176, 176, 176);
-            NAPI.Vehicle.SetVehicleCustomSecondaryColor(vehicle.Handle, 176, 176, 176);
+            var color = colors[rnd.Next(0, colors.Count)];
+            NAPI.Vehicle.SetVehicleCustomPrimaryColor(vehicle.Handle, (int)color.X, (int)color.Y, (int)color.Z);
+            NAPI.Vehicle.SetVehicleCustomSecondaryColor(vehicle.Handle, (int)color.X, (int)color.Y, (int)color.Z);
             vehicle.SetSharedData("dealerposition", position);
             vehicle.SetSharedData("veh_brake", true);
             vehicle.SetSharedData("type", "dealer");

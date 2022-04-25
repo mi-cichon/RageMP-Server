@@ -128,6 +128,25 @@ mp.events.add("warnPlayer", () => {
     }
 });
 
+
+let lastMessageId = -1;
+
+mp.events.add("newMessageSound", (messageIds) => {
+    if(hudBrowser != null){
+        let messages = JSON.parse(messageIds);
+        if(messages[messages.length-1] != lastMessageId){
+            hudBrowser.execute(`notification()`);
+            lastMessageId = messages[messages.length-1];
+        }
+    }
+});
+
+mp.events.add("messages_setNewMessages", (amount) => {
+    if(hudBrowser != null){
+        hudBrowser.execute(`setNewMessages(${amount})`);
+    }
+});
+
 mp.events.add("setTexting", state => {
  mp.events.callRemote("setPlayerTexting", state);
 });
@@ -154,4 +173,10 @@ mp.events.add("hideMarketInfo", () => {
     if(hudBrowser != null){
         hudBrowser.execute(`hideMarketInfo()`);
     }
+});
+
+mp.events.add("mainHUD_useEmojis", state => {
+    if(hudBrowser != null){
+        hudBrowser.execute(`useEmojis(${state})`);
+    }  
 });
