@@ -1,0 +1,133 @@
+.panel_progress_body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.panel_progress_screen{
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    z-index: 1;
+    /* left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); */
+}
+
+.panel_progress_node{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: rgb(49, 49, 49);
+    border: 1px solid white;
+    border-radius: 50%;
+    transition: ease-out 0.5s;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.panel_progress_node_unlocked{
+    border: 1px solid #0c9;
+    box-shadow: 0 0 1em #0c9;
+}
+
+.panel_progress_node > p{
+    text-align: center;
+    margin: 0;
+    font-size: 0.8vh;
+    color: white;
+    border-radius: 50%;
+}
+
+.panel_progress_node:hover{
+    width: 15vh !important;
+    height: auto !important;
+    border-radius: 2vh;
+    z-index: 2;
+    transform: translate(-40%, -60%);
+    padding: 1vh;
+}
+
+.panel_progress_node_main.panel_progress_node_unlocked{
+    background-color: rgb(0, 49, 51);
+}
+.panel_progress_node_side.panel_progress_node_unlocked{
+    background-color: rgb(0, 49, 51);
+}
+
+.panel_progress_node:hover > p{
+    display: none;
+}
+
+.panel_progress_node > div{
+    display: none;
+    color: white;
+    font-size: 0.8vh;
+}
+
+.panel_progress_node:hover > div{
+    display: block !important;
+    opacity: 0;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
+    animation-name: visible;
+    animation-fill-mode: forwards;
+}
+
+@keyframes visible {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1
+    }
+  }
+
+.panel_progress_job{
+    width: 80%;
+}
+
+.panel_progress_line{
+    height: 1px; 
+    background: white;
+    position: absolute;
+    transform-origin: top left;
+    z-index: -2;
+}
+
+.panel_progress_line_unlocked{
+    background: #0c9;
+    box-shadow: 0 0 2em #0c9;
+}
+
+.panel_progress_job > div{
+    font-size: 0.8vh;
+    color: white;
+}
+.panel_progress_job > p{
+    margin: 0;
+    margin-top: 1vh;
+}
+
+.panel_progress_job_bar{
+    width: 100%;
+    background-color:rgb(37, 37, 37);
+    height: 1vh;
+    border-radius: 1vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.panel_progress_job_bar > div{
+    position: absolute;
+    height: 100%;
+    left: 0;
+    border-top-right-radius: 1vh;
+    border-bottom-right-radius: 1vh;
+    background-color: #0c9;
+}

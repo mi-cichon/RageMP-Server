@@ -39,11 +39,11 @@ namespace ServerSide
         public CarTrader carTrader = new CarTrader(new Vector3(-1565.0809f, -554.6135f, 114.57642), 123f, new Vector3(-1567.3447f, -555.9636f, 114.44851f));
         private DrivingLicences drivingLicences = new DrivingLicences();
         private SpeedometerColor speedometerColor = new SpeedometerColor(new Vector3(387.58972f, 3587.3884f, 33.29227f));
-
+        private CarMarket carMarket;
 
         public Refinery refinery;
         private TowTrucks towTruck;
-        private Junkyard junkyard;
+        //private Junkyard junkyard;
         private Hunter hunter;
         private Lawnmowing lawnmowing;
         private Warehouse warehouse;
@@ -52,6 +52,7 @@ namespace ServerSide
         private FisherMan fisherMan = new FisherMan();
         private Diver diver;
         private Gardener gardener;
+        // Supplier supplier;
 
         private LSPD lspd;
 
@@ -60,7 +61,7 @@ namespace ServerSide
 
         public CollectibleManager collectibleManager = new CollectibleManager();
 
-        private PayoutManager payoutManager = new PayoutManager();
+        private PayoutManager payoutManager;
 
         private Peds peds = new Peds();
 
@@ -73,6 +74,8 @@ namespace ServerSide
         public List<Report> reportsList = new List<Report>();
 
         public OrgManager orgManager;
+
+        public ProgressManager progressManager = new ProgressManager();
 
         List<GTANetworkAPI.Object> objList = new List<GTANetworkAPI.Object>();
 
@@ -103,7 +106,6 @@ namespace ServerSide
             Thread.CurrentThread.CurrentCulture.NumberFormat.NumberDecimalSeparator = ",";
             CultureInfo.DefaultThreadCurrentCulture.NumberFormat.NumberDecimalSeparator = ",";
             CultureInfo.DefaultThreadCurrentUICulture.NumberFormat.NumberDecimalSeparator = ",";
-
 
             NAPI.Server.SetAutoSpawnOnConnect(false);
             NAPI.Server.SetDefaultSpawnLocation(defaultSpawn, heading: 125f);
@@ -156,6 +158,8 @@ namespace ServerSide
 
             //SET NEW BONUS
 
+            payoutManager = new PayoutManager(ref playerDataManager);
+
             payoutManager.SetNewBonus();
 
 
@@ -175,7 +179,7 @@ namespace ServerSide
 
             hunter = new Hunter(new Vector3(-1490.5903f, 4981.5283f, 63.345905f), new Vector3(-1493.011f, 4971.482f, 63.92059f), 91.5f);
             
-            junkyard = new Junkyard(new Vector3(2403.5667f, 3127.8855f, 48.15293f), new Vector3(2400.5923f, 3125.3843f, 48.153015f), -163.50455f);
+            //junkyard = new Junkyard(new Vector3(2403.5667f, 3127.8855f, 48.15293f), new Vector3(2400.5923f, 3125.3843f, 48.153015f), -163.50455f);
             
             towTruck = new TowTrucks(new Vector3(593.4641f, -3043.515f, 6.1697326f), new Vector3(561.56323f, -3037.9924f, 6.091237f));
             
@@ -191,6 +195,9 @@ namespace ServerSide
             
             towTruck.addSpawningPosition(new Vector3(509.95694f, -3054.1301f, 6.0696325f), 1);
 
+             carMarket = new CarMarket(new Vector3(-112.2122f, -2015.1759f, 18.016949f), ref orgManager, ref vehicleDataManager, ref playerDataManager);
+
+            //supplier = new Supplier(new Vector3(-17.289665f, 6303.619f, 31.374657f));
 
 
             //INSTANTIATE HOUSES AND IPL'S
@@ -260,6 +267,7 @@ namespace ServerSide
             NAPI.Task.Run(() =>
             {
                 vehicleDataManager.LoadPersonalVehiclesFromDB(ref orgManager);
+                carMarket.CreateMarketVehicles();
             }, delayTime: 5000);
 
             Thread awaitInput = new Thread(new ThreadStart(AwaitInput));

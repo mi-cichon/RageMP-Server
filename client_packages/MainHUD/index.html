@@ -10,6 +10,8 @@
         <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
     </head>
     <body class="body">
+        <div class="hud_server_version"></div>
+        <img id="image" src="" style="display: none">
         <div class="globalContainer d-flex flex-column">
 
             <div class="chat_scroll">
@@ -39,7 +41,6 @@
                 <div class="jobHUD_attributes">
                     <div class="jobHUD_attribute"><div class="jobHUD_partial"><div class="jobHUD_icon" style="background-image: url('img/money.png')"></div><div class="jobHUD_text">Zarobki</div></div><div class="jobHUD_earnings">0$</div></div>
                     <div class="jobHUD_attribute"><div class="jobHUD_partial"><div class="jobHUD_icon" style="background-image: url('img/xp.png')"></div><div class="jobHUD_text">Doświadczenie</div></div><div class="jobHUD_exp">0 exp</div></div>
-                    <div class="jobHUD_attribute"><div class="jobHUD_partial"><div class="jobHUD_icon" style="background-image: url('img/job.png')"></div><div class="jobHUD_text">Punkty pracy</div></div><div class="jobHUD_jp">0</div></div>
                     <div class="jobHUD_attribute"><div class="jobHUD_partial"><div class="jobHUD_icon" style="background-image: url('img/time.png')"></div><div class="jobHUD_text">Czas</div></div><div class="jobHUD_time">0</div></div>
                     <div class="jobHUD_attribute"><div class="jobHUD_partial"><div class="jobHUD_icon" style="background-image: url('img/moneytime.png')"></div><div class="jobHUD_text">Średnie zarobki</div></div><div class="jobHUD_average">0s $/h</div></div>
                 </div>
@@ -63,7 +64,7 @@
                 <div class="hud_nick"></div>
                 <div class="hud_money"></div>
             </div>
-            <div class="hud_avatar_wrap"><div class="hud_avatar"><div class="hud_lvl_wrap"><p class="hud_lvl">12</p></div></div></div>
+            <div class="hud_avatar_wrap"><div id="hud_avatar" class="hud_avatar"><div class="hud_lvl_wrap"><p class="hud_lvl">12</p></div></div></div>
             
         </div>
 

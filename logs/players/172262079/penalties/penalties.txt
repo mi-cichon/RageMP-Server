@@ -1,3 +1,0 @@
-[25.08.2021 00:06:48] Gracz stracił uprawenienia do prowadzenia pojazdów do 25.08.2021 00:07:48, powód: :D
-[25.08.2021 00:06:57] Gracz stracił uprawenienia do prowadzenia pojazdów do 25.09.2021 00:06:57, powód: :D
-[25.08.2021 00:07:24] Gracz został wyrzucony, powód: rc

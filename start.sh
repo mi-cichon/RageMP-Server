@@ -1,0 +1,1 @@
+screen -L -Logfile 'logs/server/%d.%m.%Y %c.txt' -S ragemp ./ragemp-server

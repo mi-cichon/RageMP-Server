@@ -13,6 +13,7 @@ using Newtonsoft.Json;
 using System.IO;
 using System.Net;
 using System.Runtime.InteropServices;
+using System.Drawing;
 
 namespace ServerSide
 {
@@ -128,7 +129,7 @@ namespace ServerSide
             };
         public PlayerDataManager()
         {
-            if(RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {
                 avatarsPath = @"D:/xampp/htdocs/avatars/";
             }
@@ -179,6 +180,17 @@ namespace ServerSide
                     player.SetSharedData("vehsold", reader.GetString(18));
                     player.SetSharedData("pmoff", "");
 
+                    if (reader.GetString(19) == "")
+                    {
+                        string number = GenerateRandomCardNumber(player.SocialClubId);
+                        player.SetSharedData("accnumber", number);
+                        SavePlayerDataToDB(player, "accnumber");
+                    }
+                    else
+                    {
+                        player.SetSharedData("accnumber", reader.GetString(19));
+                    }
+
                     player.SetSharedData("afk", false);
                     player.SetSharedData("bonustime", 0);
                     if(reader.GetString(17) == "")
@@ -193,7 +205,8 @@ namespace ServerSide
                     string collectibles = reader.GetString(12);
                     if (collectibles == "")
                     {
-                        collectibles = collectibleManager.GetRandomCollectibles();
+                        //collectibles = collectibleManager.GetRandomCollectibles();
+                        collectibles = collectibleManager.GetStableCollectibles();
                         UpdatePlayersCollectibles(player, collectibles);
                     }
                     player.SetSharedData("collectibles", collectibles);
@@ -247,11 +260,11 @@ namespace ServerSide
             DBConnection dataBase = new DBConnection();
             string defaultSettings = "{\"hudSize\":50,\"chatSize\":50,\"speedometerSize\":50,\"displayNick\":true,\"displayGlobal\":true,\"voiceChat\":false,\"voiceKey\":88,\"useEmojis\":true}";
             string startSkills = "{\"0\":0,\"1\":0,\"2\":0,\"3\":0,\"4\":0}";
-            dataBase.command.CommandText = $"INSERT INTO users (login, type, username, `character`, lastpos, money, bank, exp, registered, playtime, equipment, collectibles, skills, clothes, settings) VALUES ('{player.SocialClubId}', 'user', '{player.SocialClubName}', '', '[1894.2115, 3715.0637, 32.762226]', 0, 0, 0, '{DateTime.Now.ToString()}', 0, '{startingEq}', '{collectibleManager.GetRandomCollectibles()}', '{startSkills}', '', '{defaultSettings}')";
+            dataBase.command.CommandText = $"INSERT INTO users (login, type, username, `character`, lastpos, money, bank, exp, registered, playtime, equipment, collectibles, skills, clothes, settings, accnumber) VALUES ('{player.SocialClubId}', 'user', '{player.SocialClubName}', '', '[1894.2115, 3715.0637, 32.762226]', 0, 0, 0, '{DateTime.Now.ToString()}', 0, '{startingEq}', '{collectibleManager.GetRandomCollectibles()}', '{startSkills}', '', '{defaultSettings}', '{GenerateRandomCardNumber(player.SocialClubId)}')";
             dataBase.command.ExecuteNonQuery();
             dataBase.command.CommandText = $"INSERT INTO penalties (login, ban, mute, drivinglicence) VALUES ('{player.SocialClubId}', '', '', '')";
             dataBase.command.ExecuteNonQuery();
-            dataBase.command.CommandText = $"INSERT INTO jobs (player, waterpoints, logisticpoints, naturepoints, socialpoints) VALUES ('{player.SocialClubId}', 0, 0, 0, 0)";
+            dataBase.command.CommandText = $"INSERT INTO jobs (player) VALUES ('{player.SocialClubId}')";
             dataBase.command.ExecuteNonQuery();
             dataBase.command.CommandText = $"INSERT INTO licences (bt, bp) VALUES ('False', 'False')";
             dataBase.command.ExecuteNonQuery();
@@ -554,9 +567,9 @@ namespace ServerSide
 
         }
 
-        public void SaveTransferToDB(Player sender, Player target, int money, string title)
+        public void SaveTransferToDB(Player sender, string target, int money, string title)
         {
-            string s = sender.GetSharedData<string>("socialclub"), t = target.GetSharedData<string>("socialclub");
+            string s = sender.GetSharedData<string>("socialclub"), t = target;
             DBConnection dataBase = new DBConnection();
             dataBase.command.CommandText = $"INSERT INTO transfers (sender, target, amount, title, time) VALUES ('{s}','{t}','{money}','{title}','{DateTime.Now}')";
             dataBase.command.ExecuteNonQuery();
@@ -1462,6 +1475,22 @@ namespace ServerSide
             dataBase.connection.Close();
         }
 
+        public void UpdatePlayersJobPoints(Player player, string type, int points)
+        {
+            if(player == null && player.Exists)
+            {
+                if (player.HasSharedData($"jp_{type}"))
+                {
+                    int amount = player.GetSharedData<int>($"jp_{type}");
+                    player.SetSharedData($"jp_{type}", amount + points);
+                    DBConnection dataBase = new DBConnection();
+                    dataBase.command.CommandText = $"UPDATE jobs SET {type} = {amount+points} WHERE player = '{player.SocialClubId}'";
+                    dataBase.command.ExecuteNonQuery();
+                    dataBase.connection.Close();
+                }
+            }
+        }
+
         public void GetPlayersJobPoints(Player player)
         {
             DBConnection dataBase = new DBConnection();
@@ -1470,13 +1499,30 @@ namespace ServerSide
             {
                 if (reader.Read())
                 {
-                    player.SetSharedData("waterpoints", reader.GetInt32(2));
-                    player.SetSharedData("logisticpoints", reader.GetInt32(3));
-                    player.SetSharedData("naturepoints", reader.GetInt32(4));
-                    player.SetSharedData("socialpoints", reader.GetInt32(5));
+                    player.SetSharedData("jp_warehouse", reader.GetInt32(2));
+                    player.SetSharedData("jp_debriscleaner", reader.GetInt32(3));
+                    player.SetSharedData("jp_lawnmowing", reader.GetInt32(4));
+                    player.SetSharedData("jp_forklifts", reader.GetInt32(5));
+                    player.SetSharedData("jp_diver", reader.GetInt32(6));
+                    player.SetSharedData("jp_gardener", reader.GetInt32(7));
+                    player.SetSharedData("jp_towtruck", reader.GetInt32(8));
+                    player.SetSharedData("jp_refinery", reader.GetInt32(9));
+                    player.SetSharedData("jp_fisherman", reader.GetInt32(10));
+                    player.SetSharedData("jp_hunter", reader.GetInt32(11));
                 }
             }
             dataBase.connection.Close();
+        }
+
+        public void UpdatePlayersJobBonus(Player player, string job, int amount)
+        {
+            player.SetSharedData($"jp_{job}", player.GetSharedData<int>($"jp_{job}") + amount);
+
+            DBConnection dataBase = new DBConnection();
+            dataBase.command.CommandText = $"UPDATE jobs SET {job} = {player.GetSharedData<int>($"jp_{job}")} WHERE player = '{player.SocialClubId}'";
+            dataBase.command.ExecuteNonQuery();
+            dataBase.connection.Close();
+
         }
 
         public Vector3 JsonToVector(string pos)
@@ -1759,6 +1805,18 @@ namespace ServerSide
             }
         }
 
+        public string GenerateRandomCardNumber(ulong seed)
+        {
+            string number1 = seed.ToString();
+            string number2 = (seed + 1).ToString();
+            string number3 = (seed + 2).ToString();
+            number1 = NAPI.Util.GetHashKey(number1).ToString();
+            number2 = NAPI.Util.GetHashKey(number2).ToString();
+            number3 = NAPI.Util.GetHashKey(number3).ToString();
+            string cardNumber = number1[0].ToString() + number1[1] + number1[2] + number1[3] + number2[0] + number2[1] + number2[2] + number2[3] + number3[0] + number3[1] + number3[2] + number3[3] + number1[4] + number1[5] + number2[4] + number3[4];
+            return cardNumber;
+        }
+
         public void CheckUsersAvatar(Player player)
         {
             DBConnection dataBase = new DBConnection();
@@ -1811,7 +1869,65 @@ namespace ServerSide
             }
             File.Copy(avatarsPath + "default.png", avatarsPath + @$"{player.SocialClubId}/avatar.png");
         }
-        
+
+        public Image CreateCarMugshot(List<string> base64Imgs)
+        {
+            List<Image> images = new List<Image>();
+            foreach (string str in base64Imgs)
+            {
+                byte[] bytes = Convert.FromBase64String(str);
+
+                using (MemoryStream ms = new MemoryStream(bytes))
+                {
+                    images.Add(Image.FromStream(ms));
+                }
+            }
+            List<Image> imageRows = new List<Image>();
+            for (int i = 0; i < 6; i++)
+            {
+                Image img = images[(i * 6)];
+                for (int j = 1; j < 6; j++)
+                {
+                    img = MergeImages(img, images[i * 6 + j], true);
+                }
+                imageRows.Add(img);
+            }
+            Image finalImage = imageRows[0];
+            for (int i = 1; i < imageRows.Count; i++)
+            {
+                finalImage = MergeImages(finalImage, imageRows[i], false);
+            }
+            finalImage.Save("merged.png");
+            return finalImage;
+        }
+
+        private Bitmap MergeImages(Image image1, Image image2, bool side)
+        {
+            if (side)
+            {
+                Bitmap bitmap = new Bitmap(image1.Width + image2.Width, Math.Max(image1.Height, image2.Height));
+                using (Graphics g = Graphics.FromImage(bitmap))
+                {
+                    g.DrawImage(image1, 0, 0);
+                    g.DrawImage(image2, image1.Width, 0);
+                }
+
+                return bitmap;
+            }
+            else
+            {
+                Bitmap bitmap = new Bitmap(image1.Width, image1.Height + image2.Height);
+                using (Graphics g = Graphics.FromImage(bitmap))
+                {
+                    g.DrawImage(image1, 0, 0);
+                    g.DrawImage(image2, 0, image1.Height);
+                }
+
+                return bitmap;
+            }
+
+        }
+
         public string GetPlayersSkills(Player player)
         {
             int[] skills = new int[5];
@@ -1819,7 +1935,7 @@ namespace ServerSide
             {
                 skills[i] = player.GetSharedData<Int32>("skill-" + i.ToString());
             }
-            return JsonConvert.SerializeObject(JsonConvert.SerializeObject(skills));
+            return JsonConvert.SerializeObject(skills);
         }
         public string GetPlayersInfo(Player player)
         {
@@ -1833,11 +1949,6 @@ namespace ServerSide
             playerData.Add((GetPlayersVehiclesCount(player)).ToString() + "/" + player.GetSharedData<Int32>("vehslots").ToString());
             playerData.Add(player.GetSharedData<Int32>("skillpoints").ToString());
             playerData.Add(GetPlayersCollectiblesAmount(player).ToString() + "/" + collectibleManager.collectibleCount.ToString());
-            playerData.Add(player.GetSharedData<Int32>("logisticpoints").ToString());
-            playerData.Add(player.GetSharedData<Int32>("naturepoints").ToString());
-            playerData.Add(player.GetSharedData<Int32>("waterpoints").ToString());
-            playerData.Add(player.GetSharedData<Int32>("socialpoints").ToString());
-            playerData.Add(player.GetSharedData<string>("authcode"));
             playerData.Add((60-player.GetSharedData<Int32>("bonustime")).ToString());
             return JsonConvert.SerializeObject(playerData);
         }
@@ -1947,17 +2058,78 @@ namespace ServerSide
 
         public void MaxPlayersJobPoints(Player player)
         {
-            player.SetSharedData("logisticpoints", 2000);
-            player.SetSharedData("naturepoints", 2000);
-            player.SetSharedData("waterpoints", 2000);
-            player.SetSharedData("socialpoints", 2000);
-            DBConnection dataBase = new DBConnection();
-            dataBase.command.CommandText = $"UPDATE jobs SET logisticpoints = 2000, naturepoints = 2000, waterpoints = 2000, socialpoints = 2000 WHERE player = '{player.SocialClubId}'";
-            dataBase.command.ExecuteNonQuery();
-            dataBase.connection.Close();
+            //player.SetSharedData("logisticpoints", 2000);
+            //player.SetSharedData("naturepoints", 2000);
+            //player.SetSharedData("waterpoints", 2000);
+            //player.SetSharedData("socialpoints", 2000);
+            //DBConnection dataBase = new DBConnection();
+            //dataBase.command.CommandText = $"UPDATE jobs SET logisticpoints = 2000, naturepoints = 2000, waterpoints = 2000, socialpoints = 2000 WHERE player = '{player.SocialClubId}'";
+            //dataBase.command.ExecuteNonQuery();
+            //dataBase.connection.Close();
         }
 
+        public string[] GetPlayersBankingData(Player player)
+        {
+            List<string> data = new List<string>();
+            data.Add(player.SocialClubId.ToString());
+            data.Add(player.GetSharedData<string>("username"));
+            data.Add(player.GetSharedData<string>("accnumber"));
+            data.Add(player.GetSharedData<int>("bank").ToString());
 
+
+            List<string[]> transactions = new List<string[]>();
+            List<int> vehs = new List<int>();
+            DBConnection dataBase = new DBConnection();
+            dataBase.command.CommandText = $"SELECT * FROM transfers WHERE sender = '{player.SocialClubId}' OR target = '{player.SocialClubId}'";
+            using (MySqlDataReader reader = dataBase.command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    transactions.Add(new string[] { reader.GetString(1) == player.SocialClubId.ToString() ? "to" : "from", reader.GetString(1) == player.SocialClubId.ToString() ? reader.GetString(2) : reader.GetString(1), reader.GetString(3), reader.GetString(4), reader.GetString(5) });
+                }
+            }
+            dataBase.connection.Close();
+            for(int i = 0; i < transactions.Count; i++)
+            {
+                transactions[i][1] = GetPlayerNameById(transactions[i][1]);
+            }
+
+            transactions.Reverse();
+
+            return new string[] { JsonConvert.SerializeObject(data), transactions.Count > 0 ? JsonConvert.SerializeObject(transactions) : "" };
+        }
+
+        public string GetPlayersIDByAccNumber(string accnumber)
+        {
+            DBConnection dataBase = new DBConnection();
+            dataBase.command.CommandText = $"SELECT login FROM users WHERE accnumber = '{accnumber}'";
+            object login = dataBase.command.ExecuteScalar();
+            dataBase.connection.Close();
+            string loginStr = "";
+            if(login != null)
+            {
+                loginStr = (string)login;
+            }
+
+            return loginStr;
+        }
+
+        public void TransferMoneyToOfflinePlayer(string login, int amount)
+        {
+            DBConnection dataBase = new DBConnection();
+            dataBase.command.CommandText = $"SELECT bank FROM users WHERE login = '{login}'";
+            object bankmoney = dataBase.command.ExecuteScalar();
+            int bank = 0;
+
+            if (bankmoney != null)
+            {
+                bank = int.Parse((string)bankmoney);
+                bank += amount;
+                dataBase.command.CommandText = $"UPDATE users SET bank = '{bank}' WHERE login = '{login}'";
+                dataBase.command.ExecuteNonQuery();
+                dataBase.connection.Close();
+            }
+        }
 
 
 

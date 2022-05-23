@@ -32,7 +32,7 @@ const userCommands = {
     // "pm": "pm {nick/id} {wiadomość}",
     "report": "report {nick/id} {powód}",
     "bonus": "bonus",
-    "przelew" : "przelew {nick/id}",
+    //"przelew" : "przelew {nick/id}",
     "kierowcy": "kierowcy",
     "reconnect": "reconnect",
     // "pmoff": "pmoff {powód}",
@@ -107,7 +107,6 @@ let messages = new Array();
 let currentIndex = -1;
 function sendMessage(id, username, txt, type, usertype = "", time, social){
     let text = stripHtml(txt);
-    text = checkForEmojis(text);
     if(text.length == 0){
         return;
     }
@@ -201,6 +200,7 @@ function replaceAll(text, from, to){
 }
 
 function showLocalMessage(id, username, text, color, time, avatar){
+    text = checkForEmojis(text);
     let bcolor = "transparent";
     let tcolor = "#fff";
     let mentioned = false;
@@ -228,6 +228,7 @@ function showLocalMessage(id, username, text, color, time, avatar){
     
 }
 function showGlobalMessage(id, username, text, color, time, avatar){
+    text = checkForEmojis(text);
     let bcolor = "transparent";
     let tcolor = "#fff";
     let mentioned = false;
@@ -254,6 +255,7 @@ function showGlobalMessage(id, username, text, color, time, avatar){
     `);
 }
 function showAdminMessage(id, username, text, color, time, avatar){
+    text = checkForEmojis(text);
     let bcolor = "transparent";
     let tcolor = "#fff";
     let mentioned = false;
@@ -280,6 +282,7 @@ function showAdminMessage(id, username, text, color, time, avatar){
     `);
 }
 function showOrgMessage(id, username, text, color, time, avatar){
+    text = checkForEmojis(text);
     let bcolor = "transparent";
     let tcolor = "#fff";
     let mentioned = false;
@@ -306,6 +309,7 @@ function showOrgMessage(id, username, text, color, time, avatar){
     `);
 }
 function showPrivateMessage(id, username, text, color, time, avatar,){
+    text = checkForEmojis(text);
     username = JSON.parse(username);
     let pm;
     switch(username[1]){
@@ -378,6 +382,7 @@ function showPenalty(text, time, avatar)
 }
 
 function showConsoleMessage(text, time, avatar){
+    text = checkForEmojis(text);
     $(".messageBefore").before(`
     <div class="chat_message">
         <div class="chat_avatarBody chat_penaltyBody" style="background-image: url(${avatar})"></div>

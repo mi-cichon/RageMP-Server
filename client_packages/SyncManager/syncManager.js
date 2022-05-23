@@ -3,7 +3,8 @@ let objTypes = [
     {name: "fishingrod", obj:"prop_fishing_rod_01", bone: 18905, val: [0.12, 0.1, 0, -120, -80, 0]},
     {name: "binbag", obj:"prop_cs_rub_binbag_01", bone: 57005, val: [0.12, 0.02, 0, -90, -110, 0]},
     {name: "package", obj: 1302435108, bone: 57005, val: [0.08, 0, -0.27, 0, 65, 340]},
-    {name: "forkliftsBox", obj: "prop_boxpile_06a", bone: 4, val: [0, 0.2, -0.1, 0, 0, 90]}
+    {name: "forkliftsBox", obj: "prop_boxpile_06a", bone: 4, val: [0, 0.2, -0.1, 0, 0, 90]},
+    {name: "forkliftsBoxSpecial", obj: "ex_prop_crate_art_02_sc", bone: 4, val: [0, 0.2, 0, 0, 0, 90]}
 ]
 setInterval(function(){
     handObjects.forEach(obj => {

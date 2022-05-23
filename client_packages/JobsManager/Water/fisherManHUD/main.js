@@ -1,10 +1,10 @@
 let fisherManBrowser = null;
 let houseId = null;
 
-mp.events.add("openFisherManBrowser", (level) => {
+mp.events.add("openFisherManBrowser", (level, rodType) => {
     if(fisherManBrowser == null){
         fisherManBrowser = mp.browsers.new("package://JobsManager//Water//fisherManHUD/index.html");
-        fisherManBrowser.execute(`startFishing(${level})`);
+        fisherManBrowser.execute(`startFishing(${level}, ${rodType})`);
     }
 });
 

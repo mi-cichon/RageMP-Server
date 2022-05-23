@@ -6,6 +6,7 @@ mp.events.add("refinery_openHUDBrowser", () => {
     }
     refinery_HUDBrowser = mp.browsers.new('package://JobsManager/Social/RefineryHUD/index.html');    
     mp.gui.cursor.show(true, true);
+    refinery_HUDBrowser.execute(`setJobLevel(${player.getVariable("jobBonus_14") ? 3 : player.getVariable("jobBonus_13") ? 2 : 1})`);
 });
 
 mp.events.add("refinery_closeHUDBrowser", () => {

@@ -20,6 +20,7 @@ let interval = setInterval(() => {
         }
         if(vehicle.hasVariable("market") && vehicle.getVariable("market")){
             vehicle.setCoords(vehicle.getVariable("lastpos").x, vehicle.getVariable("lastpos").y, vehicle.getVariable("lastpos").z, false, false, false, false);
+            vehicle.setRotation(vehicle.getVariable("lastrot").x, vehicle.getVariable("lastrot").y, vehicle.getVariable("lastrot").z, 5, true);
         }
         if(vehicle.hasVariable("type") && vehicle.getVariable("type") == "jobveh" && vehicle.hasVariable("veh_brake") && vehicle.getVariable("veh_brake") && !(vehicle.hasVariable("mech") && vehicle.getVariable("mech")) && !vehicle.getVariable("player")){
             let pos = vehicle.getVariable("spawnPos");
@@ -43,6 +44,15 @@ mp.events.addDataHandler("horn", (entity, value, oldvalue) => {
         }
     }
 })
+
+function didPlayerEnterTheVehicle(vehicle){
+    setTimeout(()=>{
+        if(vehicle != null && mp.vehicles.exists(vehicle) && !player.isInVehicle(vehicle.handle, false)){
+            player.clearTasks();
+            mp.events.callRemote("setIntoVeh", vehicle);
+        }
+    },5000);
+}
 
 mp.events.add('render', () => {
 
@@ -77,16 +87,20 @@ mp.events.add('render', () => {
                 if(player.hasVariable("job") && player.getVariable("job") != ""){
                     if(player.hasVariable("jobveh") && player.getVariable("jobveh") == veh.remoteId){
                         player.taskEnterVehicle(veh.handle, 5000, -1, 1, 1, 0);
+                        didPlayerEnterTheVehicle(veh);
                         return;
                     }
                     else if(player.getVariable("jobveh") == -1111 && veh.hasVariable("jobtype") && veh.getVariable("jobtype") == player.getVariable("job") && !veh.getVariable("player")){
                         player.taskEnterVehicle(veh.handle, 5000, -1, 1, 1, 0);
+                        didPlayerEnterTheVehicle(veh);
                         return;
                     }
                     else if(player.getVariable("job") == "lspd" && veh.getVariable("type") == "lspd"){
                         if(player.hasVariable("licenceBp") && player.getVariable("licenceBp")){
-                            if(!player.getVariable("nodriving"))
-                            player.taskEnterVehicle(veh.handle, 5000, -1, 1, 1, 0);
+                            if(!player.getVariable("nodriving")){
+                                player.taskEnterVehicle(veh.handle, 5, -1, 1, 1, 0);
+                                didPlayerEnterTheVehicle(veh);
+                            }
                             else
                                 mp.events.call("showNotification", "Nie możesz prowadzić pojazdów do: " + player.getVariable("nodrivingto"));
                         }  
@@ -102,18 +116,22 @@ mp.events.add('render', () => {
                 if(veh.getVariable("type") === "public" && veh.isSeatFree(-1))
                 {
                     player.taskEnterVehicle(veh.handle, 5000, -1, 1, 1, 0);
+                    didPlayerEnterTheVehicle(veh);
                     return;
                 }
                 if(veh.getVariable("type") === "furka" && veh.isSeatFree(-1))
                 {
                     player.taskEnterVehicle(veh.handle, 5000, -1, 1, 1, 0);
+                    didPlayerEnterTheVehicle(veh);
                     return;
                 }
                 if(veh.getVariable("type") === "personal" && (veh.getVariable("owner").toString() === player.getVariable("socialclub") || veh.getVariable("id") == player.getVariable("carkeys") || (veh.hasVariable("orgId") && player.hasVariable("orgId") && veh.getVariable("orgId") == player.getVariable("orgId"))) && !(veh.hasVariable("mech") && veh.getVariable("mech")) && veh.isSeatFree(-1))
                 {
                     if(player.hasVariable("licenceBp") && player.getVariable("licenceBp")){
-                        if(!player.getVariable("nodriving"))
-                        player.taskEnterVehicle(veh.handle, 5000, -1, 1, 1, 0);
+                        if(!player.getVariable("nodriving")){
+                            player.taskEnterVehicle(veh.handle, 5000, -1, 1, 1, 0);
+                            didPlayerEnterTheVehicle(veh);
+                        }
                         else
                             mp.events.call("showNotification", "Nie możesz prowadzić pojazdów do: " + player.getVariable("nodrivingto"));
                     }  

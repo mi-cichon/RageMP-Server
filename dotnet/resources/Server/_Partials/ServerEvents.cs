@@ -164,7 +164,7 @@ namespace ServerSide
             }
             else if (vehicle.HasSharedData("market") && vehicle.GetSharedData<bool>("market"))
             {
-                //carMarket.RemoveVehicleFromMarket(vehicle);
+                carMarket.RemoveVehicleFromMarket(vehicle);
             }
             if (vehicle.HasSharedData("drivers") && seatId == 0)
             {
@@ -420,5 +420,10 @@ namespace ServerSide
                 lspd.SwitchBackGate(false);
             }
         }
+        [ServerEvent(Event.VehicleTrailerChange)]
+        public void OnVehicleTrailerChange(Vehicle vehicle, Vehicle trailer)
+        {
+            Console.WriteLine("nowa naczepa");
         }
+    }
 }

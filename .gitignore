@@ -1,0 +1,6 @@
+logs/
+dotnet/runtime/*
+*.listcache
+mysql-apt-config_0.8.22-1_all.deb
+dotnet/resources/Server/obj
+dotnet/resources/Server/bin

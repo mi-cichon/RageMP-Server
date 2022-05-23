@@ -16,7 +16,7 @@ namespace ServerSide
         public int Color { get; set; }
         public string Plate { get; set; }
         public VehicleHash Model { get; set; }
-
+        public int[] Trunk { get; set; }
         public JobVehicleSpawn(string type, Vector3 position, float rotation, VehicleHash model, int color, string plate, JobVehicle jobVehData, bool oiltanker = false)
         {
             Type = type;

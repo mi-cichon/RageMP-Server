@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <script src="rodShop.js"></script>
+        <div class="mainBody">
+            <div class="content">
+                <div class="nameCol">Sklep z wędkami</div>
+                <div class="scrollable">
+                    <div class="item">
+                        <div class="img" style="background-image: url('package://Equipment/img/fisherman/bambus.png')">
+                            
+                        </div>
+                        <div class="name">
+                            Bambusowa wędka
+                        </div>
+                        <div class="price">
+                            $1000
+                        </div>
+                        <input type="button" class="button_select" value="Kup" onclick="buyRod(997)"></input>
+                    </div>
+                    <div class="item">
+                        <div class="img" style="background-image: url('package://Equipment/img/fisherman/drewno.png')">
+                            
+                        </div>
+                        <div class="name">
+                            Drewniana wędka
+                        </div>
+                        <div class="price">
+                            $3000
+                        </div>
+                        <input type="button" class="button_select" value="Kup" onclick="buyRod(998)"></input>
+                    </div>
+                    <div class="item">
+                        <div class="img" style="background-image: url('package://Equipment/img/fisherman/plastik.png')">
+                            
+                        </div>
+                        <div class="name">
+                            Plastikowa wędka
+                        </div>
+                        <div class="price">
+                            $8000
+                        </div>
+                        <input type="button" class="button_select" value="Kup" onclick="buyRod(999)"></input>
+                    </div>
+                    <div class="item">
+                        <div class="img" style="background-image: url('package://Equipment/img/fisherman/karbon.png')">
+                            
+                        </div>
+                        <div class="name">
+                            Karbonowa wędka
+                        </div>
+                        <div class="price">
+                            $15000
+                        </div>
+                        <input type="button" class="button_select" value="Kup" onclick="buyRod(1000)"></input>
+                    </div>
+                </div>
+                <div class="buttons"><input type="button" class="button_cancel" value="Zamknij" onclick="closeRodBrowser()"></div>
+            </div>
+        </div>
+    </body>
+</html>

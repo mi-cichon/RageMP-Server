@@ -24,7 +24,6 @@ namespace ServerSide
         const int rodPrice = 3000;
         ColShape fisherColshape, sellingColshape, paserColshape;
         PlayerDataManager playerDataManager = new PlayerDataManager();
-        PayoutManager payoutManager = new PayoutManager();
         public FisherMan()
         {
             Vector3 fisherPosition = new Vector3(11.549497f, -2799.747f, 2.526085f);
@@ -73,21 +72,66 @@ namespace ServerSide
         {
             if (player.GetSharedData<string>("job") == "" && !(player.HasSharedData("lspd_duty") && player.GetSharedData<bool>("lspd_duty")))
             {
-                if (player.GetSharedData<Int32>("waterpoints") >= 750)
+                if (player.GetSharedData<bool>("jobBonus_66"))
                 {
+                    
                     if (playerDataManager.HasItem(player, 1000))
+                    {
+                        if (player.GetSharedData<bool>("jobBonus_72"))
+                        {
+                            player.SetSharedData("job", "fisherman");
+                            player.TriggerEvent("startJob", "Wędkarstwo", "PW");
+                            player.SetSharedData("fisherman_rodType", 4);
+                            return;
+                        }
+                        else
+                        {
+                            playerDataManager.NotifyPlayer(player, "Nie możesz używać karbonowej wędki!");
+                        }
+                    }
+                    if (playerDataManager.HasItem(player, 999))
+                    {
+                        if (player.GetSharedData<bool>("jobBonus_71"))
+                        {
+                            player.SetSharedData("job", "fisherman");
+                            player.TriggerEvent("startJob", "Wędkarstwo", "PW");
+                            player.SetSharedData("fisherman_rodType", 3);
+                            return;
+                        }
+                        else
+                        {
+                            playerDataManager.NotifyPlayer(player, "Nie możesz używać plastikowej wędki!");
+                        }
+                    }
+                    if(playerDataManager.HasItem(player, 998))
+                    {
+                        if (player.GetSharedData<bool>("jobBonus_70"))
+                        {
+                            player.SetSharedData("job", "fisherman");
+                            player.TriggerEvent("startJob", "Wędkarstwo", "PW");
+                            player.SetSharedData("fisherman_rodType", 2);
+                            return;
+                        }
+                        else
+                        {
+                            playerDataManager.NotifyPlayer(player, "Nie możesz używać drewnianej wędki!");
+                        }
+                    }
+                    if(playerDataManager.HasItem(player, 997))
                     {
                         player.SetSharedData("job", "fisherman");
                         player.TriggerEvent("startJob", "Wędkarstwo", "PW");
+                        player.SetSharedData("fisherman_rodType", 1);
+                        return;
                     }
-                    else
-                    {
-                        playerDataManager.NotifyPlayer(player, "Nie posiadasz wędki! Zakup ją u wędkarza!");
-                    }
+
+
+                    playerDataManager.NotifyPlayer(player, "Nie posiadasz wędki! Zakup ją u wędkarza!");
+
                 }
                 else
                 {
-                    playerDataManager.NotifyPlayer(player, "Nie posiadasz wystarczająco PW: 750!");
+                    playerDataManager.NotifyPlayer(player, "Nie odblokowałeś tej pracy!");
                 }
 
             }
@@ -113,229 +157,6 @@ namespace ServerSide
         public void ConfirmFishingRod(Player player)
         {
             playerDataManager.UpdatePlayersMoney(player, -3000);
-        }
-
-        public void Done(Player player, int size, int type)
-        {
-            Random rnd = new Random();
-            int price = 0;
-            int luck = 0;
-            if(type == 0)
-            {
-                switch (size)
-                {
-                    case 1:
-                        luck = rnd.Next(1, 3);
-                        switch (luck)
-                        {
-                            case 1:
-                                playerDataManager.NotifyPlayer(player, "Złowiłeś Karpia!");
-                                player.TriggerEvent("fitItemInEquipment", 1003);
-                                break;
-                            case 2:
-                                playerDataManager.NotifyPlayer(player, "Złowiłeś Amura!");
-                                player.TriggerEvent("fitItemInEquipment", 1001);
-                                break;
-                        }
-                        price = 1;
-                        break;
-                    case 2:
-                        luck = rnd.Next(1, 3);
-                        switch (luck)
-                        {
-                            case 1:
-                                playerDataManager.NotifyPlayer(player, "Złowiłeś Jesiotra!");
-                                player.TriggerEvent("fitItemInEquipment", 1002);
-                                break;
-                            case 2:
-                                playerDataManager.NotifyPlayer(player, "Złowiłeś Lina!");
-                                player.TriggerEvent("fitItemInEquipment", 1004);
-                                break;
-                        }
-                        price = 1;
-                        break;
-                    case 3:
-                        luck = rnd.Next(1, 3);
-                        switch (luck)
-                        {
-                            case 1:
-                                playerDataManager.NotifyPlayer(player, "Złowiłeś Lipienia!");
-                                player.TriggerEvent("fitItemInEquipment", 1005);
-                                break;
-                            case 2:
-                                playerDataManager.NotifyPlayer(player, "Złowiłeś Karasia!");
-                                player.TriggerEvent("fitItemInEquipment", 1006);
-                                break;
-                        }
-                        price = 1;
-                        break;
-                    case 4:
-                        luck = rnd.Next(1, 4);
-                        switch (luck)
-                        {
-                            case 1:
-                                playerDataManager.NotifyPlayer(player, "Złowiłeś Okonia!");
-                                player.TriggerEvent("fitItemInEquipment", 1007);
-                                break;
-                            case 2:
-                                playerDataManager.NotifyPlayer(player, "Złowiłeś Suma!");
-                                player.TriggerEvent("fitItemInEquipment", 1008);
-                                break;
-                            case 3:
-                                playerDataManager.NotifyPlayer(player, "Złowiłeś Szczupaka!");
-                                player.TriggerEvent("fitItemInEquipment", 1009);
-                                break;
-                        }
-                        price = 2;
-                        break;
-                    case 5:
-                        luck = rnd.Next(1, 6);
-                        switch (luck)
-                        {
-                            case 1:
-                                playerDataManager.NotifyPlayer(player, "Złowiłeś stary gumowiec!");
-                                player.TriggerEvent("fitItemInEquipment", 1050);
-                                price = 1;
-                                break;
-                            case 2:
-                                playerDataManager.NotifyPlayer(player, "Złowiłeś stary garnek!");
-                                player.TriggerEvent("fitItemInEquipment", 1051);
-                                price = 1;
-                                break;
-                            case 3:
-                                playerDataManager.NotifyPlayer(player, "Złowiłeś zepsuty telefon!");
-                                player.TriggerEvent("fitItemInEquipment", 1052);
-                                price = 2;
-                                break;
-                            case 4:
-                                playerDataManager.NotifyPlayer(player, "Złowiłeś złoty zegarek!");
-                                player.TriggerEvent("fitItemInEquipment", 1053);
-                                price = 2;
-                                break;
-                            case 5:
-                                playerDataManager.NotifyPlayer(player, "Złowiłeś złoty pierścionek!");
-                                player.TriggerEvent("fitItemInEquipment", 1054);
-                                price = 3;
-                                break;
-                        }
-                        break;
-                }
-            }
-            else
-            {
-                switch (size)
-                {
-                    case 1:
-                        luck = rnd.Next(1, 4);
-                        switch (luck)
-                        {
-                            case 1:
-                                playerDataManager.NotifyPlayer(player, "Złowiłeś Tobiasza!");
-                                player.TriggerEvent("fitItemInEquipment", 1010);
-                                break;
-                            case 2:
-                                playerDataManager.NotifyPlayer(player, "Złowiłeś Szprotę!");
-                                player.TriggerEvent("fitItemInEquipment", 1011);
-                                break;
-                            case 3:
-                                playerDataManager.NotifyPlayer(player, "Złowiłeś Krąpia!");
-                                player.TriggerEvent("fitItemInEquipment", 1012);
-                                break;
-                        }
-                        price = 1;
-                        break;
-                    case 2:
-                        luck = rnd.Next(1, 4);
-                        switch (luck)
-                        {
-                            case 1:
-                                playerDataManager.NotifyPlayer(player, "Złowiłeś Dorsza!");
-                                player.TriggerEvent("fitItemInEquipment", 1013);
-                                break;
-                            case 2:
-                                playerDataManager.NotifyPlayer(player, "Złowiłeś Belonę!");
-                                player.TriggerEvent("fitItemInEquipment", 1014);
-                                break;
-                            case 3:
-                                playerDataManager.NotifyPlayer(player, "Złowiłeś Łososia!");
-                                player.TriggerEvent("fitItemInEquipment", 1016);
-                                break;
-                        }
-                        price = 1;
-                        break;
-                    case 3:
-                        luck = rnd.Next(1, 4);
-                        switch (luck)
-                        {
-                            case 1:
-                                playerDataManager.NotifyPlayer(player, "Złowiłeś Sieję!");
-                                player.TriggerEvent("fitItemInEquipment", 1017);
-                                break;
-                            case 2:
-                                playerDataManager.NotifyPlayer(player, "Złowiłeś Halibuta!");
-                                player.TriggerEvent("fitItemInEquipment", 1018);
-                                break;
-                            case 3:
-                                playerDataManager.NotifyPlayer(player, "Złowiłeś Ciernika!");
-                                player.TriggerEvent("fitItemInEquipment", 1019);
-                                break;
-                        }
-                        price = 1;
-                        break;
-                    case 4:
-                        luck = rnd.Next(1, 4);
-                        switch (luck)
-                        {
-                            case 1:
-                                playerDataManager.NotifyPlayer(player, "Złowiłeś Flądrę!");
-                                player.TriggerEvent("fitItemInEquipment", 1020);
-                                break;
-                            case 2:
-                                playerDataManager.NotifyPlayer(player, "Złowiłeś Węgorzycę!");
-                                player.TriggerEvent("fitItemInEquipment", 1021);
-                                break;
-                            case 3:
-                                playerDataManager.NotifyPlayer(player, "Złowiłeś Węgorza!");
-                                player.TriggerEvent("fitItemInEquipment", 1022);
-                                break;
-                        }
-                        price = 2;
-                        break;
-                    case 5:
-                        luck = rnd.Next(1, 6);
-                        switch (luck)
-                        {
-                            case 1:
-                                playerDataManager.NotifyPlayer(player, "Złowiłeś starą skarpetę!");
-                                player.TriggerEvent("fitItemInEquipment", 1058);
-                                price = 1;
-                                break;
-                            case 2:
-                                playerDataManager.NotifyPlayer(player, "Złowiłeś stary nóż!");
-                                player.TriggerEvent("fitItemInEquipment", 1056);
-                                price = 1;
-                                break;
-                            case 3:
-                                playerDataManager.NotifyPlayer(player, "Złowiłeś zepsuty aparat!");
-                                player.TriggerEvent("fitItemInEquipment", 1055);
-                                price = 2;
-                                break;
-                            case 4:
-                                playerDataManager.NotifyPlayer(player, "Złowiłeś stare okulary!");
-                                player.TriggerEvent("fitItemInEquipment", 1057);
-                                price = 2;
-                                break;
-                            case 5:
-                                playerDataManager.NotifyPlayer(player, "Złowiłeś złoty pierścionek!");
-                                player.TriggerEvent("fitItemInEquipment", 1054);
-                                price = 3;
-                                break;
-                        }
-                        break;
-                }
-            }
-            
-            payoutManager.FisherManPoints(player, price);
         }
     }
 }

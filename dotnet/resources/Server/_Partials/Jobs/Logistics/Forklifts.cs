@@ -25,9 +25,9 @@ namespace ServerSide
         }
 
         [RemoteEvent("forkliftsBoxDropped")]
-        public void ForkliftsBoxDropped(Player player)
+        public void ForkliftsBoxDropped(Player player, bool special)
         {
-            payoutManager.ForkliftsPayment(player);
+            payoutManager.ForkliftsPayment(player, special);
         }
     }
 }

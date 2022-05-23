@@ -1,0 +1,124 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    user-select: none;
+    overflow: hidden;
+    font-family: 'PT Sans', sans-serif;
+    background-color: transparent;
+}
+
+.panel_bonus_body{
+  width: 100%;
+  height: 100%;
+}
+
+.panel_bonus_roller_body{
+  display: none;
+}
+
+.panel_bonus_scroll{
+  width: 90%;
+  height: 16vh;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.panel_bonus_img{
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: 40%;
+}
+
+.panel_bonus_roller{
+  width: auto;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  display: flex;
+  flex-direction: row;
+  }
+
+.panel_bonus_item{
+  width: 15vh;
+  height: 15vh;
+  background-color: #0c9;
+  margin: 0.5vh;
+  line-height: 9vh;
+  text-align: center;
+  font-size: 1vh;
+  border-radius: 0.6vh;
+  box-shadow: inset 0 0 2vh rgb(184, 184, 184);
+}
+
+.panel_bonus_pointer{
+  position: absolute;
+  color: white;
+  top: 33%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3vh;
+}
+
+.panel_bonus_menu{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  grid-template-columns: 50% 50%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.panel_bonus_menu_block{
+  width: 35%;
+  height: 45%;
+  background: radial-gradient(circle, rgba(55,55,55,0.95) 0%, rgba(29,30,34,0.95) 100%);
+  border: 1px solid black;
+  border-radius: 0.4vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.panel_bonus_menu_title{
+  color: white;
+  font-size: 2.4vh;
+  padding: 1vh;
+  border-bottom: 1px solid black;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.panel_bonus_menu_desc{
+  color: gray;
+  font-size: 1.8vh;
+  padding: 1vh;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.panel_bonus_menu_button{
+  color: black;
+  font-size: 2vh;
+  padding: 1vh;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  border-top: 1px solid black;
+  background-color: #0c9;
+}
+
+.panel_bonus_menu_button_notactive{
+  background-color: gray;
+}

@@ -37,38 +37,38 @@ namespace ServerSide
         }
 
         //Przelewy
-        [RemoteEvent("transferMoneyToPlayer")]
-        public void TransferMoneyToPlayer(Player player, Player target, int money, string title)
-        {
-            if (target != null && target.Exists)
-            {
-                if (target.Position.DistanceTo(player.Position) <= 10)
-                {
-                    if (playerDataManager.UpdatePlayersMoney(player, -1 * money))
-                    {
-                        playerDataManager.UpdatePlayersMoney(target, money);
-                        playerDataManager.SendInfoToPlayer(target, "Otrzymano przelew od " + player.GetSharedData<string>("username") + " o kwocie $" + money.ToString() + ". Tytuł: " + title + ".");
-                        playerDataManager.SaveTransferToDB(player, target, money, title);
-                        player.TriggerEvent("closeMoneyTransferBrowser");
-                    }
-                    else
-                    {
-                        playerDataManager.NotifyPlayer(player, "Błąd przelewu: nie masz tyle gotówki!");
-                        player.TriggerEvent("closeMoneyTransferBrowser");
-                    }
-                }
-                else
-                {
-                    playerDataManager.NotifyPlayer(player, "Błąd przelewu: gracz się oddalił!");
-                    player.TriggerEvent("closeMoneyTransferBrowser");
-                }
+        //[RemoteEvent("transferMoneyToPlayer")]
+        //public void TransferMoneyToPlayer(Player player, Player target, int money, string title)
+        //{
+        //    if (target != null && target.Exists)
+        //    {
+        //        if (target.Position.DistanceTo(player.Position) <= 10)
+        //        {
+        //            if (playerDataManager.UpdatePlayersMoney(player, -1 * money))
+        //            {
+        //                playerDataManager.UpdatePlayersMoney(target, money);
+        //                playerDataManager.SendInfoToPlayer(target, "Otrzymano przelew od " + player.GetSharedData<string>("username") + " o kwocie $" + money.ToString() + ". Tytuł: " + title + ".");
+        //                playerDataManager.SaveTransferToDB(player, target, money, title);
+        //                player.TriggerEvent("closeMoneyTransferBrowser");
+        //            }
+        //            else
+        //            {
+        //                playerDataManager.NotifyPlayer(player, "Błąd przelewu: nie masz tyle gotówki!");
+        //                player.TriggerEvent("closeMoneyTransferBrowser");
+        //            }
+        //        }
+        //        else
+        //        {
+        //            playerDataManager.NotifyPlayer(player, "Błąd przelewu: gracz się oddalił!");
+        //            player.TriggerEvent("closeMoneyTransferBrowser");
+        //        }
 
-            }
-            else
-            {
-                playerDataManager.NotifyPlayer(player, "Błąd przelewu: gracz opuścił serwer!");
-                player.TriggerEvent("closeMoneyTransferBrowser");
-            }
-        }
+        //    }
+        //    else
+        //    {
+        //        playerDataManager.NotifyPlayer(player, "Błąd przelewu: gracz opuścił serwer!");
+        //        player.TriggerEvent("closeMoneyTransferBrowser");
+        //    }
+        //}
     }
 }

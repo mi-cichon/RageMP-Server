@@ -1,0 +1,113 @@
+<link rel="stylesheet" href="style/settings.css">
+<div class="panel_panel">
+    <div class="panel_settings_body">
+        <div class="panel_settings_partial panel_settings_discord">
+            <h2>Autoryzacja Discord</h2>
+            <p>Kliknij poniższy przycisk aby skopiować swój kod autoryzacji Discord. Pamiętaj aby nie pokazywać/podawać go innym!</p>
+            <input type="button" class="panel_settings_discordButton" value="Kopiuj kod">
+        </div>
+        <div class="panel_settings_partial">
+            <h2>Ustawienia ogólne</h2> 
+            <div class="displayNick">
+                <p class="title">Wyświetlanie swojego nicku:</p>
+                <div class="radios">
+                    <label class="radio">
+                        <p>Tak</p>
+                        <input type="radio" name="nick" checked="checked" value="true">
+                        <span class="checkmark">
+                            <div class="dot"></div>
+                        </span>
+                    </label>
+                    <label class="radio">
+                        <p>Nie</p>
+                        <input type="radio" name="nick" value="false">
+                        <span class="checkmark">
+                            <div class="dot"></div>
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div class="globalChat">
+                <p class="title">Wyświetlanie czatu globalnego:</p>
+                <div class="radios">
+                    <label class="radio">
+                        <p>Tak</p>
+                        <input type="radio" name="global" checked="checked" value="true">
+                        <span class="checkmark">
+                            <div class="dot"></div>
+                        </span>
+                    </label>
+                    <label class="radio">
+                        <p>Nie</p>
+                        <input type="radio" name="global" value="false">
+                        <span class="checkmark">
+                            <div class="dot"></div>
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div class="useEmoji">
+                <p class="title">Używaj emoji:</p>
+                <div class="radios">
+                    <label class="radio">
+                        <p>Tak</p>
+                        <input type="radio" name="useEmoji" checked="checked" value="true">
+                        <span class="checkmark">
+                            <div class="dot"></div>
+                        </span>
+                    </label>
+                    <label class="radio">
+                        <p>Nie</p>
+                        <input type="radio" name="useEmoji" value="false">
+                        <span class="checkmark">
+                            <div class="dot"></div>
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div class="voiceChat">
+                <p class="title">Używaj czatu głosowego:</p>
+                <div class="radios">
+                    <label class="radio">
+                        <p>Tak</p>
+                        <input type="radio" name="voice" checked="checked" value="true">
+                        <span class="checkmark">
+                            <div class="dot"></div>
+                        </span>
+                    </label>
+                    <label class="radio">
+                        <p>Nie</p>
+                        <input type="radio" name="voice" value="false">
+                        <span class="checkmark">
+                            <div class="dot"></div>
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div class="voiceBind">
+                <p class="title">Przycisk czatu głosowego:</p>
+                <div class="voiceBlock">
+                    <kbd class="voiceKey">X</kbd>
+                </div>
+            </div>
+        </div>
+        <div class="panel_settings_partial">
+            <h2>Ustawienia interfejsu</h2> 
+            <div class="hudSize">
+                <p class="title">Wielkość HUD'u:</p>
+                <input type="range" min="1" max="100" value="50" class="slider" id="hudSize">
+            </div>
+            <div class="chatSize">
+                <p class="title">Wielkość czatu:</p>
+                <input type="range" min="1" max="100" value="50" class="slider" id="chatSize">
+            </div>
+            <div class="speedometerSize">
+                <p class="title">Wielkość licznika:</p>
+                <input type="range" min="1" max="100" value="50" class="slider" id="speedometerSize">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clickText"><div>Naciśnij przycisk</div></div>
+
+<script src="js/settings.js"></script>

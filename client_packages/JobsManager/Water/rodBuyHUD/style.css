@@ -1,0 +1,134 @@
+.mainBody{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 40vh;
+    height: auto;
+    font-family: 'PT Sans';
+    user-select: none;
+}
+
+.nameCol{
+    background-color: rgb(33, 34, 37);
+    width: 100%;
+    text-align: center;
+    padding: 0.9vh 0;
+    font-size: 1.9vh;
+    font-weight: 600;
+    color: white;
+    border-bottom: 1px solid #0c9;
+    margin-bottom: 1vh;
+}
+
+.content{
+    background: radial-gradient(circle, rgba(55,55,55,0.95) 0%, rgba(29,30,34,0.95) 100%);
+    height: 94%;
+    padding-bottom: 1vh;
+}
+.scrollable{
+    max-height: 40vh;
+    overflow-y: scroll;
+    padding: 1.2vh 0.2vh;
+    padding-left: 1.4vh;
+}
+
+.item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    border: 2px solid rgb(33, 34, 37);
+    margin-bottom: 1vh;
+    padding: 1vh 1vh;
+    font-size: 1.3vh;
+    flex-wrap: wrap;
+}
+
+.img{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 5vh;
+}
+
+.wide{
+    background-size: 50%;
+}
+.buttons{
+    margin-top: 1vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+.button_select{
+    background: linear-gradient(180deg, rgba(66, 66, 66, 0.95) 0%, rgba(29,30,34,0.95) 100%);
+    border: none;
+    color: white;
+    padding: 0.6vh;
+    border-bottom: 1px solid #00cc99;
+    font-size: 1vh;
+    width: 5vh;
+}
+
+.button_select:hover{
+    border-bottom: 1px solid transparent;
+    box-shadow: 0 0 1vh #0c9;
+}
+
+.button_select:focus{
+    outline: none;
+}
+
+.button_cancel{
+    background: linear-gradient(180deg, rgba(66, 66, 66, 0.95) 0%, rgba(29,30,34,0.95) 100%);
+    border: none;
+    color: white;
+    padding: 0.6vh;
+    border-bottom: 1px solid #cc0000;
+    font-size: 1vh;
+    width: 5vh;
+}
+
+.button_cancel:hover{
+    border-bottom: 1px solid transparent;
+    box-shadow: 0 0 1vh rgb(204, 0, 0);
+}
+
+.button_cancel:focus{
+    outline: none;
+}
+::-webkit-scrollbar {
+    width: 1.4vh;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #00cc99; 
+    border: 4px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 9999px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #61bda6; 
+    border: 4px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 9999px;
+  }

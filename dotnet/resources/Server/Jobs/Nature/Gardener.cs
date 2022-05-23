@@ -24,7 +24,7 @@ namespace ServerSide
             sellout.SetSharedData("type", "gardener_sellout");
             ColShape shape = NAPI.ColShape.CreateCylinderColShape(new Vector3(1546.5374f, 2166.511f, 78.72393f), 1.0f, 2.0f);
             customMarkers.CreateJobMarker(new Vector3(1546.5374f, 2166.511f, 78.72393f), "Ogrodnik");
-            NAPI.Blip.CreateBlip(761, new Vector3(1546.5374f, 2166.511f, 78.72393f), 0.8f, 69, name: "Praca: Ogrodnik (Natura)", shortRange: true);
+            NAPI.Blip.CreateBlip(761, new Vector3(1546.5374f, 2166.511f, 78.72393f), 0.8f, 69, name: "Praca: Ogrodnik", shortRange: true);
             shape.SetSharedData("type", "gardener");
 
             for(int i = 0; i < 15; i++)
@@ -62,7 +62,7 @@ namespace ServerSide
         {
             if (player.GetSharedData<string>("job") == "" && !(player.HasSharedData("lspd_duty") && player.GetSharedData<bool>("lspd_duty")))
             {
-                if (player.GetSharedData<Int32>("naturepoints") >= 150)
+                if (player.GetSharedData<bool>("jobBonus_108"))
                 {
                     if (!player.GetSharedData<bool>("nodriving"))
                     {
@@ -85,7 +85,7 @@ namespace ServerSide
                 }
                 else
                 {
-                    playerDataManager.NotifyPlayer(player, "Nie posiadasz wystarczająco PN: 150!");
+                    playerDataManager.NotifyPlayer(player, "Nie odblokowałeś tej pracy!");
                 }
             }
             else
@@ -547,11 +547,49 @@ namespace ServerSide
                 {
                     plant.PickingUp = true;
                     player.TriggerEvent("gardener_pickupAnimate", plant.Type);
+
+                    int time = (plant.Type == 903 || plant.Type == 904) ? 5000 : 3000;
+
+                    if (player.GetSharedData<bool>("jobBonus_112"))
+                    {
+                        time /= 2;
+                    }
+
+
+
                     NAPI.Task.Run(() =>
                     {
                         if (player.Exists)
                         {
                             player.TriggerEvent("checkIfItemFits", plant.Type, "plant");
+
+
+                            int luck = 0;
+
+                            if (player.GetSharedData<bool>("jobBonus_111"))
+                            {
+                                luck = 5;
+                            }
+                            else if (player.GetSharedData<bool>("jobBonus_111"))
+                            {
+                                luck = 10;
+                            }
+                            if (player.GetSharedData<bool>("jobBonus_111"))
+                            {
+                                luck = 20;
+                            }
+
+                            if(luck != 0)
+                            {
+                                Random rnd = new Random();
+                                int num = rnd.Next(0, luck);
+                                if(num == 0)
+                                {
+                                    player.TriggerEvent("checkIfItemFits", plant.Type, "plant");
+                                    playerDataManager.NotifyPlayer(player, "Udało Ci się zdobyć dwie rośliny!");
+                                }
+                            }
+
                             plant.Remove();
                             Plants.Remove(p.Key);
                             NewPlant();
@@ -560,7 +598,7 @@ namespace ServerSide
                         {
                             plant.PickingUp = false;
                         }
-                    }, (plant.Type == 903 || plant.Type == 904) ? 5000 : 3000);
+                    }, time);
                 }
                 else
                 {

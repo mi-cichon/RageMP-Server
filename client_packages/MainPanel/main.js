@@ -1,9 +1,10 @@
 let mainPanel_browser = null;
 let player = mp.players.local;
 let closing = false;
+let rollingBonus = false;
 mp.events.add("mainPanel_openBrowser", () => {
     if(mainPanel_browser != null && mp.browsers.exists(mainPanel_browser)){
-        if(!closing){
+        if(!closing && !rollingBonus){
             closing = true;
             mainPanel_browser.execute('closeTablet()');
             setTimeout(function(){
@@ -18,20 +19,55 @@ mp.events.add("mainPanel_openBrowser", () => {
     else if(!player.getVariable("gui")){
         mainPanel_browser = mp.browsers.new("package://MainPanel/index.html");
         mainPanel_browser.execute(`useEmojis(${player.hasVariable("settings_UseEmojis") ? player.getVariable('settings_UseEmojis').toString() : 'true'})`);
-        mp.events.callRemote('mainPanel_requestData');
         mp.gui.cursor.show(true, true);
         mp.events.callRemote("setGui", true);
     }
 });
 
+mp.events.add("mainPanel_setBankingData", (bankingData, transfers) => {
+    if(mainPanel_browser != null && mp.browsers.exists(mainPanel_browser)){
+        mainPanel_browser.execute(`setBankingData('${bankingData}', '${transfers}')`);
+    }
+});
 
-mp.events.add("mainPanel_setData", (playersData, skillsData, vehiclesData, settingsData, time) => {
+mp.events.add("mainPanel_requestBankingData", () => {
+    mp.events.callRemote("mainPanel_requestBankingData");
+});
+
+mp.events.add("mainPanel_requestHourBonusInfo", () => {
+    if(mainPanel_browser != null && mp.browsers.exists(mainPanel_browser)){
+        mainPanel_browser.execute(`setHourBonus(${player.getVariable("bonustime")})`)
+    }
+});
+
+mp.events.add("mainPanel_setPlayerData", (playersData, skillsData, jobInfo) => {
+    if(mainPanel_browser != null && mp.browsers.exists(mainPanel_browser)){
+        mainPanel_browser.execute(`insertPlayerData('${playersData}', '${skillsData}', '${jobInfo}')`);
+    }
+});
+
+mp.events.add("mainPanel_requestPlayerData", () => {
+    mp.events.callRemote("mainPanel_requestPlayerData");
+});
+
+mp.events.add("mainPanel_setVehiclesData", (vehiclesData) => {
     if(mainPanel_browser != null && mp.browsers.exists(mainPanel_browser)){
         mainPanel_browser.execute(`insertVehicles('${vehiclesData}')`);
-        mainPanel_browser.execute(`insertPlayerData('${playersData}', ${skillsData})`);
-        mainPanel_browser.execute(`insertSettings('${settingsData}')`);
-        mainPanel_browser.execute(`setTime('${time}')`);
     }
+});
+
+mp.events.add("mainPanel_requestVehiclesData", () => {
+    mp.events.callRemote("mainPanel_requestVehiclesData");
+});
+
+mp.events.add("mainPanel_setSettings", (settingsData, authcode) => {
+    if(mainPanel_browser != null && mp.browsers.exists(mainPanel_browser)){
+        mainPanel_browser.execute(`insertSettings('${settingsData}', '${authcode}')`);
+    }
+});
+
+mp.events.add("mainPanel_requestSettingsData", () => {
+    mp.events.callRemote("mainPanel_requestSettingsData");
 });
 
 mp.events.add("mainPanel_requestVehicleData", id => {
@@ -101,4 +137,40 @@ mp.events.add("messenger_receiveSearchedPlayers", players => {
 
 setInterval(()=>{
     mp.events.callRemote("messenger_checkNewMessages");
+}, 5000);
+
+mp.events.add("mainPanel_setBonus", state => {
+    rollingBonus = state;
+    mainPanel_browser.execute(`setHourBonusState(${state})`);
+});
+
+mp.events.add("mainPanel_bonusReward", (rewardId) => {
+    mp.events.callRemote("bonus_reward", rewardId);
+    mainPanel_browser.execute(`setHourBonusState(false)`);
+    rollingBonus = false;
+});
+
+mp.events.add("mainPanel_requestMoneyTransfer", (target, amount, desc) => {
+    mp.events.callRemote("mainPanel_requestMoneyTransfer", target, amount, desc);
+});
+
+mp.events.add("mainPanel_transferCompleted", () => {
+    if(mp.browsers.exists(mainPanel_browser)){
+        mainPanel_browser.execute(`transferCompleted()`);
+    }
+}); 
+
+mp.events.add("mainPanel_requestProgressData", () => {
+    mp.events.callRemote("mainPanel_requestProgressData");
+});
+
+mp.events.add("mainPanel_setProgressData", (jobData, nodesData) => {
+    if(mp.browsers.exists(mainPanel_browser)){
+        mainPanel_browser.execute(`setProgressData('${jobData}', '${nodesData}')`);
+    }
+}); 
+
+
+setTimeout(() => {
+    mp.console.logInfo(server_conf.version);
 }, 5000);

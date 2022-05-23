@@ -55,7 +55,7 @@ namespace ServerSide
 
         public Warehouse(Vector3 startPosition)
         {
-            NAPI.Blip.CreateBlip(478, startPosition, 0.8f, 69, name: "Praca: Magazynier (Logistyka)", shortRange: true);
+            NAPI.Blip.CreateBlip(478, startPosition, 0.8f, 69, name: "Praca: Magazynier", shortRange: true);
             ColShape warehouseColshape = NAPI.ColShape.CreateCylinderColShape(startPosition, 1.0f, 2.0f);
             warehouseColshape.SetSharedData("type", "warehouse");
             customMarkers.CreateJobMarker(startPosition, "Magazynier");

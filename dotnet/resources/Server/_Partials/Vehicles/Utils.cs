@@ -62,5 +62,14 @@ namespace ServerSide
                 vehicle.SetSharedData("veh_brake", state);
             }
         }
+
+        [RemoteEvent("setIntoVeh")]
+        public void SetIntoVeh(Player player, Vehicle vehicle)
+        {
+            if(vehicle != null && vehicle.Exists && player != null && player.Exists)
+            {
+                player.SetIntoVehicle(vehicle.Handle, 0);
+            }
+        }
     }
 }

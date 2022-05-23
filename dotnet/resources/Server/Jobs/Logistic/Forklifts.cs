@@ -42,7 +42,7 @@ namespace ServerSide
             StartColshape = NAPI.ColShape.CreateCylinderColShape(startPosition, 1.0f, 2.0f);
             StartColshape.SetSharedData("type", "forklifts");
             ForkBlip = NAPI.Blip.CreateBlip(569, startPosition, 0.8f, 69, name: "Wózki widłowe", shortRange: true);
-            customMarkers.CreateJobMarker(startPosition, "Praca: Wózki widłowe (Logistyka)");
+            customMarkers.CreateJobMarker(startPosition, "Praca: Wózki widłowe");
             NAPI.Ped.CreatePed((uint)PedHash.Business02AFM, new Vector3(-551.69934f, -2360.5007f, 13.71682f), 50.8f, frozen: true, invincible: true);
 
             CreateBoxSpawnPoints();
@@ -53,7 +53,7 @@ namespace ServerSide
 
             if (!player.GetSharedData<bool>("nodriving"))
             {
-                if (player.GetSharedData<Int32>("logisticpoints") >= 250)
+                if (player.GetSharedData<bool>("jobBonus_7"))
                 {
                     if (player.GetSharedData<string>("job") == "" && !(player.HasSharedData("lspd_duty") && player.GetSharedData<bool>("lspd_duty")))
                     {
@@ -67,7 +67,7 @@ namespace ServerSide
                 }
                 else
                 {
-                    playerDataManager.NotifyPlayer(player, "Nie posiadasz wystarczająco LP: 250!");
+                    playerDataManager.NotifyPlayer(player, "Nie odblokowałeś tej pracy!");
                 }
             }
             else

@@ -23,7 +23,7 @@ mp.events.addDataHandler("job", (entity, value, oldvalue) => {
     if(entity.type === "player" && entity == player)
     {
         if(oldvalue === "" && value === "diver"){
-            player.setMaxTimeUnderwater(300);
+            player.setMaxTimeUnderwater(240);
             createObject();
         }
         if(oldvalue === "diver" && value === ""){
@@ -62,19 +62,31 @@ function createObject(){
     }
     let pos = objPositions[getRandomInt(0, objPositions.length)];
     let objVals = objects[getRandomInt(0, objects.length)];
+
+    pos = new mp.Vector3(pos.x, pos.y, pos.z + objVals.zOffset);
+
+    let diameter = 75;
+
+    if(player.getVariable("jobBonus_62")){
+        diameter *= 0.5;
+    }
+    else if(player.getVariable("jobBonus_61")){
+        diameter *= 0.75;
+    }
+
     let shape = mp.colshapes.newTube(pos.x, pos.y, pos.z, 1.0, 1.0);
     let obj = mp.objects.new(objVals.obj, pos);
     let priceMult = objVals.price;
-    let randNumX = getRandomInt(-25, 26);
-    let randNumY = getRandomInt(-25, 26);
-    let randPos = new mp.Vector3(pos.x + randNumX, pos.y + randNumY, pos.z - 25)
+    let randNumX = getRandomInt(-1 * diameter/3, diameter/3);
+    let randNumY = getRandomInt(-1 * diameter/3, diameter/3);
+    let randPos = new mp.Vector3(pos.x + randNumX, pos.y + randNumY, pos.z - diameter/3);
     let blip = mp.blips.new(66, randPos, {
         name: "Przybliżone położenie przedmiotu",
         shortRange: false,
         color: 30,
         scale: 0.8
     })
-    let marker = mp.markers.new(1, randPos, 75, {
+    let marker = mp.markers.new(1, randPos, diameter, {
         color: [0,204,153,100]
     })
     object = {shape: shape, blip: blip, marker: marker, obj: obj, price: priceMult};
@@ -154,18 +166,27 @@ let objPositions = [
 ]
 
 let objects = [
-    {obj: "prop_gold_bar", price: 5},
-    {obj: "vw_prop_vw_pogo_gold_01a", price: 5},
-    {obj: "v_res_m_spanishbox", price: 4},
-    {obj: "prop_cardbordbox_05a", price: 1},
-    {obj: "prop_ld_case_01", price: 2},
-    {obj: "prop_ld_suitcase_02", price: 2},
-    {obj: "prop_big_bag_01", price: 1},
-    {obj: "prop_rub_bike_01", price: 1},
-    {obj: "hei_heist_acc_vase_02", price: 3},
-    {obj: "prop_kitch_pot_huge", price: 1},
-    {obj: "v_res_r_perfume", price: 3}
+    {obj: "prop_gold_bar", zOffset: 0, price: 5},
+    {obj: "vw_prop_vw_pogo_gold_01a", zOffset: 0, price: 5},
+    {obj: "v_res_m_spanishbox", zOffset: 0, price: 4},
+    {obj: "prop_cardbordbox_05a", zOffset: 0, price: 1},
+    {obj: "prop_ld_case_01", zOffset: 0.3, price: 2},
+    {obj: "prop_ld_suitcase_02", zOffset: 0.25, price: 2},
+    {obj: "prop_big_bag_01", zOffset: 0.25, price: 1},
+    {obj: "prop_rub_bike_01", zOffset: 0, price: 1},
+    {obj: "hei_heist_acc_vase_02", zOffset: 0, price: 3},
+    {obj: "prop_kitch_pot_huge", zOffset: 0.2, price: 1},
+    {obj: "v_res_r_perfume", zOffset: 0.15, price: 3}
 ]
+
+// let posplus = 0;
+// let pos = new mp.Vector3(1736.1683, 3290.8918, 42.148464);
+
+// objects.forEach(obj => {
+//     mp.objects.new(obj.obj, new mp.Vector3(pos.x, pos.y - posplus, pos.z + obj.zOffset));
+//     posplus += 1;
+// })
+
 
 mp.events.add("playerLeaveVehicle", (vehicle, seat) => {
     if(player.getVariable("job") == "diver" && vehicle != null && mp.vehicles.exists(vehicle) && vehicle.remoteId == player.getVariable("jobveh")){

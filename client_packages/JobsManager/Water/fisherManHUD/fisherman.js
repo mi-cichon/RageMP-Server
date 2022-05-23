@@ -1,13 +1,15 @@
 let pointer;
 let balanceInterval;
 let fishingLevel;
+let rod;
 let balanceDirection = 0;
 let pointerRotation = 0;
 let directionSwitches = 0;
 let lastKey = null;
 
-function startFishing(level){
+function startFishing(level, rodType){
     fishingLevel = level;
+    rod=rodType;
     pointer = $(".fisherPointer");
     setTimeout(() => {
         balanceInterval = setInterval(balance, 10);
@@ -21,11 +23,11 @@ function balance(){
         switch(balanceDirection){
             case 0:
                 pointer.css("transform", `rotate(${pointerRotation - fishingLevel/5}deg)`);
-                pointerRotation -= fishingLevel/5;
+                pointerRotation -= ((4 * fishingLevel) - rod)/20;
                 break;
             case 1:
                 pointer.css("transform", `rotate(${pointerRotation + fishingLevel/5}deg)`);
-                pointerRotation += fishingLevel/5;
+                pointerRotation += ((4 * fishingLevel) - rod)/20;
                 break;
         }
     }

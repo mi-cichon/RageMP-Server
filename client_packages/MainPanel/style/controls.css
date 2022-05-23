@@ -1,0 +1,60 @@
+.panel_controls{
+    width: 100%;
+    display: grid;
+    box-sizing: border-box;
+    margin-bottom: 5vh;
+    padding: 0 2vh;
+    grid-template-columns: 16% 16% 16% 16% 16%;
+    justify-items: center;
+    column-gap: 5%;
+    row-gap: 6vh;
+}
+
+.panel_controls_main{
+    padding: 3vh;
+}
+
+.panel_control{
+    padding: 1vh;
+    width: 5vh;
+    height: 5vh;
+    background: radial-gradient(circle, rgba(55,55,55,0.95) 0%, rgba(29, 29, 32, 0.95) 100%);
+    border-radius: 2vh;
+    position: relative;
+}
+
+.panel_control:hover{
+    box-shadow: 0 0 1vh 0 white;
+}
+
+.panel_control_header{
+    position: absolute;
+    top: 110%;
+    color: white;
+    font-size: 1.4vh;
+    font-weight: 400;
+    text-shadow: black 1px 1px;
+    font-family: 'San Francisco';
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+}
+
+.panel_control_text{
+    color: white;
+    font-size: 0.9vh;
+    margin-top: 0.3vh;
+}
+
+.panel_control_sprite{
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}

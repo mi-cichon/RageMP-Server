@@ -71,6 +71,7 @@ namespace ServerSide
                     break;
             }
             playerDataManager.SetPlayersConnectValues(player, currentWeather);
+            progressManager.SetPlayersJobBonuses(player);
             if (spawn == "last")
             {
                 autoSave.LoadPlayersJob(player);

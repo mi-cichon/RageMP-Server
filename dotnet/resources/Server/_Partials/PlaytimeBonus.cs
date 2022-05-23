@@ -10,6 +10,8 @@ namespace ServerSide
         [RemoteEvent("bonus_reward")]
         public void Bonus_Reward(Player player, int rewardId)
         {
+
+            player.SetSharedData("bonustime", 0);
             Random rand = new Random();
             switch (rewardId)
             {
