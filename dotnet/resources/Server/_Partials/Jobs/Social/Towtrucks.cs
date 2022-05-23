@@ -57,7 +57,11 @@ namespace ServerSide
         [RemoteEvent("getVehicleToTow")]
         public void GetVehicleToTow(Player player)
         {
-            Vehicle veh = vehicleDataManager.GetRandomVehicleToTow();
+            Vehicle veh = null;
+            if (player.GetSharedData<bool>("jobBonus_27"))
+            {
+                veh = vehicleDataManager.GetRandomVehicleToTow();
+            }
             player.TriggerEvent("setVehicleToTow", veh);
         }
     }

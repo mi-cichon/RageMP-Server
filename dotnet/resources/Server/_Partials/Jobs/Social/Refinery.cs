@@ -81,7 +81,21 @@ namespace ServerSide
         {
             if (vehicle != null && vehicle.Exists && vehicle.HasSharedData("oiltank"))
             {
-                if (vehicle.GetSharedData<float>("oiltank") < 5000)
+                int maxFuel = 5000;
+                if (player.GetSharedData<bool>("jobBonus_17"))
+                {
+                    maxFuel *= 2;
+                }
+                else if (player.GetSharedData<bool>("jobBonus_16"))
+                {
+                    maxFuel = Convert.ToInt32(maxFuel * 1.5);
+                }
+                else if (player.GetSharedData<bool>("jobBonus_15"))
+                {
+                    maxFuel *= Convert.ToInt32(maxFuel * 1.25);
+                }
+
+                if (vehicle.GetSharedData<float>("oiltank") < maxFuel)
                 {
                     var oilPump = refinery.oilPumps[pumpIndex];
                     if (oilPump.OilAmount > 0)
@@ -96,9 +110,9 @@ namespace ServerSide
                         {
                             oilPump.UpdateOilAmount(oilPump.OilAmount - amount);
                         }
-                        if (oil + amount >= 5000)
+                        if (oil + amount >= maxFuel)
                         {
-                            oil = 5000.0f;
+                            oil = maxFuel;
                         }
                         else
                         {

@@ -18,8 +18,9 @@ namespace ServerSide
                 int found = (int)vals[1];
                 playerDataManager.UpdatePlayersCollectibles(player, JsonConvert.SerializeObject(collectible));
                 playerDataManager.NotifyPlayer(player, $"Znalazłeś jajo {found} z {collectibleManager.collectibleCount}!");
-                playerDataManager.UpdatePlayersMoney(player, 100);
-                playerDataManager.UpdatePlayersExp(player, 100);
+                int money = 10000 * (playerDataManager.GetPlayersCollectiblesAmount(player) + 1);
+                playerDataManager.UpdatePlayersMoney(player, money);
+                playerDataManager.UpdatePlayersExp(player, 1000);
             }
             else
             {

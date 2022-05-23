@@ -108,11 +108,29 @@
             "height": "2",
             "url": "img/gardener/dracena.png"
         },
-        "1000":{
-            "name": "Wędka",
+        "997":{
+            "name": "Bambusowa wędka",
             "width": "5",
             "height": "1",
-            "url": "img/fisherman/rod.png"
+            "url": "img/fisherman/bambus.png"
+        },
+        "998":{
+            "name": "Drewniana wędka",
+            "width": "5",
+            "height": "1",
+            "url": "img/fisherman/drewno.png"
+        },
+        "999":{
+            "name": "Plastikowa wędka",
+            "width": "5",
+            "height": "1",
+            "url": "img/fisherman/plastik.png"
+        },
+        "1000":{
+            "name": "Wędka z włókna węglowego",
+            "width": "5",
+            "height": "1",
+            "url": "img/fisherman/karbon.png"
         },
         "1001":{
             "name": "Amur",

@@ -5,6 +5,7 @@
  let dropBlip = null;
  let dropMarker = null;
  let dropPosition = null;
+ let special = false;
  mp.events.addDataHandler("job", (entity, value, oldvalue) => {
      if(entity.type === "player" && entity == player)
      {
@@ -44,19 +45,46 @@
                         let rotation = box.getRotation(5);
                         let model = box.model;
                         mp.events.callRemote("forkliftBoxPickedUp", box);
-                        currentBox = mp.objects.new(model, new mp.Vector3(position.x, position.y, position.z + 2), {
-                            alpha: 0
-                        });
+
+
+                        if(player.getVariable("jobBonus_11")){
+                            if(getRandomInt(0, 20) == 0){
+                                special = true;
+                            }
+                        }
+
+                        if(special){
+                            currentBox = mp.objects.new("ex_prop_crate_art_02_sc", new mp.Vector3(position.x, position.y, position.z + 2), {
+                                alpha: 0
+                            });
+                        }
+                        else{
+                            currentBox = mp.objects.new(model, new mp.Vector3(position.x, position.y, position.z + 2), {
+                                alpha: 0
+                            });
+                        }
+                        
                         setTimeout(function(){
                             currentBox.setRotation(rotation.x, rotation.y, rotation.z, 5, true);
                         },100);
 
                         setTimeout(function(){
                             if(forklift != null){
-                                currentBox.attachTo(forklift.handle, forklift.getBoneIndexByName("forks_attach"), 0, 0.2, -0.1, 0, 0, 90, true, false, false, false, 0, true);
+                                if(special){
+                                    currentBox.attachTo(forklift.handle, forklift.getBoneIndexByName("forks_attach"), 0, 0.2, 0, 0, 0, 90, true, false, false, false, 0, true);
+                                }
+                                else{
+                                    currentBox.attachTo(forklift.handle, forklift.getBoneIndexByName("forks_attach"), 0, 0.2, -0.1, 0, 0, 90, true, false, false, false, 0, true);
+                                }
                                 currentBox.setAlpha(255);
+                                
                                 //currentBox.attachToPhysically(forklift.handle, 0, forklift.getBoneIndexByName("forks_attach"), 0, 1.3, 0.2, 0, 0, 0, 0, 0, 90, 1000000, true, true, false, true, 0);
-                                mp.events.callRemote("putItemInHand", "forkliftsBox");
+                                if(special){
+                                    mp.events.callRemote("putItemInHand", "forkliftsBoxSpecial");
+                                }
+                                else{
+                                    mp.events.callRemote("putItemInHand", "forkliftsBox");
+                                }
                                 dropPosition = dropPositions[getRandomInt(0, dropPositions.length)];
                                 dropBlip = mp.blips.new(270, dropPosition, {
                                     scale: 0.7,
@@ -86,7 +114,8 @@
                 dropBlip.destroy();
                 dropBlip = null;
                 mp.events.callRemote("putItemInHand", "");
-                mp.events.callRemote("forkliftsBoxDropped");
+                mp.events.callRemote("forkliftsBoxDropped", true);
+                special = false;
             }
         }
     }

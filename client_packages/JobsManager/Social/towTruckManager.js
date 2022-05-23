@@ -12,94 +12,195 @@ let vehBlip = null;
 
 let vehMarker = null;
 
-let baseColshape = null;
+let vehShape = null;
 
 let towType = null;
 
 let wreckModel;
 
-let basePosition = new mp.Vector3(561.56323, -3037.9924, 6.091237);
+let hookingObjects = {shape: null, marker: null, label: null}
+
+let hookInHand = false;
+
+let defaultHookLength = 20;
+
+let bases = [
+    {pos: new mp.Vector3(561.56323, -3037.9924, 6.091237), shape: null, blip: null, marker: null},
+    {pos: new mp.Vector3(1736.1683, 3290.8918, 41.148464), shape: null, blip: null, marker: null},
+]
 mp.events.add("render", () => {
-    if(mp.players.local.getVariable("job") === "towtruck")
+    if(player.getVariable("job") == "towtruck")
     {
-        if(towtruck != null && mp.vehicles.exists(towtruck)){
-            if(vehicleToTow != null && vehicleToTow.doesExist()){
-                if(getDistance(towtruck.position, vehicleToTow.getVariable("lastpos")) < 8){
-                    let pos = new mp.Vector3(vehicleToTow.position.x, vehicleToTow.position.y, vehicleToTow.position.z - 0.4);
-                    let heading = vehicleToTow.heading;
-                    let rotation = vehicleToTow.getRotation(5);
-                    mp.events.callRemote("removeTowedVehicle", vehicleToTow);
-                    vehicleToTow = null;
-                    towtruck.freezePosition(true);
-                    mp.events.call("showNotification", "Trwa załadunek pojazdu!");
-                    propObj = mp.objects.new('imp_prop_covered_vehicle_03a', pos, {
-                        rotation: rotation
-                    });
-    
-                    setTimeout(() => {
-                        
-                        mp.events.callRemote("createTowObject", towtruck, "car");
-    
-                        propObj.attachTo(towtruck.handle, 0, 0, -1.6, 0.4, 0, 0, 0, true, true, false, false, 0, true);
-                        removeTowItems(false);
-                        towtruck.freezePosition(false);
-                        mp.events.call("showNotification", "Pojazd załadowany, udaj się do bazy!");
-                        vehBlip = mp.blips.new(8, basePosition, {
-                            color: 15,
-                            name: "Baza",
-                            scale: 0.8
-                        });
-                        vehMarker = mp.markers.new(27, subVectors(basePosition, new mp.Vector3(0,0,0.8)), 5, {
-                            bopUpAndDown: true,
-                            color: [0, 204, 153, 255]
-                        });
-    
-                        baseColshape = mp.colshapes.newTube(basePosition.x, basePosition.y, basePosition.z, 5, 2);
-                        vehBlip.setRoute(true);
-                    }, 5000);
-                }
+        if(hookInHand && (vehicleToTow != null || wreckToTow != null)){
+            let textToDisplay = "";
+            let maxDist = defaultHookLength;
+            if(player.getVariable("jobBonus_23")){
+                maxDist *= 1.5;
+            }
+            else if(player.getVariable("jobBonus_22")){
+                maxDist *= 1.25;
             }
     
-            if(wreckToTow != null && wreckToTow.doesExist()){
-                if(getDistance(towtruck.position, wreckToTow.position) < 8){
-                    propObj = wreckToTow;
-                    wreckToTow = null;
-                    towtruck.freezePosition(true);
-                    mp.events.call("showNotification", "Trwa załadunek wraku!");
-    
-    
-                    setTimeout(() => {
-                        mp.events.callRemote("createTowObject", towtruck, wreckModel);
-                        removeTowItems(false);
-                        towtruck.freezePosition(false);
-                        mp.events.call("showNotification", "Wrak załadowany, udaj się do bazy!");
-                        propObj.attachTo(towtruck.handle, 0, 0, -1.6, 0.4, 0, 0, 0, true, true, false, false, 0, true);
-    
-                        vehBlip = mp.blips.new(8, basePosition, {
-                            color: 15,
-                            name: "Baza",
-                            scale: 0.8
-                        });
-                        vehMarker = mp.markers.new(27, subVectors(basePosition, new mp.Vector3(0,0,0.8)), 5, {
-                            bopUpAndDown: true,
-                            color: [0, 204, 153, 255]
-                        });
-                        baseColshape = mp.colshapes.newTube(basePosition.x, basePosition.y, basePosition.z, 5, 2);
-                        vehBlip.setRoute(true);
-                    }, 5000);
-                }
+            maxDist = parseInt(maxDist);
+
+            let dist = parseInt(getDistance(towtruck.position, player.position));
+            textToDisplay = `Linka: ${dist}/${maxDist}m`;
+
+            if(dist > maxDist){
+                hookInHand = false;
+                mp.events.call("showNotification", "Linka się zerwała!");
             }
-        }
+        
+            if(textToDisplay != ""){
+                let pos = new Float64Array([0.5, 0.95]);
+                mp.game.graphics.drawText(textToDisplay, pos, { 
+                    font: 4, 
+                    color: [255, 253, 141, 255], 
+                    scale: [0.7, 0.7], 
+                    outline: true
+                });
+            }
+        }            
     }
 });
 
 mp.events.add("playerEnterColshape", (colshape) => {
-    if(baseColshape != null && baseColshape == colshape){
-        removeTowItems(true);
-        mp.events.callRemote("vehicleTowed", towType, currentDistance, towtruck.getEngineHealth() / 1000);
-        mp.events.callRemote("getVehicleToTow");
+    if(player.getVariable("job") == "towtruck"){
+        if(hookingObjects.shape != null && colshape == hookingObjects.shape){
+            hookInHand = true;
+        }
+        else if(vehShape != null && hookInHand && colshape == vehShape){
+            attachVehicle();
+        }
+        else{
+            bases.forEach(base => {
+                if(base.shape != null && base.shape == colshape){
+                    removeTowItems(true);
+                    removeBases();
+                    mp.events.callRemote("vehicleTowed", towType, currentDistance, towtruck.getEngineHealth() / 1000);
+                    mp.events.callRemote("getVehicleToTow");
+                }
+            });
+        }
     }
 });
+
+function attachVehicle(){
+    hookInHand = false;
+    let time = 8000;
+
+    if(player.getVariable("jobBonus_26")){
+        time *= 0.25;
+    }
+    else if(player.getVariable("jobBonus_25")){
+        time *= 0.5;
+    }
+    else if(player.getVariable("jobBonus_24")){
+        time *= 0.75;
+    }
+
+
+    if(vehicleToTow != null && vehicleToTow.doesExist()){
+        
+        let pos = new mp.Vector3(vehicleToTow.position.x, vehicleToTow.position.y, vehicleToTow.position.z - 0.4);
+        let heading = vehicleToTow.heading;
+        let rotation = vehicleToTow.getRotation(5);
+        mp.events.callRemote("removeTowedVehicle", vehicleToTow);
+        vehicleToTow = null;
+        player.freezePosition(true);
+        
+        mp.events.call("showNotification", "Trwa załadunek pojazdu!");
+        propObj = mp.objects.new('imp_prop_covered_vehicle_03a', pos, {
+            rotation: rotation
+        });
+
+        setTimeout(() => {
+            
+            mp.events.callRemote("createTowObject", towtruck, "car");
+
+            propObj.attachTo(towtruck.handle, 0, 0, -1.6, 0.4, 0, 0, 0, true, true, false, false, 0, true);
+            removeTowItems(false);
+            player.freezePosition(false);
+            mp.events.call("showNotification", "Pojazd załadowany, udaj się do bazy!");
+
+            createBases();
+        }, time);
+    }
+
+    if(wreckToTow != null && wreckToTow.doesExist()){
+
+        propObj = wreckToTow;
+        wreckToTow = null;
+        player.freezePosition(true);
+        mp.events.call("showNotification", "Trwa załadunek wraku!");
+
+        setTimeout(() => {
+            mp.events.callRemote("createTowObject", towtruck, wreckModel);
+            removeTowItems(false);
+            player.freezePosition(false);
+            mp.events.call("showNotification", "Wrak załadowany, udaj się do bazy!");
+            propObj.attachTo(towtruck.handle, 0, 0, -1.6, 0.4, 0, 0, 0, true, true, false, false, 0, true);
+
+            createBases();
+        }, time);
+    }
+}
+
+function createBases(){
+
+    if(player.getVariable("jobBonus_28")){
+        bases[1].blip = mp.blips.new(8, bases[1].pos, {
+            color: 15,
+            name: "Baza Sandy Shores",
+            scale: 0.8
+        });
+
+        bases[1].marker = mp.markers.new(27, subVectors(bases[1].pos, new mp.Vector3(0,0,0.8)), 5, {
+            bopUpAndDown: true,
+            color: [0, 204, 153, 255]
+        });
+    
+        bases[1].shape = mp.colshapes.newTube(bases[1].pos.x, bases[1].pos.y, bases[1].pos.z, 5, 2);
+    }
+    
+    bases[0].blip = mp.blips.new(8, bases[0].pos, {
+        color: 15,
+        name: "Baza Los Santos",
+        scale: 0.8
+    });
+
+    bases[0].marker = mp.markers.new(27, subVectors(bases[0].pos, new mp.Vector3(0,0,0.8)), 5, {
+        bopUpAndDown: true,
+        color: [0, 204, 153, 255]
+    });
+
+    bases[0].shape = mp.colshapes.newTube(bases[0].pos.x, bases[0].pos.y, bases[0].pos.z, 5, 2);
+
+    if(player.getVariable("jobBonus_28")){
+        let closestBlip = getDistance(bases[0].pos, player.position) < getDistance(bases[1].pos, player.position) ? bases[0].blip : bases[1].blip;
+        closestBlip.setRoute(true);
+    }
+    else{
+        bases[0].blip.setRoute(true);
+    }
+}
+
+function removeBases(){
+    bases.forEach(base => {
+        if(base.marker != null){
+            base.marker.destroy();
+            base.marker = null;
+        }
+        if(base.blip != null){
+            base.blip.destroy();
+            base.blip = null;
+        }
+        if(base.shape != null){
+            base.shape.destroy();
+            base.shape = null;
+        }
+    })
+}
 
 
 
@@ -109,6 +210,7 @@ mp.events.addDataHandler("job", (entity, value, oldvalue) => {
     }
     else if(entity == player && oldvalue == "towtruck"){
         removeTowItems(true);
+        removeBases();
         towtruck = null;
         if(vehicleToTow != null){
             mp.events.callRemote("markVehicleAsNotTowed", vehicleToTow);
@@ -142,15 +244,27 @@ function removeTowItems(prop){
         vehMarker.destroy();
         vehMarker = null;
     }
-    if(baseColshape != null){
-        baseColshape.destroy();
-        baseColshape = null;
+    if(vehShape != null){
+        vehShape.destroy();
+        vehShape = null;
     }
     if(prop){
         if(propObj != null){
             propObj.destroy();
             propObj = null;
         }
+    }
+    if(hookingObjects.shape != null){
+        hookingObjects.shape.destroy();
+        hookingObjects.shape = null;
+    }
+    if(hookingObjects.marker != null){
+        hookingObjects.marker.destroy();
+        hookingObjects.marker = null;
+    }
+    if(hookingObjects.label != null){
+        hookingObjects.label.destroy();
+        hookingObjects.label = null;
     }
 }
 
@@ -160,14 +274,20 @@ function setVehicleToTow(veh){
     mp.events.call("showNotification", "Pojazd do odholowania został oznaczony na mapie!");
     // reward = getDistance(vehicleToTow.getVariable("lastpos"), player.position) /7;
     currentDistance = getDistance(veh.getVariable("lastpos"), player.position);
+
     vehBlip = mp.blips.new(8, veh.getVariable("lastpos"), {
         color: 46,
         name: "Pojazd do odholowania"
     });
+
     vehMarker = mp.markers.new(0, subVectors(veh.getVariable("lastpos"), new mp.Vector3(0,0,-2)), 0.6, {
         bopUpAndDown: true,
         color: [0, 204, 153, 255]
     });
+
+    let pos = veh.getVariable("lastpos");
+    vehShape = mp.colshapes.newTube(pos.x, pos.y, pos.z -1, 2, 3);
+
     vehBlip.setRoute(true);
 }
 
@@ -191,6 +311,10 @@ function setWreckToTow(){
         bopUpAndDown: true,
         color: [0, 204, 153, 255]
     });
+
+    let pos = wreckDims.position;
+    vehShape = mp.colshapes.newTube(pos.x, pos.y, pos.z -1, 2, 3);
+
     vehBlip.setRoute(true);
 }
 
@@ -211,6 +335,32 @@ mp.events.addDataHandler("jobveh", (entity, value, oldvalue) => {
             if(v != null && mp.vehicles.exists(v) && v.hasVariable("jobtype") && v.getVariable("jobtype") == entity.getVariable("job")){
                 towtruck = v;
             }
+        }
+    }
+});
+
+mp.events.add("playerLeaveVehicle", (vehicle, seat) => {
+    if(towtruck != null && mp.vehicles.exists(towtruck) && vehicle == towtruck){
+        let sideDirection = rightVector(towtruck.getForwardVector());
+        let leftDistance = -2.1;
+        let leftAway = new mp.Vector3((sideDirection.x * leftDistance) + towtruck.getCoords(true).x, (sideDirection.y * leftDistance) + towtruck.getCoords(true).y, (sideDirection.z * leftDistance) + towtruck.getCoords(true).z - 1.4);
+        let shape = mp.colshapes.newTube(leftAway.x, leftAway.y, leftAway.z, 1.0, 2.0);
+        let marker = mp.markers.new(1, leftAway, 1.0, {color: [0, 204, 153, 255]});
+        let label = mp.labels.new("Weź hak od wyciągarki", new mp.Vector3(leftAway.x, leftAway.y, leftAway.z + 1), {color: [255,255,255,255], drawDistance: 5, font: 4});
+        hookingObjects = {shape: shape, marker: marker, label: label};
+    }
+});
+
+mp.events.add("playerEnterVehicle", (vehicle, seat) => {
+    if(towtruck != null && mp.vehicles.exists(towtruck) && vehicle == towtruck){
+        if(hookingObjects.shape != null && mp.colshapes.exists(hookingObjects.shape)){
+            hookingObjects.shape.destroy();
+            hookingObjects.shape = null;
+            hookingObjects.marker.destroy();
+            hookingObjects.marker = null;
+            hookingObjects.label.destroy();
+            hookingObjects.label = null;
+            hookInHand = false;
         }
     }
 });

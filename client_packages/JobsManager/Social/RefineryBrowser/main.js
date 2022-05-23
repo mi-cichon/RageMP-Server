@@ -16,6 +16,7 @@ mp.events.add("refinery_openBrowser", (tank, veh, index) => {
         refinery_browser = mp.browsers.new('package://JobsManager/Social/RefineryBrowser/index.html');
         mp.gui.cursor.show(true, true);
         refinery_browser.execute(`updateVehiclesTank(${tank})`);
+        refinery_browser.execute(`setPumpBonus(${player.getVariable("jobBonus_20") ? 1.4 : player.getVariable("jobBonus_19") ? 1.25 : player.getVariable("jobBonus_18") ? 1.10 : 1})`);
     }
 });
 

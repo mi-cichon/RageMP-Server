@@ -33,11 +33,7 @@
     margin: 0 2%;
     box-sizing: border-box;
     margin-bottom: 1vh;
-    line-height: 5vh;
-    color: white;
-    font-size: 2vh;
     border-radius: 1vh;
-    text-align: center;
     box-shadow: inset 0px 0px 40px -4px rgba(32,32,32,1);
     -webkit-box-shadow: inset 0px 0px 40px -4px rgba(32,32,32,1);
     display: flex;
@@ -279,7 +275,7 @@
 .panel_messenger_search_body{
     width: 60%;
     height: 100%;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;

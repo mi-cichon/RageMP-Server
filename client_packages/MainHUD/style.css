@@ -614,15 +614,16 @@ kbd{
 .marketInfo{
     display: none;
     position: absolute;
-    background-color: #1d1e22;
-    border: 1px solid #0c9;
-    max-width: 30vh;
+    background: radial-gradient(circle, rgba(55,55,55,0.95) 0%, rgba(29,30,34,0.95) 100%);
+    border: 1px solid black;
+    width: 25vh;
     height: auto;
     transform: translate(-50%, -100%);
     left: 0;
     top: 0;
     padding: 0.2vh;
     z-index: -10;
+    font-size: 0.8vh;
 }
 
 .marketTable{
@@ -633,6 +634,14 @@ kbd{
 
 .marketTable tr td{
     text-align: center;
+}
+
+.market_tuneBody{
+    padding: 1vh 2vh;
+}
+
+.market_tunePart{
+    display: inline-block;
 }
 
 .jobHUD_mainBody{

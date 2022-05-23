@@ -23,7 +23,7 @@ namespace ServerSide
         [RemoteEvent("fishingDone")]
         public void FishingDone(Player player, int size, int type)
         {
-            fisherMan.Done(player, size, type);
+            payoutManager.FisherManPoints(player, type, size);
         }
 
         [RemoteEvent("sellFishes")]
@@ -118,6 +118,12 @@ namespace ServerSide
                 playerDataManager.NotifyPlayer(player, "Nie masz żadnych przedmiotów do sprzedania!");
             }
 
+        }
+
+        [RemoteEvent("shopBuyRod")]
+        public void ShopBuyRod(Player player, int itemId)
+        {
+            player.TriggerEvent("checkIfItemFits", itemId, "rod");
         }
     }
 }

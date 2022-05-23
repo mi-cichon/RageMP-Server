@@ -50,6 +50,11 @@ namespace ServerSide.Jobs
             0,0,0,0,0,1,1,1,1,1,2,2,2,2,3,3,3,4,4,5
         };
 
+        int[] luckyProbabilities = new int[]
+        {
+            0,1,2,3,4,5
+        };
+
         PlayerDataManager playerDataManager = new PlayerDataManager();
         ColShape hunterColshape;
         Blip hunterBlip;
@@ -62,7 +67,7 @@ namespace ServerSide.Jobs
             new CustomMarkers().CreateJobMarker(startPoint, "Myśliwy");
             hunterColshape = NAPI.ColShape.CreateCylinderColShape(pedPoint, 1.0f, 2.0f);
             hunterColshape.SetSharedData("type", "hunter-sell");
-            hunterBlip = NAPI.Blip.CreateBlip(463, startPoint, 0.8f, 69, name: "Praca: Myśliwy (Natura)", shortRange: true);
+            hunterBlip = NAPI.Blip.CreateBlip(463, startPoint, 0.8f, 69, name: "Praca: Myśliwy", shortRange: true);
             hunterPed = NAPI.Ped.CreatePed((uint)PedHash.Hunter, pedPoint, pedHeading, frozen: true, invincible: true);
             pedText = NAPI.TextLabel.CreateTextLabel("Myśliwy", new Vector3(pedPoint.X, pedPoint.Y, pedPoint.Z + 1.3f), 10.0f, 0.6f, 4, new Color(255, 255, 255));
         }
@@ -71,9 +76,16 @@ namespace ServerSide.Jobs
         {
             if(player.GetSharedData<string>("job") == "" && !(player.HasSharedData("lspd_duty") && player.GetSharedData<bool>("lspd_duty")))
             {
-                if (player.GetSharedData<Int32>("naturepoints") >= 750)
+                if (player.GetSharedData<bool>("jobBonus_117"))
                 {
-                    player.GiveWeapon(WeaponHash.Pumpshotgun, 9999);
+                    if (player.GetSharedData<bool>("jobBonus_118"))
+                    {
+                        player.GiveWeapon(WeaponHash.Sniperrifle, 9999);
+                    }
+                    else
+                    {
+                        player.GiveWeapon(WeaponHash.Pumpshotgun, 9999);
+                    }
                     playerDataManager.NotifyPlayer(player, "Praca rozpoczęta!");
                     player.SetSharedData("job", "hunter");
                     GetRandomAnimalAndSendToPlayer(player);
@@ -81,7 +93,7 @@ namespace ServerSide.Jobs
                 }
                 else
                 {
-                    playerDataManager.NotifyPlayer(player, "Nie posiadasz wystarczająco PN: 750!");
+                    playerDataManager.NotifyPlayer(player, "Nie odblokowałeś tej pracy!");
                 }
             }
             else
@@ -93,7 +105,34 @@ namespace ServerSide.Jobs
         public void GetRandomAnimalAndSendToPlayer(Player player)
         {
             Random rnd = new Random();
-            PedHash animal = animalsToHunt[probabilities[rnd.Next(0, probabilities.Length)]];
+
+            int luck = 0;
+            if(player.GetSharedData<bool>("jobBonus_123"))
+            {
+                luck = 10;
+            }
+            else if (player.GetSharedData<bool>("jobBonus_122"))
+            {
+                luck = 14;
+            }
+            else if (player.GetSharedData<bool>("jobBonus_121"))
+            {
+                luck = 20;
+            }
+
+            bool betterProb = luck == 0 ? false : rnd.Next(0, luck) == 0;
+
+            PedHash animal;
+
+            if (betterProb)
+            {
+                animal = animalsToHunt[luckyProbabilities[rnd.Next(0, probabilities.Length)]];
+            }
+            else
+            {
+                animal = animalsToHunt[probabilities[rnd.Next(0, probabilities.Length)]];
+            }
+
             rnd = new Random();
             Vector3 pos = positions[rnd.Next(0, positions.Count)];
             player.TriggerEvent("huntNewAnimal", new Vector3(pos.X, pos.Y, pos.Z + 2.0f), animal, hunterPed.Position);

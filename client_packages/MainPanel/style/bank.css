@@ -1,0 +1,347 @@
+.bank_body{
+    width: 90%;
+    height: 80%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 4vh;
+    background-color: rgb(43, 43, 43, 0.7);
+    display: flex;
+    justify-content: space-between;
+}
+
+.bank_body_left{
+    width: 36%;
+    height: 91%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin: 3%;
+    margin-right: 1%;
+    box-sizing: border-box;
+    border-radius: 4vh;
+    background-color: rgba(63, 63, 63, 0.7);
+    border-bottom-right-radius: 0;
+}
+
+.bank_card{
+    width: 80%;
+    height: 30%;
+    background-image: url('../img/kartabasic.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    border-radius: 1vh;
+    margin: 5% 10%;
+}
+
+.bank_card p{
+    color: rgb(235, 235, 235);
+    position: absolute;
+    font-size: 1.5vh;
+    left: 10%;
+    bottom: 20%;
+}
+
+.bank_controls{
+    border-top: 1px solid gray;
+    height: 60%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bank_control{
+    width: 60%;
+    height: 4vh;
+    background-color: #000000;
+    background-image: linear-gradient(315deg, #141414 0%, #414141 74%);
+    font-size: 1.7vh;
+    color: white;
+    text-align: center;
+    border-radius: 1vh;
+    border: 1px solid gray;
+    line-height: 4vh;
+    margin: 1vh 0;
+}
+
+.bank_control_selected{
+    border: 1px solid #0c9;
+}
+
+.bank_control_locked{
+    width: 60%;
+    height: 4vh;
+    background-color: #000000;
+    background-image: linear-gradient(315deg, #141414 0%, #414141 74%);
+    font-size: 1.7vh;
+    color: white;
+    text-align: center;
+    border-radius: 1vh;
+    border: 1px solid gray;
+    line-height: 4vh;
+    margin: 1vh 0;
+    filter: blur(1px);
+}
+
+.bank_body_right{
+    width: 56%;
+    height: 91%;
+    margin: 3%;
+    margin-left: 1%;
+    box-sizing: border-box;
+    border-radius: 4vh;
+    background-color: rgba(63, 63, 63, 0.7);
+    border-bottom-left-radius: 0;
+}
+
+.bank_data_body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.bank_body_selected{
+    display: flex !important;
+}
+
+.bank_data_info{
+    width: 100%;
+    height: 35%;
+    padding: 2vh;
+    box-sizing: border-box;
+    border-bottom: 1px solid gray;
+}
+
+.bank_data_info_row > img{
+    width: 13vh;
+    height: 13vh;
+    border-radius: 30%;
+    border: 1px solid white;
+}
+
+.bank_data_info_row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bank_data_info_col{
+    width: 100%;
+    color: white;
+    font-size: 2.2vh;
+    padding: 1vh 2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bank_data_info_col p{
+    margin: 0;
+    width: 100%;
+    text-align: start;
+    font-size: 2.1vh;
+}
+
+.bank_data_info_accnmbr{
+    width: 100%;
+    height: 4vh;
+    background-color: #000000;
+    background-image: linear-gradient(315deg, #141414 0%, #414141 74%);
+    text-align: center;
+    line-height: 4vh;
+    border: 1px solid white;
+    transition: background-image 2s;
+    font-size: 1.5vh;
+}
+
+.bank_data_info_accnmbr:hover{
+    background-image: linear-gradient(315deg, #222222 0%, #414141 74%);
+}
+
+.bank_data_history{
+    width: 100%;
+    height: 65%;
+    padding: 1vh;
+    box-sizing: border-box;
+}
+
+.bank_data_history p{
+    margin: 0;
+    width: 100%;
+    text-align: start;
+    font-size: 1.8vh;
+    color: white;
+    height: 10%;
+    padding-left: 1vh;
+    box-sizing: border-box;
+}
+
+.bank_data_history_body{
+    width: 96%;
+    height: 83%;
+    background-color:#303030;
+    margin: 5% 2%;
+    margin-top: 2%;
+    box-sizing: border-box;
+    border-bottom-right-radius: 4vh;
+    border-top-right-radius: 4vh;
+    overflow-y: scroll;
+    direction:rtl;
+}
+
+.bank_data_history_item{
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: gray 1px solid;
+    direction: ltr;
+}
+
+.bank_data_history_item_top{
+    height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color: white;
+    font-size: 2vh;
+}
+
+.bank_data_history_item_bottom{
+    height: auto;
+    display: none;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    color: white;
+    font-size: 2vh;
+    box-sizing: border-box;
+}
+
+.bank_data_history_item_bottom > p{
+    font-size: 2vh;
+    padding: 0.5vh 1vh;
+    word-wrap: break-word;
+}
+
+
+.bank_data_history_body::-webkit-scrollbar {
+    width: 0.4vh;
+  }
+
+.bank_data_history_body::-webkit-scrollbar-thumb {
+    background: white;
+  }
+
+.bank_icon{
+    width: 12%;
+    height: auto;
+    background-image: url(../img/icons/incoming.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+}
+
+.bank_icon.out{
+    background-image: url(../img/icons/outgoing.png);
+}
+
+.bank_from, .bank_amount{
+    width: 44%;
+    line-height: 5vh;
+}
+
+.bank_amount{
+    text-align: right;
+    padding-right: 2vh;
+}
+
+.bank_transfer_body{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;  
+    padding: 2vh;
+    box-sizing: border-box;
+    font-size: 2vh;
+    color: white;
+}
+
+.bank_transfer_target{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bank_transfer_title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bank_transfer_amount{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bank_transfer_body p{
+    width: 50%;
+    
+}
+
+.bank_transfer_body .bank_transfer_amountInput, .bank_transfer_targetInput, textarea{
+    width: 50%;
+    outline: none;
+    background:rgb(36, 36, 36);
+    border: 1px solid white;
+    border-radius: 1vh;
+    height: 3vh;
+    color: white;
+    padding: 0.2vh 1vh;
+    font-size: 1.8vh;
+}
+
+.bank_transfer_amount input::-webkit-outer-spin-button, .bank_transfer_amount input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.bank_transfer_body textarea{
+    height: 5vh;
+    resize: none;
+    overflow: hidden;
+}
+
+.bank_transfer_buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bank_transfer_confirm{
+    width: 60%;
+    height: 4vh;
+    background-color: #000000;
+    background-image: linear-gradient(315deg, #141414 0%, #414141 74%);
+    font-size: 1.7vh;
+    color: white;
+    text-align: center;
+    border-radius: 1vh;
+    border: 1px solid #0c9;
+    line-height: 4vh;
+    margin: 1vh 0;
+}
+
+.bank_tab{
+    display: none;
+}

@@ -36,11 +36,13 @@ namespace ServerSide
 
                         if (!(player.HasSharedData("afk") && player.GetSharedData<bool>("afk")) && player.HasSharedData("bonustime"))
                         {
-                            player.SetSharedData("bonustime", player.GetSharedData<Int32>("bonustime") + 1);
-                            if(player.GetSharedData<Int32>("bonustime") >= 60)
+                            if (player.GetSharedData<Int32>("bonustime") < 60)
                             {
-                                player.SetSharedData("bonustime", 0);
-                                player.TriggerEvent("openPlaytimeBonusBrowser");
+                                player.SetSharedData("bonustime", player.GetSharedData<Int32>("bonustime") + 1);
+                                if(player.GetSharedData<Int32>("bonustime") == 60)
+                                {
+                                    playerDataManager.NotifyPlayer(player, "Bonus godzinny jest gotowy do odbioru w aplikacji Bonusy!");
+                                }
                             }
                             autoSave.SavePlayersBonusData(player, player.GetSharedData<Int32>("bonustime"));
                         }
@@ -152,7 +154,7 @@ namespace ServerSide
                 {
                     if (player.HasSharedData("spawned"))
                     {
-                        if (player.Dimension == 0 && !(player.HasSharedData("spec") && player.GetSharedData<bool>("spec")) && !(player.HasSharedData("job") && player.GetSharedData<string>("job") != ""))
+                        if (player.Dimension == 0 && !(player.HasSharedData("spec") && player.GetSharedData<bool>("spec")))
                         {
                             playerDataManager.UpdatePlayersLastPos(player);
                         }
@@ -167,7 +169,7 @@ namespace ServerSide
                     {
                         (vehicle.Occupants[0] as Player).TriggerEvent("updateDirtLevel");
                     }
-                    if ((vehicle.GetSharedData<string>("type") == "personal" && vehicle.HasSharedData("veh_brake") && !vehicle.GetSharedData<bool>("veh_brake")) || (vehicle.HasSharedData("type") && vehicle.GetSharedData<string>("type") == "lspd"))
+                    if ((vehicle.GetSharedData<string>("type") == "personal" && !(vehicle.HasSharedData("market") && vehicle.GetSharedData<bool>("market")) && vehicle.HasSharedData("veh_brake") && !vehicle.GetSharedData<bool>("veh_brake")) || (vehicle.HasSharedData("type") && vehicle.GetSharedData<string>("type") == "lspd"))
                     {
                         vehicleDataManager.UpdateVehiclesLastPos(vehicle);
                     }

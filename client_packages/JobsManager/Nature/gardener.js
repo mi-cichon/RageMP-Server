@@ -67,6 +67,11 @@ mp.events.add("gardener_setNewOrder", order => {
 
 mp.events.add("gardener_pickupAnimate", (type) => {
     let time = (type == 904 || type == 903) ? 5000 : 3000;
+    if (player.getVariable("jobBonus_112"))
+    {
+        time /= 2;
+    }
+
     mp.game.streaming.requestAnimDict("amb@prop_human_bum_bin@base");
     player.taskPlayAnim("amb@prop_human_bum_bin@base", "base", 1.0, 1.0, time, 2, 1.0, false, false, false);
     player.freezePosition(true);

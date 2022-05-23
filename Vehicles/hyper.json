@@ -1,5 +1,39 @@
 [
    {
+      "name":"Zeno",
+      "model":655665811,
+      "power":22,
+      "speed":221,
+      "combustion":14,
+      "tank":40,
+      "trunk":[
+         4,
+         3
+      ],
+      "probability":3,
+      "price":862400,
+      "mechfactor":43120,
+      "visufactor":8624,
+      "extra":-1
+   },
+   {
+      "name":"Ignus",
+      "model":2850852987,
+      "power":16,
+      "speed":216,
+      "combustion":12,
+      "tank":40,
+      "trunk":[
+         4,
+         3
+      ],
+      "probability":4,
+      "price":810000,
+      "mechfactor":39000,
+      "visufactor":23400,
+      "extra":-1
+   },
+   {
       "name":"811",
       "model":2465164804,
       "power":30,

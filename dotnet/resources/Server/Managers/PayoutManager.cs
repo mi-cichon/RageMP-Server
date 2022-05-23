@@ -9,14 +9,13 @@ namespace ServerSide
 {
     public class PayoutManager
     {
-        PlayerDataManager playerDataManager = new PlayerDataManager();
+        PlayerDataManager playerDataManager;
         Dictionary<string, float> bonuses = new Dictionary<string, float>()
         {
             ["debrisCleaner"] = 1.0f,
             ["warehouse"] = 1.0f,
             ["lawnmowing"] = 1.0f,
-            ["junkyard"] = 1.0f,
-
+            //["junkyard"] = 1.0f,
             ["gardener"] = 1.0f,
             ["fisherman"] = 1.0f,
             ["forklifts"] = 1.0f,
@@ -27,39 +26,159 @@ namespace ServerSide
         };
         public string[] currentBonus;
         public DateTime bonusTime;
-        public PayoutManager()
+        public PayoutManager(ref PlayerDataManager playerDataManager)
         {
+            this.playerDataManager = playerDataManager;
+        }
 
+        public void WarehousePayment(Player player)
+        {
+            double bonus = 1;
+            if (player.GetSharedData<bool>("jobBonus_3"))
+            {
+                bonus = 1.6;
+            }
+            else if (player.GetSharedData<bool>("jobBonus_2"))
+            {
+                bonus = 1.4;
+            }
+            else if (player.GetSharedData<bool>("jobBonus_1"))
+            {
+                bonus = 1.2;
+            }
+
+            
+            int exp = player.GetSharedData<bool>("jobBonus_6") ? 1 : 2;
+
+            int money = Convert.ToInt32(4 * bonus);
+            money = Convert.ToInt32(addPlayersBonus(player, money) * bonuses["warehouse"]);
+
+
+            playerDataManager.UpdatePlayersJobBonus(player, "warehouse", exp);
+
+            playerDataManager.GiveMoney(player, money);
+            playerDataManager.UpdatePlayersExp(player, exp);
+            player.TriggerEvent("updateJobVars", money, exp);
+        }
+
+        public void ForkliftsPayment(Player player, bool special)
+        {
+            double bonus = 1;
+            if (player.GetSharedData<bool>("jobBonus_10"))
+            {
+                bonus = 1.25;
+            }
+            else if (player.GetSharedData<bool>("jobBonus_9"))
+            {
+                bonus = 1.15;
+            }
+            else if (player.GetSharedData<bool>("jobBonus_8"))
+            {
+                bonus = 1.1;
+            }
+
+            int exp = 8;
+
+            int money = Convert.ToInt32(30 * bonus);
+
+            if (special)
+            {
+                money *= 5;
+            }
+
+            money = Convert.ToInt32(addPlayersBonus(player, money) * bonuses["forklifts"]);
+
+
+            playerDataManager.UpdatePlayersJobBonus(player, "forklifts", exp);
+
+            playerDataManager.GiveMoney(player, money);
+            playerDataManager.UpdatePlayersExp(player, exp);
+            player.TriggerEvent("updateJobVars", money, exp);
+        }
+
+        public void TowtruckPayment(Player player, string type, float distance, float dmg)
+        {
+            int money = 0;
+            if (type == "car")
+            {
+                money = Convert.ToInt32(distance / 12);
+            }
+            else
+            {
+                money = Convert.ToInt32(distance / 17);
+            }
+
+            int exp = 65;
+            if (type == "wreck")
+                exp = 40;
+
+
+            playerDataManager.UpdatePlayersJobBonus(player, "towtruck", exp);
+
+            money = Convert.ToInt32(money * dmg);
+            money = Convert.ToInt32(addPlayersBonus(player, money) * bonuses["towtrucks"]);
+
+            playerDataManager.GiveMoney(player, money);
+            playerDataManager.UpdatePlayersExp(player, exp);
+
+            player.TriggerEvent("updateJobVars", money, exp);
+        }
+
+        public void RefineryPayment(Player player, int liters, int type)
+        {
+            int money = (int)(liters * 0.25);
+            money = (int)(money * (1 + (0.05 * (type - 1))));
+
+            int exp = liters / 8;
+
+
+            playerDataManager.UpdatePlayersJobBonus(player, "refinery", exp);
+
+            money = Convert.ToInt32(addPlayersBonus(player, money) * bonuses["refinery"]);
+            playerDataManager.GiveMoney(player, money);
+            playerDataManager.UpdatePlayersExp(player, exp);
+            player.TriggerEvent("updateJobVars", money, exp);
         }
 
         public void DebrisCleanerPayment(Player player, int weight)
         {
-            int points = 0;
-            if(weight >= 50)
-            {
-                points = 2;
-            }
-            else if(weight >= 25)
-            {
-                points = 1;
-            }
-            int waterPoints = Convert.ToInt32(Math.Floor(weight / 10.0));
             int money = weight;
-            points = Convert.ToInt32(points * bonuses["debrisCleaner"]);
-            AddWaterPoints(player, waterPoints);
+
+            double bonus = 1;
+            if (player.GetSharedData<bool>("jobBonus_59"))
+            {
+                bonus = 1.5;
+            }
+            else if (player.GetSharedData<bool>("jobBonus_58"))
+            {
+                bonus = 1.3;
+            }
+            else if (player.GetSharedData<bool>("jobBonus_57"))
+            {
+                bonus = 1.15;
+            }
+            else if (player.GetSharedData<bool>("jobBonus_56"))
+            {
+                bonus = 1.05;
+            }
+
+            int exp = weight / 15;
+
+            money = Convert.ToInt32(money * bonus);
+
             money = Convert.ToInt32(addPlayersBonus(player, money) * bonuses["debrisCleaner"]);
+
+            playerDataManager.UpdatePlayersJobBonus(player, "debriscleaner", exp);
+
             playerDataManager.GiveMoney(player, money);
-            if(points>0)
-                playerDataManager.UpdatePlayersExp(player, points * 8);
-            player.TriggerEvent("updateJobVars", money, points * 15, waterPoints);
-
+            playerDataManager.UpdatePlayersExp(player, exp);
+            player.TriggerEvent("updateJobVars", money, exp);
         }
-
         public void DiverPayment(Player player, int priceMult)
         {
-            int reward = 100 * (priceMult / 2);
+            int money = Convert.ToInt32(100 * (priceMult / 2.0));
             int exp = 10;
-            switch(priceMult)
+            switch (priceMult)
             {
                 case 1:
                     playerDataManager.NotifyPlayer(player, "Znalazłeś pospolity przedmiot!");
@@ -77,156 +196,261 @@ namespace ServerSide
                     playerDataManager.NotifyPlayer(player, "Znalazłeś bardzo rzadki przedmiot!");
                     break;
             }
-            var points = new Random().Next(1, 3);
-            AddWaterPoints(player, points);
-            reward = Convert.ToInt32(addPlayersBonus(player, reward) * bonuses["diver"]);
-            playerDataManager.GiveMoney(player, reward);
+
+            double bonus = 1;
+            if (player.GetSharedData<bool>("jobBonus_65"))
+            {
+                bonus = 1.25;
+            }
+            else if (player.GetSharedData<bool>("jobBonus_64"))
+            {
+                bonus = 1.15;
+            }
+            else if (player.GetSharedData<bool>("jobBonus_63"))
+            {
+                bonus = 1.1;
+            }
+
+            money = Convert.ToInt32(bonus * money);
+            money = Convert.ToInt32(addPlayersBonus(player, money) * bonuses["diver"]);
+
+            playerDataManager.UpdatePlayersJobBonus(player, "diver", exp);
+
+            playerDataManager.GiveMoney(player, money);
             playerDataManager.UpdatePlayersExp(player, exp);
-            player.TriggerEvent("updateJobVars", reward, exp, points);
+            player.TriggerEvent("updateJobVars", money, exp);
         }
 
-        public void WarehousePayment(Player player)
+        public void FisherManPoints(Player player, int type, int size)
         {
             Random rnd = new Random();
-            int luck = rnd.Next(0, 2);
-            int money = 4;
-            int exp = Convert.ToInt32(1 * bonuses["warehouse"]);
-            AddLogisticPoints(player, 1);
-            money = Convert.ToInt32(addPlayersBonus(player, money) * bonuses["warehouse"]);
-            playerDataManager.GiveMoney(player, money);
-            playerDataManager.UpdatePlayersExp(player, exp);
-            player.TriggerEvent("updateJobVars", money, exp, 1);
-        }
-        public void ForkliftsPayment(Player player)
-        {
-            Random rnd = new Random();
-            int money = rnd.Next(20, 41);
-            int exp = 10;
-            AddLogisticPoints(player, 1);
-            exp = Convert.ToInt32(exp * bonuses["forklifts"]);
-            money = Convert.ToInt32(addPlayersBonus(player, money) * bonuses["forklifts"]);
-            playerDataManager.GiveMoney(player, money);
-            playerDataManager.UpdatePlayersExp(player, exp);
-            player.TriggerEvent("updateJobVars", money, exp, 1);
-        }
-        public void LawnmowingPayment(Player player)
-        {
-            Random rnd = new Random();
-            int luck = rnd.Next(0, 2);
-            int points = 25;
-            int money = rnd.Next(100, 141);
-            points = Convert.ToInt32(points * bonuses["lawnmowing"]);
-            money = Convert.ToInt32(addPlayersBonus(player, money) * bonuses["lawnmowing"]);
-            playerDataManager.GiveMoney(player, money);
-            if (points != 0)
+            int price = 0;
+            int luck = 0;
+            if (type == 0)
             {
-                AddNaturePoints(player, 2);
-                playerDataManager.UpdatePlayersExp(player, points);
-            }
-            else
-            {
-                AddNaturePoints(player, 1);
-            }
-            player.TriggerEvent("updateJobVars", money, points, points != 0 ? 4 : 2);
-        }
-
-        public void GardenerPlantsSold(Player player, int exp)
-        {
-            exp = Convert.ToInt32(exp * bonuses["gardener"]);
-            int np = exp / 20;
-            AddNaturePoints(player, np);
-            playerDataManager.UpdatePlayersExp(player, exp);
-            player.TriggerEvent("updateJobVars", 0, exp, np);
-        }
-        public void GardenerOrderCompleted(Player player, string order)
-        {
-            int[] baseOrder = JsonConvert.DeserializeObject<int[]>(order);
-            int exp = Convert.ToInt32(100 * bonuses["gardener"]);
-            int money = (15 * (baseOrder[0] + baseOrder[1] + baseOrder[2])) + (35 * (baseOrder[3] + baseOrder[4]));
-            money = Convert.ToInt32(money * bonuses["gardener"]);
-            AddNaturePoints(player, 15);
-            playerDataManager.GiveMoney(player, money);
-            player.TriggerEvent("updateJobVars", money, exp, 15);
-        }
-        
-        public void HunterPaymentAnimal(Player player, string pedstr)
-        {
-            int exp = 100, np = 0;
-            exp = Convert.ToInt32(exp * bonuses["hunter"]);
-            switch (pedstr)
-            {
-                case "1682622302":
-                    playerDataManager.NotifyPlayer(player, "Upolowałeś kojota!");
-                    np = 3;
-                    break;
-                case "3462393972":
-                    playerDataManager.NotifyPlayer(player, "Upolowałeś dzika!");
-                    np = 3;
-                    break;
-                case "3753204865":
-                    playerDataManager.NotifyPlayer(player, "Upolowałeś zająca!");
-                    np = 4;
-                    break;
-                case "1641334641":
-                    playerDataManager.NotifyPlayer(player, "Upolowałeś SAMSKŁENCZA!");
-                    np = 5;
-                    break;
-                case "307287994":
-                    playerDataManager.NotifyPlayer(player, "Upolowałeś pumę!");
-                    np = 5;
-                    break;
-                case "3630914197":
-                    playerDataManager.NotifyPlayer(player, "Upolowałeś jelenia!");
-                    np = 3;
-                    break;
-            }
-            AddNaturePoints(player, np);
-            playerDataManager.UpdatePlayersExp(player, exp);
-            player.TriggerEvent("updateJobVars", 0, exp, np);
-            //logManager.LogJobTransaction(player.SocialClubId.ToString(), $"Myśliwy: +{reward.ToString()}$, +1PP ({player.GetSharedData<Int32>("money")},{player.GetSharedData<Int32>("pp")})");
-        }
-
-        public void HunterPaymentPelts(Player player, List<string> pelts)
-        {
-            int reward = 0;
-            foreach (string pelt in pelts)
-            {
-                switch (pelt)
+                switch (size)
                 {
-                    case "8":
-                        reward += 240;
+                    case 1:
+                        luck = rnd.Next(1, 3);
+                        switch (luck)
+                        {
+                            case 1:
+                                playerDataManager.NotifyPlayer(player, "Złowiłeś Karpia!");
+                                player.TriggerEvent("fitItemInEquipment", 1003);
+                                break;
+                            case 2:
+                                playerDataManager.NotifyPlayer(player, "Złowiłeś Amura!");
+                                player.TriggerEvent("fitItemInEquipment", 1001);
+                                break;
+                        }
+                        price = 1;
                         break;
-                    case "7":
-                        reward += 170;
+                    case 2:
+                        luck = rnd.Next(1, 3);
+                        switch (luck)
+                        {
+                            case 1:
+                                playerDataManager.NotifyPlayer(player, "Złowiłeś Jesiotra!");
+                                player.TriggerEvent("fitItemInEquipment", 1002);
+                                break;
+                            case 2:
+                                playerDataManager.NotifyPlayer(player, "Złowiłeś Lina!");
+                                player.TriggerEvent("fitItemInEquipment", 1004);
+                                break;
+                        }
+                        price = 1;
                         break;
-                    case "5":
-                        reward += 80;
+                    case 3:
+                        luck = rnd.Next(1, 3);
+                        switch (luck)
+                        {
+                            case 1:
+                                playerDataManager.NotifyPlayer(player, "Złowiłeś Lipienia!");
+                                player.TriggerEvent("fitItemInEquipment", 1005);
+                                break;
+                            case 2:
+                                playerDataManager.NotifyPlayer(player, "Złowiłeś Karasia!");
+                                player.TriggerEvent("fitItemInEquipment", 1006);
+                                break;
+                        }
+                        price = 1;
                         break;
-                    case "10":
-                        reward += 560;
+                    case 4:
+                        luck = rnd.Next(1, 4);
+                        switch (luck)
+                        {
+                            case 1:
+                                playerDataManager.NotifyPlayer(player, "Złowiłeś Okonia!");
+                                player.TriggerEvent("fitItemInEquipment", 1007);
+                                break;
+                            case 2:
+                                playerDataManager.NotifyPlayer(player, "Złowiłeś Suma!");
+                                player.TriggerEvent("fitItemInEquipment", 1008);
+                                break;
+                            case 3:
+                                playerDataManager.NotifyPlayer(player, "Złowiłeś Szczupaka!");
+                                player.TriggerEvent("fitItemInEquipment", 1009);
+                                break;
+                        }
+                        price = 2;
                         break;
-                    case "9":
-                        reward += 300;
-                        break;
-                    case "6":
-                        reward += 160;
+                    case 5:
+                        luck = rnd.Next(1, 6);
+                        switch (luck)
+                        {
+                            case 1:
+                                playerDataManager.NotifyPlayer(player, "Złowiłeś stary gumowiec!");
+                                player.TriggerEvent("fitItemInEquipment", 1050);
+                                price = 1;
+                                break;
+                            case 2:
+                                playerDataManager.NotifyPlayer(player, "Złowiłeś stary garnek!");
+                                player.TriggerEvent("fitItemInEquipment", 1051);
+                                price = 1;
+                                break;
+                            case 3:
+                                playerDataManager.NotifyPlayer(player, "Złowiłeś zepsuty telefon!");
+                                player.TriggerEvent("fitItemInEquipment", 1052);
+                                price = 2;
+                                break;
+                            case 4:
+                                playerDataManager.NotifyPlayer(player, "Złowiłeś złoty zegarek!");
+                                player.TriggerEvent("fitItemInEquipment", 1053);
+                                price = 2;
+                                break;
+                            case 5:
+                                playerDataManager.NotifyPlayer(player, "Złowiłeś złoty pierścionek!");
+                                player.TriggerEvent("fitItemInEquipment", 1054);
+                                price = 3;
+                                break;
+                        }
                         break;
                 }
             }
-            playerDataManager.NotifyPlayer(player, $"Za skóry otrzymałeś {reward}$!");
-            reward = Convert.ToInt32(addPlayersBonus(player, reward) * bonuses["hunter"]);
-            playerDataManager.GiveMoney(player, reward);
-            player.TriggerEvent("updateJobVars", reward, 0, 0);
-            //logManager.LogJobTransaction(player.SocialClubId.ToString(), $"Myśliwy: +{reward.ToString()}$, +1PP ({player.GetSharedData<Int32>("money")},{player.GetSharedData<Int32>("pp")})");
-        }
-        
-        public void FisherManPoints(Player player, int price)
-        {
-            AddWaterPoints(player, price);
-            int exp = Convert.ToInt32(48 * bonuses["fisherman"]);
+            else
+            {
+                switch (size)
+                {
+                    case 1:
+                        luck = rnd.Next(1, 4);
+                        switch (luck)
+                        {
+                            case 1:
+                                playerDataManager.NotifyPlayer(player, "Złowiłeś Tobiasza!");
+                                player.TriggerEvent("fitItemInEquipment", 1010);
+                                break;
+                            case 2:
+                                playerDataManager.NotifyPlayer(player, "Złowiłeś Szprotę!");
+                                player.TriggerEvent("fitItemInEquipment", 1011);
+                                break;
+                            case 3:
+                                playerDataManager.NotifyPlayer(player, "Złowiłeś Krąpia!");
+                                player.TriggerEvent("fitItemInEquipment", 1012);
+                                break;
+                        }
+                        price = 1;
+                        break;
+                    case 2:
+                        luck = rnd.Next(1, 4);
+                        switch (luck)
+                        {
+                            case 1:
+                                playerDataManager.NotifyPlayer(player, "Złowiłeś Dorsza!");
+                                player.TriggerEvent("fitItemInEquipment", 1013);
+                                break;
+                            case 2:
+                                playerDataManager.NotifyPlayer(player, "Złowiłeś Belonę!");
+                                player.TriggerEvent("fitItemInEquipment", 1014);
+                                break;
+                            case 3:
+                                playerDataManager.NotifyPlayer(player, "Złowiłeś Łososia!");
+                                player.TriggerEvent("fitItemInEquipment", 1016);
+                                break;
+                        }
+                        price = 1;
+                        break;
+                    case 3:
+                        luck = rnd.Next(1, 4);
+                        switch (luck)
+                        {
+                            case 1:
+                                playerDataManager.NotifyPlayer(player, "Złowiłeś Sieję!");
+                                player.TriggerEvent("fitItemInEquipment", 1017);
+                                break;
+                            case 2:
+                                playerDataManager.NotifyPlayer(player, "Złowiłeś Halibuta!");
+                                player.TriggerEvent("fitItemInEquipment", 1018);
+                                break;
+                            case 3:
+                                playerDataManager.NotifyPlayer(player, "Złowiłeś Ciernika!");
+                                player.TriggerEvent("fitItemInEquipment", 1019);
+                                break;
+                        }
+                        price = 1;
+                        break;
+                    case 4:
+                        luck = rnd.Next(1, 4);
+                        switch (luck)
+                        {
+                            case 1:
+                                playerDataManager.NotifyPlayer(player, "Złowiłeś Flądrę!");
+                                player.TriggerEvent("fitItemInEquipment", 1020);
+                                break;
+                            case 2:
+                                playerDataManager.NotifyPlayer(player, "Złowiłeś Węgorzycę!");
+                                player.TriggerEvent("fitItemInEquipment", 1021);
+                                break;
+                            case 3:
+                                playerDataManager.NotifyPlayer(player, "Złowiłeś Węgorza!");
+                                player.TriggerEvent("fitItemInEquipment", 1022);
+                                break;
+                        }
+                        price = 2;
+                        break;
+                    case 5:
+                        luck = rnd.Next(1, 6);
+                        switch (luck)
+                        {
+                            case 1:
+                                playerDataManager.NotifyPlayer(player, "Złowiłeś starą skarpetę!");
+                                player.TriggerEvent("fitItemInEquipment", 1058);
+                                price = 1;
+                                break;
+                            case 2:
+                                playerDataManager.NotifyPlayer(player, "Złowiłeś stary nóż!");
+                                player.TriggerEvent("fitItemInEquipment", 1056);
+                                price = 1;
+                                break;
+                            case 3:
+                                playerDataManager.NotifyPlayer(player, "Złowiłeś zepsuty aparat!");
+                                player.TriggerEvent("fitItemInEquipment", 1055);
+                                price = 2;
+                                break;
+                            case 4:
+                                playerDataManager.NotifyPlayer(player, "Złowiłeś stare okulary!");
+                                player.TriggerEvent("fitItemInEquipment", 1057);
+                                price = 2;
+                                break;
+                            case 5:
+                                playerDataManager.NotifyPlayer(player, "Złowiłeś złoty pierścionek!");
+                                player.TriggerEvent("fitItemInEquipment", 1054);
+                                price = 3;
+                                break;
+                        }
+                        break;
+                }
+            }
+
+
+
+            int exp = price * 10;
             playerDataManager.UpdatePlayersExp(player, exp);
-            player.TriggerEvent("updateJobVars", 0, exp, price);
+            
+            playerDataManager.UpdatePlayersJobBonus(player, "fisherman", exp);
+
+            player.TriggerEvent("updateJobVars", 0, exp);
         }
+
 
         public void FisherSold(Player player, List<string> fishes)
         {
@@ -308,7 +532,6 @@ namespace ServerSide
             reward = Convert.ToInt32(addPlayersBonus(player, reward) * bonuses["fisherman"]);
             playerDataManager.NotifyPlayer(player, $"Za ryby otrzymałeś {reward}$!");
             playerDataManager.GiveMoney(player, reward);
-            //logManager.LogJobTransaction(player.SocialClubId.ToString(), $"Myśliwy: +{reward.ToString()}$, +1PP ({player.GetSharedData<Int32>("money")},{player.GetSharedData<Int32>("pp")})");
         }
         public void FisherJunkSold(Player player, List<string> junks)
         {
@@ -349,109 +572,215 @@ namespace ServerSide
             reward = Convert.ToInt32(addPlayersBonus(player, reward) * bonuses["fisherman"]);
             playerDataManager.NotifyPlayer(player, $"Za przedmioty otrzymałeś {reward}$!");
             playerDataManager.GiveMoney(player, reward);
+        }
+
+        public void LawnmowingPayment(Player player)
+        {
+            double bonus = 1;
+            if (player.GetSharedData<bool>("jobBonus_107"))
+            {
+                bonus = 1.5;
+            }
+            else if (player.GetSharedData<bool>("jobBonus_106"))
+            {
+                bonus = 1.3;
+            }
+            else if (player.GetSharedData<bool>("jobBonus_105"))
+            {
+                bonus = 1.15;
+            }
+            else if (player.GetSharedData<bool>("jobBonus_104"))
+            {
+                bonus = 1.05;
+            }
+
+
+            int money = 120;
+            int exp = 20;
+
+            money = Convert.ToInt32(money * bonus);
+
+            money = Convert.ToInt32(addPlayersBonus(player, money) * bonuses["lawnmowing"]);
+
+            playerDataManager.UpdatePlayersJobBonus(player, "lawnmowing", exp);
+
+            playerDataManager.GiveMoney(player, money);
+            playerDataManager.UpdatePlayersExp(player, exp);
+            player.TriggerEvent("updateJobVars", money, exp);
+        }
+
+        public void GardenerPlantsSold(Player player, int exp)
+        {
+            playerDataManager.UpdatePlayersExp(player, exp);
+            player.TriggerEvent("updateJobVars", 0, exp);
+
+            playerDataManager.UpdatePlayersJobBonus(player, "gardener", exp);
+
+        }
+
+        public void GardenerOrderCompleted(Player player, string order)
+        {
+            double bonus = 1;
+            if (player.GetSharedData<bool>("jobBonus_116"))
+            {
+                bonus = 1.25;
+            }
+            else if (player.GetSharedData<bool>("jobBonus_115"))
+            {
+                bonus = 1.15;
+            }
+            else if (player.GetSharedData<bool>("jobBonus_114"))
+            {
+                bonus = 1.05;
+            }
+
+            int[] baseOrder = JsonConvert.DeserializeObject<int[]>(order);
+
+            int exp = 100;
+            int money = (15 * (baseOrder[0] + baseOrder[1] + baseOrder[2])) + (35 * (baseOrder[3] + baseOrder[4]));
+            money = Convert.ToInt32(money * bonuses["gardener"]);
+            money = Convert.ToInt32(money * bonus);
+
+
+
+            playerDataManager.GiveMoney(player, money);
+            player.TriggerEvent("updateJobVars", money, exp);
+
+            playerDataManager.UpdatePlayersJobBonus(player, "gardener", exp);
+        }
+        
+        public void HunterPaymentAnimal(Player player, string pedstr)
+        {
+            int exp = 75;
+            switch (pedstr)
+            {
+                case "1682622302":
+                    playerDataManager.NotifyPlayer(player, "Upolowałeś kojota!");
+                    break;
+                case "3462393972":
+                    playerDataManager.NotifyPlayer(player, "Upolowałeś dzika!");
+                    break;
+                case "3753204865":
+                    playerDataManager.NotifyPlayer(player, "Upolowałeś zająca!");
+                    break;
+                case "1641334641":
+                    playerDataManager.NotifyPlayer(player, "Upolowałeś SAMSKŁENCZA!");
+                    break;
+                case "307287994":
+                    playerDataManager.NotifyPlayer(player, "Upolowałeś pumę!");
+                    break;
+                case "3630914197":
+                    playerDataManager.NotifyPlayer(player, "Upolowałeś jelenia!");
+                    break;
+            }
+            playerDataManager.UpdatePlayersExp(player, exp);
+            player.TriggerEvent("updateJobVars", 0, exp);
+
+            playerDataManager.UpdatePlayersJobBonus(player, "gardener", exp);
             //logManager.LogJobTransaction(player.SocialClubId.ToString(), $"Myśliwy: +{reward.ToString()}$, +1PP ({player.GetSharedData<Int32>("money")},{player.GetSharedData<Int32>("pp")})");
         }
 
-        public void SupplierPayment(Player player, int supplies, float dmg)
+        public void HunterPaymentPelts(Player player, List<string> pelts)
         {
-            Random rnd = new Random();
-            int reward = Convert.ToInt32((rnd.Next(150, 220) * supplies) * dmg);
-            AddLogisticPoints(player, supplies);
-            reward = Convert.ToInt32(addPlayersBonus(player, reward) * bonuses["supplier"]);
-            playerDataManager.GiveMoney(player, reward);
-            player.TriggerEvent("updateJobVars", reward, 0, supplies);
-
-        }
-
-        public void JunkyardPayment(Player player)
-        {
-            Random rnd = new Random();
-            int money = rnd.Next(6, 12);
-            int exp = 2;
-            exp = Convert.ToInt32(exp * bonuses["junkyard"]);
-            AddSocialPoints(player, 1);
-            money = Convert.ToInt32(addPlayersBonus(player, money) * bonuses["junkyard"]);
+            int money = 0;
+            foreach (string pelt in pelts)
+            {
+                switch (pelt)
+                {
+                    case "8":
+                        money += 240;
+                        break;
+                    case "7":
+                        money += 170;
+                        break;
+                    case "5":
+                        money += 80;
+                        break;
+                    case "10":
+                        money += 560;
+                        break;
+                    case "9":
+                        money += 300;
+                        break;
+                    case "6":
+                        money += 160;
+                        break;
+                }
+            }
+            playerDataManager.NotifyPlayer(player, $"Za skóry otrzymałeś {money}$!");
+            money = Convert.ToInt32(addPlayersBonus(player, money) * bonuses["hunter"]);
             playerDataManager.GiveMoney(player, money);
-            playerDataManager.UpdatePlayersExp(player, exp);
-            player.TriggerEvent("updateJobVars", money, exp, 1);
+            player.TriggerEvent("updateJobVars", money, 0);
+            //logManager.LogJobTransaction(player.SocialClubId.ToString(), $"Myśliwy: +{reward.ToString()}$, +1PP ({player.GetSharedData<Int32>("money")},{player.GetSharedData<Int32>("pp")})");
         }
+        
+        
 
-        public void TowtruckPayment(Player player, string type, float distance, float dmg)
-        {
-            int reward = 0;
-            if(type == "car")
-            {
-                reward = Convert.ToInt32(distance / 12);
-            }
-            else
-            {
-                reward = Convert.ToInt32(distance / 17);
-            }
-            int exp = 65;
-            if (type == "wreck")
-                exp = 40;
-            exp = Convert.ToInt32(exp * bonuses["towtrucks"]);
-            reward = Convert.ToInt32(reward * dmg);
-            AddSocialPoints(player, 4);
-            reward = Convert.ToInt32(addPlayersBonus(player, reward) * bonuses["towtrucks"]);
-            playerDataManager.GiveMoney(player, reward);
-            playerDataManager.UpdatePlayersExp(player, exp);
-            player.TriggerEvent("updateJobVars", reward, exp, 1);
-        }
-        public void RefineryPayment(Player player, int liters, int type)
-        {
-            int reward = (int)(liters * 0.25);
-            reward = (int)(reward * (1 + (0.05 * (type - 1))));
-            
-            int exp = liters / 8;
-            
-            exp = Convert.ToInt32(exp * bonuses["refinery"]);
-            AddSocialPoints(player, 4);
-            reward = Convert.ToInt32(addPlayersBonus(player, reward) * bonuses["refinery"]);
-            playerDataManager.GiveMoney(player, reward);
-            playerDataManager.UpdatePlayersExp(player, exp);
-            player.TriggerEvent("updateJobVars", reward, exp, type == 1 ? 3 : type == 2 ? 5 : type == 3 ? 7 : 0);
-        }
+        
+
+        //public void SupplierPayment(Player player, int supplies, float dmg)
+        //{
+        //    Random rnd = new Random();
+        //    int reward = Convert.ToInt32((rnd.Next(150, 220) * supplies) * dmg);
+        //    reward = Convert.ToInt32(addPlayersBonus(player, reward) * bonuses["supplier"]);
+        //    playerDataManager.GiveMoney(player, reward);
+        //    player.TriggerEvent("updateJobVars", reward, 0);
+
+        //}
+
+        //public void JunkyardPayment(Player player)
+        //{
+        //    Random rnd = new Random();
+        //    int money = rnd.Next(6, 12);
+        //    int exp = 2;
+        //    exp = Convert.ToInt32(exp * bonuses["junkyard"]);
+        //    money = Convert.ToInt32(addPlayersBonus(player, money) * bonuses["junkyard"]);
+        //    playerDataManager.GiveMoney(player, money);
+        //    playerDataManager.UpdatePlayersExp(player, exp);
+        //    player.TriggerEvent("updateJobVars", money, exp);
+        //}
+
+        
 
 
-        public void AddWaterPoints(Player player, int points)
-        {
-            int wp = player.GetSharedData<Int32>("waterpoints") + points;
-            DBConnection dataBase = new DBConnection();
-            player.SetSharedData("waterpoints", wp);
-            dataBase.command.CommandText = $"UPDATE jobs SET waterpoints = {wp} WHERE player = '{player.SocialClubId.ToString()}'";
-            dataBase.command.ExecuteNonQuery();
-            dataBase.connection.Close();
-        }
+        //public void AddWaterPoints(Player player, int points)
+        //{
+        //    int wp = player.GetSharedData<Int32>("waterpoints") + points;
+        //    DBConnection dataBase = new DBConnection();
+        //    player.SetSharedData("waterpoints", wp);
+        //    dataBase.command.CommandText = $"UPDATE jobs SET waterpoints = {wp} WHERE player = '{player.SocialClubId.ToString()}'";
+        //    dataBase.command.ExecuteNonQuery();
+        //    dataBase.connection.Close();
+        //}
 
-        public void AddLogisticPoints(Player player, int points)
-        {
-            int lp = player.GetSharedData<Int32>("logisticpoints") + points;
-            DBConnection dataBase = new DBConnection();
-            player.SetSharedData("logisticpoints", lp);
-            dataBase.command.CommandText = $"UPDATE jobs SET logisticpoints = {lp} WHERE player = '{player.SocialClubId.ToString()}'";
-            dataBase.command.ExecuteNonQuery();
-            dataBase.connection.Close();
-        }
-        public void AddNaturePoints(Player player, int points)
-        {
-            int np = player.GetSharedData<Int32>("naturepoints") + points;
-            DBConnection dataBase = new DBConnection();
-            player.SetSharedData("naturepoints", np);
-            dataBase.command.CommandText = $"UPDATE jobs SET naturepoints = {np} WHERE player = '{player.SocialClubId.ToString()}'";
-            dataBase.command.ExecuteNonQuery();
-            dataBase.connection.Close();
-        }
+        //public void AddLogisticPoints(Player player, int points)
+        //{
+        //    int lp = player.GetSharedData<Int32>("logisticpoints") + points;
+        //    DBConnection dataBase = new DBConnection();
+        //    player.SetSharedData("logisticpoints", lp);
+        //    dataBase.command.CommandText = $"UPDATE jobs SET logisticpoints = {lp} WHERE player = '{player.SocialClubId.ToString()}'";
+        //    dataBase.command.ExecuteNonQuery();
+        //    dataBase.connection.Close();
+        //}
+        //public void AddNaturePoints(Player player, int points)
+        //{
+        //    int np = player.GetSharedData<Int32>("naturepoints") + points;
+        //    DBConnection dataBase = new DBConnection();
+        //    player.SetSharedData("naturepoints", np);
+        //    dataBase.command.CommandText = $"UPDATE jobs SET naturepoints = {np} WHERE player = '{player.SocialClubId.ToString()}'";
+        //    dataBase.command.ExecuteNonQuery();
+        //    dataBase.connection.Close();
+        //}
 
-        public void AddSocialPoints(Player player, int points)
-        {
-            int np = player.GetSharedData<Int32>("socialpoints") + points;
-            DBConnection dataBase = new DBConnection();
-            player.SetSharedData("socialpoints", np);
-            dataBase.command.CommandText = $"UPDATE jobs SET socialpoints = {np} WHERE player = '{player.SocialClubId.ToString()}'";
-            dataBase.command.ExecuteNonQuery();
-            dataBase.connection.Close();
-        }
+        //public void AddSocialPoints(Player player, int points)
+        //{
+        //    int np = player.GetSharedData<Int32>("socialpoints") + points;
+        //    DBConnection dataBase = new DBConnection();
+        //    player.SetSharedData("socialpoints", np);
+        //    dataBase.command.CommandText = $"UPDATE jobs SET socialpoints = {np} WHERE player = '{player.SocialClubId.ToString()}'";
+        //    dataBase.command.ExecuteNonQuery();
+        //    dataBase.connection.Close();
+        //}
 
         private int addPlayersBonus(Player player, int money)
         {
@@ -468,7 +797,7 @@ namespace ServerSide
                 "Zbieranie odpadów",
                 "Magazynier",
                 "Koszenie trawników",
-                "Złomowisko",
+                //"Złomowisko",
                 "Ogrodnik",
                 "Wędkarstwo",
                 "Wózki widłowe",

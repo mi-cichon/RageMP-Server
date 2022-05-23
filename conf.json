@@ -5,7 +5,7 @@
 	"voice-chat" : true,
 	"stream-distance" : 500.0,
 	"csharp" : "enabled",
-	"bind" : "26.146.126.208",
+	"bind" : "26.173.15.152",
 	"port" : 22005,
 	"language" : "pl",
 	"api-threading-debugging" : false,

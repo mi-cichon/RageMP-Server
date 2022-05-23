@@ -180,3 +180,21 @@ mp.events.add("mainHUD_useEmojis", state => {
         hudBrowser.execute(`useEmojis(${state})`);
     }  
 });
+
+
+mp.events.add("test_mugshot", () => {
+    mp.gui.takeScreenshot("gielda.png", 1, 100, 0);
+    if(hudBrowser != null){
+        setTimeout(()=> {
+            hudBrowser.execute(`screenShotData('screenshots://gielda.png')`);
+        },3000);
+    }
+});
+
+mp.events.add("carMugshot_send", (urls) => {
+    let part1 = urls.slice(0, urls.length/4);
+    let part2 = urls.slice(urls.length/4, urls.length/2);
+    let part3 = urls.slice(urls.length/2, urls.length * 3/4);
+    let part4 = urls.slice(urls.length * 3/4, urls.length);
+    mp.events.callRemote("carMugshot_create", part1, part2, part3, part4);
+});

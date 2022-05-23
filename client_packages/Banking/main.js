@@ -11,7 +11,7 @@ mp.events.add("openBankingBrowser", (money) => {
         bankingBrowser = mp.browsers.new("package://Banking/index.html");
         mp.gui.cursor.show(true, true);
         mp.events.callRemote("setGui", true);
-        bankingBrowser.execute(`setVars('${money}', '${player.getVariable('socialclub')}')`);
+        bankingBrowser.execute(`setVars('${money}', '${player.getVariable('socialclub')}', '${player.getVariable("accnumber")}')`);
     }
 });
 

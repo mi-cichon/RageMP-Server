@@ -19,7 +19,7 @@ let boxPositions = [
 ];
 
 mp.events.add("render", () => {
-    if(mp.objects.exists(boxObj)){
+    if(!player.getVariable("jobBonus_6") && mp.objects.exists(boxObj)){
         mp.game.controls.disableControlAction(32, 21, true);
         mp.game.controls.disableControlAction(32, 22, true);
     }
