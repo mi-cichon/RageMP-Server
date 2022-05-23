@@ -169,3 +169,8 @@ mp.events.add("mainPanel_setProgressData", (jobData, nodesData) => {
         mainPanel_browser.execute(`setProgressData('${jobData}', '${nodesData}')`);
     }
 }); 
+
+
+setTimeout(() => {
+    mp.console.logInfo(server_conf.version);
+}, 5000);

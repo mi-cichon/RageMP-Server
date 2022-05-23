@@ -9,6 +9,7 @@ mp.events.add("openMainHUD", (remoteid) => {
     }
     hudBrowser.execute(`setScales(${player.getVariable("settings_HudSize")}, ${player.getVariable("settings_ChatSize")})`);
     hudBrowser.execute(`setAvatar('${player.getVariable("socialclub")}')`);
+    hudBrowser.execute(`$(".hud_server_version").text("BasicRPG v${server_conf.version}")`);
 });
 
 mp.events.add("closeMainHUD", () => {
