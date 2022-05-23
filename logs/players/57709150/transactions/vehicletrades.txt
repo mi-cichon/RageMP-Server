@@ -1,4 +1,0 @@
-[23.08.2021 11:17:20] Zakupiono pojazd z komisu o ID: 4 za 255000
-[24.08.2021 20:31:44] Zakupiono pojazd z komisu o ID: 14 za 97640
-[24.08.2021 21:34:24] Sprzedano pojazd o ID 19 za 1000000$ graczowi 112683840
-[25.08.2021 00:42:12] Zakupiono pojazd z komisu o ID: 26 za 39300

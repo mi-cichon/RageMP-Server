@@ -1,3 +1,0 @@
-[11.09.2021 11:28:34] Zarejestrowano gracza
-[11.09.2021 11:28:34] Zalogowano z IP: 89.64.32.102
-[11.09.2021 11:43:00] Opuszczono serwer z IP: 89.64.32.102
