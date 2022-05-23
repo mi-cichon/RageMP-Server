@@ -1,11 +1,13 @@
 let spacer = " ";
 let operation = null;
-function setVars(money, social){
+function setVars(money, social, cardnumber){
     operation = null;
     $(".bank_avatar").css("background-image", `url('http://51.38.135.199/avatars/${social}/avatar.png')`);
     $("*").removeClass("bank_selected");
     $(".bank_account_state").text("$ " + betterNumbers(money));
-    getRandomCardNumber(social.toString());
+    let result = cardnumber.replace(/.{4}/g, '$& ');
+    result = result.trimEnd();
+    $(".bank_card p").text(result);
 }
 
 $(".bank_withdraw").on("click", function(){
@@ -48,7 +50,6 @@ $(".bank_accept").on("click", function(){
 $(".bank_cancel").on("click", function(){
     mp.trigger('closeBankingBrowser');
 });
-
 
 function getRandomCardNumber(s){
     let seed1 = s.toString();

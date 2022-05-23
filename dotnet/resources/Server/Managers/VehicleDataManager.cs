@@ -90,12 +90,17 @@ namespace ServerSide
 
                 }
             }
-            dataBase.command.CommandText = $"UPDATE vehicles SET spawned = '{bool.TrueString}' WHERE id = {id}";
-            if(dataBase.command.CommandText != ""){
-                dataBase.command.ExecuteNonQuery();
-                dataBase.connection.Close();
-                return vehicle;
+            if(vehicle != null)
+            {
+                dataBase.command.CommandText = $"UPDATE vehicles SET spawned = '{bool.TrueString}' WHERE id = {id}";
+                if (dataBase.command.CommandText != "")
+                {
+                    dataBase.command.ExecuteNonQuery();
+                    dataBase.connection.Close();
+                    return vehicle;
+                }
             }
+            dataBase.connection.Close();
             return null;
         }
 
@@ -194,7 +199,7 @@ namespace ServerSide
                         dataBase.command.CommandText = $"UPDATE vehicles SET lastpos = '{VectorToJson(vehicle.GetSharedData<Vector3>("lastpos"))}', lastrot = '{VectorToJson(vehicle.GetSharedData<Vector3>("lastrot"))}' WHERE id = '{vehicle.GetSharedData<Int32>("id")}'";
                         break;
                     case "market":
-                        string market = vehicle.GetSharedData<bool>("market") is true ? "Market" : bool.TrueString;
+                        string market = vehicle.GetSharedData<bool>("market") ? "Market" : bool.TrueString;
                         dataBase.command.CommandText = $"UPDATE vehicles SET spawned = '{market}' WHERE id = '{vehicle.GetSharedData<Int32>("id")}'";
                         break;
                     case "dirt":
@@ -987,7 +992,7 @@ namespace ServerSide
             Vehicle vehicle = null;
             foreach (Vehicle veh in NAPI.Pools.GetAllVehicles())
             {
-                if (veh != null && veh.HasSharedData("type") && veh.GetSharedData<string>("type") == "personal" && !(veh.HasSharedData("towed") && veh.GetSharedData<bool>("towed")) && veh.Occupants.Count == 0)
+                if (veh != null && veh.HasSharedData("type") && veh.GetSharedData<string>("type") == "personal" && !(veh.HasSharedData("towed") && veh.GetSharedData<bool>("towed")) && veh.Occupants.Count == 0 && !(veh.HasSharedData("market") && veh.GetSharedData<bool>("market")))
                     if (DateTime.Compare(DateTime.Parse(veh.GetSharedData<string>("used")).AddHours(32), DateTime.Now) < 0)
                     {
                         vehicles.Add(veh);

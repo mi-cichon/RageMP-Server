@@ -12,7 +12,7 @@ namespace ServerSide
         {
             containerColshape = NAPI.ColShape.CreateCylinderColShape(containerPosition, 2.0f, 2.0f);
             containerColshape.SetSharedData("type", "debriscleaner");
-            NAPI.Blip.CreateBlip(440, containerPosition, 0.8f, 69, name: "Praca: Zbieranie odpadów (Woda)", shortRange: true);
+            NAPI.Blip.CreateBlip(440, containerPosition, 0.8f, 69, name: "Praca: Zbieranie odpadów", shortRange: true);
             NAPI.Ped.CreatePed((uint)PedHash.Tramp01, containerPosition, -65, frozen: true, invincible: true);
             NAPI.TextLabel.CreateTextLabel("Zbieracz", new Vector3(containerPosition.X, containerPosition.Y, containerPosition.Z + 1.3), 10.0f, 0.2f, 0, new Color(255, 255, 255));
         }

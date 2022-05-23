@@ -41,9 +41,14 @@ body{
   border-radius: 0.4vh;
   transition: all 1s;
   background-color: rgba(94, 97, 96, 0);
+  filter:blur(2px)
 }
 
-.interface_job:hover{
+.interface_job.available{
+    filter: none;
+}
+
+.interface_job.available:hover{
   border: 1px solid #0c9;
   background-color: rgba(94, 97, 96, 0.6);
 }

@@ -77,7 +77,7 @@ namespace ServerSide.Jobs
 
             if (!player.GetSharedData<bool>("nodriving"))
             {
-                if (player.GetSharedData<Int32>("logisticpoints") >= 250)
+                if (player.GetSharedData<Int32>("logisticpoints") >= 750)
                 {
                     if(player.GetSharedData<string>("job") == "" && !(player.HasSharedData("lspd_duty") && player.GetSharedData<bool>("lspd_duty")))
                     {
@@ -132,7 +132,6 @@ namespace ServerSide.Jobs
             } while (!done);
             Vehicle trailer = NAPI.Vehicle.CreateVehicle(availableTrailers[rnd.Next(0, availableTrailers.Count)], position.Key, position.Value, 41, 41, numberPlate: "Dostawca");
             trailer.SetSharedData("type", "trailer");
-            //trailer.SetSharedData("parkingbrake", true);
             trailer.Rotation = new Vector3(0, 0, position.Value);
             if(trailers.ContainsKey(player))
             {

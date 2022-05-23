@@ -125,7 +125,7 @@ mp.events.add('render', () => {
                     }
                     break;
                 case "fisherman":
-                    mp.events.callRemote("buyFishingRod");
+                    mp.events.call("openRodShopBrowser");
                     break;
                 case "fishingspot":
                     if(player.getVariable("job") == "")
@@ -391,7 +391,7 @@ mp.events.add('playerEnterColshape', (shape) => {
                 break;
             case "fisherman":
                 colShapeType = type;
-                mp.events.call("showNotification", "Naciśnij E aby zakupić wędkę ($3000)!")
+                mp.events.call("showNotification", "Naciśnij E aby otworzyć sklep z wędkami!")
                 colShape = shape;
                 break;
             case "fishingspot":

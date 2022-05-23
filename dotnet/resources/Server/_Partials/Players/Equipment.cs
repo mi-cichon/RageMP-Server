@@ -145,6 +145,34 @@ namespace ServerSide
                     playerDataManager.NotifyPlayer(player, "Nie zmieścisz tego przedmiotu do ekwipunku!");
                 }
             }
+            else if(type == "rod")
+            {
+                int cost = 0;
+                switch (itemId)
+                {
+                    case 997:
+                        cost = 1000;
+                        break;
+                    case 998:
+                        cost = 3000;
+                        break;
+                    case 999:
+                        cost = 8000;
+                        break;
+                    case 1000:
+                        cost = 15000;
+                        break;
+                }
+                if (playerDataManager.UpdatePlayersMoney(player, -1 * cost))
+                {
+                    player.TriggerEvent("addItemToEquipment", itemId);
+                    playerDataManager.NotifyPlayer(player, "Pomyślnie zakupiono przedmiot!");
+                }
+                else
+                {
+                    playerDataManager.NotifyPlayer(player, "Nie stać Cię na ten przedmiot!");
+                }
+            }
             else
             {
                 if (state)

@@ -83,6 +83,7 @@ mp.events.add('render', () => {
 
 mp.events.add("playerCreateWaypoint", (position) => {
     waypointPos = position;
+    //mp.console.logInfo(JSON.stringify(waypointPos));
     // if(player.vehicle){
     //     mp.events.callRemote("setPassengersWaypoint", player.vehicle, position.x, position.y, position.z);
     // }

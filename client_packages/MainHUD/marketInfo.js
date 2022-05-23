@@ -1,6 +1,7 @@
 function setMarketValues(id, price, name, owner, desc, tune){
     $(".marketTable tr").remove();
     $(".marketInfo").css("display", "block");
+    $(".market_tuneBody").remove();
     $(".marketTable").append(`
         <tr>
             <td>${name}</td>
@@ -28,13 +29,12 @@ function setMarketValues(id, price, name, owner, desc, tune){
                 <td><div class="spacer"></td>
             </tr>
         `);
+        $(".marketTable").append(`<div class="market_tuneBody"></div>`);
         tune.forEach(t => {
-            $(".marketTable").append(`
-                <tr>
-                    <td>${t}</td>
-                </tr>
-            `);
+            $(".market_tuneBody").text($(".market_tuneBody").text() + `, ${t}`);
         });
+        let text = $(".market_tuneBody").text();
+        $(".market_tuneBody").text(text.substring(2));
     }
 }
 

@@ -84,7 +84,7 @@ namespace ServerSide
             ColShape start = NAPI.ColShape.CreateCylinderColShape(startPos, 1.0f, 2.0f);
             start.SetSharedData("type", "refinery");
             new CustomMarkers().CreateJobMarker(startPos, "Rafineria");
-            NAPI.Blip.CreateBlip(750, startPos, 0.8f, 69, name: "Praca: Rafineria (Społeczna)", shortRange: true);
+            NAPI.Blip.CreateBlip(750, startPos, 0.8f, 69, name: "Praca: Rafineria", shortRange: true);
             foreach(Vector3 smallPump in smallPumps)
             {
                 oilPumps.Add(new OilPump(smallPump, 1200));
@@ -102,7 +102,7 @@ namespace ServerSide
         {
             if (!player.GetSharedData<bool>("nodriving"))
             {
-                if (player.GetSharedData<Int32>("socialpoints") >= 750)
+                if (player.GetSharedData<bool>("jobBonus_12"))
                 {
                     if (player.GetSharedData<string>("job") == "" && !(player.HasSharedData("lspd_duty") && player.GetSharedData<bool>("lspd_duty")))
                     {
@@ -117,7 +117,7 @@ namespace ServerSide
                 }
                 else
                 {
-                    playerDataManager.NotifyPlayer(player, "Nie posiadasz wystarczająco PS: 750!");
+                    playerDataManager.NotifyPlayer(player, "Nie odblokowałeś tej pracy!");
                 }
             }
             else

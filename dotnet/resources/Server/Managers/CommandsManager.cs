@@ -171,32 +171,32 @@ namespace ServerSide
                             playerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
                         }
                         break;
-                    case "przelew":
-                        if(args.Count == 1)
-                        {
-                            Player target = playerDataManager.GetPlayerByRemoteId(args[0]);
-                            if(target != null && target != player)
-                            {
-                                if(target.Position.DistanceTo(player.Position) <= 10)
-                                {
-                                    player.TriggerEvent("openMoneyTransferBrowser", target);
-                                }
-                                else
-                                {
-                                    playerDataManager.NotifyPlayer(player, "Gracz jest za daleko!");
-                                }
+                    //case "przelew":
+                    //    if(args.Count == 1)
+                    //    {
+                    //        Player target = playerDataManager.GetPlayerByRemoteId(args[0]);
+                    //        if(target != null && target != player)
+                    //        {
+                    //            if(target.Position.DistanceTo(player.Position) <= 10)
+                    //            {
+                    //                player.TriggerEvent("openMoneyTransferBrowser", target);
+                    //            }
+                    //            else
+                    //            {
+                    //                playerDataManager.NotifyPlayer(player, "Gracz jest za daleko!");
+                    //            }
                                 
-                            }
-                            else
-                            {
-                                playerDataManager.NotifyPlayer(player, "Nie znaleziono gracza!");
-                            }
-                        }
-                        else
-                        {
-                            playerDataManager.NotifyPlayer(player, "Niepoprawna składnia komendy!");
-                        }
-                        break;
+                    //        }
+                    //        else
+                    //        {
+                    //            playerDataManager.NotifyPlayer(player, "Nie znaleziono gracza!");
+                    //        }
+                    //    }
+                    //    else
+                    //    {
+                    //        playerDataManager.NotifyPlayer(player, "Niepoprawna składnia komendy!");
+                    //    }
+                    //    break;
                     case "time":
                         if(arguments == null)
                         {
@@ -247,25 +247,46 @@ namespace ServerSide
                             }
                         }
                         break;
-                    //case "pmoff":
-                    //    if(args.Count > 0)
-                    //    {
-                    //        player.SetSharedData("pmoff", argText);
-                    //        playerDataManager.NotifyPlayer(player, "Blokowanie wiadomości prywatnych włączone!");
-                    //    }
-                    //    else if(arguments == null)
-                    //    {
-                    //        player.SetSharedData("pmoff", "Brak.");
-                    //        playerDataManager.NotifyPlayer(player, "Blokowanie wiadomości prywatnych włączone!");
-                    //    }
-                    //    break;
-                    //case "pmon":
-                    //    if(arguments != null)
-                    //    {
-                    //        player.SetSharedData("pmoff", "");
-                    //        playerDataManager.NotifyPlayer(player, "Wyłączono blokowanie wiadomości prywatnych!");
-                    //    }
-                    //    break;
+                    case "zapiszpozycje":
+                        if (argsCount > 0)
+                        {
+                            string position = "";
+                            if (player.Vehicle != null)
+                            {
+                                position = $"new Vector3({player.Vehicle.Position.X.ToString().Replace(',', '.')}f, {player.Vehicle.Position.Y.ToString().Replace(',', '.')}f, {player.Vehicle.Position.Z.ToString().Replace(',', '.')}f); heading: {player.Vehicle.Heading.ToString().Replace(',', '.')}f  -  {argText} (pojazd)";
+                            }
+                            else
+                            {
+                                position = $"new Vector3({player.Position.X.ToString().Replace(',', '.')}f, {player.Position.Y.ToString().Replace(',', '.')}f, {player.Position.Z.ToString().Replace(',', '.')}f); heading: {player.Heading.ToString().Replace(',', '.')}f  -  {argText}";
+                            }
+
+                            File.AppendAllText(@"positions.txt", position + Environment.NewLine, new UTF8Encoding(false, true));
+                            playerDataManager.NotifyPlayer(player, "Pozycja zapisana w pliku!");
+                        }
+                        else
+                        {
+                            playerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
+                        }
+                        break;
+                        //case "pmoff":
+                        //    if(args.Count > 0)
+                        //    {
+                        //        player.SetSharedData("pmoff", argText);
+                        //        playerDataManager.NotifyPlayer(player, "Blokowanie wiadomości prywatnych włączone!");
+                        //    }
+                        //    else if(arguments == null)
+                        //    {
+                        //        player.SetSharedData("pmoff", "Brak.");
+                        //        playerDataManager.NotifyPlayer(player, "Blokowanie wiadomości prywatnych włączone!");
+                        //    }
+                        //    break;
+                        //case "pmon":
+                        //    if(arguments != null)
+                        //    {
+                        //        player.SetSharedData("pmoff", "");
+                        //        playerDataManager.NotifyPlayer(player, "Wyłączono blokowanie wiadomości prywatnych!");
+                        //    }
+                        //    break;
                 }
             }
 
@@ -585,6 +606,11 @@ namespace ServerSide
                             Vehicle veh = vehicleDataManager.GetVehicleById(args[0]);
                             if (veh != null)
                             {
+                                if (veh.HasSharedData("market") && veh.GetSharedData<bool>("market"))
+                                {
+                                    playerDataManager.NotifyPlayer(player, $"Pojazd jest na giełdzie!");
+                                    return;
+                                }
                                 veh.SetSharedData("lastpos", player.Position);
                                 veh.Position = player.Position;
                                 if (veh.GetSharedData<bool>("veh_brake"))
@@ -664,9 +690,16 @@ namespace ServerSide
                             Vehicle veh1 = vehicleDataManager.GetVehicleById(args[0]);
                             if (veh1 != null)
                             {
-                                vehicleDataManager.UpdateVehicleSpawned(veh1, false);
-                                playerDataManager.NotifyPlayer(player, $"Pojazd o ID: {args[0]} został przeniesiony do przechowalni!");
-                                veh1.Delete();
+                                if(veh1.HasSharedData("market") && veh1.GetSharedData<bool>("market"))
+                                {
+                                    playerDataManager.NotifyPlayer(player, "Pojazd jest na giełdzie!");
+                                }
+                                else
+                                {
+                                    vehicleDataManager.UpdateVehicleSpawned(veh1, false);
+                                    playerDataManager.NotifyPlayer(player, $"Pojazd o ID: {args[0]} został przeniesiony do przechowalni!");
+                                    veh1.Delete();
+                                }
                             }
                             else
                             {
@@ -688,7 +721,6 @@ namespace ServerSide
                             {
                                 veh2 = vehicleDataManager.CreatePersonalVehicle(id, player.Position, player.Heading, false);
                             }
-
                             if (veh2 != null)
                             {
                                 vehicleDataManager.UpdateVehicleSpawned(veh2, true);
@@ -1352,6 +1384,29 @@ namespace ServerSide
                             }
                         }
                         break;
+                    case "mugshot":
+                        if (args.Count == 0)
+                        {
+                            player.TriggerEvent("test_mugshot");
+                        }
+                        break;
+                    case "maxbonus":
+                        if (args.Count == 0)
+                        {
+                            player.SetSharedData("bonustime", 60);
+                        }
+                        break;
+                    //case "laweta":
+                    //    if (args.Count == 0)
+                    //    {
+                    //        if (player.Vehicle != null)
+                    //        {
+                    //            Vehicle auto = NAPI.Vehicle.CreateVehicle(VehicleHash.Toros, player.Position + new Vector3(0,0,2), player.Vehicle.Rotation, 0, 0);
+                    //            auto.SetSharedData("veh_brake", true);
+                    //            NAPI.ClientEvent.TriggerClientEventForAll("test_attachVehicle", player.Vehicle, auto);
+                    //        }
+                    //    }
+                    //    break;
                 }
             }
         }

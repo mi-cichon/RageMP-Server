@@ -4,59 +4,56 @@ let offset = 0;
 let raising = true;
 let collectibleInterval = null;
 mp.events.add("render", () => {
-    // collectiblesList.forEach(collectible => {
-    //     collectible.object.setRotation(0, 0, collectible.object.getRotation(5).z + 0.5, 5, true);
-    //     // if(offset >= 0.2 && raising){
-    //     //     raising = false;
-    //     // }else if(offset <= 0 && !raising){
-    //     //     raising = true;
-    //     // }
-    //     // if(raising){
-    //     //     offset += 0.0001;
-    //     // }else{
-    //     //     offset -= 0.0001;
-    //     // }
-    //     collectible.object.position = new mp.Vector3(collectible.position.x, collectible.position.y, collectible.position.z + offset);
-    //     //collectible.lightobj.position = new mp.Vector3(collectible.position.x, collectible.position.y, collectible.position.z + offset);
-    // });
-    // if(player.hasVariable("skill-4") && player.getVariable("skill-4") == 1){
-    //     let close = false;
-    //     let closestCollectible = null;
-    //     collectiblesList.forEach(collectible => {
-    //         if(getDistance(player.position, collectible.position) < 25){
-    //             close = true;
-    //             closestCollectible = collectible;
-    //         }
-    //     });
-    //     if(close == true && closestCollectible != null){
-    //         startCollectibleInt(true, closestCollectible.position);
-    //     }
-    //     else{
-    //         startCollectibleInt(false, null);
-    //     }
-    // }
+    collectiblesList.forEach(collectible => {
+        collectible.object.setRotation(0, 0, collectible.object.getRotation(5).z + 0.5, 5, true);
+        // if(offset >= 0.2 && raising){
+        //     raising = false;
+        // }else if(offset <= 0 && !raising){
+        //     raising = true;
+        // }
+        // if(raising){
+        //     offset += 0.0001;
+        // }else{
+        //     offset -= 0.0001;
+        // }
+        //collectible.lightobj.position = new mp.Vector3(collectible.position.x, collectible.position.y, collectible.position.z + offset);
+    });
+    if(player.hasVariable("skill-4") && player.getVariable("skill-4") == 1){
+        let close = false;
+        let closestCollectible = null;
+        collectiblesList.forEach(collectible => {
+            if(getDistance(player.position, collectible.position) < 25){
+                close = true;
+                closestCollectible = collectible;
+            }
+        });
+        if(close == true && closestCollectible != null){
+            startCollectibleInt(true, closestCollectible.position);
+        }
+        else{
+            startCollectibleInt(false, null);
+        }
+    }
 });
 
 
 mp.events.add("instantiateCollectibles", () => {
-    // removeExistingParticles();
-    // setTimeout(function(){
-    //     let collectibles = player.getVariable("collectibles");
-    //     collectibles = JSON.parse(collectibles);
-    //     for (var key in collectibles){
-    //         if(!collectibles[key])
-    //             collectiblesList.push(new Collectible(allCollectibles[key], key));
-    //     }
-    // }, 10000);
-    
+    setTimeout(function(){
+        let collectibles = player.getVariable("collectibles");
+        collectibles = JSON.parse(collectibles);
+        for (var key in collectibles){
+            if(!collectibles[key])
+                collectiblesList.push(new Collectible(allCollectibles[key], key));
+        }
+    }, 10000);
 });
-// function removeExistingParticles(){
-//     for(let i = 0; i < 1000000; i++){
-//         if(mp.game.graphics.doesParticleFxLoopedExist(i)){
-//             mp.game.graphics.stopParticleFxLooped(i, true);
-//         }
-//     }
-// }
+function removeExistingParticles(){
+    for(let i = 0; i < 1000000; i++){
+        if(mp.game.graphics.doesParticleFxLoopedExist(i)){
+            mp.game.graphics.stopParticleFxLooped(i, true);
+        }
+    }
+}
 class Collectible{
     constructor(position, id){
         this.id = id;

@@ -1,6 +1,5 @@
 let player = mp.players.local;
 let lawnMower = null;
-let grassAmount = 0;
 let mowingInterval = null;
 let backMarker = null;
 let backColshape = null;
@@ -21,11 +20,14 @@ let containersPositions = [
 
 ];
 
+let maxCapacity = 16;
+let currentCapacity = 0;
+
 mp.events.add("render", () => {
     if(lawnMower != null && mp.vehicles.exists(lawnMower)){
         let text = "";
-        if(grassAmount < 1){
-            text = "Zapełnienie kosza: " + Math.round(grassAmount * 100) + "%";
+        if(currentCapacity < maxCapacity){
+            text = "Zapełnienie kosza: " + (currentCapacity).toFixed(1) + "/" + maxCapacity + "L";
         }
         else{
             text = "Weź skoszoną trawę i zanieś ją do kontenera";
@@ -44,6 +46,15 @@ mp.events.addDataHandler("job", (entity, value, oldvalue) => {
     if(entity.type === "player" && entity == player)
     {
         if(oldvalue === "" && value === "lawnmowing"){
+            if(player.getVariable("jobBonus_103")){
+                maxCapacity *= 2;
+            }
+            else if(player.getVariable("jobBonus_102")){
+                maxCapacity *= 1.5;
+            }
+            else if(player.getVariable("jobBonus_101")){
+                maxCapacity *= 1.25;
+            }
         }
         if(oldvalue === "lawnmowing" && value === ""){
             if(mowingInterval){
@@ -68,14 +79,15 @@ mp.events.addDataHandler("job", (entity, value, oldvalue) => {
             if(mp.markers.exists(containerMarker)){
                 containerMarker.destroy();
             }
-            grassAmount = 0;
+            currentCapacity = 0;
+            maxCapacity = 16;
             lawnMower = null;
         }
     }
 });
 
 mp.events.add("playerLeaveVehicle", (vehicle, seat) => {
-    if(mp.vehicles.exists(lawnMower) && vehicle == lawnMower && !mp.colshapes.exists(backColshape) && player.getVariable("job") === "lawnmowing" && grassAmount >= 1){
+    if(mp.vehicles.exists(lawnMower) && vehicle == lawnMower && !mp.colshapes.exists(backColshape) && player.getVariable("job") === "lawnmowing" && currentCapacity >= maxCapacity){
         mp.events.callRemote("freezeLawnmower", lawnMower, true);
         let { x, y } = offsetPosition(lawnMower.position.x, lawnMower.position.y, vehicle.getHeading() - 180, 1.8);
         let pos = new mp.Vector3(x, y, lawnMower.position.z);
@@ -127,7 +139,7 @@ mp.events.add("playerEnterColshape", (shape) => {
         containerBlip.destroy();
         containerMarker.destroy();
         mp.events.callRemote("lawnmowingReward");
-        grassAmount = 0;
+        currentCapacity = 0;
     }
 });
 
@@ -136,12 +148,12 @@ function startMowing(){
         mowingInterval = setInterval(() => {
             if(mp.vehicles.exists(lawnMower)){
                 if(lawnMower.getSpeed() > 12/3.6){
-                    grassAmount += 0.005;
+                    currentCapacity += 0.005 * 16;
                 }
-                if(grassAmount >= 0.8 && !(containerCol != null && mp.colshapes.exists(containerCol))){
+                if(currentCapacity >= 0.8 * maxCapacity && !(containerCol != null && mp.colshapes.exists(containerCol))){
                     createContainer();
                 }
-                if(grassAmount >= 1){
+                if(currentCapacity >= maxCapacity){
                     clearInterval(mowingInterval);
                     mowingInterval = null;
                 }
@@ -203,14 +215,14 @@ function getClosestVehicle()
 
 mp.events.add("saveData_lawnmowing_load", (data) => {
     let saveData = JSON.parse(data);
-    grassAmount = saveData[2];
+    currentCapacity = saveData[2];
     mp.events.callRemote("saveData_giveJobVeh", "lawnmowing", JSON.parse(saveData[1]), "");
 });
 
 mp.events.add("saveData_lawnmowing_save", () => {
     
     if(mp.vehicles.exists(lawnMower)){
-        let saveData = ["lawnmowing", JSON.stringify(lawnMower.position), grassAmount];
+        let saveData = ["lawnmowing", JSON.stringify(lawnMower.position), currentCapacity];
         mp.events.callRemote("saveData_saveJobData", JSON.stringify(saveData));
     }
 });

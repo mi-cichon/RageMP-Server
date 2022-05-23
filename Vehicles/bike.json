@@ -1,5 +1,39 @@
 [
    {
+      "name":"Reever",
+      "model":1993851908,
+      "power":15,
+      "speed":186,
+      "combustion":7,
+      "tank":20,
+      "trunk":[
+         2,
+         2
+      ],
+      "probability":4,
+      "price":116650,
+      "mechfactor":5382,
+      "visufactor":2153,
+      "extra":-1
+   },
+   {
+      "name":"Shinobi",
+      "model":1353120668,
+      "power":15,
+      "speed":195,
+      "combustion":7,
+      "tank":20,
+      "trunk":[
+         2,
+         2
+      ],
+      "probability":4,
+      "price":116650,
+      "mechfactor":5382,
+      "visufactor":2153,
+      "extra":-1
+   },
+   {
       "name":"Akuma",
       "model":1672195559,
       "power":10,

@@ -13,6 +13,7 @@ require('./ReportManager/main.js');
 require('./JobsManager/Water/debrisCleaner.js');
 require('./JobsManager/Water/fisherMan.js');
 require('./JobsManager/Water/fisherManHUD/main.js');
+require('./JobsManager/Water/rodBuyHUD/main.js');
 require('./JobsManager/Water/diverManager.js');
 
 require('./JobsManager/Logistic/warehouse.js');
@@ -120,7 +121,5 @@ require('./VehSellPanel/main.js');
 require('./JobsManager/Social/RefineryBrowser/main.js');
 
 require('./CarTrader/ConfirmCarTradeBrowser/main.js');
-
-require('./PlaytimeBonus/main.js');
 
 require('./AntiAFK/antiAFK.js');

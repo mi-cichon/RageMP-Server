@@ -112,7 +112,10 @@ mp.events.add('render', () => {
     mp.game.ui.hideHudComponentThisFrame(9);
     mp.game.ui.hideHudComponentThisFrame(6);
     mp.game.ui.hideHudComponentThisFrame(8);
-    mp.game.ui.hideHudComponentThisFrame(14);
+    if(!(lplayer.getVariable("job") == "hunter" && lplayer.getVariable("jobBonus_118"))){
+        mp.game.ui.hideHudComponentThisFrame(14);
+    }
+
 
     //VEHICLE CONTROL - SCROLL
 

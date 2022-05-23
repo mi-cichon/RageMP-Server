@@ -8,32 +8,60 @@ let containerPos = new mp.Vector3(-1712.341, -992.58655, 5.785871);
 let containerMarker = null;
 let containerBlip = null;
 
+let maxWeight = 50;
 let debris = [];
 
 let debrisPositions = [
-    new mp.Vector3(-1743.9023, -1021.5256, 2.4997644),
-    new mp.Vector3(-1750.2355, -1031.2618, 1.8297617),
-    new mp.Vector3(-1752.7649, -1040.8584, 1.1679027),
-    new mp.Vector3(-1746.1033, -1046.9844, 1.0570533),
-    new mp.Vector3(-1737.0421, -1049.3613, 1.3741031),
-    new mp.Vector3(-1731.2186, -1057.1754, 1.0973002),
-    new mp.Vector3(-1725.5424, -1057.3756, 1.4145538),
-    new mp.Vector3(-1717.1254, -1065.8263, 1.2945476),
-    new mp.Vector3(-1717.7551, -1052.3176, 2.1028676),
-    new mp.Vector3(-1723.1213, -1041.5679, 2.3142464),
-    new mp.Vector3(-1715.4507, -1036.0283, 3.1088474),
-    new mp.Vector3(-1718.8005, -1029.5549, 3.8507445),
-    new mp.Vector3(-1729.8583, -1023.9126, 3.861432),
-    new mp.Vector3(-1738.214, -1016.24963, 3.4822752),
-    new mp.Vector3(-1748.2498, -1018.0385, 2.4724507),
-    new mp.Vector3(-1755.7936, -1010.4245, 2.5975156),
-    new mp.Vector3(-1753.3347, -1000.34705, 3.4521744),
-    new mp.Vector3(-1769.6407, -1007.8667, 2.489786),
-    new mp.Vector3(-1777.8212, -1003.1178, 2.5911171),
-    new mp.Vector3(-1791.4591, -1003.6607, 1.6540551),
-    new mp.Vector3(-1784.1492, -988.6508, 2.8620002),
-    new mp.Vector3(-1771.6382, -978.9892, 4.2982926),
-    new mp.Vector3(-1757.3529, -980.6201, 4.951533), 
+    new mp.Vector3(-1706.4617, -1053.6727, 2.346646),
+    new mp.Vector3(-1705.261, -1044.4805, 2.8992314),
+    new mp.Vector3(-1713.27, -1044.3229, 2.7436664),
+    new mp.Vector3(-1722.9868, -1042.5895, 2.1475074),
+    new mp.Vector3(-1722.7334, -1034.9575, 3.012834),
+    new mp.Vector3(-1714.9587, -1028.1919, 3.955647),
+    new mp.Vector3(-1720.2971, -1022.1067, 4.479687),
+    new mp.Vector3(-1728.8652, -1024.0564, 3.9164975),
+    new mp.Vector3(-1737.243, -1026.971, 2.6393595),
+    new mp.Vector3(-1743.748, -1026.2957, 2.2567372),
+    new mp.Vector3(-1745.2842, -1020.4136, 2.4989116),
+    new mp.Vector3(-1741.0444, -1014.40106, 3.3998861),
+    new mp.Vector3(-1734.4132, -1011.3492, 4.0937176),
+    new mp.Vector3(-1737.0028, -1005.3363, 4.3004937),
+    new mp.Vector3(-1743.0264, -1006.83606, 3.7880576),
+    new mp.Vector3(-1748.6636, -1012.288, 2.9216132),
+    new mp.Vector3(-1754.067, -1016.1665, 2.314176),
+    new mp.Vector3(-1760.4244, -1013.6939, 2.3348083),
+    new mp.Vector3(-1761.4121, -1008.154, 2.661808),
+    new mp.Vector3(-1758.766, -1002.2547, 3.0944145),
+    new mp.Vector3(-1759.8558, -996.28845, 3.7944467),
+    new mp.Vector3(-1765.9939, -997.73444, 3.480331),
+    new mp.Vector3(-1771.2256, -1000.58276, 3.0442467),
+    new mp.Vector3(-1776.3501, -1003.3504, 2.6520796),
+    new mp.Vector3(-1781.8038, -1000.35767, 2.6592748),
+    new mp.Vector3(-1784.5198, -994.56934, 2.8328831),
+    new mp.Vector3(-1782.2485, -989.1694, 3.0312903),
+    new mp.Vector3(-1776.6134, -991.20416, 3.4870026),
+    new mp.Vector3(-1773.9354, -986.0348, 3.7691214),
+    new mp.Vector3(-1766.5614, -986.1321, 4.2316494),
+    new mp.Vector3(-1760.4924, -990.52234, 4.218505),
+    new mp.Vector3(-1763.172, -999.3295, 3.3394535),
+    new mp.Vector3(-1765.2454, -1008.19464, 2.608338),
+    new mp.Vector3(-1762.343, -1016.2891, 2.1190479),
+    new mp.Vector3(-1754.7478, -1017.58997, 2.1928902),
+    new mp.Vector3(-1746.2897, -1015.1693, 2.8440778),
+    new mp.Vector3(-1738.9473, -1012.52295, 3.6884172),
+    new mp.Vector3(-1733.1908, -1014.60675, 4.0693293),
+    new mp.Vector3(-1733.1863, -1020.843, 3.7749033),
+    new mp.Vector3(-1737.0231, -1027.4272, 2.6317227),
+    new mp.Vector3(-1736.7238, -1033.6348, 2.2695382),
+    new mp.Vector3(-1731.0804, -1037.1145, 2.3924012),
+    new mp.Vector3(-1722.9253, -1033.9698, 3.170407),
+    new mp.Vector3(-1713.4766, -1033.7874, 3.5233002),
+    new mp.Vector3(-1713.0424, -1040.7513, 2.7333531),
+    new mp.Vector3(-1718.7489, -1043.9377, 2.3988004),
+    new mp.Vector3(-1718.5454, -1049.8894, 2.1455207),
+    new mp.Vector3(-1725.4459, -1024.2422, 4.1073136),
+    new mp.Vector3(-1730.3346, -1013.3574, 4.414798),
+    new mp.Vector3(-1739.5688, -1006.6694, 4.0521755)
 ];
 
 let debrisObjects = [
@@ -52,11 +80,11 @@ let debrisObjects = [
 mp.events.add("render", () => {
     if(mp.objects.exists(binBag)){
         let text = "";
-        if(weight < 50){
-            text = "Pojemność worka: " + weight.toString() + "/50L";
+        if(weight < maxWeight){
+            text = "Zapełnienie worka: " + weight.toString() + `/${maxWeight}L`;
         }
         else{
-            text = "Opróżnij worek przy kontenerach";
+            text = "Opróżnij worek przy kontenerze";
         }
         let pos = new Float64Array([0.5, 0.95]);
             mp.game.graphics.drawText(text, pos, { 
@@ -93,6 +121,7 @@ mp.events.addDataHandler("job", (entity, value, oldvalue) => {
             });
             createObjects();
             mp.events.callRemote("putItemInHand", "binbag");
+            maxWeight = player.getVariable("jobBonus_55") ? 120 : player.getVariable("jobBonus_54") ? 90 : player.getVariable("jobBonus_53") ? 60 : 50;
         }
         if(oldvalue === "debriscleaner" && value === ""){
             mp.events.callRemote("removeItemFromHand");
@@ -133,7 +162,7 @@ mp.events.add("playerEnterColshape", (shape) => {
     {
         for(let i = 0; i < debris.length; i++){
             if(debris[i].colshape == shape){
-                if(weight + debris[i].weight <= 50){
+                if(weight + debris[i].weight <= maxWeight){
                     let d = debris[i];
                     mp.game.streaming.requestAnimDict("amb@prop_human_bum_bin@base");
                     player.taskPlayAnim("amb@prop_human_bum_bin@base", "base", 1.0, 1.0, 1000, 2, 1.0, false, false, false);
@@ -146,6 +175,7 @@ mp.events.add("playerEnterColshape", (shape) => {
                         d.object.destroy();
                         d.marker.destroy();
                         createRandomObject(i);
+                        mp.events.callRemote("debrisCleaner_luckCheck");
                     }, 1000);
                     break;
                 }

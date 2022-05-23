@@ -11,13 +11,13 @@ namespace ServerSide
         [RemoteEvent("startJunkyard")]
         public void StartJunkyard(Player player)
         {
-            junkyard.startJob(player);
+            //junkyard.startJob(player);
         }
 
         [RemoteEvent("junkDelievered")]
         public void JunkDelievered(Player player)
         {
-            payoutManager.JunkyardPayment(player);
+            //payoutManager.JunkyardPayment(player);
         }
     }
 }

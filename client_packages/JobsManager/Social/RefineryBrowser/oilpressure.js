@@ -1,6 +1,7 @@
 let pumpState = 0;
 let temp = 0.0;
 let coolingDown = false;
+let pumpBonus = 1;
 
 var tempGraph = new ProgressBar.Line(".pressure_graph", {
     strokeWidth: 4,
@@ -65,7 +66,7 @@ $('.pressure_graph input').on("click", function(){
 
 let updateInterval = setInterval(function(){
     if(pumpState > 0 && !coolingDown){
-        mp.trigger("refinery_addOil", 30 * (pumpState/100));
+        mp.trigger("refinery_addOil", 30 * (pumpState/100) * pumpBonus);
     }
 }, 1000);
 
@@ -80,4 +81,8 @@ $('.buttons .button_cancel').on("click", function(){
 
 function updateVehiclesTank(amount){
     $('.veh_tank').text(parseInt(amount) + "L");
+}
+
+function setPumpBonus(bonus){
+    pumpBonus = bonus;
 }

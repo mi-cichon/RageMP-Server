@@ -41,6 +41,11 @@ namespace ServerSide
             {
                 if (vehicle.HasSharedData("type") && vehicle.GetSharedData<string>("type") != "dealer")
                 {
+                    if(vehicle.HasSharedData("market") && vehicle.GetSharedData<bool>("market"))
+                    {
+                        playerDataManager.NotifyPlayer(player, $"Pojazd jest na giełdzie!");
+                        return;
+                    }
                     if (vehicle.GetSharedData<string>("type") == "personal")
                     {
                         vehicleDataManager.UpdateVehicleSpawned(vehicle, false);
@@ -79,6 +84,11 @@ namespace ServerSide
                 {
                     if (vehicle.GetSharedData<string>("type") == "personal")
                     {
+                        if (vehicle.HasSharedData("market") && vehicle.GetSharedData<bool>("market"))
+                        {
+                            playerDataManager.NotifyPlayer(player, $"Pojazd jest na giełdzie!");
+                            return;
+                        }
                         vehicle.SetSharedData("lastpos", player.Position);
                         vehicle.Position = player.Position;
                         if (vehicle.GetSharedData<bool>("veh_brake"))
@@ -274,6 +284,11 @@ namespace ServerSide
         {
             if (vehicle != null && vehicle.Exists && vehicle.HasSharedData("type") && vehicle.GetSharedData<string>("type") != "dealer" && vehicle.GetSharedData<string>("type") != "public")
             {
+                if (vehicle.HasSharedData("market") && vehicle.GetSharedData<bool>("market"))
+                {
+                    playerDataManager.NotifyPlayer(player, $"Pojazd jest na giełdzie!");
+                    return;
+                }
                 if (vehicle.GetSharedData<string>("type") == "personal")
                 {
                     vehicleDataManager.UpdateVehicleSpawned(vehicle, false);

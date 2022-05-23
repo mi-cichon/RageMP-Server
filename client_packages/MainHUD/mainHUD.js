@@ -5,7 +5,6 @@ let time = 0;
 let jobInterval;
 let earnedMoney = 0;
 let earnedEXP = 0;
-let earnedPJ = 0;
 let earningsPerHour = 0;
 let pointsType = "";
 let music = null;
@@ -125,10 +124,7 @@ function startJob(workName, type) {
     if(time == 0) {
         jobInterval = setInterval(updateJobTime, 1000);
         $(".jobHUD_name").text(`${workName}`);
-        $(".jobHUD_jobType").html(`Zdobyte ${type}:`);
     }
-    pointsType = type;
-    $(".jobHUD_jp").text("0 "+ pointsType);
 }
 
 function stopJob() {
@@ -142,12 +138,10 @@ function stopJob() {
     earnedMoney = 0;
     earnedEXP = 0;
     earningsPerHour = 0;
-    earnedPJ = 0;
     $(".jobHUD_time").text('0s');
     $(".jobHUD_earnings").text('0 $');
     $(".jobHUD_exp").text('0 exp');
     $(".jobHUD_average").text('0 $/h');
-    $(".jobHUD_jp").text(`0`);
 }
 
 function switchJobHUD() {
@@ -180,13 +174,11 @@ function updateJobTime() {
     $(".jobHUD_average").html(`${betterNumbers(parseInt(earningsPerHour))} $/h`);
 }
 
-function updateJobVars(money, pp, pj) {
+function updateJobVars(money, pp) {
     earnedMoney += money;
     earnedEXP += pp;
-    earnedPJ += pj;
     $(".jobHUD_earnings").text(`${betterNumbers(earnedMoney)} $`);
     $(".jobHUD_exp").text(`${earnedEXP} exp`);
-    $(".jobHUD_jp").text(`${earnedPJ} ${pointsType}`);
 }
 
 function terminateJob() {
@@ -256,3 +248,103 @@ function setNewMessages(amount){
 //         }
 //     }
 // },10);
+
+const copyToClipboard = str => {
+    const el = document.createElement('textarea');
+    el.value = str;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+  };
+
+
+function screenShotData(url){
+    //url = "img/avatars/default.png";
+    encodeImage(url, (code) =>{
+        mp.trigger("carMugshot_send", code);
+    });
+}
+
+function encodeImage(src, callback) {
+    var canvas = document.createElement('canvas'),
+        ctx = canvas.getContext('2d'),
+        img = document.getElementById("image");
+        img.src = src;
+
+    img.addEventListener('load', function() {
+        ctx.drawImage(img, 425, 240, 71, 40, 0, 0, 425, 240);
+        console.log(canvas.toDataURL());
+        let urls = [];
+        for(let i = 0; i < 36; i++){
+            let fractions = getFractionsByIndex(i);
+            let h = $("body").height();
+            let w = $("body").width();
+            canvas.width = w/18;
+            canvas.height = h/18;
+            cv = canvas;
+            c = cv.getContext('2d');
+            let pX = w/3 + (w * fractions[0]);
+            let pY = h/3 + (h * fractions[1])
+            c.drawImage(img, pX, pY, 1/18 * w, 1/18 * h, 0, 0, 1/18 * w, 1/18 * h); 
+            urls.push(cv.toDataURL());
+        }
+        callback(JSON.stringify(urls));
+    });  
+}
+
+function cropImage(imagePath, canvas, newX, newY, newWidth, newHeight) {
+    //create an image object from the path
+    const originalImage = new Image();
+    originalImage.src = imagePath;
+    var cnv = canvas;
+    //initialize the canvas object
+    const ctx = cnv.getContext('2d');
+ 
+    //wait for the image to finish loading
+    originalImage.addEventListener('load', function() {
+ 
+        //set the canvas size to the new width and height
+        cnv.width = newWidth;
+        cnv.height = newHeight;
+         
+        //draw the image
+        ctx.drawImage(originalImage, newX, newY, newWidth, newHeight, 0, 0, newWidth, newHeight); 
+        return cnv;
+    });
+    return cnv;
+}
+
+function getFractionsByIndex(index){
+    let row = parseInt((index)/6) + 1;
+    let col = (index)%6 + 1;
+    return[col/18, row/18];
+}
+
+const cropCanvas = (sourceCanvas,left,top,width,height) => {
+    let destCanvas = document.createElement('canvas');
+    destCanvas.width = width;
+    destCanvas.height = height;
+    destCanvas.getContext("2d").drawImage(
+        sourceCanvas,
+        left,top,width,height,  // source rect with content to crop
+        0,0,width,height);      // newCanvas, same size as source rect
+    return destCanvas;
+}
+
+function toDataUrl(url, callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.onload = function() {
+        var reader = new FileReader();
+        reader.onloadend = function() {
+            callback(reader.result);
+        }
+        reader.readAsDataURL(xhr.response);
+    };
+    console.log("open");
+    xhr.open('GET', url);
+    console.log("response");
+    xhr.responseType = 'blob';
+    console.log("send");
+    xhr.send();
+}

@@ -13,6 +13,7 @@ let fleeTask = null;
 let taskInterval = null;
 let lastView = 0;
 
+let roundAmount = 50;
 mp.events.add("render", () => {
     if(player.getVariable("job") === "hunter"){
         if(getEucDistance(jobCenter, player.position) > 550 && !notified){
@@ -43,7 +44,7 @@ mp.events.add("render", () => {
                 clearInterval(taskInterval);
                 taskInterval = null;
             }
-            let distance = roundnum(getDistance(player.position, animalToHunt.getCoords(true)));
+            let distance = roundnum(getDistance(player.position, animalToHunt.getCoords(true)), roundAmount);
             let text;
             if(distance < 500){
                 text = "Zwierzę jest około " + distance + " metrów od Ciebie";
@@ -88,6 +89,9 @@ mp.events.add("render", () => {
 
 mp.events.addDataHandler("job", (entity, value, oldvalue) => {
     if(value == "hunter" && entity == player){
+        if(player.getVariable("jobBonus_119")){
+            roundAmount = 25;
+        }
         setTimeout(function(){
             mp.game.invoke("0xD966D51AA5B28BB9", player.handle, 487013001, mp.game.joaat("COMPONENT_AT_AR_FLSH"));
         }, 1000);
@@ -116,6 +120,11 @@ mp.events.add('playerEnterColshape', (shape) => {
 
 mp.events.add("peltTaken", (state) => {
     if(state){
+        let time = 4000;
+
+        if(player.getVariable("jobBonus_120")){
+            time /= 2;
+        }
         animalColshape.destroy();
         animalColshape = null;
         animalToHunt.destroy();
@@ -130,7 +139,7 @@ mp.events.add("peltTaken", (state) => {
             skinning = false;
             player.freezePosition(false);
             mp.events.callRemote("animalHunted", peltType);
-        }, 2000);
+        }, time);
     }
     else{
         mp.events.call("showNotification", "Masz pełny ekwipunek! Sprzedaj skóry u myśliwego lub zrób więcej miejsca!");
@@ -181,8 +190,8 @@ function getClosestVehicle()
     return closestVehicle;
 }
 
-function roundnum(num){
-    return Math.round(num / 50)*50;
+function roundnum(num, type){
+    return Math.round(num / type)*type;
 }
 
 function setAnimalProofs(){

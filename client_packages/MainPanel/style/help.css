@@ -29,12 +29,6 @@
     text-align: start;
 }
 
-.panel_scroll{
-    overflow-y: scroll;
-    padding: 0.4vh;
-    height: auto;
-}
-
 .panel_help_scroll{
     height: 100%;
     width: 100%;

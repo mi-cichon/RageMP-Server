@@ -71,7 +71,6 @@ body{
     display: flex;
     flex-direction: row;
     flex-wrap:wrap;
-    margin-top: 2vh;
     justify-content: space-around;
     padding-bottom: 1vh;
 }
@@ -108,6 +107,7 @@ body{
     position: absolute;
     bottom: 0;
     transition: all 1s;
+    background-position-y: 60%;
 }
 
 .vehicle .id{

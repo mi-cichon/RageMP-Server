@@ -151,3 +151,12 @@ function getDistance(vec1, vec2){
 mp.events.add("test_createObject", model => {
     mp.objects.new(model, player.position);
 });
+
+mp.events.add("test_attachVehicle", (veh1, veh2) => {
+    setTimeout(()=>{
+        if(mp.vehicles.exists(veh1) && mp.vehicles.exists(veh2)){
+            veh2.attachTo(veh1.handle, 0, 0, -1.6, 0.5, 0, 0, 0, true, true, false, false, 0, true);
+        }
+    }, 3000);
+    
+});

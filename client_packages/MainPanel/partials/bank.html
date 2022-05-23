@@ -1,0 +1,57 @@
+<link rel="stylesheet" href="style/bank.css">
+<div class="bank_body">
+    <div class="bank_body_left">
+        <div class="bank_card">
+            <p></p>
+        </div>
+        <div class="bank_controls">
+            <div class="bank_control bank_control_selected">Dane konta</div>
+            <div class="bank_control">Szybki przelew</div>
+            <div class="bank_control_locked">Opłaty</div>
+            <div class="bank_control_locked">Pożyczka</div>
+        </div>
+    </div>
+    <div class="bank_body_right">
+        <div class="bank_tab bank_data_body bank_body_selected">
+            <div class="bank_data_info">
+                <div class="bank_data_info_row">
+                    <img src="">
+                    <div class="bank_data_info_col">
+                        <div>
+                            <p class="bank_name"></p>
+                            <p class="bank_acc"></p>
+                        </div>
+                        <div class="bank_data_info_accnmbr">
+                            Kopiuj numer konta
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="bank_data_history">
+                <p>Historia operacji</p>
+                <div class="bank_data_history_body">
+
+                </div>
+            </div>
+        </div>
+        <div class="bank_tab bank_transfer_body">
+            <div class="bank_transfer_target">
+                <p>Numer konta odbiorcy: </p>
+                <input type="text" class="bank_transfer_targetInput" value="">
+            </div>
+            <div class="bank_transfer_title">
+                <p>Tytuł przelewu:</p>
+                <textarea placeholder="" maxlength="150"></textarea>
+            </div>
+            <div class="bank_transfer_amount">
+                <p>Kwota przelewu:</p>
+                <input type="number" placeholder="Ilość" class="bank_transfer_amountInput" value="0">
+            </div>
+            <div class="bank_transfer_buttons">
+                <input type="button" value="Potwierdź" class="bank_transfer_confirm">
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/bank.js"></script>

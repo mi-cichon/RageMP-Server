@@ -28,7 +28,7 @@ namespace ServerSide.Jobs
             startColshape = NAPI.ColShape.CreateCylinderColShape(startPosition, 1.0f, 3.0f);
             startColshape.SetSharedData("type", "towtruck");
             customMarkers.CreateJobMarker(startPosition, "Lawety");
-            startBlip = NAPI.Blip.CreateBlip(67, startPosition, 0.8f, 69, name: "Praca: Lawety (Społeczna)", shortRange: true);
+            startBlip = NAPI.Blip.CreateBlip(67, startPosition, 0.8f, 69, name: "Praca: Lawety", shortRange: true);
         }
 
         public void addSpawningPosition(Vector3 spawningPosition, float heading)
@@ -44,16 +44,20 @@ namespace ServerSide.Jobs
                 {
                     if (player.GetSharedData<bool>("licenceBp"))
                     {
-                        if (player.GetSharedData<Int32>("socialpoints") >= 250)
+                        if (player.GetSharedData<bool>("jobBonus_21"))
                         {
                             player.SetSharedData("job", "towtruck");
-                            Vehicle veh = vehicleDataManager.GetRandomVehicleToTow();
+                            Vehicle veh = null;
+                            if (player.GetSharedData<bool>("jobBonus_27"))
+                            {
+                                veh = vehicleDataManager.GetRandomVehicleToTow();
+                            }
                             player.TriggerEvent("setVehicleToTow", veh);
                             player.TriggerEvent("startJob", "Lawety", "PS");
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Nie masz wystarczająco PS (250)!");
+                            playerDataManager.NotifyPlayer(player, "Nie odblokowałeś tej pracy!");
                         }
                     }
                     else

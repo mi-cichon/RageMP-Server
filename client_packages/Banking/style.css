@@ -52,10 +52,9 @@ body{
 .bank_card p{
     color: white;
     position: absolute;
-    font-size: 1.1vh;
+    font-size: 1.2vh;
     left: 10%;
     bottom: 20%;
-    font-weight: bold;
 }
 
 .bank_info{
