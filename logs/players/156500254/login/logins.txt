@@ -1,5 +1,0 @@
-[20.09.2021 20:04:26] Zarejestrowano gracza
-[20.09.2021 20:04:26] Zalogowano z IP: 91.222.25.214
-[20.09.2021 20:07:12] Opuszczono serwer z IP: 91.222.25.214
-[20.09.2021 20:07:24] Zalogowano z IP: 91.222.25.214
-[20.09.2021 20:11:54] Zalogowano z IP: 91.222.25.214
