@@ -1,8 +1,8 @@
 /logs
+/dotnet/runtime
 /client_packages/.listcache
 /dotnet/resources/Server/.vs
 /dotnet/server_exceptions.txt
-/dotnet/runtime
 /bin
 /client_packages/.vscode
 /maps
