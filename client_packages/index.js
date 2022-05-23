@@ -1,3 +1,5 @@
+require('./server_conf');
+
 require('./CarStorage/main.js');
 require('./HandleVehicles/handleVehicles.js');
 require('./ActionManager/actionManager.js');

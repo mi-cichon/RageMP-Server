@@ -738,3 +738,16 @@ kbd{
     font-weight: 600;
     line-height: 1.8vh;
 }
+
+.hud_server_version{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: auto;
+    width: auto;
+    font-size: 1vh;
+    color: white;
+    font-weight: 600;
+    background: rgba(53, 53, 53, 0.4);
+    padding: 0.1vh 0.4vh;
+}
