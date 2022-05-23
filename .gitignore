@@ -1,1 +1,5 @@
 /logs
+
+/client_packages/.listcache
+/dotnet/resources/Server/.vs
+/dotnet/server_exceptions.txt
