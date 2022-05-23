@@ -1,4 +1,5 @@
 logs/
 dotnet/runtime/*
+dotnet/resources/Server/obj
 *.listcache
 mysql-apt-config_0.8.22-1_all.deb
