@@ -295,53 +295,53 @@ namespace ServerSide
             {
                 switch(command)
                 {
-                    case "anim":
-                        if (args.Count == 2)
-                        {
-                            player.TriggerEvent("testAnim", args[0], args[1]);
-                        }
-                        else
-                        {
-                            playerDataManager.NotifyPlayer(player, "Niepoprawna składnia komendy!");
-                        }
-                        break;
-                    case "anim2":
-                        if (args.Count == 2)
-                        {
-                            player.TriggerEvent("testAnim2", args[0], args[1]);
-                        }
-                        else
-                        {
-                            playerDataManager.NotifyPlayer(player, "Niepoprawna składnia komendy!");
-                        }
-                        break;
-                    case "a":
-                        if (!player.GetSharedData<bool>("muted"))
-                            if (argText.Replace(" ", "").Length > 0)
-                            {
-                                playerDataManager.SendMessageToAdmins(player, argText);
-                            }
-                            else
-                            {
-                                playerDataManager.NotifyPlayer(player, "Wiadomość nie może być pusta!");
-                            }
-                        else
-                            playerDataManager.NotifyPlayer(player, "Jesteś wyciszony do: " + player.GetSharedData<string>("mutedto"));
-                        break;
-                    case "fix":
-                        if(argsCount == 1)
-                        {
-                            Vehicle veh = vehicleDataManager.GetVehicleById(args[0]);
-                            if (veh != null)
-                            {
-                                vehicleDataManager.RepairVehicle(veh);
-                            }
-                            else
-                            {
-                                playerDataManager.NotifyPlayer(player, "Nie znaleziono pojazdu!");
-                            }
-                        }
-                        break;
+                    //case "anim":
+                    //    if (args.Count == 2)
+                    //    {
+                    //        player.TriggerEvent("testAnim", args[0], args[1]);
+                    //    }
+                    //    else
+                    //    {
+                    //        playerDataManager.NotifyPlayer(player, "Niepoprawna składnia komendy!");
+                    //    }
+                    //    break;
+                    //case "anim2":
+                    //    if (args.Count == 2)
+                    //    {
+                    //        player.TriggerEvent("testAnim2", args[0], args[1]);
+                    //    }
+                    //    else
+                    //    {
+                    //        playerDataManager.NotifyPlayer(player, "Niepoprawna składnia komendy!");
+                    //    }
+                    //    break;
+                    //case "a":
+                    //    if (!player.GetSharedData<bool>("muted"))
+                    //        if (argText.Replace(" ", "").Length > 0)
+                    //        {
+                    //            playerDataManager.SendMessageToAdmins(player, argText);
+                    //        }
+                    //        else
+                    //        {
+                    //            playerDataManager.NotifyPlayer(player, "Wiadomość nie może być pusta!");
+                    //        }
+                    //    else
+                    //        playerDataManager.NotifyPlayer(player, "Jesteś wyciszony do: " + player.GetSharedData<string>("mutedto"));
+                    //    break;
+                    //case "fix":
+                    //    if(argsCount == 1)
+                    //    {
+                    //        Vehicle veh = vehicleDataManager.GetVehicleById(args[0]);
+                    //        if (veh != null)
+                    //        {
+                    //            vehicleDataManager.RepairVehicle(veh);
+                    //        }
+                    //        else
+                    //        {
+                    //            playerDataManager.NotifyPlayer(player, "Nie znaleziono pojazdu!");
+                    //        }
+                    //    }
+                    //    break;
                     case "klucze":
                         if (argsCount == 2)
                         {
@@ -380,6 +380,21 @@ namespace ServerSide
                                 playerDataManager.NotifyPlayer(player, "Nie znaleziono pojazdu!");
                             }
 
+                        }
+                        break;
+                    case "testy":
+                        if(args == null)
+                        {
+                            if(player.HasSharedData("tests_testing") && player.GetSharedData<bool>("tests_testing"))
+                            {
+                                player.SetSharedData("tests_testing", false);
+                                playerDataManager.NotifyPlayer(player, "Włączono otrzymywanie bonusu!");
+                            }
+                            else
+                            {
+                                player.SetSharedData("tests_testing", true);
+                                playerDataManager.NotifyPlayer(player, "Wyłączono otrzymywanie bonusu!");
+                            }
                         }
                         break;
                 }

@@ -42,6 +42,7 @@ const userCommands = {
 
 const testerCommands = {
     "klucze": "klucze {id pojazdu} {id/nazwa gracza}",
+    "testy": "włącza/wyłącza otrzymywanie bonusu w pracy"
 }
 
 const jModCommands = {
