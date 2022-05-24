@@ -51,7 +51,7 @@ namespace ServerSide
             int exp = player.GetSharedData<bool>("jobBonus_6") ? 1 : 2;
 
             int money = Convert.ToInt32(4 * bonus);
-            money = Convert.ToInt32(addPlayersBonus(player, money) * bonuses["warehouse"]);
+            money = Convert.ToInt32(AddPlayersBonus(player, money) * (IsPlayerTesting(player) ? 1 : bonuses["warehouse"]));
 
 
             playerDataManager.UpdatePlayersJobBonus(player, "warehouse", exp);
@@ -86,7 +86,7 @@ namespace ServerSide
                 money *= 5;
             }
 
-            money = Convert.ToInt32(addPlayersBonus(player, money) * bonuses["forklifts"]);
+            money = Convert.ToInt32(AddPlayersBonus(player, money) * (IsPlayerTesting(player) ? 1 : bonuses["forklifts"]));
 
 
             playerDataManager.UpdatePlayersJobBonus(player, "forklifts", exp);
@@ -116,7 +116,7 @@ namespace ServerSide
             playerDataManager.UpdatePlayersJobBonus(player, "towtruck", exp);
 
             money = Convert.ToInt32(money * dmg);
-            money = Convert.ToInt32(addPlayersBonus(player, money) * bonuses["towtrucks"]);
+            money = Convert.ToInt32(AddPlayersBonus(player, money) * (IsPlayerTesting(player) ? 1 : bonuses["towtrucks"]));
 
             playerDataManager.GiveMoney(player, money);
             playerDataManager.UpdatePlayersExp(player, exp);
@@ -134,7 +134,7 @@ namespace ServerSide
 
             playerDataManager.UpdatePlayersJobBonus(player, "refinery", exp);
 
-            money = Convert.ToInt32(addPlayersBonus(player, money) * bonuses["refinery"]);
+            money = Convert.ToInt32(AddPlayersBonus(player, money) * (IsPlayerTesting(player) ? 1 : bonuses["refinery"]));
             playerDataManager.GiveMoney(player, money);
             playerDataManager.UpdatePlayersExp(player, exp);
             player.TriggerEvent("updateJobVars", money, exp);
@@ -166,7 +166,7 @@ namespace ServerSide
 
             money = Convert.ToInt32(money * bonus);
 
-            money = Convert.ToInt32(addPlayersBonus(player, money) * bonuses["debrisCleaner"]);
+            money = Convert.ToInt32(AddPlayersBonus(player, money) * (IsPlayerTesting(player) ? 1 : bonuses["debrisCleaner"]));
 
             playerDataManager.UpdatePlayersJobBonus(player, "debriscleaner", exp);
 
@@ -212,7 +212,7 @@ namespace ServerSide
             }
 
             money = Convert.ToInt32(bonus * money);
-            money = Convert.ToInt32(addPlayersBonus(player, money) * bonuses["diver"]);
+            money = Convert.ToInt32(AddPlayersBonus(player, money) * (IsPlayerTesting(player) ? 1 : bonuses["diver"]));
 
             playerDataManager.UpdatePlayersJobBonus(player, "diver", exp);
 
@@ -529,7 +529,7 @@ namespace ServerSide
 
                 }
             }
-            reward = Convert.ToInt32(addPlayersBonus(player, reward) * bonuses["fisherman"]);
+            reward = Convert.ToInt32(AddPlayersBonus(player, reward) * (IsPlayerTesting(player) ? 1 : bonuses["fisherman"]));
             playerDataManager.NotifyPlayer(player, $"Za ryby otrzymałeś {reward}$!");
             playerDataManager.GiveMoney(player, reward);
         }
@@ -569,7 +569,7 @@ namespace ServerSide
                         break;
                 }
             }
-            reward = Convert.ToInt32(addPlayersBonus(player, reward) * bonuses["fisherman"]);
+            reward = Convert.ToInt32(AddPlayersBonus(player, reward) * (IsPlayerTesting(player) ? 1 : bonuses["fisherman"]));
             playerDataManager.NotifyPlayer(player, $"Za przedmioty otrzymałeś {reward}$!");
             playerDataManager.GiveMoney(player, reward);
         }
@@ -600,7 +600,7 @@ namespace ServerSide
 
             money = Convert.ToInt32(money * bonus);
 
-            money = Convert.ToInt32(addPlayersBonus(player, money) * bonuses["lawnmowing"]);
+            money = Convert.ToInt32(AddPlayersBonus(player, money) * (IsPlayerTesting(player) ? 1 : bonuses["lawnmowing"]));
 
             playerDataManager.UpdatePlayersJobBonus(player, "lawnmowing", exp);
 
@@ -638,7 +638,7 @@ namespace ServerSide
 
             int exp = 100;
             int money = (15 * (baseOrder[0] + baseOrder[1] + baseOrder[2])) + (35 * (baseOrder[3] + baseOrder[4]));
-            money = Convert.ToInt32(money * bonuses["gardener"]);
+            money = Convert.ToInt32(money * (IsPlayerTesting(player) ? 1 : bonuses["gardener"]));
             money = Convert.ToInt32(money * bonus);
 
 
@@ -708,15 +708,15 @@ namespace ServerSide
                 }
             }
             playerDataManager.NotifyPlayer(player, $"Za skóry otrzymałeś {money}$!");
-            money = Convert.ToInt32(addPlayersBonus(player, money) * bonuses["hunter"]);
+            money = Convert.ToInt32(AddPlayersBonus(player, money) * (IsPlayerTesting(player) ? 1 : bonuses["hunter"]));
             playerDataManager.GiveMoney(player, money);
             player.TriggerEvent("updateJobVars", money, 0);
             //logManager.LogJobTransaction(player.SocialClubId.ToString(), $"Myśliwy: +{reward.ToString()}$, +1PP ({player.GetSharedData<Int32>("money")},{player.GetSharedData<Int32>("pp")})");
         }
-        
-        
 
-        
+
+
+
 
         //public void SupplierPayment(Player player, int supplies, float dmg)
         //{
@@ -740,7 +740,7 @@ namespace ServerSide
         //    player.TriggerEvent("updateJobVars", money, exp);
         //}
 
-        
+
 
 
         //public void AddWaterPoints(Player player, int points)
@@ -782,7 +782,15 @@ namespace ServerSide
         //    dataBase.connection.Close();
         //}
 
-        private int addPlayersBonus(Player player, int money)
+        private bool IsPlayerTesting(Player player)
+        {
+            if (player != null && player.Exists && player.HasSharedData("tests_testing") && player.GetSharedData<bool>("tests_testing"))
+            {
+                return true;
+            }
+            return false;
+        }
+        private int AddPlayersBonus(Player player, int money)
         {
             decimal bonus = (decimal)player.GetSharedData<Int32>("skill-1")/100;
             decimal m = Math.Round(money + (money * bonus));
