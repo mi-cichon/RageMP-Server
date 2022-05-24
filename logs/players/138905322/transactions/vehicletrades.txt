@@ -1,7 +1,0 @@
-[20.09.2021 03:05:30] Zakupiono pojazd z komisu o ID: 47 za 16500
-[20.09.2021 03:34:21] Zakupiono pojazd z komisu o ID: 48 za 68000
-[20.09.2021 03:45:25] Zakupiono pojazd z komisu o ID: 49 za 39300
-[20.09.2021 13:57:04] Zakupiono pojazd z komisu o ID: 50 za 745000
-[20.09.2021 14:07:25] Zakupiono pojazd z komisu o ID: 51 za 145000
-[20.09.2021 14:23:49] Zakupiono pojazd z komisu o ID: 52 za 100000
-[20.09.2021 15:33:29] Zakupiono pojazd z komisu o ID: 54 za 145000
