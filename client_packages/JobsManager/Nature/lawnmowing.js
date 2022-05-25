@@ -1,6 +1,5 @@
 let player = mp.players.local;
 let lawnMower = null;
-let mowingInterval = null;
 let backMarker = null;
 let backColshape = null;
 let grassBox = null;
@@ -17,7 +16,6 @@ let containersPositions = [
     new mp.Vector3(-1006.0686, -128.81084, 40.3812),
     new mp.Vector3(-1155.7465, -104.74771, 43.01223),
     new mp.Vector3(-1297.4814, -23.23775, 49.25843)
-
 ];
 
 let maxCapacity = 16;
@@ -57,10 +55,6 @@ mp.events.addDataHandler("job", (entity, value, oldvalue) => {
             }
         }
         if(oldvalue === "lawnmowing" && value === ""){
-            if(mowingInterval){
-               clearInterval(mowingInterval);
-               mowingInterval = null;
-            }
             if(mp.markers.exists(backMarker)){
                backMarker.destroy();
             }
@@ -101,7 +95,6 @@ mp.events.add("playerLeaveVehicle", (vehicle, seat) => {
 mp.events.add("playerEnterVehicle", (vehicle, seat) => {
     if(mp.vehicles.exists(lawnMower) && vehicle == lawnMower){
         mp.events.callRemote("freezeLawnmower", lawnMower, false);
-        startMowing();
     }
 });
 
@@ -112,59 +105,56 @@ mp.events.addDataHandler("jobveh", (entity, value, oldvalue) => {
             let v = mp.vehicles.atRemoteId(value);
             if(v != null && mp.vehicles.exists(v) && v.hasVariable("jobtype") && v.getVariable("jobtype") == entity.getVariable("job")){
                 lawnMower = v;
-                startMowing();
             }
         }
     }
 });
 
 mp.events.add("playerEnterColshape", (shape) => {
-    if(mp.colshapes.exists(backColshape) && shape == backColshape){
-        backMarker.destroy();
-        backColshape.destroy();
-        grassBox = mp.objects.new(1009806427, player.position, {
-            alpha: 0
-        });
-        mp.game.streaming.requestAnimDict("anim@heists@box_carry@");
-        player.taskPlayAnim("anim@heists@box_carry@", "idle", 1.0, 1.0, -1, 63, 1.0, false, false, false);
-        setTimeout(() => {
-            grassBox.attachTo(player.handle, player.getBoneIndex(57005), 0.08, 0, -0.27, 0, 65, 20, true, false, false, false, 0, true);
-            grassBox.setAlpha(255);
-        }, 100);
-    }
-    else if(mp.colshapes.exists(containerCol) && shape == containerCol && mp.objects.exists(grassBox)){
-        containerCol.destroy();
-        grassBox.destroy();
-        player.clearTasksImmediately();
-        containerBlip.destroy();
-        containerMarker.destroy();
-        mp.events.callRemote("lawnmowingReward");
-        currentCapacity = 0;
+    if(player.getVariable("job") === "lawnmowing"){
+        if(mp.colshapes.exists(backColshape) && shape == backColshape){
+            backMarker.destroy();
+            backColshape.destroy();
+            grassBox = mp.objects.new(1009806427, player.position, {
+                alpha: 0
+            });
+            mp.game.streaming.requestAnimDict("anim@heists@box_carry@");
+            player.taskPlayAnim("anim@heists@box_carry@", "idle", 1.0, 1.0, -1, 63, 1.0, false, false, false);
+            setTimeout(() => {
+                grassBox.attachTo(player.handle, player.getBoneIndex(57005), 0.08, 0, -0.27, 0, 65, 20, true, false, false, false, 0, true);
+                grassBox.setAlpha(255);
+            }, 100);
+        }
+        else if(mp.colshapes.exists(containerCol) && shape == containerCol && mp.objects.exists(grassBox)){
+            containerCol.destroy();
+            grassBox.destroy();
+            player.clearTasksImmediately();
+            containerBlip.destroy();
+            containerMarker.destroy();
+            mp.events.callRemote("lawnmowingReward");
+            currentCapacity = 0;
+        }
+        else if(shape.hasVariable("type") && shape.getVariable("type") === "grass" && currentCapacity < maxCapacity && player.vehicle != null && player.vehicle === lawnMower){
+            mp.events.callRemote("lawnmowingRemoveGrass", shape.getVariable("grassId"));
+        }
     }
 });
 
-function startMowing(){
-    if(mowingInterval == null){
-        mowingInterval = setInterval(() => {
-            if(mp.vehicles.exists(lawnMower)){
-                if(lawnMower.getSpeed() > 12/3.6){
-                    currentCapacity += 0.005 * 16;
-                }
-                if(currentCapacity >= 0.8 * maxCapacity && !(containerCol != null && mp.colshapes.exists(containerCol))){
-                    createContainer();
-                }
-                if(currentCapacity >= maxCapacity){
-                    clearInterval(mowingInterval);
-                    mowingInterval = null;
-                }
-            }
-            else{
-                clearInterval(mowingInterval);
-                mowingInterval = null;
-            }
-        }, 1000);
+mp.events.add("lawnmowingGrassRemoved", amount => {
+    if(player.getVariable("job") == "lawnmowing"){
+        amount /= 100;
+
+        currentCapacity += amount;
+
+        if(currentCapacity >= 0.8 * maxCapacity && !(containerCol != null && mp.colshapes.exists(containerCol))){
+            createContainer();
+        }
+    
+        if(currentCapacity > maxCapacity){
+            currentCapacity = maxCapacity;
+        }
     }
-}
+});
 
 function createContainer(){
     let pos = containersPositions[getRandomInt(0, containersPositions.length)];

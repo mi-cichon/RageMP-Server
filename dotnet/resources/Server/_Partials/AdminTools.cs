@@ -315,5 +315,12 @@ namespace ServerSide
             string pos = $"new Vector3({position.X.ToString().Replace(',', '.')}f, {position.Y.ToString().Replace(',', '.')}f, {position.Z.ToString().Replace(',', '.')}f);";
             File.AppendAllText(@"positions.txt", pos + Environment.NewLine, new UTF8Encoding(false, true));
         }
+
+        [RemoteEvent("appendGrassPos")]
+        public void AppendGrassPos(Player player, Vector3 pos)
+        {
+            string position = $"new mp.Vector3({pos.X.ToString().Replace(',', '.')}, {pos.Y.ToString().Replace(',', '.')}, {pos.Z.ToString().Replace(',', '.')}),";
+            File.AppendAllText(@"grassPositions.txt", position + Environment.NewLine, new UTF8Encoding(false, true));
+        }
     }
 }

@@ -259,8 +259,12 @@ namespace ServerSide
             savePlayersJobData.Elapsed += SavePlayersJobData;
             savePlayersJobData.Enabled = true;
 
+            System.Timers.Timer updateGrass = new System.Timers.Timer(20000);
+            updateGrass.Elapsed += UpdateGrass;
+            updateGrass.Enabled = true;
+
             //INSTANTIATE A COMMAND MANAGER
-            commands = new CommandsManager(houses, carDealers, reportsList, playerDataManager, ref orgManager, ref tuneBusinesses, ref lspd, ref payoutManager);
+            commands = new CommandsManager(houses, carDealers, reportsList, playerDataManager, ref orgManager, ref tuneBusinesses, ref lspd, ref payoutManager, ref lawnmowing);
 
 
             //LOAD VEHICLES FROM DB (5S DELAY)

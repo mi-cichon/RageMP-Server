@@ -1034,3 +1034,5 @@ new Vector3(-1718.5454f, -1049.8894f, 2.1455207f); heading: -163.95145f  -  smie
 new Vector3(-1725.4459f, -1024.2422f, 4.1073136f); heading: 23.336979f  -  smiec48
 new Vector3(-1730.3346f, -1013.3574f, 4.414798f); heading: 21.388927f  -  smiec49
 new Vector3(-1739.5688f, -1006.6694f, 4.0521755f); heading: 49.887848f  -  smiec50
+new Vector3(-1311.0236f, 129.58098f, 58.269756f); heading: 4.389271f  -  pomnik lewy
+new Vector3(-1107.5969f, 159.75302f, 63.613655f); heading: 58.740047f  -  pomnik prawy

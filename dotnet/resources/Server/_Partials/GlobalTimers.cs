@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Timers;
 using GTANetworkAPI;
@@ -239,6 +240,17 @@ namespace ServerSide
                     {
                         vehicle.Delete();
                     }
+                }
+            });
+        }
+
+        private void UpdateGrass(System.Object source, ElapsedEventArgs e)
+        {
+            NAPI.Task.Run(() =>
+            {
+                foreach (Grass grass in lawnmowing.grassObjects.Where(g => g.pickedUpTime != null && DateTime.Now >= g.pickedUpTime.Value.AddMinutes(3)))
+                {
+                    grass.Create();
                 }
             });
         }
