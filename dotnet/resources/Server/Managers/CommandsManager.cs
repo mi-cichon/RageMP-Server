@@ -6,7 +6,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using GTANetworkAPI;
 using Newtonsoft.Json;
-
+using ServerSide.Jobs;
 namespace ServerSide
 {
     public class CommandsManager
@@ -20,7 +20,8 @@ namespace ServerSide
         List<TuneBusiness> testTune;
         LSPD lspd;
         PayoutManager payoutManager;
-        public CommandsManager(Houses houses, List<CarDealer> carDealers, List<Report> reportsList, PlayerDataManager pdm, ref OrgManager orgManager, ref List<TuneBusiness> testTune, ref LSPD lspd, ref PayoutManager payoutManager)
+        Lawnmowing lawnmowing;
+        public CommandsManager(Houses houses, List<CarDealer> carDealers, List<Report> reportsList, PlayerDataManager pdm, ref OrgManager orgManager, ref List<TuneBusiness> testTune, ref LSPD lspd, ref PayoutManager payoutManager, ref Lawnmowing lawnmowing)
         {
             this.houses = houses;
             this.carDealers = carDealers;
@@ -30,6 +31,7 @@ namespace ServerSide
             this.testTune = testTune;
             this.lspd = lspd;
             this.payoutManager = payoutManager;
+            this.lawnmowing = lawnmowing;
         }
 
         public void ExecuteCommand(Player player, string command, string arguments)
@@ -383,7 +385,7 @@ namespace ServerSide
                         }
                         break;
                     case "testy":
-                        if(args == null)
+                        if(args.Count == 0)
                         {
                             if(player.HasSharedData("tests_testing") && player.GetSharedData<bool>("tests_testing"))
                             {
