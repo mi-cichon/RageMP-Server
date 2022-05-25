@@ -88,7 +88,7 @@ mp.events.add("playerLeaveVehicle", (vehicle, seat) => {
         backMarker = mp.markers.new(0, pos.add(new mp.Vector3(0,0,1.3)), 0.6, {
             color: [0, 204, 153, 255]
         });
-        backColshape = mp.colshapes.newTube(pos.x, pos.y, pos.z, 1.0, 2.0);
+        backColshape = mp.colshapes.newTube(pos.x, pos.y, pos.z, 1.0, 3.0);
     }
 });
 
@@ -111,7 +111,7 @@ mp.events.addDataHandler("jobveh", (entity, value, oldvalue) => {
 });
 
 mp.events.add("playerEnterColshape", (shape) => {
-    if(player.getVariable("job") === "lawnmowing"){
+    if(player.getVariable("job") == "lawnmowing"){
         if(mp.colshapes.exists(backColshape) && shape == backColshape){
             backMarker.destroy();
             backColshape.destroy();
