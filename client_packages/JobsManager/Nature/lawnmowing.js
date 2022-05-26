@@ -18,7 +18,7 @@ let containersPositions = [
 ];
 
 let maxCapacity = 16;
-let currentCapacity = 31;
+let currentCapacity = 0;
 
 mp.events.add("render", () => {
     if(lawnMower != null && mp.vehicles.exists(lawnMower)){
