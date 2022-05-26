@@ -11,9 +11,9 @@ var emojis = [
     {id: 1, name: ":o", code: `<div class="emoji" style="background-image: url(img/emojis/astonished.png)"></div>`},
     {id: 2, name: ":boom:", code: `<div class="emoji" style="background-image: url(img/emojis/boom.png)"></div>`},
     {id: 3, name: ":cowboy:", code: `<div class="emoji" style="background-image: url(img/emojis/cowboy.png)"></div>`},
-    {id: 4, name: ":devil:", code: `<div class="emoji" style="background-image: url(..img/emojis/devil.png)"></div>`},
-    {id: 5, name: ":/", code: `<div class="emoji" style="background-image: url(..img/emojis/diagonal.png)"></div>`},
-    {id: 6, name: ":|", code: `<div class="emoji" style="background-image: url(..img/emojis/expressionless.png)"></div>`},
+    {id: 4, name: ":devil:", code: `<div class="emoji" style="background-image: url(img/emojis/devil.png)"></div>`},
+    {id: 5, name: ":/", code: `<div class="emoji" style="background-image: url(img/emojis/diagonal.png)"></div>`},
+    {id: 6, name: ":|", code: `<div class="emoji" style="background-image: url(img/emojis/expressionless.png)"></div>`},
     {id: 7, name: ":D", code: `<div class="emoji" style="background-image: url(img/emojis/laugh.png)"></div>`},
     {id: 8, name: ":rofl:", code: `<div class="emoji" style="background-image: url(img/emojis/rofl.png)"></div>`},
     {id: 9, name: ":sad:", code: `<div class="emoji" style="background-image: url(img/emojis/sad.png)"></div>`},
@@ -31,6 +31,19 @@ var emojis = [
 ];
 
 function setConversationsData(data){
+    $(".emojisList_list").empty();
+    emojis.forEach(emoji => {
+        let element = $(emoji.code);
+        element.attr("id", emoji.id);
+        $(".emojisList_list").append(element);
+    });
+    $(".emojisList_list > .emoji").on("click", function(){
+        let id = $(this).attr("id");
+        $("#messenger_input").val($("#messenger_input").val() + emojis.find(emoji => emoji.id == parseInt(id)).name);
+        let input = $("#messenger_input");
+        input.trigger("focus");
+    });
+
     data = JSON.parse(data);
     data.forEach(conversation => {
         $(".panel_messenger_contacts_scroll").append(`
@@ -243,17 +256,3 @@ $(".emojisList_button").on("click", () => {
     let input = $("#messenger_input");
     input.trigger("focus");
 })
-
-  $(window).on("load", () => {
-    emojis.forEach(emoji => {
-        let element = $(emoji.code);
-        element.attr("id", emoji.id);
-        $(".emojisList_list").append(element);
-    });
-    $(".emojisList_list > .emoji").on("click", function(){
-        let id = $(this).attr("id");
-        $("#messenger_input").val($("#messenger_input").val() + emojis.find(emoji => emoji.id == parseInt(id)).name);
-        let input = $("#messenger_input");
-        input.trigger("focus");
-    });
-  })

@@ -20,7 +20,6 @@ namespace ServerSide
             lawnColshape.SetSharedData("type", "lawnmowing");
             lawnBlip = NAPI.Blip.CreateBlip(497, startPoint, 0.8f, 69, name: "Praca: Koszenie trawników", shortRange: true);
             customMarkers.CreateJobMarker(startPoint, "Koszenie trawników");
-
             foreach (Vector3 grassPosition in GrassObjects.objects)
             {
                 grassObjects.Add(new Grass(grassPosition, GetRandomGrassModel(), grassObjects.Count));
@@ -52,9 +51,10 @@ namespace ServerSide
 
         public List<int> grassModels = new List<int>()
         {
-            (int)NAPI.Util.GetHashKey("prop_veg_grass_01_a"),
-            (int)NAPI.Util.GetHashKey("prop_veg_grass_01_b"),
-            (int)NAPI.Util.GetHashKey("prop_veg_grass_01_c")
+            //(int)NAPI.Util.GetHashKey("prop_veg_grass_01_a"),
+            //(int)NAPI.Util.GetHashKey("prop_veg_grass_01_b"),
+            //(int)NAPI.Util.GetHashKey("prop_veg_grass_01_c"),
+            (int)NAPI.Util.GetHashKey("prop_veg_grass_01_d")
         };
     }
 
@@ -75,13 +75,15 @@ namespace ServerSide
             this.id = ID;
 
             Random rnd = new Random();
-            double moveX = rnd.Next(-3, 4);
-            double moveY = rnd.Next(-3, 4);
+            double moveX = rnd.Next(-5, 6);
+            double moveY = rnd.Next(-5, 6);
 
-            Vector3 pos = new Vector3(this.position.X + (moveX * 0.2), this.position.Y + (moveY * 0.2), this.position.Z - 0.4);
+            Vector3 pos = new Vector3(this.position.X + (moveX * 0.1), this.position.Y + (moveY * 0.1), this.position.Z - 0.4);
 
             grassObj = NAPI.Object.CreateObject(model, pos, new Vector3());
-            grassShape = NAPI.ColShape.CreateCylinderColShape(pos, 1.0f, 3.0f);
+            
+            pos = new Vector3(pos.X, pos.Y - 1.4, pos.Z);
+            grassShape = NAPI.ColShape.CreateCylinderColShape(pos, 1.5f, 3.0f);
             grassShape.SetSharedData("type", "grass");
             grassShape.SetSharedData("grassId", ID);
 
@@ -107,13 +109,14 @@ namespace ServerSide
                 pickedUpTime = null;
 
                 Random rnd = new Random();
-                double moveX = rnd.Next(-3, 4);
-                double moveY = rnd.Next(-3, 4);
+                double moveX = rnd.Next(-5, 6);
+                double moveY = rnd.Next(-5, 6);
 
-                Vector3 pos = new Vector3(this.position.X + (moveX * 0.2), this.position.Y + (moveY * 0.2), this.position.Z - 0.4);
+                Vector3 pos = new Vector3(this.position.X + (moveX * 0.1), this.position.Y + (moveY * 0.1), this.position.Z - 0.4);
 
                 grassObj = NAPI.Object.CreateObject(model, pos, new Vector3());
-                grassShape = NAPI.ColShape.CreateCylinderColShape(pos, 1.0f, 3.0f);
+                pos = new Vector3(pos.X, pos.Y - 1.4, pos.Z);
+                grassShape = NAPI.ColShape.CreateCylinderColShape(pos, 1.5f, 3.0f);
                 grassShape.SetSharedData("type", "grass");
                 grassShape.SetSharedData("grassId", id);
             }

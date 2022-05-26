@@ -1,7 +1,6 @@
 let player = mp.players.local;
 let lawnMower = null;
 let backMarker = null;
-let backColshape = null;
 let grassBox = null;
 let containerBlip = null;
 let containerCol = null;
@@ -19,7 +18,7 @@ let containersPositions = [
 ];
 
 let maxCapacity = 16;
-let currentCapacity = 0;
+let currentCapacity = 31;
 
 mp.events.add("render", () => {
     if(lawnMower != null && mp.vehicles.exists(lawnMower)){
@@ -58,9 +57,6 @@ mp.events.addDataHandler("job", (entity, value, oldvalue) => {
             if(mp.markers.exists(backMarker)){
                backMarker.destroy();
             }
-            if(mp.colshapes.exists(backColshape)){
-               backColshape.destroy();
-            }
             if(mp.objects.exists(grassBox)){
                grassBox.destroy();
             }
@@ -81,14 +77,17 @@ mp.events.addDataHandler("job", (entity, value, oldvalue) => {
 });
 
 mp.events.add("playerLeaveVehicle", (vehicle, seat) => {
-    if(mp.vehicles.exists(lawnMower) && vehicle == lawnMower && !mp.colshapes.exists(backColshape) && player.getVariable("job") === "lawnmowing" && currentCapacity >= maxCapacity){
+    if(mp.vehicles.exists(lawnMower) && vehicle == lawnMower && !mp.objects.exists(grassBox) && player.getVariable("job") === "lawnmowing" && currentCapacity >= maxCapacity){
         mp.events.callRemote("freezeLawnmower", lawnMower, true);
-        let { x, y } = offsetPosition(lawnMower.position.x, lawnMower.position.y, vehicle.getHeading() - 180, 1.8);
-        let pos = new mp.Vector3(x, y, lawnMower.position.z);
-        backMarker = mp.markers.new(0, pos.add(new mp.Vector3(0,0,1.3)), 0.6, {
-            color: [0, 204, 153, 255]
+        grassBox = mp.objects.new(1009806427, player.position, {
+            alpha: 0
         });
-        backColshape = mp.colshapes.newTube(pos.x, pos.y, pos.z, 1.0, 3.0);
+        mp.game.streaming.requestAnimDict("anim@heists@box_carry@");
+        player.taskPlayAnim("anim@heists@box_carry@", "idle", 1.0, 1.0, -1, 63, 1.0, false, false, false);
+        setTimeout(() => {
+            grassBox.attachTo(player.handle, player.getBoneIndex(57005), 0.08, 0, -0.27, 0, 65, 20, true, false, false, false, 0, true);
+            grassBox.setAlpha(255);
+        }, 100);
     }
 });
 
@@ -112,20 +111,7 @@ mp.events.addDataHandler("jobveh", (entity, value, oldvalue) => {
 
 mp.events.add("playerEnterColshape", (shape) => {
     if(player.getVariable("job") == "lawnmowing"){
-        if(mp.colshapes.exists(backColshape) && shape == backColshape){
-            backMarker.destroy();
-            backColshape.destroy();
-            grassBox = mp.objects.new(1009806427, player.position, {
-                alpha: 0
-            });
-            mp.game.streaming.requestAnimDict("anim@heists@box_carry@");
-            player.taskPlayAnim("anim@heists@box_carry@", "idle", 1.0, 1.0, -1, 63, 1.0, false, false, false);
-            setTimeout(() => {
-                grassBox.attachTo(player.handle, player.getBoneIndex(57005), 0.08, 0, -0.27, 0, 65, 20, true, false, false, false, 0, true);
-                grassBox.setAlpha(255);
-            }, 100);
-        }
-        else if(mp.colshapes.exists(containerCol) && shape == containerCol && mp.objects.exists(grassBox)){
+        if(mp.colshapes.exists(containerCol) && shape == containerCol && mp.objects.exists(grassBox)){
             containerCol.destroy();
             grassBox.destroy();
             player.clearTasksImmediately();
