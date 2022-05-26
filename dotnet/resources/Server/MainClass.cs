@@ -121,7 +121,7 @@ namespace ServerSide
             jobVehicles = new List<JobVehicle>()
             {
                 new JobVehicle(VehicleHash.Flatbed, "towtruck", 25, 35, 9, true, "Laweta", 90, 0, true, "", vehicleDataManager.defaultDamage, "BASICRPG", 42),
-                new JobVehicle(VehicleHash.Mower, "lawnmowing", 0, 0, 0, true, "Kosiarka", 30, 10, true, "", "", "BASICRPG", 53),
+                new JobVehicle(VehicleHash.Mower, "lawnmowing", 0, 0, 0, true, "Kosiarka", 30, 50, true, "", "", "BASICRPG", 53),
                 new JobVehicle(VehicleHash.Blazer, "hunter", 0, 0, 0, true, "Blazer", 70, 0, true, "", "", "BASICRPG", 53),
                 new JobVehicle(VehicleHash.Kalahari, "gardener", 25, 35, 8, true, "Kalahari", 155, 18, true, "[]", vehicleDataManager.defaultDamage, "BASICRPG", 53),
                 new JobVehicle(VehicleHash.Forklift, "forklifts", 0, 0, 0, true, "Wózek widłowy", 25, 0, true, "", "", "BASICRPG", 42),
