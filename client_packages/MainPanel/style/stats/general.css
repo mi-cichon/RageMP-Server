@@ -1,0 +1,49 @@
+.panel_stats_general{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 2vh;
+    color: white;
+    font-size: 1.4vh;
+}
+
+.panel_stats_general > .general_header{
+    font-size: 2vh;
+    margin-bottom: 4vh;
+}
+
+
+.panel_stats_general > .general_list {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.panel_stats_general > .general_list > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 2vh;
+}
+
+.panel_stats_general > .general_list > div > p{
+    text-align: left;
+    width: 40%;
+    margin: 0;
+}
+
+.panel_stats_general > .general_list > div > b{
+    width: 40%;
+    text-align: right;
+}
+
+.panel_stats_general > .general_list > div > i{
+    width: 20%;
+    text-align: center;
+}
+
+.panel_stats_general > .general_addon{
+    position: absolute;
+    bottom: 2vh;
+}

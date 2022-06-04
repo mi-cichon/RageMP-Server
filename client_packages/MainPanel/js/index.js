@@ -39,3 +39,30 @@ $('.panel_social_discord').on('click', function(){
 function setHourBonusState(state){
     hourBonus = state;
 }
+
+function initializeTabview(tabviewElem){
+    let tabs = $(tabviewElem).children()[0];
+    let view = $(tabviewElem).children()[1];
+    let tabChildren = $(tabs).find(".panel_tabview_tab");
+
+    let selected = $(tabs).find(".panel_tabview_tab.tabselected");
+    let panel = $(selected).attr("source");
+    $(view).load(`partials/${panel}`);
+
+    $(tabChildren).on('click', function (){
+        selected = $(tabs).find(".panel_tabview_tab.tabselected");
+        $(selected).removeClass("tabselected");
+        $(this).addClass("tabselected");
+        let selectedPanel = $(this).attr("source");
+        $(view).load(`partials/${selectedPanel}`);
+    });
+}
+
+function copyToClipboard(str){
+    const el = document.createElement('textarea');
+    el.value = str;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+  };

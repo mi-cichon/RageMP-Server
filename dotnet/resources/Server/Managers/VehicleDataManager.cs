@@ -1330,7 +1330,7 @@ namespace ServerSide
         {
             List<List<string>> vehicles = new List<List<string>>();
             DBConnection dataBase = new DBConnection();
-            dataBase.command.CommandText = $"SELECT id, name, model FROM vehicles WHERE owner = '{player.SocialClubId}';";
+            dataBase.command.CommandText = $"SELECT id, name, model, spawned FROM vehicles WHERE owner = '{player.SocialClubId}';";
             using (MySqlDataReader reader = dataBase.command.ExecuteReader())
             {
                 while(reader.Read())
@@ -1339,7 +1339,8 @@ namespace ServerSide
                     {
                         reader.GetInt32(0).ToString(),
                         reader.GetString(1),
-                        reader.GetString(2)
+                        reader.GetString(2),
+                        reader.GetString(3)
                     };
                     vehicles.Add(veh);
                 }
@@ -1364,15 +1365,7 @@ namespace ServerSide
                 {
                     vehInfo.Add(reader.GetString(1));
                     vehInfo.Add(reader.GetInt32(0).ToString());
-                    switch (reader.GetString(5))
-                    {
-                        case "True":
-                            vehInfo.Add("na zewnątrz");
-                            break;
-                        case "False":
-                            vehInfo.Add("w przechowalni");
-                            break;
-                    }
+                    vehInfo.Add(reader.GetString(2));
                     model = reader.GetString(2);
                     mechtune = reader.GetString(3);
                     visutune = reader.GetString(4);

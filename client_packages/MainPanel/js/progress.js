@@ -99,9 +99,9 @@ var Node = class {
             offsetPos = this.connectTo.position;
         }
         
-        let nodeDiameter = this.type == "main" ? Math.floor($(screenBody).width()/25) : Math.floor($(screenBody).width()/40);
+        let nodeDiameter = this.type == "main" ? Math.floor($(screenBody).width()/20) : Math.floor($(screenBody).width()/30);
         
-        let offsetLength = Math.floor($(screenBody).width()/30);
+        let offsetLength = Math.floor($(screenBody).width()/25);
         if(this.connectTo != null){
             if(this.connectTo.type == "main" || this.type == "main"){
                 offsetLength = Math.floor($(screenBody).width()/20);

@@ -1,14 +1,14 @@
 .bank_body{
-    width: 90%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    border-radius: 4vh;
     background-color: rgb(43, 43, 43, 0.7);
     display: flex;
     justify-content: space-between;
+    font-family: 'San Francisco';
 }
 
 .bank_body_left{
@@ -21,21 +21,20 @@
     margin: 3%;
     margin-right: 1%;
     box-sizing: border-box;
-    border-radius: 4vh;
-    background-color: rgba(63, 63, 63, 0.7);
+    background-color: rgba(37, 37, 43, 0.6);
     border-bottom-right-radius: 0;
 }
 
 .bank_card{
-    width: 80%;
-    height: 30%;
+    width: 70%;
+    height: 25%;
     background-image: url('../img/kartabasic.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     border-radius: 1vh;
-    margin: 5% 10%;
+    margin: 15% 10%;
 }
 
 .bank_card p{
@@ -47,7 +46,6 @@
 }
 
 .bank_controls{
-    border-top: 1px solid gray;
     height: 60%;
     width: 100%;
     display: flex;
@@ -57,17 +55,15 @@
 }
 
 .bank_control{
-    width: 60%;
+    width: 80%;
     height: 4vh;
-    background-color: #000000;
-    background-image: linear-gradient(315deg, #141414 0%, #414141 74%);
-    font-size: 1.7vh;
+    background: rgba(37, 37, 43, 0.8);
+    font-size: 1.4vh;
     color: white;
     text-align: center;
-    border-radius: 1vh;
-    border: 1px solid gray;
     line-height: 4vh;
     margin: 1vh 0;
+    border: 1px solid rgba(255,255,255, 0.1);
 }
 
 .bank_control_selected{
@@ -75,18 +71,15 @@
 }
 
 .bank_control_locked{
-    width: 60%;
+    width: 80%;
     height: 4vh;
-    background-color: #000000;
-    background-image: linear-gradient(315deg, #141414 0%, #414141 74%);
+    background: rgba(37, 37, 43, 0.8);
     font-size: 1.7vh;
     color: white;
     text-align: center;
-    border-radius: 1vh;
-    border: 1px solid gray;
     line-height: 4vh;
     margin: 1vh 0;
-    filter: blur(1px);
+    filter: blur(2px);
 }
 
 .bank_body_right{
@@ -95,8 +88,7 @@
     margin: 3%;
     margin-left: 1%;
     box-sizing: border-box;
-    border-radius: 4vh;
-    background-color: rgba(63, 63, 63, 0.7);
+    background-color: rgba(37, 37, 43, 0.6);
     border-bottom-left-radius: 0;
 }
 
@@ -116,14 +108,12 @@
     height: 35%;
     padding: 2vh;
     box-sizing: border-box;
-    border-bottom: 1px solid gray;
 }
 
 .bank_data_info_row > img{
     width: 13vh;
     height: 13vh;
-    border-radius: 30%;
-    border: 1px solid white;
+    border: 1px solid rgba(255,255,255, 0.1);
 }
 
 .bank_data_info_row{
@@ -134,7 +124,7 @@
 .bank_data_info_col{
     width: 100%;
     color: white;
-    font-size: 2.2vh;
+    font-size: 2vh;
     padding: 1vh 2vh;
     display: flex;
     flex-direction: column;
@@ -145,19 +135,21 @@
     margin: 0;
     width: 100%;
     text-align: start;
-    font-size: 2.1vh;
+    font-size: 2vh;
 }
 
 .bank_data_info_accnmbr{
     width: 100%;
     height: 4vh;
-    background-color: #000000;
-    background-image: linear-gradient(315deg, #141414 0%, #414141 74%);
+    background: rgba(37, 37, 43, 1);
+    font-size: 1.3vh;
+    color: white;
     text-align: center;
     line-height: 4vh;
-    border: 1px solid white;
+    margin: 1vh 0;
     transition: background-image 2s;
-    font-size: 1.5vh;
+    font-size: 1.4vh;
+    border: 1px solid rgba(255,255,255, 0.1);
 }
 
 .bank_data_info_accnmbr:hover{
@@ -185,12 +177,10 @@
 .bank_data_history_body{
     width: 96%;
     height: 83%;
-    background-color:#303030;
+    background-color:rgba(37, 37, 43, 0.6);
     margin: 5% 2%;
     margin-top: 2%;
     box-sizing: border-box;
-    border-bottom-right-radius: 4vh;
-    border-top-right-radius: 4vh;
     overflow-y: scroll;
     direction:rtl;
 }
@@ -202,7 +192,7 @@
     width: 100%;
     flex-direction: column;
     align-items: center;
-    border-bottom: gray 1px solid;
+    border-bottom: white 1px solid;
     direction: ltr;
 }
 
@@ -212,7 +202,7 @@
     justify-content: space-between;
     width: 100%;
     color: white;
-    font-size: 2vh;
+    font-size: 1.4vh;
 }
 
 .bank_data_history_item_bottom{
@@ -222,12 +212,12 @@
     flex-direction: column;
     width: 100%;
     color: white;
-    font-size: 2vh;
+    font-size: 1.4vh;
     box-sizing: border-box;
 }
 
 .bank_data_history_item_bottom > p{
-    font-size: 2vh;
+    font-size: 1.4vh;
     padding: 0.5vh 1vh;
     word-wrap: break-word;
 }
@@ -272,7 +262,7 @@
     justify-content: space-around;  
     padding: 2vh;
     box-sizing: border-box;
-    font-size: 2vh;
+    font-size: 1.4vh;
     color: white;
 }
 
@@ -296,19 +286,23 @@
 
 .bank_transfer_body p{
     width: 50%;
+    font-size: 1.4vh;
     
 }
 
 .bank_transfer_body .bank_transfer_amountInput, .bank_transfer_targetInput, textarea{
     width: 50%;
     outline: none;
-    background:rgb(36, 36, 36);
-    border: 1px solid white;
-    border-radius: 1vh;
+    background:rgba(37, 37, 43, 0.6);
+    border: 1px solid rgba(255,255,255, 0.1);
     height: 3vh;
     color: white;
     padding: 0.2vh 1vh;
-    font-size: 1.8vh;
+    font-size: 1.4vh;
+}
+
+.bank_transfer_target > p{
+    font-size: 1.4vh;
 }
 
 .bank_transfer_amount input::-webkit-outer-spin-button, .bank_transfer_amount input::-webkit-inner-spin-button{
@@ -331,15 +325,13 @@
 .bank_transfer_confirm{
     width: 60%;
     height: 4vh;
-    background-color: #000000;
-    background-image: linear-gradient(315deg, #141414 0%, #414141 74%);
-    font-size: 1.7vh;
+    background-color: rgba(37, 37, 43, 0.6);
+    font-size: 1.4vh;
     color: white;
     text-align: center;
-    border-radius: 1vh;
-    border: 1px solid #0c9;
     line-height: 4vh;
     margin: 1vh 0;
+    border: 1px solid rgba(255,255,255, 0.1);
 }
 
 .bank_tab{

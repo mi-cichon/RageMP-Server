@@ -1,0 +1,50 @@
+.panel_info_socialmedia{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 2vh;
+    color: white;
+    font-size: 1.4vh;
+}
+
+.panel_info_socialmedia > .socialmedia_header{
+    font-size: 2vh;
+    margin-bottom: 4vh;
+}
+
+.panel_info_socialmedia > .social_button{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+}
+
+.panel_info_socialmedia > .social_button > .discord{
+    width: 8vh;
+    height: 2vh;
+    background-color: #7289da;
+    border-radius: 0.6vh;
+    padding: 0.4vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 1.2vh;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.4s;
+}
+.panel_info_socialmedia > .social_button > .discord:hover{
+    background-color: #536cc7;
+}
+.panel_info_socialmedia > .social_button > .discord > .logo{
+    width: 2.4vh;
+    height: 1.8vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70%;
+}
+.panel_info_socialmedia > .social_button > .discord > p{
+    margin: 0;
+    width: 60%;
+}

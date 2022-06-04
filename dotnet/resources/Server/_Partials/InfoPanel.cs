@@ -18,25 +18,31 @@ namespace ServerSide
         //    player.TriggerEvent("mainPanel_setData", playersData, skillsData, vehiclesData, settingsData, (playerDataManager.time.Hour.ToString().Length == 1 ? ("0" + playerDataManager.time.Hour.ToString()) : playerDataManager.time.Hour.ToString()) + ":" + (playerDataManager.time.Minute.ToString().Length == 1 ? ("0" + playerDataManager.time.Minute.ToString()) : playerDataManager.time.Minute.ToString()));
         //}
 
-        [RemoteEvent("mainPanel_requestPlayerData")]
-        public void MainPanel_requestPlayerData(Player player)
+        [RemoteEvent("mainPanel_requestStatsGeneralData")]
+        public void MainPanel_requestStatsGeneralData(Player player)
         {
             var playerInfo = playerDataManager.GetPlayersInfo(player);
-            var skillInfo = playerDataManager.GetPlayersSkills(player);
+            player.TriggerEvent("mainPanel_setStatsGeneralData", playerInfo);
+        }
+
+        [RemoteEvent("mainPanel_requestStatsJobData")]
+        public void MainPanel_requestStatsJobData(Player player)
+        {
             var jobInfo = progressManager.GetPlayersJobInfo(player);
-            player.TriggerEvent("mainPanel_setPlayerData", playerInfo, skillInfo, jobInfo);
+            player.TriggerEvent("mainPanel_setStatsJobData", jobInfo);
+        }
+
+        [RemoteEvent("mainPanel_requestStatsSkillData")]
+        public void MainPanel_requestStatsSkillData(Player player)
+        {
+            var skillsInfo = playerDataManager.GetPlayersSkills(player);
+            player.TriggerEvent("mainPanel_setStatsSkillsData", skillsInfo);
         }
 
         [RemoteEvent("mainPanel_requestVehiclesData")]
         public void MainPanel_requestVehiclesData(Player player)
         {
             player.TriggerEvent("mainPanel_setVehiclesData", vehicleDataManager.GetPlayersVehicles(player));
-        }
-
-        [RemoteEvent("mainPanel_requestSettingsData")]
-        public void MainPanel_requestSettingsData(Player player)
-        {
-            player.TriggerEvent("mainPanel_setSettings", player.GetSharedData<string>("settings"), player.GetSharedData<string>("authcode"));
         }
 
         [RemoteEvent("mainPanel_requestVehicleData")]
@@ -113,7 +119,6 @@ namespace ServerSide
         public void MainPanel_requestProgressData(Player player)
         {
             string[] progress = progressManager.GetPlayersProgressInfo(player);
-
             player.TriggerEvent("mainPanel_setProgressData", progress[0], progress[1]);
         }
     }

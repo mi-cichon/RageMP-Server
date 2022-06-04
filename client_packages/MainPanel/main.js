@@ -40,19 +40,50 @@ mp.events.add("mainPanel_requestHourBonusInfo", () => {
     }
 });
 
-mp.events.add("mainPanel_setPlayerData", (playersData, skillsData, jobInfo) => {
+mp.events.add("mainPanel_requestStatsGeneralData", () => {
+    mp.events.callRemote("mainPanel_requestStatsGeneralData");
+});
+
+mp.events.add("mainPanel_setStatsGeneralData", (generalData) => {
     if(mainPanel_browser != null && mp.browsers.exists(mainPanel_browser)){
-        mainPanel_browser.execute(`insertPlayerData('${playersData}', '${skillsData}', '${jobInfo}')`);
+        mainPanel_browser.execute(`insertStatsGeneralData('${generalData}')`);
     }
 });
 
-mp.events.add("mainPanel_requestPlayerData", () => {
-    mp.events.callRemote("mainPanel_requestPlayerData");
+mp.events.add("mainPanel_requestStatsJobData", () => {
+    mp.events.callRemote("mainPanel_requestStatsJobData");
 });
+
+mp.events.add("mainPanel_setStatsJobData", (jobData) => {
+    if(mainPanel_browser != null && mp.browsers.exists(mainPanel_browser)){
+        mainPanel_browser.execute(`insertStatsJobData('${jobData}')`);
+    }
+});
+
+mp.events.add("mainPanel_requestStatsSkillData", () => {
+    mp.events.callRemote("mainPanel_requestStatsSkillData");
+});
+
+mp.events.add("mainPanel_setStatsSkillsData", (skillsData) => {
+    if(mainPanel_browser != null && mp.browsers.exists(mainPanel_browser)){
+        mainPanel_browser.execute(`insertStatsSkillsData('${skillsData}', ${player.getVariable('skillpoints')})`);
+    }
+});
+
 
 mp.events.add("mainPanel_setVehiclesData", (vehiclesData) => {
     if(mainPanel_browser != null && mp.browsers.exists(mainPanel_browser)){
-        mainPanel_browser.execute(`insertVehicles('${vehiclesData}')`);
+        let vehicles = JSON.parse(vehiclesData);
+        let newVehicles = [];
+        vehicles.forEach(vehicle => {
+            newVehicles.push([
+                vehicle[0],
+                vehicle[1],
+                vehicle[3],
+                mp.game.vehicle.getVehicleClassFromName(parseInt(vehicle[2])) == 8 ? "motorcycle" : "car"
+            ]);
+        });
+        mainPanel_browser.execute(`insertVehiclesData('${JSON.stringify(newVehicles)}')`);
     }
 });
 
@@ -60,15 +91,23 @@ mp.events.add("mainPanel_requestVehiclesData", () => {
     mp.events.callRemote("mainPanel_requestVehiclesData");
 });
 
-mp.events.add("mainPanel_setSettings", (settingsData, authcode) => {
+mp.events.add("mainPanel_requestGeneralSettingsData", () => {
     if(mainPanel_browser != null && mp.browsers.exists(mainPanel_browser)){
-        mainPanel_browser.execute(`insertSettings('${settingsData}', '${authcode}')`);
+        mainPanel_browser.execute(`insertGeneralSettings('${player.getVariable('settings')}')`);
     }
 });
 
-mp.events.add("mainPanel_requestSettingsData", () => {
-    mp.events.callRemote("mainPanel_requestSettingsData");
+mp.events.add("mainPanel_requestInterfaceSettingsData", () => {
+    if(mainPanel_browser != null && mp.browsers.exists(mainPanel_browser)){
+        mainPanel_browser.execute(`insertInterfaceSettings('${player.getVariable('settings')}')`);
+    }
 });
+
+mp.events.add("mainPanel_requestAuthSettingsData", () => {
+    if(mainPanel_browser != null && mp.browsers.exists(mainPanel_browser)){
+        mainPanel_browser.execute(`insertAuthSettings('${player.getVariable('authcode')}')`);
+    }
+})
 
 mp.events.add("mainPanel_requestVehicleData", id => {
     mp.events.callRemote('mainPanel_requestVehicleData', id);
@@ -76,7 +115,7 @@ mp.events.add("mainPanel_requestVehicleData", id => {
 
 mp.events.add('mainPanel_setVehicleData', (vehInfo, mechInfo, visuInfo) => {
     if(mainPanel_browser != null && mp.browsers.exists(mainPanel_browser)){
-        mainPanel_browser.execute(`setVehiclesData('${vehInfo}', '${mechInfo}', '${visuInfo}')`);
+        mainPanel_browser.execute(`setVehicleData('${vehInfo}', '${mechInfo}', '${visuInfo}')`);
     }
 });
 

@@ -105,7 +105,7 @@ namespace ServerSide
         {
             NAPI.Task.Run(() =>
             {
-                playerDataManager.SendInfoMessageToAllPlayers("Serwer jest w trakcie przygotowań. Wszystkie postępy zostaną usunięte tuż przed startem. Wszelkie błędy prosimy zgłaszać na Discordzie:  https://discord.gg/Yr6JeUtEM7");
+                playerDataManager.SendInfoMessageToAllPlayers("Serwer jest w trakcie przygotowań. Wszystkie postępy zostaną usunięte tuż przed startem. Wszelkie błędy prosimy zgłaszać na Discordzie:  https://discord.gg/zNhdtxhb9a");
             });
         }
 
