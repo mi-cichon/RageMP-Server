@@ -1,0 +1,190 @@
+.panel_settings_general{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 2vh;
+    color: white;
+    font-size: 1.4vh;
+}
+
+.panel_settings_general > .general_header{
+    font-size: 2vh;
+    margin-bottom: 4vh;
+}
+
+
+.panel_settings_general > .general_list {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 2vh;
+}
+
+.panel_settings_general > .general_list > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2vh;
+
+}
+
+.panel_settings_general > .general_list > div > p{
+    text-align: left;
+    width: 40%;
+    margin: 0;
+}
+
+.panel_settings_general > .general_list > div > b{
+    width: 40%;
+    text-align: right;
+}
+
+.panel_settings_general > .general_list > div > i{
+    width: 20%;
+    text-align: center;
+}
+
+.panel_settings_general > .general_addon{
+    position: absolute;
+    bottom: 2vh;
+}
+
+.radio{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 4vh;
+    align-items: center;
+    position: relative;
+    height: 2.2vh;
+}
+.radio p{
+    display: inline-block;
+    margin: 0;
+    color: white;
+    font-size: 1.1vh;
+}
+.radio input{
+    position: relative;
+    display: none;
+}
+
+.checkmark {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(112, 112, 112);
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 2vh;
+  }
+  
+.checkmark:before {
+    position: absolute;
+    content: "";
+    height: 1.6vh;
+    width: 1.6vh;
+    left: 0.4vh;
+    bottom: 0.2vh;
+    background-color: rgb(255, 255, 255);
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+  }
+
+  .radio input:checked + .checkmark {
+    background-color: #0c9;
+  }
+  
+  .radio input:focus + .checkmark {
+    box-shadow: 0 0 1px #0c9;
+  }
+
+  .radio input:checked + .checkmark:before {
+    -webkit-transform: translateX(1.5vh);
+    -ms-transform: translateX(1.5vh);
+    transform: translateX(1.5vh);
+  }
+
+  .title{
+    color: white;
+    display: inline-block;
+    margin: 1vh 0;
+    font-size: 1.4vh;
+    font-weight: 500;
+    line-height: 2vh;
+}
+/* .radio input:checked ~ .checkmark {
+  background-color: #202020;
+}
+
+.radio:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.radio input:checked ~ .checkmark .dot {
+  display: block;
+}
+
+.radio .checkmark:after {
+    width: 2px;
+    height: 2px;
+    background: white;
+}
+
+.dot{
+    position: absolute;
+    display: none;
+    width: 0.6vh;
+    height: 0.6vh;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #0c9;
+    border-radius: 50%;
+} */
+.voiceBind{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.voiceBind > p{
+    margin: 0;
+} 
+
+.voiceBlock{
+    width: auto;
+    display:inline-flex;
+    justify-content: center;
+    margin: 0 1vh;
+}
+
+.clickText{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 2.6vh;
+  color: white;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgb(37, 37, 37) 0%, rgba(50, 51, 56, 0.95) 100%);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 10;
+}
+
+
+.hidden *{
+  display: none;
+}

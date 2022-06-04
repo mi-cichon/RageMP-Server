@@ -46,19 +46,19 @@ function setConversationsData(data){
 
     data = JSON.parse(data);
     data.forEach(conversation => {
-        $(".panel_messenger_contacts_scroll").append(`
-        <div class="panel_messenger_contact ${conversation[1] == "true" ? "notseen" : ""}" playerId="${conversation[0]}">
+        $(".panel_messenger_scroll").append(`
+        <div class="panel_messenger_tab ${conversation[1] == "true" ? "notseen" : ""}" playerId="${conversation[0]}">
             <div class="avatar" style="background-image:url(http://51.38.128.119/avatars/${conversation[0]}/avatar.png)"></div>
             <div class="nick">${conversation[2]}</div>
         </div>
         `);
     });
     $(".panel_messenger_messages_scroll").empty();
-    $(".panel_messenger_contact").off("click");
-    $(".panel_messenger_contact").on("click", function(){
+    $(".panel_messenger_tab").off("click");
+    $(".panel_messenger_tab").on("click", function(){
         if(!$(this).hasClass("selected")){
             newMessage = false;
-            $(".panel_messenger_contact.selected").removeClass("selected");
+            $(".panel_messenger_tab.selected").removeClass("selected");
             $(this).addClass("selected");
             playerToId = $(this).attr("playerId");
             $(".panel_messenger_start").css("display", "none");

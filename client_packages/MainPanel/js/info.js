@@ -1,0 +1,1 @@
+initializeTabview($(".panel_info_body > .panel_tabview"));

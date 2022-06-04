@@ -1,0 +1,31 @@
+.panel_info_penalties{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 2vh;
+    color: white;
+    font-size: 1.4vh;
+}
+
+.panel_info_penalties > .penalties_header{
+    font-size: 2vh;
+    margin-bottom: 4vh;
+}
+
+.panel_info_penalties > .penalties_addon{
+    position: absolute;
+    bottom: 2vh;
+}
+
+.panel_info_penalties > .penalties_table{
+    border-spacing: 1px;
+    width: 100%;
+}
+
+.panel_info_penalties > .penalties_table > tbody > tr > td:last-child{
+    padding-left: 3vh;
+}
+
+.panel_info_penalties > .penalties_table > tbody > tr:nth-child(2n){
+    background-color: rgb(255,255,255, 0.05);
+}

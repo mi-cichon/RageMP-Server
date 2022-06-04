@@ -2,7 +2,7 @@
     width: 100%;
     display: grid;
     box-sizing: border-box;
-    margin-bottom: 5vh;
+    margin: 5vh 0;
     padding: 0 2vh;
     grid-template-columns: 16% 16% 16% 16% 16%;
     justify-items: center;
@@ -16,11 +16,13 @@
 
 .panel_control{
     padding: 1vh;
-    width: 5vh;
-    height: 5vh;
-    background: radial-gradient(circle, rgba(55,55,55,0.95) 0%, rgba(29, 29, 32, 0.95) 100%);
-    border-radius: 2vh;
+    width: 4vh;
+    height: 4vh;
     position: relative;
+    border-radius: 1.5vh;
+    background-color: rgba(37, 37, 43, 0.6);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
 }
 
 .panel_control:hover{
@@ -37,8 +39,9 @@
     font-family: 'San Francisco';
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;
+    width: 150%;
     text-align: center;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .panel_control_text{
