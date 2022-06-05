@@ -85,8 +85,10 @@ mp.events.add("playerLeaveVehicle", (vehicle, seat) => {
         mp.game.streaming.requestAnimDict("anim@heists@box_carry@");
         player.taskPlayAnim("anim@heists@box_carry@", "idle", 1.0, 1.0, -1, 63, 1.0, false, false, false);
         setTimeout(() => {
-            grassBox.attachTo(player.handle, player.getBoneIndex(57005), 0.08, 0, -0.27, 0, 65, 20, true, false, false, false, 0, true);
-            grassBox.setAlpha(255);
+            if(mp.objects.exists(grassBox)){
+                grassBox.attachTo(player.handle, player.getBoneIndex(57005), 0.08, 0, -0.27, 0, 65, 20, true, false, false, false, 0, true);
+                grassBox.setAlpha(255);
+            }
         }, 100);
     }
 });
@@ -117,11 +119,13 @@ mp.events.add("playerEnterColshape", (shape) => {
             player.clearTasksImmediately();
             containerBlip.destroy();
             containerMarker.destroy();
-            mp.events.callRemote("lawnmowingReward");
+            mp.events.callRemote("lawnmowingReward", currentCapacity);
             currentCapacity = 0;
         }
         else if(shape.hasVariable("type") && shape.getVariable("type") === "grass" && currentCapacity < maxCapacity && player.vehicle != null && player.vehicle === lawnMower){
-            mp.events.callRemote("lawnmowingRemoveGrass", shape.getVariable("grassId"));
+            if(shape.getVariable("grassExists")){
+                mp.events.callRemote("lawnmowingRemoveGrass", shape.getVariable("grassId"));
+            }
         }
     }
 });
@@ -192,7 +196,7 @@ function getClosestVehicle()
 mp.events.add("saveData_lawnmowing_load", (data) => {
     let saveData = JSON.parse(data);
     currentCapacity = saveData[2];
-    mp.events.callRemote("saveData_giveJobVeh", "lawnmowing", JSON.parse(saveData[1]), "");
+    mp.events.callRemote("saveData_giveJobVeh", "lawnmowing", JSON.parse(saveData[1]), "", 0);
 });
 
 mp.events.add("saveData_lawnmowing_save", () => {

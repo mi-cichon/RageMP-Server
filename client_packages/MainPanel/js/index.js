@@ -66,3 +66,39 @@ function copyToClipboard(str){
     document.execCommand('copy');
     document.body.removeChild(el);
   };
+
+  function setWallpaper(url){
+    var imageTest = "";
+    testImage(url).then(value => {
+        if(value === "success"){
+            $('.panel_container').css("background-image", "none");
+            $('.panel_container').css("background-image", `url('${url}')`);
+        }
+    });
+    
+  }
+
+  function testImage(url, timeoutT) {
+    return new Promise(function (resolve, reject) {
+        if(!url.match('(https?:\/\/.*\.(?:png|jpg|jpeg))')){
+            resolve("error");
+        }
+        var timeout = timeoutT || 5000;
+        var timer, img = new Image();
+        img.onerror = img.onabort = function () {
+            clearTimeout(timer);
+            resolve("error");
+        };
+        img.onload = function () {
+            clearTimeout(timer);
+            resolve("success");
+        };
+        timer = setTimeout(function () {
+            // reset .src to invalid URL so it stops previous
+            // loading, but doesn't trigger new load
+            img.src = "//!!!!/test.jpg";
+            resolve("timeout");
+        }, timeout);
+        img.src = url;
+    });
+}

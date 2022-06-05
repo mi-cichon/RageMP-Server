@@ -19,6 +19,7 @@ mp.events.add("mainPanel_openBrowser", () => {
     else if(!player.getVariable("gui")){
         mainPanel_browser = mp.browsers.new("package://MainPanel/index.html");
         mainPanel_browser.execute(`useEmojis(${player.hasVariable("settings_UseEmojis") ? player.getVariable('settings_UseEmojis').toString() : 'true'})`);
+        player.getVariable("settings_WallpaperUrl") !== "" ? mainPanel_browser.execute(`setWallpaper('${player.getVariable('settings_WallpaperUrl')}')`) : null;
         mp.gui.cursor.show(true, true);
         mp.events.callRemote("setGui", true);
     }

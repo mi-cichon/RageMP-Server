@@ -574,7 +574,7 @@ namespace ServerSide
             playerDataManager.GiveMoney(player, reward);
         }
 
-        public void LawnmowingPayment(Player player)
+        public void LawnmowingPayment(Player player, float amount)
         {
             double bonus = 1;
             if (player.GetSharedData<bool>("jobBonus_107"))
@@ -595,7 +595,7 @@ namespace ServerSide
             }
 
 
-            int money = 120;
+            int money = Convert.ToInt32(amount * 8);
             int exp = 20;
 
             money = Convert.ToInt32(money * bonus);

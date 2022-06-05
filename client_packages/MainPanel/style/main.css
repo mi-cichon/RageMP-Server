@@ -128,8 +128,7 @@ html, body{
 }
 
 .panel_container{
-    /* background: radial-gradient(circle, rgba(55,55,55,1) 0%, rgba(29,30,34,1) 100%); */
-    background: rgba(32, 32, 32, 1) url('../img//wallpapers/wallpaper.jpg');
+    background-image: url('../img//wallpapers/wallpaper.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
