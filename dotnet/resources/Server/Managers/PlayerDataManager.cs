@@ -1797,6 +1797,7 @@ namespace ServerSide
                 player.SetSharedData("settings_DisplayGlobal", settings.DisplayGlobal);
                 player.SetSharedData("settings_VoiceKey", settings.VoiceKey);
                 player.SetSharedData("settings_UseEmojis", settings.UseEmojis);
+                player.SetSharedData("settings_WallpaperUrl", settings.WallpaperUrl);
                 player.SetSharedData("settings", set);
 
                 SavePlayerDataToDB(player, "settings");
