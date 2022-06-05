@@ -14,7 +14,7 @@ namespace ServerSide
         }
 
         [RemoteEvent("saveData_giveJobVeh")]
-        public void SaveData_giveJobVeh(Player player, string jobType, Vector3 vehPos, string trunk, float oiltank = 0.0f)
+        public void SaveData_giveJobVeh(Player player, string jobType, Vector3 vehPos, string trunk, float oiltank)
         {
             player.Position = vehPos;
             JobVehicle jobVeh = jobVehicles.Find(veh => veh.JobType == jobType);

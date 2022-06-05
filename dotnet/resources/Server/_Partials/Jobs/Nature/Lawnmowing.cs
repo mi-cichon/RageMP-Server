@@ -21,9 +21,9 @@ namespace ServerSide
         }
 
         [RemoteEvent("lawnmowingReward")]
-        public void LawnmowingReward(Player player)
+        public void LawnmowingReward(Player player, float amount)
         {
-            payoutManager.LawnmowingPayment(player);
+            payoutManager.LawnmowingPayment(player, amount);
         }
         [RemoteEvent("lawnmowingRemoveGrass")]
         public void LawnmowingRemoveGrass(Player player, int grassID)

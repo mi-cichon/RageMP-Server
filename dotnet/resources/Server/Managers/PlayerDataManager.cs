@@ -1780,6 +1780,7 @@ namespace ServerSide
                 player.SetSharedData("settings_DisplayGlobal", settings.DisplayGlobal);
                 player.SetSharedData("settings_VoiceKey", settings.VoiceKey);
                 player.SetSharedData("settings_UseEmojis", settings.UseEmojis);
+                player.SetSharedData("settings_WallpaperUrl", settings.WallpaperUrl);
             }
         }
 
@@ -2304,8 +2305,9 @@ public class Settings
     public bool VoiceChat { get; set; }
     public int VoiceKey { get; set; }
     public bool UseEmojis { get; set; }
+    public string WallpaperUrl { get; set; }
 
-    public Settings(int HudSize, int ChatSize, int SpeedometerSize, bool DisplayNick, bool DisplayGlobal, bool VoiceChat, int VoiceKey, bool UseEmojis)
+    public Settings(int HudSize, int ChatSize, int SpeedometerSize, bool DisplayNick, bool DisplayGlobal, bool VoiceChat, int VoiceKey, bool UseEmojis, string WallpaperUrl)
     {
         this.HudSize = HudSize;
         this.ChatSize = ChatSize;
@@ -2315,6 +2317,7 @@ public class Settings
         this.VoiceChat = VoiceChat;
         this.VoiceKey = VoiceKey;
         this.UseEmojis = UseEmojis;
+        this.WallpaperUrl = WallpaperUrl;
     }
 }
 

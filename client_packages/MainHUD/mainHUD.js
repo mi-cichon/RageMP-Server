@@ -124,6 +124,7 @@ function startJob(workName, type) {
     if(time == 0) {
         jobInterval = setInterval(updateJobTime, 1000);
         $(".jobHUD_name").text(`${workName}`);
+        switchJobHUD();
     }
 }
 

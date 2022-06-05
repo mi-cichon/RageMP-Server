@@ -107,7 +107,8 @@ var keyCodes = {
         displayGlobal: true,
         voiceChat: false,
         voiceKey: 88,
-        useEmojis: true
+        useEmojis: true,
+        wallpaperUrl: ""
     }
     
     function insertGeneralSettings(set){

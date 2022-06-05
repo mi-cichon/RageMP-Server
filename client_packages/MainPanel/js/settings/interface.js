@@ -8,7 +8,8 @@ var settings = {
     displayGlobal: true,
     voiceChat: false,
     voiceKey: 88,
-    useEmojis: true
+    useEmojis: true,
+    wallpaperUrl: ""
 }
 
 function insertInterfaceSettings(set){
@@ -19,6 +20,8 @@ function insertInterfaceSettings(set){
     $("#chatSize").val(settings.chatSize);
 
     $("#speedometerSize").val(settings.speedometerSize);
+
+    $('.wallpaperUrl > input').val(settings.wallpaperUrl);
 
 }
 
@@ -38,16 +41,42 @@ $("#speedometerSize").on("change", function(){
 });
 
 var settingsTime = null;
-    function saveSettings(){
-        if(settingsTime == null){
-            settingsTime = setTimeout(function(){
-                mp.trigger("mainPanel_saveSettings", JSON.stringify(settings));
-                settingsTime = null;
-            }, 1000);
+function saveSettings(){
+    if(settingsTime == null){
+        settingsTime = setTimeout(function(){
+            mp.trigger("mainPanel_saveSettings", JSON.stringify(settings));
+            settingsTime = null;
+        }, 1000);
+    }
+    else{
+        clearTimeout(settingsTime);
+        settingsTime = null;
+        saveSettings();
+    }
+}
+
+$(".wallpaperUrl > input").on("keyup", function(event){
+    if(event.key === "Enter")
+    {
+        if($(this).val() != ""){
+            var imageTest = "";
+            var url = $(this).val();
+            testImage(url).then(value => {
+                if(value === "success"){
+                    settings.wallpaperUrl = url;
+                    $('.panel_container').css("background-image", "none");
+                    $('.panel_container').css("background-image", `url('${url}')`);
+                    saveSettings();
+                }
+                else{
+                    $(this).val("Niepoprawny URL!");
+                }
+            });
         }
         else{
-            clearTimeout(settingsTime);
-            settingsTime = null;
+            settings.wallpaperUrl = "";
+            $('.panel_container').removeAttr("style");
             saveSettings();
         }
     }
+});
