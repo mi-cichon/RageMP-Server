@@ -20,14 +20,8 @@ namespace ServerSide
     {
         private Vector3 defaultSpawn = new Vector3(1894.2115f, 3715.0637f, 32.762226f);
 
-        private PlayerDataManager playerDataManager = new PlayerDataManager();
-        private VehicleDataManager vehicleDataManager = new VehicleDataManager();
-        private DroppedItemsManager droppedItemsManager = new DroppedItemsManager();
-        private DoorManager doorManager = new DoorManager();
-        private DataManager dataManager = new DataManager();
-        private LogManager logManager = new LogManager();
-        private AutoSave autoSave = new AutoSave();
 
+        public List<ChangingRoom> changingRooms = new List<ChangingRoom>();
         public List<CarDealer> carDealers = new List<CarDealer>();
         public List<VehicleStorage> vehicleStorages = new List<VehicleStorage>();
         public List<PublicVehicleSpawn> publicVehicleSpawns = new List<PublicVehicleSpawn>();
@@ -41,41 +35,9 @@ namespace ServerSide
         private SpeedometerColor speedometerColor = new SpeedometerColor(new Vector3(387.58972f, 3587.3884f, 33.29227f));
         private CarMarket carMarket;
 
-        public Refinery refinery;
-        private TowTrucks towTruck;
-        //private Junkyard junkyard;
-        private Hunter hunter;
-        private Lawnmowing lawnmowing;
-        private Warehouse warehouse;
-        private Forklifts forklifts;
-        private DebrisCleaner debrisCleaner;
-        private FisherMan fisherMan = new FisherMan();
-        private Diver diver;
-        private Gardener gardener;
         // Supplier supplier;
 
-        private LSPD lspd;
-
-        public List<ChangingRoom> changingRooms = new List<ChangingRoom>();
-        public NicknameChange nicknameChange = new NicknameChange();
-
-        public CollectibleManager collectibleManager = new CollectibleManager();
-
-        private PayoutManager payoutManager;
-
-        private Peds peds = new Peds();
-
-        public CommandsManager commands;
-
-        public Houses houses;
-
-        private AntiCheat antiCheat = new AntiCheat();
-
         public List<Report> reportsList = new List<Report>();
-
-        public OrgManager orgManager;
-
-        public ProgressManager progressManager = new ProgressManager();
 
         List<GTANetworkAPI.Object> objList = new List<GTANetworkAPI.Object>();
 
@@ -111,21 +73,29 @@ namespace ServerSide
             NAPI.Server.SetDefaultSpawnLocation(defaultSpawn, heading: 125f);
             NAPI.Server.SetGlobalServerChat(false);
 
-            peds.CreateDepartmentPed(new Vector3(-1561.8259f, -559.97095f, 114.57642), 110f, "Zmiana nicku");
 
-            orgManager = new OrgManager();
-            new Banking();
-            new ItemShops();
+            //INSTANTIATE THINGS
+
+            LSPD.InstantiateLSPD();
+            DataManager.InstantiatePetrolStationsData();
+            DoorManager.InstantiateMissionRowLSPD();
+            OrgManager.InstantiateOrgs();
+            Banking.InstantiateATMs();
+            Houses.InstantiateHouses();
+            NicknameChange.InstantiateNicknameChange();
+
+
+            Peds.CreateDepartmentPed(new Vector3(-1561.8259f, -559.97095f, 114.57642), 110f, "Zmiana nicku");
 
             //SET JOB VEHICLES SETTINGS
             jobVehicles = new List<JobVehicle>()
             {
-                new JobVehicle(VehicleHash.Flatbed, "towtruck", 25, 35, 9, true, "Laweta", 90, 0, true, "", vehicleDataManager.defaultDamage, "BASICRPG", 42),
+                new JobVehicle(VehicleHash.Flatbed, "towtruck", 25, 35, 9, true, "Laweta", 90, 0, true, "", VehicleDataManager.defaultDamage, "BASICRPG", 42),
                 new JobVehicle(VehicleHash.Mower, "lawnmowing", 0, 0, 0, true, "Kosiarka", 30, 50, true, "", "", "BASICRPG", 53),
                 new JobVehicle(VehicleHash.Blazer, "hunter", 0, 0, 0, true, "Blazer", 70, 0, true, "", "", "BASICRPG", 53),
-                new JobVehicle(VehicleHash.Kalahari, "gardener", 25, 35, 8, true, "Kalahari", 155, 18, true, "[]", vehicleDataManager.defaultDamage, "BASICRPG", 53),
+                new JobVehicle(VehicleHash.Kalahari, "gardener", 25, 35, 8, true, "Kalahari", 155, 18, true, "[]", VehicleDataManager.defaultDamage, "BASICRPG", 53),
                 new JobVehicle(VehicleHash.Forklift, "forklifts", 0, 0, 0, true, "Wózek widłowy", 25, 0, true, "", "", "BASICRPG", 42),
-                new JobVehicle((VehicleHash)NAPI.Util.GetHashKey("oiltanker"), "refinery", 25, 35, 11, true, "Cysterna", 115, 0, true, "", vehicleDataManager.defaultDamage, "BASICRPG", 42),
+                new JobVehicle((VehicleHash)NAPI.Util.GetHashKey("oiltanker"), "refinery", 25, 35, 11, true, "Cysterna", 115, 0, true, "", VehicleDataManager.defaultDamage, "BASICRPG", 42),
                 new JobVehicle(VehicleHash.Blazer, "diver", 0, 0, 0, true, "Seashark", 85, 0, true, "", "", "BASICRPG", 42)
             };
 
@@ -153,63 +123,45 @@ namespace ServerSide
 
             CreateF1Track();
 
-
-
+            new VehicleVisu(new Vector3(-211.95407f, -1324.0376f, 30.890387f));
 
             //SET NEW BONUS
 
-            payoutManager = new PayoutManager(ref playerDataManager);
-
-            payoutManager.SetNewBonus();
+            PayoutManager.SetNewBonus();
 
 
             //INSTANTIATE JOBS
 
-            diver = new Diver(ref playerDataManager);
+            Diver.InstantiateDiver();
 
-            new VehicleVisu(new Vector3(-211.95407f, -1324.0376f, 30.890387f));
+            Forklifts.InstantiateForklifts(new Vector3(-553.21564f, -2359.1633f, 13.716812f));
 
-            forklifts = new Forklifts(new Vector3(-553.21564f, -2359.1633f, 13.716812f));
+            Warehouse.InstantiateWarehouse(new Vector3(-87.66176f, 6494.595f, 32.100685f));
+            DebrisCleaner.InstantiateDebrisCleaner(new Vector3(-1705.2916f, -994.86456f, 6.161489f));
+            Lawnmowing.InstantiateLawnmowing(new Vector3(-1348.476f, 142.67131f, 56.437782f));
+            Hunter.InstantiateHunter(new Vector3(-1490.5903f, 4981.5283f, 63.345905f), new Vector3(-1493.011f, 4971.482f, 63.92059f), 91.5f);
+            TowTrucks.InstantiateTowTrucks(new Vector3(593.4641f, -3043.515f, 6.1697326f), new Vector3(561.56323f, -3037.9924f, 6.091237f));
+            Gardener.InstantiateGardener();
+            Refinery.InstantiateRefinery();
+            
+            PayoutManager.bonusTime = DateTime.Now.AddHours(1);
+            
+            TowTrucks.AddSpawningPosition(new Vector3(516.8819f, -3054.159f, 6.0696325f), 1);
+            
+            TowTrucks.AddSpawningPosition(new Vector3(509.95694f, -3054.1301f, 6.0696325f), 1);
 
-            warehouse = new Warehouse(new Vector3(-87.66176f, 6494.595f, 32.100685f));
-
-            debrisCleaner = new DebrisCleaner(new Vector3(-1705.2916f, -994.86456f, 6.161489f));
-
-            lawnmowing = new Lawnmowing(new Vector3(-1348.476f, 142.67131f, 56.437782f));
-
-            hunter = new Hunter(new Vector3(-1490.5903f, 4981.5283f, 63.345905f), new Vector3(-1493.011f, 4971.482f, 63.92059f), 91.5f);
-            
-            //junkyard = new Junkyard(new Vector3(2403.5667f, 3127.8855f, 48.15293f), new Vector3(2400.5923f, 3125.3843f, 48.153015f), -163.50455f);
-            
-            towTruck = new TowTrucks(new Vector3(593.4641f, -3043.515f, 6.1697326f), new Vector3(561.56323f, -3037.9924f, 6.091237f));
-            
-            gardener = new Gardener(ref playerDataManager, ref vehicleDataManager);
-            
-            refinery = new Refinery(ref playerDataManager);
-            
-            lspd = new LSPD(ref playerDataManager, ref vehicleDataManager);
-            
-            payoutManager.bonusTime = DateTime.Now.AddHours(1);
-            
-            towTruck.addSpawningPosition(new Vector3(516.8819f, -3054.159f, 6.0696325f), 1);
-            
-            towTruck.addSpawningPosition(new Vector3(509.95694f, -3054.1301f, 6.0696325f), 1);
-
-             carMarket = new CarMarket(new Vector3(-112.2122f, -2015.1759f, 18.016949f), ref orgManager, ref vehicleDataManager, ref playerDataManager);
+             carMarket = new CarMarket(new Vector3(-112.2122f, -2015.1759f, 18.016949f));
 
             //supplier = new Supplier(new Vector3(-17.289665f, 6303.619f, 31.374657f));
 
 
-            //INSTANTIATE HOUSES AND IPL'S
+            //INSTANTIATE IPL'S
 
-            houses = new Houses();
             NAPI.World.RequestIpl("vw_casino_main");
             NAPI.World.RequestIpl("vw_casino_garage");
             NAPI.World.RequestIpl("vw_casino_carpark");
             NAPI.World.RequestIpl("vw_casino_penthouse");
             drivingLicences.CreateLicenceB(new Vector3(1001.5448f, -2317.2195f, 30.962214f), new Vector3(1003.244f, -2317.394f, 30.962214f), new Vector3(1007.4232f, -2318.8247f, 30.963396f));
-
-
 
 
 
@@ -264,13 +216,13 @@ namespace ServerSide
             updateGrass.Enabled = true;
 
             //INSTANTIATE A COMMAND MANAGER
-            commands = new CommandsManager(houses, carDealers, reportsList, playerDataManager, ref orgManager, ref tuneBusinesses, ref lspd, ref payoutManager, ref lawnmowing);
+            CommandsManager.InstantiateCommandsManager(carDealers, reportsList, ref tuneBusinesses);
 
 
             //LOAD VEHICLES FROM DB (5S DELAY)
             NAPI.Task.Run(() =>
             {
-                vehicleDataManager.LoadPersonalVehiclesFromDB(ref orgManager);
+                VehicleDataManager.LoadPersonalVehiclesFromDB();
                 carMarket.CreateMarketVehicles();
             }, delayTime: 5000);
 
@@ -288,11 +240,11 @@ namespace ServerSide
                 {
                     if (text[0] != '/')
                     {
-                        playerDataManager.SendRemoteMessageToAllPlayers(text);
+                        PlayerDataManager.SendRemoteMessageToAllPlayers(text);
                     }
                     else
                     {
-                        commands.ExecuteConsoleCommand(text);
+                        CommandsManager.ExecuteConsoleCommand(text);
                     }
                 }
             }

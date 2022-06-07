@@ -6,18 +6,17 @@ using GTANetworkAPI;
 
 namespace ServerSide.Jobs
 {
-    public class Supplier
+    public static class Supplier
     {
-        Dictionary<Player, Vehicle> trailers = new Dictionary<Player, Vehicle>();
-        PlayerDataManager playerDataManager = new PlayerDataManager();
-        public List<Vector3> spawnPositions = new List<Vector3>()
+        static Dictionary<Player, Vehicle> trailers = new Dictionary<Player, Vehicle>();
+        public static List<Vector3> spawnPositions = new List<Vector3>()
         {
             new Vector3(78.964554f, 6338.7256f, 31.225761f),
             new Vector3(83.72409f, 6329.917f, 31.227898f),
             new Vector3(86.26046f, 6324.3315f, 31.236996f)
     };
 
-        public Dictionary<Vector3, float> trailerPositions = new Dictionary<Vector3, float>()
+        public static Dictionary<Vector3, float> trailerPositions = new Dictionary<Vector3, float>()
         {
             [new Vector3(-2959.1506f, 60.139057f, 11.608494f)] = 65.62127f,
             [new Vector3(-3184.9214f, 1091.1962f, 20.845089f)] = -25.375887f,
@@ -34,7 +33,7 @@ namespace ServerSide.Jobs
             [new Vector3(977.36053f, -142.92206f, 75.863815f)] = 49.354984f
         };
 
-        public Dictionary<Vector3, float> basePositions = new Dictionary<Vector3, float>()
+        public static Dictionary<Vector3, float> basePositions = new Dictionary<Vector3, float>()
         {
             [new Vector3(498.6088f, -1972.8278f, 24.907175f)] = 121.329956f,
             [new Vector3(509.23904f, -2002.9613f, 24.753252f)] = 123.008705f,
@@ -47,7 +46,7 @@ namespace ServerSide.Jobs
             [new Vector3(2777.5845f, 1395.8726f, 24.452044f)] = -0.65276116f
         };
 
-        public List<VehicleHash> availableTrailers = new List<VehicleHash>() 
+        public static List<VehicleHash> availableTrailers = new List<VehicleHash>() 
         {
             // VehicleHash.Trailers,
             // VehicleHash.Trailers2,
@@ -58,20 +57,19 @@ namespace ServerSide.Jobs
             // VehicleHash.Tvtrailer
         };
 
-        Vector3 startPosition;
-        public ColShape supplyColshape;
-        public Blip supplyBlip;
-        CustomMarkers customMarkers = new CustomMarkers();
-        public Supplier(Vector3 startPosition)
+        static Vector3 startPosition;
+        public static ColShape supplyColshape;
+        public static Blip supplyBlip;
+        public static void InstantiateSupplier(Vector3 startPos)
         {
-            this.startPosition = startPosition;
+            startPosition = startPos;
             supplyColshape = NAPI.ColShape.CreateCylinderColShape(startPosition, 1.0f, 2.0f);
             supplyColshape.SetSharedData("type", "supplier");
             supplyBlip = NAPI.Blip.CreateBlip(477, startPosition, 1.0f, 44, name: "Dostawca", shortRange: true);
-            customMarkers.CreateJobMarker(startPosition, "Dostawca");
+            CustomMarkers.CreateJobMarker(startPosition, "Dostawca");
         }
 
-        public void startJob(Player player)
+        public static void startJob(Player player)
         {
             KeyValuePair<Vector3, float> spawnPoint = GetAvailableSpawnPoint(spawnPositions);
 
@@ -90,26 +88,26 @@ namespace ServerSide.Jobs
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Nie ma wolnych miejsc na parkingu!");
+                            PlayerDataManager.NotifyPlayer(player, "Nie ma wolnych miejsc na parkingu!");
                         }                    
                     }
                     else
                     {
-                        playerDataManager.NotifyPlayer(player, "Masz inną pracę!");
+                        PlayerDataManager.NotifyPlayer(player, "Masz inną pracę!");
                     }
                 }
                 else
                 {
-                    playerDataManager.NotifyPlayer(player, "Nie posiadasz wystarczająco LP: 250!");
+                    PlayerDataManager.NotifyPlayer(player, "Nie posiadasz wystarczająco LP: 250!");
                 }
             }
             else
             {
-                playerDataManager.NotifyPlayer(player, "Nie możesz prowadzić pojazdów do " + player.GetSharedData<string>("nodrivingto") + "!");
+                PlayerDataManager.NotifyPlayer(player, "Nie możesz prowadzić pojazdów do " + player.GetSharedData<string>("nodrivingto") + "!");
             }
         }
 
-        public void CreateJobVehicle(Player player, Vector3 position, float rotation)
+        public static void CreateJobVehicle(Player player, Vector3 position, float rotation)
         {
             Random rnd = new Random();
             Vehicle jobVeh = NAPI.Vehicle.CreateVehicle(VehicleHash.Packer, position, rotation, rnd.Next(0, 160), 112, numberPlate: "DOSTAWCA");
@@ -120,7 +118,7 @@ namespace ServerSide.Jobs
             player.SetIntoVehicle(jobVeh, 0);
         }
 
-        public void CreateTrailer(Player player)
+        public static void CreateTrailer(Player player)
         {
             Random rnd = new Random();
             KeyValuePair<Vector3, float> position;
@@ -145,7 +143,7 @@ namespace ServerSide.Jobs
             player.TriggerEvent("markNewTrailer", trailer, trailer.Position, basePosition.Key);
         }
 
-        private KeyValuePair<Vector3, float> GetAvailableSpawnPoint(object type)
+        private static KeyValuePair<Vector3, float> GetAvailableSpawnPoint(object type)
         {
             Vector3 pos = new Vector3();
             float rot = 0;
@@ -174,7 +172,7 @@ namespace ServerSide.Jobs
 
             return new KeyValuePair<Vector3, float>(pos, rot);
         }
-        private bool isAnyVehicleNearPoint(Vector3 point)
+        private static bool isAnyVehicleNearPoint(Vector3 point)
         {
             foreach (Vehicle veh in NAPI.Pools.GetAllVehicles())
             {

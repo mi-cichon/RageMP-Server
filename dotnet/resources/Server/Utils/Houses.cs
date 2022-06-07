@@ -6,17 +6,12 @@ using GTANetworkAPI;
 
 namespace ServerSide
 {
-    public class Houses
+    public static class Houses
     {
-        public List<House> houses = new List<House>();
-        CustomMarkers customMarkers = new CustomMarkers();
-        PlayerDataManager playerDataManager = new PlayerDataManager();
-        public Houses()
-        {
-            InstantiateHouses();
-        }
+        public static List<House> houses = new List<House>();
 
-        public void InstantiateHouses()
+
+        public static void InstantiateHouses()
         {
             DBConnection dataBase = new DBConnection();
             dataBase.command.CommandText = "SELECT * FROM houses";
@@ -37,7 +32,7 @@ namespace ServerSide
             dataBase.connection.Close();
         }
 
-        public void CreateHouseColshapes(ColShape house, string interiorstr, Vector3 housepos, uint id, string owner, string storageStr)
+        public static void CreateHouseColshapes(ColShape house, string interiorstr, Vector3 housepos, uint id, string owner, string storageStr)
         {
             Marker m;
             Blip b;
@@ -96,9 +91,9 @@ namespace ServerSide
             houseStorage = NAPI.ColShape.CreateCylinderColShape(storage, 1.0f, 2.0f, id + 500);
             houseStorage.SetSharedData("type", "housestorage");
             houseStorage.SetSharedData("houseid", id);
-            customMarkers.CreateHouseStorageMarker(storage, id);
+            CustomMarkers.CreateHouseStorageMarker(storage, id);
             NAPI.Blip.CreateBlip(587, storage, 0.7f, 39, name: "Schowek na przedmioty", shortRange: true, dimension: 500 + id);
-            customMarkers.CreateHouseMarker(interior, "Wyjście", id);
+            CustomMarkers.CreateHouseMarker(interior, "Wyjście", id);
 
             //Marker minside4 = NAPI.Marker.CreateMarker(1, interior, new Vector3(), new Vector3(), 1.0f, new Color(255, 255, 255), dimension: id + 500);
 
@@ -106,21 +101,21 @@ namespace ServerSide
             {
                 if(house.GetSharedData<string>("owner") == "" || house.GetSharedData<string>("owner") == null)
                 {
-                    m = customMarkers.CreateHouseMarker(housepos, "Wejście", owned: false);
+                    m = CustomMarkers.CreateHouseMarker(housepos, "Wejście", owned: false);
                     b = NAPI.Blip.CreateBlip(40, housepos, 0.6f, 2, name: "Wolny dom", shortRange: true);
                 }
                 else
                 {
-                    m = customMarkers.CreateHouseMarker(housepos, "Wejście", owned: true);
+                    m = CustomMarkers.CreateHouseMarker(housepos, "Wejście", owned: true);
                     b = NAPI.Blip.CreateBlip(40, housepos, 0.6f, 55, name: "Zajęty dom", shortRange: true);
                 }
-                m.SetSharedData("ownername", playerDataManager.GetPlayerNameById(owner));
+                m.SetSharedData("ownername", PlayerDataManager.GetPlayerNameById(owner));
                 b.SetSharedData("houseid", house.GetSharedData<Int32>("id"));
                 houses.Add(new House(house, m, b, owner, Convert.ToInt32(id), storageStr, storageSize));
             }
         }
 
-        public void AddHouse(Vector3 pos, string type, int price)
+        public static void AddHouse(Vector3 pos, string type, int price)
         {
             int id = 0;
             ColShape cl = NAPI.ColShape.CreateCylinderColShape(pos, 1.0f, 2.0f);
@@ -145,12 +140,12 @@ namespace ServerSide
             dataBase.connection.Close();
         }
 
-        public Vector3 stringToVec(string str)
+        public static Vector3 stringToVec(string str)
         {
             return new Vector3(float.Parse(str.Split('.')[0]), float.Parse(str.Split('.')[1]), float.Parse(str.Split('.')[2]));
         }
 
-        public bool SetPlayersHouse(Player player)
+        public static bool SetPlayersHouse(Player player)
         {
             foreach(House house in houses)
             {
@@ -174,7 +169,6 @@ namespace ServerSide
         public ColShape houseColShape;
         public Marker houseMarker;
         public Blip houseBlip;
-        PlayerDataManager playerDataManager = new PlayerDataManager();
         public int id;
         public int[] storageSize;
         public House(ColShape houseColShape, Marker houseMarker, Blip houseBlip, string owner, int id, string storage, int[] storageSize)
@@ -220,7 +214,7 @@ namespace ServerSide
             houseMarker.Color = new Color(60, 255, 60);
             houseBlip.Color = 2;
             houseBlip.Name = "Wolny dom";
-            Player player = playerDataManager.GetPlayerBySocialId(ulong.Parse(owner));
+            Player player = PlayerDataManager.GetPlayerBySocialId(ulong.Parse(owner));
             if (player != null){
                 player.SetSharedData("houseid", -1);
                 player.TriggerEvent("setHouseAsNotOwn", houseBlip, houseMarker);

@@ -9,14 +9,14 @@ using System.Threading;
 
 namespace ServerSide
 {
-    public class LSPD
+    public static class LSPD
     {
-        public List<KeyValuePair<Object, string>> Barriers = new List<KeyValuePair<Object, string>>();
-        public List<LSPD_Member> Members = new List<LSPD_Member>();
-        public Vector3 Position = new Vector3(441.0825f, -981.2163f, 30.689596f);
-        public Vector3 ArrestPosition = new Vector3(461.79675f, -989.22266f, 24.914873f);
-        public List<LSPD_Vehicle> Vehicles = new List<LSPD_Vehicle>();
-        public List<Arrest> Arrests = new List<Arrest>()
+        public static List<KeyValuePair<Object, string>> Barriers = new List<KeyValuePair<Object, string>>();
+        public static List<lspd_Member> Members = new List<lspd_Member>();
+        public static Vector3 Position = new Vector3(441.0825f, -981.2163f, 30.689596f);
+        public static Vector3 ArrestPosition = new Vector3(461.79675f, -989.22266f, 24.914873f);
+        public static List<lspd_Vehicle> Vehicles = new List<lspd_Vehicle>();
+        public static List<Arrest> Arrests = new List<Arrest>()
         {
             new Arrest(new Vector3(444.75952f, -1006.8055f, 9.975761f)),
             new Arrest(new Vector3(444.81738f, -1001.7633f, 9.975763f)),
@@ -31,22 +31,19 @@ namespace ServerSide
             new Arrest(new Vector3(436.22693f, -1006.9028f, 9.975763f))
         };
 
-        PlayerDataManager playerDataManager;
-        VehicleDataManager vehicleDataManager;
-        public ColShape DutyShape, StorageCenter;
+        
+        public static ColShape DutyShape, StorageCenter;
 
-        Vector3 rightMainGatePos = new Vector3(419.8508, -1026.436, 28.00148), leftMainGatePos = new Vector3(419.8508, -1024.071, 28.00148);
-        Vector3 rightBackGatePos = new Vector3(488.9158, -1017.352, 26.99018), leftBackGatePos = new Vector3(488.9158, -1019.838, 26.99018);
-        Object rightMainGate, leftMainGate, rightBackGate, leftBackGate;
-        public LSPD(ref PlayerDataManager playerDataManager, ref VehicleDataManager vehicleDataManager)
+        static Vector3 rightMainGatePos = new Vector3(419.8508, -1026.436, 28.00148), leftMainGatePos = new Vector3(419.8508, -1024.071, 28.00148);
+        static Vector3 rightBackGatePos = new Vector3(488.9158, -1017.352, 26.99018), leftBackGatePos = new Vector3(488.9158, -1019.838, 26.99018);
+        static Object rightMainGate, leftMainGate, rightBackGate, leftBackGate;
+        public static void InstantiateLSPD()
         {
             NAPI.Blip.CreateBlip(60, new Vector3(441.0825f, -981.2163f, 30.689596f), 0.7f, 38, name: "Komenda LSPD", shortRange: true);
             DutyShape = NAPI.ColShape.CreateCylinderColShape(new Vector3(447.16238f, -975.6481f, 30.6896f), 1.0f, 2.0f);
             DutyShape.SetSharedData("type", "lspd_duty");
             new LSPDTeleport(new Vector3(464.9664f, -990.0205f, 24.914873f), -94.75534f, new Vector3(440.56226f, -1008.80707f, 9.975761f), -0.5668101f, "Areszt");
             new LSPDTeleport(new Vector3(458.89932f, -1008.0039f, 28.266079f), 93.27793f, new Vector3(445.9707f, -996.62897f, 30.68959f), -1.7872145f, "Komenda LSPD");
-            this.playerDataManager = playerDataManager;
-            this.vehicleDataManager = vehicleDataManager;
             LoadDataFromDB();
             ColShape takeout = NAPI.ColShape.CreateCylinderColShape(new Vector3(458.48907f, -1017.26117f, 28.211643f), 1.0f, 2.0f);
             takeout.SetSharedData("type", "lspd_storage");
@@ -66,16 +63,16 @@ namespace ServerSide
             backGate.SetSharedData("type", "lspd_backGate");
         }
         
-        public bool AddPlayerToGroup(Player player)
+        public static bool AddPlayerToGroup(Player player)
         {
-            foreach (LSPD_Member member in Members)
+            foreach (lspd_Member member in Members)
             {
                 if (member.Login == player.SocialClubId)
                 {
                     return false;
                 }
             }
-            Members.Add(new LSPD_Member(player.SocialClubId, 1));
+            Members.Add(new lspd_Member(player.SocialClubId, 1));
             player.SetSharedData("lspd_power", 1);
             DBConnection dataBase = new DBConnection();
             dataBase.command.CommandText = $"INSERT INTO lspd_members (login, power) VALUES ('{player.SocialClubId}', 1)";
@@ -84,13 +81,13 @@ namespace ServerSide
             return true;
         }
 
-        public bool RemovePlayerFromGroup(Player player)
+        public static bool RemovePlayerFromGroup(Player player)
         {
-            foreach (LSPD_Member member in Members)
+            foreach (lspd_Member member in Members)
             {
                 if (member.Login == player.SocialClubId)
                 {
-                    Members.Add(new LSPD_Member(player.SocialClubId, 1));
+                    Members.Add(new lspd_Member(player.SocialClubId, 1));
                     DBConnection dataBase = new DBConnection();
                     dataBase.command.CommandText = $"DELETE FROM lspd_members WHERE login = '{player.SocialClubId}'";
                     dataBase.command.ExecuteNonQuery();
@@ -103,9 +100,9 @@ namespace ServerSide
             return false;
         }
 
-        public bool SwitchPlayersDuty(Player player, bool state)
+        public static bool SwitchPlayersDuty(Player player, bool state)
         {
-            foreach (LSPD_Member member in Members)
+            foreach (lspd_Member member in Members)
             {
                 if (!state)
                 {
@@ -113,8 +110,8 @@ namespace ServerSide
                     player.SetSharedData("lspd_power", 0);
                     player.SetSharedData("job", "");
                     player.RemoveAllWeapons();
-                    playerDataManager.LoadPlayersClothes(player);
-                    playerDataManager.NotifyPlayer(player, "Zakończono służbę");
+                    PlayerDataManager.LoadPlayersClothes(player);
+                    PlayerDataManager.NotifyPlayer(player, "Zakończono służbę");
                     return true;
                 }
                 else
@@ -126,14 +123,14 @@ namespace ServerSide
                             player.SetSharedData("lspd_duty", false);
                             player.SetSharedData("job", "");
                             player.RemoveAllWeapons();
-                            playerDataManager.LoadPlayersClothes(player);
-                            playerDataManager.NotifyPlayer(player, "Zakończono służbę");
+                            PlayerDataManager.LoadPlayersClothes(player);
+                            PlayerDataManager.NotifyPlayer(player, "Zakończono służbę");
                         }
                         else if(player.HasSharedData("job") && player.GetSharedData<string>("job") == "")
                         {
                             player.SetSharedData("lspd_duty", true);
                             player.SetSharedData("lspd_power", member.Power);
-                            player.SetSharedData("job", "lspd");
+                            player.SetSharedData("job", "LSPD");
                             player.GiveWeapon(WeaponHash.Stungun, 1000);
                             player.GiveWeapon(WeaponHash.Flashlight, 1000);
                             Character character = JsonConvert.DeserializeObject<Character>(player.GetSharedData<string>("character").Replace("\\", ""));
@@ -155,7 +152,7 @@ namespace ServerSide
                                     break;
                             }
 
-                            playerDataManager.NotifyPlayer(player, "Rozpoczęto służbę");
+                            PlayerDataManager.NotifyPlayer(player, "Rozpoczęto służbę");
                             return true;
                         }
                         else
@@ -167,9 +164,9 @@ namespace ServerSide
             }
             return false;
         }
-        public bool IsPlayerInGroup(Player player)
+        public static bool IsPlayerInGroup(Player player)
         {
-            foreach(LSPD_Member member in Members)
+            foreach(lspd_Member member in Members)
             {
                 if(member.Login == player.SocialClubId)
                 {
@@ -180,7 +177,7 @@ namespace ServerSide
             }
             return false;
         }
-        public void LoadDataFromDB()
+        public static void LoadDataFromDB()
         {
             DBConnection dataBase = new DBConnection();
             dataBase.command.CommandText = $"SELECT * FROM lspd_members";
@@ -188,7 +185,7 @@ namespace ServerSide
             {
                 while (reader.Read())
                 {
-                    Members.Add(new LSPD_Member(ulong.Parse(reader.GetString(1)), reader.GetInt32(2)));
+                    Members.Add(new lspd_Member(ulong.Parse(reader.GetString(1)), reader.GetInt32(2)));
                 }
                 reader.Close();
             }
@@ -198,13 +195,13 @@ namespace ServerSide
             {
                 while (reader.Read())
                 {
-                    Vehicles.Add(new LSPD_Vehicle(reader.GetInt32(0), uint.Parse(reader.GetString(1)), reader.GetString(2), reader.GetInt32(3), reader.GetString(4)));
+                    Vehicles.Add(new lspd_Vehicle(reader.GetInt32(0), uint.Parse(reader.GetString(1)), reader.GetString(2), reader.GetInt32(3), reader.GetString(4)));
                 }
                 reader.Close();
             }
             dataBase.connection.Close();
         }
-        public void CreateBarrier(string name, Vector3 position, Vector3 rotation)
+        public static void CreateBarrier(string name, Vector3 position, Vector3 rotation)
         {
             KeyValuePair<Object, string> barrier = new KeyValuePair<Object, string>(NAPI.Object.CreateObject(NAPI.Util.GetHashKey("prop_mp_barrier_02b"), position, rotation), name);
             Barriers.Add(barrier);
@@ -212,7 +209,7 @@ namespace ServerSide
             barrier.Key.SetSharedData("barrierId", NAPI.Util.GetHashKey(DateTime.Now.ToString() + DateTime.Now.Millisecond.ToString()));
         }
 
-        public string RemoveBarrier(KeyValuePair<Object, string> bar)
+        public static string RemoveBarrier(KeyValuePair<Object, string> bar)
         {
             foreach(KeyValuePair<Object, string> barrier in Barriers)
             {
@@ -227,7 +224,7 @@ namespace ServerSide
             return "";
         }
 
-        public void SetPlayerIntoArrest(Player player, int time)
+        public static void SetPlayerIntoArrest(Player player, int time)
         {
             Arrest playersArrest = GetFreeArrest();
             playersArrest.Inmates.Add(new KeyValuePair<ulong, int>(player.SocialClubId, time));
@@ -237,7 +234,7 @@ namespace ServerSide
             player.Position = playersArrest.Position;
         }
 
-        public bool IsPlayerArrested(Player player)
+        public static bool IsPlayerArrested(Player player)
         {
             foreach (Arrest arrest in Arrests)
             {
@@ -252,7 +249,7 @@ namespace ServerSide
             return false;
         }
 
-        public void ReturnPlayerIntoArrest(Player player)
+        public static void ReturnPlayerIntoArrest(Player player)
         {
             foreach (Arrest arrest in Arrests)
             {
@@ -274,7 +271,7 @@ namespace ServerSide
             }
         }
 
-        public void RemovePlayerFromArrest(Player player)
+        public static void RemovePlayerFromArrest(Player player)
         {
             player.SetSharedData("arrested", false);
             player.SetSharedData("arrested_time", 0);
@@ -282,16 +279,16 @@ namespace ServerSide
             player.SetSharedData("arrest_id", -1);
             playersArrest.Inmates.Remove(new KeyValuePair<ulong, int>(player.SocialClubId, 0));
             player.Position = Position;
-            playerDataManager.NotifyPlayer(player, "Twój czas aresztu dobiegł końca!");
+            PlayerDataManager.NotifyPlayer(player, "Twój czas aresztu dobiegł końca!");
             
         }
 
-        public void SpawnPlayerInArrest(Player player)
+        public static void SpawnPlayerInArrest(Player player)
         {
             Arrest playersArrest = Arrests[player.GetSharedData<int>("arrest_id")];
             player.Position = playersArrest.Position;
         }
-        private Arrest GetFreeArrest()
+        private static Arrest GetFreeArrest()
         {
             foreach(Arrest arrest in Arrests)
             {
@@ -314,10 +311,10 @@ namespace ServerSide
 
         //VEHICLES
 
-        public string GetAvailableVehicles(int power)
+        public static string GetAvailableVehicles(int power)
         {
             List<string[]> vehicles = new List<string[]>();
-            foreach (LSPD_Vehicle veh in Vehicles)
+            foreach (lspd_Vehicle veh in Vehicles)
             {
                 if(!veh.Spawned && veh.Power <= power)
                 {
@@ -335,14 +332,14 @@ namespace ServerSide
             }
         }
 
-        List<KeyValuePair<Vector3, float>> SpawnPositions = new List<KeyValuePair<Vector3, float>>()
+        static List<KeyValuePair<Vector3, float>> SpawnPositions = new List<KeyValuePair<Vector3, float>>()
         {
             new KeyValuePair<Vector3,float>(new Vector3(454.65915f, -1020.06256f, 28.334692f), 89.439125f),
             new KeyValuePair<Vector3,float>(new Vector3(454.7544f, -1014.8806f, 28.434828f), 89.439125f)
         };
-        public bool SpawnVehicle(int id)
+        public static bool SpawnVehicle(int id)
         {
-            foreach(LSPD_Vehicle veh in Vehicles)
+            foreach(lspd_Vehicle veh in Vehicles)
             {
                 if(veh.Id == id && !veh.Spawned)
                 {
@@ -357,7 +354,7 @@ namespace ServerSide
                         vehicle.SetSharedData("id", veh.Id);
                         vehicle.SetSharedData("name", veh.Name);
                         vehicle.SetSharedData("wheels", veh.Wheels);
-                        vehicleDataManager.SetVehiclesWheels(vehicle);
+                        VehicleDataManager.SetVehiclesWheels(vehicle);
 
                     return true;
                     }
@@ -370,24 +367,24 @@ namespace ServerSide
             return false;
         }
 
-        private void SetVehiclesData(Vehicle vehicle)
+        private static void SetVehiclesData(Vehicle vehicle)
         {
-            vehicle.SetSharedData("type", "lspd");
+            vehicle.SetSharedData("type", "LSPD");
             vehicle.SetSharedData("locked", false);
             vehicle.SetSharedData("veh_brake", false);
-            vehicle.SetSharedData("damage", vehicleDataManager.defaultDamage);
-            int[] pands = vehicleDataManager.GetVehicleStockPowerAndSpeed(vehicle);
+            vehicle.SetSharedData("damage", VehicleDataManager.defaultDamage);
+            int[] pands = VehicleDataManager.GetVehicleStockPowerAndSpeed(vehicle);
             if(!pands.Equals(new int[2]))
             {
                 vehicle.SetSharedData("power", pands[0]);
                 vehicle.SetSharedData("speed", pands[1]);
             }
-            vehicleDataManager.setVehiclesPetrolAndTrunk(vehicle);
+            VehicleDataManager.setVehiclesPetrolAndTrunk(vehicle);
             vehicle.SetSharedData("petrol", 0.95 * vehicle.GetSharedData<int>("petroltank"));
 
         }
 
-        private KeyValuePair<Vector3, float> GetAvailableSpawnPoint()
+        private static KeyValuePair<Vector3, float> GetAvailableSpawnPoint()
         {
             foreach (KeyValuePair<Vector3, float> pos in SpawnPositions)
             {
@@ -398,7 +395,7 @@ namespace ServerSide
             }
             return new KeyValuePair<Vector3, float>();
         }
-        private bool isAnyVehicleNearPoint(Vector3 point)
+        private static bool isAnyVehicleNearPoint(Vector3 point)
         {
             foreach (Vehicle veh in NAPI.Pools.GetAllVehicles())
             {
@@ -410,9 +407,9 @@ namespace ServerSide
             return false;
         }
 
-        public void SetVehicleSpawned(int vehId, bool state)
+        public static void SetVehicleSpawned(int vehId, bool state)
         {
-            foreach (LSPD_Vehicle vehicle in Vehicles)
+            foreach (lspd_Vehicle vehicle in Vehicles)
             {
                 if (vehicle.Id == vehId)
                 {
@@ -421,7 +418,7 @@ namespace ServerSide
                 }
             }
         }
-        public void SwitchMainGate(bool state)
+        public static void SwitchMainGate(bool state)
         {
             float lowPos = 25.9f, highPos = 28.0f;
 
@@ -437,7 +434,7 @@ namespace ServerSide
             }
         }
 
-        public void SwitchBackGate(bool state)
+        public static void SwitchBackGate(bool state)
         {
             float lowPos = 24.84911f, highPos = 26.99018f;
 
@@ -456,12 +453,12 @@ namespace ServerSide
     
     
 
-    public class LSPD_Member
+    public class lspd_Member
     {
         public ulong Login { get; set; }
         public int Power { get; set; }
 
-        public LSPD_Member(ulong login, int power)
+        public lspd_Member(ulong login, int power)
         {
             Login = login;
             Power = power;
@@ -480,7 +477,7 @@ namespace ServerSide
         }
     }
 
-    public class LSPD_Vehicle
+    public class lspd_Vehicle
     {
         public int Id { get; set; }
         public uint Model { get; set; }
@@ -489,7 +486,7 @@ namespace ServerSide
         public bool Spawned { get; set; }
         public string Wheels { get; set; }
 
-        public LSPD_Vehicle(int id, uint model, string name, int power, string wheels)
+        public lspd_Vehicle(int id, uint model, string name, int power, string wheels)
         {
             Id = id;
             Model = model;

@@ -21,8 +21,6 @@ namespace ServerSide
         public ColShape colShape;
         public DateTime rollTime;
         int[] probability = new int[] { 1, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5 };
-        PlayerDataManager playerDataManager = new PlayerDataManager();
-        VehicleDataManager vehicleDataManager;
         const int blipColor = 28;
         int[] tripExtr;
 
@@ -35,9 +33,8 @@ namespace ServerSide
             new Vector3(50, 56, 61),
             new Vector3(255, 255, 251)
         };
-        public CarDealer(Vector3 position, float rotation, string type, bool blip, ref VehicleDataManager vehicleDataManager, int[] tripExt)
+        public CarDealer(Vector3 position, float rotation, string type, bool blip, int[] tripExt)
         {
-            this.vehicleDataManager = vehicleDataManager;
             this.position = new Vector3(position.X, position.Y, position.Z - 0.5f);
             this.rotation = rotation;
             this.type = type;
@@ -55,11 +52,11 @@ namespace ServerSide
         {
             Random rnd = new Random();
             int prob = probability[rnd.Next(0, probability.Length)];
-            List<CustomVehicle> probVehs = vehicleDataManager.customVehicles.GetAllVehiclesOfProb(cars, prob);
+            List<CustomVehicle> probVehs = CustomVehicles.GetAllVehiclesOfProb(cars, prob);
             while(probVehs.Count == 0)
             {
                 prob = probability[rnd.Next(0, probability.Length)];
-                probVehs = vehicleDataManager.customVehicles.GetAllVehiclesOfProb(cars, prob);
+                probVehs = CustomVehicles.GetAllVehiclesOfProb(cars, prob);
             }
             customVehicle = probVehs[rnd.Next(0, probVehs.Count)];
 
@@ -83,8 +80,8 @@ namespace ServerSide
             priceLabel = NAPI.TextLabel.CreateTextLabel("$" + customVehicle.price.ToString(), new Vector3(vehicle.Position.X, vehicle.Position.Y, vehicle.Position.Z + 1.8), 7.0f, 0.7f, 4, new Color(255, 153, 0, 255), entitySeethrough: false);
             colShape = NAPI.ColShape.CreateCylinderColShape(vehicle.Position, 2.4f, 3.0f);
             colShape.SetSharedData("type", "cardealer");
-            vehicleDataManager.setVehiclesPetrolAndTrunk(vehicle);
-            vehicleDataManager.SetVehiclesExtra(vehicle);
+            VehicleDataManager.setVehiclesPetrolAndTrunk(vehicle);
+            VehicleDataManager.SetVehiclesExtra(vehicle);
 
 
         }
@@ -140,31 +137,31 @@ namespace ServerSide
             switch(type)
             {
                 case "bike":
-                    cars = vehicleDataManager.customVehicles.Bikes;
+                    cars = CustomVehicles.Bikes;
                     break;
                 case "classic":
-                    cars = vehicleDataManager.customVehicles.Classics;
+                    cars = CustomVehicles.Classics;
                     break;
                 case "hyper":
-                    cars = vehicleDataManager.customVehicles.Hypers;
+                    cars = CustomVehicles.Hypers;
                     break;
                 case "junk":
-                    cars = vehicleDataManager.customVehicles.Junks;
+                    cars = CustomVehicles.Junks;
                     break;
                 case "regular":
-                    cars = vehicleDataManager.customVehicles.Regulars;
+                    cars = CustomVehicles.Regulars;
                     break;
                 case "regular2":
-                    cars = vehicleDataManager.customVehicles.Regulars2;
+                    cars = CustomVehicles.Regulars2;
                     break;
                 case "sport":
-                    cars = vehicleDataManager.customVehicles.Sports;
+                    cars = CustomVehicles.Sports;
                     break;
                 case "suv":
-                    cars = vehicleDataManager.customVehicles.SUVs;
+                    cars = CustomVehicles.SUVs;
                     break;
                 case "offroad":
-                    cars = vehicleDataManager.customVehicles.Offroads;
+                    cars = CustomVehicles.Offroads;
                     break;
             }
             
@@ -193,10 +190,10 @@ namespace ServerSide
                             {
                                 if (vehicle.Position.DistanceTo(position) < 3.0f)
                                 {
-                                    Player player = playerDataManager.GetPlayerBySocialId(Convert.ToUInt64(vehicle.GetSharedData<Int64>("owner")));
+                                    Player player = PlayerDataManager.GetPlayerBySocialId(Convert.ToUInt64(vehicle.GetSharedData<Int64>("owner")));
                                     if(player != null)
-                                        playerDataManager.NotifyPlayer(player, $"Pojazd o ID: {vehicle.GetSharedData<Int32>("id").ToString()} został przeniesiony do przechowalni!");
-                                    vehicleDataManager.UpdateVehicleSpawned(vehicle, false);
+                                        PlayerDataManager.NotifyPlayer(player, $"Pojazd o ID: {vehicle.GetSharedData<Int32>("id").ToString()} został przeniesiony do przechowalni!");
+                                    VehicleDataManager.UpdateVehicleSpawned(vehicle, false);
                                     vehicle.Delete();
                                 }
                             }
@@ -219,10 +216,10 @@ namespace ServerSide
                     {
                         if (vehicle.Position.DistanceTo(position) < 3.0f)
                         {
-                            Player player = playerDataManager.GetPlayerBySocialId(Convert.ToUInt64(vehicle.GetSharedData<Int64>("owner")));
+                            Player player = PlayerDataManager.GetPlayerBySocialId(Convert.ToUInt64(vehicle.GetSharedData<Int64>("owner")));
                             if(player != null)
-                                playerDataManager.NotifyPlayer(player, $"Pojazd o ID: {vehicle.GetSharedData<Int32>("id").ToString()} został przeniesiony do przechowalni!");
-                            vehicleDataManager.UpdateVehicleSpawned(vehicle, false);
+                                PlayerDataManager.NotifyPlayer(player, $"Pojazd o ID: {vehicle.GetSharedData<Int32>("id").ToString()} został przeniesiony do przechowalni!");
+                            VehicleDataManager.UpdateVehicleSpawned(vehicle, false);
                             vehicle.Delete();
                         }
                     }

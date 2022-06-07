@@ -8,7 +8,6 @@ namespace ServerSide
 {
     public class Karting
     {
-        PlayerDataManager playerDataManager = new PlayerDataManager();
         List<Player> queue = new List<Player>();
         Blip kartingBlip;
         ColShape kartingShape;
@@ -16,7 +15,6 @@ namespace ServerSide
         List<KeyValuePair<string, string>> times = new List<KeyValuePair<string, string>>();
         List<GTANetworkAPI.TextLabel> labels = new List<TextLabel>();
         float startRotation;
-        CustomMarkers customMarkers = new CustomMarkers();
         public Karting(Vector3 position, Vector3 scorePosition, Vector3 startPosition, float startRotation, Vector3 cpPosition)
         {
             this.position = new Vector3(position.X, position.Y, position.Z - 1.0f);
@@ -29,7 +27,7 @@ namespace ServerSide
             kartingShape = NAPI.ColShape.CreateCylinderColShape(this.position, 2.0f, 2.0f);
             kartingShape.SetSharedData("type", "karting");
             InitializeTimes(true);
-            customMarkers.CreateSimpleMarker(position, "Karting - rozpocznij");
+            CustomMarkers.CreateSimpleMarker(position, "Karting - rozpocznij");
 
         }
 
@@ -59,7 +57,7 @@ namespace ServerSide
 
         public void StartRace(Player player)
         {
-            playerDataManager.NotifyPlayer(player, "Rozpoczęto wyścig!");
+            PlayerDataManager.NotifyPlayer(player, "Rozpoczęto wyścig!");
             Vehicle kart = NAPI.Vehicle.CreateVehicle(2802050217, startPosition, startRotation, 55, 131);
             kart.SetSharedData("type", "race");
             kart.SetSharedData("collision", false);
@@ -75,7 +73,7 @@ namespace ServerSide
 
         public void InitializeTimes(bool createList = false)
         {
-            times = playerDataManager.GetRacingTimes("karting");
+            times = PlayerDataManager.GetRacingTimes("karting");
 
             if(createList)
             {
@@ -88,7 +86,7 @@ namespace ServerSide
             if(times.Count == 0)
             {
                 times.Add(new KeyValuePair<string, string>(player.SocialClubId.ToString(), time.ToString()));
-                playerDataManager.UpdateRacingTimes("karting", times);
+                PlayerDataManager.UpdateRacingTimes("karting", times);
                 RefreshRacingList();
             }
             else
@@ -114,14 +112,14 @@ namespace ServerSide
                     if(float.Parse(timepair.Value) > time)
                     {
                         times.Insert(times.IndexOf(timepair), new KeyValuePair<string, string>(player.SocialClubId.ToString(), time.ToString()));
-                        playerDataManager.UpdateRacingTimes("karting", times);
+                        PlayerDataManager.UpdateRacingTimes("karting", times);
                         RefreshRacingList();
                         break;
                     }
                     else if(times.IndexOf(timepair) == times.Count-1 && times.Count < 10)
                     {
                         times.Add(new KeyValuePair<string, string>(player.SocialClubId.ToString(), time.ToString()));
-                        playerDataManager.UpdateRacingTimes("karting", times);
+                        PlayerDataManager.UpdateRacingTimes("karting", times);
                         RefreshRacingList();
                     }
                 }
@@ -132,7 +130,7 @@ namespace ServerSide
             labels.Add(NAPI.TextLabel.CreateTextLabel($"Karting - TOP 10", scorePosition + new Vector3(0, 0, 3.0), 8.0f, 2.0f, 4, new Color(255, 255, 255)));
             foreach (KeyValuePair<string, string> time in times)
             {
-                labels.Add(NAPI.TextLabel.CreateTextLabel($"{times.IndexOf(time) + 1}: {playerDataManager.GetPlayerNameById(time.Key)} - {time.Value}s", scorePosition + new Vector3(0,0, 3-(0.2 * (times.IndexOf(time) + 1))), 8.0f, 2.0f, 4, new Color(255, 255, 255)));
+                labels.Add(NAPI.TextLabel.CreateTextLabel($"{times.IndexOf(time) + 1}: {PlayerDataManager.GetPlayerNameById(time.Key)} - {time.Value}s", scorePosition + new Vector3(0,0, 3-(0.2 * (times.IndexOf(time) + 1))), 8.0f, 2.0f, 4, new Color(255, 255, 255)));
             }
         }
 

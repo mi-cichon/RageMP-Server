@@ -7,20 +7,17 @@ using Newtonsoft.Json;
 
 namespace ServerSide
 {
-    public class DataManager
+    public static class DataManager
     {
-        List<KeyValuePair<int, int>> stationsData = new List<KeyValuePair<int, int>>();
-        public DataManager()
+        static List<KeyValuePair<int, int>> stationsData = new List<KeyValuePair<int, int>>();
+
+        public static void InstantiatePetrolStationsData()
         {
-            LoadPetrolStationsData();
 
             System.Timers.Timer checkStations = new System.Timers.Timer(60000);
             checkStations.Elapsed += CheckStations;
             checkStations.Enabled = true;
-        }
 
-        private void LoadPetrolStationsData()
-        {
             stationsData = new List<KeyValuePair<int, int>>();
             DBConnection dataBase = new DBConnection();
 
@@ -40,7 +37,7 @@ namespace ServerSide
             }
         }
 
-        public void UpdatePetrolStationValues(string values)
+        public static void UpdatePetrolStationValues(string values)
         {
             Dictionary<int, float> data = JsonConvert.DeserializeObject<Dictionary<int, float>>(values);
             foreach(KeyValuePair<int, float> station in data)
@@ -50,7 +47,7 @@ namespace ServerSide
             SavePetrolStationsToDB();
         }
 
-        public void SavePetrolStationsToDB()
+        public static void SavePetrolStationsToDB()
         {
             List<int> values = new List<int>();
             List<int> prices = new List<int>();
@@ -62,7 +59,7 @@ namespace ServerSide
             dataBase.connection.Close();
         }
 
-        public void CheckStations(System.Object source, ElapsedEventArgs e)
+        public static void CheckStations(System.Object source, ElapsedEventArgs e)
         {
             NAPI.Task.Run(() =>
             {
@@ -91,7 +88,7 @@ namespace ServerSide
             });
         }
 
-        public int GetPetrolPriceAtIndex(int index)
+        public static int GetPetrolPriceAtIndex(int index)
         {
             return stationsData[index].Value;
         }

@@ -17,7 +17,7 @@ namespace ServerSide
         [RemoteEvent("junkDelievered")]
         public void JunkDelievered(Player player)
         {
-            //payoutManager.JunkyardPayment(player);
+            //PayoutManager.JunkyardPayment(player);
         }
     }
 }

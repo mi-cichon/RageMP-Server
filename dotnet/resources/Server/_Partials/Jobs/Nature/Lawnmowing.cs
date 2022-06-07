@@ -11,7 +11,7 @@ namespace ServerSide
         [RemoteEvent("startLawnmowing")]
         public void StartLawnmowing(Player player)
         {
-            lawnmowing.startJob(player);
+            Lawnmowing.startJob(player);
         }
 
         [RemoteEvent("freezeLawnmower")]
@@ -23,14 +23,14 @@ namespace ServerSide
         [RemoteEvent("lawnmowingReward")]
         public void LawnmowingReward(Player player, float amount)
         {
-            payoutManager.LawnmowingPayment(player, amount);
+            PayoutManager.LawnmowingPayment(player, amount);
         }
         [RemoteEvent("lawnmowingRemoveGrass")]
         public void LawnmowingRemoveGrass(Player player, int grassID)
         {
-            if(lawnmowing.grassObjects[grassID] != null)
+            if(Lawnmowing.grassObjects[grassID] != null)
             {
-                var grass = lawnmowing.grassObjects[grassID];
+                var grass = Lawnmowing.grassObjects[grassID];
                 if (grass.Destroy())
                 {
                     Random rnd = new Random();

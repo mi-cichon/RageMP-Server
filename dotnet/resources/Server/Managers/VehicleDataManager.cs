@@ -11,19 +11,13 @@ using Newtonsoft.Json.Linq;
 //using System.Text.Json.Serialization;
 namespace ServerSide
 {
-    public class VehicleDataManager
+    public static class VehicleDataManager
     {
-        public string defaultDamage = "{\"body\":1000,\"engine\":1000,\"fldoor\":1,\"frdoor\":1,\"hood\":1,\"trunk\":1,\"bldoor\":1,\"brdoor\":1,\"blwindow\":1,\"brwindow\":1,\"flwindow\":1,\"frwindow\":1,\"fwindow\":1,\"bwindow\":1,\"flwheel\":1,\"frwheel\":1,\"blwheel\":1,\"brwheel\":1}";
-        public string wreckedDamage = "{\"body\":50,\"engine\":50,\"fldoor\":0,\"frdoor\":0,\"hood\":0,\"trunk\":0,\"bldoor\":0,\"brdoor\":0,\"blwindow\":0,\"brwindow\":0,\"flwindow\":0,\"frwindow\":0,\"fwindow\":0,\"bwindow\":0,\"flwheel\":0,\"frwheel\":0,\"blwheel\":0,\"brwheel\":0}";
-        public string defaultTune = "{}";
-        public CustomVehicles customVehicles = new CustomVehicles();
-        public Wheels wheels = new Wheels();
-        HandlingManager handlingManager = new HandlingManager();
-        public VehicleDataManager()
-        {
+        public static string defaultDamage = "{\"body\":1000,\"engine\":1000,\"fldoor\":1,\"frdoor\":1,\"hood\":1,\"trunk\":1,\"bldoor\":1,\"brdoor\":1,\"blwindow\":1,\"brwindow\":1,\"flwindow\":1,\"frwindow\":1,\"fwindow\":1,\"bwindow\":1,\"flwheel\":1,\"frwheel\":1,\"blwheel\":1,\"brwheel\":1}";
+        public static string wreckedDamage = "{\"body\":50,\"engine\":50,\"fldoor\":0,\"frdoor\":0,\"hood\":0,\"trunk\":0,\"bldoor\":0,\"brdoor\":0,\"blwindow\":0,\"brwindow\":0,\"flwindow\":0,\"frwindow\":0,\"fwindow\":0,\"bwindow\":0,\"flwheel\":0,\"frwheel\":0,\"blwheel\":0,\"brwheel\":0}";
+        public static string defaultTune = "{}";
 
-        }
-        public Vehicle CreatePersonalVehicle(int id, Vector3 position, float rotation, bool spawned)
+        public static Vehicle CreatePersonalVehicle(int id, Vector3 position, float rotation, bool spawned)
         {
             DBConnection dataBase = new DBConnection();
             Vehicle vehicle = null;
@@ -104,7 +98,7 @@ namespace ServerSide
             return null;
         }
 
-        public void CreatePersonalVehicleFromDealer(Player player, Vehicle vehicle)
+        public static void CreatePersonalVehicleFromDealer(Player player, Vehicle vehicle)
         {
             vehicle.SetSharedData("type", "personal");
             vehicle.SetSharedData("owner", player.SocialClubId);
@@ -130,7 +124,7 @@ namespace ServerSide
             vehicle.SetSharedData("trunk", "[]");
             vehicle.SetSharedData("mechtune", "[0,0,0,0,0]");
             vehicle.SetSharedData("wheels", "[0, -1, 0]");
-            vehicle.SetSharedData("offroad", handlingManager.IsCarOffroadType(vehicle));
+            vehicle.SetSharedData("offroad", HandlingManager.IsCarOffroadType(vehicle));
             vehicle.SetSharedData("petrol", 20.0f);
             vehicle.SetSharedData("drivers", "[]");
             vehicle.SetSharedData("veh_brake", false);
@@ -143,7 +137,7 @@ namespace ServerSide
             SetVehiclesExtra(vehicle);
         }
 
-        public void InsertPersonalVehicleToDB(Vehicle vehicle)
+        public static void InsertPersonalVehicleToDB(Vehicle vehicle)
         {
             DBConnection dataBase = new DBConnection();
             Vector3 position = vehicle.GetSharedData<Vector3>("lastpos");
@@ -171,7 +165,7 @@ namespace ServerSide
             }
             dataBase.connection.Close();
         }
-        public void SavePersonalVehicleDataToDB(Vehicle vehicle, string dataName)
+        public static void SavePersonalVehicleDataToDB(Vehicle vehicle, string dataName)
         {
             if (vehicle != null)
             {
@@ -218,13 +212,13 @@ namespace ServerSide
             }
 
         }
-        public void UpdateVehiclesTrunk(Vehicle vehicle, string trunk)
+        public static void UpdateVehiclesTrunk(Vehicle vehicle, string trunk)
         {
             vehicle.SetSharedData("trunk", trunk);
             SavePersonalVehicleDataToDB(vehicle, "trunk");
         }
 
-        public void UpdateVehiclesBrake(Vehicle vehicle, bool brake)
+        public static void UpdateVehiclesBrake(Vehicle vehicle, bool brake)
         {
             vehicle.SetSharedData("veh_brake", brake);
             if (vehicle.HasSharedData("owner"))
@@ -233,23 +227,23 @@ namespace ServerSide
             }
         }
 
-        public void UpdateVehiclesSpeedometer(Vehicle vehicle, string speedometer)
+        public static void UpdateVehiclesSpeedometer(Vehicle vehicle, string speedometer)
         {
             vehicle.SetSharedData("speedometer", speedometer);
             SavePersonalVehicleDataToDB(vehicle, "speedometer");
         }
-        public void UpdateVehiclesWashTime(Vehicle vehicle, string time)
+        public static void UpdateVehiclesWashTime(Vehicle vehicle, string time)
         {
             vehicle.SetSharedData("washtime", time);
             SavePersonalVehicleDataToDB(vehicle, "washtime");
         }
-        public void UpdateVehiclesWheels(Vehicle vehicle, string wheels)
+        public static void UpdateVehiclesWheels(Vehicle vehicle, string wheels)
         {
             vehicle.SetSharedData("wheels", wheels);
             SavePersonalVehicleDataToDB(vehicle, "wheels");
-            vehicle.SetSharedData("offroad", handlingManager.IsCarOffroadType(vehicle));
+            vehicle.SetSharedData("offroad", HandlingManager.IsCarOffroadType(vehicle));
         }
-        public void UpdateVehiclesDirtLevel(Vehicle vehicle, float dirt)
+        public static void UpdateVehiclesDirtLevel(Vehicle vehicle, float dirt)
         {
             if(vehicle != null && vehicle.Exists)
             {
@@ -257,21 +251,21 @@ namespace ServerSide
                 SavePersonalVehicleDataToDB(vehicle, "dirt");
             }
         }
-        public void UpdateVehiclesType(Vehicle vehicle, string type)
+        public static void UpdateVehiclesType(Vehicle vehicle, string type)
         {
             vehicle.SetSharedData("type", type);
         }
-        public void UpdateVehiclesOwner(Vehicle vehicle, ulong owner)
+        public static void UpdateVehiclesOwner(Vehicle vehicle, ulong owner)
         {
             vehicle.SetSharedData("owner", owner);
             SavePersonalVehicleDataToDB(vehicle, "owner");
         }
-        public void UpdateVehiclesDrivers(Vehicle vehicle, string drivers)
+        public static void UpdateVehiclesDrivers(Vehicle vehicle, string drivers)
         {
             vehicle.SetSharedData("drivers", drivers);
             SavePersonalVehicleDataToDB(vehicle, "drivers");
         }
-        public void SaveVehiclesDriver(Vehicle vehicle, Player player)
+        public static void SaveVehiclesDriver(Vehicle vehicle, Player player)
         {
             if(player.Exists && player.HasSharedData("username") && vehicle.HasSharedData("drivers"))
             {
@@ -288,7 +282,7 @@ namespace ServerSide
                 UpdateVehiclesDrivers(vehicle, JsonConvert.SerializeObject(drivers));
             }
         }
-        public string GetVehiclesLastDrivers(Vehicle vehicle)
+        public static string GetVehiclesLastDrivers(Vehicle vehicle)
         {
             string drivers = "";
             if(vehicle.HasSharedData("drivers"))
@@ -308,7 +302,7 @@ namespace ServerSide
             }
             return "";
         }
-        public void UpdateVehiclesColor1(Vehicle vehicle, int r, int g, int b, int mod)
+        public static void UpdateVehiclesColor1(Vehicle vehicle, int r, int g, int b, int mod)
         {
             vehicle.SetSharedData("color1", ColorToJson(new Color(r, g, b), mod));
             vehicle.SetSharedData("color1mod", mod);
@@ -320,7 +314,7 @@ namespace ServerSide
             catch (Exception) { }
         }
 
-        public void UpdateVehiclesColor2(Vehicle vehicle, int r, int g, int b, int mod)
+        public static void UpdateVehiclesColor2(Vehicle vehicle, int r, int g, int b, int mod)
         {
             vehicle.SetSharedData("color2", ColorToJson(new Color(r, g, b), mod));
             vehicle.SetSharedData("color2mod", mod);
@@ -331,7 +325,7 @@ namespace ServerSide
             }
             catch (Exception) { }
         }
-        public void UpdateVehicleSpawned(Vehicle vehicle, bool spawned)
+        public static void UpdateVehicleSpawned(Vehicle vehicle, bool spawned)
         {
             if (vehicle != null)
             {
@@ -340,7 +334,7 @@ namespace ServerSide
             }
 
         }
-        public void SetVehicleAsMarket(Vehicle vehicle, bool market)
+        public static void SetVehicleAsMarket(Vehicle vehicle, bool market)
         {
             if (vehicle != null)
             {
@@ -349,7 +343,7 @@ namespace ServerSide
             }
 
         }
-        public void UpdateVehiclesLastPos(Vehicle vehicle)
+        public static void UpdateVehiclesLastPos(Vehicle vehicle)
         {
             if (vehicle != null && vehicle.Exists)
             {
@@ -362,7 +356,7 @@ namespace ServerSide
                 
             }
         }
-        public void UpdateVehiclesDamage(Vehicle vehicle, string damage)
+        public static void UpdateVehiclesDamage(Vehicle vehicle, string damage)
         {
             if (vehicle != null)
             {
@@ -372,24 +366,24 @@ namespace ServerSide
             }
         }
 
-        public void UpdateVehiclesUsedTime(Vehicle vehicle)
+        public static void UpdateVehiclesUsedTime(Vehicle vehicle)
         {
             string date = DateTime.Now.ToString();
             vehicle.SetSharedData("used", date);
             SavePersonalVehicleDataToDB(vehicle, "used");
         }
 
-        public void UpdateVehiclesTune(Vehicle vehicle, string tune)
+        public static void UpdateVehiclesTune(Vehicle vehicle, string tune)
         {
             vehicle.SetSharedData("tune", tune);
             SavePersonalVehicleDataToDB(vehicle, "tune");
         }
-        public void UpdateVehiclesMechTune(Vehicle vehicle, string tune)
+        public static void UpdateVehiclesMechTune(Vehicle vehicle, string tune)
         {
             vehicle.SetSharedData("mechtune", tune);
             SavePersonalVehicleDataToDB(vehicle, "mechtune");
         }
-        public void UpdateVehiclesPetrol(Vehicle vehicle, float petrol)
+        public static void UpdateVehiclesPetrol(Vehicle vehicle, float petrol)
         {
             if (vehicle != null && vehicle.Exists && vehicle.HasSharedData("petrol"))
             {
@@ -400,7 +394,7 @@ namespace ServerSide
             }
 
         }
-        public void UpdateVehiclesTrip(Vehicle vehicle, float dist)
+        public static void UpdateVehiclesTrip(Vehicle vehicle, float dist)
         {
             
             if(vehicle != null && vehicle.Exists && vehicle.HasSharedData("veh_trip"))
@@ -412,7 +406,7 @@ namespace ServerSide
                 }
             }
         }
-        public bool SwitchVehiclesParkingBrake(Vehicle vehicle)
+        public static bool SwitchVehiclesParkingBrake(Vehicle vehicle)
         {
             if (vehicle != null)
             {
@@ -422,7 +416,7 @@ namespace ServerSide
             else
                 return false;
         }
-        public string GetPlayersVehicles(Player player, bool spawned, List<int> orgIds)
+        public static string GetPlayersVehicles(Player player, bool spawned, List<int> orgIds)
         {
             List<string[]> vehicles = new List<string[]>();
             string vehString = "";
@@ -477,7 +471,7 @@ namespace ServerSide
         }
 
 
-        public void GiveSpecialVehicleToPlayer(Player player, string vehType)
+        public static void GiveSpecialVehicleToPlayer(Player player, string vehType)
         {
             switch (vehType)
             {
@@ -490,7 +484,7 @@ namespace ServerSide
             }
         }
 
-        public bool IsVehicleDamaged(Vehicle vehicle)
+        public static bool IsVehicleDamaged(Vehicle vehicle)
         {
             string damageString = vehicle.GetSharedData<string>("damage");
             Dictionary<string, float> damageDict = JsonToDamage(damageString);
@@ -515,7 +509,7 @@ namespace ServerSide
             return false;
         }
 
-        public void LoadPersonalVehiclesFromDB(ref OrgManager orgManager)
+        public static void LoadPersonalVehiclesFromDB()
         {
             DBConnection dbc = new DBConnection();
             dbc.command.CommandText = $"SELECT * FROM vehicles WHERE spawned = '{bool.TrueString}'";
@@ -527,17 +521,17 @@ namespace ServerSide
                     Vector3 rotation = JsonToVector(reader.GetString(8));
                     Vehicle veh = CreatePersonalVehicle(reader.GetInt32(0), position, 0.0f, true);
                     veh.Rotation = rotation;
-                    orgManager.SetVehiclesOrg(veh);
+                    OrgManager.SetVehiclesOrg(veh);
                 }
                 reader.Close();
             }
             dbc.connection.Close();
         }
 
-        public int GetVehicleModelPrice(Vehicle vehicle)
+        public static int GetVehicleModelPrice(Vehicle vehicle)
         {
             int price = 200000;
-            foreach(CustomVehicle cV in customVehicles.AllVehicles)
+            foreach(CustomVehicle cV in CustomVehicles.AllVehicles)
             {
                 if(vehicle != null && vehicle.Exists && cV.model == vehicle.Model)
                 {
@@ -547,7 +541,7 @@ namespace ServerSide
             }
             return price;
         }
-        public Vehicle GetVehicleById(string vehicleId)
+        public static Vehicle GetVehicleById(string vehicleId)
         {
             Vehicle vehicle = null;
             foreach (Vehicle veh in NAPI.Pools.GetAllVehicles())
@@ -570,7 +564,7 @@ namespace ServerSide
             return vehicle;
         }
 
-        public Vehicle GetVehicleByRemoteId(ushort id)
+        public static Vehicle GetVehicleByRemoteId(ushort id)
         {
             foreach (Vehicle veh in NAPI.Pools.GetAllVehicles())
             {
@@ -583,7 +577,7 @@ namespace ServerSide
         }
 
 
-        public void RefreshVehiclesTune(Vehicle vehicle)
+        public static void RefreshVehiclesTune(Vehicle vehicle)
         {
             for (int i = 0; i < 70; i++)
             {
@@ -601,7 +595,7 @@ namespace ServerSide
             if (vehicle.HasSharedData("mechtune")){
                 List<int> tuneList = JsonConvert.DeserializeObject<List<int>>(vehicle.GetSharedData<string>("mechtune"));
                 CustomVehicle customVehicle = null;
-                foreach (CustomVehicle cV in customVehicles.AllVehicles)
+                foreach (CustomVehicle cV in CustomVehicles.AllVehicles)
                 {
                     if (cV.model == vehicle.Model)
                     {
@@ -658,9 +652,9 @@ namespace ServerSide
             }
             SetVehiclesWheels(vehicle);
         }
-        public string GetVehicleAvailableTune(Vehicle vehicle)
+        public static string GetVehicleAvailableTune(Vehicle vehicle)
         {
-            foreach(CustomVehicle cV in customVehicles.AllVehicles)
+            foreach(CustomVehicle cV in CustomVehicles.AllVehicles)
             {
                 if(cV.model == vehicle.Model)
                 {
@@ -714,36 +708,36 @@ namespace ServerSide
             return "[]";
         }
 
-        public string GetAvailableWheelsForVehicle(Vehicle vehicle)
+        public static string GetAvailableWheelsForVehicle(Vehicle vehicle)
         {
             if(NAPI.Vehicle.GetVehicleClass((VehicleHash)vehicle.Model) != 8)
             {
                 List<List<string[]>> availableWheels = new List<List<string[]>>();
-                availableWheels.Add(GetWheelListOfType(wheels.sport));
-                availableWheels.Add(GetWheelListOfType(wheels.muscle));
-                availableWheels.Add(GetWheelListOfType(wheels.lowrider));
-                availableWheels.Add(GetWheelListOfType(wheels.suv));
-                availableWheels.Add(GetWheelListOfType(wheels.offroad));
-                availableWheels.Add(GetWheelListOfType(wheels.tuner));
-                availableWheels.Add(GetWheelListOfType(wheels.highend));
-                availableWheels.Add(GetWheelListOfType(wheels.benny_o));
-                availableWheels.Add(GetWheelListOfType(wheels.benny_b));
+                availableWheels.Add(GetWheelListOfType(Wheels.sport));
+                availableWheels.Add(GetWheelListOfType(Wheels.muscle));
+                availableWheels.Add(GetWheelListOfType(Wheels.lowrider));
+                availableWheels.Add(GetWheelListOfType(Wheels.suv));
+                availableWheels.Add(GetWheelListOfType(Wheels.offroad));
+                availableWheels.Add(GetWheelListOfType(Wheels.tuner));
+                availableWheels.Add(GetWheelListOfType(Wheels.highend));
+                availableWheels.Add(GetWheelListOfType(Wheels.benny_o));
+                availableWheels.Add(GetWheelListOfType(Wheels.benny_b));
 
                 return JsonConvert.SerializeObject(availableWheels);
             }
             else
             {
                 List<List<string[]>> availableWheels = new List<List<string[]>>();
-                availableWheels.Add(GetWheelListOfType(wheels.bike));
+                availableWheels.Add(GetWheelListOfType(Wheels.bike));
 
                 return JsonConvert.SerializeObject(availableWheels);
             }
         }
 
-        public string GetVehiclesMechTune(Vehicle vehicle)
+        public static string GetVehiclesMechTune(Vehicle vehicle)
         {
             int mechfactor = 0;
-            foreach(CustomVehicle customVehicle in customVehicles.AllVehicles)
+            foreach(CustomVehicle customVehicle in CustomVehicles.AllVehicles)
             {
                 if(customVehicle.model == vehicle.Model)
                 {
@@ -764,10 +758,10 @@ namespace ServerSide
             return JsonConvert.SerializeObject(tune);              
         }
 
-        public string GetAllAvailableWheels()
+        public static string GetAllAvailableWheels()
         {
             List<string[]> availableWheels = new List<string[]>();
-            foreach(Wheel wheel in wheels.allCurrentWheels)
+            foreach(Wheel wheel in Wheels.allCurrentWheels)
             {
                 availableWheels.Add(new string[]
                 {
@@ -779,7 +773,7 @@ namespace ServerSide
             }
             return JsonConvert.SerializeObject(availableWheels);
         }
-        public List<string[]> GetWheelListOfType(List<Wheel> wheels)
+        public static List<string[]> GetWheelListOfType(List<Wheel> wheels)
         {
             List<string[]> tempWheel = new List<string[]>();
             foreach (Wheel wheel in wheels)
@@ -794,9 +788,9 @@ namespace ServerSide
             }
             return tempWheel;
         }
-        public string GetVehiclesCurrentTune(Vehicle vehicle)
+        public static string GetVehiclesCurrentTune(Vehicle vehicle)
         {
-            foreach (CustomVehicle cV in customVehicles.AllVehicles)
+            foreach (CustomVehicle cV in CustomVehicles.AllVehicles)
             {
                 if (cV.model == vehicle.Model)
                 {
@@ -865,7 +859,7 @@ namespace ServerSide
             return "[]";
                     
         }
-        public decimal[] getVehiclesFixPriceAndTime(Vehicle vehicle)
+        public static decimal[] getVehiclesFixPriceAndTime(Vehicle vehicle)
         {
             float modelPrice = GetVehicleModelPrice(vehicle);
             if(modelPrice == 0)
@@ -926,7 +920,7 @@ namespace ServerSide
             }
         }
 
-        public void setRepairingInterval(Vehicle vehicle, decimal time, Player player, string partsToRepair)
+        public static void setRepairingInterval(Vehicle vehicle, decimal time, Player player, string partsToRepair)
         {
             List<string> parts = JsonConvert.DeserializeObject<List<string>>(partsToRepair);
             string damageString = vehicle.GetSharedData<string>("damage");
@@ -979,14 +973,14 @@ namespace ServerSide
             });
         }
 
-        public void RepairVehicle(Vehicle vehicle)
+        public static void RepairVehicle(Vehicle vehicle)
         {
             UpdateVehiclesDamage(vehicle, defaultDamage);
             vehicle.Repair();
             vehicle.SetSharedData("mech", false);
         }
 
-        public Vehicle GetRandomVehicleToTow()
+        public static Vehicle GetRandomVehicleToTow()
         {
             List<Vehicle> vehicles = new List<Vehicle>();
             Vehicle vehicle = null;
@@ -1008,10 +1002,10 @@ namespace ServerSide
             return vehicle;
         }
 
-        public int[] GetVehicleStockPowerAndSpeed(Vehicle vehicle)
+        public static int[] GetVehicleStockPowerAndSpeed(Vehicle vehicle)
         {
             int[] PandS = new int[2];
-            foreach(CustomVehicle cV in customVehicles.AllVehicles)
+            foreach(CustomVehicle cV in CustomVehicles.AllVehicles)
             {
                 if(cV.model == vehicle.Model)
                 {
@@ -1023,7 +1017,7 @@ namespace ServerSide
 
             return PandS;
         }
-        public void applyTuneToVehicle(Vehicle vehicle, string vizuString, string mechString)
+        public static void applyTuneToVehicle(Vehicle vehicle, string vizuString, string mechString)
         {
             Dictionary<int, int> tune = JsonToTune(vizuString);
 
@@ -1044,7 +1038,7 @@ namespace ServerSide
             }
             List<int> tuneList = JsonConvert.DeserializeObject<List<int>>(mechString);
             CustomVehicle customVehicle = null;
-            foreach (CustomVehicle cV in customVehicles.AllVehicles)
+            foreach (CustomVehicle cV in CustomVehicles.AllVehicles)
             {
                 if (cV.model == vehicle.Model)
                 {
@@ -1104,7 +1098,7 @@ namespace ServerSide
 
         }
 
-        public string GetVehiclesOwner(string id)
+        public static string GetVehiclesOwner(string id)
         {
             DBConnection dataBase = new DBConnection();
             dataBase.command.CommandText = $"SELECT * FROM vehicles WHERE id = {id};";
@@ -1124,7 +1118,7 @@ namespace ServerSide
             }
 
         }
-        public string GetVehiclesOwnerName(string id)
+        public static string GetVehiclesOwnerName(string id)
         {
             DBConnection dataBase = new DBConnection();
             dataBase.command.CommandText = $"SELECT * FROM vehicles WHERE id = {id};";
@@ -1160,7 +1154,7 @@ namespace ServerSide
             }
             return "";
         }
-        public string GetVehiclesNameById(string id)
+        public static string GetVehiclesNameById(string id)
         {
             DBConnection dataBase = new DBConnection();
             dataBase.command.CommandText = $"SELECT * FROM vehicles WHERE id = {id};";
@@ -1180,7 +1174,7 @@ namespace ServerSide
             }
         }
 
-        public string GetVehiclesTuneString(Vehicle vehicle)
+        public static string GetVehiclesTuneString(Vehicle vehicle)
         {
             List<string> stringTune = new List<string>();
             int[] mechTune = JsonConvert.DeserializeObject<int[]>(vehicle.GetSharedData<string>("mechtune"));
@@ -1251,7 +1245,7 @@ namespace ServerSide
             return JsonConvert.SerializeObject(stringTune);
         }
 
-        public void UpdateVehiclesDBOwner(int carId, string newOwner)
+        public static void UpdateVehiclesDBOwner(int carId, string newOwner)
         {
             DBConnection dataBase = new DBConnection();
             dataBase.command.CommandText = $"UPDATE vehicles SET owner = '{newOwner}' WHERE id = {carId.ToString()}";
@@ -1259,9 +1253,9 @@ namespace ServerSide
             dataBase.connection.Close();
         }
 
-        public void setVehiclesPetrolAndTrunk(Vehicle vehicle)
+        public static void setVehiclesPetrolAndTrunk(Vehicle vehicle)
         {
-            foreach(CustomVehicle cV in customVehicles.AllVehicles)
+            foreach(CustomVehicle cV in CustomVehicles.AllVehicles)
             {
                 if(cV.model == vehicle.Model)
                 {
@@ -1273,9 +1267,9 @@ namespace ServerSide
             }
         }
 
-        public void SetVehiclesExtra(Vehicle vehicle)
+        public static void SetVehiclesExtra(Vehicle vehicle)
         {
-            foreach(CustomVehicle customVehicle in customVehicles.AllVehicles)
+            foreach(CustomVehicle customVehicle in CustomVehicles.AllVehicles)
             {
                 if(customVehicle.model == vehicle.Model)
                 {
@@ -1290,7 +1284,7 @@ namespace ServerSide
             }
         }
 
-        public void SetVehiclesWheels(Vehicle vehicle)
+        public static void SetVehiclesWheels(Vehicle vehicle)
         {
             if (vehicle.HasSharedData("wheels")){
                 int[] wheels = JsonConvert.DeserializeObject<int[]>(vehicle.GetSharedData<string>("wheels"));
@@ -1302,11 +1296,11 @@ namespace ServerSide
                 }
                 NAPI.Vehicle.SetVehicleWheelColor(vehicle.Handle, 156);
                 NAPI.Vehicle.SetVehicleCustomTires(vehicle.Handle, wheels[2] == 1 ? true : false);
-                vehicle.SetSharedData("offroad", handlingManager.IsCarOffroadType(vehicle));
+                vehicle.SetSharedData("offroad", HandlingManager.IsCarOffroadType(vehicle));
             }
         }
 
-        public Vehicle GetClosestVehicle(Player player)
+        public static Vehicle GetClosestVehicle(Player player)
         {
             Vehicle closest = null;
             foreach (Vehicle veh in NAPI.Pools.GetAllVehicles())
@@ -1326,7 +1320,7 @@ namespace ServerSide
             return closest;
         }
 
-        public string GetPlayersVehicles(Player player)
+        public static string GetPlayersVehicles(Player player)
         {
             List<List<string>> vehicles = new List<List<string>>();
             DBConnection dataBase = new DBConnection();
@@ -1349,7 +1343,7 @@ namespace ServerSide
             return JsonConvert.SerializeObject(vehicles);
         }
 
-        public string[] GatherVehiclesInfo(int id)
+        public static string[] GatherVehiclesInfo(int id)
         {
             string[] tune = new string[3];
             List<string> vehInfo = new List<string>();
@@ -1401,7 +1395,7 @@ namespace ServerSide
             if (mech[4] == 1)
                 mtune.Add("Sportowe hamulce");
 
-            foreach (CustomVehicle cV in customVehicles.AllVehicles)
+            foreach (CustomVehicle cV in CustomVehicles.AllVehicles)
             {
                 if (cV.model.ToString() == model)
                 {
@@ -1462,11 +1456,11 @@ namespace ServerSide
             return tune;
         }
 
-        public int GetVehiclesSellPrice(Vehicle vehicle)
+        public static int GetVehiclesSellPrice(Vehicle vehicle)
         {
             int price = 0;
             double baseFactor = 0.5;
-            foreach(CustomVehicle customVehicle in customVehicles.AllVehicles)
+            foreach(CustomVehicle customVehicle in CustomVehicles.AllVehicles)
             {
                 if(customVehicle.model == vehicle.Model)
                 {
@@ -1480,45 +1474,45 @@ namespace ServerSide
             return price;
         }
 
-        public Vector3 JsonToVector(string pos)
+        public static Vector3 JsonToVector(string pos)
         {
             float[] a = JsonConvert.DeserializeObject<float[]>(pos);
             return new Vector3(a[0], a[1], a[2]);
         }
 
-        public string VectorToJson(Vector3 pos)
+        public static string VectorToJson(Vector3 pos)
         {
             float[] a = new float[] { pos.X, pos.Y, pos.Z };
             return JsonConvert.SerializeObject(a);
         }
 
-        public string ColorToJson(Color color, int colormod)
+        public static string ColorToJson(Color color, int colormod)
         {
             int[] colors = new int[] { color.Red, color.Green, color.Blue, colormod };
             return JsonConvert.SerializeObject(colors);
         }
 
-        public int[] JsonToColor(string colorString)
+        public static int[] JsonToColor(string colorString)
         {
             int[] color = JsonConvert.DeserializeObject<int[]>(colorString);
             Int32[] onlycolor = new Int32[] { color[0], color[1], color[2] };
             return onlycolor;
         }
-        public int JsonToColorMod(string colorString)
+        public static int JsonToColorMod(string colorString)
         {
             int[] color = JsonConvert.DeserializeObject<int[]>(colorString);
             return color[3];
         }
 
-        public Dictionary<string, float> JsonToDamage(string damageString)
+        public static Dictionary<string, float> JsonToDamage(string damageString)
         {
             return JsonConvert.DeserializeObject<Dictionary<string, float>>(damageString);
         }
-        public string DamageToJson(Dictionary<string, float> damageDict)
+        public static string DamageToJson(Dictionary<string, float> damageDict)
         {
             return JsonConvert.SerializeObject(damageDict);
         }
-        public Dictionary<int, int> JsonToTune(string tuneString)
+        public static Dictionary<int, int> JsonToTune(string tuneString)
         {
             if (tuneString == "{}")
             {
@@ -1526,12 +1520,12 @@ namespace ServerSide
             }
             return JsonConvert.DeserializeObject<Dictionary<int, int>>(tuneString);
         }
-        public string TuneToJson(Dictionary<int, int> tune)
+        public static string TuneToJson(Dictionary<int, int> tune)
         {
             return JsonConvert.SerializeObject(tune);
         }
 
-        public string GetVehiclesWheels(Vehicle vehicle)
+        public static string GetVehiclesWheels(Vehicle vehicle)
         {
             int[] wheels = JsonConvert.DeserializeObject<int[]>(vehicle.GetSharedData<string>("wheels"));
             if(wheels[0] == 0 && wheels[1] == -1 && wheels[2] == 0)
@@ -1545,7 +1539,7 @@ namespace ServerSide
                 return JsonConvert.SerializeObject(str);
             }
             else{
-                foreach (Wheel wheel in this.wheels.allWheels)
+                foreach (Wheel wheel in Wheels.allWheels)
                 {
                     if(wheel.type == wheels[0] && wheel.id == wheels[1])
                     {
@@ -1562,10 +1556,10 @@ namespace ServerSide
                 return "[]";
             }
         }
-        public string GetWheelNameById(int type, int id)
+        public static string GetWheelNameById(int type, int id)
         {
             string name = "";
-            foreach(Wheel wheel in wheels.allWheels)
+            foreach(Wheel wheel in Wheels.allWheels)
             {
                 if(wheel.type == type && wheel.id == id)
                 {
@@ -1575,10 +1569,10 @@ namespace ServerSide
             }
             return name;
         }
-        public int GetWheelPriceById(int type, int id)
+        public static int GetWheelPriceById(int type, int id)
         {
             int price = 0;
-            foreach (Wheel wheel in wheels.allWheels)
+            foreach (Wheel wheel in Wheels.allWheels)
             {
                 if (wheel.type == type && wheel.id == id)
                 {
@@ -1588,10 +1582,10 @@ namespace ServerSide
             }
             return price;
         }
-        public string GetAllVehiclesModels()
+        public static string GetAllVehiclesModels()
         {
             List<string> models = new List<string>();
-            foreach(CustomVehicle vehicle in customVehicles.AllVehicles)
+            foreach(CustomVehicle vehicle in CustomVehicles.AllVehicles)
             {
                 models.Add(vehicle.model.ToString());
             }
@@ -1599,46 +1593,32 @@ namespace ServerSide
         }
     }
 
-    public class CustomVehicles
+    public static class CustomVehicles
     {
-        public List<CustomVehicle> AllVehicles = new List<CustomVehicle>();
-        public List<CustomVehicle> Bikes = new List<CustomVehicle>();
-        public List<CustomVehicle> Junks = new List<CustomVehicle>();
-        public List<CustomVehicle> Hypers = new List<CustomVehicle>();
-        public List<CustomVehicle> Offroads = new List<CustomVehicle>();
-        public List<CustomVehicle> Regulars = new List<CustomVehicle>();
-        public List<CustomVehicle> Regulars2 = new List<CustomVehicle>();
-        public List<CustomVehicle> Sports = new List<CustomVehicle>();
-        public List<CustomVehicle> Classics = new List<CustomVehicle>();
-        public List<CustomVehicle> Specials = new List<CustomVehicle>();
-        public List<CustomVehicle> SUVs = new List<CustomVehicle>();
+        public static List<CustomVehicle> Bikes = JsonConvert.DeserializeObject<List<CustomVehicle>>(File.ReadAllText(@"Vehicles/bike.json"));
+        public static List<CustomVehicle> Hypers = JsonConvert.DeserializeObject<List<CustomVehicle>>(File.ReadAllText(@"Vehicles/hyper.json"));
+        public static List<CustomVehicle> Offroads = JsonConvert.DeserializeObject<List<CustomVehicle>>(File.ReadAllText(@"Vehicles/offroad.json"));
+        public static List<CustomVehicle> Regulars = JsonConvert.DeserializeObject<List<CustomVehicle>>(File.ReadAllText(@"Vehicles/regular.json"));
+        public static List<CustomVehicle> Regulars2 = JsonConvert.DeserializeObject<List<CustomVehicle>>(File.ReadAllText(@"Vehicles/regular2.json"));
+        public static List<CustomVehicle> Classics = JsonConvert.DeserializeObject<List<CustomVehicle>>(File.ReadAllText(@"Vehicles/classics.json"));
+        public static List<CustomVehicle> Sports = JsonConvert.DeserializeObject<List<CustomVehicle>>(File.ReadAllText(@"Vehicles/sport.json"));
+        public static List<CustomVehicle> SUVs = JsonConvert.DeserializeObject<List<CustomVehicle>>(File.ReadAllText(@"Vehicles/suv.json"));
+        public static List<CustomVehicle> Specials = JsonConvert.DeserializeObject<List<CustomVehicle>>(File.ReadAllText(@"Vehicles/special.json"));
+        public static List<CustomVehicle> Junks = JsonConvert.DeserializeObject<List<CustomVehicle>>(File.ReadAllText(@"Vehicles/junk.json"));
+        public static List<CustomVehicle> AllVehicles = 
+            Bikes.Concat(Hypers)
+            .Concat(Offroads)
+            .Concat(Regulars)
+            .Concat(Regulars2)
+            .Concat(Classics)
+            .Concat(Sports)
+            .Concat(SUVs)
+            .Concat(Specials)
+            .Concat(Junks)
+            .ToList();
 
-        public CustomVehicles()
-        {
-            Bikes = JsonConvert.DeserializeObject<List<CustomVehicle>>(File.ReadAllText(@"Vehicles/bike.json"));
-            Hypers = JsonConvert.DeserializeObject<List<CustomVehicle>>(File.ReadAllText(@"Vehicles/hyper.json"));
-            Junks = JsonConvert.DeserializeObject<List<CustomVehicle>>(File.ReadAllText(@"Vehicles/junk.json"));
-            Offroads = JsonConvert.DeserializeObject<List<CustomVehicle>>(File.ReadAllText(@"Vehicles/offroad.json"));
-            Regulars = JsonConvert.DeserializeObject<List<CustomVehicle>>(File.ReadAllText(@"Vehicles/regular.json"));
-            Regulars2 = JsonConvert.DeserializeObject<List<CustomVehicle>>(File.ReadAllText(@"Vehicles/regular2.json"));
-            Classics = JsonConvert.DeserializeObject<List<CustomVehicle>>(File.ReadAllText(@"Vehicles/classics.json"));
-            Sports = JsonConvert.DeserializeObject<List<CustomVehicle>>(File.ReadAllText(@"Vehicles/sport.json"));
-            SUVs = JsonConvert.DeserializeObject<List<CustomVehicle>>(File.ReadAllText(@"Vehicles/suv.json"));
-            Specials = JsonConvert.DeserializeObject<List<CustomVehicle>>(File.ReadAllText(@"Vehicles/special.json"));
 
-            AllVehicles.AddRange(Bikes);
-            AllVehicles.AddRange(Hypers);
-            AllVehicles.AddRange(Offroads);
-            AllVehicles.AddRange(Regulars);
-            AllVehicles.AddRange(Regulars2);
-            AllVehicles.AddRange(Classics);
-            AllVehicles.AddRange(Sports);
-            AllVehicles.AddRange(SUVs);
-            AllVehicles.AddRange(Specials);
-            AllVehicles.AddRange(Junks);
-        }
-
-        public List<CustomVehicle> GetAllVehiclesOfProb(List<CustomVehicle> vehicles, int prob)
+        public static List<CustomVehicle> GetAllVehiclesOfProb(List<CustomVehicle> vehicles, int prob)
         {
             List<CustomVehicle> probVehs = new List<CustomVehicle>();
             foreach(CustomVehicle cV in vehicles)
@@ -1682,24 +1662,24 @@ namespace ServerSide
             this.extra = extra;
         }
     }
-    public class Wheels
+    public static class Wheels
     {
-        public List<Wheel> allWheels;
-        public List<Wheel> sport = new List<Wheel>(), muscle = new List<Wheel>(), lowrider = new List<Wheel>(), suv = new List<Wheel>(), offroad = new List<Wheel>(), tuner = new List<Wheel>(), bike = new List<Wheel>(), highend = new List<Wheel>(), benny_o = new List<Wheel>(), benny_b = new List<Wheel>();
-        public List<Wheel> allCurrentWheels = new List<Wheel>();
+        public static List<Wheel> allWheels;
+        public static List<Wheel> sport = new List<Wheel>(), muscle = new List<Wheel>(), lowrider = new List<Wheel>(), suv = new List<Wheel>(), offroad = new List<Wheel>(), tuner = new List<Wheel>(), bike = new List<Wheel>(), highend = new List<Wheel>(), benny_o = new List<Wheel>(), benny_b = new List<Wheel>();
+        public static List<Wheel> allCurrentWheels = new List<Wheel>();
 
-        public Wheels()
+        public static void InitiateWheels()
         {
             allWheels = JsonConvert.DeserializeObject<List<Wheel>>(File.ReadAllText(@"Vehicles/Wheels/allWheels.json"));
             Dictionary<int, int[]> rot = JsonConvert.DeserializeObject<Dictionary<int, int[]>>(File.ReadAllText(@"Vehicles/Wheels/currentWheels.json"));
-            foreach(KeyValuePair<int, int[]> r in rot)
+            foreach (KeyValuePair<int, int[]> r in rot)
             {
-                switch(r.Key)
+                switch (r.Key)
                 {
                     case 0:
-                        foreach(Wheel wheel in allWheels)
+                        foreach (Wheel wheel in allWheels)
                         {
-                            if(wheel.type == 0 && r.Value.Contains<int>(wheel.id))
+                            if (wheel.type == 0 && r.Value.Contains<int>(wheel.id))
                             {
                                 sport.Add(wheel);
                                 allCurrentWheels.Add(wheel);
@@ -1797,7 +1777,6 @@ namespace ServerSide
                         }
                         break;
                 }
-                
             }
         }
     }

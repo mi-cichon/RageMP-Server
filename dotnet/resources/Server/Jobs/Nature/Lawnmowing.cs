@@ -5,28 +5,26 @@ using GTANetworkAPI;
 using ServerSide;
 namespace ServerSide
 {
-    public class Lawnmowing
+    public static class Lawnmowing
     {
-        PlayerDataManager playerDataManager = new PlayerDataManager();
-        CustomMarkers customMarkers = new CustomMarkers();
-        public ColShape lawnColshape;
-        public Marker lawnMarker;
-        public Blip lawnBlip;
-        public Vector3 startPoint;
-        public Lawnmowing(Vector3 startPoint)
+        public static ColShape lawnColshape;
+        public static Marker lawnMarker;
+        public static Blip lawnBlip;
+        public static Vector3 startPoint;
+        public static void InstantiateLawnmowing(Vector3 startPoint)
         {
-            this.startPoint = new Vector3(startPoint.X, startPoint.Y, startPoint.Z);
+            startPoint = new Vector3(startPoint.X, startPoint.Y, startPoint.Z);
             lawnColshape = NAPI.ColShape.CreateCylinderColShape(startPoint - new Vector3(0, 0, 1), 1.0f, 2.0f);
             lawnColshape.SetSharedData("type", "lawnmowing");
             lawnBlip = NAPI.Blip.CreateBlip(497, startPoint, 0.8f, 69, name: "Praca: Koszenie trawników", shortRange: true);
-            customMarkers.CreateJobMarker(startPoint, "Koszenie trawników");
+            CustomMarkers.CreateJobMarker(startPoint, "Koszenie trawników");
             foreach (Vector3 grassPosition in GrassObjects.objects)
             {
                 grassObjects.Add(new Grass(grassPosition, GetRandomGrassModel(), grassObjects.Count));
             }
         }
 
-        public void startJob(Player player)
+        public static void startJob(Player player)
         {
 
             if (player.GetSharedData<string>("job") == "" && !(player.HasSharedData("lspd_duty") && player.GetSharedData<bool>("lspd_duty")))
@@ -37,19 +35,19 @@ namespace ServerSide
             }
             else
             {
-                playerDataManager.NotifyPlayer(player, "Nie ma wolnych miejsc na parkingu lub masz inną pracę!");
+                PlayerDataManager.NotifyPlayer(player, "Nie ma wolnych miejsc na parkingu lub masz inną pracę!");
             }
         }
 
-        public int GetRandomGrassModel()
+        public static int GetRandomGrassModel()
         {
             Random rnd = new Random();
             return grassModels[rnd.Next(0, grassModels.Count)];
         }
 
-        public List<Grass> grassObjects = new List<Grass>();
+        public static List<Grass> grassObjects = new List<Grass>();
 
-        public List<int> grassModels = new List<int>()
+        public static List<int> grassModels = new List<int>()
         {
             //(int)NAPI.Util.GetHashKey("prop_veg_grass_01_a"),
             //(int)NAPI.Util.GetHashKey("prop_veg_grass_01_b"),

@@ -25,15 +25,15 @@ namespace ServerSide
         [RemoteEvent("saveClothes")]
         public void SaveClothes(Player player)
         {
-            if (playerDataManager.UpdatePlayersMoney(player, -1000))
+            if (PlayerDataManager.UpdatePlayersMoney(player, -1000))
             {
-                playerDataManager.UpdatePlayersClothes(player);
-                playerDataManager.NotifyPlayer(player, "Ubrania zostały pomyślnie zmienione!");
+                PlayerDataManager.UpdatePlayersClothes(player);
+                PlayerDataManager.NotifyPlayer(player, "Ubrania zostały pomyślnie zmienione!");
             }
             else
             {
-                playerDataManager.NotifyPlayer(player, "Nie stać Cię na to!");
-                playerDataManager.LoadPlayersClothes(player);
+                PlayerDataManager.NotifyPlayer(player, "Nie stać Cię na to!");
+                PlayerDataManager.LoadPlayersClothes(player);
             }
             player.Dimension = 0;
             player.SetSharedData("gui", false);
@@ -43,13 +43,13 @@ namespace ServerSide
         [RemoteEvent("loadClothes")]
         public void LoadClothes(Player player)
         {
-            playerDataManager.LoadPlayersClothes(player);
+            PlayerDataManager.LoadPlayersClothes(player);
         }
 
         [RemoteEvent("loadPlayersClothes")]
         public void LoadPlayersClothes(Player player, Player player2)
         {
-            playerDataManager.LoadPlayersClothes(player2);
+            PlayerDataManager.LoadPlayersClothes(player2);
         }
         public void CreateChangingRooms()
         {

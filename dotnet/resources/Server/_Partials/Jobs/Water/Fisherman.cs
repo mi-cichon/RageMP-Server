@@ -11,19 +11,19 @@ namespace ServerSide
         [RemoteEvent("buyFishingRod")]
         public void BuyFishingRod(Player player)
         {
-            fisherMan.BuyFishingRod(player);
+            FisherMan.BuyFishingRod(player);
         }
 
         [RemoteEvent("startFishing")]
         public void StartFishing(Player player)
         {
-            fisherMan.StartJob(player);
+            FisherMan.StartJob(player);
         }
 
         [RemoteEvent("fishingDone")]
         public void FishingDone(Player player, int size, int type)
         {
-            payoutManager.FisherManPoints(player, type, size);
+            PayoutManager.FisherManPoints(player, type, size);
         }
 
         [RemoteEvent("sellFishes")]
@@ -65,11 +65,11 @@ namespace ServerSide
             }
             if (fishes.Count == 0)
             {
-                playerDataManager.NotifyPlayer(player, "Nie masz żadnych ryb do sprzedania!");
+                PlayerDataManager.NotifyPlayer(player, "Nie masz żadnych ryb do sprzedania!");
             }
             else
             {
-                payoutManager.FisherSold(player, fishes);
+                PayoutManager.FisherSold(player, fishes);
                 NAPI.Task.Run(() =>
                 {
                     if (player != null && player.Exists)
@@ -106,16 +106,16 @@ namespace ServerSide
                 }
                 if (junks.Count == 0)
                 {
-                    playerDataManager.NotifyPlayer(player, "Nie masz żadnych przedmiotów do sprzedania!");
+                    PlayerDataManager.NotifyPlayer(player, "Nie masz żadnych przedmiotów do sprzedania!");
                 }
                 else
                 {
-                    payoutManager.FisherJunkSold(player, junks);
+                    PayoutManager.FisherJunkSold(player, junks);
                 }
             }
             else
             {
-                playerDataManager.NotifyPlayer(player, "Nie masz żadnych przedmiotów do sprzedania!");
+                PlayerDataManager.NotifyPlayer(player, "Nie masz żadnych przedmiotów do sprzedania!");
             }
 
         }

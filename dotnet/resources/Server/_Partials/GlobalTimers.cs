@@ -13,7 +13,7 @@ namespace ServerSide
         {
             NAPI.Task.Run(() =>
             {
-                foreach (House house in houses.houses)
+                foreach (House house in Houses.houses)
                 {
                     if (house.owner != "")
                     {
@@ -32,7 +32,7 @@ namespace ServerSide
                         if (player.HasSharedData("playtime"))
                         {
                             player.SetSharedData("playtime", player.GetSharedData<Int32>("playtime") + 1);
-                            playerDataManager.UpdatePlayersPlaytime(player, player.GetSharedData<Int32>("playtime"));
+                            PlayerDataManager.UpdatePlayersPlaytime(player, player.GetSharedData<Int32>("playtime"));
                         }
 
                         if (!(player.HasSharedData("afk") && player.GetSharedData<bool>("afk")) && player.HasSharedData("bonustime"))
@@ -42,21 +42,21 @@ namespace ServerSide
                                 player.SetSharedData("bonustime", player.GetSharedData<Int32>("bonustime") + 1);
                                 if(player.GetSharedData<Int32>("bonustime") == 60)
                                 {
-                                    playerDataManager.NotifyPlayer(player, "Bonus godzinny jest gotowy do odbioru w aplikacji Bonusy!");
+                                    PlayerDataManager.NotifyPlayer(player, "Bonus godzinny jest gotowy do odbioru w aplikacji Bonusy!");
                                 }
                             }
-                            autoSave.SavePlayersBonusData(player, player.GetSharedData<Int32>("bonustime"));
+                            AutoSave.SavePlayersBonusData(player, player.GetSharedData<Int32>("bonustime"));
                         }
 
-                        if (playerDataManager.isPlayersPenaltyExpired(player, "muted"))
+                        if (PlayerDataManager.isPlayersPenaltyExpired(player, "muted"))
                         {
                             player.SetSharedData("muted", false);
-                            playerDataManager.SendInfoToPlayer(player, "Twoja kara wyciszenia wygasła!");
+                            PlayerDataManager.SendInfoToPlayer(player, "Twoja kara wyciszenia wygasła!");
                         }
-                        if (playerDataManager.isPlayersPenaltyExpired(player, "nodriving"))
+                        if (PlayerDataManager.isPlayersPenaltyExpired(player, "nodriving"))
                         {
                             player.SetSharedData("nodriving", false);
-                            playerDataManager.SendInfoToPlayer(player, "Twoje prawo jazdy odzyskało ważność!");
+                            PlayerDataManager.SendInfoToPlayer(player, "Twoje prawo jazdy odzyskało ważność!");
                         }
                     }
                 }
@@ -94,10 +94,10 @@ namespace ServerSide
         {
             NAPI.Task.Run(() =>
             {
-                string[] bonus = payoutManager.SetNewBonus();
+                string[] bonus = PayoutManager.SetNewBonus();
                 string time = DateTime.Now.AddHours(1).ToString();
-                payoutManager.bonusTime = DateTime.Now.AddHours(1);
-                playerDataManager.SendInfoMessageToAllPlayers($"Wylosowano nowy bonus {float.Parse(bonus[1]) * 100}% na: {bonus[0]} do: {time}");
+                PayoutManager.bonusTime = DateTime.Now.AddHours(1);
+                PlayerDataManager.SendInfoMessageToAllPlayers($"Wylosowano nowy bonus {float.Parse(bonus[1]) * 100}% na: {bonus[0]} do: {time}");
             });
         }
 
@@ -105,7 +105,7 @@ namespace ServerSide
         {
             NAPI.Task.Run(() =>
             {
-                playerDataManager.SendInfoMessageToAllPlayers("Serwer jest w trakcie przygotowań. Wszystkie postępy zostaną usunięte tuż przed startem. Wszelkie błędy prosimy zgłaszać na Discordzie:  https://discord.gg/zNhdtxhb9a");
+                PlayerDataManager.SendInfoMessageToAllPlayers("Serwer jest w trakcie przygotowań. Wszystkie postępy zostaną usunięte tuż przed startem. Wszelkie błędy prosimy zgłaszać na Discordzie:  https://discord.gg/zNhdtxhb9a");
             });
         }
 
@@ -117,7 +117,7 @@ namespace ServerSide
                 {
                     if (player.HasSharedData("arrested") && player.GetSharedData<bool>("arrested"))
                     {
-                        foreach (Arrest arrest in lspd.Arrests)
+                        foreach (Arrest arrest in LSPD.Arrests)
                         {
                             bool found = false;
                             foreach (KeyValuePair<ulong, int> inmate in arrest.Inmates)
@@ -129,11 +129,11 @@ namespace ServerSide
                                     arrest.Inmates[arrest.Inmates.IndexOf(inmate)] = new KeyValuePair<ulong, int>(player.SocialClubId, time);
                                     if (time == 0)
                                     {
-                                        lspd.RemovePlayerFromArrest(player);
+                                        LSPD.RemovePlayerFromArrest(player);
                                     }
                                     else if (time % 5 == 0)
                                     {
-                                        playerDataManager.SendInfoToPlayer(player, "Pozostało " + time.ToString() + " minut aresztu!");
+                                        PlayerDataManager.SendInfoToPlayer(player, "Pozostało " + time.ToString() + " minut aresztu!");
                                     }
 
                                     found = true;
@@ -157,7 +157,7 @@ namespace ServerSide
                     {
                         if (player.Dimension == 0 && !(player.HasSharedData("spec") && player.GetSharedData<bool>("spec")))
                         {
-                            playerDataManager.UpdatePlayersLastPos(player);
+                            PlayerDataManager.UpdatePlayersLastPos(player);
                         }
                         player.TriggerEvent("updatePlayerBlips", NAPI.Pools.GetAllBlips().ToArray());
                         player.TriggerEvent("getVehicleDamage");
@@ -170,9 +170,9 @@ namespace ServerSide
                     {
                         (vehicle.Occupants[0] as Player).TriggerEvent("updateDirtLevel");
                     }
-                    if ((vehicle.GetSharedData<string>("type") == "personal" && !(vehicle.HasSharedData("market") && vehicle.GetSharedData<bool>("market")) && vehicle.HasSharedData("veh_brake") && !vehicle.GetSharedData<bool>("veh_brake")) || (vehicle.HasSharedData("type") && vehicle.GetSharedData<string>("type") == "lspd"))
+                    if ((vehicle.GetSharedData<string>("type") == "personal" && !(vehicle.HasSharedData("market") && vehicle.GetSharedData<bool>("market")) && vehicle.HasSharedData("veh_brake") && !vehicle.GetSharedData<bool>("veh_brake")) || (vehicle.HasSharedData("type") && vehicle.GetSharedData<string>("type") == "LSPD"))
                     {
-                        vehicleDataManager.UpdateVehiclesLastPos(vehicle);
+                        VehicleDataManager.UpdateVehiclesLastPos(vehicle);
                     }
                 }
             });
@@ -210,7 +210,7 @@ namespace ServerSide
                 {
                     if (vehicle.HasSharedData("washtime") && vehicle.GetSharedData<string>("washtime") != "" && DateTime.Compare(DateTime.Parse(vehicle.GetSharedData<string>("washtime")), DateTime.Now) < 0)
                     {
-                        vehicleDataManager.UpdateVehiclesWashTime(vehicle, "");
+                        VehicleDataManager.UpdateVehiclesWashTime(vehicle, "");
                     }
                     if (vehicle.HasSharedData("storageTime") && vehicle.GetSharedData<string>("storageTime") != "")
                     {
@@ -219,7 +219,7 @@ namespace ServerSide
                         {
                             if (vehicle != null && vehicle.Exists)
                             {
-                                vehicleDataManager.UpdateVehicleSpawned(vehicle, false);
+                                VehicleDataManager.UpdateVehicleSpawned(vehicle, false);
                                 vehicle.Delete();
                             }
                         }
@@ -248,7 +248,7 @@ namespace ServerSide
         {
             NAPI.Task.Run(() =>
             {
-                foreach (Grass grass in lawnmowing.grassObjects.Where(g => g.pickedUpTime != null && DateTime.Now >= g.pickedUpTime.Value.AddMinutes(3)))
+                foreach (Grass grass in Lawnmowing.grassObjects.Where(g => g.pickedUpTime != null && DateTime.Now >= g.pickedUpTime.Value.AddMinutes(3)))
                 {
                     grass.Create();
                 }

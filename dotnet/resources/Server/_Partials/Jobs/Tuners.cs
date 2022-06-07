@@ -36,7 +36,7 @@ namespace ServerSide
                     }
                     else if (tuneBusiness.Owner != 0)
                     {
-                        playerDataManager.NotifyPlayer(player, "Ten warsztat nie należy do Ciebie!");
+                        PlayerDataManager.NotifyPlayer(player, "Ten warsztat nie należy do Ciebie!");
                     }
                     else
                     {
@@ -56,20 +56,20 @@ namespace ServerSide
                 {
                     if (tuneBusiness.Owner != 0)
                     {
-                        playerDataManager.NotifyPlayer(player, "Ten warsztat został już zakupiony!");
+                        PlayerDataManager.NotifyPlayer(player, "Ten warsztat został już zakupiony!");
                         player.TriggerEvent("closeBuyTunePanelBrowser");
                     }
                     else
                     {
-                        if (playerDataManager.UpdatePlayersMoney(player, -250000))
+                        if (PlayerDataManager.UpdatePlayersMoney(player, -250000))
                         {
                             tuneBusiness.SetNewOwner(player.SocialClubId);
-                            playerDataManager.NotifyPlayer(player, "Jesteś nowym właścicielem warsztatu!");
+                            PlayerDataManager.NotifyPlayer(player, "Jesteś nowym właścicielem warsztatu!");
                             player.TriggerEvent("closeBuyTunePanelBrowser");
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Nie stać Cię na to!");
+                            PlayerDataManager.NotifyPlayer(player, "Nie stać Cię na to!");
                             player.TriggerEvent("closeBuyTunePanelBrowser");
                         }
                     }
@@ -81,7 +81,7 @@ namespace ServerSide
         [RemoteEvent("requestAvailableWheels")]
         public void RequestAvailableWheels(Player player)
         {
-            player.TriggerEvent("sendAvailableWheels", vehicleDataManager.GetAllAvailableWheels());
+            player.TriggerEvent("sendAvailableWheels", VehicleDataManager.GetAllAvailableWheels());
         }
 
         [RemoteEvent("createWheelsOrder")]
@@ -91,18 +91,18 @@ namespace ServerSide
             {
                 if (tuneBusiness.Id == businessId)
                 {
-                    if (playerDataManager.UpdatePlayersMoney(player, -1 * currentAmount * currentPrice))
+                    if (PlayerDataManager.UpdatePlayersMoney(player, -1 * currentAmount * currentPrice))
                     {
                         for (int i = 0; i < currentAmount; i++)
                         {
                             tuneBusiness.WheelOrders.Add(new KeyValuePair<int[], DateTime>(new int[] { currentType, currentId, currentPrice }, DateTime.Now.AddDays(1)));
                         }
                         tuneBusiness.SaveBusinessToDB();
-                        playerDataManager.NotifyPlayer(player, "Poprawnie złożono zamówienie!");
+                        PlayerDataManager.NotifyPlayer(player, "Poprawnie złożono zamówienie!");
                     }
                     else
                     {
-                        playerDataManager.NotifyPlayer(player, "Nie stać Cię na to zamówienie!");
+                        PlayerDataManager.NotifyPlayer(player, "Nie stać Cię na to zamówienie!");
                     }
                     break;
                 }
@@ -120,7 +120,7 @@ namespace ServerSide
                     {
                         ownedWheels.Add(new string[]
                         {
-                            vehicleDataManager.GetWheelNameById(wheel[0], wheel[1]),
+                            VehicleDataManager.GetWheelNameById(wheel[0], wheel[1]),
                             wheel[0].ToString(),
                             wheel[1].ToString(),
                             wheel[2].ToString()
@@ -144,7 +144,7 @@ namespace ServerSide
                     {
                         shipmentWheels.Add(new string[]
                         {
-                            vehicleDataManager.GetWheelNameById(order.Key[0], order.Key[1]),
+                            VehicleDataManager.GetWheelNameById(order.Key[0], order.Key[1]),
                             order.Key[0].ToString(),
                             order.Key[1].ToString(),
                             order.Value.ToString()
@@ -178,20 +178,20 @@ namespace ServerSide
                 {
                     if (tuneBusiness.PaidTo.AddDays(days) > DateTime.Now.AddDays(2))
                     {
-                        playerDataManager.NotifyPlayer(player, "Działalność można opłacić na maksymalnie 2 dni do przodu!");
+                        PlayerDataManager.NotifyPlayer(player, "Działalność można opłacić na maksymalnie 2 dni do przodu!");
                     }
                     else
                     {
-                        if (playerDataManager.UpdatePlayersMoney(player, -1 * days * 1500))
+                        if (PlayerDataManager.UpdatePlayersMoney(player, -1 * days * 1500))
                         {
                             tuneBusiness.PaidTo = tuneBusiness.PaidTo.AddDays(days);
                             tuneBusiness.SaveBusinessToDB();
                             player.TriggerEvent("sendManageData", tuneBusiness.PaidTo.ToString(), "1500");
-                            playerDataManager.NotifyPlayer(player, "Pomyślnie dokonano opłaty!");
+                            PlayerDataManager.NotifyPlayer(player, "Pomyślnie dokonano opłaty!");
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Nie stać Cię na to!");
+                            PlayerDataManager.NotifyPlayer(player, "Nie stać Cię na to!");
                         }
                     }
                     break;
@@ -203,7 +203,7 @@ namespace ServerSide
         {
             if (player.HasSharedData("job") && player.GetSharedData<string>("job") != "business-tune" && player.GetSharedData<string>("job") != "")
             {
-                playerDataManager.NotifyPlayer(player, "Musisz zakończyć pracę przed wejściem na stanowisko!");
+                PlayerDataManager.NotifyPlayer(player, "Musisz zakończyć pracę przed wejściem na stanowisko!");
             }
             else
             {
@@ -248,17 +248,17 @@ namespace ServerSide
                             availableWheels.Add(new string[]
                             {
                                 i.ToString(),
-                                vehicleDataManager.GetWheelNameById(wheel[0], wheel[1]),
+                                VehicleDataManager.GetWheelNameById(wheel[0], wheel[1]),
                                 wheel[0].ToString(),
                                 wheel[1].ToString(),
                                 wheel[2].ToString()
                             });
                         }
-                        player.TriggerEvent("openWheelsTuneBrowser", businessId, JsonConvert.SerializeObject(availableWheels), vehicleDataManager.GetVehiclesWheels(tuneBusiness.StationVeh), tuneBusiness.StationVeh);
+                        player.TriggerEvent("openWheelsTuneBrowser", businessId, JsonConvert.SerializeObject(availableWheels), VehicleDataManager.GetVehiclesWheels(tuneBusiness.StationVeh), tuneBusiness.StationVeh);
                     }
                     else
                     {
-                        playerDataManager.NotifyPlayer(player, "Na stanowisku nie ma żadnego pojazdu");
+                        PlayerDataManager.NotifyPlayer(player, "Na stanowisku nie ma żadnego pojazdu");
                     }
                     break;
                 }
@@ -286,7 +286,7 @@ namespace ServerSide
                     else
                     {
                         player.TriggerEvent("closeWheelsTuneBrowser");
-                        playerDataManager.NotifyPlayer(player, "Wystąpił błąd");
+                        PlayerDataManager.NotifyPlayer(player, "Wystąpił błąd");
                     }
                     break;
                 }
@@ -307,7 +307,7 @@ namespace ServerSide
                             Player driver = (Player)vehicle.Occupants[0];
                             if (driver.HasSharedData("tuneOffer") && driver.GetSharedData<bool>("tuneOffer"))
                             {
-                                playerDataManager.NotifyPlayer(player, "Złożyłeś już ofertę temu graczowi!");
+                                PlayerDataManager.NotifyPlayer(player, "Złożyłeś już ofertę temu graczowi!");
                             }
                             else
                             {
@@ -315,11 +315,11 @@ namespace ServerSide
                                 {
                                     case "install":
                                         driver.TriggerEvent("openConfirmWheelsTunePanel", businessId, type, id, name, price, true, partId);
-                                        playerDataManager.NotifyPlayer(player, "Pomyślnie wysłano ofertę!");
+                                        PlayerDataManager.NotifyPlayer(player, "Pomyślnie wysłano ofertę!");
                                         break;
                                     case "remove":
                                         driver.TriggerEvent("openConfirmWheelsTunePanel", businessId, type, id, name, price, false, partId);
-                                        playerDataManager.NotifyPlayer(player, "Pomyślnie   wysłano ofertę!");
+                                        PlayerDataManager.NotifyPlayer(player, "Pomyślnie   wysłano ofertę!");
                                         break;
                                 }
                             }
@@ -329,8 +329,8 @@ namespace ServerSide
                         {
                             Player driver = (Player)vehicle.Occupants[0];
                             player.TriggerEvent("closeWheelsTuneBrowser");
-                            playerDataManager.NotifyPlayer(player, "Części może montować tylko właściciel pojazdu!");
-                            playerDataManager.NotifyPlayer(driver, "Części może montować tylko właściciel pojazdu!");
+                            PlayerDataManager.NotifyPlayer(player, "Części może montować tylko właściciel pojazdu!");
+                            PlayerDataManager.NotifyPlayer(driver, "Części może montować tylko właściciel pojazdu!");
                         }
                         break;
                     }
@@ -349,7 +349,7 @@ namespace ServerSide
                         if (tuneBusiness.Owner == owner.SocialClubId)
                         {
                             player.SetSharedData("tuneOffer", false);
-                            playerDataManager.NotifyPlayer(owner, "Gracz odrzucił ofertę montażu felg!");
+                            PlayerDataManager.NotifyPlayer(owner, "Gracz odrzucił ofertę montażu felg!");
                             owner.TriggerEvent("closeWheelsTuneBrowser");
                             break;
                         }
@@ -373,12 +373,12 @@ namespace ServerSide
                             {
                                 if (state)
                                 {
-                                    if (playerDataManager.UpdatePlayersMoney(player, -1 * wheelPrice))
+                                    if (PlayerDataManager.UpdatePlayersMoney(player, -1 * wheelPrice))
                                     {
-                                        playerDataManager.UpdatePlayersMoney(owner, wheelPrice);
-                                        vehicleDataManager.UpdateVehiclesWheels(player.Vehicle, JsonConvert.SerializeObject(new int[] { wheelType, wheelId, 0 }));
-                                        playerDataManager.NotifyPlayer(player, "Pomyślnie zamontowano felgi!");
-                                        playerDataManager.NotifyPlayer(owner, "Gracz zaakcpetował ofertę!");
+                                        PlayerDataManager.UpdatePlayersMoney(owner, wheelPrice);
+                                        VehicleDataManager.UpdateVehiclesWheels(player.Vehicle, JsonConvert.SerializeObject(new int[] { wheelType, wheelId, 0 }));
+                                        PlayerDataManager.NotifyPlayer(player, "Pomyślnie zamontowano felgi!");
+                                        PlayerDataManager.NotifyPlayer(owner, "Gracz zaakcpetował ofertę!");
                                         owner.TriggerEvent("closeWheelsTuneBrowser");
                                         tuneBusiness.AvailableWheels.RemoveAt(partId);
                                         tuneBusiness.SaveBusinessToDB();
@@ -386,27 +386,27 @@ namespace ServerSide
                                     }
                                     else
                                     {
-                                        playerDataManager.NotifyPlayer(player, "Nie stać cię na to!");
-                                        playerDataManager.NotifyPlayer(owner, "Gracz odrzucił ofertę montażu felg!");
+                                        PlayerDataManager.NotifyPlayer(player, "Nie stać cię na to!");
+                                        PlayerDataManager.NotifyPlayer(owner, "Gracz odrzucił ofertę montażu felg!");
                                         owner.TriggerEvent("closeWheelsTuneBrowser");
                                     }
                                 }
                                 else
                                 {
-                                    if (playerDataManager.UpdatePlayersMoney(owner, -1 * wheelPrice))
+                                    if (PlayerDataManager.UpdatePlayersMoney(owner, -1 * wheelPrice))
                                     {
-                                        playerDataManager.UpdatePlayersMoney(player, wheelPrice);
-                                        vehicleDataManager.UpdateVehiclesWheels(player.Vehicle, JsonConvert.SerializeObject(new int[] { 0, -1, 0 }));
-                                        playerDataManager.NotifyPlayer(player, "Pomyślnie zdemontowano felgi!");
-                                        playerDataManager.NotifyPlayer(owner, "Gracz zaakcpetował ofertę!");
-                                        tuneBusiness.AvailableWheels.Add(new int[] { wheelType, wheelId, vehicleDataManager.GetWheelPriceById(wheelType, wheelId) });
+                                        PlayerDataManager.UpdatePlayersMoney(player, wheelPrice);
+                                        VehicleDataManager.UpdateVehiclesWheels(player.Vehicle, JsonConvert.SerializeObject(new int[] { 0, -1, 0 }));
+                                        PlayerDataManager.NotifyPlayer(player, "Pomyślnie zdemontowano felgi!");
+                                        PlayerDataManager.NotifyPlayer(owner, "Gracz zaakcpetował ofertę!");
+                                        tuneBusiness.AvailableWheels.Add(new int[] { wheelType, wheelId, VehicleDataManager.GetWheelPriceById(wheelType, wheelId) });
                                         tuneBusiness.SaveBusinessToDB();
                                         owner.TriggerEvent("closeWheelsTuneBrowser");
                                     }
                                     else
                                     {
-                                        playerDataManager.NotifyPlayer(owner, "Nie masz tyle pieniędzy!");
-                                        playerDataManager.NotifyPlayer(player, "Tunera nie stać na to!");
+                                        PlayerDataManager.NotifyPlayer(owner, "Nie masz tyle pieniędzy!");
+                                        PlayerDataManager.NotifyPlayer(player, "Tunera nie stać na to!");
                                         owner.TriggerEvent("closeWheelsTuneBrowser");
                                     }
                                 }
@@ -414,7 +414,7 @@ namespace ServerSide
                             }
                             else
                             {
-                                playerDataManager.NotifyPlayer(owner, "Nie odnaleziono pojazdu!");
+                                PlayerDataManager.NotifyPlayer(owner, "Nie odnaleziono pojazdu!");
                             }
                             break;
                         }
@@ -438,11 +438,11 @@ namespace ServerSide
                 {
                     if (tuneBusiness.StationVeh != null && tuneBusiness.StationVeh.Exists && tuneBusiness.VehColshape.IsPointWithin(tuneBusiness.StationVeh.Position))
                     {
-                        player.TriggerEvent("openMechTuneBrowser", businessId, vehicleDataManager.GetVehiclesMechTune(tuneBusiness.StationVeh), tuneBusiness.StationVeh);
+                        player.TriggerEvent("openMechTuneBrowser", businessId, VehicleDataManager.GetVehiclesMechTune(tuneBusiness.StationVeh), tuneBusiness.StationVeh);
                     }
                     else
                     {
-                        playerDataManager.NotifyPlayer(player, "Na stanowisku nie ma żadnego pojazdu");
+                        PlayerDataManager.NotifyPlayer(player, "Na stanowisku nie ma żadnego pojazdu");
                     }
                     break;
                 }
@@ -468,12 +468,12 @@ namespace ServerSide
                                         Player driver = (Player)vehicle.Occupants[0];
                                         if (driver.HasSharedData("tuneOffer") && driver.GetSharedData<bool>("tuneOffer"))
                                         {
-                                            playerDataManager.NotifyPlayer(player, "Złożyłeś już ofertę temu graczowi!");
+                                            PlayerDataManager.NotifyPlayer(player, "Złożyłeś już ofertę temu graczowi!");
                                         }
                                         else
                                         {
                                             driver.TriggerEvent("openConfirmTunePanel", businessId, installType == "install" ? true : false, tuneName, fullPrice, tuneId, offer);
-                                            playerDataManager.NotifyPlayer(player, "Oferta złożona!");
+                                            PlayerDataManager.NotifyPlayer(player, "Oferta złożona!");
                                         }
 
                                     }
@@ -481,26 +481,26 @@ namespace ServerSide
                                     {
                                         Player driver = (Player)vehicle.Occupants[0];
                                         player.TriggerEvent("closeWheelsTuneBrowser");
-                                        playerDataManager.NotifyPlayer(player, "Części może montować tylko właściciel pojazdu!");
-                                        playerDataManager.NotifyPlayer(driver, "Części może montować tylko właściciel pojazdu!");
+                                        PlayerDataManager.NotifyPlayer(player, "Części może montować tylko właściciel pojazdu!");
+                                        PlayerDataManager.NotifyPlayer(driver, "Części może montować tylko właściciel pojazdu!");
                                     }
                                 }
                                 else
                                 {
                                     player.TriggerEvent("closeMechTuneBrowser");
-                                    playerDataManager.NotifyPlayer(player, "Nie ma pasażerów!");
+                                    PlayerDataManager.NotifyPlayer(player, "Nie ma pasażerów!");
                                 }
                             }
                             else
                             {
                                 player.TriggerEvent("closeMechTuneBrowser");
-                                playerDataManager.NotifyPlayer(player, "Pojazd nie jest w colshape");
+                                PlayerDataManager.NotifyPlayer(player, "Pojazd nie jest w colshape");
                             }
                         }
                         else
                         {
                             player.TriggerEvent("closeMechTuneBrowser");
-                            playerDataManager.NotifyPlayer(player, "Nie znaleziono pojazdu");
+                            PlayerDataManager.NotifyPlayer(player, "Nie znaleziono pojazdu");
                         }
                         break;
                     }
@@ -519,7 +519,7 @@ namespace ServerSide
                         if (tuneBusiness.Owner == owner.SocialClubId)
                         {
                             player.SetSharedData("tuneOffer", false);
-                            playerDataManager.NotifyPlayer(owner, "Gracz odrzucił ofertę montażu tuningu!");
+                            PlayerDataManager.NotifyPlayer(owner, "Gracz odrzucił ofertę montażu tuningu!");
                             owner.TriggerEvent("closeMechTuneBrowser");
                             break;
                         }
@@ -543,35 +543,35 @@ namespace ServerSide
                             {
                                 if (state == "1")
                                 {
-                                    if (playerDataManager.UpdatePlayersMoney(player, -1 * price))
+                                    if (PlayerDataManager.UpdatePlayersMoney(player, -1 * price))
                                     {
-                                        playerDataManager.UpdatePlayersMoney(owner, offer);
+                                        PlayerDataManager.UpdatePlayersMoney(owner, offer);
                                         List<int> tuneList = JsonConvert.DeserializeObject<List<int>>(player.Vehicle.GetSharedData<string>("mechtune"));
                                         tuneList[partId] = 1;
-                                        vehicleDataManager.UpdateVehiclesMechTune(player.Vehicle, JsonConvert.SerializeObject(tuneList));
-                                        vehicleDataManager.RefreshVehiclesTune(player.Vehicle);
-                                        playerDataManager.NotifyPlayer(player, $"Pomyślnie zamontowano {name}!");
-                                        playerDataManager.NotifyPlayer(owner, "Gracz zaakcpetował ofertę!");
+                                        VehicleDataManager.UpdateVehiclesMechTune(player.Vehicle, JsonConvert.SerializeObject(tuneList));
+                                        VehicleDataManager.RefreshVehiclesTune(player.Vehicle);
+                                        PlayerDataManager.NotifyPlayer(player, $"Pomyślnie zamontowano {name}!");
+                                        PlayerDataManager.NotifyPlayer(owner, "Gracz zaakcpetował ofertę!");
                                         owner.TriggerEvent("closeMechTuneBrowser");
                                     }
                                     else
                                     {
-                                        playerDataManager.NotifyPlayer(player, "Nie stać cię na to!");
-                                        playerDataManager.NotifyPlayer(owner, "Gracz odrzucił ofertę montażu tuningu!");
+                                        PlayerDataManager.NotifyPlayer(player, "Nie stać cię na to!");
+                                        PlayerDataManager.NotifyPlayer(owner, "Gracz odrzucił ofertę montażu tuningu!");
                                         owner.TriggerEvent("closeMechTuneBrowser");
                                     }
                                 }
                                 else
                                 {
-                                    if (playerDataManager.UpdatePlayersMoney(player, price))
+                                    if (PlayerDataManager.UpdatePlayersMoney(player, price))
                                     {
-                                        playerDataManager.UpdatePlayersMoney(owner, offer);
+                                        PlayerDataManager.UpdatePlayersMoney(owner, offer);
                                         List<int> tuneList = JsonConvert.DeserializeObject<List<int>>(player.Vehicle.GetSharedData<string>("mechtune"));
                                         tuneList[partId] = 0;
-                                        vehicleDataManager.UpdateVehiclesMechTune(player.Vehicle, JsonConvert.SerializeObject(tuneList));
-                                        vehicleDataManager.RefreshVehiclesTune(player.Vehicle);
-                                        playerDataManager.NotifyPlayer(player, $"Pomyślnie zdemontowano {name}!");
-                                        playerDataManager.NotifyPlayer(owner, "Gracz zaakcpetował ofertę!");
+                                        VehicleDataManager.UpdateVehiclesMechTune(player.Vehicle, JsonConvert.SerializeObject(tuneList));
+                                        VehicleDataManager.RefreshVehiclesTune(player.Vehicle);
+                                        PlayerDataManager.NotifyPlayer(player, $"Pomyślnie zdemontowano {name}!");
+                                        PlayerDataManager.NotifyPlayer(owner, "Gracz zaakcpetował ofertę!");
                                         owner.TriggerEvent("closeMechTuneBrowser");
                                     }
                                     else
@@ -583,7 +583,7 @@ namespace ServerSide
                             }
                             else
                             {
-                                playerDataManager.NotifyPlayer(owner, "Nie odnaleziono pojazdu!");
+                                PlayerDataManager.NotifyPlayer(owner, "Nie odnaleziono pojazdu!");
                             }
                             break;
                         }
@@ -600,12 +600,12 @@ namespace ServerSide
         {
             if (player.Vehicle != null && player.Vehicle.Exists && player.Vehicle.HasSharedData("owner") && player.Vehicle.GetSharedData<Int64>("owner").ToString() == player.GetSharedData<string>("socialclub"))
             {
-                player.TriggerEvent("openWheelsTuneBrowser", vehicleDataManager.GetAvailableWheelsForVehicle(player.Vehicle), vehicleDataManager.GetVehiclesWheels(player.Vehicle), player.Vehicle);
+                player.TriggerEvent("openWheelsTuneBrowser", VehicleDataManager.GetAvailableWheelsForVehicle(player.Vehicle), VehicleDataManager.GetVehiclesWheels(player.Vehicle), player.Vehicle);
 
             }
             else
             {
-                playerDataManager.NotifyPlayer(player, "Nie jesteś właścicielem pojazdu!");
+                PlayerDataManager.NotifyPlayer(player, "Nie jesteś właścicielem pojazdu!");
             }
         }
 
@@ -614,17 +614,17 @@ namespace ServerSide
         {
             if (vehicle != null && vehicle.Exists)
             {
-                if (playerDataManager.UpdatePlayersMoney(player, price))
+                if (PlayerDataManager.UpdatePlayersMoney(player, price))
                 {
-                    vehicleDataManager.UpdateVehiclesWheels(vehicle, "[0, -1, 0]");
-                    vehicleDataManager.SetVehiclesWheels(vehicle);
+                    VehicleDataManager.UpdateVehiclesWheels(vehicle, "[0, -1, 0]");
+                    VehicleDataManager.SetVehiclesWheels(vehicle);
 
-                    player.TriggerEvent("refreshWheelsTuneBrowser", vehicleDataManager.GetAvailableWheelsForVehicle(player.Vehicle), vehicleDataManager.GetVehiclesWheels(player.Vehicle), player.Vehicle);
-                    playerDataManager.NotifyPlayer(player, "Pomyślnie zdemontowano felgi!");
+                    player.TriggerEvent("refreshWheelsTuneBrowser", VehicleDataManager.GetAvailableWheelsForVehicle(player.Vehicle), VehicleDataManager.GetVehiclesWheels(player.Vehicle), player.Vehicle);
+                    PlayerDataManager.NotifyPlayer(player, "Pomyślnie zdemontowano felgi!");
                 }
                 else
                 {
-                    playerDataManager.NotifyPlayer(player, "Transakcja nie powiodła się!");
+                    PlayerDataManager.NotifyPlayer(player, "Transakcja nie powiodła się!");
                 }
             }
         }
@@ -636,20 +636,20 @@ namespace ServerSide
         {
             if (vehicle != null && vehicle.Exists)
             {
-                if (playerDataManager.UpdatePlayersMoney(player, -price))
+                if (PlayerDataManager.UpdatePlayersMoney(player, -price))
                 {
                     int[] wheels = new int[]
                     {
                         type, id, sport
                     };
-                    vehicleDataManager.UpdateVehiclesWheels(vehicle, JsonConvert.SerializeObject(wheels));
-                    vehicleDataManager.SetVehiclesWheels(vehicle);
+                    VehicleDataManager.UpdateVehiclesWheels(vehicle, JsonConvert.SerializeObject(wheels));
+                    VehicleDataManager.SetVehiclesWheels(vehicle);
                     player.TriggerEvent("closeWheelsTuneBrowser");
-                    playerDataManager.NotifyPlayer(player, "Pomyślnie zamontowano część!");
+                    PlayerDataManager.NotifyPlayer(player, "Pomyślnie zamontowano część!");
                 }
                 else
                 {
-                    playerDataManager.NotifyPlayer(player, "Nie stać Cię na to!");
+                    PlayerDataManager.NotifyPlayer(player, "Nie stać Cię na to!");
                 }
             }
         }
@@ -662,7 +662,7 @@ namespace ServerSide
                 if (tuneBusiness.Owner == player.SocialClubId && tuneBusiness.Id == businessId)
                 {
                     tuneBusiness.ResetOwner();
-                    playerDataManager.NotifyPlayer(player, "Pomyślnie zrezygnowano z biznesu!");
+                    PlayerDataManager.NotifyPlayer(player, "Pomyślnie zrezygnowano z biznesu!");
                 }
             }
         }
@@ -677,19 +677,19 @@ namespace ServerSide
         {
             if (player.Vehicle != null && player.Vehicle.Exists && player.Vehicle.HasSharedData("owner") && player.Vehicle.GetSharedData<Int64>("owner").ToString() == player.GetSharedData<string>("socialclub"))
             {
-                if (!vehicleDataManager.IsVehicleDamaged(player.Vehicle))
+                if (!VehicleDataManager.IsVehicleDamaged(player.Vehicle))
                 {
-                    player.TriggerEvent("openVisuTuneBrowser", vehicleDataManager.GetVehicleAvailableTune(player.Vehicle), vehicleDataManager.GetVehiclesCurrentTune(player.Vehicle), player.Vehicle);
+                    player.TriggerEvent("openVisuTuneBrowser", VehicleDataManager.GetVehicleAvailableTune(player.Vehicle), VehicleDataManager.GetVehiclesCurrentTune(player.Vehicle), player.Vehicle);
                 }
                 else
                 {
-                    playerDataManager.NotifyPlayer(player, "Pojazd jest uszkodzony!");
+                    PlayerDataManager.NotifyPlayer(player, "Pojazd jest uszkodzony!");
                 }
 
             }
             else
             {
-                playerDataManager.NotifyPlayer(player, "Nie jesteś właścicielem pojazdu!");
+                PlayerDataManager.NotifyPlayer(player, "Nie jesteś właścicielem pojazdu!");
             }
         }
         [RemoteEvent("previewVisuTune")]
@@ -706,17 +706,17 @@ namespace ServerSide
         {
             if (vehicle != null && vehicle.Exists)
             {
-                if (playerDataManager.UpdatePlayersMoney(player, -price))
+                if (PlayerDataManager.UpdatePlayersMoney(player, -price))
                 {
                     Dictionary<int, int> tune = JsonConvert.DeserializeObject<Dictionary<int, int>>(vehicle.GetSharedData<string>("tune"));
                     tune.Add(modtype, mod);
-                    vehicleDataManager.UpdateVehiclesTune(vehicle, JsonConvert.SerializeObject(tune));
+                    VehicleDataManager.UpdateVehiclesTune(vehicle, JsonConvert.SerializeObject(tune));
                     player.TriggerEvent("removeVisuType", modtype);
-                    playerDataManager.NotifyPlayer(player, "Pomyślnie zamontowano część!");
+                    PlayerDataManager.NotifyPlayer(player, "Pomyślnie zamontowano część!");
                 }
                 else
                 {
-                    playerDataManager.NotifyPlayer(player, "Nie stać Cię na to!");
+                    PlayerDataManager.NotifyPlayer(player, "Nie stać Cię na to!");
                 }
                 vehicle.SetMod(modtype, mod);
             }
@@ -727,21 +727,21 @@ namespace ServerSide
         {
             if (vehicle != null && vehicle.Exists)
             {
-                if (playerDataManager.UpdatePlayersMoney(player, price))
+                if (PlayerDataManager.UpdatePlayersMoney(player, price))
                 {
                     Dictionary<int, int> tune = JsonConvert.DeserializeObject<Dictionary<int, int>>(vehicle.GetSharedData<string>("tune"));
                     tune.Remove(modtype);
-                    playerDataManager.NotifyPlayer(player, "Pomyślnie zdemontowano część!");
-                    vehicleDataManager.UpdateVehiclesTune(vehicle, JsonConvert.SerializeObject(tune));
+                    PlayerDataManager.NotifyPlayer(player, "Pomyślnie zdemontowano część!");
+                    VehicleDataManager.UpdateVehiclesTune(vehicle, JsonConvert.SerializeObject(tune));
                     NAPI.Task.Run(() =>
                     {
-                        vehicleDataManager.RefreshVehiclesTune(vehicle);
+                        VehicleDataManager.RefreshVehiclesTune(vehicle);
                     }, delayTime: 2000);
-                    player.TriggerEvent("refreshVisuTuneBrowser", vehicleDataManager.GetVehicleAvailableTune(player.Vehicle), vehicleDataManager.GetVehiclesCurrentTune(player.Vehicle), player.Vehicle);
+                    player.TriggerEvent("refreshVisuTuneBrowser", VehicleDataManager.GetVehicleAvailableTune(player.Vehicle), VehicleDataManager.GetVehiclesCurrentTune(player.Vehicle), player.Vehicle);
                 }
                 else
                 {
-                    playerDataManager.NotifyPlayer(player, "Transakcja nie powiodła się!");
+                    PlayerDataManager.NotifyPlayer(player, "Transakcja nie powiodła się!");
                 }
                 vehicle.SetMod(modtype, mod);
             }

@@ -6,12 +6,9 @@ using Newtonsoft.Json;
 
 namespace ServerSide
 {
-    public class HandlingManager
+    public static class HandlingManager
     {
-        public HandlingManager() { }
-
-
-        public bool IsCarOffroadType(Vehicle vehicle)
+        public static bool IsCarOffroadType(Vehicle vehicle)
         {
             if (vehicle.HasSharedData("wheels"))
             {
@@ -35,7 +32,7 @@ namespace ServerSide
 
 
 
-        readonly List<ulong> StockOffroadVehicles = new List<ulong>()
+        readonly static List<ulong> StockOffroadVehicles = new List<ulong>()
         {
             2166734073,
             3025077634,
@@ -65,7 +62,7 @@ namespace ServerSide
             2166734073,
             3624880708
         };
-        readonly List<ulong> OffroadMotorcycles = new List<ulong>()
+        readonly static List<ulong> OffroadMotorcycles = new List<ulong>()
         {
             86520421,
             1753414259,

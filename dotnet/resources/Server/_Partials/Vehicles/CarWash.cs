@@ -18,14 +18,14 @@ namespace ServerSide
                 {
                     if (carWash.shape == colshape)
                     {
-                        if (playerDataManager.UpdatePlayersMoney(player, -100))
+                        if (PlayerDataManager.UpdatePlayersMoney(player, -100))
                         {
                             carWash.WashCar(player, vehicle);
                             break;
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Nie stać cię na to!");
+                            PlayerDataManager.NotifyPlayer(player, "Nie stać cię na to!");
                             break;
                         }
 
@@ -34,7 +34,7 @@ namespace ServerSide
             }
             else
             {
-                playerDataManager.NotifyPlayer(player, "Pojazd nie należy do Ciebie!");
+                PlayerDataManager.NotifyPlayer(player, "Pojazd nie należy do Ciebie!");
             }
         }
 

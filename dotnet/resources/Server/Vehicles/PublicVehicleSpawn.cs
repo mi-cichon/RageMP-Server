@@ -13,8 +13,6 @@ namespace ServerSide
         private float rotation;
         public Vehicle veh;
         MainClass mc;
-        PlayerDataManager playerDataManager = new PlayerDataManager();
-        VehicleDataManager vehicleDataManager = new VehicleDataManager();
         public DateTime leaveTime;
 
         public PublicVehicleSpawn(Vector3 position, float rotation, MainClass mc)

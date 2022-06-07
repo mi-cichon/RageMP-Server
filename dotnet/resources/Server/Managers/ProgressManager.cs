@@ -6,10 +6,10 @@ using Newtonsoft.Json;
 
 namespace ServerSide
 {
-    public class ProgressManager
+    public static class ProgressManager
     {
 
-        List<int> expList = new List<int>()
+        static List<int> expList = new List<int>()
         {
             0,  //1 lvl
             150,
@@ -33,7 +33,7 @@ namespace ServerSide
             50000 //20 lvl
         };
 
-        List<string[]> jobs = new List<string[]>()
+        static List<string[]> jobs = new List<string[]>()
         {
             new string[]{ "warehouse", "Magazynier" },
             new string[]{ "lawnmowing", "Koszenie trawników" },
@@ -47,12 +47,7 @@ namespace ServerSide
             new string[]{ "towtruck", "Lawety" }
         };
 
-        public ProgressManager()
-        {
-
-        }
-
-        public string[] GetPlayersProgressInfo(Player player)
+        public static string[] GetPlayersProgressInfo(Player player)
         {
             List<string[]> jobLvls = new List<string[]>();
             foreach(string[] job in jobs)
@@ -63,7 +58,7 @@ namespace ServerSide
             return new string[] { JsonConvert.SerializeObject(jobLvls), JsonConvert.SerializeObject(jobBonuses) };
         }
 
-        public string GetPlayersJobInfo(Player player)
+        public static string GetPlayersJobInfo(Player player)
         {
             List<string[]> jobsInfo = new List<string[]>();
             foreach(string[] job in jobs)
@@ -82,7 +77,7 @@ namespace ServerSide
             return JsonConvert.SerializeObject(jobsInfo);
         }
 
-        public int GetNextJobLvlExperience(int exp)
+        public static int GetNextJobLvlExperience(int exp)
         {
             int lastLevel = 1;
             for (int i = 0; i < expList.Count; i++)
@@ -107,7 +102,7 @@ namespace ServerSide
             }
         }
 
-        public int GetJobLevelByExperience(int exp)
+        public static int GetJobLevelByExperience(int exp)
         {
             int lastLevel = 1;
             for (int i=0; i<expList.Count; i++)
@@ -124,7 +119,7 @@ namespace ServerSide
             return lastLevel;
         }
 
-        public void SetPlayersJobBonuses(Player player)
+        public static void SetPlayersJobBonuses(Player player)
         {
             foreach(JobBonus jobBonus in jobBonuses)
             {
@@ -146,7 +141,7 @@ namespace ServerSide
             }
         }
 
-        List<JobBonus> jobBonuses = new List<JobBonus>()
+        static List<JobBonus> jobBonuses = new List<JobBonus>()
         {
             new JobBonus(0, "main", "Magazynier", -1, new double[] {1.25, 1.25}, null, "Roznoszenie paczek na magazynie w Paleto"),
                 new JobBonus(1, "side", "Bonus 20%", 0, new double[] {0, 1}, new int[][] { new int[]{0, 5}}, "Zwiększenie zarobków o 20%"),

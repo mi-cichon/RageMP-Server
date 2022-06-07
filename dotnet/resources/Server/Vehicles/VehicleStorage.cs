@@ -9,15 +9,12 @@ namespace ServerSide
     {
         private List<Vector3> spawningPoints = new List<Vector3>();
         private List<float> spawningPointsRotation = new List<float>();
-        private VehicleDataManager vehicleDataManager = new VehicleDataManager();
         private Vector3 storagePosition;
         private Vector3 storageTakeout;
         private float storageRadius;
-        private PlayerDataManager playerDataManager = new PlayerDataManager();
         public int storageId;
         public GTANetworkAPI.ColShape takeoutColShape;
         public GTANetworkAPI.ColShape storageColShape;
-        CustomMarkers customMarkers = new CustomMarkers();
         public VehicleStorage(int storageId, Vector3 storagePosition, float storageRadius, Vector3 storageTakeout)
         {
             this.storageId = storageId;
@@ -41,9 +38,8 @@ namespace ServerSide
             takeoutColShape.SetSharedData("storageid", storageId);
             storageColShape = NAPI.ColShape.CreateCylinderColShape(storagePosition, storageRadius, 2.0f);
             storageColShape.SetSharedData("type", "storagein");
-            customMarkers.CreateSimpleMarker(storageTakeout, "Odbierz pojazd");
+            CustomMarkers.CreateSimpleMarker(storageTakeout, "Odbierz pojazd");
             NAPI.Blip.CreateBlip(267, storageTakeout, 0.8f, 30, name: "Przechowalnia pojazdów", drawDistance: 300f, shortRange: true);
-            // NAPI.Marker.CreateMarker(1, new Vector3(storagePosition.X, storagePosition.Y, storagePosition.Z - storageRadius*1.25), new Vector3(), new Vector3(), storageRadius * 1.6f, new Color(255, 255, 255));
         }
 
         public Vehicle SpawnCar(Player player, string vehiclesId)
@@ -52,15 +48,14 @@ namespace ServerSide
             Vector3 position = GetAvailableSpawnPoint();
             if (position != new Vector3())
             {
-                veh = vehicleDataManager.CreatePersonalVehicle(Convert.ToInt32(vehiclesId), position, spawningPointsRotation[spawningPoints.IndexOf(position)], false);
-                vehicleDataManager.UpdateVehicleSpawned(veh, true);
+                veh = VehicleDataManager.CreatePersonalVehicle(Convert.ToInt32(vehiclesId), position, spawningPointsRotation[spawningPoints.IndexOf(position)], false);
+                VehicleDataManager.UpdateVehicleSpawned(veh, true);
                 veh.SetSharedData("storageTime", DateTime.Now.ToLongTimeString());
-                playerDataManager.NotifyPlayer(player, "Pojazd wyciągnięty!");
-                //RemoveSpawned(position, veh, player);
+                PlayerDataManager.NotifyPlayer(player, "Pojazd wyciągnięty!");
             }
             else
             {
-                playerDataManager.NotifyPlayer(player, "Wszystkie miejsca są zajęte! Poczekaj chwilę!");
+                PlayerDataManager.NotifyPlayer(player, "Wszystkie miejsca są zajęte! Poczekaj chwilę!");
             }
             return veh;
         }
@@ -77,23 +72,6 @@ namespace ServerSide
             }
             return v;
         }
-
-        //private void RemoveSpawned(Vector3 position, GTANetworkAPI.Vehicle vehicle, Player player)
-        //{
-        //    NAPI.Task.Run(() =>
-        //    {
-        //        if (vehicle != null && vehicle.Exists)
-        //            if (vehicle.Position.DistanceTo(position) < 3.0f)
-        //            {
-        //                if (player.Exists)
-        //                {
-        //                    playerDataManager.NotifyPlayer(player, "Twój pojazd stał za długo na podjeździe i został przeniesiony do przechowalni!");
-        //                }
-        //                vehicleDataManager.UpdateVehicleSpawned(vehicle, false);
-        //                vehicle.Delete();
-        //            }
-        //    }, delayTime: 30000);
-        //}
 
         private bool isAnyPersonalVehicleNearPoint(Vector3 point)
         {

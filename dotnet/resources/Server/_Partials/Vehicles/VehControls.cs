@@ -13,7 +13,7 @@ namespace ServerSide
         {
             if (vehicle != null && vehicle.Exists)
             {
-                vehicleDataManager.UpdateVehiclesTrip(vehicle, dist);
+                VehicleDataManager.UpdateVehiclesTrip(vehicle, dist);
             }
         }
 
@@ -40,7 +40,7 @@ namespace ServerSide
         {
             if (player.Vehicle != null)
             {
-                vehicleDataManager.UpdateVehiclesBrake(player.Vehicle, state);
+                VehicleDataManager.UpdateVehiclesBrake(player.Vehicle, state);
             }
         }
 
@@ -63,7 +63,7 @@ namespace ServerSide
                     if (passenger != player)
                     {
                         passenger.WarpOutOfVehicle();
-                        playerDataManager.NotifyPlayer(passenger, "Zostałeś wyrzucony z pojazdu!");
+                        PlayerDataManager.NotifyPlayer(passenger, "Zostałeś wyrzucony z pojazdu!");
                     }
                 }
             }
@@ -74,19 +74,19 @@ namespace ServerSide
             if (!vehicle.HasSharedData("veh_lights"))
             {
                 vehicle.SetSharedData("veh_lights", true);
-                playerDataManager.NotifyPlayer(player, "Swiatła będą zawsze włączone!");
+                PlayerDataManager.NotifyPlayer(player, "Swiatła będą zawsze włączone!");
             }
             else
             {
                 if (vehicle.GetSharedData<bool>("veh_lights"))
                 {
                     vehicle.SetSharedData("veh_lights", false);
-                    playerDataManager.NotifyPlayer(player, "Swiatła będą zawsze wyłączone!");
+                    PlayerDataManager.NotifyPlayer(player, "Swiatła będą zawsze wyłączone!");
                 }
                 else
                 {
                     vehicle.SetSharedData("veh_lights", true);
-                    playerDataManager.NotifyPlayer(player, "Swiatła będą zawsze włączone!");
+                    PlayerDataManager.NotifyPlayer(player, "Swiatła będą zawsze włączone!");
                 }
             }
         }

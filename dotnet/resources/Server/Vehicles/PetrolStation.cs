@@ -8,7 +8,6 @@ namespace ServerSide
     {
         public ColShape vehicleColShape;
         public ColShape distributorColShape;
-        CustomMarkers customMarkers = new CustomMarkers();
         public Vector3 vehiclePosition;
         public Vehicle currentVehicle = null;
         public PetrolStation(Vector3 vehiclePosition, Vector3 distributorPosition)
@@ -24,7 +23,7 @@ namespace ServerSide
             distributorColShape = NAPI.ColShape.CreateCylinderColShape(distributorPosition - new Vector3(0,0,0.8), 1.0f, 2.0f);
             distributorColShape.SetSharedData("type", "distributor");
             distributorColShape.SetSharedData("vehpos", vehiclePosition);
-            customMarkers.CreateSimpleMarker(distributorPosition, "Dystrybutor", true);
+            CustomMarkers.CreateSimpleMarker(distributorPosition, "Dystrybutor", true);
         }
     }
 }

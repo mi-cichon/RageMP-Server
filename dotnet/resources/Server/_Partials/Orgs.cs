@@ -14,7 +14,7 @@ namespace ServerSide
             if (!player.HasSharedData("orgId") || (player.HasSharedData("orgId") && player.GetSharedData<Int32>("orgId") == 0))
             {
                 List<string[]> orgs = new List<string[]>();
-                foreach (Organization org in orgManager.orgs)
+                foreach (Organization org in OrgManager.orgs)
                 {
                     orgs.Add(new string[]
                     {
@@ -29,7 +29,7 @@ namespace ServerSide
             }
             else if (player.HasSharedData("orgOwner") && player.GetSharedData<bool>("orgOwner"))
             {
-                foreach (Organization org in orgManager.orgs)
+                foreach (Organization org in OrgManager.orgs)
                 {
                     if (org.owner == player.SocialClubId)
                     {
@@ -42,7 +42,7 @@ namespace ServerSide
             }
             else if (player.HasSharedData("orgId") && player.GetSharedData<Int32>("orgId") != 0 && (!player.HasSharedData("orgOwner") || (player.HasSharedData("orgOwner") && !player.GetSharedData<bool>("orgOwner"))))
             {
-                foreach (Organization org in orgManager.orgs)
+                foreach (Organization org in OrgManager.orgs)
                 {
                     if (org.id == player.GetSharedData<int>("orgId"))
                     {
@@ -62,24 +62,24 @@ namespace ServerSide
             {
                 if (player.GetSharedData<Int32>("money") >= 500)
                 {
-                    if (orgManager.AddRequestToOrg(player.SocialClubId, orgId))
+                    if (OrgManager.AddRequestToOrg(player.SocialClubId, orgId))
                     {
-                        playerDataManager.NotifyPlayer(player, "Pomyślnie złożono podanie do organizacji!");
-                        playerDataManager.UpdatePlayersMoney(player, -500);
+                        PlayerDataManager.NotifyPlayer(player, "Pomyślnie złożono podanie do organizacji!");
+                        PlayerDataManager.UpdatePlayersMoney(player, -500);
                     }
                     else
                     {
-                        playerDataManager.NotifyPlayer(player, "Złożyłeś już podanie do tej organizacji!");
+                        PlayerDataManager.NotifyPlayer(player, "Złożyłeś już podanie do tej organizacji!");
                     }
                 }
                 else
                 {
-                    playerDataManager.NotifyPlayer(player, "Aby złożyć podanie do organizacji potrzebujesz $500!");
+                    PlayerDataManager.NotifyPlayer(player, "Aby złożyć podanie do organizacji potrzebujesz $500!");
                 }
             }
             else
             {
-                playerDataManager.NotifyPlayer(player, "Należysz już do organizacji!");
+                PlayerDataManager.NotifyPlayer(player, "Należysz już do organizacji!");
             }
 
         }
@@ -88,12 +88,12 @@ namespace ServerSide
         {
             if (player.GetSharedData<Int32>("money") >= 35000)
             {
-                int org = orgManager.CreateOrg(player, name, tag);
+                int org = OrgManager.CreateOrg(player, name, tag);
                 if (org == 0)
                 {
                     player.TriggerEvent("closeOrgBrowser");
-                    playerDataManager.NotifyPlayer(player, "Organizacja została pomyślnie utworzona!");
-                    playerDataManager.UpdatePlayersMoney(player, -35000);
+                    PlayerDataManager.NotifyPlayer(player, "Organizacja została pomyślnie utworzona!");
+                    PlayerDataManager.UpdatePlayersMoney(player, -35000);
                 }
                 else if (org == 1)
                 {
@@ -116,30 +116,30 @@ namespace ServerSide
             ulong ID;
             if (ulong.TryParse(id, out ID))
             {
-                foreach (Organization org in orgManager.orgs)
+                foreach (Organization org in OrgManager.orgs)
                 {
                     if (org.owner == player.SocialClubId)
                     {
                         if (state)
                         {
-                            if (orgManager.AcceptRequest(ID, org.id))
+                            if (OrgManager.AcceptRequest(ID, org.id))
                             {
-                                playerDataManager.NotifyPlayer(player, "Pomyślnie dodano członka do organizacji!");
+                                PlayerDataManager.NotifyPlayer(player, "Pomyślnie dodano członka do organizacji!");
                             }
                             else
                             {
-                                playerDataManager.NotifyPlayer(player, "Ten członek dołączył już do innej organizacji!");
+                                PlayerDataManager.NotifyPlayer(player, "Ten członek dołączył już do innej organizacji!");
                             }
                         }
                         else
                         {
-                            if (orgManager.RemoveRequestFromOrg(ID, org.id))
+                            if (OrgManager.RemoveRequestFromOrg(ID, org.id))
                             {
-                                playerDataManager.NotifyPlayer(player, "Pomyślnie odrzucono podanie!");
+                                PlayerDataManager.NotifyPlayer(player, "Pomyślnie odrzucono podanie!");
                             }
                             else
                             {
-                                playerDataManager.NotifyPlayer(player, "Nie odnaleziono podania!");
+                                PlayerDataManager.NotifyPlayer(player, "Nie odnaleziono podania!");
                             }
                         }
                         List<List<string[]>> data = org.GetOrgData(player.SocialClubId);
@@ -156,30 +156,30 @@ namespace ServerSide
             int ID;
             if (int.TryParse(id, out ID))
             {
-                foreach (Organization org in orgManager.orgs)
+                foreach (Organization org in OrgManager.orgs)
                 {
                     if (org.owner == player.SocialClubId)
                     {
                         if (state)
                         {
-                            if (orgManager.AcceptVehicleRequest(ID, org.id))
+                            if (OrgManager.AcceptVehicleRequest(ID, org.id))
                             {
-                                playerDataManager.NotifyPlayer(player, "Pomyślnie dodano pojazd do organizacji!");
+                                PlayerDataManager.NotifyPlayer(player, "Pomyślnie dodano pojazd do organizacji!");
                             }
                             else
                             {
-                                playerDataManager.NotifyPlayer(player, "Nie odnaleziono pojazdu!");
+                                PlayerDataManager.NotifyPlayer(player, "Nie odnaleziono pojazdu!");
                             }
                         }
                         else
                         {
-                            if (orgManager.RemoveVehicleRequest(ID, org.id))
+                            if (OrgManager.RemoveVehicleRequest(ID, org.id))
                             {
-                                playerDataManager.NotifyPlayer(player, "Pomyślnie odrzucono pojazd!");
+                                PlayerDataManager.NotifyPlayer(player, "Pomyślnie odrzucono pojazd!");
                             }
                             else
                             {
-                                playerDataManager.NotifyPlayer(player, "Nie odnaleziono pojazdu!");
+                                PlayerDataManager.NotifyPlayer(player, "Nie odnaleziono pojazdu!");
                             }
                         }
                         List<List<string[]>> data = org.GetOrgData(player.SocialClubId);
@@ -193,11 +193,11 @@ namespace ServerSide
         [RemoteEvent("removeOrg")]
         public void RemoveOrg(Player player)
         {
-            foreach (Organization org in orgManager.orgs)
+            foreach (Organization org in OrgManager.orgs)
             {
                 if (org.owner == player.SocialClubId)
                 {
-                    orgManager.DeleteOrg(player.SocialClubId, org.id);
+                    OrgManager.DeleteOrg(player.SocialClubId, org.id);
                     player.TriggerEvent("closeManageOrgBrowser");
                     break;
                 }
@@ -210,17 +210,17 @@ namespace ServerSide
             int ID;
             if (int.TryParse(id, out ID))
             {
-                foreach (Organization org in orgManager.orgs)
+                foreach (Organization org in OrgManager.orgs)
                 {
                     if (org.id == player.GetSharedData<int>("orgId"))
                     {
-                        if (orgManager.RemoveVehicleFromOrg(ID, org.id))
+                        if (OrgManager.RemoveVehicleFromOrg(ID, org.id))
                         {
-                            playerDataManager.NotifyPlayer(player, "Pomyślnie usunięto pojazd z organizacji!");
+                            PlayerDataManager.NotifyPlayer(player, "Pomyślnie usunięto pojazd z organizacji!");
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Nie odnaleziono pojazdu!");
+                            PlayerDataManager.NotifyPlayer(player, "Nie odnaleziono pojazdu!");
                         }
                         if (type == "manage")
                         {
@@ -245,17 +245,17 @@ namespace ServerSide
             int ID;
             if (int.TryParse(id, out ID))
             {
-                foreach (Organization org in orgManager.orgs)
+                foreach (Organization org in OrgManager.orgs)
                 {
                     if (org.id == player.GetSharedData<int>("orgId"))
                     {
-                        if (orgManager.SendVehicleRequest(player.SocialClubId, ID, org.id))
+                        if (OrgManager.SendVehicleRequest(player.SocialClubId, ID, org.id))
                         {
-                            playerDataManager.NotifyPlayer(player, "Pomyślnie zaproponowano dodanie pojazdu!");
+                            PlayerDataManager.NotifyPlayer(player, "Pomyślnie zaproponowano dodanie pojazdu!");
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Nie odnaleziono pojazdu!");
+                            PlayerDataManager.NotifyPlayer(player, "Nie odnaleziono pojazdu!");
                         }
                         if (type == "manage")
                         {
@@ -276,13 +276,13 @@ namespace ServerSide
         [RemoteEvent("leaveOrg")]
         public void LeaveOrg(Player player)
         {
-            foreach (Organization org in orgManager.orgs)
+            foreach (Organization org in OrgManager.orgs)
             {
                 if (org.id == player.GetSharedData<int>("orgId"))
                 {
-                    orgManager.RemoveMemberFromOrg(player.SocialClubId, org.id);
+                    OrgManager.RemoveMemberFromOrg(player.SocialClubId, org.id);
                     player.TriggerEvent("closeMemberOrgBrowser");
-                    playerDataManager.NotifyPlayer(player, "Pomyślnie opuszczono organizację!");
+                    PlayerDataManager.NotifyPlayer(player, "Pomyślnie opuszczono organizację!");
                     break;
                 }
             }
@@ -294,13 +294,13 @@ namespace ServerSide
             ulong ID;
             if (ulong.TryParse(playerId, out ID))
             {
-                foreach (Organization org in orgManager.orgs)
+                foreach (Organization org in OrgManager.orgs)
                 {
                     if (org.members.Contains(ID))
                     {
-                        orgManager.RemoveMemberFromOrg(ID, org.id);
+                        OrgManager.RemoveMemberFromOrg(ID, org.id);
                         List<List<string[]>> data = org.GetOrgData(player.SocialClubId);
-                        playerDataManager.NotifyPlayer(player, "Pomyślnie wyrzucono członka!");
+                        PlayerDataManager.NotifyPlayer(player, "Pomyślnie wyrzucono członka!");
                         player.TriggerEvent("refreshManageOrgData", JsonConvert.SerializeObject(data[0]), JsonConvert.SerializeObject(data[1]), JsonConvert.SerializeObject(data[2]), JsonConvert.SerializeObject(data[3]), JsonConvert.SerializeObject(data[4]));
                         break;
                     }

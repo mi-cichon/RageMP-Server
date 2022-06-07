@@ -15,11 +15,11 @@ namespace ServerSide
             charStr = charStr.Remove(0, 1);
             charStr = charStr.Remove(charStr.Length - 1, 1);
             charStr.Replace(@"\", "");
-            playerDataManager.UpdatePlayersCharacter(player, charStr);
+            PlayerDataManager.UpdatePlayersCharacter(player, charStr);
             player.Dimension = 0;
             SpawnSelected(player, "ls");
             player.SetSharedData("gui", false);
-            playerDataManager.SetPlayersClothes(player);
+            PlayerDataManager.SetPlayersClothes(player);
         }
 
     }

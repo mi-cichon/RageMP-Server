@@ -8,19 +8,12 @@ using Newtonsoft.Json;
 namespace ServerSide
 {
 
-    public class OrgManager
+    public static class OrgManager
     {
 
-        public List<Organization> orgs = new List<Organization>();
-        PlayerDataManager playerDataManager = new PlayerDataManager();
-        public OrgManager()
-        {
-            LoadOrgsFromDatabase();
-            ColShape col = NAPI.ColShape.CreateCylinderColShape(new Vector3(-1570.2968f, -551.0935f, 114.57582f), 1.2f, 2.0f);
-            col.SetSharedData("type", "org");
-        }
+        public static List<Organization> orgs = new List<Organization>();
 
-        public void LoadOrgsFromDatabase()
+        public static void InstantiateOrgs()
         {
             DBConnection dataBase = new DBConnection();
             dataBase.command.CommandText = $"SELECT * FROM orgs";
@@ -33,9 +26,12 @@ namespace ServerSide
                 }
             }
             dataBase.connection.Close();
+
+            ColShape col = NAPI.ColShape.CreateCylinderColShape(new Vector3(-1570.2968f, -551.0935f, 114.57582f), 1.2f, 2.0f);
+            col.SetSharedData("type", "org");
         }
 
-        public void SetPlayersOrg(Player player)
+        public static void SetPlayersOrg(Player player)
         {
             foreach (Organization org in orgs)
             {
@@ -58,7 +54,7 @@ namespace ServerSide
             }
         }
 
-        public void SetVehiclesOrg(Vehicle vehicle)
+        public static void SetVehiclesOrg(Vehicle vehicle)
         {
             foreach (Organization org in orgs)
             {
@@ -70,7 +66,7 @@ namespace ServerSide
             }
         }
 
-        public int CreateOrg(Player owner, string name, string tag)
+        public static int CreateOrg(Player owner, string name, string tag)
         {
             DBConnection dataBase = new DBConnection();
             dataBase.command.CommandText = $"SELECT * FROM orgs WHERE LOWER(name) = '{name.ToLower()}'";
@@ -107,7 +103,7 @@ namespace ServerSide
             }
         }
 
-        public bool DeleteOrg(ulong player, int orgId)
+        public static bool DeleteOrg(ulong player, int orgId)
         {
             foreach (Organization org in orgs)
             {
@@ -121,7 +117,7 @@ namespace ServerSide
             return false;
         }
 
-        public bool AddMemberToOrg(ulong playerId, int orgId)
+        public static bool AddMemberToOrg(ulong playerId, int orgId)
         {
             foreach (Organization org in orgs)
             {
@@ -153,7 +149,7 @@ namespace ServerSide
             return false;
         }
 
-        public bool RemoveMemberFromOrg(ulong playerId, int orgId)
+        public static bool RemoveMemberFromOrg(ulong playerId, int orgId)
         {
             foreach (Organization org in orgs)
             {
@@ -186,7 +182,7 @@ namespace ServerSide
                                 break;
                             }
                         }
-                        foreach (int vehId in playerDataManager.GetPlayersVehiclesById(playerId))
+                        foreach (int vehId in PlayerDataManager.GetPlayersVehiclesById(playerId))
                         {
                             if (org.vehicleRequests.Contains(vehId))
                             {
@@ -207,7 +203,7 @@ namespace ServerSide
             return false;
         }
 
-        public bool AddRequestToOrg(ulong playerId, int orgId)
+        public static bool AddRequestToOrg(ulong playerId, int orgId)
         {
             foreach (Organization org in orgs)
             {
@@ -228,7 +224,7 @@ namespace ServerSide
             return false;
         }
 
-        public bool RemoveRequestFromOrg(ulong playerId, int orgId)
+        public static bool RemoveRequestFromOrg(ulong playerId, int orgId)
         {
             foreach (Organization org in orgs)
             {
@@ -249,7 +245,7 @@ namespace ServerSide
             return false;
         }
 
-        public bool AcceptRequest(ulong playerId, int orgId)
+        public static bool AcceptRequest(ulong playerId, int orgId)
         {
             foreach (Organization org in orgs)
             {
@@ -291,7 +287,7 @@ namespace ServerSide
             return false;
         }
 
-        public bool RemoveVehicleFromOrg(int vehId, int orgId)
+        public static bool RemoveVehicleFromOrg(int vehId, int orgId)
         {
             foreach (Organization org in orgs)
             {
@@ -324,7 +320,7 @@ namespace ServerSide
             return false;
         }
 
-        public bool SendVehicleRequest(ulong playerId, int vehId, int orgId)
+        public static bool SendVehicleRequest(ulong playerId, int vehId, int orgId)
         {
             foreach (Organization org in orgs)
             {
@@ -354,7 +350,7 @@ namespace ServerSide
             return false;
         }
 
-        public bool RemoveVehicleRequest(int vehId, int orgId)
+        public static bool RemoveVehicleRequest(int vehId, int orgId)
         {
             foreach (Organization org in orgs)
             {
@@ -375,7 +371,7 @@ namespace ServerSide
             return false;
         }
 
-        public bool AcceptVehicleRequest(int vehId, int orgId)
+        public static bool AcceptVehicleRequest(int vehId, int orgId)
         {
             foreach (Organization org in orgs)
             {

@@ -7,8 +7,6 @@ namespace ServerSide
 {
     public class DrivingLicences
     {
-        CustomMarkers customMarkers = new CustomMarkers();
-        PlayerDataManager playerDataManager = new PlayerDataManager();
         public Vector3 endPosition = new Vector3();
         public Player currentPlayerPassing = null;
         public DrivingLicences()
@@ -21,11 +19,11 @@ namespace ServerSide
             ColShape csT = NAPI.ColShape.CreateCylinderColShape(colshapePosT - new Vector3(0, 0, 1), 0.5f, 2.0f);
             csT.SetSharedData("type", "licenceb");
             NAPI.Blip.CreateBlip(536, colshapePosT, 0.5f, 30, name: "Prawo jazdy - Kat. B", shortRange: true);
-            customMarkers.CreateSimpleMarker(colshapePosT, "Egzamin teoretyczny");
+            CustomMarkers.CreateSimpleMarker(colshapePosT, "Egzamin teoretyczny");
 
             ColShape csP = NAPI.ColShape.CreateCylinderColShape(colshapePosP - new Vector3(0, 0, 1), 0.5f, 2.0f);
             csP.SetSharedData("type", "licencebp");
-            customMarkers.CreateSimpleMarker(colshapePosP, "Egzamin praktyczny");
+            CustomMarkers.CreateSimpleMarker(colshapePosP, "Egzamin praktyczny");
 
             endPosition = endpos;
         }
@@ -37,11 +35,11 @@ namespace ServerSide
                 if (player.GetSharedData<bool>("licenceBt") && !player.GetSharedData<bool>("nodriving"))
                 {
                     if(currentPlayerPassing != null && currentPlayerPassing.Exists){
-                        playerDataManager.NotifyPlayer(player, "Plac jest w tej chwili zajęty. Wróć za chwilę!");
+                        PlayerDataManager.NotifyPlayer(player, "Plac jest w tej chwili zajęty. Wróć za chwilę!");
                     }
                     else
                     {
-                        if(playerDataManager.UpdatePlayersMoney(player, -140))
+                        if(PlayerDataManager.UpdatePlayersMoney(player, -140))
                         {
                             currentPlayerPassing = player;
                             Vehicle lVeh = NAPI.Vehicle.CreateVehicle(VehicleHash.Blista, new Vector3(1014.363, -2324.1343, 30.00485), -95f, 44, 44, " KAT. B");
@@ -61,7 +59,7 @@ namespace ServerSide
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Nie posiadasz wystarczająco gotówki ($140)");
+                            PlayerDataManager.NotifyPlayer(player, "Nie posiadasz wystarczająco gotówki ($140)");
                         }
                     }
                     
@@ -69,15 +67,15 @@ namespace ServerSide
                 else
                 {
                     if(!player.GetSharedData<bool>("licenceBt"))
-                        playerDataManager.NotifyPlayer(player, "Nie zdałeś egzaminu teoretycznego!");
+                        PlayerDataManager.NotifyPlayer(player, "Nie zdałeś egzaminu teoretycznego!");
                     if(player.GetSharedData<bool>("nodriving")){
-                        playerDataManager.NotifyPlayer(player, "Nie możesz prowadzić pojazdów!");
+                        PlayerDataManager.NotifyPlayer(player, "Nie możesz prowadzić pojazdów!");
                     }
                 }
             }
             else
             {
-                playerDataManager.NotifyPlayer(player, "Najpierw zakończ pracę!");
+                PlayerDataManager.NotifyPlayer(player, "Najpierw zakończ pracę!");
             }
             
         }

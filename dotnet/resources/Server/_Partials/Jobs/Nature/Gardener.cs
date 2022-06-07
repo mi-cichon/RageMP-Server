@@ -12,7 +12,7 @@ namespace ServerSide
         [RemoteEvent("gardener_pickupPlant")]
         public void Gardener_PickupPlant(Player player, int plant_id, int groundId)
         {
-            foreach (Ground ground in gardener.Grounds)
+            foreach (Ground ground in Gardener.Grounds)
             {
                 if (ground.GroundId == groundId)
                 {
@@ -32,30 +32,30 @@ namespace ServerSide
         [RemoteEvent("gardener_startJob")]
         public void Gardener_StartJob(Player player)
         {
-            gardener.StartJob(player);
+            Gardener.StartJob(player);
         }
 
         [RemoteEvent("gardener_selectOrder")]
         public void Gardener_SelectOrder(Player player, int orderId)
         {
-            foreach (GardenerOrder order in gardener.Orders)
+            foreach (GardenerOrder order in Gardener.Orders)
             {
                 if (order.Id == orderId)
                 {
                     player.TriggerEvent("closeGardenerOrdersBrowser");
                     string o = JsonConvert.SerializeObject(order.Plants);
                     player.TriggerEvent("gardener_setNewOrder", o);
-                    gardener.NewOrder(gardener.Orders.IndexOf(order));
+                    Gardener.NewOrder(Gardener.Orders.IndexOf(order));
                     return;
                 }
             }
-            playerDataManager.NotifyPlayer(player, "To zlecenie jest już nieaktualne!");
+            PlayerDataManager.NotifyPlayer(player, "To zlecenie jest już nieaktualne!");
         }
 
         [RemoteEvent("gardener_refreshOrders")]
         public void Gardener_RefreshOrders(Player player)
         {
-            player.TriggerEvent("gardener_insertData", gardener.GetOrders());
+            player.TriggerEvent("gardener_insertData", Gardener.GetOrders());
         }
 
         [RemoteEvent("gardener_cancelOrder")]
@@ -124,8 +124,8 @@ namespace ServerSide
                 {
                     player.TriggerEvent("removeEqItem", item);
                 });
-                payoutManager.GardenerPlantsSold(player, exp);
-                playerDataManager.NotifyPlayer(player, "Pomyślnie oddano rośliny!");
+                PayoutManager.GardenerPlantsSold(player, exp);
+                PlayerDataManager.NotifyPlayer(player, "Pomyślnie oddano rośliny!");
                 player.TriggerEvent("gardener_updateOrder", JsonConvert.SerializeObject(order));
                 NAPI.Task.Run(() =>
                 {
@@ -136,15 +136,15 @@ namespace ServerSide
 
                 if (order.All(o => o == 0))
                 {
-                    playerDataManager.NotifyPlayer(player, "Pomyślnie skompletowano zamówienie!");
-                    payoutManager.GardenerOrderCompleted(player, baseOrder);
+                    PlayerDataManager.NotifyPlayer(player, "Pomyślnie skompletowano zamówienie!");
+                    PayoutManager.GardenerOrderCompleted(player, baseOrder);
                     player.TriggerEvent("closeGardenerHUDBrowser");
-                    player.TriggerEvent("openGardenerOrdersBrowser", gardener.GetOrders());
+                    player.TriggerEvent("openGardenerOrdersBrowser", Gardener.GetOrders());
                 }
             }
             else
             {
-                playerDataManager.NotifyPlayer(player, "Nie posiadasz żadnych roślin do oddania!");
+                PlayerDataManager.NotifyPlayer(player, "Nie posiadasz żadnych roślin do oddania!");
             }
 
 

@@ -7,12 +7,12 @@ using Newtonsoft.Json;
 namespace ServerSide
 {
     
-    public class CollectibleManager
+    public static class CollectibleManager
     {
-        public int collectibleCount = 100;
-        List<int> currentCollectibles = new List<int>() { 0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210, 220, 230, 240, 250, 260, 270, 280, 290, 300, 310, 320, 330, 340, 350, 360, 370, 380, 390, 400, 410, 420, 430, 440, 450, 460, 470, 480, 490, 500, 510, 520, 530, 540, 550, 560, 570, 580, 590, 600, 610, 620, 630, 640, 650, 660, 670, 680, 690, 700, 710, 720, 730, 740, 750, 760, 770, 780, 790, 800, 810, 820, 830, 840, 850, 860, 870, 880, 890, 900, 910, 920, 930, 940, 950, 960, 970, 980, 990 };
+        public static int collectibleCount = 100;
+        static List<int> currentCollectibles = new List<int>() { 0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210, 220, 230, 240, 250, 260, 270, 280, 290, 300, 310, 320, 330, 340, 350, 360, 370, 380, 390, 400, 410, 420, 430, 440, 450, 460, 470, 480, 490, 500, 510, 520, 530, 540, 550, 560, 570, 580, 590, 600, 610, 620, 630, 640, 650, 660, 670, 680, 690, 700, 710, 720, 730, 740, 750, 760, 770, 780, 790, 800, 810, 820, 830, 840, 850, 860, 870, 880, 890, 900, 910, 920, 930, 940, 950, 960, 970, 980, 990 };
 
-        public List<Vector3> collectibles = new List<Vector3>()
+        public static List<Vector3> collectibles = new List<Vector3>()
         {
             //miasto
             new Vector3(-1272.5654f, -1917.827f, 2.505584f),
@@ -1329,13 +1329,7 @@ namespace ServerSide
             new Vector3(-736.9338f, 5602.0615f, 41.65458f)
     };
 
-
-        public CollectibleManager()
-        {
-
-        }
-
-        public string GetRandomCollectibles()
+        public static string GetRandomCollectibles()
         {
             Dictionary<int, bool> collectible = new Dictionary<int, bool>();
             Random rnd = new Random();
@@ -1351,7 +1345,7 @@ namespace ServerSide
             return JsonConvert.SerializeObject(collectible);
         }
 
-        public string GetStableCollectibles()
+        public static string GetStableCollectibles()
         {
             Dictionary<int, bool> collectible = new Dictionary<int, bool>();
             for(int i = 0; i < 100; i++)
@@ -1361,7 +1355,7 @@ namespace ServerSide
             return JsonConvert.SerializeObject(collectible);
         }
 
-        public System.Object[] RemovePlayersCollectible(Player player, int id)
+        public static object[] RemovePlayersCollectible(Player player, int id)
         {
             Dictionary<int, bool> collectible = JsonConvert.DeserializeObject<Dictionary<int, bool>>(player.GetSharedData<string>("collectibles"));
             int found = 0;
@@ -1384,7 +1378,7 @@ namespace ServerSide
             return new System.Object[] {collectible, found};
         }
 
-        public bool IsCollectiblePickedUp(Player player, int id)
+        public static bool IsCollectiblePickedUp(Player player, int id)
         {
             Dictionary<int, bool> collectible = JsonConvert.DeserializeObject<Dictionary<int, bool>>(player.GetSharedData<string>("collectibles"));
             foreach(KeyValuePair<int,bool> col in collectible)

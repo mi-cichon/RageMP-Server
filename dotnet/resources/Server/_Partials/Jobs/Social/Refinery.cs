@@ -11,7 +11,7 @@ namespace ServerSide
         [RemoteEvent("refinery_startJob")]
         public void Refinery_StartJob(Player player)
         {
-            refinery.StartJob(player);
+            Refinery.StartJob(player);
         }
 
         [RemoteEvent("refinery_selectJobType")]
@@ -48,31 +48,31 @@ namespace ServerSide
             {
                 if (vehicle.GetSharedData<float>("oiltank") < 5000)
                 {
-                    foreach (OilPump oilPump in refinery.oilPumps)
+                    foreach (OilPump oilPump in Refinery.oilPumps)
                     {
                         if (oilPump.Colshape.IsPointWithin(player.Position))
                         {
                             if (oilPump.OilAmount > 0)
                             {
-                                player.TriggerEvent("refinery_openBrowser", vehicle.GetSharedData<float>("oiltank"), vehicle, refinery.oilPumps.IndexOf(oilPump));
+                                player.TriggerEvent("refinery_openBrowser", vehicle.GetSharedData<float>("oiltank"), vehicle, Refinery.oilPumps.IndexOf(oilPump));
                             }
                             else
                             {
-                                playerDataManager.NotifyPlayer(player, "Ten szyb jest pusty!");
+                                PlayerDataManager.NotifyPlayer(player, "Ten szyb jest pusty!");
                             }
                             return;
                         }
                     }
-                    playerDataManager.NotifyPlayer(player, "Nie jesteś w pobliżu żadnego szybu naftowego!");
+                    PlayerDataManager.NotifyPlayer(player, "Nie jesteś w pobliżu żadnego szybu naftowego!");
                 }
                 else
                 {
-                    playerDataManager.NotifyPlayer(player, "Pojazd jest pełny!");
+                    PlayerDataManager.NotifyPlayer(player, "Pojazd jest pełny!");
                 }
             }
             else
             {
-                playerDataManager.NotifyPlayer(player, "Wystąpił błąd z otwarciem panelu pompowania!");
+                PlayerDataManager.NotifyPlayer(player, "Wystąpił błąd z otwarciem panelu pompowania!");
             }
         }
 
@@ -97,7 +97,7 @@ namespace ServerSide
 
                 if (vehicle.GetSharedData<float>("oiltank") < maxFuel)
                 {
-                    var oilPump = refinery.oilPumps[pumpIndex];
+                    var oilPump = Refinery.oilPumps[pumpIndex];
                     if (oilPump.OilAmount > 0)
                     {
                         var oil = vehicle.GetSharedData<float>("oiltank");
@@ -124,19 +124,19 @@ namespace ServerSide
                     }
                     else
                     {
-                        playerDataManager.NotifyPlayer(player, "Ten szyb jest pusty!");
+                        PlayerDataManager.NotifyPlayer(player, "Ten szyb jest pusty!");
                         player.TriggerEvent("refinery_closeBrowser");
                     }
                 }
                 else
                 {
-                    playerDataManager.NotifyPlayer(player, "Pojazd jest pełny!");
+                    PlayerDataManager.NotifyPlayer(player, "Pojazd jest pełny!");
                     player.TriggerEvent("refinery_closeBrowser");
                 }
             }
             else
             {
-                playerDataManager.NotifyPlayer(player, "Wystąpił błąd z zatankowaniem pojazdu!");
+                PlayerDataManager.NotifyPlayer(player, "Wystąpił błąd z zatankowaniem pojazdu!");
                 player.TriggerEvent("refinery_closeBrowser");
             }
         }
@@ -149,7 +149,7 @@ namespace ServerSide
             }
             else
             {
-                playerDataManager.NotifyPlayer(player, "Wystąpił błąd z ustawieniem poziomu zatankowania!");
+                PlayerDataManager.NotifyPlayer(player, "Wystąpił błąd z ustawieniem poziomu zatankowania!");
                 player.TriggerEvent("refinery_closeBrowser");
             }
         }
@@ -157,8 +157,8 @@ namespace ServerSide
         [RemoteEvent("refinery_payment")]
         public void Refinery_Payment(Player player, int liters, int type, string currentOrder)
         {
-            payoutManager.RefineryPayment(player, liters, type);
-            dataManager.UpdatePetrolStationValues(currentOrder);
+            PayoutManager.RefineryPayment(player, liters, type);
+            DataManager.UpdatePetrolStationValues(currentOrder);
         }
     }
 }

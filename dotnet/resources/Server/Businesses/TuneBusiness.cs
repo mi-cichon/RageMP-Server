@@ -13,7 +13,6 @@ namespace ServerSide
     public class TuneBusiness
     {
         public Vector3 StartPos { get; set; }
-        CustomMarkers customMarkers = new CustomMarkers();
         public int Id { get; set; }
         public GTANetworkAPI.Object Gate { get; set; }
         public ColShape StartShape { get; set; }
@@ -42,7 +41,7 @@ namespace ServerSide
             StartShape = NAPI.ColShape.CreateCylinderColShape(startPosition, 1.5f, 2.0f);
             StartShape.SetSharedData("type", "business-tune");
             StartShape.SetSharedData("bus-id", Id);
-            StartMarker = customMarkers.CreateBusinessMarker(startPosition, "Biznes: Tuner", "");
+            StartMarker = CustomMarkers.CreateBusinessMarker(startPosition, "Biznes: Tuner", "");
             StartBlip = NAPI.Blip.CreateBlip(490, startPosition, 0.8f, 22, name: "Biznes: Tuner (wolny)", shortRange: true);
 
 
@@ -110,14 +109,14 @@ namespace ServerSide
                 }
                 dataBase.connection.Close();
                 StartMarker.Delete();
-                StartMarker = customMarkers.CreateBusinessMarker(StartPos, "Biznes: Tuner", OwnerName);
+                StartMarker = CustomMarkers.CreateBusinessMarker(StartPos, "Biznes: Tuner", OwnerName);
                 StartBlip.Color = 6;
                 StartBlip.Name = $"Biznes: Tuner ({OwnerName})";
             }
             else
             {
                 StartMarker.Delete();
-                StartMarker = customMarkers.CreateBusinessMarker(StartPos, "Biznes: Tuner", "");
+                StartMarker = CustomMarkers.CreateBusinessMarker(StartPos, "Biznes: Tuner", "");
                 StartBlip.Color = 22;
                 StartBlip.Name = $"Biznes: Tuner (wolny)";
             }
@@ -136,7 +135,7 @@ namespace ServerSide
             Owner = 0;
             PaidTo = DateTime.Now;
             StartMarker.Delete();
-            StartMarker = customMarkers.CreateBusinessMarker(StartPos, "Biznes: Tuner", "");
+            StartMarker = CustomMarkers.CreateBusinessMarker(StartPos, "Biznes: Tuner", "");
             StartBlip.Color = 22;
             StartBlip.Name = $"Biznes: Tuner (wolny)";
             SaveBusinessToDB();

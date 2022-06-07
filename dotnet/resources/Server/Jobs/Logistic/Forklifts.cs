@@ -6,10 +6,10 @@ using GTANetworkAPI;
 
 namespace ServerSide
 {
-    public class Forklifts
+    public static class Forklifts
     {
 
-        public List<KeyValuePair<Vector3, float>> boxPositions = new List<KeyValuePair<Vector3, float>>()
+        public static List<KeyValuePair<Vector3, float>> boxPositions = new List<KeyValuePair<Vector3, float>>()
         {
             new KeyValuePair<Vector3, float>(new Vector3(-529.8499, -2372.777, 13.1299629), 50f),
             new KeyValuePair<Vector3, float>(new Vector3(-527.1217, -2375.06616, 13.1299629), 50f),
@@ -18,23 +18,21 @@ namespace ServerSide
             new KeyValuePair<Vector3, float>(new Vector3(-612.2968, -2461.13257, 13.1175718), 50f)
         };
 
-        public List<Vector3> dropPositions = new List<Vector3>()
+        public static List<Vector3> dropPositions = new List<Vector3>()
         {
             new Vector3(-556.98444f, -2392.6128f, 13.716819f)
         };
 
-        public List<string> BoxNames = new List<string>()
+        public static List<string> BoxNames = new List<string>()
         {
             "prop_boxpile_06a"
         };
 
-        public List<GTANetworkAPI.Object> Boxes = new List<GTANetworkAPI.Object>();
-        PlayerDataManager playerDataManager = new PlayerDataManager();
-        public Vector3 StartPosition;
-        public ColShape StartColshape;
-        public Blip ForkBlip;
-        CustomMarkers customMarkers = new CustomMarkers();
-        public Forklifts(Vector3 startPosition)
+        public static List<GTANetworkAPI.Object> Boxes = new List<GTANetworkAPI.Object>();
+        public static Vector3 StartPosition;
+        public static ColShape StartColshape;
+        public static Blip ForkBlip;
+        public static void InstantiateForklifts(Vector3 startPosition)
         {
             new InteriorTeleport(new Vector3(-557.37805f, -2349.0842f, 13.944196f), 54.442875f, new Vector3(-554.24475f, -2351.8567f, 13.71682f), -131.29285f, "Magazyn");
             
@@ -42,13 +40,13 @@ namespace ServerSide
             StartColshape = NAPI.ColShape.CreateCylinderColShape(startPosition, 1.0f, 2.0f);
             StartColshape.SetSharedData("type", "forklifts");
             ForkBlip = NAPI.Blip.CreateBlip(569, startPosition, 0.8f, 69, name: "Wózki widłowe", shortRange: true);
-            customMarkers.CreateJobMarker(startPosition, "Praca: Wózki widłowe");
+            CustomMarkers.CreateJobMarker(startPosition, "Praca: Wózki widłowe");
             NAPI.Ped.CreatePed((uint)PedHash.Business02AFM, new Vector3(-551.69934f, -2360.5007f, 13.71682f), 50.8f, frozen: true, invincible: true);
 
             CreateBoxSpawnPoints();
         }
 
-        public void StartJob(Player player)
+        public static void StartJob(Player player)
         {
 
             if (!player.GetSharedData<bool>("nodriving"))
@@ -62,20 +60,20 @@ namespace ServerSide
                     }
                     else
                     {
-                        playerDataManager.NotifyPlayer(player, "Masz inną pracę!");
+                        PlayerDataManager.NotifyPlayer(player, "Masz inną pracę!");
                     }
                 }
                 else
                 {
-                    playerDataManager.NotifyPlayer(player, "Nie odblokowałeś tej pracy!");
+                    PlayerDataManager.NotifyPlayer(player, "Nie odblokowałeś tej pracy!");
                 }
             }
             else
             {
-                playerDataManager.NotifyPlayer(player, "Nie możesz prowadzić pojazdów do " + player.GetSharedData<string>("nodrivingto") + "!");
+                PlayerDataManager.NotifyPlayer(player, "Nie możesz prowadzić pojazdów do " + player.GetSharedData<string>("nodrivingto") + "!");
             }
         }
-        private void CreateBoxSpawnPoints()
+        private static void CreateBoxSpawnPoints()
         {
             foreach(KeyValuePair<Vector3, float> pair in boxPositions)
             {
@@ -88,7 +86,7 @@ namespace ServerSide
             }
         }
 
-        public void CreateNewBox(int id)
+        public static void CreateNewBox(int id)
         {
             NAPI.Task.Run(() =>
             {

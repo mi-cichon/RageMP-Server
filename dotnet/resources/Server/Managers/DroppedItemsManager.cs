@@ -5,20 +5,15 @@ using GTANetworkAPI;
 
 namespace ServerSide
 {
-    public class DroppedItemsManager
+    public static class DroppedItemsManager
     {
-        List<DroppedItem> droppedItems = new List<DroppedItem>();
-        PlayerDataManager playerDataManager = new PlayerDataManager();
-        public DroppedItemsManager()
-        {
-
-        }
-        public void AddItem(Vector3 position, int itemID, string name)
+        static List<DroppedItem> droppedItems = new List<DroppedItem>();
+        public static void AddItem(Vector3 position, int itemID, string name)
         {
             droppedItems.Add(new DroppedItem(position, itemID, name));
         }
 
-        public void PickItemUp(Player player, UInt64 itemId)
+        public static void PickItemUp(Player player, UInt64 itemId)
         {
             foreach(DroppedItem item in droppedItems)
             {
@@ -29,14 +24,14 @@ namespace ServerSide
                 }
             }
         }
-        public void ConfirmPickingUp(Player player, UInt64 itemId)
+        public static void ConfirmPickingUp(Player player, UInt64 itemId)
         {
             foreach (DroppedItem item in droppedItems)
             {
                 if (item.id == itemId)
                 {
                     player.TriggerEvent("addItemToEquipment", item.itemID);
-                    playerDataManager.NotifyPlayer(player, "Podniesiono " + item.name);
+                    PlayerDataManager.NotifyPlayer(player, "Podniesiono " + item.name);
                     item.RemoveItem();
                     droppedItems.Remove(item);
                     break;

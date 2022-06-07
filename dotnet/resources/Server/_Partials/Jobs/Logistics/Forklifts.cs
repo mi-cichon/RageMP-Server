@@ -11,7 +11,7 @@ namespace ServerSide
         [RemoteEvent("startForklifts")]
         public void StartForklifts(Player player)
         {
-            forklifts.StartJob(player);
+            Forklifts.StartJob(player);
         }
 
         [RemoteEvent("forkliftBoxPickedUp")]
@@ -19,7 +19,7 @@ namespace ServerSide
         {
             if (obj.HasSharedData("posID"))
             {
-                forklifts.CreateNewBox(obj.GetSharedData<Int32>("posID"));
+                Forklifts.CreateNewBox(obj.GetSharedData<Int32>("posID"));
             }
             obj.Delete();
         }
@@ -27,7 +27,7 @@ namespace ServerSide
         [RemoteEvent("forkliftsBoxDropped")]
         public void ForkliftsBoxDropped(Player player, bool special)
         {
-            payoutManager.ForkliftsPayment(player, special);
+            PayoutManager.ForkliftsPayment(player, special);
         }
     }
 }

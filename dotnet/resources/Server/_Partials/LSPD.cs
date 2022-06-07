@@ -10,23 +10,23 @@ namespace ServerSide
         [RemoteEvent("lspd_StartDuty")]
         public void LSPDStartDuty(Player player)
         {
-            lspd.SwitchPlayersDuty(player, true);
+            LSPD.SwitchPlayersDuty(player, true);
         }
         [RemoteEvent("lspd_createBarrier")]
         public void LSPDCreateBarrier(Player player, Vector3 position, Vector3 rotation)
         {
-            lspd.CreateBarrier(player.GetSharedData<string>("username"), position, rotation);
+            LSPD.CreateBarrier(player.GetSharedData<string>("username"), position, rotation);
         }
         [RemoteEvent("lspd_removeClosestBarrier")]
         public void LSPDRemoveClosestBarrier(Player player)
         {
             if (player.HasSharedData("lspd_duty") && player.GetSharedData<bool>("lspd_duty") && player.Vehicle == null)
             {
-                if (lspd.Barriers.Count > 0)
+                if (LSPD.Barriers.Count > 0)
                 {
                     KeyValuePair<GTANetworkAPI.Object, string> closestBarrier = new KeyValuePair<GTANetworkAPI.Object, string>();
 
-                    foreach (KeyValuePair<GTANetworkAPI.Object, string> obj in lspd.Barriers)
+                    foreach (KeyValuePair<GTANetworkAPI.Object, string> obj in LSPD.Barriers)
                     {
                         if (closestBarrier.Equals(new KeyValuePair<GTANetworkAPI.Object, string>()) && obj.Key.Exists && obj.Key.Position.DistanceTo(player.Position) < 2)
                         {
@@ -39,24 +39,24 @@ namespace ServerSide
                     }
                     if (!closestBarrier.Equals(new KeyValuePair<GTANetworkAPI.Object, string>()))
                     {
-                        string name = lspd.RemoveBarrier(closestBarrier);
-                        playerDataManager.SendInfoToPlayer(player, "Usunięto barierkę stworzoną przez: " + name);
+                        string name = LSPD.RemoveBarrier(closestBarrier);
+                        PlayerDataManager.SendInfoToPlayer(player, "Usunięto barierkę stworzoną przez: " + name);
                     }
                     else
                     {
-                        playerDataManager.NotifyPlayer(player, "W pobliżu nie ma żadnej barierki!");
+                        PlayerDataManager.NotifyPlayer(player, "W pobliżu nie ma żadnej barierki!");
                     }
                 }
                 else
                 {
-                    playerDataManager.NotifyPlayer(player, "W pobliżu nie ma żadnej barierki!");
+                    PlayerDataManager.NotifyPlayer(player, "W pobliżu nie ma żadnej barierki!");
                 }
             }
         }
         [RemoteEvent("lspd_cuffClosestPlayer")]
         public void LSPDCuffClosestPlayer(Player player)
         {
-            Player p = playerDataManager.GetClosestCivilianToCuff(player.Position, 1);
+            Player p = PlayerDataManager.GetClosestCivilianToCuff(player.Position, 1);
             if (p != null)
             {
                 if (p.HasSharedData("handCuffed") && p.GetSharedData<bool>("handCuffed") && p.GetSharedData<Player>("cuffedBy") == player)
@@ -64,29 +64,29 @@ namespace ServerSide
                     p.TriggerEvent("handCuff", player, false);
                     p.SetSharedData("handCuffed", false);
                     player.SetSharedData("cuffedPlayer", 0);
-                    playerDataManager.NotifyPlayer(player, "Rozkuto  " + p.GetSharedData<string>("username"));
-                    playerDataManager.NotifyPlayer(p, "Zostałeś rozkuty");
+                    PlayerDataManager.NotifyPlayer(player, "Rozkuto  " + p.GetSharedData<string>("username"));
+                    PlayerDataManager.NotifyPlayer(p, "Zostałeś rozkuty");
                 }
                 else if (!(p.HasSharedData("handCuffed") && p.GetSharedData<bool>("handCuffed")))
                 {
                     if (!(player.HasSharedData("cuffedPlayer") && player.GetSharedData<Player>("cuffedPlayer") != null && player.GetSharedData<Player>("cuffedPlayer").Exists))
                     {
                         p.TriggerEvent("handCuff", player, true);
-                        playerDataManager.NotifyPlayer(p, "Zostałeś zakuty przez " + player.GetSharedData<string>("username"));
-                        playerDataManager.NotifyPlayer(player, "Zakuto " + p.GetSharedData<string>("username"));
+                        PlayerDataManager.NotifyPlayer(p, "Zostałeś zakuty przez " + player.GetSharedData<string>("username"));
+                        PlayerDataManager.NotifyPlayer(player, "Zakuto " + p.GetSharedData<string>("username"));
                         p.SetSharedData("cuffedBy", player.Handle);
                         p.SetSharedData("handCuffed", true);
                         player.SetSharedData("cuffedPlayer", p.Handle);
                     }
                     else
                     {
-                        playerDataManager.NotifyPlayer(player, "Zakuć możesz tylko jednego gracza!");
+                        PlayerDataManager.NotifyPlayer(player, "Zakuć możesz tylko jednego gracza!");
                     }
                 }
             }
             else
             {
-                playerDataManager.NotifyPlayer(player, "Nie odnaleziono gracza lub jest on za daleko!");
+                PlayerDataManager.NotifyPlayer(player, "Nie odnaleziono gracza lub jest on za daleko!");
             }
         }
 
@@ -115,7 +115,7 @@ namespace ServerSide
         {
             if (player.HasSharedData("lspd_power") && player.GetSharedData<int>("lspd_power") > 0)
             {
-                string stor = lspd.GetAvailableVehicles(player.GetSharedData<int>("lspd_power"));
+                string stor = LSPD.GetAvailableVehicles(player.GetSharedData<int>("lspd_power"));
                 if (stor.Length > 0)
                 {
                     player.TriggerEvent("openLspdStorageBrowser", stor);
@@ -126,13 +126,13 @@ namespace ServerSide
         [RemoteEvent("lspd_CreateVehicle")]
         public void LSPDCreateVehicle(Player player, int id)
         {
-            if (lspd.SpawnVehicle(id))
+            if (LSPD.SpawnVehicle(id))
             {
-                playerDataManager.NotifyPlayer(player, "Pomyślnie wyjęto pojazd!");
+                PlayerDataManager.NotifyPlayer(player, "Pomyślnie wyjęto pojazd!");
             }
             else
             {
-                playerDataManager.NotifyPlayer(player, "Nie udało się wyjąć pojazdu!");
+                PlayerDataManager.NotifyPlayer(player, "Nie udało się wyjąć pojazdu!");
             }
         }
 

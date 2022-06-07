@@ -5,26 +5,25 @@ using GTANetworkAPI;
 
 namespace ServerSide
 {
-    public class FisherMan
+    public static class FisherMan
     {
 
-        Dictionary<Vector3, float> lakeFishingSpots = new Dictionary<Vector3, float>()
+        static Dictionary<Vector3, float> lakeFishingSpots = new Dictionary<Vector3, float>()
         {
             [new Vector3(-193.46588f, 789.7725f, 198.11504f)] = 8.0f,
             [new Vector3(713.9002f, 4100.3135f, 32.78519f)] = 10.0f,
             [new Vector3(1685.9248f, 41.874275f, 161.76726f)] = 10.0f,
         };
 
-        Dictionary<Vector3, float> oceanFishingSpots = new Dictionary<Vector3, float>()
+        static Dictionary<Vector3, float> oceanFishingSpots = new Dictionary<Vector3, float>()
         {
             [new Vector3(-3428.4202f, 968.72675f, 8.346693f)] = 25.0f,
             [new Vector3(-1848.2826f, -1252.0848f, 8.615788f)] = 30.0f
         };
 
-        const int rodPrice = 3000;
-        ColShape fisherColshape, sellingColshape, paserColshape;
-        PlayerDataManager playerDataManager = new PlayerDataManager();
-        public FisherMan()
+        static int rodPrice = 3000;
+        static ColShape fisherColshape, sellingColshape, paserColshape;
+        public static  void InstantiateFisherMan()
         {
             Vector3 fisherPosition = new Vector3(11.549497f, -2799.747f, 2.526085f);
             Vector3 sellingPosition = new Vector3(13.508561f, -2799.8037f, 2.5307877f);
@@ -68,14 +67,14 @@ namespace ServerSide
             }
         }
 
-        public void StartJob(Player player)
+        public static void StartJob(Player player)
         {
             if (player.GetSharedData<string>("job") == "" && !(player.HasSharedData("lspd_duty") && player.GetSharedData<bool>("lspd_duty")))
             {
                 if (player.GetSharedData<bool>("jobBonus_66"))
                 {
                     
-                    if (playerDataManager.HasItem(player, 1000))
+                    if (PlayerDataManager.HasItem(player, 1000))
                     {
                         if (player.GetSharedData<bool>("jobBonus_72"))
                         {
@@ -86,10 +85,10 @@ namespace ServerSide
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Nie możesz używać karbonowej wędki!");
+                            PlayerDataManager.NotifyPlayer(player, "Nie możesz używać karbonowej wędki!");
                         }
                     }
-                    if (playerDataManager.HasItem(player, 999))
+                    if (PlayerDataManager.HasItem(player, 999))
                     {
                         if (player.GetSharedData<bool>("jobBonus_71"))
                         {
@@ -100,10 +99,10 @@ namespace ServerSide
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Nie możesz używać plastikowej wędki!");
+                            PlayerDataManager.NotifyPlayer(player, "Nie możesz używać plastikowej wędki!");
                         }
                     }
-                    if(playerDataManager.HasItem(player, 998))
+                    if(PlayerDataManager.HasItem(player, 998))
                     {
                         if (player.GetSharedData<bool>("jobBonus_70"))
                         {
@@ -114,10 +113,10 @@ namespace ServerSide
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Nie możesz używać drewnianej wędki!");
+                            PlayerDataManager.NotifyPlayer(player, "Nie możesz używać drewnianej wędki!");
                         }
                     }
-                    if(playerDataManager.HasItem(player, 997))
+                    if(PlayerDataManager.HasItem(player, 997))
                     {
                         player.SetSharedData("job", "fisherman");
                         player.TriggerEvent("startJob", "Wędkarstwo", "PW");
@@ -126,17 +125,17 @@ namespace ServerSide
                     }
 
 
-                    playerDataManager.NotifyPlayer(player, "Nie posiadasz wędki! Zakup ją u wędkarza!");
+                    PlayerDataManager.NotifyPlayer(player, "Nie posiadasz wędki! Zakup ją u wędkarza!");
 
                 }
                 else
                 {
-                    playerDataManager.NotifyPlayer(player, "Nie odblokowałeś tej pracy!");
+                    PlayerDataManager.NotifyPlayer(player, "Nie odblokowałeś tej pracy!");
                 }
 
             }
         }
-        public void BuyFishingRod(Player player)
+        public static void BuyFishingRod(Player player)
         {
             if (player.GetSharedData<Int32>("waterpoints") >= 150)
             {
@@ -146,17 +145,17 @@ namespace ServerSide
                 }
                 else
                 {
-                    playerDataManager.NotifyPlayer(player, "Nie stać Cię na wędkę!");
+                    PlayerDataManager.NotifyPlayer(player, "Nie stać Cię na wędkę!");
                 }
             }
             else
             {
-                playerDataManager.NotifyPlayer(player, "Nie posiadasz wystarczająco PW: 150!");
+                PlayerDataManager.NotifyPlayer(player, "Nie posiadasz wystarczająco PW: 150!");
             }
         }
-        public void ConfirmFishingRod(Player player)
+        public static void ConfirmFishingRod(Player player)
         {
-            playerDataManager.UpdatePlayersMoney(player, -3000);
+            PlayerDataManager.UpdatePlayersMoney(player, -3000);
         }
     }
 }
