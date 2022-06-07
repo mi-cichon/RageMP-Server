@@ -17,7 +17,7 @@ namespace ServerSide
                 if (pl != player)
                 {
                     pl.TriggerEvent("setWaypoint", x, y);
-                    playerDataManager.NotifyPlayer(pl, player.GetSharedData<string>("username") + " ustawił Ci waypoint!");
+                    PlayerDataManager.NotifyPlayer(pl, player.GetSharedData<string>("username") + " ustawił Ci waypoint!");
                 }
             }
         }
@@ -26,7 +26,7 @@ namespace ServerSide
         [RemoteEvent("sendInfoMessage")]
         public void SendInfoMessage(Player player, string message)
         {
-            playerDataManager.SendInfoToPlayer(player, message);
+            PlayerDataManager.SendInfoToPlayer(player, message);
         }
 
         [RemoteEvent("setGui")]
@@ -70,15 +70,15 @@ namespace ServerSide
                     player.Heading = 0f;
                     break;
             }
-            playerDataManager.SetPlayersConnectValues(player, currentWeather);
-            progressManager.SetPlayersJobBonuses(player);
+            PlayerDataManager.SetPlayersConnectValues(player, currentWeather);
+            ProgressManager.SetPlayersJobBonuses(player);
             if (spawn == "last")
             {
-                autoSave.LoadPlayersJob(player);
+                AutoSave.LoadPlayersJob(player);
             }
             else
             {
-                autoSave.RemovePlayersJobData(player);
+                AutoSave.RemovePlayersJobData(player);
             }
         }
 
@@ -111,7 +111,7 @@ namespace ServerSide
         [RemoteEvent("playerCommandHandler")]
         public void PlayerCommandHandler(Player player, string command, string args)
         {
-            commands.ExecuteCommand(player, command, args);
+            CommandsManager.ExecuteCommand(player, command, args);
         }
 
         //DOOR MANAGER
@@ -119,14 +119,14 @@ namespace ServerSide
         [RemoteEvent("door_switch")]
         public void Door_Switch(Player player, int doorId, bool notify)
         {
-            foreach (Door door in doorManager.Doors)
+            foreach (Door door in DoorManager.Doors)
             {
                 if (door.Id == doorId)
                 {
                     door.Locked = !door.Locked;
                     if (notify)
                     {
-                        playerDataManager.NotifyPlayer(player, door.Locked ? "Zamknąłeś drzwi!" : "Otworzyłeś drzwi!");
+                        PlayerDataManager.NotifyPlayer(player, door.Locked ? "Zamknąłeś drzwi!" : "Otworzyłeś drzwi!");
                     }
                     NAPI.ClientEvent.TriggerClientEventForAll("door_state", door.Hash, door.Position.X, door.Position.Y, door.Position.Z, door.Locked);
                     break;
@@ -150,16 +150,16 @@ namespace ServerSide
         [RemoteEvent("playerInfoHandler")]
         public void PlayerInfoHandler(Player player, string message)
         {
-            playerDataManager.SendMessageToPlayer(player, message);
+            PlayerDataManager.SendMessageToPlayer(player, message);
         }
 
         [RemoteEvent("playerMessageHandler")]
         public void PlayerMessageHandler(Player player, string message)
         {
             if (!player.GetSharedData<bool>("muted"))
-                playerDataManager.SendMessageToNearPlayers(player, message, 50);
+                PlayerDataManager.SendMessageToNearPlayers(player, message, 50);
             else
-                playerDataManager.NotifyPlayer(player, "Jesteś wyciszony do " + player.GetSharedData<string>("mutedto"));
+                PlayerDataManager.NotifyPlayer(player, "Jesteś wyciszony do " + player.GetSharedData<string>("mutedto"));
         }
     }
 }

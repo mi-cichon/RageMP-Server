@@ -14,7 +14,7 @@ namespace ServerSide
             if (vehicle != null && vehicle.Exists && vehicle.HasSharedData("petrol"))
             {
                 if (vehicle.HasSharedData("owner"))
-                    vehicleDataManager.UpdateVehiclesPetrol(vehicle, petrol);
+                    VehicleDataManager.UpdateVehiclesPetrol(vehicle, petrol);
                 vehicle.SetSharedData("petrol", petrol);
             }
         }
@@ -33,17 +33,17 @@ namespace ServerSide
                             if (petrolStation.currentVehicle.Exists)
                             {
                                 petrolStation.currentVehicle.SetSharedData("petrol_refueling", true);
-                                player.TriggerEvent("petrol_startRefueling", petrolStation.currentVehicle, dataManager.GetPetrolPriceAtIndex(petrolStations.IndexOf(petrolStation)));
+                                player.TriggerEvent("petrol_startRefueling", petrolStation.currentVehicle, DataManager.GetPetrolPriceAtIndex(petrolStations.IndexOf(petrolStation)));
                             }
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Nie można rozpocząć tankowania!");
+                            PlayerDataManager.NotifyPlayer(player, "Nie można rozpocząć tankowania!");
                         }
                     }
                     else
                     {
-                        playerDataManager.NotifyPlayer(player, "Na stanowisku nie ma odpowedniego pojazdu!");
+                        PlayerDataManager.NotifyPlayer(player, "Na stanowisku nie ma odpowedniego pojazdu!");
                     }
                     break;
                 }
@@ -64,20 +64,20 @@ namespace ServerSide
         {
             if (vehicle != null && vehicle.Exists)
             {
-                if (playerDataManager.UpdatePlayersMoney(player, -1 * cost))
+                if (PlayerDataManager.UpdatePlayersMoney(player, -1 * cost))
                 {
-                    vehicleDataManager.UpdateVehiclesPetrol(vehicle, Math.Clamp(vehicle.GetSharedData<float>("petrol") + petrol, 0, vehicle.GetSharedData<int>("petroltank")));
-                    playerDataManager.NotifyPlayer(player, "Pomyślnie zatankowano pojazd!");
+                    VehicleDataManager.UpdateVehiclesPetrol(vehicle, Math.Clamp(vehicle.GetSharedData<float>("petrol") + petrol, 0, vehicle.GetSharedData<int>("petroltank")));
+                    PlayerDataManager.NotifyPlayer(player, "Pomyślnie zatankowano pojazd!");
                 }
                 else
                 {
-                    playerDataManager.NotifyPlayer(player, "Nie stać Cię na to!");
+                    PlayerDataManager.NotifyPlayer(player, "Nie stać Cię na to!");
                 }
                 vehicle.SetSharedData("petrol_refueling", false);
             }
             else
             {
-                playerDataManager.NotifyPlayer(player, "Nie odnaleziono pojazdu!");
+                PlayerDataManager.NotifyPlayer(player, "Nie odnaleziono pojazdu!");
             }
         }
 

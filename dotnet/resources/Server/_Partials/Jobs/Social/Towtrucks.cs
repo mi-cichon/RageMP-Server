@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using GTANetworkAPI;
 using Newtonsoft.Json;
+using ServerSide.Jobs;
 
 namespace ServerSide
 {
@@ -30,7 +31,7 @@ namespace ServerSide
                 {
                     //carMarket.RemoveVehicleFromMarket(vehicle);
                 }
-                vehicleDataManager.UpdateVehicleSpawned(vehicle, false);
+                VehicleDataManager.UpdateVehicleSpawned(vehicle, false);
                 vehicle.Delete();
             }
         }
@@ -44,14 +45,14 @@ namespace ServerSide
         [RemoteEvent("vehicleTowed")]
         public void VehicleTowed(Player player, string type, float distance, float dmg)
         {
-            payoutManager.TowtruckPayment(player, type, distance, dmg);
+            PayoutManager.TowtruckPayment(player, type, distance, dmg);
             player.Vehicle.SetSharedData("towingobj", "");
         }
 
         [RemoteEvent("startTowTrucks")]
         public void StartTowTrucks(Player player)
         {
-            towTruck.startJob(player);
+            TowTrucks.StartJob(player);
         }
 
         [RemoteEvent("getVehicleToTow")]
@@ -60,7 +61,7 @@ namespace ServerSide
             Vehicle veh = null;
             if (player.GetSharedData<bool>("jobBonus_27"))
             {
-                veh = vehicleDataManager.GetRandomVehicleToTow();
+                veh = VehicleDataManager.GetRandomVehicleToTow();
             }
             player.TriggerEvent("setVehicleToTow", veh);
         }

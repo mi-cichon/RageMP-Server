@@ -16,7 +16,7 @@ namespace ServerSide
             {
                 base64[i] = base64[i].Replace("data:image/png;base64,", "");
             }
-            playerDataManager.CreateCarMugshot(base64);
+            PlayerDataManager.CreateCarMugshot(base64);
         }
     }
 }

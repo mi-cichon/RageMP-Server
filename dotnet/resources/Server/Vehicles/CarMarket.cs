@@ -9,9 +9,6 @@ namespace ServerSide
 {
     public class CarMarket
     {
-        private OrgManager orgManager;
-        private VehicleDataManager vehicleDataManager;
-        private PlayerDataManager playerDataManager;
         static Dictionary<Vector3, Vector3> marketSpaces = new Dictionary<Vector3, Vector3>()
         {
             [new Vector3(-111.74768f, -1984.1511f, 17.299364f)] = new Vector3(0.0f, 0.0f, 171.32246f),
@@ -73,16 +70,13 @@ namespace ServerSide
 
 
         Vehicle[] marketVehicles = new Vehicle[marketSpaces.Count];
-        public CarMarket(Vector3 colshapePosition, ref OrgManager orgManager, ref VehicleDataManager vehicleDataManager, ref PlayerDataManager playerDataManager)
+        public CarMarket(Vector3 colshapePosition)
         {
             ColShape colshape = NAPI.ColShape.CreateCylinderColShape(colshapePosition - new Vector3(0, 0, 1), 2.0f, 2.0f);
             colshape.SetSharedData("type", "market1");
             NAPI.Marker.CreateMarker(25, colshapePosition - new Vector3(0, 0, 0.8), new Vector3(), new Vector3(), 5.0f, new Color(0, 204, 153));
             NAPI.Blip.CreateBlip(380, colshapePosition, 0.8f, 75, name: "Giełda pojazdów", shortRange: true);
             NAPI.TextLabel.CreateTextLabel("Wystaw pojazd na giełdę", colshapePosition + new Vector3(0,0,1.5), 15.0f, 2.0f, 4, new Color(255, 255, 255));
-            this.orgManager = orgManager;
-            this.vehicleDataManager = vehicleDataManager;
-            this.playerDataManager = playerDataManager;
         }
 
 
@@ -109,9 +103,9 @@ namespace ServerSide
                     marketVehicles[id - 1].SetSharedData("model", reader.GetString(6));
                     marketVehicles[id - 1].SetSharedData("name", reader.GetString(7));
                     marketVehicles[id - 1].SetSharedData("color1", reader.GetString(8));
-                    marketVehicles[id - 1].SetSharedData("color1mod", vehicleDataManager.JsonToColorMod(reader.GetString(8)));
+                    marketVehicles[id - 1].SetSharedData("color1mod", VehicleDataManager.JsonToColorMod(reader.GetString(8)));
                     marketVehicles[id - 1].SetSharedData("color2", reader.GetString(9));
-                    marketVehicles[id - 1].SetSharedData("color2mod", vehicleDataManager.JsonToColorMod(reader.GetString(9)));
+                    marketVehicles[id - 1].SetSharedData("color2mod", VehicleDataManager.JsonToColorMod(reader.GetString(9)));
                     marketVehicles[id - 1].SetSharedData("spawned", true);
                     marketVehicles[id - 1].SetSharedData("lastpos", vehiclePos.Key);
                     marketVehicles[id - 1].SetSharedData("lastrot", vehiclePos.Value);
@@ -122,7 +116,7 @@ namespace ServerSide
                     marketVehicles[id - 1].SetSharedData("speedometer", reader.GetString(17));
                     marketVehicles[id - 1].SetSharedData("towed", false);
                     marketVehicles[id - 1].SetSharedData("locked", false);
-                    int[] PandS = vehicleDataManager.GetVehicleStockPowerAndSpeed(marketVehicles[id - 1]);
+                    int[] PandS = VehicleDataManager.GetVehicleStockPowerAndSpeed(marketVehicles[id - 1]);
                     marketVehicles[id - 1].SetSharedData("power", PandS[0]);
                     marketVehicles[id - 1].SetSharedData("speed", PandS[1]);
                     marketVehicles[id - 1].SetSharedData("dirt", reader.GetInt32(18));
@@ -133,8 +127,8 @@ namespace ServerSide
                     marketVehicles[id - 1].SetSharedData("drivers", reader.GetString(23));
                     bool brake = bool.Parse(reader.GetString(24));
                     marketVehicles[id - 1].SetSharedData("veh_trip", reader.GetFloat(25));
-                    int[] color1 = vehicleDataManager.JsonToColor(reader.GetString(8));
-                    int[] color2 = vehicleDataManager.JsonToColor(reader.GetString(9));
+                    int[] color1 = VehicleDataManager.JsonToColor(reader.GetString(8));
+                    int[] color2 = VehicleDataManager.JsonToColor(reader.GetString(9));
                     NAPI.Vehicle.SetVehicleCustomPrimaryColor(marketVehicles[id - 1].Handle, color1[0], color1[1], color1[2]);
                     NAPI.Vehicle.SetVehicleCustomSecondaryColor(marketVehicles[id - 1].Handle, color2[0], color2[1], color2[2]);
 
@@ -142,15 +136,15 @@ namespace ServerSide
                     marketVehicles[id - 1].SetSharedData("veh_lights", false);
                     marketVehicles[id - 1].SetSharedData("veh_locked", false);
 
-                    vehicleDataManager.setVehiclesPetrolAndTrunk(marketVehicles[id - 1]);
+                    VehicleDataManager.setVehiclesPetrolAndTrunk(marketVehicles[id - 1]);
 
                     NAPI.Task.Run(() =>
                     {
                         if (vehicle != null && vehicle.Exists)
                         {
-                            vehicleDataManager.SetVehiclesWheels(marketVehicles[id - 1]);
-                            vehicleDataManager.applyTuneToVehicle(marketVehicles[id - 1], marketVehicles[id - 1].GetSharedData<string>("tune"), marketVehicles[id - 1].GetSharedData<string>("mechtune"));
-                            vehicleDataManager.SetVehiclesExtra(marketVehicles[id - 1]);
+                            VehicleDataManager.SetVehiclesWheels(marketVehicles[id - 1]);
+                            VehicleDataManager.applyTuneToVehicle(marketVehicles[id - 1], marketVehicles[id - 1].GetSharedData<string>("tune"), marketVehicles[id - 1].GetSharedData<string>("mechtune"));
+                            VehicleDataManager.SetVehiclesExtra(marketVehicles[id - 1]);
                             marketVehicles[id - 1].SetSharedData("veh_brake", brake);
                         }
 
@@ -159,10 +153,10 @@ namespace ServerSide
                     marketVehicles[id - 1].SetSharedData("market", true);
                     marketVehicles[id - 1].SetSharedData("marketprice", price);
                     marketVehicles[id - 1].SetSharedData("marketdescription", description);
-                    marketVehicles[id - 1].SetSharedData("marketowner", playerDataManager.GetPlayerNameById(marketVehicles[id - 1].GetSharedData<Int64>("owner").ToString()));
+                    marketVehicles[id - 1].SetSharedData("marketowner", PlayerDataManager.GetPlayerNameById(marketVehicles[id - 1].GetSharedData<Int64>("owner").ToString()));
 
-                    marketVehicles[id - 1].SetSharedData("markettune", vehicleDataManager.GetVehiclesTuneString(marketVehicles[id - 1]));
-                    orgManager.SetVehiclesOrg(marketVehicles[id - 1]);
+                    marketVehicles[id - 1].SetSharedData("markettune", VehicleDataManager.GetVehiclesTuneString(marketVehicles[id - 1]));
+                    OrgManager.SetVehiclesOrg(marketVehicles[id - 1]);
                 }
             }
             dataBase.connection.Close();
@@ -187,16 +181,16 @@ namespace ServerSide
             else
             {
                 marketVehicles[freeIndex] = vehicle;
-                vehicleDataManager.SetVehicleAsMarket(vehicle, true);
+                VehicleDataManager.SetVehicleAsMarket(vehicle, true);
                 marketVehicles[freeIndex].SetSharedData("invincible", true);
                 marketVehicles[freeIndex].SetSharedData("veh_brake", true);
                 marketVehicles[freeIndex].SetSharedData("marketprice", price);
                 marketVehicles[freeIndex].SetSharedData("marketdescription", description);
                 marketVehicles[freeIndex].SetSharedData("marketowner", ownerName);
-                marketVehicles[freeIndex].SetSharedData("markettune", vehicleDataManager.GetVehiclesTuneString(marketVehicles[freeIndex]));
+                marketVehicles[freeIndex].SetSharedData("markettune", VehicleDataManager.GetVehiclesTuneString(marketVehicles[freeIndex]));
                 vehicle.SetSharedData("lastpos", freeSpace.Key);
                 vehicle.SetSharedData("lastrot", freeSpace.Value);
-                vehicleDataManager.UpdateVehiclesLastPos(vehicle);
+                VehicleDataManager.UpdateVehiclesLastPos(vehicle);
                 foreach (Player occupant in NAPI.Pools.GetAllPlayers())
                 {
                     if(occupant.Vehicle == vehicle)
@@ -207,7 +201,7 @@ namespace ServerSide
                 {
                     vehicle.SetSharedData("lastpos", freeSpace.Key);
                     vehicle.SetSharedData("lastrot", freeSpace.Value);
-                    vehicleDataManager.SavePersonalVehicleDataToDB(vehicle, "lastpos");
+                    VehicleDataManager.SavePersonalVehicleDataToDB(vehicle, "lastpos");
                     marketVehicles[freeIndex].Position = freeSpace.Key;
                     marketVehicles[freeIndex].Rotation = freeSpace.Value;
                     DBConnection dataBase = new DBConnection();
@@ -225,7 +219,7 @@ namespace ServerSide
                 if (marketVehicles[i] == vehicle)
                 {
                     marketVehicles[i] = null;
-                    vehicleDataManager.SetVehicleAsMarket(vehicle, false);
+                    VehicleDataManager.SetVehicleAsMarket(vehicle, false);
                     vehicle.ResetSharedData("marketprice");
                     vehicle.ResetSharedData("marketdescription");
                     DBConnection dataBase = new DBConnection();
@@ -245,7 +239,7 @@ namespace ServerSide
                 {
                     if ((vehicle.HasSharedData("market") && !vehicle.GetSharedData<bool>("market")) || (!vehicle.HasSharedData("market") && vehicle.HasSharedData("owner")))
                     {
-                        vehicleDataManager.UpdateVehicleSpawned(vehicle, false);
+                        VehicleDataManager.UpdateVehicleSpawned(vehicle, false);
                         vehicle.Delete();
                     }
                     else if (!vehicle.HasSharedData("market"))

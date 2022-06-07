@@ -18,11 +18,11 @@ namespace ServerSide
                     secondsPassed = 0;
                     foreach (Player player in NAPI.Pools.GetAllPlayers())
                     {
-                        player.TriggerEvent("setTime", (playerDataManager.time.Hour.ToString().Length == 1 ? ("0" + playerDataManager.time.Hour.ToString()) : playerDataManager.time.Hour.ToString()) + ":" + (playerDataManager.time.Minute.ToString().Length == 1 ? ("0" + playerDataManager.time.Minute.ToString()) : playerDataManager.time.Minute.ToString()));
+                        player.TriggerEvent("setTime", (PlayerDataManager.time.Hour.ToString().Length == 1 ? ("0" + PlayerDataManager.time.Hour.ToString()) : PlayerDataManager.time.Hour.ToString()) + ":" + (PlayerDataManager.time.Minute.ToString().Length == 1 ? ("0" + PlayerDataManager.time.Minute.ToString()) : PlayerDataManager.time.Minute.ToString()));
                     }
                 }
-                playerDataManager.time = playerDataManager.time.AddSeconds(8);
-                NAPI.World.SetTime(playerDataManager.time.Hour, playerDataManager.time.Minute, playerDataManager.time.Second);
+                PlayerDataManager.time = PlayerDataManager.time.AddSeconds(8);
+                NAPI.World.SetTime(PlayerDataManager.time.Hour, PlayerDataManager.time.Minute, PlayerDataManager.time.Second);
 
             });
         }

@@ -19,27 +19,27 @@ namespace ServerSide
                 {
                     if (player.Vehicle.HasSharedData("owner") && player.Vehicle.GetSharedData<Int64>("owner").ToString() == player.SocialClubId.ToString())
                     {
-                        int price = vehicleDataManager.GetVehiclesSellPrice(player.Vehicle);
+                        int price = VehicleDataManager.GetVehiclesSellPrice(player.Vehicle);
                         player.TriggerEvent("sellVeh_openBrowser", player.Vehicle, player.Vehicle.GetSharedData<string>("name"), price.ToString(), player.Vehicle.GetSharedData<float>("veh_trip").ToString());
                     }
                     else
                     {
-                        playerDataManager.NotifyPlayer(player, "Nie jesteś właścicielem tego pojazdu!");
+                        PlayerDataManager.NotifyPlayer(player, "Nie jesteś właścicielem tego pojazdu!");
                     }
                 }
                 else
                 {
-                    playerDataManager.NotifyPlayer(player, "Nie możesz jeszcze sprzedać pojazdu, będzie to możliwe " + last.AddHours(12).ToString() + ".");
+                    PlayerDataManager.NotifyPlayer(player, "Nie możesz jeszcze sprzedać pojazdu, będzie to możliwe " + last.AddHours(12).ToString() + ".");
                 }
             }
             else
             {
-                playerDataManager.NotifyPlayer(player, "Aby z tego korzystać musisz być w pojeździe!");
+                PlayerDataManager.NotifyPlayer(player, "Aby z tego korzystać musisz być w pojeździe!");
             }
             //}
             //else
             //{
-            //    playerDataManager.NotifyPlayer(player, "Ta funkcja chwilowo jest dostępna tylko dla testerów!");
+            //    PlayerDataManager.NotifyPlayer(player, "Ta funkcja chwilowo jest dostępna tylko dla testerów!");
             //}
 
         }
@@ -51,11 +51,11 @@ namespace ServerSide
             {
                 if (vehicle.HasSharedData("owner") && vehicle.GetSharedData<Int64>("owner").ToString() == player.SocialClubId.ToString())
                 {
-                    vehicleDataManager.UpdateVehiclesOwner(vehicle, 0);
-                    vehicleDataManager.UpdateVehicleSpawned(vehicle, false);
+                    VehicleDataManager.UpdateVehiclesOwner(vehicle, 0);
+                    VehicleDataManager.UpdateVehicleSpawned(vehicle, false);
                     int carId = vehicle.GetSharedData<int>("id");
                     vehicle.Delete();
-                    foreach (Organization org in orgManager.orgs)
+                    foreach (Organization org in OrgManager.orgs)
                     {
                         if (org.vehicles.Contains(carId) || org.vehicleRequests.Contains(carId))
                         {
@@ -71,24 +71,24 @@ namespace ServerSide
                             break;
                         }
                     }
-                    if (playerDataManager.UpdatePlayersMoney(player, price))
+                    if (PlayerDataManager.UpdatePlayersMoney(player, price))
                     {
-                        playerDataManager.NotifyPlayer(player, "Pomyślnie sprzedano pojazd! Kolejna sprzedaż będzie możliwa " + DateTime.Now.AddHours(12).ToString() + ".");
-                        playerDataManager.UpdateVehicleSold(player, DateTime.Now.ToString());
+                        PlayerDataManager.NotifyPlayer(player, "Pomyślnie sprzedano pojazd! Kolejna sprzedaż będzie możliwa " + DateTime.Now.AddHours(12).ToString() + ".");
+                        PlayerDataManager.UpdateVehicleSold(player, DateTime.Now.ToString());
                     }
                     else
                     {
-                        playerDataManager.NotifyPlayer(player, "Wystąpił błąd!");
+                        PlayerDataManager.NotifyPlayer(player, "Wystąpił błąd!");
                     }
                 }
                 else
                 {
-                    playerDataManager.NotifyPlayer(player, "Nie jesteś właścicielem tego pojazdu!");
+                    PlayerDataManager.NotifyPlayer(player, "Nie jesteś właścicielem tego pojazdu!");
                 }
             }
             else
             {
-                playerDataManager.NotifyPlayer(player, "Nie odnaleziono pojazdu!");
+                PlayerDataManager.NotifyPlayer(player, "Nie odnaleziono pojazdu!");
             }
         }
     }

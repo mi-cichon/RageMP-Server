@@ -11,29 +11,29 @@ namespace ServerSide
         [RemoteEvent("messenger_requestConversationsData")]
         public void Messenger_requestConversationsData(Player player)
         {
-            string conversations = playerDataManager.GetPlayersConversations(player);
+            string conversations = PlayerDataManager.GetPlayersConversations(player);
             player.TriggerEvent("messenger_receiveConversationsData", conversations);
         }
 
         [RemoteEvent("messenger_requestMessageData")]
         public void Messenger_requestMessageData(Player player, string playerId)
         {
-            string messages = playerDataManager.GetPlayersMessages(player, playerId);
+            string messages = PlayerDataManager.GetPlayersMessages(player, playerId);
             player.TriggerEvent("messenger_receiveMessageData", messages);
         }
 
         [RemoteEvent("messenger_sendMessage")]
         public void Messenger_sendMessage(Player player, string playerId, string message)
         {
-            playerDataManager.SendMessageToPlayer(player, playerId, message);
-            string messages = playerDataManager.GetPlayersMessages(player, playerId);
+            PlayerDataManager.SendMessageToPlayer(player, playerId, message);
+            string messages = PlayerDataManager.GetPlayersMessages(player, playerId);
             player.TriggerEvent("messenger_receiveMessageData", messages);
         }
 
         [RemoteEvent("messenger_checkNewMessages")]
         public void Messenger_checkNewMessages(Player player)
         {
-            string messagesId = playerDataManager.HasPlayerNewMessages(player);
+            string messagesId = PlayerDataManager.HasPlayerNewMessages(player);
             if (messagesId != "")
             {
                 player.TriggerEvent("newMessageSound", messagesId);
@@ -44,7 +44,7 @@ namespace ServerSide
         [RemoteEvent("messenger_searchForPlayers")]
         public void Messenger_searchForPlayers(Player player, string keyword)
         {
-            string players = playerDataManager.SearchForPlayers(player, keyword);
+            string players = PlayerDataManager.SearchForPlayers(player, keyword);
             if(players != "")
             {
                 player.TriggerEvent("messenger_receiveSearchedPlayers", players);

@@ -5,17 +5,9 @@ using GTANetworkAPI;
 
 namespace ServerSide
 {
-    public class CustomMarkers
+    public static class CustomMarkers
     {
-        public CustomMarkers()
-        {
-
-        }
-
-
-
-
-        public void CreateSimpleMarker(Vector3 position, string text, bool hold = false)
+        public static void CreateSimpleMarker(Vector3 position, string text, bool hold = false)
         {
             string push = "Naciśnij E";
             if (hold)
@@ -28,7 +20,7 @@ namespace ServerSide
             NAPI.Marker.CreateMarker(20, position - new Vector3(0, 0, 0.6), new Vector3(), new Vector3(180,0,0), 0.7f, new Color(255, 255, 255), dimension: 0);
         }
 
-        public void CreateLSPDMarker(Vector3 position, string text, bool hold = false)
+        public static void CreateLSPDMarker(Vector3 position, string text, bool hold = false)
         {
             string push = "Naciśnij E";
             if (hold)
@@ -41,7 +33,7 @@ namespace ServerSide
             NAPI.Marker.CreateMarker(20, position - new Vector3(0, 0, 0.6), new Vector3(), new Vector3(180, 0, 0), 0.7f, new Color(255, 255, 255), dimension: 0);
         }
 
-        public Marker CreateHouseMarker(Vector3 position, string text, uint id = 1000, bool owned = false)
+        public static Marker CreateHouseMarker(Vector3 position, string text, uint id = 1000, bool owned = false)
         {
             NAPI.Marker.CreateMarker(23, position - new Vector3(0, 0, 0.8), new Vector3(), new Vector3(), 1.0f, new Color(255, 255, 255), dimension: id == 1000 ? 0 : id + 500);
             Color markerColor;
@@ -64,7 +56,7 @@ namespace ServerSide
             return marker;
         }
 
-        public void CreateHouseStorageMarker(Vector3 position, uint id = 1000)
+        public static void CreateHouseStorageMarker(Vector3 position, uint id = 1000)
         {
             NAPI.Marker.CreateMarker(23, position - new Vector3(0, 0, 0.8), new Vector3(), new Vector3(), 1.0f, new Color(255, 255, 255), dimension: id == 1000 ? 0 : id + 500);
             NAPI.Marker.CreateMarker(20, position - new Vector3(0, 0, 0.6), new Vector3(), new Vector3(180, 0, 0), 0.6f, new Color(0, 204, 153));
@@ -72,7 +64,7 @@ namespace ServerSide
             NAPI.TextLabel.CreateTextLabel("Naciśnij E", position + new Vector3(0, 0, 0.2), 6.0f, 2.0f, 4, new Color(255, 255, 255), dimension: id + 500);
         }
 
-        public void CreateJobMarker(Vector3 position, string text)
+        public static void CreateJobMarker(Vector3 position, string text)
         {
             NAPI.TextLabel.CreateTextLabel(text, position + new Vector3(0, 0, 0.4), 6.0f, 2.0f, 4, new Color(255, 255, 255));
             NAPI.TextLabel.CreateTextLabel("Naciśnij E aby rozpocząć pracę", position + new Vector3(0, 0, 0.2), 6.0f, 2.0f, 4, new Color(255, 255, 255));
@@ -80,7 +72,7 @@ namespace ServerSide
             NAPI.Marker.CreateMarker(29, position - new Vector3(0, 0, 0.6), new Vector3(), new Vector3(0,0,0), 0.7f, new Color(34,139,34));
         }
 
-        public CustomMarker CreateBusinessMarker(Vector3 position, string text, string owner)
+        public static CustomMarker CreateBusinessMarker(Vector3 position, string text, string owner)
         {
             List<TextLabel> labels = new List<TextLabel>();
             List<Marker> markers = new List<Marker>();
@@ -101,7 +93,7 @@ namespace ServerSide
             return new CustomMarker(labels, markers);
         }
 
-        public void CreateVehicleSpawnMarker(Vector3 position)
+        public static void CreateVehicleSpawnMarker(Vector3 position)
         {
             NAPI.Marker.CreateMarker(27, new Vector3(position.X, position.Y, position.Z - 0.8), new Vector3(), new Vector3(), 2.0f, new Color(0, 204, 153));
             NAPI.TextLabel.CreateTextLabel("Pojazd pracy", new Vector3(position.X, position.Y, position.Z - 0.5), 5.0f, 1.0f, 4, new Color(255, 255, 255, 255), entitySeethrough: false);

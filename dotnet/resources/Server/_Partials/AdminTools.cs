@@ -28,7 +28,7 @@ namespace ServerSide
             if (ShowVeh != null && ShowVeh.Exists)
             {
                 File.AppendAllText(@"notes.txt", ShowVeh.Model.ToString() + "," + Environment.NewLine, new UTF8Encoding(false, true));
-                playerDataManager.NotifyPlayer(player, "Notatka zapisana w pliku!");
+                PlayerDataManager.NotifyPlayer(player, "Notatka zapisana w pliku!");
             }
         }
 
@@ -43,35 +43,35 @@ namespace ServerSide
                 {
                     if(vehicle.HasSharedData("market") && vehicle.GetSharedData<bool>("market"))
                     {
-                        playerDataManager.NotifyPlayer(player, $"Pojazd jest na giełdzie!");
+                        PlayerDataManager.NotifyPlayer(player, $"Pojazd jest na giełdzie!");
                         return;
                     }
                     if (vehicle.GetSharedData<string>("type") == "personal")
                     {
-                        vehicleDataManager.UpdateVehicleSpawned(vehicle, false);
-                        playerDataManager.NotifyPlayer(player, $"Pojazd o ID: {vehicle.GetSharedData<Int32>("id").ToString()} został przeniesiony do przechowalni!");
+                        VehicleDataManager.UpdateVehicleSpawned(vehicle, false);
+                        PlayerDataManager.NotifyPlayer(player, $"Pojazd o ID: {vehicle.GetSharedData<Int32>("id").ToString()} został przeniesiony do przechowalni!");
                         vehicle.Delete();
                     }
-                    else if (vehicle.GetSharedData<string>("type") == "lspd")
+                    else if (vehicle.GetSharedData<string>("type") == "LSPD")
                     {
-                        lspd.SetVehicleSpawned(vehicle.GetSharedData<int>("id"), false);
-                        playerDataManager.NotifyPlayer(player, $"Pojazd został usunięty!");
+                        LSPD.SetVehicleSpawned(vehicle.GetSharedData<int>("id"), false);
+                        PlayerDataManager.NotifyPlayer(player, $"Pojazd został usunięty!");
                         vehicle.Delete();
                     }
                     else
                     {
-                        playerDataManager.NotifyPlayer(player, $"Pojazd został usunięty!");
+                        PlayerDataManager.NotifyPlayer(player, $"Pojazd został usunięty!");
                         vehicle.Delete();
                     }
                 }
                 else
                 {
-                    playerDataManager.NotifyPlayer(player, "Nie można usunąć pojazdu z komisu!");
+                    PlayerDataManager.NotifyPlayer(player, "Nie można usunąć pojazdu z komisu!");
                 }
             }
             else
             {
-                playerDataManager.NotifyPlayer(player, "Nie odnaleziono pojazdu!");
+                PlayerDataManager.NotifyPlayer(player, "Nie odnaleziono pojazdu!");
             }
         }
 
@@ -86,7 +86,7 @@ namespace ServerSide
                     {
                         if (vehicle.HasSharedData("market") && vehicle.GetSharedData<bool>("market"))
                         {
-                            playerDataManager.NotifyPlayer(player, $"Pojazd jest na giełdzie!");
+                            PlayerDataManager.NotifyPlayer(player, $"Pojazd jest na giełdzie!");
                             return;
                         }
                         vehicle.SetSharedData("lastpos", player.Position);
@@ -97,12 +97,12 @@ namespace ServerSide
                             NAPI.Task.Run(() =>
                             {
                                 vehicle.SetSharedData("veh_brake", true);
-                                vehicleDataManager.UpdateVehiclesLastPos(vehicle);
+                                VehicleDataManager.UpdateVehiclesLastPos(vehicle);
                             }, 5000);
                         }
                         else
                         {
-                            vehicleDataManager.UpdateVehiclesLastPos(vehicle);
+                            VehicleDataManager.UpdateVehiclesLastPos(vehicle);
                         }
                     }
                     else
@@ -112,12 +112,12 @@ namespace ServerSide
                 }
                 else
                 {
-                    playerDataManager.NotifyPlayer(player, "Nie można przenieść pojazdu z komisu!");
+                    PlayerDataManager.NotifyPlayer(player, "Nie można przenieść pojazdu z komisu!");
                 }
             }
             else
             {
-                playerDataManager.NotifyPlayer(player, "Nie odnaleziono pojazdu!");
+                PlayerDataManager.NotifyPlayer(player, "Nie odnaleziono pojazdu!");
             }
         }
 
@@ -128,20 +128,20 @@ namespace ServerSide
             {
                 if (vehicle.HasSharedData("admin_lastDriver"))
                 {
-                    playerDataManager.SendInfoToPlayer(player, "Ostatni kierowca pojazdu: " + vehicle.GetSharedData<string>("admin_lastDriver"));
+                    PlayerDataManager.SendInfoToPlayer(player, "Ostatni kierowca pojazdu: " + vehicle.GetSharedData<string>("admin_lastDriver"));
                 }
                 else if (vehicle.HasSharedData("drivers"))
                 {
-                    playerDataManager.SendInfoToPlayer(player, "Ostatni kierowcy pojazdu: " + vehicle.GetSharedData<string>("drivers"));
+                    PlayerDataManager.SendInfoToPlayer(player, "Ostatni kierowcy pojazdu: " + vehicle.GetSharedData<string>("drivers"));
                 }
                 else
                 {
-                    playerDataManager.NotifyPlayer(player, "Pojazd nie miał kierowcy!");
+                    PlayerDataManager.NotifyPlayer(player, "Pojazd nie miał kierowcy!");
                 }
             }
             else
             {
-                playerDataManager.NotifyPlayer(player, "Nie odnaleziono pojazdu!");
+                PlayerDataManager.NotifyPlayer(player, "Nie odnaleziono pojazdu!");
             }
         }
 
@@ -152,24 +152,24 @@ namespace ServerSide
             {
                 if (vehicle.HasSharedData("id"))
                 {
-                    string vehowner = vehicleDataManager.GetVehiclesOwnerName(vehicle.GetSharedData<int>("id").ToString());
+                    string vehowner = VehicleDataManager.GetVehiclesOwnerName(vehicle.GetSharedData<int>("id").ToString());
                     if (vehowner != "")
                     {
-                        playerDataManager.SendInfoToPlayer(player, "Pojazd należy do " + vehowner);
+                        PlayerDataManager.SendInfoToPlayer(player, "Pojazd należy do " + vehowner);
                     }
                     else
                     {
-                        playerDataManager.NotifyPlayer(player, "Nie odnaleziono właściciela!");
+                        PlayerDataManager.NotifyPlayer(player, "Nie odnaleziono właściciela!");
                     }
                 }
                 else
                 {
-                    playerDataManager.NotifyPlayer(player, "Pojazd nie ma właściciela!");
+                    PlayerDataManager.NotifyPlayer(player, "Pojazd nie ma właściciela!");
                 }
             }
             else
             {
-                playerDataManager.NotifyPlayer(player, "Nie odnaleziono pojazdu!");
+                PlayerDataManager.NotifyPlayer(player, "Nie odnaleziono pojazdu!");
             }
         }
 
@@ -184,7 +184,7 @@ namespace ServerSide
             }
             else
             {
-                playerDataManager.NotifyPlayer(player, "Nie odnaleziono pojazdu!");
+                PlayerDataManager.NotifyPlayer(player, "Nie odnaleziono pojazdu!");
             }
         }
 
@@ -194,7 +194,7 @@ namespace ServerSide
             if (vehicle != null && vehicle.Exists)
             {
                 if (vehicle.HasSharedData("owner"))
-                    vehicleDataManager.RepairVehicle(vehicle);
+                    VehicleDataManager.RepairVehicle(vehicle);
                 else
                 {
                     vehicle.Repair();
@@ -203,7 +203,7 @@ namespace ServerSide
             }
             else
             {
-                playerDataManager.NotifyPlayer(player, "Nie odnaleziono pojazdu!");
+                PlayerDataManager.NotifyPlayer(player, "Nie odnaleziono pojazdu!");
             }
         }
 
@@ -218,16 +218,16 @@ namespace ServerSide
                 {
                     if (report.informer.Exists)
                     {
-                        playerDataManager.SendInfoToPlayer(report.informer, $"Twój raport o ID {report.id.ToString()} został przyjęty przez {player.GetSharedData<string>("username")}");
+                        PlayerDataManager.SendInfoToPlayer(report.informer, $"Twój raport o ID {report.id.ToString()} został przyjęty przez {player.GetSharedData<string>("username")}");
                     }
                     solved = true;
-                    playerDataManager.SendInfoToPlayer(player, $"Raport przyjęty: {report.id.ToString()}: {report.informerName} => {report.reportedName}, powód: {report.description}");
+                    PlayerDataManager.SendInfoToPlayer(player, $"Raport przyjęty: {report.id.ToString()}: {report.informerName} => {report.reportedName}, powód: {report.description}");
                     reportsList.Remove(report);
                     break;
                 }
             }
             if (!solved)
-                playerDataManager.NotifyPlayer(player, "Nie odnaleziono raportu!");
+                PlayerDataManager.NotifyPlayer(player, "Nie odnaleziono raportu!");
         }
 
         [RemoteEvent("removeReport")]
@@ -239,13 +239,13 @@ namespace ServerSide
                 if (report.id.ToString().Equals(reportId))
                 {
                     removed = true;
-                    playerDataManager.SendInfoToPlayer(player, $"Raport usunięty: {report.id.ToString()}: {report.informerName} => {report.reportedName}, powód: {report.description}");
+                    PlayerDataManager.SendInfoToPlayer(player, $"Raport usunięty: {report.id.ToString()}: {report.informerName} => {report.reportedName}, powód: {report.description}");
                     reportsList.Remove(report);
                     break;
                 }
             }
             if (!removed)
-                playerDataManager.NotifyPlayer(player, "Nie odnaleziono raportu!");
+                PlayerDataManager.NotifyPlayer(player, "Nie odnaleziono raportu!");
         }
 
         [RemoteEvent("requireReports")]
@@ -286,24 +286,24 @@ namespace ServerSide
             {
                 if (vehicle.HasSharedData("market") && vehicle.GetSharedData<bool>("market"))
                 {
-                    playerDataManager.NotifyPlayer(player, $"Pojazd jest na giełdzie!");
+                    PlayerDataManager.NotifyPlayer(player, $"Pojazd jest na giełdzie!");
                     return;
                 }
                 if (vehicle.GetSharedData<string>("type") == "personal")
                 {
-                    vehicleDataManager.UpdateVehicleSpawned(vehicle, false);
-                    playerDataManager.NotifyPlayer(player, $"Pojazd o ID: {vehicle.GetSharedData<Int32>("id").ToString()} został przeniesiony do przechowalni!");
+                    VehicleDataManager.UpdateVehicleSpawned(vehicle, false);
+                    PlayerDataManager.NotifyPlayer(player, $"Pojazd o ID: {vehicle.GetSharedData<Int32>("id").ToString()} został przeniesiony do przechowalni!");
                     vehicle.Delete();
                 }
-                else if (vehicle.GetSharedData<string>("type") == "lspd")
+                else if (vehicle.GetSharedData<string>("type") == "LSPD")
                 {
-                    lspd.SetVehicleSpawned(vehicle.GetSharedData<int>("id"), false);
-                    playerDataManager.NotifyPlayer(player, $"Pojazd został usunięty!");
+                    LSPD.SetVehicleSpawned(vehicle.GetSharedData<int>("id"), false);
+                    PlayerDataManager.NotifyPlayer(player, $"Pojazd został usunięty!");
                     vehicle.Delete();
                 }
                 else
                 {
-                    playerDataManager.NotifyPlayer(player, $"Pojazd został usunięty!");
+                    PlayerDataManager.NotifyPlayer(player, $"Pojazd został usunięty!");
                     vehicle.Delete();
                 }
             }

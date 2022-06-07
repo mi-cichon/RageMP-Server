@@ -13,13 +13,13 @@ namespace ServerSide
         public void EndJob(Player player)
         {
             player.SetSharedData("job", "");
-            playerDataManager.NotifyPlayer(player, "Praca zakończona");
+            PlayerDataManager.NotifyPlayer(player, "Praca zakończona");
             player.SetSharedData("handObj", "");
             player.TriggerEvent("stopJob");
             player.RemoveAllWeapons();
             if (player.HasSharedData("jobveh") && player.GetSharedData<int>("jobveh") != -1111)
             {
-                var veh = vehicleDataManager.GetVehicleByRemoteId(Convert.ToUInt16(player.GetSharedData<Int32>("jobveh")));
+                var veh = VehicleDataManager.GetVehicleByRemoteId(Convert.ToUInt16(player.GetSharedData<Int32>("jobveh")));
                 if (veh != null && veh.Exists)
                     veh.Delete();
                 player.SetSharedData("jobveh", -1111);
@@ -27,8 +27,8 @@ namespace ServerSide
             }
             player.SetSharedData("jobveh", -1111);
             player.TriggerEvent("closeGardenerHUDBrowser");
-            playerDataManager.SetJobClothes(player, false, "");
-            autoSave.SavePlayersJobData(player, "");
+            PlayerDataManager.SetJobClothes(player, false, "");
+            AutoSave.SavePlayersJobData(player, "");
         }
 
     }

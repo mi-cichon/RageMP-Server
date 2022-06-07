@@ -22,7 +22,7 @@ namespace ServerSide
             }
             if (veh != null)
             {
-                orgManager.SetVehiclesOrg(veh);
+                OrgManager.SetVehiclesOrg(veh);
             }
         }
 
@@ -32,7 +32,7 @@ namespace ServerSide
             List<int> orgIds = null;
             if (player.HasSharedData("orgId") && player.GetSharedData<Int32>("orgId") != 0)
             {
-                foreach (Organization org in orgManager.orgs)
+                foreach (Organization org in OrgManager.orgs)
                 {
                     if (org.id == player.GetSharedData<Int32>("orgId"))
                     {
@@ -41,7 +41,7 @@ namespace ServerSide
                     }
                 }
             }
-            string vehicles = vehicleDataManager.GetPlayersVehicles(player, true, orgIds);
+            string vehicles = VehicleDataManager.GetPlayersVehicles(player, true, orgIds);
             player.TriggerEvent("insertStorageVehicles", vehicles);
         }
 

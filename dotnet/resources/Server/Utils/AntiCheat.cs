@@ -5,9 +5,9 @@ using GTANetworkAPI;
 
 namespace ServerSide
 {
-    public class AntiCheat
+    public static class AntiCheat
     {
-        public bool ShouldPlayerEnterThisVehicle(Player player, Vehicle vehicle)
+        public static bool ShouldPlayerEnterThisVehicle(Player player, Vehicle vehicle)
         {
             if (player.GetSharedData<int>("vehSeat") == 0)
             {
@@ -23,7 +23,7 @@ namespace ServerSide
                         {
                             return true;
                         }
-                        else if (player.GetSharedData<string>("job") == "lspd" && vehicle.GetSharedData<string>("type") == "lspd")
+                        else if (player.GetSharedData<string>("job") == "LSPD" && vehicle.GetSharedData<string>("type") == "LSPD")
                         {
                             if (player.HasSharedData("licenceBp") && player.GetSharedData<bool>("licenceBp"))
                             {

@@ -13,7 +13,7 @@ namespace ServerSide
         private Ped ped = null;
         public Blip blip;
         private string mechType;
-        private VehicleDataManager vehicleDataManager = new VehicleDataManager();
+        
         private TextLabel mechanicText;
         public VehicleMechanic(Vector3 pedPosition, float pedHeading, Vector3 stationPosition, bool makeBlip, string mechType)
         {

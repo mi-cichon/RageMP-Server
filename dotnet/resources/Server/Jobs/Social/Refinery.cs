@@ -6,10 +6,10 @@ using GTANetworkAPI;
 
 namespace ServerSide
 {
-    public class Refinery
+    public static class Refinery
     {
-        public List<OilPump> oilPumps = new List<OilPump>();
-        List<Vector3> smallPumps = new List<Vector3>() 
+        public static List<OilPump> oilPumps = new List<OilPump>();
+        static List<Vector3> smallPumps = new List<Vector3>() 
         {
             new Vector3(1876.1083f, -1036.4635f, 79.453316f),
             new Vector3(1869.3633f, -1122.388f, 86.265205f),
@@ -31,7 +31,7 @@ namespace ServerSide
             new Vector3(1227.3159f, -1888.6815f, 38.495846f),
             new Vector3(1340.1947f, -1865.7709f, 57.090088f),
         };
-        List<Vector3> bigPumps = new List<Vector3>()
+        static List<Vector3> bigPumps = new List<Vector3>()
         {
             new Vector3(1883.5123f, -1027.9612f, 78.78056f),
             new Vector3(1362.6289f, -1883.235f, 56.730183f),
@@ -76,14 +76,12 @@ namespace ServerSide
             new Vector3(647.38135f, 2928.0122f, 41.995712f),
             new Vector3(700.7452f, 2883.4585f, 50.28966f)
         };
-        PlayerDataManager playerDataManager;
-        public Refinery(ref PlayerDataManager playerDataManager)
+        public static void InstantiateRefinery()
         {
-            this.playerDataManager = playerDataManager;
             Vector3 startPos = new Vector3(2747.9456f, 1332.1823f, 25.136633f);
             ColShape start = NAPI.ColShape.CreateCylinderColShape(startPos, 1.0f, 2.0f);
             start.SetSharedData("type", "refinery");
-            new CustomMarkers().CreateJobMarker(startPos, "Rafineria");
+            CustomMarkers.CreateJobMarker(startPos, "Rafineria");
             NAPI.Blip.CreateBlip(750, startPos, 0.8f, 69, name: "Praca: Rafineria", shortRange: true);
             foreach(Vector3 smallPump in smallPumps)
             {
@@ -98,7 +96,7 @@ namespace ServerSide
             refillPumps.Enabled = true;
         }
 
-        public void StartJob(Player player)
+        public static void StartJob(Player player)
         {
             if (!player.GetSharedData<bool>("nodriving"))
             {
@@ -112,21 +110,21 @@ namespace ServerSide
                     }
                     else
                     {
-                        playerDataManager.NotifyPlayer(player, "Masz inną pracę!");
+                        PlayerDataManager.NotifyPlayer(player, "Masz inną pracę!");
                     }
                 }
                 else
                 {
-                    playerDataManager.NotifyPlayer(player, "Nie odblokowałeś tej pracy!");
+                    PlayerDataManager.NotifyPlayer(player, "Nie odblokowałeś tej pracy!");
                 }
             }
             else
             {
-                playerDataManager.NotifyPlayer(player, "Nie możesz prowadzić pojazdów do " + player.GetSharedData<string>("nodrivingto") + "!");
+                PlayerDataManager.NotifyPlayer(player, "Nie możesz prowadzić pojazdów do " + player.GetSharedData<string>("nodrivingto") + "!");
             }
         }
 
-        public void RefillPumps(System.Object source, ElapsedEventArgs e)
+        public static void RefillPumps(System.Object source, ElapsedEventArgs e)
         {
             NAPI.Task.Run(() =>
             {

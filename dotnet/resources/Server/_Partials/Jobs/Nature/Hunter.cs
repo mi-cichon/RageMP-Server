@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using GTANetworkAPI;
 using Newtonsoft.Json;
+using ServerSide.Jobs;
 
 namespace ServerSide
 {
@@ -11,7 +12,7 @@ namespace ServerSide
         [RemoteEvent("startHunter")]
         public void StartHunter(Player player)
         {
-            hunter.startJob(player);
+            Hunter.startJob(player);
         }
 
         [RemoteEvent("removeHunterVehicle")]
@@ -33,7 +34,7 @@ namespace ServerSide
                 player.SetSharedData("job", "");
                 if (player.HasSharedData("jobveh"))
                 {
-                    var veh = vehicleDataManager.GetVehicleByRemoteId(Convert.ToUInt16(player.GetSharedData<Int32>("jobveh")));
+                    var veh = VehicleDataManager.GetVehicleByRemoteId(Convert.ToUInt16(player.GetSharedData<Int32>("jobveh")));
                     if (veh != null && veh.Exists)
                         veh.Delete();
                     player.SetSharedData("jobveh", -1111);
@@ -44,8 +45,8 @@ namespace ServerSide
         [RemoteEvent("animalHunted")]
         public void AnimalHunted(Player player, string pedstr)
         {
-            payoutManager.HunterPaymentAnimal(player, pedstr);
-            hunter.GetRandomAnimalAndSendToPlayer(player);
+            PayoutManager.HunterPaymentAnimal(player, pedstr);
+            Hunter.GetRandomAnimalAndSendToPlayer(player);
         }
 
         [RemoteEvent("takeHunterPelt")]
@@ -103,11 +104,11 @@ namespace ServerSide
             }, 1000);
             if (pelts.Count == 0)
             {
-                playerDataManager.NotifyPlayer(player, "Nie masz żadnych skór do sprzedania!");
+                PlayerDataManager.NotifyPlayer(player, "Nie masz żadnych skór do sprzedania!");
             }
             else
             {
-                payoutManager.HunterPaymentPelts(player, pelts);
+                PayoutManager.HunterPaymentPelts(player, pelts);
             }
         }
     }

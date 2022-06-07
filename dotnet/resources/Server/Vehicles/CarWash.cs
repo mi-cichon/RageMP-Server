@@ -7,7 +7,6 @@ namespace ServerSide
 {
     public class CarWash
     {
-        VehicleDataManager vehicleDataManager = new VehicleDataManager();
         public ColShape shape;
         Marker marker;
         Vector3 position, particlePosition;
@@ -39,8 +38,8 @@ namespace ServerSide
                         player.TriggerEvent("stopParticles");
                         vehicle.SetSharedData("wash", false);
                         vehicle.SetSharedData("veh_brake", false);
-                        vehicleDataManager.UpdateVehiclesWashTime(vehicle, DateTime.Now.AddDays(1).ToString());
-                        vehicleDataManager.UpdateVehiclesDirtLevel(vehicle, 0);
+                        VehicleDataManager.UpdateVehiclesWashTime(vehicle, DateTime.Now.AddDays(1).ToString());
+                        VehicleDataManager.UpdateVehiclesDirtLevel(vehicle, 0);
                     }
                     //anim.Delete();
                 }, delayTime: 10000);

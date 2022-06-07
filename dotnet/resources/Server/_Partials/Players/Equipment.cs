@@ -11,7 +11,7 @@ namespace ServerSide
         [RemoteEvent("updateEquipment")]
         public void UpdateEquipment(Player player, string equipmentString)
         {
-            playerDataManager.UpdatePlayersEquipment(player, equipmentString);
+            PlayerDataManager.UpdatePlayersEquipment(player, equipmentString);
         }
 
         [RemoteEvent("useItem")]
@@ -21,13 +21,13 @@ namespace ServerSide
             {
                 case 0:
                 case 1:
-                    playerDataManager.NotifyPlayer(player, "Zostałeś uleczony!");
+                    PlayerDataManager.NotifyPlayer(player, "Zostałeś uleczony!");
                     player.TriggerEvent("removeEqItem", itemId);
                     int newHealt = Math.Clamp(player.Health + 50, 50, 100);
                     player.Health = newHealt;
                     break;
                 case 2:
-                    playerDataManager.NotifyPlayer(player, "Zostałeś uleczony!");
+                    PlayerDataManager.NotifyPlayer(player, "Zostałeś uleczony!");
                     player.TriggerEvent("removeEqItem", itemId);
                     int newH = Math.Clamp(player.Health + 25, 25, 100);
                     player.Health = newH;
@@ -38,12 +38,12 @@ namespace ServerSide
                 case 8:
                 case 9:
                 case 10:
-                    playerDataManager.NotifyPlayer(player, "Skóry możesz sprzedać u myśliwego!");
+                    PlayerDataManager.NotifyPlayer(player, "Skóry możesz sprzedać u myśliwego!");
                     break;
                 case 11:
                     if (player.Vehicle == null)
                     {
-                        Vehicle closest = vehicleDataManager.GetClosestVehicle(player);
+                        Vehicle closest = VehicleDataManager.GetClosestVehicle(player);
                         if (closest != null && closest.Exists)
                         {
                             if (closest.HasSharedData("petrol"))
@@ -56,21 +56,21 @@ namespace ServerSide
                                 }
                                 closest.SetSharedData("petrol", petrol);
                                 player.TriggerEvent("removeEqItem", itemId);
-                                playerDataManager.NotifyPlayer(player, "Pojazd pomyślnie zatankowany!");
+                                PlayerDataManager.NotifyPlayer(player, "Pojazd pomyślnie zatankowany!");
                             }
                             else
                             {
-                                playerDataManager.NotifyPlayer(player, "Tego pojazdu nie można zatankować!");
+                                PlayerDataManager.NotifyPlayer(player, "Tego pojazdu nie można zatankować!");
                             }
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Nie stoisz w pobliżu żadnego pojazdu!");
+                            PlayerDataManager.NotifyPlayer(player, "Nie stoisz w pobliżu żadnego pojazdu!");
                         }
                     }
                     else
                     {
-                        playerDataManager.NotifyPlayer(player, "Nie możesz być w pojeździe aby tego użyć!");
+                        PlayerDataManager.NotifyPlayer(player, "Nie możesz być w pojeździe aby tego użyć!");
                     }
                     break;
                 case 12:
@@ -90,26 +90,26 @@ namespace ServerSide
                     switch (itemId)
                     {
                         case 900:
-                            playerDataManager.NotifyPlayer(player, "Podniosłeś fioletowego bratka!");
+                            PlayerDataManager.NotifyPlayer(player, "Podniosłeś fioletowego bratka!");
                             break;
                         case 901:
-                            playerDataManager.NotifyPlayer(player, "Podniosłeś różowego bratka!");
+                            PlayerDataManager.NotifyPlayer(player, "Podniosłeś różowego bratka!");
                             break;
                         case 902:
-                            playerDataManager.NotifyPlayer(player, "Podniosłeś żółtego bratka!");
+                            PlayerDataManager.NotifyPlayer(player, "Podniosłeś żółtego bratka!");
                             break;
                         case 903:
-                            playerDataManager.NotifyPlayer(player, "Podniosłeś figowca!");
+                            PlayerDataManager.NotifyPlayer(player, "Podniosłeś figowca!");
                             break;
                         case 904:
-                            playerDataManager.NotifyPlayer(player, "Podniosłeś dracenę!");
+                            PlayerDataManager.NotifyPlayer(player, "Podniosłeś dracenę!");
                             break;
                     }
                     player.TriggerEvent("fitItemInEquipment", itemId);
                 }
                 else
                 {
-                    playerDataManager.NotifyPlayer(player, "Roślina nie zmieściła się do Twojego ekwipunku!");
+                    PlayerDataManager.NotifyPlayer(player, "Roślina nie zmieściła się do Twojego ekwipunku!");
                 }
             }
             else if (type == "shop")
@@ -130,19 +130,19 @@ namespace ServerSide
                             cost = 250;
                             break;
                     }
-                    if (playerDataManager.UpdatePlayersMoney(player, -1 * cost))
+                    if (PlayerDataManager.UpdatePlayersMoney(player, -1 * cost))
                     {
                         player.TriggerEvent("addItemToEquipment", itemId);
-                        playerDataManager.NotifyPlayer(player, "Pomyślnie zakupiono przedmiot!");
+                        PlayerDataManager.NotifyPlayer(player, "Pomyślnie zakupiono przedmiot!");
                     }
                     else
                     {
-                        playerDataManager.NotifyPlayer(player, "Nie stać Cię na ten przedmiot!");
+                        PlayerDataManager.NotifyPlayer(player, "Nie stać Cię na ten przedmiot!");
                     }
                 }
                 else
                 {
-                    playerDataManager.NotifyPlayer(player, "Nie zmieścisz tego przedmiotu do ekwipunku!");
+                    PlayerDataManager.NotifyPlayer(player, "Nie zmieścisz tego przedmiotu do ekwipunku!");
                 }
             }
             else if(type == "rod")
@@ -163,25 +163,25 @@ namespace ServerSide
                         cost = 15000;
                         break;
                 }
-                if (playerDataManager.UpdatePlayersMoney(player, -1 * cost))
+                if (PlayerDataManager.UpdatePlayersMoney(player, -1 * cost))
                 {
                     player.TriggerEvent("addItemToEquipment", itemId);
-                    playerDataManager.NotifyPlayer(player, "Pomyślnie zakupiono przedmiot!");
+                    PlayerDataManager.NotifyPlayer(player, "Pomyślnie zakupiono przedmiot!");
                 }
                 else
                 {
-                    playerDataManager.NotifyPlayer(player, "Nie stać Cię na ten przedmiot!");
+                    PlayerDataManager.NotifyPlayer(player, "Nie stać Cię na ten przedmiot!");
                 }
             }
             else
             {
                 if (state)
                 {
-                    droppedItemsManager.ConfirmPickingUp(player, UInt64.Parse(type));
+                    DroppedItemsManager.ConfirmPickingUp(player, UInt64.Parse(type));
                 }
                 else
                 {
-                    playerDataManager.NotifyPlayer(player, "Nie zmieścisz tego przedmiotu do ekwipunku!");
+                    PlayerDataManager.NotifyPlayer(player, "Nie zmieścisz tego przedmiotu do ekwipunku!");
                 }
             }
 
@@ -190,34 +190,34 @@ namespace ServerSide
         [RemoteEvent("pickItemUp")]
         public void PickItemUp(Player player, string type)
         {
-            droppedItemsManager.PickItemUp(player, UInt64.Parse(type));
+            DroppedItemsManager.PickItemUp(player, UInt64.Parse(type));
         }
 
 
         [RemoteEvent("dropItem")]
         public void DropItem(Player player, int typeId, string itemName)
         {
-            if (typeId == 1000 && !playerDataManager.HasItem(player, 1000))
+            if (typeId == 1000 && !PlayerDataManager.HasItem(player, 1000))
             {
                 EndJob(player);
             }
-            droppedItemsManager.AddItem(player.Position - new Vector3(0, 0, 1), typeId, itemName);
+            DroppedItemsManager.AddItem(player.Position - new Vector3(0, 0, 1), typeId, itemName);
         }
 
         [RemoteEvent("updateEquipments")]
         public void UpdateEquipments(Player player, string equipment1, string equipment2, string eqId, Vehicle vehicle = null)
         {
-            playerDataManager.UpdatePlayersEquipment(player, equipment1);
+            PlayerDataManager.UpdatePlayersEquipment(player, equipment1);
             if (eqId.Contains('v'))
             {
                 eqId = eqId.Remove(0, 1);
                 int id;
                 if (Int32.TryParse(eqId, out id))
                 {
-                    Vehicle veh = vehicleDataManager.GetVehicleById(id.ToString());
+                    Vehicle veh = VehicleDataManager.GetVehicleById(id.ToString());
                     if (veh != null)
                     {
-                        vehicleDataManager.UpdateVehiclesTrunk(veh, equipment2);
+                        VehicleDataManager.UpdateVehiclesTrunk(veh, equipment2);
                     }
                 }
             }
@@ -227,7 +227,7 @@ namespace ServerSide
                 int id;
                 if (Int32.TryParse(eqId, out id))
                 {
-                    foreach (House house in houses.houses)
+                    foreach (House house in Houses.houses)
                     {
                         if (house.id == id)
                         {
@@ -258,7 +258,7 @@ namespace ServerSide
                         player.TriggerEvent("peltTaken", state);
                         break;
                     case 1000:
-                        fisherMan.ConfirmFishingRod(player);
+                        FisherMan.ConfirmFishingRod(player);
                         break;
                 }
             }
@@ -272,10 +272,10 @@ namespace ServerSide
                     case 8:
                     case 9:
                     case 10:
-                        playerDataManager.NotifyPlayer(player, "Nie zmieścisz tej skóry do ekwipunku!");
+                        PlayerDataManager.NotifyPlayer(player, "Nie zmieścisz tej skóry do ekwipunku!");
                         break;
                     case 1000:
-                        playerDataManager.NotifyPlayer(player, "Nie zmieścisz wędki do ekwipunku!");
+                        PlayerDataManager.NotifyPlayer(player, "Nie zmieścisz wędki do ekwipunku!");
                         break;
                 }
             }

@@ -9,32 +9,19 @@ using Newtonsoft.Json;
 using ServerSide.Jobs;
 namespace ServerSide
 {
-    public class CommandsManager
+    public static class CommandsManager
     {
-        PlayerDataManager playerDataManager;
-        VehicleDataManager vehicleDataManager = new VehicleDataManager();
-        Houses houses;
-        List<Report> reportsList = new List<Report>();
-        public List<CarDealer> carDealers = new List<CarDealer>();
-        OrgManager orgManager;
-        List<TuneBusiness> testTune;
-        LSPD lspd;
-        PayoutManager payoutManager;
-        Lawnmowing lawnmowing;
-        public CommandsManager(Houses houses, List<CarDealer> carDealers, List<Report> reportsList, PlayerDataManager pdm, ref OrgManager orgManager, ref List<TuneBusiness> testTune, ref LSPD lspd, ref PayoutManager payoutManager, ref Lawnmowing lawnmowing)
+        static List<Report> reportsList = new List<Report>();
+        public static List<CarDealer> carDealers = new List<CarDealer>();
+        static List<TuneBusiness> testTune;
+        public static void InstantiateCommandsManager(List<CarDealer> cDealers, List<Report> rList, ref List<TuneBusiness> tTune)
         {
-            this.houses = houses;
-            this.carDealers = carDealers;
-            this.reportsList = reportsList;
-            this.playerDataManager = pdm;
-            this.orgManager = orgManager;
-            this.testTune = testTune;
-            this.lspd = lspd;
-            this.payoutManager = payoutManager;
-            this.lawnmowing = lawnmowing;
+            carDealers = cDealers;
+            reportsList = rList;
+            testTune = tTune;
         }
 
-        public void ExecuteCommand(Player player, string command, string arguments)
+        public static void ExecuteCommand(Player player, string command, string arguments)
         {
             List<string> args = new List<string>();
             string argText = "";
@@ -66,28 +53,28 @@ namespace ServerSide
                         {
                             if (argText.Replace(" ", "").Length > 0)
                             {
-                                playerDataManager.SendMessageToOrg(player, argText);
+                                PlayerDataManager.SendMessageToOrg(player, argText);
                             }
                             else
                             {
-                                playerDataManager.NotifyPlayer(player, "Wiadomość nie może być pusta!");
+                                PlayerDataManager.NotifyPlayer(player, "Wiadomość nie może być pusta!");
                             }
                         }
                         else
-                            playerDataManager.NotifyPlayer(player, "Jesteś wyciszony do: " + player.GetSharedData<string>("mutedto"));
+                            PlayerDataManager.NotifyPlayer(player, "Jesteś wyciszony do: " + player.GetSharedData<string>("mutedto"));
                         break;
                     case "g":
                         if (!player.GetSharedData<bool>("muted"))
                             if(argText.Replace(" ", "").Length > 0)
                             {
-                                playerDataManager.SendGlobalMessage(player, argText);
+                                PlayerDataManager.SendGlobalMessage(player, argText);
                             }
                             else
                             {
-                                playerDataManager.NotifyPlayer(player, "Wiadomość nie może być pusta!");
+                                PlayerDataManager.NotifyPlayer(player, "Wiadomość nie może być pusta!");
                             }
                         else
-                            playerDataManager.NotifyPlayer(player, "Jesteś wyciszony do: " + player.GetSharedData<string>("mutedto"));
+                            PlayerDataManager.NotifyPlayer(player, "Jesteś wyciszony do: " + player.GetSharedData<string>("mutedto"));
                         break;
                     //case "pm":
                     //    if (!player.GetSharedData<bool>("muted"))
@@ -98,21 +85,21 @@ namespace ServerSide
                     //            string t = argText.Replace(p + " ", "");
                     //            if (t.Replace(" ", "").Length > 0)
                     //            {
-                    //                playerDataManager.SendPrivateMessage(player, p, t);
+                    //                PlayerDataManager.SendPrivateMessage(player, p, t);
                     //            }
                     //            else
                     //            {
-                    //                playerDataManager.NotifyPlayer(player, "Wiadomość nie może być pusta!");
+                    //                PlayerDataManager.NotifyPlayer(player, "Wiadomość nie może być pusta!");
                     //            }
                     //        }
                     //        else
                     //        {
-                    //            playerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
+                    //            PlayerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
                     //        }
                     //    }
                     //    else
                     //    {
-                    //        playerDataManager.NotifyPlayer(player, "Jesteś wyciszony do: " + player.GetSharedData<string>("mutedto"));
+                    //        PlayerDataManager.NotifyPlayer(player, "Jesteś wyciszony do: " + player.GetSharedData<string>("mutedto"));
                     //    }
                     //    break;
                     case "report":
@@ -122,28 +109,28 @@ namespace ServerSide
                             string t = argText.Replace(p + " ", "");
                             if (t.Replace(" ", "").Length > 0)
                             {
-                                Report report = playerDataManager.ReportAPlayer(player, p, t);
+                                Report report = PlayerDataManager.ReportAPlayer(player, p, t);
                                 if (report == null)
                                 {
-                                    playerDataManager.NotifyPlayer(player, "Nie znaleziono gracza!");
+                                    PlayerDataManager.NotifyPlayer(player, "Nie znaleziono gracza!");
                                 }
                                 else
                                 {
 
                                     reportsList.Add(report);
-                                    playerDataManager.NotifyAdmins();
-                                    playerDataManager.SendInfoToPlayer(player, $"Raport o ID {report.id} został pomyślnie wysłany!");
+                                    PlayerDataManager.NotifyAdmins();
+                                    PlayerDataManager.SendInfoToPlayer(player, $"Raport o ID {report.id} został pomyślnie wysłany!");
                                 }
                             }
                             else
                             {
-                                playerDataManager.NotifyPlayer(player, "Zgłoszenie nie może być puste!");
+                                PlayerDataManager.NotifyPlayer(player, "Zgłoszenie nie może być puste!");
                             }
                             
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
+                            PlayerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
                         }
                         break;
                     case "kierowcy":
@@ -151,32 +138,32 @@ namespace ServerSide
                         {
                             if(player.Vehicle != null && player.Vehicle.Exists && player.Vehicle.HasSharedData("drivers") && player.VehicleSeat == 0)
                             {
-                                playerDataManager.SendInfoToPlayer(player, $"Ostatni kierowcy {player.Vehicle.GetSharedData<Int32>("id")}: " + vehicleDataManager.GetVehiclesLastDrivers(player.Vehicle));
+                                PlayerDataManager.SendInfoToPlayer(player, $"Ostatni kierowcy {player.Vehicle.GetSharedData<Int32>("id")}: " + VehicleDataManager.GetVehiclesLastDrivers(player.Vehicle));
                             }
                             else
                             {
-                                playerDataManager.NotifyPlayer(player, "Kierowców pojazdu można sprawdzić tylko jako kierowca pojazdu osobistego!");
+                                PlayerDataManager.NotifyPlayer(player, "Kierowców pojazdu można sprawdzić tylko jako kierowca pojazdu osobistego!");
                             }
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
+                            PlayerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
                         }
                         break;
                     case "bonus":
                         if(arguments == null)
                         {
-                            playerDataManager.SendInfoToPlayer(player, $"Obecny bonus: {float.Parse(payoutManager.currentBonus[1]) * 100}% na {payoutManager.currentBonus[0]} do {payoutManager.bonusTime.ToShortTimeString()}");
+                            PlayerDataManager.SendInfoToPlayer(player, $"Obecny bonus: {float.Parse(PayoutManager.currentBonus[1]) * 100}% na {PayoutManager.currentBonus[0]} do {PayoutManager.bonusTime.ToShortTimeString()}");
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
+                            PlayerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
                         }
                         break;
                     //case "przelew":
                     //    if(args.Count == 1)
                     //    {
-                    //        Player target = playerDataManager.GetPlayerByRemoteId(args[0]);
+                    //        Player target = PlayerDataManager.GetPlayerByRemoteId(args[0]);
                     //        if(target != null && target != player)
                     //        {
                     //            if(target.Position.DistanceTo(player.Position) <= 10)
@@ -185,28 +172,28 @@ namespace ServerSide
                     //            }
                     //            else
                     //            {
-                    //                playerDataManager.NotifyPlayer(player, "Gracz jest za daleko!");
+                    //                PlayerDataManager.NotifyPlayer(player, "Gracz jest za daleko!");
                     //            }
                                 
                     //        }
                     //        else
                     //        {
-                    //            playerDataManager.NotifyPlayer(player, "Nie znaleziono gracza!");
+                    //            PlayerDataManager.NotifyPlayer(player, "Nie znaleziono gracza!");
                     //        }
                     //    }
                     //    else
                     //    {
-                    //        playerDataManager.NotifyPlayer(player, "Niepoprawna składnia komendy!");
+                    //        PlayerDataManager.NotifyPlayer(player, "Niepoprawna składnia komendy!");
                     //    }
                     //    break;
                     case "time":
                         if(arguments == null)
                         {
-                            playerDataManager.SendInfoToPlayer(player, DateTime.Now.ToString());
+                            PlayerDataManager.SendInfoToPlayer(player, DateTime.Now.ToString());
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Niepoprawna składnia komendy!");
+                            PlayerDataManager.NotifyPlayer(player, "Niepoprawna składnia komendy!");
                         }
                         break;
                     case "areszt":
@@ -220,32 +207,32 @@ namespace ServerSide
                                     if (player.HasSharedData("cuffedPlayer") && player.GetSharedData<Player>("cuffedPlayer") != null && player.GetSharedData<Player>("cuffedPlayer").Exists)
                                     {
                                         Player cuffed = player.GetSharedData<Player>("cuffedPlayer");
-                                        if (cuffed.Position.DistanceTo(lspd.ArrestPosition) <= 5)
+                                        if (cuffed.Position.DistanceTo(LSPD.ArrestPosition) <= 5)
                                         {
                                             cuffed.TriggerEvent("handCuff", player, false);
                                             cuffed.SetSharedData("handCuffed", false);
                                             player.ResetSharedData("cuffedPlayer");
-                                            playerDataManager.NotifyPlayer(cuffed, "Zostałeś aresztowany na " + time.ToString() + " minut.");
-                                            lspd.SetPlayerIntoArrest(cuffed, time);
+                                            PlayerDataManager.NotifyPlayer(cuffed, "Zostałeś aresztowany na " + time.ToString() + " minut.");
+                                            LSPD.SetPlayerIntoArrest(cuffed, time);
                                         }
                                         else
                                         {
-                                            playerDataManager.NotifyPlayer(player, "Gracza aresztować możesz jedynie na komendzie LSPD");
+                                            PlayerDataManager.NotifyPlayer(player, "Gracza aresztować możesz jedynie na komendzie LSPD");
                                         }
                                     }
                                     else
                                     {
-                                        playerDataManager.NotifyPlayer(player, "Aby aresztować gracza musisz go zakuć!");
+                                        PlayerDataManager.NotifyPlayer(player, "Aby aresztować gracza musisz go zakuć!");
                                     }
                                 }
                                 else
                                 {
-                                    playerDataManager.NotifyPlayer(player, "Czas musi być większy od 0!");
+                                    PlayerDataManager.NotifyPlayer(player, "Czas musi być większy od 0!");
                                 }
                             }
                             else
                             {
-                                playerDataManager.NotifyPlayer(player, "Niepoprawna składnia komendy!");
+                                PlayerDataManager.NotifyPlayer(player, "Niepoprawna składnia komendy!");
                             }
                         }
                         break;
@@ -263,30 +250,30 @@ namespace ServerSide
                             }
 
                             File.AppendAllText(@"positions.txt", position + Environment.NewLine, new UTF8Encoding(false, true));
-                            playerDataManager.NotifyPlayer(player, "Pozycja zapisana w pliku!");
+                            PlayerDataManager.NotifyPlayer(player, "Pozycja zapisana w pliku!");
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
+                            PlayerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
                         }
                         break;
                         //case "pmoff":
                         //    if(args.Count > 0)
                         //    {
                         //        player.SetSharedData("pmoff", argText);
-                        //        playerDataManager.NotifyPlayer(player, "Blokowanie wiadomości prywatnych włączone!");
+                        //        PlayerDataManager.NotifyPlayer(player, "Blokowanie wiadomości prywatnych włączone!");
                         //    }
                         //    else if(arguments == null)
                         //    {
                         //        player.SetSharedData("pmoff", "Brak.");
-                        //        playerDataManager.NotifyPlayer(player, "Blokowanie wiadomości prywatnych włączone!");
+                        //        PlayerDataManager.NotifyPlayer(player, "Blokowanie wiadomości prywatnych włączone!");
                         //    }
                         //    break;
                         //case "pmon":
                         //    if(arguments != null)
                         //    {
                         //        player.SetSharedData("pmoff", "");
-                        //        playerDataManager.NotifyPlayer(player, "Wyłączono blokowanie wiadomości prywatnych!");
+                        //        PlayerDataManager.NotifyPlayer(player, "Wyłączono blokowanie wiadomości prywatnych!");
                         //    }
                         //    break;
                 }
@@ -304,7 +291,7 @@ namespace ServerSide
                     //    }
                     //    else
                     //    {
-                    //        playerDataManager.NotifyPlayer(player, "Niepoprawna składnia komendy!");
+                    //        PlayerDataManager.NotifyPlayer(player, "Niepoprawna składnia komendy!");
                     //    }
                     //    break;
                     //case "anim2":
@@ -314,50 +301,50 @@ namespace ServerSide
                     //    }
                     //    else
                     //    {
-                    //        playerDataManager.NotifyPlayer(player, "Niepoprawna składnia komendy!");
+                    //        PlayerDataManager.NotifyPlayer(player, "Niepoprawna składnia komendy!");
                     //    }
                     //    break;
                     //case "a":
                     //    if (!player.GetSharedData<bool>("muted"))
                     //        if (argText.Replace(" ", "").Length > 0)
                     //        {
-                    //            playerDataManager.SendMessageToAdmins(player, argText);
+                    //            PlayerDataManager.SendMessageToAdmins(player, argText);
                     //        }
                     //        else
                     //        {
-                    //            playerDataManager.NotifyPlayer(player, "Wiadomość nie może być pusta!");
+                    //            PlayerDataManager.NotifyPlayer(player, "Wiadomość nie może być pusta!");
                     //        }
                     //    else
-                    //        playerDataManager.NotifyPlayer(player, "Jesteś wyciszony do: " + player.GetSharedData<string>("mutedto"));
+                    //        PlayerDataManager.NotifyPlayer(player, "Jesteś wyciszony do: " + player.GetSharedData<string>("mutedto"));
                     //    break;
                     //case "fix":
                     //    if(argsCount == 1)
                     //    {
-                    //        Vehicle veh = vehicleDataManager.GetVehicleById(args[0]);
+                    //        Vehicle veh = VehicleDataManager.GetVehicleById(args[0]);
                     //        if (veh != null)
                     //        {
-                    //            vehicleDataManager.RepairVehicle(veh);
+                    //            VehicleDataManager.RepairVehicle(veh);
                     //        }
                     //        else
                     //        {
-                    //            playerDataManager.NotifyPlayer(player, "Nie znaleziono pojazdu!");
+                    //            PlayerDataManager.NotifyPlayer(player, "Nie znaleziono pojazdu!");
                     //        }
                     //    }
                     //    break;
                     case "klucze":
                         if (argsCount == 2)
                         {
-                            Vehicle veh = vehicleDataManager.GetVehicleById(args[0]);
+                            Vehicle veh = VehicleDataManager.GetVehicleById(args[0]);
                             if (veh != null && veh.Exists && (uint)veh.GetSharedData<Int64>("owner") == player.SocialClubId)
                             {
-                                Player pl = playerDataManager.GetPlayerByRemoteId(args[1]);
+                                Player pl = PlayerDataManager.GetPlayerByRemoteId(args[1]);
                                 if (pl != null && pl.Exists)
                                 {
                                     if (pl.HasSharedData("carkeys") && veh.HasSharedData("id") && pl.GetSharedData<Int32>("carkeys") == veh.GetSharedData<Int32>("id"))
                                     {
                                         pl.SetSharedData("carkeys", -999999);
-                                        playerDataManager.NotifyPlayer(pl, "Twoje klucze do pojazdu o ID: " + veh.GetSharedData<Int32>("id").ToString() + " zostały unieważnione!");
-                                        playerDataManager.NotifyPlayer(player, "Odebrałeś klucze do pojazdu o ID: " + veh.GetSharedData<Int32>("id").ToString() + " graczowi " + pl.GetSharedData<string>("username") + "!");
+                                        PlayerDataManager.NotifyPlayer(pl, "Twoje klucze do pojazdu o ID: " + veh.GetSharedData<Int32>("id").ToString() + " zostały unieważnione!");
+                                        PlayerDataManager.NotifyPlayer(player, "Odebrałeś klucze do pojazdu o ID: " + veh.GetSharedData<Int32>("id").ToString() + " graczowi " + pl.GetSharedData<string>("username") + "!");
                                         if (pl.Vehicle == veh)
                                         {
                                             pl.WarpOutOfVehicle();
@@ -367,19 +354,19 @@ namespace ServerSide
                                     else
                                     {
                                         pl.SetSharedData("carkeys", veh.GetSharedData<Int32>("id"));
-                                        playerDataManager.NotifyPlayer(pl, "Otrzymałeś klucze do pojazdu o ID: " + veh.GetSharedData<Int32>("id").ToString() + "!");
-                                        playerDataManager.NotifyPlayer(player, "Udostępniłeś klucze do  pojazdu o ID: " + veh.GetSharedData<Int32>("id").ToString() + " graczowi " + pl.GetSharedData<string>("username") + "!");
+                                        PlayerDataManager.NotifyPlayer(pl, "Otrzymałeś klucze do pojazdu o ID: " + veh.GetSharedData<Int32>("id").ToString() + "!");
+                                        PlayerDataManager.NotifyPlayer(player, "Udostępniłeś klucze do  pojazdu o ID: " + veh.GetSharedData<Int32>("id").ToString() + " graczowi " + pl.GetSharedData<string>("username") + "!");
                                     }
 
                                 }
                                 else
                                 {
-                                    playerDataManager.NotifyPlayer(player, "Nie znaleziono gracza!");
+                                    PlayerDataManager.NotifyPlayer(player, "Nie znaleziono gracza!");
                                 }
                             }
                             else
                             {
-                                playerDataManager.NotifyPlayer(player, "Nie znaleziono pojazdu!");
+                                PlayerDataManager.NotifyPlayer(player, "Nie znaleziono pojazdu!");
                             }
 
                         }
@@ -390,12 +377,12 @@ namespace ServerSide
                             if(player.HasSharedData("tests_testing") && player.GetSharedData<bool>("tests_testing"))
                             {
                                 player.SetSharedData("tests_testing", false);
-                                playerDataManager.NotifyPlayer(player, "Włączono otrzymywanie bonusu!");
+                                PlayerDataManager.NotifyPlayer(player, "Włączono otrzymywanie bonusu!");
                             }
                             else
                             {
                                 player.SetSharedData("tests_testing", true);
-                                playerDataManager.NotifyPlayer(player, "Wyłączono otrzymywanie bonusu!");
+                                PlayerDataManager.NotifyPlayer(player, "Wyłączono otrzymywanie bonusu!");
                             }
                         }
                         break;
@@ -411,21 +398,21 @@ namespace ServerSide
                     //case "zakuj":
                     //    if (args.Count == 1)
                     //    {
-                    //        Player p = playerDataManager.GetPlayerByRemoteId(args[0]);
+                    //        Player p = PlayerDataManager.GetPlayerByRemoteId(args[0]);
                     //        if (p != null && (!p.HasSharedData("handCuffed") || p.HasSharedData("handCuffed") && !p.GetSharedData<bool>("handCuffed")) && p.Position.DistanceTo(player.Position) < 2)
                     //        {
                     //            p.TriggerEvent("handCuff", player, true);
                     //        }
                     //        else
                     //        {
-                    //            playerDataManager.NotifyPlayer(player, "Nie odnaleziono gracza lub jest on za daleko!");
+                    //            PlayerDataManager.NotifyPlayer(player, "Nie odnaleziono gracza lub jest on za daleko!");
                     //        }
                     //    }
                     //    break;
                     //case "rozkuj":
                     //    if (args.Count == 1)
                     //    {
-                    //        Player p = playerDataManager.GetPlayerByRemoteId(args[0]);
+                    //        Player p = PlayerDataManager.GetPlayerByRemoteId(args[0]);
                     //        if (p != null && p.HasSharedData("handCuffed") && p.GetSharedData<bool>("handCuffed"))
                     //        {
                     //            if (player.HasSharedData("cuffedPlayer") && player.GetSharedData<Player>("cuffedPlayer") == p.Handle)
@@ -436,13 +423,13 @@ namespace ServerSide
                     //            }
                     //            else
                     //            {
-                    //                playerDataManager.NotifyPlayer(player, "Nie Ty zakułeś tego gracza!");
+                    //                PlayerDataManager.NotifyPlayer(player, "Nie Ty zakułeś tego gracza!");
                     //            }
 
                     //        }
                     //        else
                     //        {
-                    //            playerDataManager.NotifyPlayer(player, "Ten gracz nie jest zakuty!");
+                    //            PlayerDataManager.NotifyPlayer(player, "Ten gracz nie jest zakuty!");
                     //        }
                     //    }
                     //    break;
@@ -454,7 +441,7 @@ namespace ServerSide
                             {
                                 player.SetSharedData("lspd_duty", false);
                                 player.RemoveAllWeapons();
-                                playerDataManager.LoadPlayersClothes(player);
+                                PlayerDataManager.LoadPlayersClothes(player);
                             }
                             else
                             {
@@ -481,7 +468,7 @@ namespace ServerSide
                         break;
                     case "cars":
                         player.Position = new Vector3(-113.45276f, -944.86304f, 465.4191f);
-                        player.TriggerEvent("showCars", vehicleDataManager.GetAllVehiclesModels());
+                        player.TriggerEvent("showCars", VehicleDataManager.GetAllVehiclesModels());
                         break;
                     case "hash":
                         if (argsCount == 1)
@@ -526,7 +513,7 @@ namespace ServerSide
                             }
                             catch (Exception)
                             {
-                                playerDataManager.NotifyPlayer(player, "Coś zjebałeś");
+                                PlayerDataManager.NotifyPlayer(player, "Coś zjebałeś");
                             }
                         }
                         break;
@@ -552,7 +539,7 @@ namespace ServerSide
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
+                            PlayerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
                         }
                         break;
                     case "fdelete":
@@ -567,39 +554,39 @@ namespace ServerSide
                             }
                         }
                         else
-                            playerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
+                            PlayerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
                         break;
                     case "kary":
                         if (argsCount == 1)
                         {
                             string name = args[0];
-                            string social = playerDataManager.GetPlayersSocialByName(name);
+                            string social = PlayerDataManager.GetPlayersSocialByName(name);
                             if(social != "")
                             {
-                                List<string[]> penalties = playerDataManager.GetPlayersPenalties(social, name);
+                                List<string[]> penalties = PlayerDataManager.GetPlayersPenalties(social, name);
                                 if(penalties.Count > 0)
                                 {
                                     player.TriggerEvent("openPenaltiesBrowser", JsonConvert.SerializeObject(penalties));
                                 }
                                 else
                                 {
-                                    playerDataManager.NotifyPlayer(player, "Gracz nie ma żadnych kar!");
+                                    PlayerDataManager.NotifyPlayer(player, "Gracz nie ma żadnych kar!");
                                 }
                             }
                             else
                             {
-                                playerDataManager.NotifyPlayer(player, "Nie odnaleziono gracza!");
+                                PlayerDataManager.NotifyPlayer(player, "Nie odnaleziono gracza!");
                             }
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
+                            PlayerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
                         }
                         break;
                     case "vtpto":
                         if (argsCount == 1)
                         {
-                            Vehicle veh = vehicleDataManager.GetVehicleById(args[0]);
+                            Vehicle veh = VehicleDataManager.GetVehicleById(args[0]);
                             if (veh != null)
                             {
                                 if (player.Vehicle == null)
@@ -609,23 +596,23 @@ namespace ServerSide
                             }
                             else
                             {
-                                playerDataManager.NotifyPlayer(player, "Nie znaleziono pojazdu!");
+                                PlayerDataManager.NotifyPlayer(player, "Nie znaleziono pojazdu!");
                             }
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
+                            PlayerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
                         }
                         break;
                     case "vtphere":
                         if (argsCount == 1)
                         {
-                            Vehicle veh = vehicleDataManager.GetVehicleById(args[0]);
+                            Vehicle veh = VehicleDataManager.GetVehicleById(args[0]);
                             if (veh != null)
                             {
                                 if (veh.HasSharedData("market") && veh.GetSharedData<bool>("market"))
                                 {
-                                    playerDataManager.NotifyPlayer(player, $"Pojazd jest na giełdzie!");
+                                    PlayerDataManager.NotifyPlayer(player, $"Pojazd jest na giełdzie!");
                                     return;
                                 }
                                 veh.SetSharedData("lastpos", player.Position);
@@ -636,53 +623,53 @@ namespace ServerSide
                                     NAPI.Task.Run(() =>
                                     {
                                         veh.SetSharedData("veh_brake", true);
-                                        vehicleDataManager.UpdateVehiclesLastPos(veh);
+                                        VehicleDataManager.UpdateVehiclesLastPos(veh);
                                     }, 5000);
                                 }
                                 else
                                 {
-                                    vehicleDataManager.UpdateVehiclesLastPos(veh);
+                                    VehicleDataManager.UpdateVehiclesLastPos(veh);
                                 }
                             }
                             else
                             {
-                                playerDataManager.NotifyPlayer(player, "Nie znaleziono pojazdu!");
+                                PlayerDataManager.NotifyPlayer(player, "Nie znaleziono pojazdu!");
                             }
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
+                            PlayerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
                         }
                         break;
 
                     case "tpto":
                         if (argsCount == 1)
                         {
-                            Player pl = playerDataManager.GetPlayerByRemoteId(args[0]);
+                            Player pl = PlayerDataManager.GetPlayerByRemoteId(args[0]);
                             if (pl != null && pl.Exists)
                             {
                                 player.Position = pl.Position;
                             }
                             else
                             {
-                                playerDataManager.NotifyPlayer(player, "Nie znaleziono gracza!");
+                                PlayerDataManager.NotifyPlayer(player, "Nie znaleziono gracza!");
                             }
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
+                            PlayerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
                         }
                         break;
 
                     case "tphere":
                         if (argsCount == 1)
                         {
-                            Player p = playerDataManager.GetPlayerByRemoteId(args[0]);
+                            Player p = PlayerDataManager.GetPlayerByRemoteId(args[0]);
                             if (p != null)
                             {
                                 if((p.HasSharedData("arrested") && p.GetSharedData<bool>("arrested")) || (p.HasSharedData("handCuffed") && p.GetSharedData<bool>("handCuffed")))
                                 {
-                                    playerDataManager.NotifyPlayer(player, "Nie można teleportować osób aresztowanych");
+                                    PlayerDataManager.NotifyPlayer(player, "Nie można teleportować osób aresztowanych");
                                 }
                                 else
                                 {
@@ -692,40 +679,40 @@ namespace ServerSide
                                 
                             else
                             {
-                                playerDataManager.NotifyPlayer(player, "Nie znaleziono gracza!");
+                                PlayerDataManager.NotifyPlayer(player, "Nie znaleziono gracza!");
                             }
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
+                            PlayerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
                         }
                         break;
 
                     case "dp":
                         if (argsCount == 1)
                         {
-                            Vehicle veh1 = vehicleDataManager.GetVehicleById(args[0]);
+                            Vehicle veh1 = VehicleDataManager.GetVehicleById(args[0]);
                             if (veh1 != null)
                             {
                                 if(veh1.HasSharedData("market") && veh1.GetSharedData<bool>("market"))
                                 {
-                                    playerDataManager.NotifyPlayer(player, "Pojazd jest na giełdzie!");
+                                    PlayerDataManager.NotifyPlayer(player, "Pojazd jest na giełdzie!");
                                 }
                                 else
                                 {
-                                    vehicleDataManager.UpdateVehicleSpawned(veh1, false);
-                                    playerDataManager.NotifyPlayer(player, $"Pojazd o ID: {args[0]} został przeniesiony do przechowalni!");
+                                    VehicleDataManager.UpdateVehicleSpawned(veh1, false);
+                                    PlayerDataManager.NotifyPlayer(player, $"Pojazd o ID: {args[0]} został przeniesiony do przechowalni!");
                                     veh1.Delete();
                                 }
                             }
                             else
                             {
-                                playerDataManager.NotifyPlayer(player, "Nie znaleziono pojazdu!");
+                                PlayerDataManager.NotifyPlayer(player, "Nie znaleziono pojazdu!");
                             }
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
+                            PlayerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
                         }
                         break;
 
@@ -736,30 +723,30 @@ namespace ServerSide
                             Vehicle veh2 = null;
                             if (Int32.TryParse(args[0], out id))
                             {
-                                veh2 = vehicleDataManager.CreatePersonalVehicle(id, player.Position, player.Heading, false);
+                                veh2 = VehicleDataManager.CreatePersonalVehicle(id, player.Position, player.Heading, false);
                             }
                             if (veh2 != null)
                             {
-                                vehicleDataManager.UpdateVehicleSpawned(veh2, true);
-                                vehicleDataManager.UpdateVehiclesLastPos(veh2);
-                                orgManager.SetVehiclesOrg(veh2);
-                                playerDataManager.NotifyPlayer(player, $"Pojazd o ID: {args[0]} wyciągnięty!");
+                                VehicleDataManager.UpdateVehicleSpawned(veh2, true);
+                                VehicleDataManager.UpdateVehiclesLastPos(veh2);
+                                OrgManager.SetVehiclesOrg(veh2);
+                                PlayerDataManager.NotifyPlayer(player, $"Pojazd o ID: {args[0]} wyciągnięty!");
 
                             }
                             else
                             {
-                                playerDataManager.NotifyPlayer(player, "Nie znaleziono pojazdu!");
+                                PlayerDataManager.NotifyPlayer(player, "Nie znaleziono pojazdu!");
                             }
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
+                            PlayerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
                         }
                         break;
                     case "spec":
                         if (argsCount == 1)
                         {
-                            Player pl = playerDataManager.GetPlayerByRemoteId(args[0]);
+                            Player pl = PlayerDataManager.GetPlayerByRemoteId(args[0]);
                             if (pl != null)
                             {
                                 player.Position = new Vector3(pl.Position.X, pl.Position.Y, pl.Position.Z + 10);
@@ -770,7 +757,7 @@ namespace ServerSide
                             }
                             else
                             {
-                                playerDataManager.NotifyPlayer(player, "Nie znaleziono gracza!");
+                                PlayerDataManager.NotifyPlayer(player, "Nie znaleziono gracza!");
                             }
                         }
                         break;
@@ -786,14 +773,14 @@ namespace ServerSide
                     case "getowner":
                         if (argsCount == 1)
                         {
-                            string vehowner = vehicleDataManager.GetVehiclesOwnerName(args[0]);
+                            string vehowner = VehicleDataManager.GetVehiclesOwnerName(args[0]);
                             if (vehowner != "")
                             {
-                                playerDataManager.SendInfoToPlayer(player, "Pojazd należy do " + vehowner);
+                                PlayerDataManager.SendInfoToPlayer(player, "Pojazd należy do " + vehowner);
                             }
                             else
                             {
-                                playerDataManager.NotifyPlayer(player, "Nie odnaleziono pojazdu!");
+                                PlayerDataManager.NotifyPlayer(player, "Nie odnaleziono pojazdu!");
                             }
                         }
                         break;
@@ -801,44 +788,44 @@ namespace ServerSide
                         if (arguments == null)
                             player.TriggerEvent("teleportToWaypoint");
                         else
-                            playerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
+                            PlayerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
                         break;
                     case "warn":
                         if (argsCount >= 2)
                         {
-                            Player p = playerDataManager.GetPlayerByRemoteId(args[0]);
+                            Player p = PlayerDataManager.GetPlayerByRemoteId(args[0]);
                             if (p != null)
                             {
                                 string reason = argText.Replace(args[0], "").TrimStart(' ');
-                                playerDataManager.warnPlayer(p, reason, player);
+                                PlayerDataManager.warnPlayer(p, reason, player);
                             }
                             else
                             {
-                                playerDataManager.NotifyPlayer(player, "Nie znaleziono gracza!");
+                                PlayerDataManager.NotifyPlayer(player, "Nie znaleziono gracza!");
                             }
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
+                            PlayerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
                         }
                         break;
                     case "kick":
                         if (argsCount >= 2)
                         {
-                            Player p = playerDataManager.GetPlayerByRemoteId(args[0]);
+                            Player p = PlayerDataManager.GetPlayerByRemoteId(args[0]);
                             if (p != null)
                             {
                                 string reason = argText.Replace(args[0], "").TrimStart(' ');
-                                playerDataManager.kickPlayer(p, reason, player);
+                                PlayerDataManager.kickPlayer(p, reason, player);
                             }
                             else
                             {
-                                playerDataManager.NotifyPlayer(player, "Nie znaleziono gracza!");
+                                PlayerDataManager.NotifyPlayer(player, "Nie znaleziono gracza!");
                             }
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
+                            PlayerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
                         }
                         break;
                     case "getpos":
@@ -855,11 +842,11 @@ namespace ServerSide
                             }
                             
                             File.AppendAllText(@"positions.txt", position + Environment.NewLine, new UTF8Encoding(false, true));
-                            playerDataManager.NotifyPlayer(player, "Pozycja zapisana w pliku!");
+                            PlayerDataManager.NotifyPlayer(player, "Pozycja zapisana w pliku!");
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
+                            PlayerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
                         }
                         break;
 
@@ -867,11 +854,11 @@ namespace ServerSide
                         if (argsCount > 0)
                         {
                             File.AppendAllText(@"notes.txt", player.GetSharedData<string>("username") + ": " + argText + Environment.NewLine, new UTF8Encoding(false, true));
-                            playerDataManager.NotifyPlayer(player, "Notatka zapisana w pliku!");
+                            PlayerDataManager.NotifyPlayer(player, "Notatka zapisana w pliku!");
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
+                            PlayerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
                         }
                         break;
                 }
@@ -885,20 +872,20 @@ namespace ServerSide
                     case "coflic":
                         if (argsCount >= 2)
                         {
-                            Player p = playerDataManager.GetPlayerByRemoteId(args[0]);
+                            Player p = PlayerDataManager.GetPlayerByRemoteId(args[0]);
                             if (p != null)
                             {
                                 string reason = argText.Replace(args[0], "").TrimStart(' ');
-                                playerDataManager.unLicence(p, reason, player);
+                                PlayerDataManager.unLicence(p, reason, player);
                             }
                             else
                             {
-                                playerDataManager.NotifyPlayer(player, "Nie znaleziono gracza!");
+                                PlayerDataManager.NotifyPlayer(player, "Nie znaleziono gracza!");
                             }
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
+                            PlayerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
                         }
                         break;
 
@@ -906,40 +893,40 @@ namespace ServerSide
                     case "licence":
                         if (argsCount >= 3)
                         {
-                            Player p = playerDataManager.GetPlayerByRemoteId(args[0]);
+                            Player p = PlayerDataManager.GetPlayerByRemoteId(args[0]);
                             if (p != null)
                             {
                                 string reason = argText.Replace(args[0], "").Replace(args[1], "").TrimStart(' ');
-                                playerDataManager.takeLicence(p, args[1], reason, player);
+                                PlayerDataManager.takeLicence(p, args[1], reason, player);
                             }
                             else
                             {
-                                playerDataManager.NotifyPlayer(player, "Nie znaleziono gracza!");
+                                PlayerDataManager.NotifyPlayer(player, "Nie znaleziono gracza!");
                             }
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
+                            PlayerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
                         }
                         break;
 
                     case "mute":
                         if (argsCount >= 3)
                         {
-                            Player p = playerDataManager.GetPlayerByRemoteId(args[0]);
+                            Player p = PlayerDataManager.GetPlayerByRemoteId(args[0]);
                             if (p != null)
                             {
                                 string reason = argText.Replace(args[0], "").Replace(args[1], "").TrimStart(' ');
-                                playerDataManager.mutePlayer(p, args[1], reason, player);
+                                PlayerDataManager.mutePlayer(p, args[1], reason, player);
                             }
                             else
                             {
-                                playerDataManager.NotifyPlayer(player, "Nie znaleziono gracza!");
+                                PlayerDataManager.NotifyPlayer(player, "Nie znaleziono gracza!");
                             }
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
+                            PlayerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
                         }
                         break;
                 }
@@ -953,20 +940,20 @@ namespace ServerSide
                     case "ban":
                         if (argsCount >= 3)
                         {
-                            Player p = playerDataManager.GetPlayerByRemoteId(args[0]);
+                            Player p = PlayerDataManager.GetPlayerByRemoteId(args[0]);
                             if (p != null)
                             {
                                 string reason = argText.Replace(args[0], "").Replace(args[1], "").TrimStart(' ');
-                                playerDataManager.banPlayer(p, args[1], reason, player);
+                                PlayerDataManager.banPlayer(p, args[1], reason, player);
                             }
                             else
                             {
-                                playerDataManager.NotifyPlayer(player, "Nie znaleziono gracza!");
+                                PlayerDataManager.NotifyPlayer(player, "Nie znaleziono gracza!");
                             }
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
+                            PlayerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
                         }
                         break;
 
@@ -981,12 +968,12 @@ namespace ServerSide
                             }
                             else
                             {
-                                playerDataManager.NotifyPlayer(player, "Podano błędne wartości!");
+                                PlayerDataManager.NotifyPlayer(player, "Podano błędne wartości!");
                             }
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
+                            PlayerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
                         }
                         break;
                     case "kys":
@@ -996,7 +983,7 @@ namespace ServerSide
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
+                            PlayerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
                         }
                         break;
                 }
@@ -1010,22 +997,22 @@ namespace ServerSide
                     case "setday":
                         if (arguments == null)
                         {
-                            playerDataManager.time = new DateTime(2000, 12, 12, 12, 0, 0);
+                            PlayerDataManager.time = new DateTime(2000, 12, 12, 12, 0, 0);
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
+                            PlayerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
                         }
                         break;
 
                     case "setnight":
                         if (arguments == null)
                         {
-                            playerDataManager.time = new DateTime(2000, 12, 12, 0, 0, 0);
+                            PlayerDataManager.time = new DateTime(2000, 12, 12, 0, 0, 0);
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
+                            PlayerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
                         }
                         break;
                 }
@@ -1041,11 +1028,11 @@ namespace ServerSide
                 //         {
                 //             string position = $"new Vector3({player.Position.X.ToString().Replace(',', '.')}f, {player.Position.Y.ToString().Replace(',', '.')}f, {player.Position.Z.ToString().Replace(',', '.')}f); heading: {player.Heading.ToString().Replace(',', '.')}f  -  {argText}";
                 //             File.AppendAllText(@"positions.txt", position + Environment.NewLine, new UTF8Encoding(false, true));
-                //             playerDataManager.NotifyPlayer(player, "Pozycja zapisana w pliku!");
+                //             PlayerDataManager.NotifyPlayer(player, "Pozycja zapisana w pliku!");
                 //         }
                 //         else
                 //         {
-                //             playerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
+                //             PlayerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
                 //         }
                 //         break;
 
@@ -1053,11 +1040,11 @@ namespace ServerSide
                 //         if (argsCount > 0)
                 //         {
                 //             File.AppendAllText(@"notes.txt", player.GetSharedData<string>("username") + ": " + argText + Environment.NewLine, new UTF8Encoding(false, true));
-                //             playerDataManager.NotifyPlayer(player, "Notatka zapisana w pliku!");
+                //             PlayerDataManager.NotifyPlayer(player, "Notatka zapisana w pliku!");
                 //         }
                 //         else
                 //         {
-                //             playerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
+                //             PlayerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
                 //         }
                 //         break;
                 // }
@@ -1079,16 +1066,16 @@ namespace ServerSide
                                 string type = args[0];
                                 int price = Convert.ToInt32(args[1]);
                                 Vector3 pos = player.Position;
-                                houses.AddHouse(pos, type, price);
+                                Houses.AddHouse(pos, type, price);
                             }
                             catch (Exception)
                             {
-                                playerDataManager.NotifyPlayer(player, "Podałeś nieprawidłową cenę!");
+                                PlayerDataManager.NotifyPlayer(player, "Podałeś nieprawidłową cenę!");
                             }
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
+                            PlayerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
                         }
                         break;
                     case "komis":
@@ -1117,7 +1104,7 @@ namespace ServerSide
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
+                            PlayerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
                         }
                         break;
                     case "ray":
@@ -1126,19 +1113,19 @@ namespace ServerSide
                     case "sound":
                         if (argsCount == 1)
                         {
-                            Player pla = playerDataManager.GetPlayerByRemoteId(args[0]);
+                            Player pla = PlayerDataManager.GetPlayerByRemoteId(args[0]);
                             if (pla != null && pla.Exists)
                             {
                                 pla.TriggerEvent("playmusic");
                             }
                             else
                             {
-                                playerDataManager.NotifyPlayer(player, "Nie znaleziono gracza!");
+                                PlayerDataManager.NotifyPlayer(player, "Nie znaleziono gracza!");
                             }
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
+                            PlayerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
                         }
                         break;
                     case "xmas":
@@ -1163,12 +1150,12 @@ namespace ServerSide
                                 }
                                 else
                                 {
-                                    playerDataManager.NotifyPlayer(player, "Tylko w furce!");
+                                    PlayerDataManager.NotifyPlayer(player, "Tylko w furce!");
                                 }
                             }
                             else
                             {
-                                playerDataManager.NotifyPlayer(player, "Nieprawidłowe wartości!");
+                                PlayerDataManager.NotifyPlayer(player, "Nieprawidłowe wartości!");
                             }
                         }
                         break;
@@ -1184,12 +1171,12 @@ namespace ServerSide
                                 }
                                 else
                                 {
-                                    playerDataManager.NotifyPlayer(player, "Tylko w furce!");
+                                    PlayerDataManager.NotifyPlayer(player, "Tylko w furce!");
                                 }
                             }
                             else
                             {
-                                playerDataManager.NotifyPlayer(player, "Nieprawidłowe wartości!");
+                                PlayerDataManager.NotifyPlayer(player, "Nieprawidłowe wartości!");
                             }
                         }
                         break;
@@ -1225,19 +1212,19 @@ namespace ServerSide
                     case "bomba":
                         if (argsCount == 2)
                         {
-                            Player play = playerDataManager.GetPlayerByRemoteId(args[0]);
+                            Player play = PlayerDataManager.GetPlayerByRemoteId(args[0]);
                             if (play != null && play.Exists)
                             {
                                 play.TriggerEvent("openTrollBrowser", args[1]);
                             }
                             else
                             {
-                                playerDataManager.NotifyPlayer(player, "Nie znaleziono gracza!");
+                                PlayerDataManager.NotifyPlayer(player, "Nie znaleziono gracza!");
                             }
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
+                            PlayerDataManager.NotifyPlayer(player, "Nieprawidłowa składnia komendy!");
                         }
                         break;
                     case "showbones":
@@ -1296,8 +1283,8 @@ namespace ServerSide
                     case "newbonus":
                         if(arguments == null)
                         {
-                            string[] bonus = payoutManager.SetNewBonus();
-                            playerDataManager.SendInfoMessageToAllPlayers($"Wylosowano nowy bonus {float.Parse(bonus[1]) * 100}% na: {bonus[0]} do: {payoutManager.bonusTime}");
+                            string[] bonus = PayoutManager.SetNewBonus();
+                            PlayerDataManager.SendInfoMessageToAllPlayers($"Wylosowano nowy bonus {float.Parse(bonus[1]) * 100}% na: {bonus[0]} do: {PayoutManager.bonusTime}");
                         }
                         break;
                     case "logcar":
@@ -1315,43 +1302,43 @@ namespace ServerSide
                         }
                         if (closest2 != null && closest2.vehicle.Exists)
                         {
-                            playerDataManager.SendInfoToPlayer(player, JsonConvert.SerializeObject(closest2.vehicle));
+                            PlayerDataManager.SendInfoToPlayer(player, JsonConvert.SerializeObject(closest2.vehicle));
                         }
                         break;
-                    case "lspdadd":
-                        Player pl = playerDataManager.GetPlayerByRemoteId(args[0]);
+                    case "LSPDadd":
+                        Player pl = PlayerDataManager.GetPlayerByRemoteId(args[0]);
                         if (pl != null && pl.Exists)
                         {
-                            if(lspd.AddPlayerToGroup(pl))
+                            if(LSPD.AddPlayerToGroup(pl))
                             {
-                                playerDataManager.NotifyPlayer(player, "Pomyślnie dodano gracza do frakcji!");
+                                PlayerDataManager.NotifyPlayer(player, "Pomyślnie dodano gracza do frakcji!");
                             }
                             else
                             {
-                                playerDataManager.NotifyPlayer(player, "Dodanie gracza nie powiodło się!");
+                                PlayerDataManager.NotifyPlayer(player, "Dodanie gracza nie powiodło się!");
                             }
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Nie znaleziono gracza!");
+                            PlayerDataManager.NotifyPlayer(player, "Nie znaleziono gracza!");
                         }
                         break;
-                    case "lspdremove":
-                        Player p = playerDataManager.GetPlayerByRemoteId(args[0]);
+                    case "LSPDremove":
+                        Player p = PlayerDataManager.GetPlayerByRemoteId(args[0]);
                         if (p != null && p.Exists)
                         {
-                            if (lspd.RemovePlayerFromGroup(p))
+                            if (LSPD.RemovePlayerFromGroup(p))
                             {
-                                playerDataManager.NotifyPlayer(player, "Pomyślnie usunięto gracza do frakcji!");
+                                PlayerDataManager.NotifyPlayer(player, "Pomyślnie usunięto gracza do frakcji!");
                             }
                             else
                             {
-                                playerDataManager.NotifyPlayer(player, "Usunięcie gracza nie powiodło się!");
+                                PlayerDataManager.NotifyPlayer(player, "Usunięcie gracza nie powiodło się!");
                             }
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Nie znaleziono gracza!");
+                            PlayerDataManager.NotifyPlayer(player, "Nie znaleziono gracza!");
                         }
                         break;
                     case "brama":
@@ -1360,7 +1347,7 @@ namespace ServerSide
                             int a;
                             if(int.TryParse(args[0], out a))
                             {
-                                lspd.SwitchMainGate(a == 0 ? false : true);
+                                LSPD.SwitchMainGate(a == 0 ? false : true);
                             }
                         }
                         break;
@@ -1369,7 +1356,7 @@ namespace ServerSide
                         {
                             int id;
                             if (int.TryParse(args[0], out id))
-                                playerDataManager.SendInfoToPlayer(player, NAPI.Vehicle.GetVehicleMod(player.Vehicle.Handle, id).ToString());
+                                PlayerDataManager.SendInfoToPlayer(player, NAPI.Vehicle.GetVehicleMod(player.Vehicle.Handle, id).ToString());
                         }
                         break;
                     case "setmod":
@@ -1389,15 +1376,15 @@ namespace ServerSide
                     case "maxpoints":
                         if(args.Count == 1)
                         {
-                            Player pointsPl = playerDataManager.GetPlayerByRemoteId(args[0]);
+                            Player pointsPl = PlayerDataManager.GetPlayerByRemoteId(args[0]);
                             if (pointsPl != null && pointsPl.Exists)
                             {
-                                playerDataManager.MaxPlayersJobPoints(pointsPl);
-                                playerDataManager.NotifyPlayer(player, "Pomyślnie zwiększono punkty pracy gracza do 2000!");
+                                PlayerDataManager.MaxPlayersJobPoints(pointsPl);
+                                PlayerDataManager.NotifyPlayer(player, "Pomyślnie zwiększono punkty pracy gracza do 2000!");
                             }
                             else
                             {
-                                playerDataManager.NotifyPlayer(player, "Nie znaleziono gracza!");
+                                PlayerDataManager.NotifyPlayer(player, "Nie znaleziono gracza!");
                             }
                         }
                         break;
@@ -1428,7 +1415,7 @@ namespace ServerSide
             }
         }
 
-        public void ExecuteConsoleCommand(string cmd)
+        public static void ExecuteConsoleCommand(string cmd)
         {
             string command;
             string arguments;
@@ -1466,107 +1453,107 @@ namespace ServerSide
                 case "newbonus":
                     if (arguments == null)
                     {
-                        string[] bonus = payoutManager.SetNewBonus();
-                        playerDataManager.SendInfoMessageToAllPlayers($"Wylosowano nowy bonus {float.Parse(bonus[1]) * 100}% na: {bonus[0]} do: {payoutManager.bonusTime}");
-                        playerDataManager.SendInfoToConsole($"Wylosowano nowy bonus {float.Parse(bonus[1]) * 100}% na: {bonus[0]} do: {payoutManager.bonusTime}");
+                        string[] bonus = PayoutManager.SetNewBonus();
+                        PlayerDataManager.SendInfoMessageToAllPlayers($"Wylosowano nowy bonus {float.Parse(bonus[1]) * 100}% na: {bonus[0]} do: {PayoutManager.bonusTime}");
+                        PlayerDataManager.SendInfoToConsole($"Wylosowano nowy bonus {float.Parse(bonus[1]) * 100}% na: {bonus[0]} do: {PayoutManager.bonusTime}");
                     }
                     break;
                 case "warn":
                     if (argsCount >= 2)
                     {
-                        Player p = playerDataManager.GetPlayerByRemoteId(args[0]);
+                        Player p = PlayerDataManager.GetPlayerByRemoteId(args[0]);
                         if (p != null)
                         {
                             p.TriggerEvent("warnSound");
                             p.TriggerEvent("warnPlayer");
                             string reason = argText.Replace(args[0], "").TrimStart(' ');
-                            playerDataManager.SendPenaltyToPlayers(p.GetSharedData<string>("username") + " otrzymał ostrzeżenie od CONSOLE. Powód: " + reason);
-                            playerDataManager.AddPenaltyToDB(p.SocialClubId.ToString(), "CONSOLE", "warn", DateTime.Now.ToString(), "", reason);
+                            PlayerDataManager.SendPenaltyToPlayers(p.GetSharedData<string>("username") + " otrzymał ostrzeżenie od CONSOLE. Powód: " + reason);
+                            PlayerDataManager.AddPenaltyToDB(p.SocialClubId.ToString(), "CONSOLE", "warn", DateTime.Now.ToString(), "", reason);
                         }
                         else
                         {
-                            playerDataManager.SendInfoToConsole("Nie znaleziono gracza!");
+                            PlayerDataManager.SendInfoToConsole("Nie znaleziono gracza!");
                         }
                     }
                     else
                     {
-                        playerDataManager.SendInfoToConsole("Nieprawidłowa składnia komendy!");
+                        PlayerDataManager.SendInfoToConsole("Nieprawidłowa składnia komendy!");
                     }
                     break;
 
                 case "kick":
                     if (argsCount >= 2)
                     {
-                        Player p = playerDataManager.GetPlayerByRemoteId(args[0]);
+                        Player p = PlayerDataManager.GetPlayerByRemoteId(args[0]);
                         if (p != null)
                         {
                             string reason = argText.Replace(args[0], "").TrimStart(' ');
                             p.Kick(reason);
-                            playerDataManager.SendPenaltyToPlayers(p.GetSharedData<string>("username") + " został wyrzucony przez " + "CONSOLE" + ". Powód: " + reason);
-                            playerDataManager.AddPenaltyToDB(p.SocialClubId.ToString(), "CONSOLE", "kick", DateTime.Now.ToString(), "", reason);
+                            PlayerDataManager.SendPenaltyToPlayers(p.GetSharedData<string>("username") + " został wyrzucony przez " + "CONSOLE" + ". Powód: " + reason);
+                            PlayerDataManager.AddPenaltyToDB(p.SocialClubId.ToString(), "CONSOLE", "kick", DateTime.Now.ToString(), "", reason);
                         }
                         else
                         {
-                            playerDataManager.SendInfoToConsole("Nie znaleziono gracza!");
+                            PlayerDataManager.SendInfoToConsole("Nie znaleziono gracza!");
                         }
                     }
                     else
                     {
-                        playerDataManager.SendInfoToConsole("Nieprawidłowa składnia komendy!");
+                        PlayerDataManager.SendInfoToConsole("Nieprawidłowa składnia komendy!");
                     }
                     break;
                 case "ban":
                     if (argsCount >= 3)
                     {
-                        Player p = playerDataManager.GetPlayerByRemoteId(args[0]);
+                        Player p = PlayerDataManager.GetPlayerByRemoteId(args[0]);
                         if (p != null)
                         {
                             string reason = argText.Replace(args[0], "").Replace(args[1], "").TrimStart(' ');
-                            playerDataManager.banPlayer(p, args[1], reason, null);
+                            PlayerDataManager.banPlayer(p, args[1], reason, null);
                         }
                         else
                         {
-                            playerDataManager.SendInfoToConsole("Nie znaleziono gracza!");
+                            PlayerDataManager.SendInfoToConsole("Nie znaleziono gracza!");
                         }
                     }
                     else
                     {
-                        playerDataManager.SendInfoToConsole("Nieprawidłowa składnia komendy!");
+                        PlayerDataManager.SendInfoToConsole("Nieprawidłowa składnia komendy!");
                     }
                     break;
                 case "dp":
                     if (argsCount == 1)
                     {
-                        Vehicle veh1 = vehicleDataManager.GetVehicleById(args[0]);
+                        Vehicle veh1 = VehicleDataManager.GetVehicleById(args[0]);
                         if (veh1 != null)
                         {
-                            vehicleDataManager.UpdateVehicleSpawned(veh1, false);
-                            vehicleDataManager.UpdateVehiclesDamage(veh1, vehicleDataManager.wreckedDamage);
-                            playerDataManager.SendInfoToConsole($"Pojazd o ID: {args[0]} został przeniesiony do przechowalni!");
+                            VehicleDataManager.UpdateVehicleSpawned(veh1, false);
+                            VehicleDataManager.UpdateVehiclesDamage(veh1, VehicleDataManager.wreckedDamage);
+                            PlayerDataManager.SendInfoToConsole($"Pojazd o ID: {args[0]} został przeniesiony do przechowalni!");
                             NAPI.Task.Run(() => { veh1.Delete(); });
                         }
                         else
                         {
-                            playerDataManager.SendInfoToConsole("Nie znaleziono pojazdu!");
+                            PlayerDataManager.SendInfoToConsole("Nie znaleziono pojazdu!");
                         }
                     }
                     else
                     {
-                        playerDataManager.SendInfoToConsole("Nieprawidłowa składnia komendy!");
+                        PlayerDataManager.SendInfoToConsole("Nieprawidłowa składnia komendy!");
                     }
                     break;
                 case "maxpoints":
                     if (args.Count == 1)
                     {
-                        Player pointsPl = playerDataManager.GetPlayerByRemoteId(args[0]);
+                        Player pointsPl = PlayerDataManager.GetPlayerByRemoteId(args[0]);
                         if (pointsPl != null && pointsPl.Exists)
                         {
-                            playerDataManager.MaxPlayersJobPoints(pointsPl);
-                            playerDataManager.SendInfoToConsole("Pomyślnie zwiększono punkty pracy gracza do 2000!");
+                            PlayerDataManager.MaxPlayersJobPoints(pointsPl);
+                            PlayerDataManager.SendInfoToConsole("Pomyślnie zwiększono punkty pracy gracza do 2000!");
                         }
                         else
                         {
-                            playerDataManager.SendInfoToConsole("Nie znaleziono gracza!");
+                            PlayerDataManager.SendInfoToConsole("Nie znaleziono gracza!");
                         }
                     }
                     break;

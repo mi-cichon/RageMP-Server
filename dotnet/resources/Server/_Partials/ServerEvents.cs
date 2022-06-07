@@ -31,14 +31,14 @@ namespace ServerSide
             {
                 if (player.HasSharedData("lspd_duty") && player.GetSharedData<bool>("lspd_duty"))
                 {
-                    lspd.SwitchPlayersDuty(player, true);
+                    LSPD.SwitchPlayersDuty(player, true);
                 }
                 else
                 {
                     EndJob(player);
                 }
             }
-            playerDataManager.SetJobClothes(player, false, "");
+            PlayerDataManager.SetJobClothes(player, false, "");
         }
 
         [ServerEvent(Event.VehicleDeath)]
@@ -46,8 +46,8 @@ namespace ServerSide
         {
             if (vehicle.HasSharedData("type") && vehicle.GetSharedData<string>("type") == "personal")
             {
-                vehicleDataManager.UpdateVehiclesDamage(vehicle, vehicleDataManager.wreckedDamage);
-                vehicleDataManager.UpdateVehicleSpawned(vehicle, false);
+                VehicleDataManager.UpdateVehiclesDamage(vehicle, VehicleDataManager.wreckedDamage);
+                VehicleDataManager.UpdateVehicleSpawned(vehicle, false);
                 vehicle.Delete();
             }
         }
@@ -55,18 +55,18 @@ namespace ServerSide
         [ServerEvent(Event.PlayerConnected)]
         public void OnPlayerConnected(Player player)
         {
-            logManager.CreatePlayersDirectories(player.SocialClubId.ToString());
+            LogManager.CreatePlayersDirectories(player.SocialClubId.ToString());
             try
             {
-                //if (playerDataManager.IsWhiteListed(player))
+                //if (PlayerDataManager.IsWhiteListed(player))
                 //{
                 Console.WriteLine(player.Address + " " + player.SocialClubName);
-                playerDataManager.SetPlayerDataFromDB(player);
-                player.SetSharedData("bonustime", autoSave.GetPlayersBonusData(player));
-                playerDataManager.setUsersPenalties(player);
+                PlayerDataManager.SetPlayerDataFromDB(player);
+                player.SetSharedData("bonustime", AutoSave.GetPlayersBonusData(player));
+                PlayerDataManager.setUsersPenalties(player);
 
-                bool house = houses.SetPlayersHouse(player);
-                lspd.IsPlayerInGroup(player);
+                bool house = Houses.SetPlayersHouse(player);
+                LSPD.IsPlayerInGroup(player);
                 NAPI.Entity.SetEntityTransparency(player.Handle, 0);
                 player.Dimension = 1;
                 player.Position = new Vector3(116.44823f, -921.2917f, 29.941246f);
@@ -87,26 +87,26 @@ namespace ServerSide
                 else
                 {
                     player.TriggerEvent("createCharacter");
-                    playerDataManager.SetPlayersClothes(player);
-                    if (!lspd.IsPlayerArrested(player))
+                    PlayerDataManager.SetPlayersClothes(player);
+                    if (!LSPD.IsPlayerArrested(player))
                     {
                         player.TriggerEvent("openSpawnSelection", house);
                         player.SetSharedData("gui", true);
                     }
                     else
                     {
-                        playerDataManager.SetPlayersConnectValues(player, currentWeather);
-                        lspd.ReturnPlayerIntoArrest(player);
-                        playerDataManager.NotifyPlayer(player, "Jesteś aresztowany! Pozostało " + player.GetSharedData<int>("arrested_time").ToString() + " minut aresztu!");
+                        PlayerDataManager.SetPlayersConnectValues(player, currentWeather);
+                        LSPD.ReturnPlayerIntoArrest(player);
+                        PlayerDataManager.NotifyPlayer(player, "Jesteś aresztowany! Pozostało " + player.GetSharedData<int>("arrested_time").ToString() + " minut aresztu!");
                     }
                 }
-                doorManager.SetDoorsForPlayer(player);
-                orgManager.SetPlayersOrg(player);
+                DoorManager.SetDoorsForPlayer(player);
+                OrgManager.SetPlayersOrg(player);
 
                 //}
                 //else
                 //{
-                //    logManager.LogLoginInfo(player.SocialClubId.ToString(), $"Próba dołączenia bez WL, Nick: {player.SocialClubName}, IP: {player.Address}");
+                //    LogManager.LogLoginInfo(player.SocialClubId.ToString(), $"Próba dołączenia bez WL, Nick: {player.SocialClubName}, IP: {player.Address}");
                 //    player.Kick("WL");
                 //}
 
@@ -121,7 +121,7 @@ namespace ServerSide
         public void OnPlayerEnterVehicle(Player player, Vehicle vehicle, sbyte seatId)
         {
             player.SetSharedData("vehSeat", (int)(byte)seatId);
-            if (!antiCheat.ShouldPlayerEnterThisVehicle(player, vehicle))
+            if (!AntiCheat.ShouldPlayerEnterThisVehicle(player, vehicle))
             {
                 player.TriggerEvent("openTrollBrowser", "rick");
                 player.WarpOutOfVehicle();
@@ -168,21 +168,21 @@ namespace ServerSide
             }
             if (vehicle.HasSharedData("drivers") && seatId == 0)
             {
-                vehicleDataManager.SaveVehiclesDriver(vehicle, player);
+                VehicleDataManager.SaveVehiclesDriver(vehicle, player);
             }
             player.SetSharedData("seatbelt", false);
         }
         [ServerEvent(Event.PlayerDisconnected)]
         public void OnPlayerDisconnect(Player player, DisconnectionType type, string reason)
         {
-            logManager.LogLoginInfo(player.SocialClubId.ToString(), $"Opuszczono serwer z IP: {player.Address}");
+            LogManager.LogLoginInfo(player.SocialClubId.ToString(), $"Opuszczono serwer z IP: {player.Address}");
             if (player.HasSharedData("handObj") && player.GetSharedData<string>("handObj") != "")
             {
                 player.SetSharedData("handObj", "");
             }
             if (player.HasSharedData("jobveh") && player.GetSharedData<int>("jobveh") != -1111)
             {
-                var veh = vehicleDataManager.GetVehicleByRemoteId(Convert.ToUInt16(player.GetSharedData<Int32>("jobveh")));
+                var veh = VehicleDataManager.GetVehicleByRemoteId(Convert.ToUInt16(player.GetSharedData<Int32>("jobveh")));
                 if (veh != null && veh.Exists)
                     veh.Delete();
             }
@@ -207,7 +207,7 @@ namespace ServerSide
         {
             if (player.HasSharedData("arrested") && player.GetSharedData<bool>("arrested"))
             {
-                lspd.SpawnPlayerInArrest(player);
+                LSPD.SpawnPlayerInArrest(player);
             }
             if (player.HasSharedData("handCuffed") && player.GetSharedData<bool>("handCuffed") && player.GetSharedData<Player>("cuffedBy").Exists)
             {
@@ -215,7 +215,7 @@ namespace ServerSide
             }
             else
             {
-                playerDataManager.SpawnPlayerAtClosestHospital(player);
+                PlayerDataManager.SpawnPlayerAtClosestHospital(player);
             }
             player.Dimension = 0;
         }
@@ -232,28 +232,28 @@ namespace ServerSide
             {
                 if (vehicle.HasSharedData("owner"))
                 {
-                    vehicleDataManager.UpdateVehiclesUsedTime(vehicle);
+                    VehicleDataManager.UpdateVehiclesUsedTime(vehicle);
                 }
-                if (vehicle.HasSharedData("type") && vehicle.GetSharedData<string>("type") == "lspd")
+                if (vehicle.HasSharedData("type") && vehicle.GetSharedData<string>("type") == "LSPD")
                 {
-                    if (lspd.StorageCenter.IsPointWithin(vehicle.Position))
+                    if (LSPD.StorageCenter.IsPointWithin(vehicle.Position))
                     {
-                        if (!vehicleDataManager.IsVehicleDamaged(vehicle))
+                        if (!VehicleDataManager.IsVehicleDamaged(vehicle))
                         {
                             if (vehicle.HasSharedData("petroltank") && vehicle.GetSharedData<float>("petrol") / vehicle.GetSharedData<int>("petroltank") >= 0.9f)
                             {
-                                lspd.SetVehicleSpawned(vehicle.GetSharedData<int>("id"), false);
-                                playerDataManager.NotifyPlayer(player, $"Pojazd został przeniesiony na parking!");
+                                LSPD.SetVehicleSpawned(vehicle.GetSharedData<int>("id"), false);
+                                PlayerDataManager.NotifyPlayer(player, $"Pojazd został przeniesiony na parking!");
                                 vehicle.Delete();
                             }
                             else
                             {
-                                playerDataManager.NotifyPlayer(player, "Pojazd musi być zatankowany w przynajmniej 90%!");
+                                PlayerDataManager.NotifyPlayer(player, "Pojazd musi być zatankowany w przynajmniej 90%!");
                             }
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Pojazd jest za bardzo uszkodzony!");
+                            PlayerDataManager.NotifyPlayer(player, "Pojazd jest za bardzo uszkodzony!");
                         }
                     }
                 }
@@ -265,8 +265,8 @@ namespace ServerSide
                         {
                             if (vehicle.HasSharedData("type") && vehicle.GetSharedData<string>("type") == "personal")
                             {
-                                vehicleDataManager.UpdateVehicleSpawned(vehicle, false);
-                                playerDataManager.NotifyPlayer(player, $"Pojazd o ID: {vehicle.GetSharedData<Int32>("id").ToString()} został przeniesiony do przechowalni!");
+                                VehicleDataManager.UpdateVehicleSpawned(vehicle, false);
+                                PlayerDataManager.NotifyPlayer(player, $"Pojazd o ID: {vehicle.GetSharedData<Int32>("id").ToString()} został przeniesiony do przechowalni!");
                                 vehicle.Delete();
                                 break;
                             }
@@ -279,7 +279,7 @@ namespace ServerSide
             if (vehicle.HasSharedData("type") && vehicle.GetSharedData<string>("type") == "public")
             {
                 vehicle.SetSharedData("publicTime", DateTime.Now.ToLongTimeString());
-                playerDataManager.NotifyPlayer(player, "Masz minutę na powrót do pojazdu!");
+                PlayerDataManager.NotifyPlayer(player, "Masz minutę na powrót do pojazdu!");
             }
         }
 
@@ -294,7 +294,7 @@ namespace ServerSide
                     {
                         if (petrolStation.currentVehicle != null && petrolStation.currentVehicle.Exists && petrolStation.vehicleColShape.IsPointWithin(petrolStation.currentVehicle.Position))
                         {
-                            playerDataManager.NotifyPlayer(player, "To stanowisko jest zajęte!");
+                            PlayerDataManager.NotifyPlayer(player, "To stanowisko jest zajęte!");
                         }
                         else
                         {
@@ -304,7 +304,7 @@ namespace ServerSide
                             }
                             petrolStation.currentVehicle = player.Vehicle;
                             player.Vehicle.SetSharedData("petrol_onStation", true);
-                            playerDataManager.NotifyPlayer(player, "Udaj się do dystrybutora aby rozpocząć proces tankowania!");
+                            PlayerDataManager.NotifyPlayer(player, "Udaj się do dystrybutora aby rozpocząć proces tankowania!");
                         }
                         break;
                     }
@@ -312,18 +312,18 @@ namespace ServerSide
             }
             if (shape.HasSharedData("pair"))
             {
-                playerDataManager.NotifyPlayer(player, shape.GetSharedData<string>("name"));
+                PlayerDataManager.NotifyPlayer(player, shape.GetSharedData<string>("name"));
             }
             // --------------Colshape przechowalni-----------------
             if (player.Vehicle != null && player.Vehicle.Exists && player.GetSharedData<int>("vehSeat") == 0)
             {
                 if (shape.HasSharedData("type") && shape.GetSharedData<string>("type") == "storagein")
                 {
-                    playerDataManager.NotifyPlayer(player, "Zaparkuj tu pojazd aby schować go do przechowalni!");
+                    PlayerDataManager.NotifyPlayer(player, "Zaparkuj tu pojazd aby schować go do przechowalni!");
                 }
-                if (player.Vehicle.GetSharedData<string>("type") == "lspd" && shape.HasSharedData("type") && shape.GetSharedData<string>("type") == "lspd_storageCenter")
+                if (player.Vehicle.GetSharedData<string>("type") == "LSPD" && shape.HasSharedData("type") && shape.GetSharedData<string>("type") == "lspd_storageCenter")
                 {
-                    playerDataManager.NotifyPlayer(player, "Zaparkuj tu pojazd aby schować go na parking policyjny!");
+                    PlayerDataManager.NotifyPlayer(player, "Zaparkuj tu pojazd aby schować go na parking policyjny!");
                 }
             }
             if (player.Vehicle != null && player.Vehicle.Exists && player.Vehicle.HasSharedData("type") && player.Vehicle.GetSharedData<string>("type") == "personal" && shape.HasSharedData("type") && shape.GetSharedData<string>("type") == "business-veh")
@@ -339,11 +339,11 @@ namespace ServerSide
             }
             if (shape.HasSharedData("type") && shape.GetSharedData<string>("type") == "lspd_mainGate" && player.Vehicle != null && player.GetSharedData<int>("vehSeat") == 0 && player.HasSharedData("lspd_duty") && player.GetSharedData<bool>("lspd_duty"))
             {
-                lspd.SwitchMainGate(true);
+                LSPD.SwitchMainGate(true);
             }
             else if (shape.HasSharedData("type") && shape.GetSharedData<string>("type") == "lspd_backGate" && player.Vehicle != null && player.GetSharedData<int>("vehSeat") == 0 && player.HasSharedData("lspd_duty") && player.GetSharedData<bool>("lspd_duty"))
             {
-                lspd.SwitchBackGate(true);
+                LSPD.SwitchBackGate(true);
             }
         }
 
@@ -373,7 +373,7 @@ namespace ServerSide
             }
             if (player.Vehicle != null && player.Vehicle.Exists && shape.HasSharedData("type") && shape.GetSharedData<string>("type") == "visutune")
             {
-                vehicleDataManager.RefreshVehiclesTune(player.Vehicle);
+                VehicleDataManager.RefreshVehiclesTune(player.Vehicle);
             }
             else if (player.Vehicle != null && player.Vehicle.Exists && player.Vehicle.HasSharedData("type") && player.Vehicle.GetSharedData<string>("type") == "public")
             {
@@ -394,7 +394,7 @@ namespace ServerSide
                     if (tuneBusiness.Id == shape.GetSharedData<int>("business-id"))
                     {
                         tuneBusiness.StationVeh = null;
-                        vehicleDataManager.SetVehiclesWheels(player.Vehicle);
+                        VehicleDataManager.SetVehiclesWheels(player.Vehicle);
                         break;
                     }
                 }
@@ -413,11 +413,11 @@ namespace ServerSide
             }
             if (shape.HasSharedData("type") && shape.GetSharedData<string>("type") == "lspd_mainGate" && player.Vehicle != null && player.GetSharedData<int>("vehSeat") == 0 && player.HasSharedData("lspd_duty") && player.GetSharedData<bool>("lspd_duty"))
             {
-                lspd.SwitchMainGate(false);
+                LSPD.SwitchMainGate(false);
             }
             else if (shape.HasSharedData("type") && shape.GetSharedData<string>("type") == "lspd_backGate" && player.Vehicle != null && player.GetSharedData<int>("vehSeat") == 0 && player.HasSharedData("lspd_duty") && player.GetSharedData<bool>("lspd_duty"))
             {
-                lspd.SwitchBackGate(false);
+                LSPD.SwitchBackGate(false);
             }
         }
         [ServerEvent(Event.VehicleTrailerChange)]

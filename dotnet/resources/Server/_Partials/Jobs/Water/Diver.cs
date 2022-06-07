@@ -10,12 +10,12 @@ namespace ServerSide
         [RemoteEvent("diver_startJob")]
         public void Diver_StartJob(Player player)
         {
-            diver.StartJob(player);
+            Diver.StartJob(player);
         }
         [RemoteEvent("diver_payment")]
         public void Diver_Payment(Player player, int priceMult)
         {
-            payoutManager.DiverPayment(player, priceMult);
+            PayoutManager.DiverPayment(player, priceMult);
         }
     }
 }

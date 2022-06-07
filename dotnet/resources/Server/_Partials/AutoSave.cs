@@ -10,7 +10,7 @@ namespace ServerSide
         [RemoteEvent("saveData_saveJobData")]
         public void SaveData_saveJobData(Player player, string data)
         {
-            autoSave.SavePlayersJobData(player, data);
+            AutoSave.SavePlayersJobData(player, data);
         }
 
         [RemoteEvent("saveData_giveJobVeh")]

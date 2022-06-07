@@ -11,10 +11,10 @@ namespace ServerSide
         [RemoteEvent("changeNickname")]
         public void ChangeNickname(Player player, string nickname)
         {
-            if (playerDataManager.UpdatePlayersNickname(player, nickname))
+            if (PlayerDataManager.UpdatePlayersNickname(player, nickname))
             {
                 player.TriggerEvent("closeNicknameBrowser");
-                playerDataManager.NotifyPlayer(player, "Pomyślnie zmieniono nick!");
+                PlayerDataManager.NotifyPlayer(player, "Pomyślnie zmieniono nick!");
             }
             else
             {

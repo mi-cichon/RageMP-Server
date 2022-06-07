@@ -6,37 +6,29 @@ using GTANetworkAPI;
 
 namespace ServerSide.Jobs
 {
-    public class TowTrucks
+    public static class TowTrucks
     {
-        Vector3 startPosition;
-        ColShape startColshape;
-        Blip startBlip;
-        public Vector3 basePosition;
-        Dictionary<Vector3, float> startPositions = new Dictionary<Vector3, float>();
-        PlayerDataManager playerDataManager = new PlayerDataManager();
-        CustomMarkers customMarkers = new CustomMarkers();
-        VehicleDataManager vehicleDataManager = new VehicleDataManager();
-        public TowTrucks(Vector3 startPosition, Vector3 basePosition)
+        static Vector3 startPosition;
+        static ColShape startColshape;
+        static Blip startBlip;
+        public static Vector3 basePosition;
+        static Dictionary<Vector3, float> startPositions = new Dictionary<Vector3, float>();
+        public static void InstantiateTowTrucks(Vector3 startPosition, Vector3 basePosition)
         {
-            this.startPosition = startPosition;
-            this.basePosition = basePosition;
-            Instantiate();
-        }
-
-        private void Instantiate()
-        {
+            startPosition = startPosition;
+            basePosition = basePosition;
             startColshape = NAPI.ColShape.CreateCylinderColShape(startPosition, 1.0f, 3.0f);
             startColshape.SetSharedData("type", "towtruck");
-            customMarkers.CreateJobMarker(startPosition, "Lawety");
+            CustomMarkers.CreateJobMarker(startPosition, "Lawety");
             startBlip = NAPI.Blip.CreateBlip(67, startPosition, 0.8f, 69, name: "Praca: Lawety", shortRange: true);
         }
 
-        public void addSpawningPosition(Vector3 spawningPosition, float heading)
+        public static void AddSpawningPosition(Vector3 spawningPosition, float heading)
         {
             startPositions.Add(spawningPosition, heading);
         }
 
-        public void startJob(Player player)
+        public static void StartJob(Player player)
         {
             if(player.GetSharedData<string>("job") == "" && !(player.HasSharedData("lspd_duty") && player.GetSharedData<bool>("lspd_duty")))
             {
@@ -50,30 +42,30 @@ namespace ServerSide.Jobs
                             Vehicle veh = null;
                             if (player.GetSharedData<bool>("jobBonus_27"))
                             {
-                                veh = vehicleDataManager.GetRandomVehicleToTow();
+                                veh = VehicleDataManager.GetRandomVehicleToTow();
                             }
                             player.TriggerEvent("setVehicleToTow", veh);
                             player.TriggerEvent("startJob", "Lawety", "PS");
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Nie odblokowałeś tej pracy!");
+                            PlayerDataManager.NotifyPlayer(player, "Nie odblokowałeś tej pracy!");
                         }
                     }
                     else
                     {
-                        playerDataManager.NotifyPlayer(player, "Nie masz prawa jazdy");
+                        PlayerDataManager.NotifyPlayer(player, "Nie masz prawa jazdy");
                     }
 
                 }
                 else
                 {
-                    playerDataManager.NotifyPlayer(player, "Nie możesz prowadzić pojazdów do " + player.GetSharedData<string>("nodrivingto") + "!");
+                    PlayerDataManager.NotifyPlayer(player, "Nie możesz prowadzić pojazdów do " + player.GetSharedData<string>("nodrivingto") + "!");
                 }
             }
             else
             {
-                playerDataManager.NotifyPlayer(player, "Masz już inną pracę!");
+                PlayerDataManager.NotifyPlayer(player, "Masz już inną pracę!");
             }
         }
     }

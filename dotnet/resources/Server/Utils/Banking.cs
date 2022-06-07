@@ -5,9 +5,9 @@ using GTANetworkAPI;
 
 namespace ServerSide
 {
-    public class Banking
+    public static class Banking
     {
-        List<Vector3> cashMachines = new List<Vector3>()
+        static List<Vector3> cashMachines = new List<Vector3>()
         {
             new Vector3(155.8989f, 6642.891f, 31.600456f),
             new Vector3(-95.55596f, 6457.184f, 31.46097f),
@@ -100,12 +100,7 @@ namespace ServerSide
 
     };
 
-        public Banking()
-        {
-            CreateATMs();
-        }
-
-        public void CreateATMs()
+        public static void InstantiateATMs()
         {
             foreach(Vector3 pos in cashMachines)
             {

@@ -29,7 +29,7 @@ namespace ServerSide
 
             Col = NAPI.ColShape.CreateCylinderColShape(Position, 1.2f, 4.0f);
             Col.SetSharedData("type", "jobVehSpawn");
-            new CustomMarkers().CreateVehicleSpawnMarker(position);
+            CustomMarkers.CreateVehicleSpawnMarker(position);
 
             CreateNewVehicle(oiltanker);
         }

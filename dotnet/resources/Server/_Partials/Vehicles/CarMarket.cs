@@ -15,17 +15,17 @@ namespace ServerSide
             {
                 if (carMarket.AddVehicleToMarket(vehicle, price, description, player.GetSharedData<string>("username")))
                 {
-                    playerDataManager.NotifyPlayer(player, "Pomyślnie wystawiono pojazd na giełdę!");
+                    PlayerDataManager.NotifyPlayer(player, "Pomyślnie wystawiono pojazd na giełdę!");
                 }
                 else
                 {
-                    playerDataManager.NotifyPlayer(player, "Na giełdzie nie ma wolnych miejsc!");
+                    PlayerDataManager.NotifyPlayer(player, "Na giełdzie nie ma wolnych miejsc!");
                 }
                 
             }
             else
             {
-                playerDataManager.NotifyPlayer(player, "Wystąpił błąd!");
+                PlayerDataManager.NotifyPlayer(player, "Wystąpił błąd!");
             }
         }
     }

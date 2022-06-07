@@ -6,9 +6,9 @@ using ServerSide;
 
 namespace ServerSide.Jobs
 {
-    public class Hunter
+    public static class Hunter
     {
-        public List<Vector3> positions = new List<Vector3>()
+        public static List<Vector3> positions = new List<Vector3>()
         {
             new Vector3(-1580.8352f, 4679.4473f, 45.14447f),
             new Vector3(-1619.7543f, 4604.0776f, 41.948223f),
@@ -35,7 +35,7 @@ namespace ServerSide.Jobs
             new Vector3(-1334.1202f, 4693.583f, 67.92821f)
     };
 
-        List<PedHash> animalsToHunt = new List<PedHash>()
+        static List<PedHash> animalsToHunt = new List<PedHash>()
         {
             PedHash.Deer, //25
             PedHash.Rabbit, //25
@@ -45,26 +45,25 @@ namespace ServerSide.Jobs
             PedHash.Orleans //5
         };
 
-        int[] probabilities = new int[]
+        static int[] probabilities = new int[]
         {
             0,0,0,0,0,1,1,1,1,1,2,2,2,2,3,3,3,4,4,5
         };
 
-        int[] luckyProbabilities = new int[]
+        static int[] luckyProbabilities = new int[]
         {
             0,1,2,3,4,5
         };
 
-        PlayerDataManager playerDataManager = new PlayerDataManager();
-        ColShape hunterColshape;
-        Blip hunterBlip;
-        Ped hunterPed;
-        TextLabel pedText;
-        public Hunter(Vector3 startPoint, Vector3 pedPoint, float pedHeading)
+        static ColShape hunterColshape;
+        static Blip hunterBlip;
+        static Ped hunterPed;
+        static TextLabel pedText;
+        public static void InstantiateHunter(Vector3 startPoint, Vector3 pedPoint, float pedHeading)
         {
             hunterColshape = NAPI.ColShape.CreateCylinderColShape(startPoint, 1.0f, 2.0f);
             hunterColshape.SetSharedData("type", "hunter");
-            new CustomMarkers().CreateJobMarker(startPoint, "Myśliwy");
+            CustomMarkers.CreateJobMarker(startPoint, "Myśliwy");
             hunterColshape = NAPI.ColShape.CreateCylinderColShape(pedPoint, 1.0f, 2.0f);
             hunterColshape.SetSharedData("type", "hunter-sell");
             hunterBlip = NAPI.Blip.CreateBlip(463, startPoint, 0.8f, 69, name: "Praca: Myśliwy", shortRange: true);
@@ -72,7 +71,7 @@ namespace ServerSide.Jobs
             pedText = NAPI.TextLabel.CreateTextLabel("Myśliwy", new Vector3(pedPoint.X, pedPoint.Y, pedPoint.Z + 1.3f), 10.0f, 0.6f, 4, new Color(255, 255, 255));
         }
 
-        public void startJob(Player player)
+        public static void startJob(Player player)
         {
             if(player.GetSharedData<string>("job") == "" && !(player.HasSharedData("lspd_duty") && player.GetSharedData<bool>("lspd_duty")))
             {
@@ -86,23 +85,23 @@ namespace ServerSide.Jobs
                     {
                         player.GiveWeapon(WeaponHash.Pumpshotgun, 9999);
                     }
-                    playerDataManager.NotifyPlayer(player, "Praca rozpoczęta!");
+                    PlayerDataManager.NotifyPlayer(player, "Praca rozpoczęta!");
                     player.SetSharedData("job", "hunter");
                     GetRandomAnimalAndSendToPlayer(player);
                     player.TriggerEvent("startJob", "Myśliwy", "PN");
                 }
                 else
                 {
-                    playerDataManager.NotifyPlayer(player, "Nie odblokowałeś tej pracy!");
+                    PlayerDataManager.NotifyPlayer(player, "Nie odblokowałeś tej pracy!");
                 }
             }
             else
             {
-                playerDataManager.NotifyPlayer(player, "Masz inną pracę!");
+                PlayerDataManager.NotifyPlayer(player, "Masz inną pracę!");
             }
         }
 
-        public void GetRandomAnimalAndSendToPlayer(Player player)
+        public static void GetRandomAnimalAndSendToPlayer(Player player)
         {
             Random rnd = new Random();
 

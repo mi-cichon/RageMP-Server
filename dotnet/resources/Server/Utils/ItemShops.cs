@@ -5,9 +5,9 @@ using GTANetworkAPI;
 
 namespace ServerSide
 {
-    public class ItemShops
+    public static class ItemShops
     {
-        List<PedHash> peds = new List<PedHash>()
+        static List<PedHash> peds = new List<PedHash>()
         {
             PedHash.AgentCutscene,
             PedHash.ArmLieut01GMM,
@@ -25,13 +25,8 @@ namespace ServerSide
             PedHash.ForgeryFemale01,
             PedHash.PatriciaCutscene
         };
-        
-        public ItemShops()
-        {
-            InitializeShops();
-        }
 
-        void InitializeShops()
+        public static void InitializeShops()
         {
             CreateShop(new ShopInfo(new Vector3(-46.86535f, -1759.0315f, 29.421005f), 46.031837f, new Vector3(-48.67781f, -1757.5618f, 29.421005f)));
             CreateShop(new ShopInfo(new Vector3(24.04396f, -1345.591f, 29.497028f), -93.76412f, new Vector3(26.101736f, -1345.6154f, 29.497025f)));
@@ -55,7 +50,7 @@ namespace ServerSide
             CreateShop(new ShopInfo(new Vector3(-705.4629f, -914.52295f, 19.215588f), 83.94446f, new Vector3(-707.6986f, -914.6637f, 19.215588f)));
         }
 
-        void CreateShop(ShopInfo shopInfo)
+        public static void CreateShop(ShopInfo shopInfo)
         {
             Random rand = new Random();
             int ped = rand.Next(0, peds.Count);

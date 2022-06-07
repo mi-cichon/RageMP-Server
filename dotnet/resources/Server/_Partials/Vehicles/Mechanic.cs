@@ -28,16 +28,16 @@ namespace ServerSide
                     {
                         if (stationVehicle.HasSharedData("mech") && stationVehicle.GetSharedData<bool>("mech"))
                         {
-                            playerDataManager.NotifyPlayer(player, "Pojazd jest już w trakcie naprawy!");
+                            PlayerDataManager.NotifyPlayer(player, "Pojazd jest już w trakcie naprawy!");
                         }
                         else
                         {
-                            player.TriggerEvent("openMechHUD", stationVehicle, vehicleDataManager.GetVehicleModelPrice(stationVehicle), vm.stationColShape);
+                            player.TriggerEvent("openMechHUD", stationVehicle, VehicleDataManager.GetVehicleModelPrice(stationVehicle), vm.stationColShape);
                         }
                     }
                     else
                     {
-                        playerDataManager.NotifyPlayer(player, "Na stanowisku nie ma żadnego pojazdu!");
+                        PlayerDataManager.NotifyPlayer(player, "Na stanowisku nie ma żadnego pojazdu!");
                     }
                     break;
                 }
@@ -55,31 +55,31 @@ namespace ServerSide
                     {
                         if (!vehMech.stationColShape.IsPointWithin(vehicle.Position))
                         {
-                            playerDataManager.NotifyPlayer(player, "Pojazd nie znajduje się na stanowisku!");
+                            PlayerDataManager.NotifyPlayer(player, "Pojazd nie znajduje się na stanowisku!");
                             return;
                         }
                     }
                 }
                 if (vehicle.HasSharedData("mech") && vehicle.GetSharedData<bool>("mech"))
                 {
-                    playerDataManager.NotifyPlayer(player, "Pojazd jest już w trakcie naprawy!");
+                    PlayerDataManager.NotifyPlayer(player, "Pojazd jest już w trakcie naprawy!");
                 }
                 else
                 {
-                    if (playerDataManager.UpdatePlayersMoney(player, -1 * price))
+                    if (PlayerDataManager.UpdatePlayersMoney(player, -1 * price))
                     {
-                        playerDataManager.NotifyPlayer(player, "Naprawa rozpoczęta!");
-                        vehicleDataManager.setRepairingInterval(vehicle, time, player, partsToRepair);
+                        PlayerDataManager.NotifyPlayer(player, "Naprawa rozpoczęta!");
+                        VehicleDataManager.setRepairingInterval(vehicle, time, player, partsToRepair);
                     }
                     else
                     {
-                        playerDataManager.NotifyPlayer(player, "Nie stać cię na naprawę tego pojazdu!");
+                        PlayerDataManager.NotifyPlayer(player, "Nie stać cię na naprawę tego pojazdu!");
                     }
                 }
             }
             else
             {
-                playerDataManager.NotifyPlayer(player, "Nie odnaleziono pojazdu!");
+                PlayerDataManager.NotifyPlayer(player, "Nie odnaleziono pojazdu!");
             }
 
         }

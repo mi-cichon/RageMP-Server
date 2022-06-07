@@ -7,23 +7,18 @@ using Object = GTANetworkAPI.Object;
 
 namespace ServerSide
 {
-    public class Gardener
+    public static class Gardener
     {
-        public List<GardenerOrder> Orders = new List<GardenerOrder>();
-        public List<Ground> Grounds = new List<Ground>();
-        PlayerDataManager playerDataManager;
-        VehicleDataManager vehicleDataManager;
-        CustomMarkers customMarkers = new CustomMarkers();
-        int lastOrderId = 0;
-        public Gardener(ref PlayerDataManager playerDataManager, ref VehicleDataManager vehicleDataManager)
+        public static List<GardenerOrder> Orders = new List<GardenerOrder>();
+        public static List<Ground> Grounds = new List<Ground>();
+        static int lastOrderId = 0;
+        public static void InstantiateGardener()
         {
-            this.playerDataManager = playerDataManager;
-            this.vehicleDataManager = vehicleDataManager;
             NAPI.Ped.CreatePed((uint)PedHash.Farmer01AMM, new Vector3(-1275.7875f, -1139.7943f, 6.7924547f), 117.193184f, frozen: true, invincible: true);
             ColShape sellout = NAPI.ColShape.CreateCylinderColShape(new Vector3(-1275.7875f, -1139.7943f, 6.7924547f), 2.0f, 2.0f);
             sellout.SetSharedData("type", "gardener_sellout");
             ColShape shape = NAPI.ColShape.CreateCylinderColShape(new Vector3(1546.5374f, 2166.511f, 78.72393f), 1.0f, 2.0f);
-            customMarkers.CreateJobMarker(new Vector3(1546.5374f, 2166.511f, 78.72393f), "Ogrodnik");
+            CustomMarkers.CreateJobMarker(new Vector3(1546.5374f, 2166.511f, 78.72393f), "Ogrodnik");
             NAPI.Blip.CreateBlip(761, new Vector3(1546.5374f, 2166.511f, 78.72393f), 0.8f, 69, name: "Praca: Ogrodnik", shortRange: true);
             shape.SetSharedData("type", "gardener");
 
@@ -38,7 +33,7 @@ namespace ServerSide
         }
 
 
-        public string GetOrders()
+        public static string GetOrders()
         {
             List<List<int>> orders = new List<List<int>>();
             foreach(GardenerOrder order in Orders)
@@ -52,13 +47,13 @@ namespace ServerSide
             return JsonConvert.SerializeObject(orders);
         }
 
-        public void NewOrder(int index)
+        public static void NewOrder(int index)
         {
             Orders[index] = new GardenerOrder(lastOrderId);
             lastOrderId++;
         }
 
-        public void StartJob(Player player)
+        public static void StartJob(Player player)
         {
             if (player.GetSharedData<string>("job") == "" && !(player.HasSharedData("lspd_duty") && player.GetSharedData<bool>("lspd_duty")))
             {
@@ -70,31 +65,31 @@ namespace ServerSide
                         {
                             player.SetSharedData("job", "gardener");
                             player.TriggerEvent("startJob", "Ogrodnik", "PN");
-                            playerDataManager.NotifyPlayer(player, "Praca rozpoczęta!");
+                            PlayerDataManager.NotifyPlayer(player, "Praca rozpoczęta!");
                             player.TriggerEvent("openGardenerOrdersBrowser", GetOrders());
                         }
                         else
                         {
-                            playerDataManager.NotifyPlayer(player, "Nie masz prawa jazdy");
+                            PlayerDataManager.NotifyPlayer(player, "Nie masz prawa jazdy");
                         }
                     }
                     else
                     {
-                        playerDataManager.NotifyPlayer(player, "Nie możesz prowadzić pojazdów do " + player.GetSharedData<string>("nodrivingto") + "!");
+                        PlayerDataManager.NotifyPlayer(player, "Nie możesz prowadzić pojazdów do " + player.GetSharedData<string>("nodrivingto") + "!");
                     }
                 }
                 else
                 {
-                    playerDataManager.NotifyPlayer(player, "Nie odblokowałeś tej pracy!");
+                    PlayerDataManager.NotifyPlayer(player, "Nie odblokowałeś tej pracy!");
                 }
             }
             else
             {
-                playerDataManager.NotifyPlayer(player, "Masz inną pracę!");
+                PlayerDataManager.NotifyPlayer(player, "Masz inną pracę!");
             }
         }
         
-        private void CreateGrounds()
+        private static void CreateGrounds()
         {
             Grounds.Add(new Ground("prop_plant_01b", Grounds.Count, 900, new List<Vector3>()
             {
@@ -213,7 +208,7 @@ namespace ServerSide
                 new Vector3(2576.6577f, 4891.6997f, 36.798634f),
                 new Vector3(2573.4355f, 4895.0923f, 37.171093f),
                 new Vector3(2570.138f, 4898.557f, 37.53782f)
-            }, ref playerDataManager));
+            }));
 
 
             List<Vector3> high1 = new List<Vector3>()
@@ -292,7 +287,7 @@ namespace ServerSide
             {
                 high1[i] = new Vector3(high1[i].X, high1[i].Y, high1[i].Z - 0.5);
             }
-            Grounds.Add(new Ground("prop_plant_int_02b", Grounds.Count, 903, high1, ref playerDataManager));
+            Grounds.Add(new Ground("prop_plant_int_02b", Grounds.Count, 903, high1));
 
             List<Vector3> high2 = new List<Vector3>()
             {
@@ -367,7 +362,7 @@ namespace ServerSide
             {
                 high2[i] = new Vector3(high2[i].X, high2[i].Y, high2[i].Z - 0.5);
             }
-            Grounds.Add(new Ground("prop_plant_01a", Grounds.Count, 904, high2, ref playerDataManager));
+            Grounds.Add(new Ground("prop_plant_01a", Grounds.Count, 904, high2));
 
 
 
@@ -428,7 +423,7 @@ namespace ServerSide
                 new Vector3(-1722.1537f, 5022.7495f, 24.998915f),
                 new Vector3(-1714.7089f, 5020.688f, 25.553583f),
                 new Vector3(-1705.4781f, 5018.022f, 26.837837f)
-            }, ref playerDataManager));
+            }));
 
             Grounds.Add(new Ground("prop_plant_fern_01b", Grounds.Count, 901, new List<Vector3>()
             {
@@ -476,7 +471,7 @@ namespace ServerSide
                 new Vector3(-979.56757f, 321.021f, 70.29261f),
                 new Vector3(-984.0465f, 320.56174f, 70.07975f),
                 new Vector3(-968.8552f, 300.53818f, 69.63193f)
-            }, ref playerDataManager));
+            }));
         }
     }
 
@@ -484,15 +479,13 @@ namespace ServerSide
     public class Ground
     {
         public List<Vector3> PlantPlaces { get; set; }
-
-        PlayerDataManager playerDataManager;
         public string PlantModel { get; set; }
         public Dictionary<Vector3, Plant> Plants = new Dictionary<Vector3, Plant>();
         int LastId = 0;
         public int PlantType { get; set; }
         public int GroundId { get; set; }
 
-        public Ground(string model, int id, int plantType, List<Vector3> places, ref PlayerDataManager playerDataManager)
+        public Ground(string model, int id, int plantType, List<Vector3> places)
         {
             for(int i = 0; i < places.Count; i++)
             {
@@ -503,7 +496,6 @@ namespace ServerSide
             PlantModel = model;
             PlantPlaces = places;
             Instantiate();
-            this.playerDataManager = playerDataManager;
         }
 
         private void Instantiate()
@@ -586,7 +578,7 @@ namespace ServerSide
                                 if(num == 0)
                                 {
                                     player.TriggerEvent("checkIfItemFits", plant.Type, "plant");
-                                    playerDataManager.NotifyPlayer(player, "Udało Ci się zdobyć dwie rośliny!");
+                                    PlayerDataManager.NotifyPlayer(player, "Udało Ci się zdobyć dwie rośliny!");
                                 }
                             }
 
@@ -602,7 +594,7 @@ namespace ServerSide
                 }
                 else
                 {
-                    playerDataManager.NotifyPlayer(player, "Roślina jest już zbierana przez kogoś innego!");
+                    PlayerDataManager.NotifyPlayer(player, "Roślina jest już zbierana przez kogoś innego!");
                 }
             }
             

@@ -5,15 +5,11 @@ using GTANetworkAPI;
 
 namespace ServerSide
 {
-    public class DoorManager
+    public static class DoorManager
     {
-        public List<Door> Doors = new List<Door>();
-        public DoorManager()
-        {
-            MissionRowLSPD();
-        }
+        public static List<Door> Doors = new List<Door>();
 
-        private void MissionRowLSPD()
+        public static void InstantiateMissionRowLSPD()
         {
             Doors.Add(new Door(1002, -2023754432, true, new Vector3(469.9679, -1014.452, 26.53623)));
             Doors.Add(new Door(1003, -2023754432, true, new Vector3(467.3716, -1014.452, 26.53623)));
@@ -24,7 +20,7 @@ namespace ServerSide
             Doors.Add(new Door(1025, 1817008884, true, new Vector3(422.7392, -998.1159, 30.97704)));
         }
 
-        public void SetDoorsForPlayer(Player player)
+        public static void SetDoorsForPlayer(Player player)
         {
             foreach(Door door in Doors)
             {

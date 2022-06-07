@@ -10,13 +10,13 @@ namespace ServerSide
         [RemoteEvent("startDebrisCleaner")]
         public void StartDebrisCleaner(Player player)
         {
-            debrisCleaner.startJob(player);
+            DebrisCleaner.StartJob(player);
         }
 
         [RemoteEvent("debrisCleanerReward")]
         public void DebrisCleanerReward(Player player, int weight)
         {
-            payoutManager.DebrisCleanerPayment(player, weight);
+            PayoutManager.DebrisCleanerPayment(player, weight);
         }
 
         [RemoteEvent("debrisCleaner_luckCheck")]
@@ -40,7 +40,7 @@ namespace ServerSide
                 {
                     int itemId = rand.Next(1050, 1059);
                     player.TriggerEvent("fitItemInEquipment", itemId);
-                    playerDataManager.NotifyPlayer(player, "Udało cię się odnaleźć przedmiot!");
+                    PlayerDataManager.NotifyPlayer(player, "Udało cię się odnaleźć przedmiot!");
 
                 }
             }

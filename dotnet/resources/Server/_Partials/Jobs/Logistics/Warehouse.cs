@@ -11,14 +11,14 @@ namespace ServerSide
         [RemoteEvent("startWarehouse")]
         public void StartWareHouse(Player player)
         {
-            warehouse.startJob(player);
+            Warehouse.startJob(player);
         }
 
         [RemoteEvent("warehouseBoxDelievered")]
         public void WarehouseBoxDelievered(Player player)
         {
-            payoutManager.WarehousePayment(player);
-            warehouse.CreateBox();
+            PayoutManager.WarehousePayment(player);
+            Warehouse.CreateBox();
         }
     }
 }

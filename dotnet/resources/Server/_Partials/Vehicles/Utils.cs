@@ -19,7 +19,7 @@ namespace ServerSide
         [RemoteEvent("updateVehicleDamage")]
         public void UpdateVehicleDamage(Player player, Vehicle vehicle, string damageString)
         {
-            vehicleDataManager.UpdateVehiclesDamage(vehicle, damageString);
+            VehicleDataManager.UpdateVehiclesDamage(vehicle, damageString);
         }
 
         //horn
@@ -35,7 +35,7 @@ namespace ServerSide
         public void updateVehiclesDirtLevel(Player player, Vehicle vehicle, float dirtLevel)
         {
             if (vehicle != null && vehicle.Exists)
-                vehicleDataManager.UpdateVehiclesDirtLevel(vehicle, dirtLevel);
+                VehicleDataManager.UpdateVehiclesDirtLevel(vehicle, dirtLevel);
         }
 
         //drowned veh
@@ -44,13 +44,13 @@ namespace ServerSide
         {
             if (vehicle != null && vehicle.Exists)
             {
-                vehicleDataManager.UpdateVehicleSpawned(vehicle, false);
-                vehicleDataManager.UpdateVehiclesDamage(vehicle, vehicleDataManager.wreckedDamage);
+                VehicleDataManager.UpdateVehicleSpawned(vehicle, false);
+                VehicleDataManager.UpdateVehiclesDamage(vehicle, VehicleDataManager.wreckedDamage);
                 vehicle.Delete();
             }
             if (player != null && player.Exists)
             {
-                playerDataManager.NotifyPlayer(player, "Twój pojazd został zatopiony, możesz go odebrać w przechowalni!");
+                PlayerDataManager.NotifyPlayer(player, "Twój pojazd został zatopiony, możesz go odebrać w przechowalni!");
             }
         }
 

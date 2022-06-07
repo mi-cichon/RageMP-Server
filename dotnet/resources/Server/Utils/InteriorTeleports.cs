@@ -6,7 +6,6 @@ namespace ServerSide
 {
     public class InteriorTeleport
     {
-        CustomMarkers customMarkers = new CustomMarkers();
         public ColShape insideColShape;
         public ColShape outsideColShape;
         public TextLabel outsideText;
@@ -27,8 +26,8 @@ namespace ServerSide
             outsideColShape.SetSharedData("name", name);
             outsideColShape.SetSharedData("position", insidePosition);
 
-            customMarkers.CreateSimpleMarker(insidePosition, "Wyjście");
-            customMarkers.CreateSimpleMarker(outsidePosition, name);
+            CustomMarkers.CreateSimpleMarker(insidePosition, "Wyjście");
+            CustomMarkers.CreateSimpleMarker(outsidePosition, name);
 
             switch (name)
             {
@@ -43,7 +42,6 @@ namespace ServerSide
 
     public class LSPDTeleport
     {
-        CustomMarkers customMarkers = new CustomMarkers();
         public ColShape insideColShape;
         public ColShape outsideColShape;
         public TextLabel outsideText;
@@ -53,19 +51,19 @@ namespace ServerSide
         public LSPDTeleport(Vector3 outsidePosition, float outsideHeading, Vector3 insidePosition, float insideHeading, string name)
         {
             insideColShape = NAPI.ColShape.CreateCylinderColShape(insidePosition, 1.0f, 3.0f);
-            insideColShape.SetSharedData("type", "lspd-teleport");
+            insideColShape.SetSharedData("type", "LSPD-teleport");
             insideColShape.SetSharedData("heading", outsideHeading);
             insideColShape.SetSharedData("name", "Wyjście");
             insideColShape.SetSharedData("position", outsidePosition);
 
             outsideColShape = NAPI.ColShape.CreateCylinderColShape(outsidePosition, 1.0f, 3.0f);
-            outsideColShape.SetSharedData("type", "lspd-teleport");
+            outsideColShape.SetSharedData("type", "LSPD-teleport");
             outsideColShape.SetSharedData("heading", insideHeading);
             outsideColShape.SetSharedData("name", name);
             outsideColShape.SetSharedData("position", insidePosition);
 
-            customMarkers.CreateLSPDMarker(insidePosition, "Wyjście");
-            customMarkers.CreateLSPDMarker(outsidePosition, name);
+            CustomMarkers.CreateLSPDMarker(insidePosition, "Wyjście");
+            CustomMarkers.CreateLSPDMarker(outsidePosition, name);
 
             switch (name)
             {

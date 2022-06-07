@@ -11,16 +11,16 @@ namespace ServerSide
         [RemoteEvent("collectiblePickedUp")]
         public void CollectiblePickedUp(Player player, int id)
         {
-            if (!collectibleManager.IsCollectiblePickedUp(player, id))
+            if (!CollectibleManager.IsCollectiblePickedUp(player, id))
             {
-                System.Object[] vals = collectibleManager.RemovePlayersCollectible(player, id);
+                System.Object[] vals = CollectibleManager.RemovePlayersCollectible(player, id);
                 Dictionary<int, bool> collectible = (Dictionary<int, bool>)vals[0];
                 int found = (int)vals[1];
-                playerDataManager.UpdatePlayersCollectibles(player, JsonConvert.SerializeObject(collectible));
-                playerDataManager.NotifyPlayer(player, $"Znalazłeś jajo {found} z {collectibleManager.collectibleCount}!");
-                int money = 10000 * (playerDataManager.GetPlayersCollectiblesAmount(player) + 1);
-                playerDataManager.UpdatePlayersMoney(player, money);
-                playerDataManager.UpdatePlayersExp(player, 1000);
+                PlayerDataManager.UpdatePlayersCollectibles(player, JsonConvert.SerializeObject(collectible));
+                PlayerDataManager.NotifyPlayer(player, $"Znalazłeś jajo {found} z {CollectibleManager.collectibleCount}!");
+                int money = 10000 * (PlayerDataManager.GetPlayersCollectiblesAmount(player) + 1);
+                PlayerDataManager.UpdatePlayersMoney(player, money);
+                PlayerDataManager.UpdatePlayersExp(player, 1000);
             }
             else
             {

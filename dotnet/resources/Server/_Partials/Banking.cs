@@ -10,14 +10,14 @@ namespace ServerSide
         [RemoteEvent("depositBankMoney")]
         public void DepositBankMoney(Player player, int money)
         {
-            if (playerDataManager.DepositMoney(player, money))
+            if (PlayerDataManager.DepositMoney(player, money))
             {
                 player.TriggerEvent("setBankingVars", player.GetSharedData<int>("bank"));
-                playerDataManager.NotifyPlayer(player, "Pomyślnie wpłacono gotówkę!");
+                PlayerDataManager.NotifyPlayer(player, "Pomyślnie wpłacono gotówkę!");
             }
             else
             {
-                playerDataManager.NotifyPlayer(player, "Nie posiadasz takiej ilości gotówki!");
+                PlayerDataManager.NotifyPlayer(player, "Nie posiadasz takiej ilości gotówki!");
             }
         }
 
@@ -25,14 +25,14 @@ namespace ServerSide
         [RemoteEvent("withdrawBankMoney")]
         public void WithdrawBankMoney(Player player, int money)
         {
-            if (playerDataManager.WithdrawMoney(player, money))
+            if (PlayerDataManager.WithdrawMoney(player, money))
             {
                 player.TriggerEvent("setBankingVars", player.GetSharedData<int>("bank"));
-                playerDataManager.NotifyPlayer(player, "Pomyślnie wypłacono gotówkę!");
+                PlayerDataManager.NotifyPlayer(player, "Pomyślnie wypłacono gotówkę!");
             }
             else
             {
-                playerDataManager.NotifyPlayer(player, "Nie masz tyle gotówki na koncie!");
+                PlayerDataManager.NotifyPlayer(player, "Nie masz tyle gotówki na koncie!");
             }
         }
 
@@ -44,29 +44,29 @@ namespace ServerSide
         //    {
         //        if (target.Position.DistanceTo(player.Position) <= 10)
         //        {
-        //            if (playerDataManager.UpdatePlayersMoney(player, -1 * money))
+        //            if (PlayerDataManager.UpdatePlayersMoney(player, -1 * money))
         //            {
-        //                playerDataManager.UpdatePlayersMoney(target, money);
-        //                playerDataManager.SendInfoToPlayer(target, "Otrzymano przelew od " + player.GetSharedData<string>("username") + " o kwocie $" + money.ToString() + ". Tytuł: " + title + ".");
-        //                playerDataManager.SaveTransferToDB(player, target, money, title);
+        //                PlayerDataManager.UpdatePlayersMoney(target, money);
+        //                PlayerDataManager.SendInfoToPlayer(target, "Otrzymano przelew od " + player.GetSharedData<string>("username") + " o kwocie $" + money.ToString() + ". Tytuł: " + title + ".");
+        //                PlayerDataManager.SaveTransferToDB(player, target, money, title);
         //                player.TriggerEvent("closeMoneyTransferBrowser");
         //            }
         //            else
         //            {
-        //                playerDataManager.NotifyPlayer(player, "Błąd przelewu: nie masz tyle gotówki!");
+        //                PlayerDataManager.NotifyPlayer(player, "Błąd przelewu: nie masz tyle gotówki!");
         //                player.TriggerEvent("closeMoneyTransferBrowser");
         //            }
         //        }
         //        else
         //        {
-        //            playerDataManager.NotifyPlayer(player, "Błąd przelewu: gracz się oddalił!");
+        //            PlayerDataManager.NotifyPlayer(player, "Błąd przelewu: gracz się oddalił!");
         //            player.TriggerEvent("closeMoneyTransferBrowser");
         //        }
 
         //    }
         //    else
         //    {
-        //        playerDataManager.NotifyPlayer(player, "Błąd przelewu: gracz opuścił serwer!");
+        //        PlayerDataManager.NotifyPlayer(player, "Błąd przelewu: gracz opuścił serwer!");
         //        player.TriggerEvent("closeMoneyTransferBrowser");
         //    }
         //}

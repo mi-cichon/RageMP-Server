@@ -6,14 +6,14 @@ using Newtonsoft.Json;
 
 namespace ServerSide
 {
-    public class AutoSave
+    public static class AutoSave
     {
-        public Dictionary<string, string> jobData = new Dictionary<string, string>();
+        public static Dictionary<string, string> jobData = new Dictionary<string, string>();
 
-        public Dictionary<string, int> bonusData = new Dictionary<string, int>();
+        public static Dictionary<string, int> bonusData = new Dictionary<string, int>();
 
 
-        List<JobName> jobNames = new List<JobName>()
+        static List<JobName> jobNames = new List<JobName>()
         {
             new JobName("forklifts", "Wózki widłowe", "PL"),
             new JobName("warehouse", "Magazynier", "PL"),
@@ -27,10 +27,7 @@ namespace ServerSide
             new JobName("diver", "Nurek", "W")
         };
 
-
-    public AutoSave() { }
-
-        public void SavePlayersBonusData(Player player, int data)
+        public static void SavePlayersBonusData(Player player, int data)
         {
             foreach (KeyValuePair<string, int> playerData in bonusData)
             {
@@ -43,7 +40,7 @@ namespace ServerSide
             bonusData.Add(player.SocialClubId.ToString(), data);
         }
 
-        public int GetPlayersBonusData(Player player)
+        public static int GetPlayersBonusData(Player player)
         {
             foreach (KeyValuePair<string, int> playerData in bonusData)
             {
@@ -56,7 +53,7 @@ namespace ServerSide
         }
 
 
-        public void SavePlayersJobData(Player player, string data)
+        public static void SavePlayersJobData(Player player, string data)
         {
             foreach(KeyValuePair<string, string> playerData in jobData)
             {
@@ -69,7 +66,7 @@ namespace ServerSide
             jobData.Add(player.SocialClubId.ToString(), data);
         }
 
-        public string GetPlayersJobData(Player player)
+        public static string GetPlayersJobData(Player player)
         {
             foreach (KeyValuePair<string, string> playerData in jobData)
             {
@@ -82,7 +79,7 @@ namespace ServerSide
             return "";
         }
 
-        public void LoadPlayersJob(Player player)
+        public static void LoadPlayersJob(Player player)
         {
             string data = GetPlayersJobData(player);
             if (data != "")
@@ -99,7 +96,7 @@ namespace ServerSide
             }
         }
 
-        public void RemovePlayersJobData(Player player)
+        public static void RemovePlayersJobData(Player player)
         {
             foreach (KeyValuePair<string, string> playerData in jobData)
             {
