@@ -3,7 +3,6 @@ let lawnMower = null;
 let backMarker = null;
 let grassBox = null;
 let containerBlip = null;
-let containerCol = null;
 let containerMarker = null;
 let lawnTimeout = null;
 let containersPositions = [
@@ -27,7 +26,7 @@ mp.events.add("render", () => {
             text = "Zapełnienie kosza: " + (currentCapacity).toFixed(1) + "/" + maxCapacity + "L";
         }
         else{
-            text = "Weź skoszoną trawę i zanieś ją do kontenera";
+            text = "Weź skoszoną trawę i zanieś ją do kontenera [E]";
         }
         let pos = new Float64Array([0.5, 0.95]);
         mp.game.graphics.drawText(text, pos, { 
@@ -62,9 +61,6 @@ mp.events.addDataHandler("job", (entity, value, oldvalue) => {
             }
             if(mp.blips.exists(containerBlip)){
                containerBlip.destroy();
-            }
-            if(mp.colshapes.exists(containerCol)){
-            containerCol.destroy();
             }
             if(mp.markers.exists(containerMarker)){
                 containerMarker.destroy();
@@ -113,16 +109,7 @@ mp.events.addDataHandler("jobveh", (entity, value, oldvalue) => {
 
 mp.events.add("playerEnterColshape", (shape) => {
     if(player.getVariable("job") == "lawnmowing"){
-        if(mp.colshapes.exists(containerCol) && shape == containerCol && mp.objects.exists(grassBox)){
-            containerCol.destroy();
-            grassBox.destroy();
-            player.clearTasksImmediately();
-            containerBlip.destroy();
-            containerMarker.destroy();
-            mp.events.callRemote("lawnmowingReward", currentCapacity);
-            currentCapacity = 0;
-        }
-        else if(shape.hasVariable("type") && shape.getVariable("type") === "grass" && currentCapacity < maxCapacity && player.vehicle != null && player.vehicle === lawnMower){
+        if(shape.hasVariable("type") && shape.getVariable("type") === "grass" && currentCapacity < maxCapacity && player.vehicle != null && player.vehicle === lawnMower){
             if(shape.getVariable("grassExists")){
                 mp.events.callRemote("lawnmowingRemoveGrass", shape.getVariable("grassId"));
             }
@@ -136,7 +123,7 @@ mp.events.add("lawnmowingGrassRemoved", amount => {
 
         currentCapacity += amount;
 
-        if(currentCapacity >= 0.8 * maxCapacity && !(containerCol != null && mp.colshapes.exists(containerCol))){
+        if(currentCapacity >= 0.8 * maxCapacity && !(containerMarker != null && mp.markers.exists(containerMarker))){
             createContainer();
         }
     
@@ -153,7 +140,6 @@ function createContainer(){
         name: "Kontener",
         scale: 0.6
     });
-    containerCol = mp.colshapes.newTube(pos.x, pos.y, pos.z, 1.0, 2.0);
     containerMarker = mp.markers.new(0, pos.add(new mp.Vector3(0,0,1.3)), 0.6, {
         color: [128, 204, 124, 255]
     });
@@ -204,5 +190,21 @@ mp.events.add("saveData_lawnmowing_save", () => {
     if(mp.vehicles.exists(lawnMower)){
         let saveData = ["lawnmowing", JSON.stringify(lawnMower.position), currentCapacity];
         mp.events.callRemote("saveData_saveJobData", JSON.stringify(saveData));
+    }
+});
+
+mp.keys.bind(0x45, true, function(){
+    if(player.getVariable("job") === "lawnmowing" && containerMarker != null && mp.markers.exists(containerMarker)){
+        if(getDistance(player.position, containerMarker.position) < 2){
+            grassBox.destroy();
+            player.clearTasksImmediately();
+            containerBlip.destroy();
+            containerMarker.destroy();
+            containerMarker = null;
+            containerBlip = null;
+            grassBox = null;
+            mp.events.callRemote("lawnmowingReward", currentCapacity);
+            currentCapacity = 0;
+        }
     }
 });
