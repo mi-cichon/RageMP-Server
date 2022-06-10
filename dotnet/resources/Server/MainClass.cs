@@ -75,7 +75,7 @@ namespace ServerSide
 
 
             //INSTANTIATE THINGS
-
+            PlayerDataManager.SetPaths();
             LSPD.InstantiateLSPD();
             DataManager.InstantiatePetrolStationsData();
             DoorManager.InstantiateMissionRowLSPD();
