@@ -132,7 +132,7 @@ mp.events.add("peltTaken", (state) => {
         deadAnimalBlip.destroy();
         deadAnimalBlip = null;
         mp.game.streaming.requestAnimDict("amb@prop_human_bum_bin@base");
-        player.taskPlayAnim("amb@prop_human_bum_bin@base", "base", 1.0, 1.0, 2000, 2, 1.0, false, false, false);
+        player.taskPlayAnim("amb@prop_human_bum_bin@base", "base", 1.0, 1.0, time, 2, 1.0, false, false, false);
         player.freezePosition(true);
         skinning = true;
         setTimeout(function(){
