@@ -48,9 +48,9 @@ namespace ServerSide
             }
 
             
-            int exp = player.GetSharedData<bool>("jobBonus_6") ? 1 : 2;
+            int exp = player.GetSharedData<bool>("jobBonus_6") ? 2 : 4;
 
-            int money = Convert.ToInt32(4 * bonus);
+            int money = Convert.ToInt32(3 * bonus);
             money = Convert.ToInt32(AddPlayersBonus(player, money) * (IsPlayerTesting(player) ? 1 : bonuses["warehouse"]));
 
 
@@ -142,7 +142,7 @@ namespace ServerSide
 
         public void DebrisCleanerPayment(Player player, int weight)
         {
-            int money = weight;
+            int money = Convert.ToInt32(weight * 0.8);
 
             double bonus = 1;
             if (player.GetSharedData<bool>("jobBonus_59"))
@@ -162,7 +162,7 @@ namespace ServerSide
                 bonus = 1.05;
             }
 
-            int exp = weight / 15;
+            int exp = Convert.ToInt32(weight * 0.75);
 
             money = Convert.ToInt32(money * bonus);
 
@@ -595,8 +595,8 @@ namespace ServerSide
             }
 
 
-            int money = Convert.ToInt32(amount * 8);
-            int exp = 20;
+            int money = Convert.ToInt32(amount * 5);
+            int exp = 60;
 
             money = Convert.ToInt32(money * bonus);
 

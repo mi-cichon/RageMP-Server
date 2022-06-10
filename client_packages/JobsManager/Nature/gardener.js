@@ -97,7 +97,7 @@ mp.events.add("saveData_gardener_load", (data) => {
     currentOrder = JSON.parse(saveData[1]);
     orderState = JSON.parse(saveData[1]);
     mp.events.call("openGardenerHUDBrowser", saveData[1]);
-    mp.events.callRemote("saveData_giveJobVeh", "gardener", JSON.parse(saveData[2]), saveData[3]);
+    mp.events.callRemote("saveData_giveJobVeh", "gardener", JSON.parse(saveData[2]), saveData[3], 0);
 });
 
 mp.events.add("saveData_gardener_save", () => {
