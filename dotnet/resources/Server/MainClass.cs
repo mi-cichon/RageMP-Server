@@ -85,6 +85,14 @@ namespace ServerSide
             NicknameChange.InstantiateNicknameChange();
 
 
+            NAPI.Object.CreateObject(NAPI.Util.GetHashKey("warehouse_floor"), new Vector3(-1072.25476, -2129.853, 12.3307972), new Vector3(0, 0, -45));
+            NAPI.Object.CreateObject(NAPI.Util.GetHashKey("warehouse_floor"), new Vector3(-1085.85266, -2116.25513, 12.3308668), new Vector3(0, 0, -45));
+            NAPI.Object.CreateObject(NAPI.Util.GetHashKey("warehouse_floor"), new Vector3(-1099.86548, -2102.24243, 12.3308487), new Vector3(0, 0, -45));
+            NAPI.Object.CreateObject(NAPI.Util.GetHashKey("warehouse_floor"), new Vector3(-1142.04993, -2116.19238, 12.3307972), new Vector3(0, 0, -45));
+            NAPI.Object.CreateObject(NAPI.Util.GetHashKey("warehouse_floor"), new Vector3(-1113.92908, -2116.30615, 12.3308735), new Vector3(0, 0, -45));
+            NAPI.Object.CreateObject(NAPI.Util.GetHashKey("warehouse_floor"), new Vector3(-1127.93262, -2130.30957, 12.3307686), new Vector3(0, 0, -45));
+
+
             Peds.CreateDepartmentPed(new Vector3(-1561.8259f, -559.97095f, 114.57642), 110f, "Zmiana nicku");
 
             //SET JOB VEHICLES SETTINGS
