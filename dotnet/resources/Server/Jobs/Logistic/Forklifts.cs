@@ -11,11 +11,11 @@ namespace ServerSide
 
         public static List<KeyValuePair<Vector3, float>> boxPositions = new List<KeyValuePair<Vector3, float>>()
         {
-            new KeyValuePair<Vector3, float>(new Vector3(-529.8499, -2372.777, 13.1299629), 50f),
-            new KeyValuePair<Vector3, float>(new Vector3(-527.1217, -2375.06616, 13.1299629), 50f),
-            new KeyValuePair<Vector3, float>(new Vector3(-524.5464, -2377.44531, 13.1299629), 50f),
-            new KeyValuePair<Vector3, float>(new Vector3(-609.570068, -2463.342, 13.1175718), 50f),
-            new KeyValuePair<Vector3, float>(new Vector3(-612.2968, -2461.13257, 13.1175718), 50f)
+            new KeyValuePair<Vector3, float>(new Vector3(-520.160767, -2378.36084, 13.4060326), 45f),
+            new KeyValuePair<Vector3, float>(new Vector3(-522.6573, -2376.038, 13.4060326), 50f),
+            new KeyValuePair<Vector3, float>(new Vector3(-525.5191, -2373.67578, 13.4060326), 50f),
+            new KeyValuePair<Vector3, float>(new Vector3(-607.9698, -2462.04272, 13.3965521), 50f),
+            new KeyValuePair<Vector3, float>(new Vector3(-605.352539, -2464.14453, 13.3965521), 50f)
         };
 
         public static List<Vector3> dropPositions = new List<Vector3>()
@@ -33,15 +33,13 @@ namespace ServerSide
         public static ColShape StartColshape;
         public static Blip ForkBlip;
         public static void InstantiateForklifts(Vector3 startPosition)
-        {
-            new InteriorTeleport(new Vector3(-557.37805f, -2349.0842f, 13.944196f), 54.442875f, new Vector3(-554.24475f, -2351.8567f, 13.71682f), -131.29285f, "Magazyn");
-            
+        {     
             StartPosition = startPosition;
             StartColshape = NAPI.ColShape.CreateCylinderColShape(startPosition, 1.0f, 2.0f);
             StartColshape.SetSharedData("type", "forklifts");
             ForkBlip = NAPI.Blip.CreateBlip(569, startPosition, 0.8f, 69, name: "Wózki widłowe", shortRange: true);
             CustomMarkers.CreateJobMarker(startPosition, "Praca: Wózki widłowe");
-            NAPI.Ped.CreatePed((uint)PedHash.Business02AFM, new Vector3(-551.69934f, -2360.5007f, 13.71682f), 50.8f, frozen: true, invincible: true);
+            NAPI.Ped.CreatePed((uint)PedHash.Business02AFM, new Vector3(-554.0335f, -2354.093f, 13.994385f), -18f, frozen: true, invincible: true);
 
             CreateBoxSpawnPoints();
         }

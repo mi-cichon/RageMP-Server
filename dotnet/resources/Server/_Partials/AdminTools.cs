@@ -312,8 +312,9 @@ namespace ServerSide
         [RemoteEvent("savePos")]
         public void SavePos(Player player, Vector3 position)
         {
-            string pos = $"new Vector3({position.X.ToString().Replace(',', '.')}f, {position.Y.ToString().Replace(',', '.')}f, {position.Z.ToString().Replace(',', '.')}f);";
+            string pos = $"new mp.Vector3({position.X.ToString().Replace(',', '.')}, {position.Y.ToString().Replace(',', '.')}, {position.Z.ToString().Replace(',', '.')}),";
             File.AppendAllText(@"positions.txt", pos + Environment.NewLine, new UTF8Encoding(false, true));
+            PlayerDataManager.NotifyPlayer(player, "Zapisano pozycję!");
         }
 
         [RemoteEvent("appendGrassPos")]

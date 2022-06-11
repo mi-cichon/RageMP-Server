@@ -27,8 +27,8 @@ namespace ServerSide
             jobVehicleSpawns.Add(new JobVehicleSpawn("gardener", new Vector3(1542.5675f, 2179.2874f, 78.810936f), 90f, VehicleHash.Kalahari, 53, "BASICRPG", jobVehicles.Find(veh => veh.JobType == "gardener")));
 
             //WÓZKI WIDŁOWE
-            jobVehicleSpawns.Add(new JobVehicleSpawn("forklifts", new Vector3(-555.56934f, -2362.5415f, 13.716819f), 141.7f, VehicleHash.Forklift, 42, "BASICRPG", jobVehicles.Find(veh => veh.JobType == "forklifts")));
-            jobVehicleSpawns.Add(new JobVehicleSpawn("forklifts", new Vector3(-558.0603f, -2360.3997f, 13.716819f), 141.7f, VehicleHash.Forklift, 42, "BASICRPG", jobVehicles.Find(veh => veh.JobType == "forklifts")));
+            jobVehicleSpawns.Add(new JobVehicleSpawn("forklifts", new Vector3(-555.99615f, -2362.6638f, 13.993408f), -130.63968f, VehicleHash.Forklift, 42, "BASICRPG", jobVehicles.Find(veh => veh.JobType == "forklifts")));
+            jobVehicleSpawns.Add(new JobVehicleSpawn("forklifts", new Vector3(-553.5449f, -2359.4949f, 13.993403f), -130.63968f, VehicleHash.Forklift, 42, "BASICRPG", jobVehicles.Find(veh => veh.JobType == "forklifts")));
 
             //RAFINERIA
             jobVehicleSpawns.Add(new JobVehicleSpawn("refinery", new Vector3(2762.1292f, 1340.3951f, 25.473862f), -0.9825836f, (VehicleHash)NAPI.Util.GetHashKey("oiltanker"), 42, "BASICRPG", jobVehicles.Find(veh => veh.JobType == "refinery"), true));
