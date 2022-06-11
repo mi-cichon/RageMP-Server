@@ -1411,6 +1411,12 @@ namespace ServerSide
                     //        }
                     //    }
                     //    break;
+                    case "wozki":
+                        if(args.Count == 0)
+                        {
+                            player.TriggerEvent("saveForkliftsPos");
+                        }
+                        break;
                 }
             }
         }

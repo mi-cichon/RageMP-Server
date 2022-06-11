@@ -26,16 +26,14 @@ namespace ServerSide
             PayoutManager.LawnmowingPayment(player, amount);
         }
         [RemoteEvent("lawnmowingRemoveGrass")]
-        public void LawnmowingRemoveGrass(Player player, int grassID)
+        public void LawnmowingRemoveGrass(Player player, int objId)
         {
-            if(Lawnmowing.grassObjects[grassID] != null)
+            var grassList = Lawnmowing.grassObjects.FindAll(grass => grass.grassObj.Id == objId);
+            var grass = grassList.Count > 0 ? grassList[0] : null;
+            if (grass != null && grass.Destroy())
             {
-                var grass = Lawnmowing.grassObjects[grassID];
-                if (grass.Destroy())
-                {
-                    Random rnd = new Random();
-                    player.TriggerEvent("lawnmowingGrassRemoved", rnd.Next(3,11));
-                }
+                Random rnd = new Random();
+                player.TriggerEvent("lawnmowingGrassRemoved", rnd.Next(3,11));
             }
         }
     }
