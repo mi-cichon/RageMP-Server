@@ -135,7 +135,7 @@ namespace ServerSide
 
             Diver.InstantiateDiver();
 
-            Forklifts.InstantiateForklifts(new Vector3(-553.21564f, -2359.1633f, 13.716812f));
+            Forklifts.InstantiateForklifts(new Vector3(-553.48566f, -2352.2178f, 13.994338f));
             FisherMan.InstantiateFisherMan();
             Warehouse.InstantiateWarehouse(new Vector3(-87.66176f, 6494.595f, 32.100685f));
             DebrisCleaner.InstantiateDebrisCleaner(new Vector3(-1705.2916f, -994.86456f, 6.161489f));
