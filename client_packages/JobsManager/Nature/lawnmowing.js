@@ -35,6 +35,14 @@ mp.events.add("render", () => {
             scale: [0.7, 0.7], 
             outline: true
         });
+
+        if(player.vehicle && player.vehicle === lawnMower && currentCapacity < maxCapacity){
+            let obj = mp.game.object.getClosestObjectOfType(lawnMower.position.x, lawnMower.position.y, lawnMower.position.z, 1, mp.game.joaat("prop_veg_grass_01_d"), false, true, true);
+            if(obj){
+                mp.events.callRemote("lawnmowingRemoveGrass", mp.objects.atHandle(obj).remoteId);
+            }
+
+        }
     }
 });
 
@@ -107,15 +115,15 @@ mp.events.addDataHandler("jobveh", (entity, value, oldvalue) => {
     }
 });
 
-mp.events.add("playerEnterColshape", (shape) => {
-    if(player.getVariable("job") == "lawnmowing"){
-        if(shape.hasVariable("type") && shape.getVariable("type") === "grass" && currentCapacity < maxCapacity && player.vehicle != null && player.vehicle === lawnMower){
-            if(shape.getVariable("grassExists")){
-                mp.events.callRemote("lawnmowingRemoveGrass", shape.getVariable("grassId"));
-            }
-        }
-    }
-});
+// mp.events.add("playerEnterColshape", (shape) => {
+//     if(player.getVariable("job") == "lawnmowing"){
+//         if(shape.hasVariable("type") && shape.getVariable("type") === "grass" && currentCapacity < maxCapacity && player.vehicle != null && player.vehicle === lawnMower){
+//             if(shape.getVariable("grassExists")){
+//                 mp.events.callRemote("lawnmowingRemoveGrass", shape.getVariable("grassId"));
+//             }
+//         }
+//     }
+// });
 
 mp.events.add("lawnmowingGrassRemoved", amount => {
     if(player.getVariable("job") == "lawnmowing"){

@@ -216,3 +216,11 @@ mp.events.add("testAnim2", (dict, name) => {
     mp.game.streaming.requestAnimDict(dict);
     player.taskPlayAnim(dict, name, 1.0, 1.0, -1, 2, 1.0, false, false, false);
 });
+
+mp.events.add("saveForkliftsPos", () => {
+    if(player.vehicle != null){
+        let forklift = player.vehicle;
+        let pos = forklift.getWorldPositionOfBone(forklift.getBoneIndexByName("forks_attach"));
+        mp.events.callRemote("savePos", pos);
+    }
+});
