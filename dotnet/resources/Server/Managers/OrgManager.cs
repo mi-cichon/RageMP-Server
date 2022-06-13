@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using GTANetworkAPI;
 using MySqlConnector;
 using Newtonsoft.Json;
+using Server.Database;
 
 namespace ServerSide
 {
@@ -15,17 +17,14 @@ namespace ServerSide
 
         public static void InstantiateOrgs()
         {
-            DBConnection dataBase = new DBConnection();
-            dataBase.command.CommandText = $"SELECT * FROM orgs";
-            using (MySqlDataReader reader = dataBase.command.ExecuteReader())
+            using var context = new ServerDB();
+            var organizations = context.Orgs.ToList();
+
+            foreach(var org in organizations)
             {
-                while (reader.Read())
-                {
-                    Organization org = new Organization(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), UInt64.Parse(reader.GetString(3)), JsonConvert.DeserializeObject<List<ulong>>(reader.GetString(4)), JsonConvert.DeserializeObject<List<ulong>>(reader.GetString(5)), JsonConvert.DeserializeObject<List<int>>(reader.GetString(6)), JsonConvert.DeserializeObject<List<int>>(reader.GetString(7)));
-                    orgs.Add(org);
-                }
+                Organization o = new Organization(org.Id, org.Name, org.Tag, UInt64.Parse(org.Owner), JsonConvert.DeserializeObject<List<ulong>>(org.Members), JsonConvert.DeserializeObject<List<ulong>>(org.Requests), JsonConvert.DeserializeObject<List<int>>(org.Vehicles), JsonConvert.DeserializeObject<List<int>>(org.VehicleRequests));
+                orgs.Add(o);
             }
-            dataBase.connection.Close();
 
             ColShape col = NAPI.ColShape.CreateCylinderColShape(new Vector3(-1570.2968f, -551.0935f, 114.57582f), 1.2f, 2.0f);
             col.SetSharedData("type", "org");
@@ -68,38 +67,22 @@ namespace ServerSide
 
         public static int CreateOrg(Player owner, string name, string tag)
         {
-            DBConnection dataBase = new DBConnection();
-            dataBase.command.CommandText = $"SELECT * FROM orgs WHERE LOWER(name) = '{name.ToLower()}'";
-            var result = dataBase.command.ExecuteScalar();
-            if (result != null)
+            using var context = new ServerDB();
+            var sameNameOrgs = context.Orgs.Where(o => o.Name.ToLower() == name.ToLower()).ToList();
+            if(sameNameOrgs.Count > 0)
             {
-                dataBase.connection.Close();
                 return 1;
             }
             else
             {
-                dataBase.command.CommandText = $"SELECT * FROM orgs WHERE LOWER(tag) = '{tag.ToLower()}'";
-                var res = dataBase.command.ExecuteScalar();
-                if (res != null)
-                {
-                    dataBase.connection.Close();
-                    return 2;
-                }
-                else
-                {
-                    Organization org = new Organization(name, tag, owner.SocialClubId);
-                    org.SaveOrgToDataBase();
-                    orgs.Add(org);
-                    owner.SetSharedData("orgName", name);
-                    owner.SetSharedData("orgOwner", true);
-                    owner.SetSharedData("orgTag", org.tag);
-                    NAPI.Task.Run(() =>
-                    {
-                        owner.SetSharedData("orgId", org.id);
-                    }, 2000);
-                    dataBase.connection.Close();
-                    return 0;
-                }
+                Organization org = new Organization(name, tag, owner.SocialClubId);
+                org.SaveOrgToDataBase();
+                orgs.Add(org);
+                owner.SetSharedData("orgName", name);
+                owner.SetSharedData("orgOwner", true);
+                owner.SetSharedData("orgTag", org.tag);
+                NAPI.Task.Run(() =>{ owner.SetSharedData("orgId", org.id); }, 2000);
+                return 0;
             }
         }
 
@@ -442,26 +425,45 @@ namespace ServerSide
 
         public void SaveOrgToDataBase()
         {
-            DBConnection dataBase = new DBConnection();
+            using var context = new ServerDB();
             if (id == 0)
             {
-                dataBase.command.CommandText = $"INSERT INTO orgs (name, tag, owner, members, requests, vehicles, vehiclerequests) values ('{name}','{tag}','{owner}','[]','[]','[]','[]'); SELECT LAST_INSERT_ID();";
-                id = Convert.ToInt32(dataBase.command.ExecuteScalar());
+                context.Orgs.Add(new Server.Models.Org
+                {
+                    Name = name,
+                    Tag = tag,
+                    Owner = owner.ToString(),
+                    Members = "[]",
+                    Requests = "[]",
+                    Vehicles = "[]",
+                    VehicleRequests = "[]"
+                });
+
+                context.SaveChanges();
+
+                id = context.Orgs.ToList().Last().Id;
             }
             else
             {
-                dataBase.command.CommandText = $"UPDATE orgs SET name = '{name}', tag = '{tag}', owner = '{owner}', members = '{JsonConvert.SerializeObject(members)}', requests = '{JsonConvert.SerializeObject(requests)}', vehicles = '{JsonConvert.SerializeObject(vehicles)}', vehiclerequests = '{JsonConvert.SerializeObject(vehicleRequests)}' WHERE id = {id}";
-                dataBase.command.ExecuteNonQuery();
+                var org = context.Orgs.Where(x => x.Id == id).FirstOrDefault();
+
+                org.Name = name;
+                org.Tag = tag;
+                org.Owner = owner.ToString();
+                org.Members = JsonConvert.SerializeObject(members);
+                org.Requests = JsonConvert.SerializeObject(requests);
+                org.Vehicles = JsonConvert.SerializeObject(vehicles);
+                org.VehicleRequests = JsonConvert.SerializeObject(vehicleRequests);
+
+                context.SaveChanges();
             }
-            dataBase.connection.Close();
         }
 
         public void Delete()
         {
-            DBConnection dataBase = new DBConnection();
-            dataBase.command.CommandText = $"DELETE FROM orgs WHERE id = {id}";
-            dataBase.command.ExecuteNonQuery();
-            dataBase.connection.Close();
+            using var context = new ServerDB();
+            context.Orgs.Remove(context.Orgs.Where(x => x.Id == id).FirstOrDefault());
+            context.SaveChanges();
             foreach (Vehicle vehicle in NAPI.Pools.GetAllVehicles())
             {
                 if (vehicle.HasSharedData("orgId") && vehicles.Contains(vehicle.GetSharedData<Int32>("id")))
@@ -489,152 +491,85 @@ namespace ServerSide
             List<string[]> membersRequests = new List<string[]>();
             List<string[]> vehiclesRequests = new List<string[]>();
             List<string[]> vehiclesToShare = new List<string[]>();
-
-            DBConnection dataBase = new DBConnection();
-
+            using var context = new ServerDB();
             if (this.members.Count > 0)
             {
-                string mm = "";
-                foreach (ulong member in this.members)
+                var mmbs = context.Users.ToList().Where(x => (this.members.Contains(ulong.Parse(x.Login)) || this.owner.ToString() == x.Login) && x.Login != memberId.ToString()).ToList();
+                foreach(var member in mmbs)
                 {
-                    mm += $"login = '{member}'";
-                    if (this.members.IndexOf(member) != this.members.Count - 1)
+                    members.Add(new string[]
                     {
-                        mm += " OR ";
-                    }
-                }
-                dataBase.command.CommandText = "SELECT id, username FROM users WHERE " + mm + ";";
-                using (MySqlDataReader reader = dataBase.command.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        members.Add(new string[]
-                        {
-                            reader.GetInt32(0).ToString(),
-                            reader.GetString(1),
-                        });
-                    }
+                        member.Id.ToString(),
+                        member.Username
+                    });
                 }
             }
 
             if (this.vehicles.Count > 0)
             {
-                string mm = "";
-                foreach (int vehicle in this.vehicles)
+                var orgVehicles = (from veh in context.Set<Server.Models.Vehicle>()
+                                   join user in context.Set<Server.Models.User>()
+                                   on veh.Owner equals user.Login
+                                   where this.vehicles.Contains(veh.Id)
+                                   select new { veh, user }).ToList();
+
+                foreach(var vehicle in orgVehicles)
                 {
-                    mm += $"vehicles.id = {vehicle}";
-                    if (this.vehicles.IndexOf(vehicle) != this.vehicles.Count - 1)
+                    vehicles.Add(new string[]
                     {
-                        mm += " OR ";
-                    }
-                }
-                dataBase.command.CommandText = "SELECT vehicles.id, vehicles.name, users.username FROM vehicles LEFT JOIN users ON vehicles.owner = users.login WHERE " + mm + ";";
-                using (MySqlDataReader reader = dataBase.command.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        vehicles.Add(new string[]
-                        {
-                            reader.GetInt32(0).ToString(),
-                            reader.GetString(1),
-                            reader.GetString(2)
-                        });
-                    }
+                        vehicle.veh.Id.ToString(),
+                        vehicle.veh.Name,
+                        vehicle.user.Username
+                    });
                 }
             }
 
             if (this.vehicleRequests.Count > 0)
             {
-                string mm = "";
-                foreach (int vehicle in this.vehicleRequests)
+                var vehRequests = (from veh in context.Set<Server.Models.Vehicle>()
+                                   join user in context.Set<Server.Models.User>()
+                                   on veh.Owner equals user.Login
+                                   where this.vehicleRequests.Contains(veh.Id)
+                                   select new { veh, user }).ToList();
+
+                foreach (var vehicle in vehRequests)
                 {
-                    mm += $"vehicles.id = {vehicle}";
-                    if (this.vehicleRequests.IndexOf(vehicle) != this.vehicleRequests.Count - 1)
+                    vehiclesRequests.Add(new string[]
                     {
-                        mm += " OR ";
-                    }
-                }
-                dataBase.command.CommandText = "SELECT vehicles.id, vehicles.name, users.username FROM vehicles LEFT JOIN users ON vehicles.owner = users.login WHERE " + mm + ";";
-                using (MySqlDataReader reader = dataBase.command.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        vehiclesRequests.Add(new string[]
-                        {
-                            reader.GetInt32(0).ToString(),
-                            reader.GetString(1),
-                            reader.GetString(2)
-                        });
-                    }
+                        vehicle.veh.Id.ToString(),
+                        vehicle.veh.Name,
+                        vehicle.user.Username
+                    });
                 }
             }
 
             if (this.requests.Count > 0)
             {
-                string mm = "";
-                foreach (ulong member in this.requests)
+                var memberRequests = context.Users.ToList().Where(x => this.requests.Contains(ulong.Parse(x.Login))).ToList();
+                foreach (var member in memberRequests)
                 {
-                    mm += $"login = '{member}'";
-                    if (this.requests.IndexOf(member) != this.requests.Count - 1)
+                    membersRequests.Add(new string[]
                     {
-                        mm += " OR ";
-                    }
-                }
-                dataBase.command.CommandText = "SELECT id, username, login FROM users WHERE " + mm + ";";
-                using (MySqlDataReader reader = dataBase.command.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        membersRequests.Add(new string[]
-                        {
-                            reader.GetInt32(0).ToString(),
-                            reader.GetString(1),
-                            reader.GetString(2)
-                        });
-                    }
+                        member.Id.ToString(),
+                        member.Username,
+                        member.Login
+                    });
                 }
             }
 
-            string m = "";
-            if (this.vehicleRequests.Count > 0)
+            var vehsToShare = (from veh in context.Set<Server.Models.Vehicle>()
+                               join user in context.Set<Server.Models.User>()
+                               on veh.Owner equals user.Login
+                               where !this.vehicleRequests.Contains(veh.Id) && !this.vehicles.Contains(veh.Id) && user.Login == memberId.ToString()
+                               select new { veh, user }).ToList();
+
+            foreach (var vehicle in vehsToShare)
             {
-                m = " AND ";
-            }
-            foreach (int vehicle in this.vehicleRequests)
-            {
-                m += $" vehicles.id NOT LIKE {vehicle}";
-                if (this.vehicleRequests.IndexOf(vehicle) != this.vehicleRequests.Count - 1)
-                {
-                    m += " AND ";
-                }
-            }
-            if (m == "" && this.vehicles.Count > 0)
-            {
-                m += " AND";
-            }
-            else if (this.vehicles.Count > 0)
-            {
-                m += " AND";
-            }
-            foreach (int vehicle in this.vehicles)
-            {
-                m += $" vehicles.id NOT LIKE {vehicle}";
-                if (this.vehicles.IndexOf(vehicle) != this.vehicles.Count - 1)
-                {
-                    m += " AND ";
-                }
-            }
-            dataBase.command.CommandText = $"SELECT vehicles.id, vehicles.name FROM vehicles LEFT JOIN users ON vehicles.owner = users.login WHERE users.login = '{memberId}'" + m + ";";
-            using (MySqlDataReader reader = dataBase.command.ExecuteReader())
-            {
-                while (reader.Read())
-                {
-                    vehiclesToShare.Add(new string[]
+                vehiclesToShare.Add(new string[]
                     {
-                        reader.GetInt32(0).ToString(),
-                        reader.GetString(1)
+                        vehicle.veh.Id.ToString(),
+                        vehicle.veh.Name
                     });
-                }
             }
 
             data.Add(members);
@@ -642,7 +577,6 @@ namespace ServerSide
             data.Add(membersRequests);
             data.Add(vehiclesRequests);
             data.Add(vehiclesToShare);
-            dataBase.connection.Close();
             return data;
         }
 
@@ -654,151 +588,74 @@ namespace ServerSide
             List<string[]> vehiclesToShare = new List<string[]>();
             List<string[]> sharedVehicles = new List<string[]>();
 
-            DBConnection dataBase = new DBConnection();
+            using var context = new ServerDB();
 
             if (this.members.Count > 0)
             {
-                string mm = "";
-                foreach (ulong member in this.members)
+                var mmbs = context.Users.ToList().Where(x => (this.members.Contains(ulong.Parse(x.Login)) || this.owner.ToString() == x.Login) && x.Login != memberId.ToString()).ToList();
+                foreach (var member in mmbs)
                 {
-                    mm += $" login = '{member}' ";
-                    if (this.members.IndexOf(member) != this.members.Count - 1)
+                    members.Add(new string[]
                     {
-                        mm += " OR ";
-                    }
-                }
-                dataBase.command.CommandText = "SELECT id, username FROM users WHERE " + mm + ";";
-                using (MySqlDataReader reader = dataBase.command.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        members.Add(new string[]
-                        {
-                            reader.GetInt32(0).ToString(),
-                            reader.GetString(1),
-                        });
-                    }
+                        member.Id.ToString(),
+                        member.Username
+                    });
                 }
             }
 
             if (this.vehicles.Count > 0)
             {
-                string mm = "";
-                foreach (int vehicle in this.vehicles)
-                {
-                    mm += $" vehicles.id = {vehicle}";
-                    if (this.vehicles.IndexOf(vehicle) != this.vehicles.Count - 1)
-                    {
-                        mm += " OR ";
-                    }
-                }
-                dataBase.command.CommandText = "SELECT vehicles.id, vehicles.name, users.username FROM vehicles LEFT JOIN users ON vehicles.owner = users.login WHERE " + mm + ";";
-                using (MySqlDataReader reader = dataBase.command.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        vehicles.Add(new string[]
-                        {
-                            reader.GetInt32(0).ToString(),
-                            reader.GetString(1),
-                            reader.GetString(2)
-                        });
-                    }
-                }
-            }
+                var orgVehicles = (from veh in context.Set<Server.Models.Vehicle>()
+                                   join user in context.Set<Server.Models.User>()
+                                   on veh.Owner equals user.Login
+                                   where this.vehicles.Contains(veh.Id)
+                                   select new { veh, user }).ToList();
 
-            string m = "";
-            if (this.vehicleRequests.Count > 0)
-            {
-                m = " AND ";
-            }
-            foreach (int vehicle in this.vehicleRequests)
-            {
-                m += $" vehicles.id NOT LIKE {vehicle}";
-                if (this.vehicleRequests.IndexOf(vehicle) != this.vehicleRequests.Count - 1)
+                foreach (var vehicle in orgVehicles)
                 {
-                    m += " AND ";
-                }
-            }
-            if (m == "" && this.vehicles.Count > 0)
-            {
-                m += " AND";
-            }
-            else if (this.vehicles.Count > 0)
-            {
-                m += " AND";
-            }
-            foreach (int vehicle in this.vehicles)
-            {
-                m += $" vehicles.id NOT LIKE {vehicle}";
-                if (this.vehicles.IndexOf(vehicle) != this.vehicles.Count - 1)
-                {
-                    m += " AND ";
-                }
-            }
-            dataBase.command.CommandText = $"SELECT vehicles.id, vehicles.name FROM vehicles LEFT JOIN users ON vehicles.owner = users.login WHERE users.login = '{memberId}'" + m + ";";
-            using (MySqlDataReader reader = dataBase.command.ExecuteReader())
-            {
-                while (reader.Read())
-                {
-                    vehiclesToShare.Add(new string[]
+                    vehicles.Add(new string[]
                     {
-                        reader.GetInt32(0).ToString(),
-                        reader.GetString(1)
+                        vehicle.veh.Id.ToString(),
+                        vehicle.veh.Name,
+                        vehicle.user.Username
                     });
                 }
             }
 
-            m = "";
-            if (this.vehicleRequests.Count > 0)
+            var vehsToShare = (from veh in context.Set<Server.Models.Vehicle>()
+                               join user in context.Set<Server.Models.User>()
+                               on veh.Owner equals user.Login
+                               where !this.vehicleRequests.Contains(veh.Id) && !this.vehicles.Contains(veh.Id) && user.Login == memberId.ToString()
+                               select new { veh, user }).ToList();
+
+            foreach (var vehicle in vehsToShare)
             {
-                m = " AND (";
-            }
-            foreach (int vehicle in this.vehicleRequests)
-            {
-                m += $" vehicles.id = {vehicle}";
-                if (this.vehicleRequests.IndexOf(vehicle) != this.vehicleRequests.Count - 1)
-                {
-                    m += " OR ";
-                }
-            }
-            if (m == "" && this.vehicles.Count > 0)
-            {
-                m += " AND(";
-            }
-            else if (this.vehicles.Count > 0)
-            {
-                m += " OR";
-            }
-            foreach (int vehicle in this.vehicles)
-            {
-                m += $" vehicles.id = {vehicle}";
-                if (this.vehicles.IndexOf(vehicle) != this.vehicles.Count - 1)
-                {
-                    m += " OR ";
-                }
-            }
-            if (m != "")
-            {
-                dataBase.command.CommandText = $"SELECT vehicles.id, vehicles.name FROM vehicles LEFT JOIN users ON vehicles.owner = users.login WHERE users.login = '{memberId}'" + m + (m.Contains('(') ? ")" : "") + ";";
-                using (MySqlDataReader reader = dataBase.command.ExecuteReader())
-                {
-                    while (reader.Read())
+                vehiclesToShare.Add(new string[]
                     {
-                        sharedVehicles.Add(new string[]
-                        {
-                            reader.GetInt32(0).ToString(),
-                            reader.GetString(1)
-                        });
-                    }
-                }
+                        vehicle.veh.Id.ToString(),
+                        vehicle.veh.Name
+                    });
+            }
+
+            var sharedVehs = (from veh in context.Set<Server.Models.Vehicle>()
+                               join user in context.Set<Server.Models.User>()
+                               on veh.Owner equals user.Login
+                               where (this.vehicleRequests.Contains(veh.Id) || this.vehicles.Contains(veh.Id)) && user.Login == memberId.ToString()
+                               select new { veh, user }).ToList();
+
+            foreach (var vehicle in sharedVehs)
+            {
+                sharedVehicles.Add(new string[]
+                    {
+                        vehicle.veh.Id.ToString(),
+                        vehicle.veh.Name
+                    });
             }
 
             data.Add(members);
             data.Add(vehicles);
             data.Add(vehiclesToShare);
             data.Add(sharedVehicles);
-            dataBase.connection.Close();
             return data;
         }
     }

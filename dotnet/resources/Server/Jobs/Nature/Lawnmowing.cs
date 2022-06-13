@@ -59,7 +59,10 @@ namespace ServerSide
     public class Grass
     {
         public GTANetworkAPI.Object grassObj { get; set; }
+<<<<<<< Updated upstream
         public GTANetworkAPI.ColShape grassShape { get; set; }
+=======
+>>>>>>> Stashed changes
         public DateTime? pickedUpTime { get; set; }
         public Vector3 position { get; }
         public int model { get; }
@@ -79,11 +82,14 @@ namespace ServerSide
             this.position = new Vector3(this.position.X + (moveX * 0.1), this.position.Y + (moveY * 0.1), this.position.Z - 0.4);
 
             grassObj = NAPI.Object.CreateObject(model, this.position, new Vector3());
+<<<<<<< Updated upstream
             
             grassShape = NAPI.ColShape.CreateCylinderColShape(this.position - new Vector3(0, 1.4, 0), 1.5f, 3.0f);
             grassShape.SetSharedData("type", "grass");
             grassShape.SetSharedData("grassId", ID);
             grassShape.SetSharedData("grassExists", true);
+=======
+>>>>>>> Stashed changes
 
             pickedUpTime = null;
         }

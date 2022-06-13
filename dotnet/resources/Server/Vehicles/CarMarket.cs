@@ -4,6 +4,8 @@ using System.Text;
 using GTANetworkAPI;
 using MySqlConnector;
 using System.Linq;
+using Server.Database;
+using Newtonsoft.Json;
 
 namespace ServerSide
 {
@@ -83,83 +85,82 @@ namespace ServerSide
 
         public void CreateMarketVehicles()
         {
-            DBConnection dataBase = new DBConnection();
-            dataBase.command.CommandText = $"SELECT * FROM carmarket RIGHT OUTER JOIN vehicles ON carmarket.carId = vehicles.id WHERE carmarket.price != 0";
-            using (MySqlDataReader reader = dataBase.command.ExecuteReader())
+            using var context = new ServerDB();
+            var vehicles = (from market in context.Set<Server.Models.CarMarket>()
+                            join vehicle in context.Set<Server.Models.Vehicle>()
+                            on market.CarId equals vehicle.Id
+                            where market.Price != 0
+                            select new { market, vehicle }).ToList();
+
+            foreach(var marketVeh in vehicles)
             {
-                while (reader.Read())
+                KeyValuePair<Vector3, Vector3> vehiclePos = marketSpaces.ElementAt(marketVeh.market.Id - 1);
+                var veh = marketVehicles[marketVeh.market.Id - 1];
+                veh = NAPI.Vehicle.CreateVehicle(Convert.ToUInt32(marketVeh.vehicle.Model), vehiclePos.Key, 0, 0, 0, numberPlate: "B " + marketVeh.vehicle.Id);
+                veh.Rotation = vehiclePos.Value;
+                Vehicle vehicleInstance = veh;
+                veh.SetSharedData("invincible", true);
+                veh.SetSharedData("type", "personal");
+                veh.SetSharedData("id", marketVeh.vehicle.Id);
+                veh.SetSharedData("owner", ulong.Parse(marketVeh.vehicle.Owner));
+                veh.SetSharedData("model", marketVeh.vehicle.Model);
+                veh.SetSharedData("name", marketVeh.vehicle.Name);
+                veh.SetSharedData("color1", marketVeh.vehicle.Color1);
+                veh.SetSharedData("color1mod", VehicleDataManager.JsonToColorMod(marketVeh.vehicle.Color1));
+                veh.SetSharedData("color2", marketVeh.vehicle.Color2);
+                veh.SetSharedData("color2mod", VehicleDataManager.JsonToColorMod(marketVeh.vehicle.Color2));
+                veh.SetSharedData("spawned", true);
+                veh.SetSharedData("lastpos", vehiclePos.Key);
+                veh.SetSharedData("lastrot", vehiclePos.Value);
+                veh.SetSharedData("damage", marketVeh.vehicle.Damage);
+                veh.SetSharedData("used", marketVeh.vehicle.Used);
+                veh.SetSharedData("tune", marketVeh.vehicle.Tune);
+                veh.SetSharedData("petrol", float.Parse(marketVeh.vehicle.Petrol));
+                veh.SetSharedData("speedometer", marketVeh.vehicle.Speedometer);
+                veh.SetSharedData("towed", false);
+                veh.SetSharedData("locked", false);
+                int[] PandS = VehicleDataManager.GetVehicleStockPowerAndSpeed(veh);
+                veh.SetSharedData("power", PandS[0]);
+                veh.SetSharedData("speed", PandS[1]);
+                veh.SetSharedData("dirt", marketVeh.vehicle.Dirt);
+                veh.SetSharedData("washtime", marketVeh.vehicle.Washtime);
+                veh.SetSharedData("trunk", marketVeh.vehicle.Trunk);
+                veh.SetSharedData("mechtune", marketVeh.vehicle.Mechtune);
+                veh.SetSharedData("wheels", marketVeh.vehicle.Wheels);
+                veh.SetSharedData("drivers", marketVeh.vehicle.Drivers);
+                bool brake = bool.Parse(marketVeh.vehicle.Parkingbrake);
+                veh.SetSharedData("veh_trip", marketVeh.vehicle.Trip);
+                int[] color1 = VehicleDataManager.JsonToColor(marketVeh.vehicle.Color1);
+                int[] color2 = VehicleDataManager.JsonToColor(marketVeh.vehicle.Color2);
+                NAPI.Vehicle.SetVehicleCustomPrimaryColor(veh.Handle, color1[0], color1[1], color1[2]);
+                NAPI.Vehicle.SetVehicleCustomSecondaryColor(veh.Handle, color2[0], color2[1], color2[2]);
+
+                veh.SetSharedData("veh_engine", false);
+                veh.SetSharedData("veh_lights", false);
+                veh.SetSharedData("veh_locked", false);
+
+                VehicleDataManager.setVehiclesPetrolAndTrunk(veh);
+
+                NAPI.Task.Run(() =>
                 {
-                    int id = reader.GetInt32(0);
-                    int price = reader.GetInt32(2);
-                    string description = reader.GetString(3);
-                    KeyValuePair<Vector3, Vector3> vehiclePos = marketSpaces.ElementAt(id - 1);
-                    marketVehicles[id-1] = NAPI.Vehicle.CreateVehicle(Convert.ToUInt32(reader.GetString(6)), vehiclePos.Key, 0, 0, 0, numberPlate: "B " + reader.GetInt32(4).ToString());
-                    marketVehicles[id - 1].Rotation = vehiclePos.Value;
-                    Vehicle vehicle = marketVehicles[id - 1];
-                    marketVehicles[id - 1].SetSharedData("invincible", true);
-                    marketVehicles[id - 1].SetSharedData("type", "personal");
-                    marketVehicles[id - 1].SetSharedData("id", reader.GetInt32(4));
-                    marketVehicles[id - 1].SetSharedData("owner", ulong.Parse(reader.GetString(5)));
-                    marketVehicles[id - 1].SetSharedData("model", reader.GetString(6));
-                    marketVehicles[id - 1].SetSharedData("name", reader.GetString(7));
-                    marketVehicles[id - 1].SetSharedData("color1", reader.GetString(8));
-                    marketVehicles[id - 1].SetSharedData("color1mod", VehicleDataManager.JsonToColorMod(reader.GetString(8)));
-                    marketVehicles[id - 1].SetSharedData("color2", reader.GetString(9));
-                    marketVehicles[id - 1].SetSharedData("color2mod", VehicleDataManager.JsonToColorMod(reader.GetString(9)));
-                    marketVehicles[id - 1].SetSharedData("spawned", true);
-                    marketVehicles[id - 1].SetSharedData("lastpos", vehiclePos.Key);
-                    marketVehicles[id - 1].SetSharedData("lastrot", vehiclePos.Value);
-                    marketVehicles[id - 1].SetSharedData("damage", reader.GetString(13));
-                    marketVehicles[id - 1].SetSharedData("used", reader.GetString(14));
-                    marketVehicles[id - 1].SetSharedData("tune", reader.GetString(15));
-                    marketVehicles[id - 1].SetSharedData("petrol", float.Parse(reader.GetString(16)));
-                    marketVehicles[id - 1].SetSharedData("speedometer", reader.GetString(17));
-                    marketVehicles[id - 1].SetSharedData("towed", false);
-                    marketVehicles[id - 1].SetSharedData("locked", false);
-                    int[] PandS = VehicleDataManager.GetVehicleStockPowerAndSpeed(marketVehicles[id - 1]);
-                    marketVehicles[id - 1].SetSharedData("power", PandS[0]);
-                    marketVehicles[id - 1].SetSharedData("speed", PandS[1]);
-                    marketVehicles[id - 1].SetSharedData("dirt", reader.GetInt32(18));
-                    marketVehicles[id - 1].SetSharedData("washtime", reader.GetString(19));
-                    marketVehicles[id - 1].SetSharedData("trunk", reader.GetString(20));
-                    marketVehicles[id - 1].SetSharedData("mechtune", reader.GetString(21));
-                    marketVehicles[id - 1].SetSharedData("wheels", reader.GetString(22));
-                    marketVehicles[id - 1].SetSharedData("drivers", reader.GetString(23));
-                    bool brake = bool.Parse(reader.GetString(24));
-                    marketVehicles[id - 1].SetSharedData("veh_trip", reader.GetFloat(25));
-                    int[] color1 = VehicleDataManager.JsonToColor(reader.GetString(8));
-                    int[] color2 = VehicleDataManager.JsonToColor(reader.GetString(9));
-                    NAPI.Vehicle.SetVehicleCustomPrimaryColor(marketVehicles[id - 1].Handle, color1[0], color1[1], color1[2]);
-                    NAPI.Vehicle.SetVehicleCustomSecondaryColor(marketVehicles[id - 1].Handle, color2[0], color2[1], color2[2]);
-
-                    marketVehicles[id - 1].SetSharedData("veh_engine", false);
-                    marketVehicles[id - 1].SetSharedData("veh_lights", false);
-                    marketVehicles[id - 1].SetSharedData("veh_locked", false);
-
-                    VehicleDataManager.setVehiclesPetrolAndTrunk(marketVehicles[id - 1]);
-
-                    NAPI.Task.Run(() =>
+                    if (vehicleInstance != null && vehicleInstance.Exists)
                     {
-                        if (vehicle != null && vehicle.Exists)
-                        {
-                            VehicleDataManager.SetVehiclesWheels(marketVehicles[id - 1]);
-                            VehicleDataManager.applyTuneToVehicle(marketVehicles[id - 1], marketVehicles[id - 1].GetSharedData<string>("tune"), marketVehicles[id - 1].GetSharedData<string>("mechtune"));
-                            VehicleDataManager.SetVehiclesExtra(marketVehicles[id - 1]);
-                            marketVehicles[id - 1].SetSharedData("veh_brake", brake);
-                        }
+                        VehicleDataManager.SetVehiclesWheels(veh);
+                        VehicleDataManager.applyTuneToVehicle(veh, veh.GetSharedData<string>("tune"), veh.GetSharedData<string>("mechtune"));
+                        VehicleDataManager.SetVehiclesExtra(veh);
+                        veh.SetSharedData("veh_brake", brake);
+                    }
 
-                    }, 1000);
+                }, 1000);
 
-                    marketVehicles[id - 1].SetSharedData("market", true);
-                    marketVehicles[id - 1].SetSharedData("marketprice", price);
-                    marketVehicles[id - 1].SetSharedData("marketdescription", description);
-                    marketVehicles[id - 1].SetSharedData("marketowner", PlayerDataManager.GetPlayerNameById(marketVehicles[id - 1].GetSharedData<Int64>("owner").ToString()));
+                veh.SetSharedData("market", true);
+                veh.SetSharedData("marketprice", marketVeh.market.Price);
+                veh.SetSharedData("marketdescription", marketVeh.market.Description);
+                veh.SetSharedData("marketowner", PlayerDataManager.GetPlayerNameById(veh.GetSharedData<Int64>("owner").ToString()));
 
-                    marketVehicles[id - 1].SetSharedData("markettune", VehicleDataManager.GetVehiclesTuneString(marketVehicles[id - 1]));
-                    OrgManager.SetVehiclesOrg(marketVehicles[id - 1]);
-                }
+                veh.SetSharedData("markettune", VehicleDataManager.GetVehiclesTuneString(veh));
+                OrgManager.SetVehiclesOrg(veh);
             }
-            dataBase.connection.Close();
         }   
         public bool AddVehicleToMarket(Vehicle vehicle, int price, string description, string ownerName)
         {
@@ -201,13 +202,19 @@ namespace ServerSide
                 {
                     vehicle.SetSharedData("lastpos", freeSpace.Key);
                     vehicle.SetSharedData("lastrot", freeSpace.Value);
-                    VehicleDataManager.SavePersonalVehicleDataToDB(vehicle, "lastpos");
+                    using var context = new ServerDB();
+                    var veh = context.Vehicles.Where(x => x.Id == vehicle.GetSharedData<int>("id")).FirstOrDefault();
+                    veh.Lastpos = VehicleDataManager.VectorToJson(freeSpace.Key);
+                    veh.Lastrot = VehicleDataManager.VectorToJson(freeSpace.Value);
+                    context.SaveChanges();
+
                     marketVehicles[freeIndex].Position = freeSpace.Key;
                     marketVehicles[freeIndex].Rotation = freeSpace.Value;
-                    DBConnection dataBase = new DBConnection();
-                    dataBase.command.CommandText = $"UPDATE carmarket SET carId = {marketVehicles[freeIndex].GetSharedData<Int32>("id")}, price = {price}, description = '{description}' WHERE id = {(freeIndex + 1).ToString()}";
-                    dataBase.command.ExecuteNonQuery();
-                    dataBase.connection.Close();
+                    var market = context.CarMarket.Where(x => x.Id == freeIndex + 1).FirstOrDefault();
+                    market.CarId = marketVehicles[freeIndex].GetSharedData<Int32>("id");
+                    market.Price = price;
+                    market.Description = description;
+                    context.SaveChanges();
                 }, 1000);
                 return true;
             }
@@ -222,11 +229,13 @@ namespace ServerSide
                     VehicleDataManager.SetVehicleAsMarket(vehicle, false);
                     vehicle.ResetSharedData("marketprice");
                     vehicle.ResetSharedData("marketdescription");
-                    DBConnection dataBase = new DBConnection();
-                    dataBase.command.CommandText = $"UPDATE carmarket SET carId = 0, price = 0, description = '' WHERE id = {(i + 1).ToString()}";
-                    dataBase.command.ExecuteNonQuery();
-                    dataBase.connection.Close();
-                    break;
+                    using var context = new ServerDB();
+                    var market = context.CarMarket.Where(x => x.Id == i + 1).FirstOrDefault();
+                    market.CarId = 0;
+                    market.Price = 0;
+                    market.Description = "";
+                    context.SaveChanges();
+                    return;
                 }
             }
         }

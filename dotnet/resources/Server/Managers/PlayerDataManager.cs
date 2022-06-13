@@ -14,6 +14,8 @@ using System.IO;
 using System.Net;
 using System.Runtime.InteropServices;
 using System.Drawing;
+using Server.Database;
+using Server.Models;
 
 namespace ServerSide
 {
@@ -140,108 +142,104 @@ namespace ServerSide
 
         public static void SetPlayerDataFromDB(Player player)
         {
-            DBConnection dataBase = new DBConnection();
-            dataBase.command.CommandText = $"SELECT * FROM `users` WHERE login = '{player.SocialClubId.ToString()}'";
-            using (MySqlDataReader reader = dataBase.command.ExecuteReader())
+            using (var context = new ServerDB())
             {
-                if (!reader.Read())
+                var user = context.Users.Where(u => u.Login == player.SocialClubId.ToString()).FirstOrDefault();
+                if(EqualityComparer<Server.Models.User>.Default.Equals(user, default(Server.Models.User)))
                 {
-                    reader.Close();
                     RegisterUser(player);
+                    return;
+                }
+                player.SetSharedData("id", Convert.ToInt32(user.Id));
+                player.SetSharedData("socialclub", player.SocialClubId.ToString());
+                player.SetSharedData("type", user.Type);
+                player.SetSharedData("username", user.Username);
+                player.SetSharedData("character", user.Character);
+                player.SetSharedData("lastpos", JsonToVector(user.Lastpos));
+                player.SetSharedData("money", Convert.ToInt32(user.Money));
+                player.SetSharedData("bank", Convert.ToInt32(user.Bank));
+                player.SetSharedData("exp", user.Exp);
+                player.SetSharedData("skillpoints", user.Skillpoints);
+                player.SetSharedData("controlsblocked", false);
+                player.SetSharedData("disablecontrols", false);
+                player.SetSharedData("job", "");
+                player.SetSharedData("ping", player.Ping);
+                player.SetSharedData("seatbelt", false);
+                player.SetSharedData("registered", user.Registered);
+                player.SetSharedData("playtime",user.Playtime);
+                player.SetSharedData("joined", DateTime.Now.ToString());
+                player.SetSharedData("sid", user.Id);
+                player.SetSharedData("gui", false);
+                player.SetSharedData("equipment", user.Equipment);
+                player.SetSharedData("skills", user.Skills);
+                player.SetSharedData("clothes", user.Clothes);
+                player.SetSharedData("settings", user.Settings);
+                player.SetSharedData("jobveh", -1111);
+                player.SetSharedData("vehsold", user.Vehsold);
+                player.SetSharedData("pmoff", "");
+
+                if (user.Accnumber == "")
+                {
+                    string number = GenerateRandomCardNumber(player.SocialClubId);
+                    player.SetSharedData("accnumber", number);
+                    user.Accnumber = number;
+                    context.SaveChanges();
                 }
                 else
                 {
-                    player.SetSharedData("id", Convert.ToInt32(player.Id));
-                    player.SetSharedData("socialclub", player.SocialClubId.ToString());
-                    player.SetSharedData("type", reader.GetString(2));
-                    player.SetSharedData("username", reader.GetString(3));
-                    player.SetSharedData("character", reader.GetString(4));
-                    player.SetSharedData("lastpos", JsonToVector(reader.GetString(5)));
-                    player.SetSharedData("money", Convert.ToInt32(reader.GetString(6)));
-                    player.SetSharedData("bank", Convert.ToInt32(reader.GetString(7)));
-                    player.SetSharedData("exp", reader.GetInt32(8));
-                    player.SetSharedData("skillpoints", reader.GetInt32(13));
-                    player.SetSharedData("controlsblocked", false);
-                    player.SetSharedData("disablecontrols", false);
-                    player.SetSharedData("job", "");
-                    player.SetSharedData("ping", player.Ping);
-                    player.SetSharedData("seatbelt", false);
-                    player.SetSharedData("registered", reader.GetString(9));
-                    player.SetSharedData("playtime", reader.GetInt32(10));
-                    player.SetSharedData("joined", DateTime.Now.ToString());
-                    player.SetSharedData("sid", reader.GetInt32(0));
-                    player.SetSharedData("gui", false);
-                    player.SetSharedData("equipment", reader.GetString(11));
-                    player.SetSharedData("skills", reader.GetString(14));
-                    player.SetSharedData("clothes", reader.GetString(15));
-                    player.SetSharedData("settings", reader.GetString(16));
-                    player.SetSharedData("jobveh", -1111);
-                    player.SetSharedData("vehsold", reader.GetString(18));
-                    player.SetSharedData("pmoff", "");
-
-                    if (reader.GetString(19) == "")
-                    {
-                        string number = GenerateRandomCardNumber(player.SocialClubId);
-                        player.SetSharedData("accnumber", number);
-                        SavePlayerDataToDB(player, "accnumber");
-                    }
-                    else
-                    {
-                        player.SetSharedData("accnumber", reader.GetString(19));
-                    }
-
-                    player.SetSharedData("afk", false);
-                    player.SetSharedData("bonustime", 0);
-                    if(reader.GetString(17) == "")
-                    {
-                        GenerateNewAuthCode(player);
-                    }
-                    else
-                    {
-                        player.SetSharedData("authcode", reader.GetString(17));
-                    }
-                    player.SetSharedData("carkeys", -999999);
-                    string collectibles = reader.GetString(12);
-                    if (collectibles == "")
-                    {
-                        //collectibles = CollectibleManager.GetRandomCollectibles();
-                        collectibles = CollectibleManager.GetStableCollectibles();
-                        UpdatePlayersCollectibles(player, collectibles);
-                    }
-                    player.SetSharedData("collectibles", collectibles);
-
-                    switch (reader.GetString(2))
-                    {
-                        case "owner":
-                            player.SetSharedData("power", 10);
-                            break;
-                        case "admin":
-                            player.SetSharedData("power", 7);
-                            break;
-                        case "jadmin":
-                            player.SetSharedData("power", 6);
-                            break;
-                        case "smod":
-                            player.SetSharedData("power", 5);
-                            break;
-                        case "mod":
-                            player.SetSharedData("power", 4);
-                            break;
-                        case "jmod":
-                            player.SetSharedData("power", 3);
-                            break;
-                        case "tester":
-                            player.SetSharedData("power", 2);
-                            break;
-                        default:
-                            player.SetSharedData("power", 0);
-                            break;
-                    }
-                    LogManager.LogLoginInfo(player.SocialClubId.ToString(), $"Zalogowano z IP: {player.Address}");
+                    player.SetSharedData("accnumber", user.Accnumber);
                 }
+
+                player.SetSharedData("afk", false);
+                player.SetSharedData("bonustime", 0);
+                if (user.Authcode == "")
+                {
+                    GenerateNewAuthCode(player);
+                }
+                else
+                {
+                    player.SetSharedData("authcode", user.Authcode);
+                }
+                player.SetSharedData("carkeys", -999999);
+                string collectibles = user.Collectibles;
+                if (collectibles == "")
+                {
+                    //collectibles = CollectibleManager.GetRandomCollectibles();
+                    collectibles = CollectibleManager.GetStableCollectibles();
+                    UpdatePlayersCollectibles(player, collectibles);
+                }
+                player.SetSharedData("collectibles", collectibles);
+
+                switch (user.Type)
+                {
+                    case "owner":
+                        player.SetSharedData("power", 10);
+                        break;
+                    case "admin":
+                        player.SetSharedData("power", 7);
+                        break;
+                    case "jadmin":
+                        player.SetSharedData("power", 6);
+                        break;
+                    case "smod":
+                        player.SetSharedData("power", 5);
+                        break;
+                    case "mod":
+                        player.SetSharedData("power", 4);
+                        break;
+                    case "jmod":
+                        player.SetSharedData("power", 3);
+                        break;
+                    case "tester":
+                        player.SetSharedData("power", 2);
+                        break;
+                    default:
+                        player.SetSharedData("power", 0);
+                        break;
+                }
+                LogManager.LogLoginInfo(player.SocialClubId.ToString(), $"Zalogowano z IP: {player.Address}");
             }
             player.Name = player.GetSharedData<string>("username");
-            dataBase.connection.Close();
             GetPlayersJobPoints(player);
             GetPlayersLicences(player);
             SetPlayersLevel(player);
@@ -251,63 +249,57 @@ namespace ServerSide
             CheckUsersAvatar(player);
             player.SetSharedData("vehslots", player.GetSharedData<Int32>("skill-3") + 3);
             player.TriggerEvent("instantiateCollectibles");
-            //RandomizePlayersCharacter(player);
         }
         private static void RegisterUser(Player player)
         {   
             string startingEq = "[]";
-            DBConnection dataBase = new DBConnection();
             string defaultSettings = "{\"hudSize\":50,\"chatSize\":50,\"speedometerSize\":50,\"displayNick\":true,\"displayGlobal\":true,\"voiceChat\":false,\"voiceKey\":88,\"useEmojis\":true}";
             string startSkills = "{\"0\":0,\"1\":0,\"2\":0,\"3\":0,\"4\":0}";
-            dataBase.command.CommandText = $"INSERT INTO users (login, type, username, `character`, lastpos, money, bank, exp, registered, playtime, equipment, collectibles, skills, clothes, settings, accnumber) VALUES ('{player.SocialClubId}', 'user', '{player.SocialClubName}', '', '[1894.2115, 3715.0637, 32.762226]', 0, 0, 0, '{DateTime.Now.ToString()}', 0, '{startingEq}', '{CollectibleManager.GetRandomCollectibles()}', '{startSkills}', '', '{defaultSettings}', '{GenerateRandomCardNumber(player.SocialClubId)}')";
-            dataBase.command.ExecuteNonQuery();
-            dataBase.command.CommandText = $"INSERT INTO penalties (login, ban, mute, drivinglicence) VALUES ('{player.SocialClubId}', '', '', '')";
-            dataBase.command.ExecuteNonQuery();
-            dataBase.command.CommandText = $"INSERT INTO jobs (player) VALUES ('{player.SocialClubId}')";
-            dataBase.command.ExecuteNonQuery();
-            dataBase.command.CommandText = $"INSERT INTO licences (bt, bp) VALUES ('False', 'False')";
-            dataBase.command.ExecuteNonQuery();
-            LogManager.LogLoginInfo(player.SocialClubId.ToString(), $"Zarejestrowano gracza");
-            SetPlayerDataFromDB(player);
-            dataBase.connection.Close();
-        }
-
-        public static void SavePlayerDataToDB(Player player, string dataName)
-        {
-            DBConnection dataBase = new DBConnection();
-            switch (dataName)
+            using(var context = new ServerDB())
             {
-                case "lastpos":
-                    dataBase.command.CommandText = $"UPDATE users SET lastpos = '{VectorToJson(player.GetSharedData<Vector3>("lastpos"))}' WHERE login = '{player.SocialClubId}'";
-                    break;
-                case "money":
-                    dataBase.command.CommandText = $"UPDATE users SET money = '{player.GetSharedData<Int32>("money").ToString()}' WHERE login = '{player.SocialClubId}'";
-                    break;
-                case "bank":
-                    dataBase.command.CommandText = $"UPDATE users SET bank = '{player.GetSharedData<Int32>("bank").ToString()}' WHERE login = '{player.SocialClubId}'";
-                    break;
-                case "exp":
-                    dataBase.command.CommandText = $"UPDATE users SET exp = {player.GetSharedData<Int32>("exp")} WHERE login = '{player.SocialClubId}'";
-                    break;
-                case "skillpoints":
-                    dataBase.command.CommandText = $"UPDATE users SET skillpoints = {player.GetSharedData<Int32>("skillpoints")} WHERE login = '{player.SocialClubId}'";
-                    break;
-                case "vehslots":
-                    dataBase.command.CommandText = $"UPDATE users SET vehslots = {player.GetSharedData<Int32>("vehslots")} WHERE login = '{player.SocialClubId}'";
-                    break;
-                case "playtime":
-                    dataBase.command.CommandText = $"UPDATE users SET playtime = '{player.GetSharedData<Int32>("playtime")}' WHERE login = '{player.SocialClubId}'";
-                    break;
-                case "licenceBt":
-                case "licenceBp":
-                    dataBase.command.CommandText = $"UPDATE licences SET bt = '{player.GetSharedData<bool>("licenceBt").ToString()}', bp = '{player.GetSharedData<bool>("licenceBp").ToString()}' WHERE id = {player.GetSharedData<Int32>("sid")}";
-                    break;
-                default:
-                    dataBase.command.CommandText = $"UPDATE users SET `{dataName}` = '{player.GetSharedData<string>(dataName)}' WHERE login = '{player.SocialClubId}'";
-                    break;
+                context.Users.Add(new Server.Models.User
+                {
+                    Login = player.SocialClubId.ToString(),
+                    Type = "user",
+                    Username = player.SocialClubName,
+                    Character = "",
+                    Lastpos = "[1894.2115, 3715.0637, 32.762226]",
+                    Money = "0",
+                    Bank = "0",
+                    Exp = 0,
+                    Registered = DateTime.Now.ToString(),
+                    Playtime = 0,
+                    Equipment = startingEq,
+                    Collectibles = CollectibleManager.GetRandomCollectibles(),
+                    Skills = startSkills,
+                    Clothes = "",
+                    Settings = defaultSettings,
+                    Accnumber = GenerateRandomCardNumber(player.SocialClubId)
+                });
+
+                context.Penalties.Add(new Server.Models.Penalty
+                {
+                    Login = player.SocialClubId.ToString(),
+                    Ban = "",
+                    Mute = "",
+                    DrivingLicence = ""
+                });
+
+                context.Jobs.Add(new Server.Models.Job
+                {
+                    Player = player.SocialClubId.ToString()
+                });
+
+                context.Licences.Add(new Server.Models.Licences
+                {
+                    Bt = "False",
+                    Bp = "False"
+                });
+
+                context.SaveChanges();
+
+                SetPlayerDataFromDB(player);
             }
-            dataBase.command.ExecuteNonQuery();
-            dataBase.connection.Close();
         }
 
         public static Player GetPlayerBySocialId(ulong socialId)
@@ -331,9 +323,7 @@ namespace ServerSide
 
         public static Player GetPlayerByRemoteId(string remoteId)
         {
-            Player pl = null;
-            int id = -1;
-            if (Int32.TryParse(remoteId, out id))
+            if (Int32.TryParse(remoteId, out int id))
             {
                 foreach (Player player in NAPI.Pools.GetAllPlayers())
                 {
@@ -341,47 +331,36 @@ namespace ServerSide
                     {
                         return player;
                     }
-                    else if (player.GetSharedData<string>("username").ToLower() == remoteId.ToLower())
-                    {
-                        pl = player;
-                    }
                 }
             }
-            else
+
+            var players = NAPI.Pools.GetAllPlayers().FindAll(p => p.HasSharedData("username") && p.GetSharedData<string>("username").ToLower().Contains(remoteId.ToLower()));
+            if(players.Count > 1)
             {
-                foreach (Player player in NAPI.Pools.GetAllPlayers())
-                {
-                    if (player != null && player.Exists && player.HasSharedData("username") && player.GetSharedData<string>("username").ToLower().Contains(remoteId.ToLower()) && pl == null)
-                    {
-                        pl = player;
-                    }
-                    else if (player != null && player.Exists && player.HasSharedData("username") && player.GetSharedData<string>("username").ToLower().Contains(remoteId.ToLower()) && pl != null)
-                    {
-                        return null;
-                    }
-                }
+                return null;
             }
-            return pl;
+            if(players.Count == 1)
+            {
+                return players[0];
+
+            }
+            return null;
         }
 
         public static string GetPlayersSocialByName(string name)
         {
-            DBConnection dataBase = new DBConnection();
-            dataBase.command.CommandText = $"SELECT login FROM `users` WHERE LOWER(username) = '{name}'";
-            string social = "";
-            using (MySqlDataReader reader = dataBase.command.ExecuteReader())
+            using(var context = new ServerDB())
             {
-                if (reader.Read())
+                var result = context.Users.Where(u => u.Username.ToLower() == name.ToLower()).ToList();
+                if(result.Count == 0)
                 {
-                    if(reader.HasRows)
-                    {
-                        social = reader.GetString(0);
-                    }
+                    return "";
                 }
-
+                else
+                {
+                    return result[0].Login;
+                }
             }
-            dataBase.connection.Close();
-            return social;
         }
 
         public static int GetPlayersCollectiblesAmount(Player player)
@@ -400,17 +379,44 @@ namespace ServerSide
         public static void UpdateVehicleSold(Player player, string vehiclesold)
         {
             player.SetSharedData("vehsold", vehiclesold);
-            SavePlayerDataToDB(player, "vehsold");
+            using(var context = new ServerDB())
+            {
+                var result = context.Users.Where(u => u.Login == player.SocialClubId.ToString()).ToList();
+                var user = result.Count > 0 ? result[0] : null;
+                if(user != null)
+                {
+                    user.Vehsold = vehiclesold;
+                    context.SaveChanges();
+                }
+            }
         }
         public static void UpdatePlayersCollectibles(Player player, string collectiblesString)
         {
             player.SetSharedData("collectibles", collectiblesString);
-            SavePlayerDataToDB(player, "collectibles");
+            using (var context = new ServerDB())
+            {
+                var result = context.Users.Where(u => u.Login == player.SocialClubId.ToString()).ToList();
+                var user = result.Count > 0 ? result[0] : null;
+                if (user != null)
+                {
+                    user.Collectibles = collectiblesString;
+                    context.SaveChanges();
+                }
+            }
         }
         public static void UpdatePlayersEquipment(Player player, string equipmentString)
         {
             player.SetSharedData("equipment", equipmentString);
-            SavePlayerDataToDB(player, "equipment");
+            using (var context = new ServerDB())
+            {
+                var result = context.Users.Where(u => u.Login == player.SocialClubId.ToString()).ToList();
+                var user = result.Count > 0 ? result[0] : null;
+                if (user != null)
+                {
+                    user.Equipment = equipmentString;
+                    context.SaveChanges();
+                }
+            }
         }
 
         public static bool UpdatePlayersMoney(Player player, int money)
@@ -423,7 +429,16 @@ namespace ServerSide
             else
             {
                 player.SetSharedData("money", currentMoney + money);
-                SavePlayerDataToDB(player, "money");
+                using (var context = new ServerDB())
+                {
+                    var result = context.Users.Where(u => u.Login == player.SocialClubId.ToString()).ToList();
+                    var user = result.Count > 0 ? result[0] : null;
+                    if (user != null)
+                    {
+                        user.Money = (currentMoney + money).ToString();
+                        context.SaveChanges();
+                    }
+                }
                 SendPlayerDataToMainHUD(player);
                 return true;
             }
@@ -475,7 +490,16 @@ namespace ServerSide
             else
             {
                 player.SetSharedData("bank", currentMoney + money);
-                SavePlayerDataToDB(player, "bank");
+                using (var context = new ServerDB())
+                {
+                    var result = context.Users.Where(u => u.Login == player.SocialClubId.ToString()).ToList();
+                    var user = result.Count > 0 ? result[0] : null;
+                    if (user != null)
+                    {
+                        user.Bank = (currentMoney + money).ToString();
+                        context.SaveChanges();
+                    }
+                }
                 return true;
             }
         }
@@ -497,8 +521,17 @@ namespace ServerSide
             {
                 player.SetSharedData("exp", currentExp + exp);
                 CheckPlayersLevel(player);
-                SavePlayerDataToDB(player, "skillpoints");
-                SavePlayerDataToDB(player, "exp");
+                using (var context = new ServerDB())
+                {
+                    var result = context.Users.Where(u => u.Login == player.SocialClubId.ToString()).ToList();
+                    var user = result.Count > 0 ? result[0] : null;
+                    if (user != null)
+                    {
+                        user.Skillpoints = player.GetSharedData<int>("skillpoints");
+                        user.Exp = currentExp + exp;
+                        context.SaveChanges();
+                    }
+                }
                 SendPlayerDataToMainHUD(player);
                 return true;
             }
@@ -511,21 +544,20 @@ namespace ServerSide
             {
                 if (Regex.IsMatch(nickname, @"^[a-zA-Z0-9]+$") && nickname.Length <= 18 && nickname.Length >= 4)
                 {
-                    DBConnection dataBase = new DBConnection();
-                    dataBase.command.CommandText = $"SELECT * FROM users WHERE username = '{nickname}'";
-                    using (MySqlDataReader reader = dataBase.command.ExecuteReader())
+                    using (var context = new ServerDB())
                     {
-                        if (reader.HasRows)
+                        var result = context.Users.Where(u => u.Username == nickname).ToList();
+                        if (result.Count > 0)
                         {
-                            dataBase.connection.Close();
                             return false;
                         }
-                        else
+                        result = context.Users.Where(u => u.Login == player.SocialClubId.ToString()).ToList();
+                        var user = result.Count > 0 ? result[0] : null;
+                        if (user != null)
                         {
+                            user.Username = nickname;
                             player.SetSharedData("username", nickname);
-                            SavePlayerDataToDB(player, "username");
-                            SendPlayerDataToMainHUD(player);
-                            dataBase.connection.Close();
+                            context.SaveChanges();
                             return true;
                         }
                     }
@@ -539,21 +571,20 @@ namespace ServerSide
             {
                 if (Regex.IsMatch(nickname, @"^[a-zA-Z0-9]+$") && nickname.Length >= 4 && nickname.Length <= 18 && UpdatePlayersMoney(player, -7500))
                 {
-                    DBConnection dataBase = new DBConnection();
-                    dataBase.command.CommandText = $"SELECT * FROM users WHERE username = '{nickname}'";
-                    using (MySqlDataReader reader = dataBase.command.ExecuteReader())
+                    using (var context = new ServerDB())
                     {
-                        if (reader.HasRows)
+                        var result = context.Users.Where(u => u.Username == nickname).ToList();
+                        if (result.Count > 0)
                         {
-                            dataBase.connection.Close();
                             return false;
                         }
-                        else
+                        result = context.Users.Where(u => u.Login == player.SocialClubId.ToString()).ToList();
+                        var user = result.Count > 0 ? result[0] : null;
+                        if (user != null)
                         {
+                            user.Username = nickname;
                             player.SetSharedData("username", nickname);
-                            SavePlayerDataToDB(player, "username");
-                            SendPlayerDataToMainHUD(player);
-                            dataBase.connection.Close();
+                            context.SaveChanges();
                             return true;
                         }
                     }
@@ -563,23 +594,40 @@ namespace ServerSide
                     return false;
                 }
             }
-
+            return false;
         }
 
         public static void SaveTransferToDB(Player sender, string target, int money, string title)
         {
             string s = sender.GetSharedData<string>("socialclub"), t = target;
-            DBConnection dataBase = new DBConnection();
-            dataBase.command.CommandText = $"INSERT INTO transfers (sender, target, amount, title, time) VALUES ('{s}','{t}','{money}','{title}','{DateTime.Now}')";
-            dataBase.command.ExecuteNonQuery();
-            dataBase.connection.Close();
+            using (var context = new ServerDB())
+            {
+                context.Transfers.Add(new Server.Models.Transfer
+                {
+                    Sender = s,
+                    Target = t,
+                    Amount = money.ToString(),
+                    Title = title,
+                    Time = DateTime.Now.ToString()
+                });
+                context.SaveChanges();
+            }
         }
         public static void UpdatePlayersCharacter(Player player, string charStr)
         {
             if (player != null && player.Exists)
             {
                 player.SetSharedData("character", charStr);
-                SavePlayerDataToDB(player, "character");
+                using (var context = new ServerDB())
+                {
+                    var result = context.Users.Where(u => u.Login == player.SocialClubId.ToString()).ToList();
+                    var user = result.Count > 0 ? result[0] : null;
+                    if (user != null)
+                    {
+                        user.Character = charStr;
+                        context.SaveChanges();
+                    }
+                }
             }
         }
 
@@ -588,26 +636,47 @@ namespace ServerSide
             if (player != null && player.Exists)
             {
                 player.SetSharedData("playtime", playtime);
-                SavePlayerDataToDB(player, "playtime");
+                using (var context = new ServerDB())
+                {
+                    var result = context.Users.Where(u => u.Login == player.SocialClubId.ToString()).ToList();
+                    var user = result.Count > 0 ? result[0] : null;
+                    if (user != null)
+                    {
+                        user.Playtime = playtime;
+                        context.SaveChanges();
+                    }
+                }
             }
 
-        }
-        public static void UpdatePlayersPed(Player player, uint ped)
-        {
-            player.SetSkin(ped);
-            player.SetSharedData("ped", Convert.ToInt64(ped));
-            SavePlayerDataToDB(player, "ped");
         }
         public static void UpdatePlayersLastPos(Player player)
         {
             player.SetSharedData("lastpos", player.Position);
-            SavePlayerDataToDB(player, "lastpos");
+            using (var context = new ServerDB())
+            {
+                var result = context.Users.Where(u => u.Login == player.SocialClubId.ToString()).ToList();
+                var user = result.Count > 0 ? result[0] : null;
+                if (user != null)
+                {
+                    user.Lastpos = VectorToJson(player.Position);
+                    context.SaveChanges();
+                }
+            }
         }
 
         public static void UpdatePlayersSkillPoints(Player player, int skillpoints)
         {
             player.SetSharedData("skillpoints", skillpoints);
-            SavePlayerDataToDB(player, "skillpoints");
+            using (var context = new ServerDB())
+            {
+                var result = context.Users.Where(u => u.Login == player.SocialClubId.ToString()).ToList();
+                var user = result.Count > 0 ? result[0] : null;
+                if (user != null)
+                {
+                    user.Skillpoints = skillpoints;
+                    context.SaveChanges();
+                }
+            }
         }
 
         public static void UpgradePlayersSkill(Player player, int skill)
@@ -640,7 +709,16 @@ namespace ServerSide
                 skills.Add(i, player.GetSharedData<Int32>("skill-" + i.ToString()));
             }
             player.SetSharedData("skills", JsonConvert.SerializeObject(skills));
-            SavePlayerDataToDB(player, "skills");
+            using (var context = new ServerDB())
+            {
+                var result = context.Users.Where(u => u.Login == player.SocialClubId.ToString()).ToList();
+                var user = result.Count > 0 ? result[0] : null;
+                if (user != null)
+                {
+                    user.Skills = JsonConvert.SerializeObject(skills);
+                    context.SaveChanges();
+                }
+            }
         }
 
         public static void SendPlayerDataToMainHUD(Player player)
@@ -673,11 +751,11 @@ namespace ServerSide
                 {
                     if (p.HasSharedData("settings_DisplayGlobal") && p.GetSharedData<bool>("settings_DisplayGlobal"))
                     {
-                        p.TriggerEvent("sendMessage", player.GetSharedData<Int32>("id").ToString(), player.GetSharedData<string>("username"), text, "global", player.GetSharedData<string>("type"), DateTime.Now.TimeOfDay.ToString().Split(":")[0] + ":" + DateTime.Now.TimeOfDay.ToString().Split(":")[1], player.SocialClubId.ToString());
+                        p.TriggerEvent("sendMessage", player.Id.ToString(), player.GetSharedData<string>("username"), text, "global", player.GetSharedData<string>("type"), DateTime.Now.TimeOfDay.ToString().Split(":")[0] + ":" + DateTime.Now.TimeOfDay.ToString().Split(":")[1], player.SocialClubId.ToString());
                     }
                 }
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine($"{DateTime.Now.TimeOfDay.ToString().Split(":")[0]}:{DateTime.Now.TimeOfDay.ToString().Split(":")[1]} [{player.GetSharedData<Int32>("id").ToString()}]{player.GetSharedData<string>("username")}: {text}");
+                Console.WriteLine($"{DateTime.Now.TimeOfDay.ToString().Split(":")[0]}:{DateTime.Now.TimeOfDay.ToString().Split(":")[1]} [{player.Id.ToString()}]{player.GetSharedData<string>("username")}: {text}");
                 Console.ForegroundColor = ConsoleColor.Gray;
             }
             else
@@ -692,7 +770,7 @@ namespace ServerSide
             {
                 if(p.HasSharedData("power") && p.GetSharedData<int>("power") >= 3)
                 {
-                    p.TriggerEvent("sendMessage", player.GetSharedData<Int32>("id").ToString(), player.GetSharedData<string>("username"), text, "admin", player.GetSharedData<string>("type"), DateTime.Now.TimeOfDay.ToString().Split(":")[0] + ":" + DateTime.Now.TimeOfDay.ToString().Split(":")[1], player.SocialClubId.ToString());
+                    p.TriggerEvent("sendMessage", player.Id.ToString(), player.GetSharedData<string>("username"), text, "admin", player.GetSharedData<string>("type"), DateTime.Now.TimeOfDay.ToString().Split(":")[0] + ":" + DateTime.Now.TimeOfDay.ToString().Split(":")[1], player.SocialClubId.ToString());
                 }
             }
         }
@@ -704,7 +782,7 @@ namespace ServerSide
                 {
                     if(p.HasSharedData("orgId") && player.GetSharedData<Int32>("orgId") == p.GetSharedData<Int32>("orgId"))
                     {
-                        p.TriggerEvent("sendMessage", player.GetSharedData<Int32>("id").ToString(), player.GetSharedData<string>("username"), text, "org", player.GetSharedData<string>("type"), DateTime.Now.TimeOfDay.ToString().Split(":")[0] + ":" + DateTime.Now.TimeOfDay.ToString().Split(":")[1], player.SocialClubId.ToString());
+                        p.TriggerEvent("sendMessage", player.Id.ToString(), player.GetSharedData<string>("username"), text, "org", player.GetSharedData<string>("type"), DateTime.Now.TimeOfDay.ToString().Split(":")[0] + ":" + DateTime.Now.TimeOfDay.ToString().Split(":")[1], player.SocialClubId.ToString());
                     }
                 }
             }
@@ -720,7 +798,7 @@ namespace ServerSide
             {
                 if (player.Position.DistanceTo(p.Position) <= range)
                 {
-                    p.TriggerEvent("sendMessage", player.GetSharedData<Int32>("id").ToString(), player.GetSharedData<string>("username"), message, "local", player.GetSharedData<string>("type"), DateTime.Now.TimeOfDay.ToString().Split(":")[0] + ":" + DateTime.Now.TimeOfDay.ToString().Split(":")[1], player.SocialClubId.ToString());
+                    p.TriggerEvent("sendMessage", player.Id.ToString(), player.GetSharedData<string>("username"), message, "local", player.GetSharedData<string>("type"), DateTime.Now.TimeOfDay.ToString().Split(":")[0] + ":" + DateTime.Now.TimeOfDay.ToString().Split(":")[1], player.SocialClubId.ToString());
                 }
             }
         }
@@ -768,8 +846,8 @@ namespace ServerSide
                 {
                     if(plto.GetSharedData<string>("pmoff") == "")
                     {
-                        player.TriggerEvent("sendMessage", plto.GetSharedData<Int32>("id").ToString(), JsonConvert.SerializeObject(new string[] { plto.GetSharedData<string>("username"), "to" }), message, "private", plto.GetSharedData<string>("type"), DateTime.Now.TimeOfDay.ToString().Split(":")[0] + ":" + DateTime.Now.TimeOfDay.ToString().Split(":")[1], player.SocialClubId.ToString());
-                        plto.TriggerEvent("sendMessage", player.GetSharedData<Int32>("id").ToString(), JsonConvert.SerializeObject(new string[] { player.GetSharedData<string>("username"), "from" }), message, "private", player.GetSharedData<string>("type"), DateTime.Now.TimeOfDay.ToString().Split(":")[0] + ":" + DateTime.Now.TimeOfDay.ToString().Split(":")[1], player.SocialClubId.ToString());
+                        player.TriggerEvent("sendMessage", plto.Id, JsonConvert.SerializeObject(new string[] { plto.GetSharedData<string>("username"), "to" }), message, "private", plto.GetSharedData<string>("type"), DateTime.Now.TimeOfDay.ToString().Split(":")[0] + ":" + DateTime.Now.TimeOfDay.ToString().Split(":")[1], player.SocialClubId.ToString());
+                        plto.TriggerEvent("sendMessage", player.Id.ToString(), JsonConvert.SerializeObject(new string[] { player.GetSharedData<string>("username"), "from" }), message, "private", player.GetSharedData<string>("type"), DateTime.Now.TimeOfDay.ToString().Split(":")[0] + ":" + DateTime.Now.TimeOfDay.ToString().Split(":")[1], player.SocialClubId.ToString());
                         LogManager.LogPrivateChat(player.SocialClubId.ToString(), $"DO: {plto.SocialClubId.ToString()}: {message}");
                         LogManager.LogPrivateChat(plto.SocialClubId.ToString(), $"OD: {player.SocialClubId.ToString()}: {message}");
                     }
@@ -883,7 +961,16 @@ namespace ServerSide
             string clothesStr = JsonConvert.SerializeObject(clothes);
 
             player.SetSharedData("clothes", clothesStr);
-            SavePlayerDataToDB(player, "clothes");
+            using (var context = new ServerDB())
+            {
+                var result = context.Users.Where(u => u.Login == player.SocialClubId.ToString()).ToList();
+                var user = result.Count > 0 ? result[0] : null;
+                if (user != null)
+                {
+                    user.Clothes = clothesStr;
+                    context.SaveChanges();
+                }
+            }
         }
 
 
@@ -969,38 +1056,20 @@ namespace ServerSide
             return pedhash;
         }
 
-        public static bool IsWhiteListed(Player player)
-        {
-            DBConnection dataBase = new DBConnection();
-            dataBase.command.CommandText = $"SELECT * FROM `whitelist` WHERE socialclubname = '{player.SocialClubName}'";
-            using (MySqlDataReader reader = dataBase.command.ExecuteReader())
-            {
-                if (reader.Read())
-                {
-                    dataBase.connection.Close();
-                    return true;
-                }
-
-            }
-            dataBase.connection.Close();
-            return false;
-        }
-
         public static void setUsersPenalties(Player player)
         {
             bool banned = true;
             bool muted = true;
             bool nodriving = true;
-            DBConnection dataBase = new DBConnection();
-            dataBase.command.CommandText = $"SELECT * FROM penalties WHERE login = '{player.SocialClubId}'";
-            using (MySqlDataReader reader = dataBase.command.ExecuteReader())
+            using (var context = new ServerDB())
             {
-                if (reader.Read())
+                var result = context.Penalties.Where(u => u.Login == player.SocialClubId.ToString()).ToList();
+                var user = result.Count > 0 ? result[0] : null;
+                if (user != null)
                 {
-                    //ban
-                    if (reader.GetString(2) != "")
+                    if (user.Ban != "")
                     {
-                        DateTime currentTime = DateTime.Parse(reader.GetString(2));
+                        DateTime currentTime = DateTime.Parse(user.Ban);
                         if (DateTime.Compare(currentTime, DateTime.Now) > 0)
                         {
                             player.SetSharedData("banned", true);
@@ -1016,13 +1085,12 @@ namespace ServerSide
                         player.SetSharedData("banned", false);
                     }
 
-                    //mute
-                    if (reader.GetString(3) != "")
+                    if (user.Mute != "")
                     {
-                        if (DateTime.Compare(DateTime.Parse(reader.GetString(3)), DateTime.Now) > 0)
+                        if (DateTime.Compare(DateTime.Parse(user.Mute), DateTime.Now) > 0)
                         {
                             player.SetSharedData("muted", true);
-                            player.SetSharedData("mutedto", reader.GetString(3));
+                            player.SetSharedData("mutedto", user.Mute);
                         }
                         else
                         {
@@ -1036,12 +1104,12 @@ namespace ServerSide
                     }
 
                     //driving licence
-                    if (reader.GetString(4) != "")
+                    if (user.DrivingLicence != "")
                     {
-                        if (DateTime.Compare(DateTime.Parse(reader.GetString(4)), DateTime.Now) > 0)
+                        if (DateTime.Compare(DateTime.Parse(user.DrivingLicence), DateTime.Now) > 0)
                         {
                             player.SetSharedData("nodriving", true);
-                            player.SetSharedData("nodrivingto", reader.GetString(4));
+                            player.SetSharedData("nodrivingto", user.DrivingLicence);
                         }
                         else
                         {
@@ -1053,24 +1121,24 @@ namespace ServerSide
                     {
                         player.SetSharedData("nodriving", false);
                     }
+
+                    if (!muted)
+                    {
+                        user.Mute = "";
+                        context.SaveChanges();
+                    }
+                    if (!banned)
+                    {
+                        user.Ban = "";
+                        context.SaveChanges();
+                    }
+                    if (!nodriving)
+                    {
+                        user.DrivingLicence = "";
+                        context.SaveChanges();
+                    }
                 }
             }
-            if (!muted)
-            {
-                dataBase.command.CommandText = $"UPDATE penalties SET mute = '' WHERE login = '{player.SocialClubId}'";
-                dataBase.command.ExecuteNonQuery();
-            }
-            if (!banned)
-            {
-                dataBase.command.CommandText = $"UPDATE penalties SET ban = '' WHERE login = '{player.SocialClubId}'";
-                dataBase.command.ExecuteNonQuery();
-            }
-            if (!nodriving)
-            {
-                dataBase.command.CommandText = $"UPDATE penalties SET drivinglicence = '' WHERE login = '{player.SocialClubId}'";
-                dataBase.command.ExecuteNonQuery();
-            }
-            dataBase.connection.Close();
         }
 
         public static bool isPlayersPenaltyExpired(Player player, string penalty)
@@ -1175,14 +1243,22 @@ namespace ServerSide
                 }
                 if (set)
                 {
-                    DBConnection dataBase = new DBConnection();
-                    dataBase.command.CommandText = $"UPDATE penalties SET ban = '{time.ToString()}' WHERE login = '{player.SocialClubId}'";
-                    dataBase.command.ExecuteNonQuery();
-                    dataBase.connection.Close();
-                    SendPenaltyToPlayers(player.GetSharedData<string>("username") + " został zbanowany przez " + (admin != null ? admin.GetSharedData<string>("username") : "CONSOLE") + " do " + time.ToString() + ". Powód: " + reason);
-                    LogManager.LogPenalty(player.SocialClubId.ToString(), $"Gracz został zbanowany do {time.ToString()}, powód: {reason}");
-                    AddPenaltyToDB(player.SocialClubId.ToString(), (admin != null ? admin.SocialClubId.ToString() : "CONSOLE"), "ban", DateTime.Now.ToString(), time.ToString(), reason);
-                    player.Kick("Zostałeś zbanowany!");
+                    using (var context = new ServerDB())
+                    {
+                        var result = context.Penalties.Where(u => u.Login == player.SocialClubId.ToString()).ToList();
+                        var user = result.Count > 0 ? result[0] : null;
+                        if (user != null)
+                        {
+                            user.Ban = time.ToString();
+                            
+                            SendPenaltyToPlayers(player.GetSharedData<string>("username") + " został zbanowany przez " + (admin != null ? admin.GetSharedData<string>("username") : "CONSOLE") + " do " + time.ToString() + ". Powód: " + reason);
+                            LogManager.LogPenalty(player.SocialClubId.ToString(), $"Gracz został zbanowany do {time.ToString()}, powód: {reason}");
+                            AddPenaltyToDB(player.SocialClubId.ToString(), (admin != null ? admin.SocialClubId.ToString() : "CONSOLE"), "ban", DateTime.Now.ToString(), time.ToString(), reason);
+                            player.Kick("Zostałeś zbanowany!");
+
+                            context.SaveChanges();
+                        }
+                    }
                 }
             }
             else if(admin != null)
@@ -1228,7 +1304,7 @@ namespace ServerSide
             SendPenaltyToPlayers(player.GetSharedData<string>("username") + " został wyrzucony przez CONSOLE, Powód: " + reason);
             AddPenaltyToDB(player.SocialClubId.ToString(), "", "kick", DateTime.Now.ToString(), "", reason);
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine($"{DateTime.Now.TimeOfDay.ToString().Split(":")[0]}:{DateTime.Now.TimeOfDay.ToString().Split(":")[1]} [{player.GetSharedData<Int32>("id").ToString()}]{player.GetSharedData<string>("username")} został wyrzucony przez CONSOLE, powód: " + reason);
+            Console.WriteLine($"{DateTime.Now.TimeOfDay.ToString().Split(":")[0]}:{DateTime.Now.TimeOfDay.ToString().Split(":")[1]} [{player.Id.ToString()}]{player.GetSharedData<string>("username")} został wyrzucony przez CONSOLE, powód: " + reason);
             Console.ForegroundColor = ConsoleColor.Gray;
             player.Kick(reason);
         }
@@ -1308,17 +1384,25 @@ namespace ServerSide
                 }
                 if (set)
                 {
-                    DBConnection dataBase = new DBConnection();
-                    dataBase.command.CommandText = $"UPDATE penalties SET mute = '{time.ToString()}' WHERE login = '{player.SocialClubId}'";
-                    dataBase.command.ExecuteNonQuery();
-                    dataBase.connection.Close();
-                    SendPenaltyToPlayers(player.GetSharedData<string>("username") + " został wyciszony przez " + admin.GetSharedData<string>("username") + " do " + time.ToString() + ". Powód: " + reason);
-                    LogManager.LogPenalty(player.SocialClubId.ToString(), $"Gracz został wyciszony do {time.ToString()}, powód: {reason}");
-                    AddPenaltyToDB(player.SocialClubId.ToString(), admin.SocialClubId.ToString(), "mute", DateTime.Now.ToString(), time.ToString(), reason);
-                    player.TriggerEvent("warnSound");
-                    player.TriggerEvent("warnPlayer");
-                    player.SetSharedData("muted", true);
-                    player.SetSharedData("mutedto", time.ToString());
+                    using (var context = new ServerDB())
+                    {
+                        var result = context.Penalties.Where(u => u.Login == player.SocialClubId.ToString()).ToList();
+                        var user = result.Count > 0 ? result[0] : null;
+                        if (user != null)
+                        {
+                            user.Mute = time.ToString();
+
+                            SendPenaltyToPlayers(player.GetSharedData<string>("username") + " został wyciszony przez " + admin.GetSharedData<string>("username") + " do " + time.ToString() + ". Powód: " + reason);
+                            LogManager.LogPenalty(player.SocialClubId.ToString(), $"Gracz został wyciszony do {time.ToString()}, powód: {reason}");
+                            AddPenaltyToDB(player.SocialClubId.ToString(), admin.SocialClubId.ToString(), "mute", DateTime.Now.ToString(), time.ToString(), reason);
+                            player.TriggerEvent("warnSound");
+                            player.TriggerEvent("warnPlayer");
+                            player.SetSharedData("muted", true);
+                            player.SetSharedData("mutedto", time.ToString());
+
+                            context.SaveChanges();
+                        }
+                    }
                 }
             }
             else
@@ -1399,20 +1483,28 @@ namespace ServerSide
                 }
                 if (set)
                 {
-                    DBConnection dataBase = new DBConnection();
-                    dataBase.command.CommandText = $"UPDATE penalties SET drivinglicence = '{time.ToString()}' WHERE login = '{player.SocialClubId}'";
-                    dataBase.command.ExecuteNonQuery();
-                    dataBase.connection.Close();
-                    SendPenaltyToPlayers(player.GetSharedData<string>("username") + " stracił prawo jazdy do " + time.ToString() + ". Powód: " + reason + " (" + admin.GetSharedData<string>("username") + ").");
-                    LogManager.LogPenalty(player.SocialClubId.ToString(), $"Gracz stracił uprawenienia do prowadzenia pojazdów do {time.ToString()}, powód: {reason}");
-                    AddPenaltyToDB(player.SocialClubId.ToString(), admin.SocialClubId.ToString(), "licence", DateTime.Now.ToString(), time.ToString(), reason);
-                    player.SetSharedData("nodriving", true);
-                    player.SetSharedData("nodrivingto", time.ToString());
-                    player.TriggerEvent("warnSound");
-                    player.TriggerEvent("warnPlayer");
-                    if (player.Vehicle != null && player.Vehicle.Exists)
+                    using (var context = new ServerDB())
                     {
-                        player.WarpOutOfVehicle();
+                        var result = context.Penalties.Where(u => u.Login == player.SocialClubId.ToString()).ToList();
+                        var user = result.Count > 0 ? result[0] : null;
+                        if (user != null)
+                        {
+                            user.DrivingLicence = time.ToString();
+
+                            SendPenaltyToPlayers(player.GetSharedData<string>("username") + " stracił prawo jazdy do " + time.ToString() + ". Powód: " + reason + " (" + admin.GetSharedData<string>("username") + ").");
+                            LogManager.LogPenalty(player.SocialClubId.ToString(), $"Gracz stracił uprawenienia do prowadzenia pojazdów do {time.ToString()}, powód: {reason}");
+                            AddPenaltyToDB(player.SocialClubId.ToString(), admin.SocialClubId.ToString(), "licence", DateTime.Now.ToString(), time.ToString(), reason);
+                            player.SetSharedData("nodriving", true);
+                            player.SetSharedData("nodrivingto", time.ToString());
+                            player.TriggerEvent("warnSound");
+                            player.TriggerEvent("warnPlayer");
+                            if (player.Vehicle != null && player.Vehicle.Exists)
+                            {
+                                player.WarpOutOfVehicle();
+                            }
+
+                            context.SaveChanges();
+                        }
                     }
                 }
             }
@@ -1431,7 +1523,17 @@ namespace ServerSide
                 AddPenaltyToDB(player.SocialClubId.ToString(), admin.SocialClubId.ToString(), "coflic", DateTime.Now.ToString(), "", reason);
                 player.SetSharedData("licenceBt", false);
                 player.SetSharedData("licenceBp", false);
-                SavePlayerDataToDB(player, "licenceBt");
+                using (var context = new ServerDB())
+                {
+                    var result = context.Licences.Where(u => u.Id == player.GetSharedData<int>("id")).ToList();
+                    var licence = result.Count > 0 ? result[0] : null;
+                    if (licence != null)
+                    {
+                        licence.Bt = false.ToString();
+                        licence.Bp = false.ToString();
+                        context.SaveChanges();
+                    }
+                }
             }
             else
                 NotifyPlayer(admin, "Nie masz do tego uprawnień!");
@@ -1440,88 +1542,107 @@ namespace ServerSide
 
         public static string GetPlayerNameById(string id)
         {
-            DBConnection dataBase = new DBConnection();
-            dataBase.command.CommandText = $"SELECT * FROM users WHERE login = '{id}'";
-            using (MySqlDataReader reader = dataBase.command.ExecuteReader())
+            using (var context = new ServerDB())
             {
-                if (reader.Read())
+                var result = context.Users.Where(u => u.Login == id).ToList();
+                var user = result.Count > 0 ? result[0] : null;
+                if (user != null)
                 {
-                    string name = reader.GetString(3);
-                    dataBase.connection.Close();
-                    return name;
+                    return user.Username;
                 }
-                else
-                {
-                    dataBase.connection.Close();
-                    return "";
-                }
+                return "";
             }
-
         }
 
         public static void GetPlayersLicences(Player player)
         {
-            DBConnection dataBase = new DBConnection();
-            dataBase.command.CommandText = $"SELECT * FROM licences WHERE id = {player.GetSharedData<Int32>("sid")}";
-            using (MySqlDataReader reader = dataBase.command.ExecuteReader())
+            using (var context = new ServerDB())
             {
-                if (reader.Read())
+                var result = context.Licences.Where(u => u.Id == player.GetSharedData<int>("id")).ToList();
+                var licence = result.Count > 0 ? result[0] : null;
+                if (licence != null)
                 {
-                    player.SetSharedData("licenceBt", Boolean.Parse(reader.GetString(1)));
-                    player.SetSharedData("licenceBp", Boolean.Parse(reader.GetString(2)));
+                    player.SetSharedData("licenceBp", licence.Bp == "True");
+                    player.SetSharedData("licenceBt", licence.Bt == "True");
                 }
             }
-            dataBase.connection.Close();
         }
 
         public static void UpdatePlayersJobPoints(Player player, string type, int points)
         {
-            if(player == null && player.Exists)
+            if(player != null && player.Exists)
             {
                 if (player.HasSharedData($"jp_{type}"))
                 {
                     int amount = player.GetSharedData<int>($"jp_{type}");
                     player.SetSharedData($"jp_{type}", amount + points);
-                    DBConnection dataBase = new DBConnection();
-                    dataBase.command.CommandText = $"UPDATE jobs SET {type} = {amount+points} WHERE player = '{player.SocialClubId}'";
-                    dataBase.command.ExecuteNonQuery();
-                    dataBase.connection.Close();
+                    using(var context = new ServerDB())
+                    {
+                        var result = context.Jobs.Where(j => j.Id == player.GetSharedData<int>("id")).ToList();
+                        var jobs = result.Count > 0 ? result[0] : null;
+                        if(jobs != null)
+                        {
+                            switch(type)
+                            {
+                                case "warehouse":
+                                    jobs.Warehouse += points;
+                                    break;
+                                case "forklifts":
+                                    jobs.Forklifts += points;
+                                    break;
+                                case "towtruck":
+                                    jobs.Towtruck += points;
+                                    break;
+                                case "refinery":
+                                    jobs.Refinery += points;
+                                    break;
+                                case "debriscleaner":
+                                    jobs.Debriscleaner += points;
+                                    break;
+                                case "diver":
+                                    jobs.Diver += points;
+                                    break;
+                                case "fisherman":
+                                    jobs.Fisherman += points;
+                                    break;
+                                case "lawnmowing":
+                                    jobs.Lawnmowing += points;
+                                    break;
+                                case "gardener":
+                                    jobs.Gardener += points;
+                                    break;
+                                case "hunter":
+                                    jobs.Hunter += points;
+                                    break;
+                            }
+                            context.SaveChanges();
+                        }
+                    }
                 }
             }
         }
 
         public static void GetPlayersJobPoints(Player player)
         {
-            DBConnection dataBase = new DBConnection();
-            dataBase.command.CommandText = $"SELECT * FROM jobs WHERE player = '{player.SocialClubId.ToString()}'";
-            using (MySqlDataReader reader = dataBase.command.ExecuteReader())
+            using (var context = new ServerDB())
             {
-                if (reader.Read())
+                var id = player.GetSharedData<int>("id");
+                var result = context.Jobs.Where(j => j.Id == id).ToList();
+                var jobs = result.Count > 0 ? result[0] : null;
+                if (jobs != null)
                 {
-                    player.SetSharedData("jp_warehouse", reader.GetInt32(2));
-                    player.SetSharedData("jp_debriscleaner", reader.GetInt32(3));
-                    player.SetSharedData("jp_lawnmowing", reader.GetInt32(4));
-                    player.SetSharedData("jp_forklifts", reader.GetInt32(5));
-                    player.SetSharedData("jp_diver", reader.GetInt32(6));
-                    player.SetSharedData("jp_gardener", reader.GetInt32(7));
-                    player.SetSharedData("jp_towtruck", reader.GetInt32(8));
-                    player.SetSharedData("jp_refinery", reader.GetInt32(9));
-                    player.SetSharedData("jp_fisherman", reader.GetInt32(10));
-                    player.SetSharedData("jp_hunter", reader.GetInt32(11));
+                    player.SetSharedData("jp_warehouse", jobs.Warehouse);
+                    player.SetSharedData("jp_debriscleaner", jobs.Debriscleaner);
+                    player.SetSharedData("jp_lawnmowing", jobs.Lawnmowing);
+                    player.SetSharedData("jp_forklifts", jobs.Forklifts);
+                    player.SetSharedData("jp_diver", jobs.Diver);
+                    player.SetSharedData("jp_gardener", jobs.Gardener);
+                    player.SetSharedData("jp_towtruck", jobs.Towtruck);
+                    player.SetSharedData("jp_refinery", jobs.Refinery);
+                    player.SetSharedData("jp_fisherman", jobs.Fisherman);
+                    player.SetSharedData("jp_hunter", jobs.Hunter);
                 }
             }
-            dataBase.connection.Close();
-        }
-
-        public static void UpdatePlayersJobBonus(Player player, string job, int amount)
-        {
-            player.SetSharedData($"jp_{job}", player.GetSharedData<int>($"jp_{job}") + amount);
-
-            DBConnection dataBase = new DBConnection();
-            dataBase.command.CommandText = $"UPDATE jobs SET {job} = {player.GetSharedData<int>($"jp_{job}")} WHERE player = '{player.SocialClubId}'";
-            dataBase.command.ExecuteNonQuery();
-            dataBase.connection.Close();
-
         }
 
         public static Vector3 JsonToVector(string pos)
@@ -1534,41 +1655,6 @@ namespace ServerSide
         {
             float[] a = new float[] { pos.X, pos.Y, pos.Z };
             return System.Text.Json.JsonSerializer.Serialize(a);
-        }
-
-        public static List<KeyValuePair<string, string>> GetRacingTimes(string raceType)
-        {
-            List<KeyValuePair<string, string>> times = new List<KeyValuePair<string, string>>();
-
-            DBConnection dataBase = new DBConnection();
-            dataBase.command.CommandText = $"SELECT * FROM {raceType}";
-            using (MySqlDataReader reader = dataBase.command.ExecuteReader())
-            {
-                while (reader.Read())
-                {
-                    if (reader.GetString(1) != "")
-                    {
-                        times.Add(new KeyValuePair<string, string>(reader.GetString(1), reader.GetString(2)));
-                    }
-                }
-            }
-
-            dataBase.connection.Close();
-
-            return times;
-        }
-
-        public static void UpdateRacingTimes(string racetype, List<KeyValuePair<string, string>> times)
-        {
-            DBConnection dataBase = new DBConnection();
-            foreach (KeyValuePair<string, string> time in times)
-            {
-                if (times.IndexOf(time) == 10)
-                    break;
-                dataBase.command.CommandText = $"UPDATE {racetype} SET login = '{time.Key}', time = '{time.Value}' WHERE id = {times.IndexOf(time) + 1}";
-                dataBase.command.ExecuteNonQuery();
-            }
-            dataBase.connection.Close();
         }
 
         public static Report ReportAPlayer(Player informer, string reported, string description)
@@ -1586,22 +1672,11 @@ namespace ServerSide
 
         public static int GetPlayersVehiclesCount(Player player)
         {
-            int count = 0;
-
-            DBConnection dataBase = new DBConnection();
-
-            dataBase.command.CommandText = $"SELECT COUNT(id) FROM vehicles WHERE owner = '{player.SocialClubId.ToString()}'";
-            using (MySqlDataReader reader = dataBase.command.ExecuteReader())
+            using(var context = new ServerDB())
             {
-                while (reader.Read())
-                {
-                    count = reader.GetInt32(0);
-                }
+                var amount = context.Vehicles.Where(v => v.Owner == player.SocialClubId.ToString()).ToList().Count;
+                return amount;
             }
-
-            dataBase.connection.Close();
-
-            return count;
         }
 
         public static void NotifyAdmins()
@@ -1657,7 +1732,7 @@ namespace ServerSide
         {
             player.TriggerEvent("freezeFor2Sec");
             NAPI.Entity.SetEntityTransparency(player.Handle, 255);
-            player.TriggerEvent("openMainHUD", player.GetSharedData<Int32>("id"));
+            player.TriggerEvent("openMainHUD", player.Id);
             player.TriggerEvent("openEquipmentBrowser", player.GetSharedData<string>("equipment"), player.GetSharedData<Int32>("skill-0"));
             SendPlayerDataToMainHUD(player);
             player.TriggerEvent("setTime", (time.Hour.ToString().Length == 1 ? ("0" + time.Hour.ToString()) : time.Hour.ToString()) + ":" + (time.Minute.ToString().Length == 1 ? ("0" + time.Minute.ToString()) : time.Minute.ToString()));
@@ -1736,33 +1811,45 @@ namespace ServerSide
 
         public static void AddPenaltyToDB(string login, string admin, string type, string timefrom, string timeto, string reason)
         {
-            DBConnection dataBase = new DBConnection();
-            dataBase.command.CommandText = $"INSERT INTO penlist (login, admin, type, `timefrom`, timeto, reason) VALUES ('{login}', '{admin}', '{type}', '{timefrom}', '{timeto}', '{reason}')";
-            dataBase.command.ExecuteNonQuery();
-            dataBase.connection.Close();
+            using(var context = new ServerDB())
+            {
+                context.PenaltyLogs.Add(new PenaltyLog
+                {
+                    Login = login,
+                    Admin = admin,
+                    Type = type,
+                    TimeFrom = timefrom,
+                    TimeTo = timeto,
+                    Reason = reason
+                });
+                context.SaveChanges();
+            }
         }
 
         public static List<string[]> GetPlayersPenalties(string social, string name)
         {
             List<string[]> penalties = new List<string[]>();
-            DBConnection dataBase = new DBConnection();
-            dataBase.command.CommandText = $"SELECT users.username, penlist.* FROM users LEFT JOIN penlist ON users.login = penlist.admin WHERE penlist.login = '{social}';";
-            using (MySqlDataReader reader = dataBase.command.ExecuteReader())
+            using (var context = new ServerDB())
             {
-                while (reader.Read())
+                var query = (from user in context.Set<User>()
+                             join penalty in context.Set<PenaltyLog>()
+                                on user.Login equals penalty.Admin
+                             where penalty.Login == social
+                             select new { user, penalty }).ToList();
+
+                foreach(var result in query)
                 {
                     penalties.Add(new string[]
                     {
                         name,
-                        reader.GetString(0),
-                        reader.GetString(4),
-                        reader.GetString(5),
-                        reader.GetString(6),
-                        reader.GetString(7),
+                        result.user.Username,
+                        result.penalty.Type,
+                        result.penalty.TimeFrom,
+                        result.penalty.TimeTo,
+                        result.penalty.Reason
                     });
                 }
             }
-            dataBase.connection.Close();
             return penalties;
         }
 
@@ -1799,10 +1886,17 @@ namespace ServerSide
                 player.SetSharedData("settings_WallpaperUrl", settings.WallpaperUrl);
                 player.SetSharedData("settings", set);
 
-                SavePlayerDataToDB(player, "settings");
-
+                using (var context = new ServerDB())
+                {
+                    var result = context.Users.Where(u => u.Login == player.SocialClubId.ToString()).ToList();
+                    var user = result.Count > 0 ? result[0] : null;
+                    if (user != null)
+                    {
+                        user.Settings = set;
+                        context.SaveChanges();
+                    }
+                }
                 SetUseEmojis(player);
-
             }
         }
 
@@ -1820,15 +1914,14 @@ namespace ServerSide
 
         public static void CheckUsersAvatar(Player player)
         {
-            DBConnection dataBase = new DBConnection();
-            dataBase.command.CommandText = $"SELECT * FROM discord WHERE login = '{player.SocialClubId}'";
-            using(MySqlDataReader reader = dataBase.command.ExecuteReader())
+            using (var context = new ServerDB())
             {
-                if (reader.HasRows)
+                var result = context.Discords.Where(u => u.Login == player.SocialClubId.ToString()).ToList();
+                var user = result.Count > 0 ? result[0] : null;
+                if (user != null)
                 {
-                    reader.Read();
-                    string avatar = reader.GetString(3);
-                    if (avatar != "")
+                    string avatar = user.Avatar;
+                    if(avatar != "")
                     {
                         ChangeUsersAvatar(player, avatar);
                     }
@@ -1838,7 +1931,6 @@ namespace ServerSide
                     CreateUsersAvatar(player);
                 }
             }
-            dataBase.connection.Close();
         }
         public static void ChangeUsersAvatar(Player player, string avatar)
         {
@@ -1851,11 +1943,16 @@ namespace ServerSide
                 client.DownloadFile(avatar, avatarsPath + @$"{player.SocialClubId}/avatar.png");
             }
 
-            DBConnection dataBase = new DBConnection();
-            dataBase.command.CommandText = $"UPDATE discord SET avatar = '' WHERE LOGIN = '{player.SocialClubId}'";
-            dataBase.command.ExecuteNonQuery();
-            dataBase.connection.Close();
-
+            using (var context = new ServerDB())
+            {
+                var result = context.Discords.Where(u => u.Login == player.SocialClubId.ToString()).ToList();
+                var user = result.Count > 0 ? result[0] : null;
+                if (user != null)
+                {
+                    user.Avatar = "";
+                    context.SaveChanges();
+                }
+            }
         }
 
         public static void CreateUsersAvatar(Player player)
@@ -1973,16 +2070,14 @@ namespace ServerSide
         public static List<int> GetPlayersVehiclesById(ulong playerId)
         {
             List<int> vehs = new List<int>();
-            DBConnection dataBase = new DBConnection();
-            dataBase.command.CommandText = $"SELECT id FROM vehicles WHERE owner = '{playerId}'";
-            using (MySqlDataReader reader = dataBase.command.ExecuteReader())
+            using (var context = new ServerDB())
             {
-                while (reader.Read())
+                var vehicles = context.Vehicles.Where(v => v.Owner == playerId.ToString()).ToList();
+                foreach(var vehicle in vehicles)
                 {
-                    vehs.Add(reader.GetInt32(0));
+                    vehs.Add(vehicle.Id);
                 }
             }
-            dataBase.connection.Close();
             return vehs;
         }
 
@@ -2013,10 +2108,16 @@ namespace ServerSide
         {
             string code = NAPI.Util.GetHashKey(player.SocialClubName + player.SocialClubId).ToString();
             player.SetSharedData("authcode", code);
-            DBConnection dataBase = new DBConnection();
-            dataBase.command.CommandText = $"UPDATE users SET authcode = '{code}' WHERE login = '{player.SocialClubId}'";
-            dataBase.command.ExecuteNonQuery();
-            dataBase.connection.Close();
+            using (var context = new ServerDB())
+            {
+                var result = context.Users.Where(u => u.Login == player.SocialClubId.ToString()).ToList();
+                var user = result.Count > 0 ? result[0] : null;
+                if(user != null)
+                {
+                    user.Authcode = code;
+                    context.SaveChanges();
+                }
+            }
         }
 
         public static void SetJobClothes(Player player, bool state, string job)
@@ -2057,18 +2158,6 @@ namespace ServerSide
             }
         }
 
-        public static void MaxPlayersJobPoints(Player player)
-        {
-            //player.SetSharedData("logisticpoints", 2000);
-            //player.SetSharedData("naturepoints", 2000);
-            //player.SetSharedData("waterpoints", 2000);
-            //player.SetSharedData("socialpoints", 2000);
-            //DBConnection dataBase = new DBConnection();
-            //dataBase.command.CommandText = $"UPDATE jobs SET logisticpoints = 2000, naturepoints = 2000, waterpoints = 2000, socialpoints = 2000 WHERE player = '{player.SocialClubId}'";
-            //dataBase.command.ExecuteNonQuery();
-            //dataBase.connection.Close();
-        }
-
         public static string[] GetPlayersBankingData(Player player)
         {
             List<string> data = new List<string>();
@@ -2080,17 +2169,23 @@ namespace ServerSide
 
             List<string[]> transactions = new List<string[]>();
             List<int> vehs = new List<int>();
-            DBConnection dataBase = new DBConnection();
-            dataBase.command.CommandText = $"SELECT * FROM transfers WHERE sender = '{player.SocialClubId}' OR target = '{player.SocialClubId}'";
-            using (MySqlDataReader reader = dataBase.command.ExecuteReader())
+            using(var context = new ServerDB())
             {
-                while (reader.Read())
+                var transfers = context.Transfers.Where(t => t.Sender == player.SocialClubId.ToString() || t.Target == player.SocialClubId.ToString()).ToList();
+                foreach(var transfer in transfers)
                 {
-                    transactions.Add(new string[] { reader.GetString(1) == player.SocialClubId.ToString() ? "to" : "from", reader.GetString(1) == player.SocialClubId.ToString() ? reader.GetString(2) : reader.GetString(1), reader.GetString(3), reader.GetString(4), reader.GetString(5) });
+                    transactions.Add(new string[]
+                    {
+                        transfer.Sender == player.SocialClubId.ToString() ? "to" : "from",
+                        transfer.Sender == player.SocialClubId.ToString() ? transfer.Target : transfer.Sender,
+                        transfer.Amount,
+                        transfer.Title,
+                        transfer.Time
+                    });
                 }
             }
-            dataBase.connection.Close();
-            for(int i = 0; i < transactions.Count; i++)
+            
+            for (int i = 0; i < transactions.Count; i++)
             {
                 transactions[i][1] = GetPlayerNameById(transactions[i][1]);
             }
@@ -2102,58 +2197,52 @@ namespace ServerSide
 
         public static string GetPlayersIDByAccNumber(string accnumber)
         {
-            DBConnection dataBase = new DBConnection();
-            dataBase.command.CommandText = $"SELECT login FROM users WHERE accnumber = '{accnumber}'";
-            object login = dataBase.command.ExecuteScalar();
-            dataBase.connection.Close();
-            string loginStr = "";
-            if(login != null)
+            using (var context = new ServerDB())
             {
-                loginStr = (string)login;
+                var result = context.Users.Where(u => u.Accnumber == accnumber).ToList();
+                var user = result.Count > 0 ? result[0] : null;
+                if(user != null)
+                {
+                    return user.Login;
+                }
             }
-
-            return loginStr;
+            return "";
         }
 
         public static void TransferMoneyToOfflinePlayer(string login, int amount)
         {
-            DBConnection dataBase = new DBConnection();
-            dataBase.command.CommandText = $"SELECT bank FROM users WHERE login = '{login}'";
-            object bankmoney = dataBase.command.ExecuteScalar();
-            int bank = 0;
-
-            if (bankmoney != null)
+            using (var context = new ServerDB())
             {
-                bank = int.Parse((string)bankmoney);
-                bank += amount;
-                dataBase.command.CommandText = $"UPDATE users SET bank = '{bank}' WHERE login = '{login}'";
-                dataBase.command.ExecuteNonQuery();
-                dataBase.connection.Close();
+                var result = context.Users.Where(u => u.Login == login).ToList();
+                var user = result.Count > 0 ? result[0] : null;
+                if (user != null)
+                {
+                    user.Bank += amount;
+                    context.SaveChanges();
+                }
             }
         }
-
-
-
 
         //MESSENGER
         public static string GetPlayersConversations(Player player)
         {
-            DBConnection dataBase = new DBConnection();
             List<List<string>> conversations = new List<List<string>>();
-            dataBase.command.CommandText = $"SELECT * FROM messenger WHERE sender = '{player.SocialClubId}' OR receiver = '{player.SocialClubId}' ORDER BY id DESC";
-            using (MySqlDataReader reader = dataBase.command.ExecuteReader())
+
+            using (var context = new ServerDB())
             {
-                while (reader.Read())
+                var result = context.Messages.Where(m => m.Sender == player.SocialClubId.ToString() || m.Receiver == player.SocialClubId.ToString()).ToList().OrderBy(m => m.Id).Reverse();
+                
+                foreach(var message in result)
                 {
                     if(conversations.Count > 0)
                     {
-                        for(int i=0; i<conversations.Count; i++)
+                        for (int i = 0; i < conversations.Count; i++)
                         {
                             bool breakLoop = false;
                             var conversation = conversations[i];
-                            foreach(List<string> conv in conversations)
+                            foreach (List<string> conv in conversations)
                             {
-                                if(conv.Contains(reader.GetString(1)) || conv.Contains(reader.GetString(2)))
+                                if (conv.Contains(message.Sender) || conv.Contains(message.Receiver))
                                 {
                                     breakLoop = true;
                                     break;
@@ -2161,7 +2250,7 @@ namespace ServerSide
                             }
                             if (!breakLoop)
                             {
-                                string playerId = reader.GetString(1) == player.SocialClubId.ToString() ? reader.GetString(2) : reader.GetString(1);
+                                string playerId = message.Sender == player.SocialClubId.ToString() ? message.Receiver : message.Sender;
                                 conversations.Add(new List<string>()
                                 {
                                     playerId
@@ -2171,7 +2260,7 @@ namespace ServerSide
                     }
                     else
                     {
-                        string playerId = reader.GetString(1) == player.SocialClubId.ToString() ? reader.GetString(2) : reader.GetString(1);
+                        string playerId = message.Sender == player.SocialClubId.ToString() ? message.Receiver : message.Sender;
                         conversations.Add(new List<string>()
                         {
                             playerId
@@ -2179,83 +2268,86 @@ namespace ServerSide
                     }
                 }
             }
-
+            
             if(conversations.Count > 0)
             {
                 for(int i=0; i<conversations.Count; i++)
                 {
-                    dataBase.command.CommandText = $"SELECT count(id) FROM messenger WHERE sender = '{conversations[i][0]}' AND receiver = '{player.SocialClubId}' AND received = 'False'";
-                    Int64 amount = (Int64)dataBase.command.ExecuteScalar();
-                    if(amount > 0)
+                    using(var context = new ServerDB())
                     {
-                        conversations[i].Add("true");
-                    }
-                    else
-                    {
-                        conversations[i].Add("false");
-                    }
+                        var amount = context.Messages.Where(m => m.Sender == conversations[i][0] && m.Receiver == player.SocialClubId.ToString() && m.Received == "False").ToList().Count;
+                        if (amount > 0)
+                        {
+                            conversations[i].Add("true");
+                        }
+                        else
+                        {
+                            conversations[i].Add("false");
+                        }
 
-                    dataBase.command.CommandText = $"SELECT username FROM users WHERE login = '{conversations[i][0]}'";
-                    string username = (string)dataBase.command.ExecuteScalar();
-                    conversations[i].Add(username);
+                        var result = context.Users.Where(u => u.Login == conversations[i][0]).ToList();
+                        var user = result.Count > 0 ? result[0] : null;
+                        if(user != null)
+                        {
+                            conversations[i].Add(user.Username);
+                        }
+                    }
                 }
             }
-            dataBase.connection.Close();
             return conversations.Count > 0 ? JsonConvert.SerializeObject(conversations) : "";
         }
 
         public static string GetPlayersMessages(Player player, string playerID)
         {
-            DBConnection dataBase = new DBConnection();
             List<List<string>> messages = new List<List<string>>();
-            dataBase.command.CommandText = $"SELECT * FROM messenger WHERE (sender = '{player.SocialClubId}' AND receiver = '{playerID}') OR (sender = '{playerID}' AND receiver = '{player.SocialClubId}')";
-            using (MySqlDataReader reader = dataBase.command.ExecuteReader())
+            using (var context = new ServerDB())
             {
-                while (reader.Read())
+                var msg = context.Messages.Where(m => (m.Sender == player.SocialClubId.ToString() && m.Receiver == playerID) || (m.Receiver == player.SocialClubId.ToString() && m.Sender == playerID)).ToList();
+                foreach(var message in msg)
                 {
-                    string type = "to";
-                    if(reader.GetString(1) == playerID)
+                    string type = message.Sender == playerID ? "from" : "to";
+                    messages.Add(new List<string>
                     {
-                        type = "from";
-                    }
-                    string message = reader.GetString(3);
-                    string date = reader.GetString(4);
-                    messages.Add(new List<string>()
-                    {
-                        type, message, date
+                        type, message.Text, message.Date
                     });
+                    if(message.Receiver == player.SocialClubId.ToString() && message.Sender == playerID)
+                    {
+                        message.Received = "True";
+                    }
                 }
+                context.SaveChanges();
             }
-            dataBase.command.CommandText = $"UPDATE messenger SET received = 'True' WHERE sender = '{playerID}' AND receiver = '{player.SocialClubId}' AND received = 'False'";
-            dataBase.command.ExecuteNonQuery();
-            dataBase.connection.Close();
             
             return messages.Count > 0 ? JsonConvert.SerializeObject(messages) : "";
         }
 
         public static void SendMessageToPlayer(Player player, string playerToId, string message)
         {
-            DBConnection dataBase = new DBConnection();
-            List<List<string>> messages = new List<List<string>>();
-            dataBase.command.CommandText = $"INSERT INTO messenger (sender, receiver, message, date, received) VALUES ('{player.SocialClubId}', '{playerToId}', '{message}', '{DateTime.Now}', 'False')";
-            dataBase.command.ExecuteNonQuery();
-            dataBase.connection.Close();
+            using(var context = new ServerDB())
+            {
+                context.Messages.Add(new Message
+                {
+                    Sender = player.SocialClubId.ToString(),
+                    Receiver = playerToId,
+                    Text = message,
+                    Date = DateTime.Now.ToString(),
+                    Received = "False"
+                });
+                context.SaveChanges();
+            }
         }
 
         public static string HasPlayerNewMessages(Player player)
         {
             List<int> messageIds = new List<int>();
-            DBConnection dataBase = new DBConnection();
-            dataBase.command.CommandText = $"SELECT id FROM messenger WHERE receiver = '{player.SocialClubId}' AND received = 'False'";
-            using (MySqlDataReader reader = dataBase.command.ExecuteReader())
+            using(var context = new ServerDB())
             {
-                while(reader.Read())
+                var messages = context.Messages.Where(m => m.Receiver == player.SocialClubId.ToString() && m.Received == "False").ToList();
+                foreach(var message in messages)
                 {
-                    messageIds.Add(reader.GetInt32(0));
+                    messageIds.Add(message.Id);
                 }
             }
-
-            dataBase.connection.Close();
             return messageIds.Count == 0 ? "" : JsonConvert.SerializeObject(messageIds);
         }
 
@@ -2263,21 +2355,19 @@ namespace ServerSide
         {
             List<List<string>> players = new List<List<string>>();
 
-            DBConnection dataBase = new DBConnection();
-            dataBase.command.CommandText = $"SELECT login, username FROM users WHERE login NOT LIKE '{player.SocialClubId}' AND UPPER(username) LIKE UPPER('%{keyword}%');";
-            using (MySqlDataReader reader = dataBase.command.ExecuteReader())
+            using(var context = new ServerDB())
             {
-                while (reader.Read())
+                var results = context.Users.Where(u => u.Login != player.SocialClubId.ToString() && u.Username.ToLower().Contains(keyword.ToLower())).ToList();
+                foreach(var user in results)
                 {
                     players.Add(new List<string>()
                     {
-                        reader.GetString(0),
-                        reader.GetString(1)
+                        user.Login,
+                        user.Username
                     });
                 }
             }
 
-            dataBase.connection.Close();
             return players.Count > 0 ? JsonConvert.SerializeObject(players) : "";
         }
     }

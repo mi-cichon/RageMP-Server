@@ -1373,21 +1373,6 @@ namespace ServerSide
                             player.TriggerEvent("test_createObject", args[0]);
                         }
                         break;
-                    case "maxpoints":
-                        if(args.Count == 1)
-                        {
-                            Player pointsPl = PlayerDataManager.GetPlayerByRemoteId(args[0]);
-                            if (pointsPl != null && pointsPl.Exists)
-                            {
-                                PlayerDataManager.MaxPlayersJobPoints(pointsPl);
-                                PlayerDataManager.NotifyPlayer(player, "Pomyślnie zwiększono punkty pracy gracza do 2000!");
-                            }
-                            else
-                            {
-                                PlayerDataManager.NotifyPlayer(player, "Nie znaleziono gracza!");
-                            }
-                        }
-                        break;
                     case "mugshot":
                         if (args.Count == 0)
                         {
@@ -1540,21 +1525,6 @@ namespace ServerSide
                     else
                     {
                         PlayerDataManager.SendInfoToConsole("Nieprawidłowa składnia komendy!");
-                    }
-                    break;
-                case "maxpoints":
-                    if (args.Count == 1)
-                    {
-                        Player pointsPl = PlayerDataManager.GetPlayerByRemoteId(args[0]);
-                        if (pointsPl != null && pointsPl.Exists)
-                        {
-                            PlayerDataManager.MaxPlayersJobPoints(pointsPl);
-                            PlayerDataManager.SendInfoToConsole("Pomyślnie zwiększono punkty pracy gracza do 2000!");
-                        }
-                        else
-                        {
-                            PlayerDataManager.SendInfoToConsole("Nie znaleziono gracza!");
-                        }
                     }
                     break;
             }

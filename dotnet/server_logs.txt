@@ -1,0 +1,1065 @@
+<<<<<<< Updated upstream
+=======
+Initializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 11.06.2022 19:08:19
+Unable to load acl.xml
+Loaded 667 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating ServerSide.MainClass..
+Server: loading server events.. found 11 server event(s)
+Server: loaded 11 server events(s)
+Server: loading remote events.. found 210 remote event(s)
+Server: loaded 210 remote event(s)
+-> Resource Server started!
+Started! Waiting for connections..
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at object int.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowiInitializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 11.06.2022 19:16:34
+Unable to load acl.xml
+Loaded 667 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating ServerSide.MainClass..
+Server: loading server events.. found 11 server event(s)
+Server: loaded 11 server events(s)
+Server: loading remote events.. found 210 remote event(s)
+Server: loaded 210 remote event(s)
+-> Resource Server started!
+Started! Waiting for connections..
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+   at void GTANetworkInternals.RemoteEventParser.Parse(Player sender, ulong eventNameHash, params object[] args)
+lawnmowingRemoveGrass: System.InvalidCastException: Null object cannot be converted to a value type.
+   at objeInitializing Bootstrapper.dll (1.1.0.0)..
+-> SERVER STARTED AT 13.06.2022 20:44:35
+Unable to load acl.xml
+Loaded 667 entries from vehicleData.json
+Loading resources..
+-> Starting Server resource..
+Server: loading scripts.. found 1 script(s)
+Server: instantiating ServerSide.MainClass..
+Server: loading server events.. found 11 server event(s)
+Server: loaded 11 server events(s)
+Server: loading remote events.. found 210 remote event(s)
+Server: loaded 210 remote event(s)
+-> Resource Server started!
+Started! Waiting for connections..
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.InvalidOperationException: An exception was thrown while attempting to evaluate a LINQ query parameter expression. To show additional information call EnableSensitiveDataLogging() when overriding DbContext.OnConfiguring.
+ ---> System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at object lambda_method(Closure)
+   at object Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.GetValue(Expression expression, out string parameterName)
+   --- End of inner exception stack trace ---
+   at object Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.GetValue(Expression expression, out string parameterName)
+   at Expression Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Evaluate(Expression expression, bool generateParameter)
+   at Expression Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at Expression System.Linq.Expressions.ExpressionVisitor.VisitBinary(BinaryExpression node)
+   at Expression Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at Expression Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.VisitBinary(BinaryExpression binaryExpression)
+   at Expression Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at Expression Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.VisitBinary(BinaryExpression binaryExpression)
+   at Expression Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at Expression System.Linq.Expressions.ExpressionVisitor.VisitLambda<T>(Expression<T> node)
+   at Expression Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at Expression System.Linq.Expressions.ExpressionVisitor.VisitUnary(UnaryExpression node)
+   at Expression Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at Expression[] System.Dynamic.Utils.ExpressionVisitorUtils.VisitArguments(ExpressionVisitor visitor, IArgumentProvider nodes)
+   at Expression System.Linq.Expressions.ExpressionVisitor.VisitMethodCall(MethodCallExpression node)
+   at Expression Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at Expression Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.ExtractParameters(Expression expression)
+   at TResult Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute<TResult>(Expression query)
+   at IEnumerator<TResult> Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable<TResult>.GetEnumerator()
+   at new System.Collections.Generic.List<T>(IEnumerable<T> collection)
+   at List<TSource> System.Linq.Enumerable.ToList<TSource>(IEnumerable<TSource> source)
+   at string ServerSide.PlayerDataManager.GetPlayersConversations(Player player) in E:/Server/dotnet/resources/Server/Managers/PlayerDataManager.cs:line 2287
+   at void ServerSide.MainClass.Messenger_requestConversationsData(Player player) in E:/Server/dotnet/resources/
+>>>>>>> Stashed changes

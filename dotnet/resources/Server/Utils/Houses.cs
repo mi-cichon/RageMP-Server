@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using GTANetworkAPI;
+using Server.Database;
+using System.Linq;
 
 namespace ServerSide
 {
@@ -13,23 +15,19 @@ namespace ServerSide
 
         public static void InstantiateHouses()
         {
-            DBConnection dataBase = new DBConnection();
-            dataBase.command.CommandText = "SELECT * FROM houses";
-            using (MySqlDataReader reader = dataBase.command.ExecuteReader())
+            using var context = new ServerDB();
+            var houses = context.Houses.ToList();
+            foreach(var house in houses)
             {
-                while(reader.Read())
-                {
-                    ColShape cl = NAPI.ColShape.CreateCylinderColShape(stringToVec(reader.GetString(1)), 1.0f, 2.0f);
-                    cl.SetSharedData("type", "house");
-                    cl.SetSharedData("id", reader.GetInt32(0));
-                    cl.SetSharedData("price", Convert.ToInt32(reader.GetString(3)));
-                    cl.SetSharedData("owner", reader.GetString(4));
-                    cl.SetSharedData("time", reader.GetString(5));
-                    cl.SetSharedData("housepos", stringToVec(reader.GetString(1)));
-                    CreateHouseColshapes(cl, reader.GetString(2), stringToVec(reader.GetString(1)), (uint)reader.GetInt32(0), reader.GetString(4), reader.GetString(6));
-                }
+                ColShape cl = NAPI.ColShape.CreateCylinderColShape(stringToVec(house.Pos), 1.0f, 2.0f);
+                cl.SetSharedData("type", "house");
+                cl.SetSharedData("id", house.Id);
+                cl.SetSharedData("price", Convert.ToInt32(house.Price));
+                cl.SetSharedData("owner", house.Owner);
+                cl.SetSharedData("time", house.Time);
+                cl.SetSharedData("housepos", stringToVec(house.Pos));
+                CreateHouseColshapes(cl, house.Interior, stringToVec(house.Pos), (uint)house.Id, house.Owner, house.Storage);
             }
-            dataBase.connection.Close();
         }
 
         public static void CreateHouseColshapes(ColShape house, string interiorstr, Vector3 housepos, uint id, string owner, string storageStr)
@@ -117,27 +115,26 @@ namespace ServerSide
 
         public static void AddHouse(Vector3 pos, string type, int price)
         {
-            int id = 0;
             ColShape cl = NAPI.ColShape.CreateCylinderColShape(pos, 1.0f, 2.0f);
             cl.SetSharedData("type", "house");
             cl.SetSharedData("price", price);
             cl.SetSharedData("owner", "");
             cl.SetSharedData("time", "");
             cl.SetSharedData("housepos", pos);
-            DBConnection dataBase = new DBConnection();
-            dataBase.command.CommandText = $"INSERT INTO houses(pos, interior, price, owner, time, storage) VALUES ('{pos.X.ToString() + "." + pos.Y.ToString() + "." + pos.Z.ToString()}', '{type}', '{price.ToString()}', '', '', '')";
-            dataBase.command.ExecuteNonQuery();
-            dataBase.command.CommandText = $"SELECT * FROM houses WHERE id = (SELECT LAST_INSERT_ID())";
-            using (MySqlDataReader reader = dataBase.command.ExecuteReader())
+            using var context = new ServerDB();
+            context.Houses.Add(new Server.Models.House
             {
-                if(reader.Read())
-                {
-                    id = reader.GetInt32(0);
-                }
-            }
-            cl.SetSharedData("id", id);
-            CreateHouseColshapes(cl, type, pos, (uint)id, "", "[]");
-            dataBase.connection.Close();
+                Pos = pos.X.ToString() + "." + pos.Y.ToString() + "." + pos.Z.ToString(),
+                Interior = type,
+                Price = price.ToString(),
+                Owner = "",
+                Time = "",
+                Storage = ""
+            });
+
+            var house = context.Houses.ToList().Last();
+            cl.SetSharedData("id", house.Id);
+            CreateHouseColshapes(cl, type, pos, (uint)house.Id, "", "[]");
         }
 
         public static Vector3 stringToVec(string str)
@@ -190,10 +187,11 @@ namespace ServerSide
             player.SetSharedData("houseid", houseColShape.GetSharedData<Int32>("id"));
             houseColShape.SetSharedData("owner", owner.ToString());
             houseColShape.SetSharedData("time", time);
-            DBConnection dataBase = new DBConnection();
-            dataBase.command.CommandText = $"UPDATE houses SET owner = '{owner}', time = '{time}' WHERE id = {houseColShape.GetSharedData<Int32>("id")}";
-            dataBase.command.ExecuteNonQuery();
-            dataBase.connection.Close();
+            using var context = new ServerDB();
+            var house = context.Houses.Where(x => x.Id == houseColShape.GetSharedData<Int32>("id")).FirstOrDefault();
+            house.Owner = owner;
+            house.Time = time;
+            context.SaveChanges();
             houseMarker.SetSharedData("ownername", player.GetSharedData<string>("username"));
             player.TriggerEvent("setHouseAsOwn", houseBlip, houseMarker);
         }
@@ -201,10 +199,10 @@ namespace ServerSide
         public void UpdateStorage(string newStorage)
         {
             this.storage = newStorage;
-            DBConnection dataBase = new DBConnection();
-            dataBase.command.CommandText = $"UPDATE houses SET storage = '{storage}' WHERE id = {id}";
-            dataBase.command.ExecuteNonQuery();
-            dataBase.connection.Close();
+            using var context = new ServerDB();
+            var house = context.Houses.Where(x => x.Id == id).FirstOrDefault();
+            house.Storage = storage;
+            context.SaveChanges();
         }
 
         public void clearOwner()
@@ -220,10 +218,12 @@ namespace ServerSide
                 player.TriggerEvent("setHouseAsNotOwn", houseBlip, houseMarker);
             }
             owner = "";
-            DBConnection dataBase = new DBConnection();
-            dataBase.command.CommandText = $"UPDATE houses SET owner = '', time = '' WHERE id = {houseColShape.GetSharedData<Int32>("id")}";
-            dataBase.command.ExecuteNonQuery();
-            dataBase.connection.Close();
+
+            using var context = new ServerDB();
+            var house = context.Houses.Where(x => x.Id == id).FirstOrDefault();
+            house.Owner = "";
+            house.Time = "";
+            context.SaveChanges();
             houseMarker.SetSharedData("ownername", "");
 
         }
@@ -231,10 +231,10 @@ namespace ServerSide
         public void extendTime(string time)
         {
             houseColShape.SetSharedData("time", time);
-            DBConnection dataBase = new DBConnection();
-            dataBase.command.CommandText = $"UPDATE houses SET time = '{time}' WHERE id = {houseColShape.GetSharedData<Int32>("id")}";
-            dataBase.command.ExecuteNonQuery();
-            dataBase.connection.Close();
+            using var context = new ServerDB();
+            var house = context.Houses.Where(x => x.Id == id).FirstOrDefault();
+            house.Time = time;
+            context.SaveChanges();
         }
     }
 }

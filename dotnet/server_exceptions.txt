@@ -1030,4 +1030,2078 @@ MySqlConnector.MySqlException (0x80004005): Unable to connect to any of the spec
    at TResult System.Runtime.CompilerServices.ConfiguredValueTaskAwaitable<TResult>+ConfiguredValueTaskAwaiter.GetResult()
    at async ValueTask<ServerSession> MySqlConnector.MySqlConnection.CreateSessionAsync(ConnectionPool pool, int startTickCount, IOBehavior? ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlConnection.cs:line 846
    at TResult System.Runtime.CompilerServices.ConfiguredValueTaskAwaitable<TResult>+ConfiguredValueTaskAwaiter.GetResult()
+<<<<<<< Updated upstream
    at async Task MySqlConnector.MySqlCo
+=======
+   at async Task MySqlConnector.MySqlCo
+==================[11.06.2022 17:31:50]==================
+System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (10061): Nie można nawiązać połączenia, ponieważ komputer docelowy aktywnie go odmawia. [::1]:3306
+   at void System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+=========================================================
+
+==================[11.06.2022 17:31:52]==================
+System.Net.Internals.SocketExceptionFactory+ExtendedSocketException (10061): Nie można nawiązać połączenia, ponieważ komputer docelowy aktywnie go odmawia. 127.0.0.1:3306
+   at void System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+=========================================================
+
+==================[11.06.2022 17:31:52]==================
+MySqlConnector.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   at async Task MySqlConnector.Core.ServerSession.ConnectAsync(ConnectionSettings cs, int startTickCount, ILoadBalancer loadBalancer, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 478
+=========================================================
+
+==================[11.06.2022 17:31:52]==================
+MySqlConnector.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   at async Task MySqlConnector.Core.ServerSession.ConnectAsync(ConnectionSettings cs, int startTickCount, ILoadBalancer loadBalancer, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 478
+   at void System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+=========================================================
+
+==================[11.06.2022 17:31:52]==================
+MySqlConnector.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   at async Task MySqlConnector.Core.ServerSession.ConnectAsync(ConnectionSettings cs, int startTickCount, ILoadBalancer loadBalancer, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 478
+   at async ValueTask<ServerSession> MySqlConnector.Core.ConnectionPool.GetSessionAsync(MySqlConnection connection, int startTickCount, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ConnectionPool.cs:line 111
+   at void System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+=========================================================
+
+==================[11.06.2022 17:31:52]==================
+MySqlConnector.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   at async Task MySqlConnector.Core.ServerSession.ConnectAsync(ConnectionSettings cs, int startTickCount, ILoadBalancer loadBalancer, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 478
+   at async ValueTask<ServerSession> MySqlConnector.Core.ConnectionPool.GetSessionAsync(MySqlConnection connection, int startTickCount, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ConnectionPool.cs:line 111
+   at async ValueTask<ServerSession> MySqlConnector.Core.ConnectionPool.GetSessionAsync(MySqlConnection connection, int startTickCount, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ConnectionPool.cs:line 140
+   at void System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+=========================================================
+
+==================[11.06.2022 17:31:52]==================
+MySqlConnector.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   at async Task MySqlConnector.Core.ServerSession.ConnectAsync(ConnectionSettings cs, int startTickCount, ILoadBalancer loadBalancer, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 478
+   at async ValueTask<ServerSession> MySqlConnector.Core.ConnectionPool.GetSessionAsync(MySqlConnection connection, int startTickCount, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ConnectionPool.cs:line 111
+   at async ValueTask<ServerSession> MySqlConnector.Core.ConnectionPool.GetSessionAsync(MySqlConnection connection, int startTickCount, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ConnectionPool.cs:line 140
+   at TResult System.Runtime.CompilerServices.ConfiguredValueTaskAwaitable<TResult>+ConfiguredValueTaskAwaiter.GetResult()
+   at async ValueTask<ServerSession> MySqlConnector.MySqlConnection.CreateSessionAsync(ConnectionPool pool, int startTickCount, IOBehavior? ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlConnection.cs:line 846
+   at void System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+=========================================================
+
+==================[11.06.2022 17:31:52]==================
+MySqlConnector.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   at async Task MySqlConnector.Core.ServerSession.ConnectAsync(ConnectionSettings cs, int startTickCount, ILoadBalancer loadBalancer, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 478
+   at async ValueTask<ServerSession> MySqlConnector.Core.ConnectionPool.GetSessionAsync(MySqlConnection connection, int startTickCount, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ConnectionPool.cs:line 111
+   at async ValueTask<ServerSession> MySqlConnector.Core.ConnectionPool.GetSessionAsync(MySqlConnection connection, int startTickCount, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ConnectionPool.cs:line 140
+   at TResult System.Runtime.CompilerServices.ConfiguredValueTaskAwaitable<TResult>+ConfiguredValueTaskAwaiter.GetResult()
+   at async ValueTask<ServerSession> MySqlConnector.MySqlConnection.CreateSessionAsync(ConnectionPool pool, int startTickCount, IOBehavior? ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlConnection.cs:line 846
+   at TResult System.Runtime.CompilerServices.ConfiguredValueTaskAwaitable<TResult>+ConfiguredValueTaskAwaiter.GetResult()
+   at async Task MySqlConnector.MySqlConnection.OpenAsync(IOBehavior? ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlConnection.cs:line 410
+=========================================================
+
+==================[11.06.2022 17:31:52]==================
+MySqlConnector.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   at async Task MySqlConnector.Core.ServerSession.ConnectAsync(ConnectionSettings cs, int startTickCount, ILoadBalancer loadBalancer, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 478
+   at async ValueTask<ServerSession> MySqlConnector.Core.ConnectionPool.GetSessionAsync(MySqlConnection connection, int startTickCount, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ConnectionPool.cs:line 111
+   at async ValueTask<ServerSession> MySqlConnector.Core.ConnectionPool.GetSessionAsync(MySqlConnection connection, int startTickCount, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ConnectionPool.cs:line 140
+   at TResult System.Runtime.CompilerServices.ConfiguredValueTaskAwaitable<TResult>+ConfiguredValueTaskAwaiter.GetResult()
+   at async ValueTask<ServerSession> MySqlConnector.MySqlConnection.CreateSessionAsync(ConnectionPool pool, int startTickCount, IOBehavior? ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlConnection.cs:line 846
+   at TResult System.Runtime.CompilerServices.ConfiguredValueTaskAwaitable<TResult>+ConfiguredValueTaskAwaiter.GetResult()
+   at async Task MySqlConnector.MySqlCo
+==================[11.06.2022 19:09:32]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:32]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:32]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:32]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:32]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:32]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:32]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:32]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:32]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:32]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:32]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:32]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:32]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:32]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:32]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:32]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:32]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:32]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:32]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:32]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:32]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:32]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:32]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:32]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:32]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:32]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:32]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:32]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:32]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:32]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:32]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:32]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:33]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:33]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:33]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:33]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:33]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:33]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:33]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:33]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:33]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:33]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:33]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:33]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:33]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:33]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:33]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:33]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:33]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:33]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:33]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:33]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:33]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:33]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:33]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:33]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:33]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:33]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:33]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:33]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:33]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:33]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:33]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:33]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:33]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:33]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:33]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:33]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:33]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:33]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:38]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:38]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:38]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:38]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:38]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:38]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:38]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:38]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:38]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:38]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:38]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:38]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:38]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:38]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:38]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:38]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:38]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:38]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:38]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:38]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:38]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:38]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:38]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:38]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:38]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:38]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:38]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:38]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:38]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:38]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:38]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:38]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:39]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:39]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:39]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:39]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:39]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:39]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:39]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:39]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:39]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:39]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:39]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:39]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:39]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:39]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:39]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:39]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:39]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:39]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:39]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:39]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:39]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:39]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:39]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:39]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:39]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:39]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:39]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:39]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:39]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:39]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:09:39]==================
+System.InvalidCastException: Invalid cast from 'System.Int32' to 'GTANetworkAPI.Object'.
+   at object Convert.
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:29]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:30]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=========================================================
+
+==================[11.06.2022 19:17:31]==================
+System.InvalidCastException: Null object cannot be converted to a value type.
+   at object Convert.ChangeType(object value, Type conversionType, IFormatProvider provider)
+=====
+==================[12.06.2022 09:06:47]==================
+System.IO.FileNotFoundException: Could not load file or assembly 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll'. Nie można odnaleźć określonego pliku.
+File name: 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll'
+   at void System.Runtime.Loader.AssemblyLoadContext.LoadFromPath(IntPtr ptrNativeAssemblyLoadContext, string ilPath, string niPath, ObjectHandleOnStack retAssembly)
+
+
+=========================================================
+
+==================[12.06.2022 09:06:47]==================
+System.IO.FileNotFoundException: Could not load file or assembly 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll'. Nie można odnaleźć określonego pliku.
+File name: 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll'
+   at void System.Runtime.Loader.AssemblyLoadContext.LoadFromPath(IntPtr ptrNativeAssemblyLoadContext, string ilPath, string niPath, ObjectHandleOnStack retAssembly)
+
+
+=========================================================
+
+==================[12.06.2022 09:06:47]==================
+System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore.Relational, Version=3.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Nie można odnaleźć określonego pliku.
+File name: 'Microsoft.EntityFrameworkCore.Relational, Version=3.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+   at void Signature.GetSignature(Void* pCorSig, int cCorSig, RuntimeFieldHandleInternal fieldHandle, IRuntimeMethodInfo methodHandle, RuntimeType declaringType)
+   at ParameterInfo System.Reflection.RuntimeMethodInfo.FetchReturnParameter()
+
+
+=========================================================
+
+==================[12.06.2022 09:06:47]==================
+System.IO.FileNotFoundException: Could not load file or assembly 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll'. Nie można odnaleźć określonego pliku.
+File name: 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll'
+   at void System.Runtime.Loader.AssemblyLoadContext.LoadFromPath(IntPtr ptrNativeAssemblyLoadContext, string ilPath, string niPath, ObjectHandleOnStack retAssembly)
+
+
+=========================================================
+
+==================[12.06.2022 09:06:47]==================
+System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore.Relational, Version=3.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'. Nie można odnaleźć określonego pliku.
+File name: 'Microsoft.EntityFrameworkCore.Relational, Version=3.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
+   at void Signature.GetSignature(Void* pCorSig, int cCorSig, RuntimeFieldHandleInternal fieldHandle, IRuntimeMethodInfo methodHandle, RuntimeType declaringType)
+   at ParameterInfo[] System.Reflection.RuntimeMethodInfo.FetchNonReturnParameters()
+
+
+=========================================================
+
+==================[12.06.2022 09:06:47]==================
+System.IO.FileNotFoundException: Could not load file or assembly 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll'. Nie można odnaleźć określonego pliku.
+File name: 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll'
+   at void System.Runtime.Loader.AssemblyLoadContext.LoadFromPath(IntPtr ptrNativeAssemblyLoadContext, string ilPath, string niPath, ObjectHandleOnStack retAssembly)
+
+
+=========================================================
+
+==================[12.06.2022 09:06:47]==================
+System.IO.FileNotFoundException: Could not load file or assembly 'Microsoft.EntityFrameworkCore.Relational, Version=3.1.0.0, 
+==================[13.06.2022 19:48:24]==================
+System.IO.FileNotFoundException: Could not load file or assembly 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.resources.dll'. Nie można odnaleźć określonego pliku.
+File name: 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.resources.dll'
+   at void System.Runtime.Loader.AssemblyLoadContext.LoadFromPath(IntPtr ptrNativeAssemblyLoadContext, string ilPath, string niPath, ObjectHandleOnStack retAssembly)
+
+
+=========================================================
+
+==================[13.06.2022 19:48:24]==================
+System.IO.FileNotFoundException: Could not load file or assembly 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.resources.dll'. Nie można odnaleźć określonego pliku.
+File name: 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.resources.dll'
+   at void System.Runtime.Loader.AssemblyLoadContext.LoadFromPath(IntPtr ptrNativeAssemblyLoadContext, string ilPath, string niPath, ObjectHandleOnStack retAssembly)
+
+
+=========================================================
+
+==================[13.06.2022 19:48:25]==================
+System.IO.FileNotFoundException: Could not load file or assembly 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.resources.dll'. Nie można odnaleźć określonego pliku.
+File name: 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.resources.dll'
+   at void System.Runtime.Loader.AssemblyLoadContext.LoadFromPath(IntPtr ptrNativeAssemblyLoadContext, string ilPath, string niPath, ObjectHandleOnStack retAssembly)
+
+
+=========================================================
+
+==================[13.06.2022 19:48:25]==================
+System.IO.FileNotFoundException: Could not load file or assembly 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.resources.dll'. Nie można odnaleźć określonego pliku.
+File name: 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.resources.dll'
+   at void System.Runtime.Loader.AssemblyLoadContext.LoadFromPath(IntPtr ptrNativeAssemblyLoadContext, string ilPath, string niPath, ObjectHandleOnStack retAssembly)
+
+
+=========================================================
+
+==================[13.06.2022 19:48:26]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.business_tunes' doesn't exist
+   at void System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+=========================================================
+
+==================[13.06.2022 19:48:26]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.business_tunes' doesn't exist
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.business_tunes' doesn't exist
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:/projects/mysqlconnector/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet() in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 130
+=========================================================
+
+==================[13.06.2022 19:48:26]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.business_tunes' doesn't exist
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.business_tunes' doesn't exist
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:/projects/mysqlconnector/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet() in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 130
+   at async Task<MySqlDataReader> MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary<string, CachedProcedure> cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 391
+=========================================================
+
+==================[13.06.2022 19:48:26]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.business_tunes' doesn't exist
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.business_tunes' doesn't exist
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:/projects/mysqlconnector/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet() in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 130
+   at async Task<MySqlDataReader> MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary<string, CachedProcedure> cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 391
+   at void System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+=========================================================
+
+==================[13.06.2022 19:48:26]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.business_tunes' doesn't exist
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.business_tunes' doesn't exist
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:/projects/mysqlconnector/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet() in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 130
+   at async Task<MySqlDataReader> MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary<string, CachedProcedure> cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 391
+   at async Task<DbDataReader> MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList<IMySqlCommand> commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/Core/CommandExecutor.cs:line 62
+   at void System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+=========================================================
+
+==================[13.06.2022 19:48:26]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.business_tunes' doesn't exist
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.business_tunes' doesn't exist
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:/projects/mysqlconnector/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet() in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 130
+   at async Task<MySqlDataReader> MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary<string, CachedProcedure> cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 391
+   at async Task<DbDataReader> MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList<IMySqlCommand> commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/Core/CommandExecutor.cs:line 62
+   at DbDataReader MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior) in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlCommand.cs:line 217
+   at DbDataReader System.Data.Common.DbCommand.ExecuteReader()
+   at RelationalDataReader Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+=========================================================
+
+==================[13.06.2022 19:48:26]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.business_tunes' doesn't exist
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.business_tunes' doesn't exist
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:/projects/mysqlconnector/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet() in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 130
+   at async Task<MySqlDataReader> MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary<string, CachedProcedure> cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 391
+   at async Task<DbDataReader> MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList<IMySqlCommand> commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/Core/CommandExecutor.cs:line 62
+   at DbDataReader MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior) in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlCommand.cs:line 217
+   at DbDataReader System.Data.Common.DbCommand.ExecuteReader()
+   at RelationalDataReader Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at bool Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable<T>+Enumerator.InitializeReader(DbContext _, bool result)
+   at TResult Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.Execute<TState, TResult>(TState state, Func<DbContext, TState, TResult> operation, Func<DbContext, TState, ExecutionResult<TResult>> verifySucceeded)
+   at bool Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable<T>+Enumerator.MoveNext()
+=========================================================
+
+==================[13.06.2022 19:48:26]==================
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.business_tunes' doesn't exist
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.business_tunes' doesn't exist
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:/projects/mysqlconnector/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet() in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 130
+   at async Task<MySqlDataReader> MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary<string, CachedProc
+==================[13.06.2022 19:48:55]==================
+System.IO.FileNotFoundException: Could not load file or assembly 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.resources.dll'. Nie można odnaleźć określonego pliku.
+File name: 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.resources.dll'
+   at void System.Runtime.Loader.AssemblyLoadContext.LoadFromPath(IntPtr ptrNativeAssemblyLoadContext, string ilPath, string niPath, ObjectHandleOnStack retAssembly)
+
+
+=========================================================
+
+==================[13.06.2022 19:48:55]==================
+System.IO.FileNotFoundException: Could not load file or assembly 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.resources.dll'. Nie można odnaleźć określonego pliku.
+File name: 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.resources.dll'
+   at void System.Runtime.Loader.AssemblyLoadContext.LoadFromPath(IntPtr ptrNativeAssemblyLoadContext, string ilPath, string niPath, ObjectHandleOnStack retAssembly)
+
+
+=========================================================
+
+==================[13.06.2022 19:48:56]==================
+System.IO.FileNotFoundException: Could not load file or assembly 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.resources.dll'. Nie można odnaleźć określonego pliku.
+File name: 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.resources.dll'
+   at void System.Runtime.Loader.AssemblyLoadContext.LoadFromPath(IntPtr ptrNativeAssemblyLoadContext, string ilPath, string niPath, ObjectHandleOnStack retAssembly)
+
+
+=========================================================
+
+==================[13.06.2022 19:48:56]==================
+System.IO.FileNotFoundException: Could not load file or assembly 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.resources.dll'. Nie można odnaleźć określonego pliku.
+File name: 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.resources.dll'
+   at void System.Runtime.Loader.AssemblyLoadContext.LoadFromPath(IntPtr ptrNativeAssemblyLoadContext, string ilPath, string niPath, ObjectHandleOnStack retAssembly)
+
+
+=========================================================
+
+==================[13.06.2022 19:48:56]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.business_tunes' doesn't exist
+   at void System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+=========================================================
+
+==================[13.06.2022 19:48:56]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.business_tunes' doesn't exist
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.business_tunes' doesn't exist
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:/projects/mysqlconnector/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet() in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 130
+=========================================================
+
+==================[13.06.2022 19:48:56]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.business_tunes' doesn't exist
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.business_tunes' doesn't exist
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:/projects/mysqlconnector/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet() in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 130
+   at async Task<MySqlDataReader> MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary<string, CachedProcedure> cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 391
+=========================================================
+
+==================[13.06.2022 19:48:56]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.business_tunes' doesn't exist
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.business_tunes' doesn't exist
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:/projects/mysqlconnector/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet() in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 130
+   at async Task<MySqlDataReader> MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary<string, CachedProcedure> cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 391
+   at void System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+=========================================================
+
+==================[13.06.2022 19:48:56]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.business_tunes' doesn't exist
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.business_tunes' doesn't exist
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:/projects/mysqlconnector/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet() in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 130
+   at async Task<MySqlDataReader> MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary<string, CachedProcedure> cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 391
+   at async Task<DbDataReader> MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList<IMySqlCommand> commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/Core/CommandExecutor.cs:line 62
+   at void System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+=========================================================
+
+==================[13.06.2022 19:48:56]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.business_tunes' doesn't exist
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.business_tunes' doesn't exist
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:/projects/mysqlconnector/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet() in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 130
+   at async Task<MySqlDataReader> MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary<string, CachedProcedure> cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 391
+   at async Task<DbDataReader> MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList<IMySqlCommand> commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/Core/CommandExecutor.cs:line 62
+   at DbDataReader MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior) in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlCommand.cs:line 217
+   at DbDataReader System.Data.Common.DbCommand.ExecuteReader()
+   at RelationalDataReader Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+=========================================================
+
+==================[13.06.2022 19:48:56]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.business_tunes' doesn't exist
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.business_tunes' doesn't exist
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:/projects/mysqlconnector/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet() in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 130
+   at async Task<MySqlDataReader> MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary<string, CachedProcedure> cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 391
+   at async Task<DbDataReader> MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList<IMySqlCommand> commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/Core/CommandExecutor.cs:line 62
+   at DbDataReader MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior) in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlCommand.cs:line 217
+   at DbDataReader System.Data.Common.DbCommand.ExecuteReader()
+   at RelationalDataReader Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at bool Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable<T>+Enumerator.InitializeReader(DbContext _, bool result)
+   at TResult Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.Execute<TState, TResult>(TState state, Func<DbContext, TState, TResult> operation, Func<DbContext, TState, ExecutionResult<TResult>> verifySucceeded)
+   at bool Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable<T>+Enumerator.MoveNext()
+=========================================================
+
+==================[13.06.2022 19:48:57]==================
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.business_tunes' doesn't exist
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.business_tunes' doesn't exist
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:/projects/mysqlconnector/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet() in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 130
+   at async Task<MySqlDataReader> MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary<string, CachedProc
+==================[13.06.2022 19:49:03]==================
+System.IO.FileNotFoundException: Could not load file or assembly 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.resources.dll'. Nie można odnaleźć określonego pliku.
+File name: 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.resources.dll'
+   at void System.Runtime.Loader.AssemblyLoadContext.LoadFromPath(IntPtr ptrNativeAssemblyLoadContext, string ilPath, string niPath, ObjectHandleOnStack retAssembly)
+
+
+=========================================================
+
+==================[13.06.2022 19:49:03]==================
+System.IO.FileNotFoundException: Could not load file or assembly 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.resources.dll'. Nie można odnaleźć określonego pliku.
+File name: 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.resources.dll'
+   at void System.Runtime.Loader.AssemblyLoadContext.LoadFromPath(IntPtr ptrNativeAssemblyLoadContext, string ilPath, string niPath, ObjectHandleOnStack retAssembly)
+
+
+=========================================================
+
+==================[13.06.2022 19:49:03]==================
+System.IO.FileNotFoundException: Could not load file or assembly 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.resources.dll'. Nie można odnaleźć określonego pliku.
+File name: 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.resources.dll'
+   at void System.Runtime.Loader.AssemblyLoadContext.LoadFromPath(IntPtr ptrNativeAssemblyLoadContext, string ilPath, string niPath, ObjectHandleOnStack retAssembly)
+
+
+=========================================================
+
+==================[13.06.2022 19:49:03]==================
+System.IO.FileNotFoundException: Could not load file or assembly 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.resources.dll'. Nie można odnaleźć określonego pliku.
+File name: 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.resources.dll'
+   at void System.Runtime.Loader.AssemblyLoadContext.LoadFromPath(IntPtr ptrNativeAssemblyLoadContext, string ilPath, string niPath, ObjectHandleOnStack retAssembly)
+
+
+=========================================================
+
+==================[13.06.2022 19:49:04]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.business_tunes' doesn't exist
+   at void System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+=========================================================
+
+==================[13.06.2022 19:49:04]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.business_tunes' doesn't exist
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.business_tunes' doesn't exist
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:/projects/mysqlconnector/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet() in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 130
+=========================================================
+
+==================[13.06.2022 19:49:04]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.business_tunes' doesn't exist
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.business_tunes' doesn't exist
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:/projects/mysqlconnector/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet() in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 130
+   at async Task<MySqlDataReader> MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary<string, CachedProcedure> cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 391
+=========================================================
+
+==================[13.06.2022 19:49:04]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.business_tunes' doesn't exist
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.business_tunes' doesn't exist
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:/projects/mysqlconnector/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet() in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 130
+   at async Task<MySqlDataReader> MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary<string, CachedProcedure> cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 391
+   at void System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+=========================================================
+
+==================[13.06.2022 19:49:04]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.business_tunes' doesn't exist
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.business_tunes' doesn't exist
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:/projects/mysqlconnector/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet() in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 130
+   at async Task<MySqlDataReader> MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary<string, CachedProcedure> cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 391
+   at async Task<DbDataReader> MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList<IMySqlCommand> commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/Core/CommandExecutor.cs:line 62
+   at void System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+=========================================================
+
+==================[13.06.2022 19:49:04]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.business_tunes' doesn't exist
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.business_tunes' doesn't exist
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:/projects/mysqlconnector/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet() in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 130
+   at async Task<MySqlDataReader> MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary<string, CachedProcedure> cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 391
+   at async Task<DbDataReader> MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList<IMySqlCommand> commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/Core/CommandExecutor.cs:line 62
+   at DbDataReader MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior) in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlCommand.cs:line 217
+   at DbDataReader System.Data.Common.DbCommand.ExecuteReader()
+   at RelationalDataReader Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+=========================================================
+
+==================[13.06.2022 19:49:04]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.business_tunes' doesn't exist
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.business_tunes' doesn't exist
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:/projects/mysqlconnector/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet() in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 130
+   at async Task<MySqlDataReader> MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary<string, CachedProcedure> cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 391
+   at async Task<DbDataReader> MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList<IMySqlCommand> commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/Core/CommandExecutor.cs:line 62
+   at DbDataReader MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior) in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlCommand.cs:line 217
+   at DbDataReader System.Data.Common.DbCommand.ExecuteReader()
+   at RelationalDataReader Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at bool Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable<T>+Enumerator.InitializeReader(DbContext _, bool result)
+   at TResult Pomelo.EntityFrameworkCore.MySql.Storage.Internal.MySqlExecutionStrategy.Execute<TState, TResult>(TState state, Func<DbContext, TState, TResult> operation, Func<DbContext, TState, ExecutionResult<TResult>> verifySucceeded)
+   at bool Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable<T>+Enumerator.MoveNext()
+=========================================================
+
+==================[13.06.2022 19:49:04]==================
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.business_tunes' doesn't exist
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.business_tunes' doesn't exist
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:/projects/mysqlconnector/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet() in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 130
+   at async Task<MySqlDataReader> MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary<string, CachedProc
+==================[13.06.2022 19:49:59]==================
+System.IO.FileNotFoundException: Could not load file or assembly 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.resources.dll'. Nie można odnaleźć określonego pliku.
+File name: 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.resources.dll'
+   at void System.Runtime.Loader.AssemblyLoadContext.LoadFromPath(IntPtr ptrNativeAssemblyLoadContext, string ilPath, string niPath, ObjectHandleOnStack retAssembly)
+
+
+=========================================================
+
+==================[13.06.2022 19:49:59]==================
+System.IO.FileNotFoundException: Could not load file or assembly 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.resources.dll'. Nie można odnaleźć określonego pliku.
+File name: 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.resources.dll'
+   at void System.Runtime.Loader.AssemblyLoadContext.LoadFromPath(IntPtr ptrNativeAssemblyLoadContext, string ilPath, string niPath, ObjectHandleOnStack retAssembly)
+
+
+=========================================================
+
+==================[13.06.2022 19:49:59]==================
+System.IO.FileNotFoundException: Could not load file or assembly 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.resources.dll'. Nie można odnaleźć określonego pliku.
+File name: 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.resources.dll'
+   at void System.Runtime.Loader.AssemblyLoadContext.LoadFromPath(IntPtr ptrNativeAssemblyLoadContext, string ilPath, string niPath, ObjectHandleOnStack retAssembly)
+
+
+=========================================================
+
+==================[13.06.2022 19:49:59]==================
+System.IO.FileNotFoundException: Could not load file or assembly 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.resources.dll'. Nie można odnaleźć określonego pliku.
+File name: 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.resources.dll'
+   at void System.Runtime.Loader.AssemblyLoadContext.LoadFromPath(IntPtr ptrNativeAssemblyLoadContext, string ilPath, string niPath, ObjectHandleOnStack retAssembly)
+
+
+=========================================================
+
+==================[13.06.2022 19:53:16]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.discords' doesn't exist
+   at void System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+=========================================================
+
+==================[13.06.2022 19:53:16]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.discords' doesn't exist
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.discords' doesn't exist
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:/projects/mysqlconnector/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet() in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 116
+=========================================================
+
+==================[13.06.2022 19:53:16]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.discords' doesn't exist
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.discords' doesn't exist
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:/projects/mysqlconnector/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet() in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 116
+   at async Task<MySqlDataReader> MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary<string, CachedProcedure> cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 391
+=========================================================
+
+==================[13.06.2022 19:53:16]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.discords' doesn't exist
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.discords' doesn't exist
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:/projects/mysqlconnector/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet() in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 116
+   at async Task<MySqlDataReader> MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary<string, CachedProcedure> cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 391
+   at void System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+=========================================================
+
+==================[13.06.2022 19:53:16]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.discords' doesn't exist
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.discords' doesn't exist
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:/projects/mysqlconnector/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet() in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 116
+   at async Task<MySqlDataReader> MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary<string, CachedProcedure> cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 391
+   at async Task<DbDataReader> MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList<IMySqlCommand> commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/Core/CommandExecutor.cs:line 62
+   at void System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+=========================================================
+
+==================[13.06.2022 19:53:16]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.discords' doesn't exist
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Table 'ragedb.discords' doesn't exist
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:/projects/mysqlconnector/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet() in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 116
+   at async Task<MySqlDataReader> MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary<string, CachedProcedure> cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs
+==================[13.06.2022 20:01:55]==================
+System.IO.FileNotFoundException: Could not load file or assembly 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.resources.dll'. Nie można odnaleźć określonego pliku.
+File name: 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.resources.dll'
+   at void System.Runtime.Loader.AssemblyLoadContext.LoadFromPath(IntPtr ptrNativeAssemblyLoadContext, string ilPath, string niPath, ObjectHandleOnStack retAssembly)
+
+
+=========================================================
+
+==================[13.06.2022 20:01:55]==================
+System.IO.FileNotFoundException: Could not load file or assembly 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.resources.dll'. Nie można odnaleźć określonego pliku.
+File name: 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.resources.dll'
+   at void System.Runtime.Loader.AssemblyLoadContext.LoadFromPath(IntPtr ptrNativeAssemblyLoadContext, string ilPath, string niPath, ObjectHandleOnStack retAssembly)
+
+
+=========================================================
+
+==================[13.06.2022 20:01:55]==================
+System.IO.FileNotFoundException: Could not load file or assembly 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.resources.dll'. Nie można odnaleźć określonego pliku.
+File name: 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.resources.dll'
+   at void System.Runtime.Loader.AssemblyLoadContext.LoadFromPath(IntPtr ptrNativeAssemblyLoadContext, string ilPath, string niPath, ObjectHandleOnStack retAssembly)
+
+
+=========================================================
+
+==================[13.06.2022 20:01:55]==================
+System.IO.FileNotFoundException: Could not load file or assembly 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.resources.dll'. Nie można odnaleźć określonego pliku.
+File name: 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.resources.dll'
+   at void System.Runtime.Loader.AssemblyLoadContext.LoadFromPath(IntPtr ptrNativeAssemblyLoadContext, string ilPath, string niPath, ObjectHandleOnStack retAssembly)
+
+
+=========================================================
+
+==================[13.06.2022 20:02:44]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Column 'parkingbrake' cannot be null
+   at void System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+=========================================================
+
+==================[13.06.2022 20:02:44]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Column 'parkingbrake' cannot be null
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Column 'parkingbrake' cannot be null
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:/projects/mysqlconnector/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet() in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 116
+=========================================================
+
+==================[13.06.2022 20:02:44]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Column 'parkingbrake' cannot be null
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Column 'parkingbrake' cannot be null
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:/projects/mysqlconnector/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet() in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 116
+   at async Task<MySqlDataReader> MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary<string, CachedProcedure> cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 391
+=========================================================
+
+==================[13.06.2022 20:02:44]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Column 'parkingbrake' cannot be null
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Column 'parkingbrake' cannot be null
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:/projects/mysqlconnector/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet() in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 116
+   at async Task<MySqlDataReader> MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary<string, CachedProcedure> cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 391
+   at void System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+=========================================================
+
+==================[13.06.2022 20:02:44]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Column 'parkingbrake' cannot be null
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Column 'parkingbrake' cannot be null
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:/projects/mysqlconnector/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet() in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 116
+   at async Task<MySqlDataReader> MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary<string, CachedProcedure> cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 391
+   at async Task<DbDataReader> MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList<IMySqlCommand> commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/Core/CommandExecutor.cs:line 62
+   at void System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+=========================================================
+
+==================[13.06.2022 20:02:44]==================
+MySql.Data.MySqlClient.MySqlException (0x80004005): Column 'parkingbrake' cannot be null
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Column 'parkingbrake' cannot be null
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:/projects/mysqlconnector/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet() in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 116
+   at async Task<MySqlDataReader> MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary<string, CachedProcedure> cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 391
+   at async Task<DbDataReader> MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList<IMySqlCommand> commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/Core/CommandExecutor.cs:line 62
+   at DbDataReader MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior) in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlCommand.cs:line 217
+   at RelationalDataReader Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+=========================================================
+
+==================[13.06.2022 20:02:44]==================
+System.IO.FileNotFoundException: Could not load file or assembly 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.resources.dll'. Nie można odnaleźć określonego pliku.
+File name: 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.resources.dll'
+   at void System.Runtime.Loader.AssemblyLoadContext.LoadFromPath(IntPtr ptrNativeAssemblyLoadContext, string ilPath, string niPath, ObjectHandleOnStack retAssembly)
+
+
+=========================================================
+
+==================[13.06.2022 20:02:44]==================
+System.IO.FileNotFoundException: Could not load file or assembly 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.resources.dll'. Nie można odnaleźć określonego pliku.
+File name: 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.resources.dll'
+   at void System.Runtime.Loader.AssemblyLoadContext.LoadFromPath(IntPtr ptrNativeAssemblyLoadContext, string ilPath, string niPath, ObjectHandleOnStack retAssembly)
+
+
+=========================================================
+
+==================[13.06.2022 20:02:44]==================
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Column 'parkingbrake' cannot be null
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Column 'parkingbrake' cannot be null
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:/projects/mysqlconnector/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet() in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 116
+   at async Task<MySqlDataReader> MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary<string, CachedProcedure> cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 391
+   at async Task<DbDataReader> MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList<IMySqlCommand> commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/Core/CommandExecutor.cs:line 62
+   at DbDataReader MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior) in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlCommand.cs:line 217
+   at RelationalDataReader Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at void Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   --- End of inner exception stack trace ---
+   at void Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+=========================================================
+
+==================[13.06.2022 20:02:44]==================
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Column 'parkingbrake' cannot be null
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Column 'parkingbrake' cannot be null
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:/projects/mysqlconnector/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet() in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 116
+   at async Task<MySqlDataReader> MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary<string, CachedProcedure> cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 391
+   at async Task<DbDataReader> MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList<IMySqlCommand> commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/Core/CommandExecutor.cs:line 62
+   at DbDataReader MySql.Data.MySqlClient.MySqlCommand.ExecuteDbDataReader(CommandBehavior behavior) in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlCommand.cs:line 217
+   at RelationalDataReader Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at void Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   --- End of inner exception stack trace ---
+   at void Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at int Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable<ModificationCommandBatch> commandBatches, IRelationalConnection connection)
+   at int Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList<IUpdateEntry> entries)
+   at int Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList<IUpdateEntry> entriesToSave)
+   at int Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(DbContext _, bool acceptAllChangesOnSuccess)
+=========================================================
+
+==================[13.06.2022 20:02:44]==================
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Column 'parkingbrake' cannot be null
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Column 'parkingbrake' cannot be null
+   at async Task MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in C:/projects/mysqlconnector/src/MySqlConnector/Core/ResultSet.cs:line 49
+   at void MySql.Data.MySqlClient.MySqlDataReader.ActivateResultSet() in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 116
+   at async Task<MySqlDataReader> MySql.Data.MySqlClient.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary<string, CachedProcedure> cachedProcedures, IMySqlCommand command, CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in C:/projects/mysqlconnector/src/MySqlConnector/MySql.Data.MySqlClient/MySqlDataReader.cs:line 391
+   at async Task<DbDataReader> MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList<IM
+==================[13.06.2022 20:44:37]==================
+System.IO.FileNotFoundException: Could not load file or assembly 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.resources.dll'. Nie można odnaleźć określonego pliku.
+File name: 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.resources.dll'
+   at void System.Runtime.Loader.AssemblyLoadContext.LoadFromPath(IntPtr ptrNativeAssemblyLoadContext, string ilPath, string niPath, ObjectHandleOnStack retAssembly)
+
+
+=========================================================
+
+==================[13.06.2022 20:44:37]==================
+System.IO.FileNotFoundException: Could not load file or assembly 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.resources.dll'. Nie można odnaleźć określonego pliku.
+File name: 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.resources.dll'
+   at void System.Runtime.Loader.AssemblyLoadContext.LoadFromPath(IntPtr ptrNativeAssemblyLoadContext, string ilPath, string niPath, ObjectHandleOnStack retAssembly)
+
+
+=========================================================
+
+==================[13.06.2022 20:44:38]==================
+System.IO.FileNotFoundException: Could not load file or assembly 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.resources.dll'. Nie można odnaleźć określonego pliku.
+File name: 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.resources.dll'
+   at void System.Runtime.Loader.AssemblyLoadContext.LoadFromPath(IntPtr ptrNativeAssemblyLoadContext, string ilPath, string niPath, ObjectHandleOnStack retAssembly)
+
+
+=========================================================
+
+==================[13.06.2022 20:44:38]==================
+System.IO.FileNotFoundException: Could not load file or assembly 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.resources.dll'. Nie można odnaleźć określonego pliku.
+File name: 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.resources.dll'
+   at void System.Runtime.Loader.AssemblyLoadContext.LoadFromPath(IntPtr ptrNativeAssemblyLoadContext, string ilPath, string niPath, ObjectHandleOnStack retAssembly)
+
+
+=========================================================
+
+==================[13.06.2022 20:46:23]==================
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at void ThrowHelper.ThrowArgumentOutOfRange_IndexException()
+=========================================================
+
+==================[13.06.2022 20:46:23]==================
+System.IO.FileNotFoundException: Could not load file or assembly 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.resources.dll'. Nie można odnaleźć określonego pliku.
+File name: 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.resources.dll'
+   at void System.Runtime.Loader.AssemblyLoadContext.LoadFromPath(IntPtr ptrNativeAssemblyLoadContext, string ilPath, string niPath, ObjectHandleOnStack retAssembly)
+
+
+=========================================================
+
+==================[13.06.2022 20:46:23]==================
+System.IO.FileNotFoundException: Could not load file or assembly 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.resources.dll'. Nie można odnaleźć określonego pliku.
+File name: 'E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.resources.dll'
+   at void System.Runtime.Loader.AssemblyLoadContext.LoadFromPath(IntPtr ptrNativeAssemblyLoadContext, string ilPath, string niPath, ObjectHandleOnStack retAssembly)
+
+
+=========================================================
+
+==================[13.06.2022 20:46:23]==================
+System.InvalidOperationException: An exception was thrown while attempting to evaluate a LINQ query parameter expression. To show additional information call EnableSensitiveDataLogging() when overriding DbContext.OnConfiguring.
+ ---> System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at object lambda_method(Closure)
+   at object Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.GetValue(Expression expression, out string parameterName)
+   --- End of inner exception stack trace ---
+   at object Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.GetValue(Expression expression, out string parameterName)
+=========================================================
+
+==================[13.06.2022 20:50:51]==================
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.InvalidOperationException: An exception was thrown while attempting to evaluate a LINQ query parameter expression. To show additional information call EnableSensitiveDataLogging() when overriding DbContext.OnConfiguring.
+ ---> System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at object lambda_method(Closure)
+   at object Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.GetValue(Expression expression, out string parameterName)
+   --- End of inner exception stack trace ---
+   at object Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.GetValue(Expression expression, out string parameterName)
+   at Expression Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Evaluate(Expression expression, bool generateParameter)
+   at Expression Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at Expression System.Linq.Expressions.ExpressionVisitor.VisitBinary(BinaryExpression node)
+   at Expression Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at Expression Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.VisitBinary(BinaryExpression binaryExpression)
+   at Expression Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at Expression Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.VisitBinary(BinaryExpression binaryExpression)
+   at Expression Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at Expression System.Linq.Expressions.ExpressionVisitor.VisitLambda<T>(Expression<T> node)
+   at Expression Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at Expression System.Linq.Expressions.ExpressionVisitor.VisitUnary(UnaryExpression node)
+   at Expression Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at Expression[] System.Dynamic.Utils.ExpressionVisitorUtils.VisitArguments(ExpressionVisitor visitor, IArgumentProvider nodes)
+   at Expression System.Linq.Expressions.ExpressionVisitor.VisitMethodCall(MethodCallExpression node)
+   at Expression Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at Expression Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.ExtractParameters(Expression expression)
+   at TResult Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute<TResult>(Expression query)
+   at IEnumerator<TResult> Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable<TResult>.GetEnumerator()
+   at new System.Collections.Generic.List<T>(IEnumerable<T> collection)
+   at List<TSource> System.Linq.Enumerable.ToList<TSource>(IEnumerable<TSource> source)
+   at string ServerSide.PlayerDataManager.GetPlayersConversations(Player player) in E:/Server/dotnet/resources/Server/Managers/PlayerDataManager.cs:line 2287
+   at void ServerSide.MainClass.Messenger_requestConversationsData(Player player) in E:/Server/dotnet/resources/Server/_Partials/Messenger.cs:line 14
+   --- End of inner exception stack trace ---
+   at object RuntimeMethodHandle.InvokeMethod(object target, object[] arguments, Signature sig, bool constructor, bool wrapExceptions)
+   at object System.Reflection.RuntimeMethodInfo.Invoke(object obj, BindingFlags invokeAttr, Binder binder, object[] parameters, CultureInfo culture)
+=========================================================
+
+==================[13.06.2022 20:50:51]==================
+System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at void ThrowHelper.ThrowArgumentOutOfRange_IndexException()
+=========================================================
+
+==================[13.06.2022 20:50:51]==================
+System.InvalidOperationException: An exception was thrown while attempting to evaluate a LINQ query parameter expression. To show additional information call EnableSensitiveDataLogging() when overriding DbContext.OnConfiguring.
+ ---> System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at object lambda_method(Closure)
+   at object Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.GetValue(Expression expression, out string parameterName)
+   --- End of inner exception stack trace ---
+   at object Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.GetValue(Expression expression, out string parameterName)
+=========================================================
+
+==================[13.06.2022 20:50:52]==================
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.InvalidOperationException: An exception was thrown while attempting to evaluate a LINQ query parameter expression. To show additional information call EnableSensitiveDataLogging() when overriding DbContext.OnConfiguring.
+ ---> System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection. (Parameter 'index')
+   at object lambda_method(Closure)
+   at object Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.GetValue(Expression expression, out string parameterName)
+   --- End of inner exception stack trace ---
+   at object Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.GetValue(Expression expression, out string parameterName)
+   at Expression Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Evaluate(Expression expression, bool generateParameter)
+   at Expression Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at Expression System.Linq.Expressions.ExpressionVisitor.VisitBinary(BinaryExpression node)
+   at Expression Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at Expression Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.VisitBinary(BinaryExpression binaryExpression)
+   at Expression Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at Expression Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.VisitBinary(BinaryExpression binaryExpression)
+   at Expression Microsoft.EntityFrameworkCore.Query.Internal.ParameterExtractingExpressionVisitor.Visit(Expression expression)
+   at Expression System.Linq.Expressions
+>>>>>>> Stashed changes

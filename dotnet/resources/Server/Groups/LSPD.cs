@@ -6,6 +6,8 @@ using MySqlConnector;
 using Newtonsoft.Json;
 using Object = GTANetworkAPI.Object;
 using System.Threading;
+using Server.Database;
+using System.Linq;
 
 namespace ServerSide
 {
@@ -74,10 +76,13 @@ namespace ServerSide
             }
             Members.Add(new lspd_Member(player.SocialClubId, 1));
             player.SetSharedData("lspd_power", 1);
-            DBConnection dataBase = new DBConnection();
-            dataBase.command.CommandText = $"INSERT INTO lspd_members (login, power) VALUES ('{player.SocialClubId}', 1)";
-            dataBase.command.ExecuteNonQuery();
-            dataBase.connection.Close();
+            using var context = new ServerDB();
+            context.LSPD_Members.Add(new Server.Models.LSPD_Member
+            {
+                Login = player.SocialClubId.ToString(),
+                Power = 1
+            });
+            context.SaveChanges();
             return true;
         }
 
@@ -87,11 +92,9 @@ namespace ServerSide
             {
                 if (member.Login == player.SocialClubId)
                 {
-                    Members.Add(new lspd_Member(player.SocialClubId, 1));
-                    DBConnection dataBase = new DBConnection();
-                    dataBase.command.CommandText = $"DELETE FROM lspd_members WHERE login = '{player.SocialClubId}'";
-                    dataBase.command.ExecuteNonQuery();
-                    dataBase.connection.Close();
+                    using var context = new ServerDB();
+                    context.LSPD_Members.Remove(context.LSPD_Members.Where(x => x.Login == member.Login.ToString()).ToList()?[0]);
+                    context.SaveChanges();
                     Members.Remove(member);
                     SwitchPlayersDuty(player, false);
                     return true;
@@ -179,27 +182,19 @@ namespace ServerSide
         }
         public static void LoadDataFromDB()
         {
-            DBConnection dataBase = new DBConnection();
-            dataBase.command.CommandText = $"SELECT * FROM lspd_members";
-            using (MySqlDataReader reader = dataBase.command.ExecuteReader())
+            using var context = new ServerDB();
+
+            var members = context.LSPD_Members.ToList();
+            foreach(var member in members)
             {
-                while (reader.Read())
-                {
-                    Members.Add(new lspd_Member(ulong.Parse(reader.GetString(1)), reader.GetInt32(2)));
-                }
-                reader.Close();
+                Members.Add(new lspd_Member(ulong.Parse(member.Login), member.Power));
             }
 
-            dataBase.command.CommandText = $"SELECT * FROM lspd_vehicles";
-            using (MySqlDataReader reader = dataBase.command.ExecuteReader())
+            var vehicles = context.LSPD_Vehicles.ToList();
+            foreach (var vehicle in vehicles)
             {
-                while (reader.Read())
-                {
-                    Vehicles.Add(new lspd_Vehicle(reader.GetInt32(0), uint.Parse(reader.GetString(1)), reader.GetString(2), reader.GetInt32(3), reader.GetString(4)));
-                }
-                reader.Close();
+                Vehicles.Add(new lspd_Vehicle(vehicle.Id, uint.Parse(vehicle.Model), vehicle.Name, vehicle.Power, vehicle.Wheels));
             }
-            dataBase.connection.Close();
         }
         public static void CreateBarrier(string name, Vector3 position, Vector3 rotation)
         {

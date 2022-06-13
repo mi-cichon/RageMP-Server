@@ -7,6 +7,8 @@ using Newtonsoft.Json;
 using System.Threading;
 using Newtonsoft.Json.Converters;
 using System.Globalization;
+using Server.Database;
+using System.Linq;
 
 namespace ServerSide
 {
@@ -68,46 +70,41 @@ namespace ServerSide
 
         public void LoadBusinessFromDB()
         {
-            DBConnection dataBase = new DBConnection();
-            dataBase.command.CommandText = $"SELECT * FROM `business_tune` WHERE id = {Id}";
-            using (MySqlDataReader reader = dataBase.command.ExecuteReader())
+            using var context = new ServerDB();
+            var result = context.Business_Tunes.Where(x => x.Id == Id).ToList();
+            var tune = result.Count > 0 ? result[0] : null;
+            if(tune != null)
             {
-                while (reader.Read())
+                if(tune.Owner != "")
                 {
-                    if (reader.GetString(1) != "")
+                    Owner = ulong.Parse(tune.Owner);
+                    PaidTo = DateTime.ParseExact(tune.PaidTo, "dd.MM.yyyy HH:mm:ss", CultureInfo.InvariantCulture);
+                    AvailableWheels = JsonConvert.DeserializeObject<List<int[]>>(tune.Wheels);
+                    WheelOrders = JsonConvert.DeserializeObject<List<KeyValuePair<int[], DateTime>>>(tune.WheelOrders, new JsonSerializerSettings
                     {
-                        Owner = ulong.Parse(reader.GetString(1));
-                        PaidTo = DateTime.ParseExact(reader.GetString(2), "dd.MM.yyyy HH:mm:ss", CultureInfo.InvariantCulture);
-                        AvailableWheels = JsonConvert.DeserializeObject<List<int[]>>(reader.GetString(3));
-                        WheelOrders = JsonConvert.DeserializeObject<List<KeyValuePair<int[], DateTime>>>(reader.GetString(4), new JsonSerializerSettings
-                        {
-                            DateFormatString = "dd.MM.yyyy HH:mm:ss"
-                        });
-                        SetData(Owner);
-                    }
-                    else
-                    {
-                        Owner = 0;
-                    }
+                        DateFormatString = "dd.MM.yyyy HH:mm:ss"
+                    });
+                    SetData(Owner);
                 }
+                else
+                {
+                    Owner = 0;
+                }
+
             }
-            dataBase.connection.Close();
         }
 
         public void SetData(ulong ownerId)
         {
             if (Owner != 0)
             {
-                DBConnection dataBase = new DBConnection();
-                dataBase.command.CommandText = $"SELECT username FROM `users` WHERE login = '{ownerId}'";
-                using (MySqlDataReader reader = dataBase.command.ExecuteReader())
+                using var context = new ServerDB();
+                var result = context.Users.Where(x => x.Login == ownerId.ToString()).ToList();
+                var user = result.Count > 0 ? result[0] : null;
+                if(user != null)
                 {
-                    while (reader.Read())
-                    {
-                        OwnerName = reader.GetString(0);
-                    }
+                    OwnerName = user.Username;
                 }
-                dataBase.connection.Close();
                 StartMarker.Delete();
                 StartMarker = CustomMarkers.CreateBusinessMarker(StartPos, "Biznes: Tuner", OwnerName);
                 StartBlip.Color = 6;
@@ -171,10 +168,17 @@ namespace ServerSide
         public void SaveBusinessToDB()
         {
             string paid = PaidTo == null ? "" : PaidTo.ToString(), wheels = JsonConvert.SerializeObject(AvailableWheels), orders = JsonConvert.SerializeObject(WheelOrders, new IsoDateTimeConverter { DateTimeFormat = "dd.MM.yyyy HH:mm:ss" });
-            DBConnection dataBase = new DBConnection();
-            dataBase.command.CommandText = $"UPDATE `business_tune` SET owner = '{Owner}', paidto = '{paid}', wheels = '{wheels}', wheelorders = '{orders}' WHERE id = {Id}";
-            dataBase.command.ExecuteNonQuery();
-            dataBase.connection.Close();
+            using var context = new ServerDB();
+            var result = context.Business_Tunes.Where(x => x.Id == Id).ToList();
+            var tune = result.Count > 0 ? result[0] : null;
+            if(tune != null)
+            {
+                tune.Owner = Owner.ToString();
+                tune.PaidTo = paid;
+                tune.Wheels = wheels;
+                tune.WheelOrders = orders;
+                context.SaveChanges();
+            }
         }
 
         private void CreateTextLabel()

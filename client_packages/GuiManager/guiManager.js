@@ -214,7 +214,7 @@ mp.events.add('render', () => {
                 if(point && point.x < 1 && point.y < 1 && point.x > 0 && point.y > 0 && player.hasVariable("id")){
                     let pos = new Float64Array([point.x,point.y]);
                     // let scale = 0.7 * (0.2 + (1 / ((getDistance(player.position, lplayer.position) / 50.0)) / 50.0)).clamp(0.3, 0.6);
-                    mp.game.graphics.drawText('[' + player.getVariable("id").toString() + ']' + player.getVariable("username"), pos, { 
+                    mp.game.graphics.drawText('[' + player.remoteId.toString() + ']' + player.getVariable("username"), pos, { 
                         font: 4, 
                         color: color, 
                         scale: [scale, scale], 
