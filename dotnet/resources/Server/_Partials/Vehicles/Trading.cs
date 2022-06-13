@@ -18,7 +18,7 @@ namespace ServerSide
             {
                 if (player.Position.DistanceTo(p.Position) < 10.0f && p != player)
                 {
-                    players.Add(p.GetSharedData<Int32>("id"), p.GetSharedData<string>("username"));
+                    players.Add(p.Id, p.GetSharedData<string>("username"));
                 }
             }
             string playerstr = "";

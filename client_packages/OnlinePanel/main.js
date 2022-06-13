@@ -53,7 +53,7 @@ mp.events.add("openOnlinePlayersBrowser", () => {
             }
             if(players.length == 0 && player.hasVariable("username")){
                 players.push({
-                    "id": player.getVariable("id"),
+                    "id": player.remoteId,
                     "name": player.getVariable("username"),
                     "pp": player.getVariable("level"),
                     "type": type,
@@ -65,9 +65,9 @@ mp.events.add("openOnlinePlayersBrowser", () => {
             else if(player.hasVariable("username")){
                 let pushed = false;
                 players.forEach(pl => {
-                    if(pl["id"] > player.getVariable("id") && !pushed){
+                    if(pl["id"] > player.remoteId && !pushed){
                         players.splice(players.indexOf(pl), 0, {
-                            "id": player.getVariable("id"),
+                            "id": player.remoteId,
                             "name": player.getVariable("username"),
                             "pp": player.getVariable("level"),
                             "type": type,
@@ -80,7 +80,7 @@ mp.events.add("openOnlinePlayersBrowser", () => {
                 });
                 if(!pushed && player.hasVariable("username")){
                     players.push({
-                        "id": player.getVariable("id"),
+                        "id": player.remoteId,
                         "name": player.getVariable("username"),
                         "pp": player.getVariable("level"),
                         "type": type,

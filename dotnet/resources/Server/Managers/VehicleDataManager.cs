@@ -6,9 +6,8 @@ using System.Text;
 using GTANetworkAPI;
 using MySqlConnector;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-//using System.Text.Json;
-//using System.Text.Json.Serialization;
+using System.Linq;
+using Server.Database;
 namespace ServerSide
 {
     public static class VehicleDataManager
@@ -19,82 +18,71 @@ namespace ServerSide
 
         public static Vehicle CreatePersonalVehicle(int id, Vector3 position, float rotation, bool spawned)
         {
-            DBConnection dataBase = new DBConnection();
             Vehicle vehicle = null;
-            dataBase.command.CommandText = $"SELECT * FROM vehicles WHERE id = {id} AND spawned = '{spawned.ToString()}'";
-            using (MySqlDataReader reader = dataBase.command.ExecuteReader())
-            {
-                while (reader.Read())
-                {
-                    vehicle = NAPI.Vehicle.CreateVehicle(Convert.ToUInt32(reader.GetString(2)), position, rotation, 0, 0, numberPlate: "B " + reader.GetInt32(0).ToString());
-                    vehicle.SetSharedData("invincible", false);
-                    vehicle.SetSharedData("type", "personal");
-                    vehicle.SetSharedData("id", reader.GetInt32(0));
-                    vehicle.SetSharedData("owner", ulong.Parse(reader.GetString(1)));
-                    vehicle.SetSharedData("model", reader.GetString(2));
-                    vehicle.SetSharedData("name", reader.GetString(3));
-                    vehicle.SetSharedData("color1", reader.GetString(4));
-                    vehicle.SetSharedData("color1mod", JsonToColorMod(reader.GetString(4)));
-                    vehicle.SetSharedData("color2", reader.GetString(5));
-                    vehicle.SetSharedData("color2mod", JsonToColorMod(reader.GetString(5)));
-                    vehicle.SetSharedData("spawned", Convert.ToBoolean(reader.GetString(6)));
-                    vehicle.SetSharedData("lastpos", JsonToVector(reader.GetString(7)));
-                    vehicle.SetSharedData("lastrot", JsonToVector(reader.GetString(8)));
-                    vehicle.SetSharedData("damage", reader.GetString(9));
-                    vehicle.SetSharedData("used", reader.GetString(10));
-                    vehicle.SetSharedData("tune", reader.GetString(11));
-                    vehicle.SetSharedData("petrol", float.Parse(reader.GetString(12)));
-                    vehicle.SetSharedData("speedometer", reader.GetString(13));
-                    vehicle.SetSharedData("towed", false);
-                    vehicle.SetSharedData("locked", false);
-                    int[] PandS = GetVehicleStockPowerAndSpeed(vehicle);
-                    vehicle.SetSharedData("power", PandS[0]);
-                    vehicle.SetSharedData("speed", PandS[1]);
-                    vehicle.SetSharedData("market", false);
-                    vehicle.SetSharedData("dirt", reader.GetInt32(14));
-                    vehicle.SetSharedData("washtime", reader.GetString(15));
-                    vehicle.SetSharedData("trunk", reader.GetString(16));
-                    vehicle.SetSharedData("mechtune", reader.GetString(17));
-                    vehicle.SetSharedData("wheels", reader.GetString(18));
-                    vehicle.SetSharedData("drivers", reader.GetString(19));
-                    bool brake = bool.Parse(reader.GetString(20));
-                    vehicle.SetSharedData("veh_trip", reader.GetFloat(21));
-                    int[] color1 = JsonToColor(reader.GetString(4));
-                    int[] color2 = JsonToColor(reader.GetString(5));
-                    NAPI.Vehicle.SetVehicleCustomPrimaryColor(vehicle.Handle, color1[0], color1[1], color1[2]);
-                    NAPI.Vehicle.SetVehicleCustomSecondaryColor(vehicle.Handle, color2[0], color2[1], color2[2]);
-                    setVehiclesPetrolAndTrunk(vehicle);
-                    vehicle.SetSharedData("veh_engine", false);
-                    vehicle.SetSharedData("veh_lights", false);
-                    vehicle.SetSharedData("veh_locked", false);
 
-                    NAPI.Task.Run(() =>
+            using var context = new ServerDB();
+            var results = context.Vehicles.Where(x => x.Id == id && x.Spawned == spawned.ToString()).ToList();
+            var veh = results.Count > 0 ? results[0] : null;
+            if(veh != null)
+            {
+                vehicle = NAPI.Vehicle.CreateVehicle(Convert.ToUInt32(veh.Model), position, rotation, 0, 0, numberPlate: "B " + veh.Id.ToString());
+                vehicle.SetSharedData("invincible", false);
+                vehicle.SetSharedData("type", "personal");
+                vehicle.SetSharedData("id", veh.Id);
+                vehicle.SetSharedData("owner", ulong.Parse(veh.Owner));
+                vehicle.SetSharedData("model", veh.Model);
+                vehicle.SetSharedData("name", veh.Name);
+                vehicle.SetSharedData("color1", veh.Color1);
+                vehicle.SetSharedData("color1mod", JsonToColorMod(veh.Color1));
+                vehicle.SetSharedData("color2", veh.Color2);
+                vehicle.SetSharedData("color2mod", JsonToColorMod(veh.Color2));
+                vehicle.SetSharedData("spawned", Convert.ToBoolean(veh.Spawned));
+                vehicle.SetSharedData("lastpos", JsonToVector(veh.Lastpos));
+                vehicle.SetSharedData("lastrot", JsonToVector(veh.Lastrot));
+                vehicle.SetSharedData("damage", veh.Damage);
+                vehicle.SetSharedData("used", veh.Used);
+                vehicle.SetSharedData("tune", veh.Tune);
+                vehicle.SetSharedData("petrol", float.Parse(veh.Petrol));
+                vehicle.SetSharedData("speedometer", veh.Speedometer);
+                vehicle.SetSharedData("towed", false);
+                vehicle.SetSharedData("locked", false);
+                int[] PandS = GetVehicleStockPowerAndSpeed(vehicle);
+                vehicle.SetSharedData("power", PandS[0]);
+                vehicle.SetSharedData("speed", PandS[1]);
+                vehicle.SetSharedData("market", false);
+                vehicle.SetSharedData("dirt", veh.Dirt);
+                vehicle.SetSharedData("washtime", veh.Washtime);
+                vehicle.SetSharedData("trunk", veh.Trunk);
+                vehicle.SetSharedData("mechtune", veh.Mechtune);
+                vehicle.SetSharedData("wheels", veh.Wheels);
+                vehicle.SetSharedData("drivers", veh.Drivers);
+                bool brake = bool.Parse(veh.Parkingbrake);
+                vehicle.SetSharedData("veh_trip", veh.Trip);
+                int[] color1 = JsonToColor(veh.Color1);
+                int[] color2 = JsonToColor(veh.Color2);
+                NAPI.Vehicle.SetVehicleCustomPrimaryColor(vehicle.Handle, color1[0], color1[1], color1[2]);
+                NAPI.Vehicle.SetVehicleCustomSecondaryColor(vehicle.Handle, color2[0], color2[1], color2[2]);
+                setVehiclesPetrolAndTrunk(vehicle);
+                vehicle.SetSharedData("veh_engine", false);
+                vehicle.SetSharedData("veh_lights", false);
+                vehicle.SetSharedData("veh_locked", false);
+
+                NAPI.Task.Run(() =>
+                {
+                    if (vehicle != null && vehicle.Exists)
                     {
-                        if (vehicle != null && vehicle.Exists)
-                        {
-                            SetVehiclesWheels(vehicle);
-                            applyTuneToVehicle(vehicle, vehicle.GetSharedData<string>("tune"), vehicle.GetSharedData<string>("mechtune"));
-                            SetVehiclesExtra(vehicle);
-                            vehicle.SetSharedData("veh_brake", brake);
-                        }
-                        
-                    }, 1000);
+                        SetVehiclesWheels(vehicle);
+                        applyTuneToVehicle(vehicle, vehicle.GetSharedData<string>("tune"), vehicle.GetSharedData<string>("mechtune"));
+                        SetVehiclesExtra(vehicle);
+                        vehicle.SetSharedData("veh_brake", brake);
+                    }
 
-                    
+                }, 1000);
 
-                }
+                veh.Spawned = "True";
+                context.SaveChanges();
+                return vehicle;
             }
-            if(vehicle != null)
-            {
-                dataBase.command.CommandText = $"UPDATE vehicles SET spawned = '{bool.TrueString}' WHERE id = {id}";
-                if (dataBase.command.CommandText != "")
-                {
-                    dataBase.command.ExecuteNonQuery();
-                    dataBase.connection.Close();
-                    return vehicle;
-                }
-            }
-            dataBase.connection.Close();
             return null;
         }
 
@@ -139,7 +127,6 @@ namespace ServerSide
 
         public static void InsertPersonalVehicleToDB(Vehicle vehicle)
         {
-            DBConnection dataBase = new DBConnection();
             Vector3 position = vehicle.GetSharedData<Vector3>("lastpos");
             string owner = vehicle.GetSharedData<Int64>("owner").ToString();
             string model = vehicle.GetSharedData<string>("model");
@@ -152,70 +139,45 @@ namespace ServerSide
             string trunk = vehicle.GetSharedData<string>("trunk");
             string petrol = vehicle.GetSharedData<float>("petrol").ToString();
             string speedometer = vehicle.GetSharedData<string>("speedometer");
-            dataBase.command.CommandText = $"INSERT INTO vehicles (owner, model, name, color1, color2, spawned, lastpos, lastrot, damage, used, tune, petrol, speedometer, dirt, washtime, trunk, mechtune, wheels, drivers, trip) VALUES ('{owner}', '{model}', '{name}', '{color1}', '{color2}', '{spawned}', '{lastpos}', '{lastrot}', '{defaultDamage}', '{DateTime.Now.ToString()}', '{defaultTune}', '{petrol}', '{speedometer}', '{0}', '{DateTime.Now.ToString()}', '{trunk}', '[0,0,0,0,0]', '[0, -1, 0]', '[]', {vehicle.GetSharedData<float>("veh_trip")});";
-            dataBase.command.ExecuteNonQuery();
-            dataBase.command.CommandText = $"SELECT * FROM vehicles WHERE id = (SELECT LAST_INSERT_ID())";
-            using (MySqlDataReader reader = dataBase.command.ExecuteReader())
-            {
-                while (reader.Read())
-                {
-                    vehicle.SetSharedData("id", reader.GetInt32(0));
-                    vehicle.NumberPlate = "B " + reader.GetInt32(0).ToString();
-                }
-            }
-            dataBase.connection.Close();
-        }
-        public static void SavePersonalVehicleDataToDB(Vehicle vehicle, string dataName)
-        {
-            if (vehicle != null)
-            {
-                DBConnection dataBase = new DBConnection();
-                switch (dataName)
-                {
-                    case "owner":
-                        dataBase.command.CommandText = $"UPDATE vehicles SET owner = '{vehicle.GetSharedData<Int64>("owner").ToString()}' WHERE id = '{vehicle.GetSharedData<Int32>("id")}'";
-                        break;
-                    case "model":
-                        dataBase.command.CommandText = $"UPDATE vehicles SET model = '{vehicle.GetSharedData<string>("model")}' WHERE id = '{vehicle.GetSharedData<Int32>("id")}'";
-                        break;
-                    case "spawned":
-                        string spawned = vehicle.GetSharedData<bool>("spawned") is true ? bool.TrueString : bool.FalseString;
-                        dataBase.command.CommandText = $"UPDATE vehicles SET spawned = '{spawned}' WHERE id = '{vehicle.GetSharedData<Int32>("id")}'";
-                        break;
-                    case "veh_brake":
-                        string brake = vehicle.GetSharedData<bool>("veh_brake") is true ? bool.TrueString : bool.FalseString;
-                        dataBase.command.CommandText = $"UPDATE vehicles SET parkingbrake = '{brake}' WHERE id = '{vehicle.GetSharedData<Int32>("id")}'";
-                        break;
-                    case "petrol":
-                        dataBase.command.CommandText = $"UPDATE vehicles SET petrol = '{vehicle.GetSharedData<float>(dataName).ToString()}' WHERE id = '{vehicle.GetSharedData<Int32>("id")}'";
-                        break;
-                    case "lastpos":
-                        dataBase.command.CommandText = $"UPDATE vehicles SET lastpos = '{VectorToJson(vehicle.GetSharedData<Vector3>("lastpos"))}', lastrot = '{VectorToJson(vehicle.GetSharedData<Vector3>("lastrot"))}' WHERE id = '{vehicle.GetSharedData<Int32>("id")}'";
-                        break;
-                    case "market":
-                        string market = vehicle.GetSharedData<bool>("market") ? "Market" : bool.TrueString;
-                        dataBase.command.CommandText = $"UPDATE vehicles SET spawned = '{market}' WHERE id = '{vehicle.GetSharedData<Int32>("id")}'";
-                        break;
-                    case "dirt":
-                        dataBase.command.CommandText = $"UPDATE vehicles SET dirt = '{vehicle.GetSharedData<Int32>("dirt")}' WHERE id = '{vehicle.GetSharedData<Int32>("id")}'";
-                        break;
-                    case "veh_trip":
-                        dataBase.command.CommandText = $"UPDATE vehicles SET trip = '{vehicle.GetSharedData<float>("veh_trip").ToString().Replace(",", ".")}' WHERE id = '{vehicle.GetSharedData<Int32>("id")}'";
-                        break;
-                    default:
-                        if (vehicle.HasSharedData(dataName) && vehicle.HasSharedData("id"))
-                            dataBase.command.CommandText = $"UPDATE vehicles SET {dataName} = '{vehicle.GetSharedData<string>(dataName)}' WHERE id = '{vehicle.GetSharedData<Int32>("id")}'";
-                        break;
-                }
-                dataBase.command.ExecuteNonQuery();
-                dataBase.connection.Close();
-            }
 
+            using var context = new ServerDB();
+            context.Vehicles.Add(new Server.Models.Vehicle
+            {
+                Owner = owner,
+                Model = model,
+                Name = name,
+                Color1 = color1,
+                Color2 = color2,
+                Spawned = spawned,
+                Lastpos = lastpos,
+                Lastrot = lastrot,
+                Damage = defaultDamage,
+                Used = DateTime.Now.ToString(),
+                Tune = defaultTune,
+                Petrol = petrol,
+                Speedometer = speedometer,
+                Dirt = 0,
+                Washtime = DateTime.Now.ToString(),
+                Trunk = trunk,
+                Mechtune = "[0,0,0,0,0]",
+                Wheels = "[0, -1, 0]",
+                Drivers = "[]",
+                Trip = vehicle.GetSharedData<float>("veh_trip"),
+                Parkingbrake = "False"
+            });
+            context.SaveChanges();
+            var veh = context.Vehicles.ToList().Last();
+            vehicle.SetSharedData("id", veh.Id);
+            vehicle.NumberPlate = "B " + veh.Id.ToString();
         }
+      
         public static void UpdateVehiclesTrunk(Vehicle vehicle, string trunk)
         {
             vehicle.SetSharedData("trunk", trunk);
-            SavePersonalVehicleDataToDB(vehicle, "trunk");
+            using var context = new ServerDB();
+            var veh = context.Vehicles.Where(x => x.Id == vehicle.GetSharedData<int>("id")).FirstOrDefault();
+            veh.Trunk = trunk;
+            context.SaveChanges();
         }
 
         public static void UpdateVehiclesBrake(Vehicle vehicle, bool brake)
@@ -223,32 +185,47 @@ namespace ServerSide
             vehicle.SetSharedData("veh_brake", brake);
             if (vehicle.HasSharedData("owner"))
             {
-                SavePersonalVehicleDataToDB(vehicle, "veh_brake");
+                using var context = new ServerDB();
+                var veh = context.Vehicles.Where(x => x.Id == vehicle.GetSharedData<int>("id")).FirstOrDefault();
+                veh.Parkingbrake = brake.ToString();
+                context.SaveChanges();
             }
         }
 
         public static void UpdateVehiclesSpeedometer(Vehicle vehicle, string speedometer)
         {
             vehicle.SetSharedData("speedometer", speedometer);
-            SavePersonalVehicleDataToDB(vehicle, "speedometer");
+            using var context = new ServerDB();
+            var veh = context.Vehicles.Where(x => x.Id == vehicle.GetSharedData<int>("id")).FirstOrDefault();
+            veh.Speedometer = speedometer;
+            context.SaveChanges();
         }
         public static void UpdateVehiclesWashTime(Vehicle vehicle, string time)
         {
             vehicle.SetSharedData("washtime", time);
-            SavePersonalVehicleDataToDB(vehicle, "washtime");
+            using var context = new ServerDB();
+            var veh = context.Vehicles.Where(x => x.Id == vehicle.GetSharedData<int>("id")).FirstOrDefault();
+            veh.Washtime = time;
+            context.SaveChanges();
         }
         public static void UpdateVehiclesWheels(Vehicle vehicle, string wheels)
         {
             vehicle.SetSharedData("wheels", wheels);
-            SavePersonalVehicleDataToDB(vehicle, "wheels");
+            using var context = new ServerDB();
+            var veh = context.Vehicles.Where(x => x.Id == vehicle.GetSharedData<int>("id")).FirstOrDefault();
+            veh.Wheels = wheels;
+            context.SaveChanges();
             vehicle.SetSharedData("offroad", HandlingManager.IsCarOffroadType(vehicle));
         }
-        public static void UpdateVehiclesDirtLevel(Vehicle vehicle, float dirt)
+        public static void UpdateVehiclesDirtLevel(Vehicle vehicle, int dirt)
         {
             if(vehicle != null && vehicle.Exists)
             {
                 vehicle.SetSharedData("dirt", Convert.ToInt32(dirt));
-                SavePersonalVehicleDataToDB(vehicle, "dirt");
+                using var context = new ServerDB();
+                var veh = context.Vehicles.Where(x => x.Id == vehicle.GetSharedData<int>("id")).FirstOrDefault();
+                veh.Dirt = dirt;
+                context.SaveChanges();
             }
         }
         public static void UpdateVehiclesType(Vehicle vehicle, string type)
@@ -258,12 +235,18 @@ namespace ServerSide
         public static void UpdateVehiclesOwner(Vehicle vehicle, ulong owner)
         {
             vehicle.SetSharedData("owner", owner);
-            SavePersonalVehicleDataToDB(vehicle, "owner");
+            using var context = new ServerDB();
+            var veh = context.Vehicles.Where(x => x.Id == vehicle.GetSharedData<int>("id")).FirstOrDefault();
+            veh.Owner = owner.ToString();
+            context.SaveChanges();
         }
         public static void UpdateVehiclesDrivers(Vehicle vehicle, string drivers)
         {
             vehicle.SetSharedData("drivers", drivers);
-            SavePersonalVehicleDataToDB(vehicle, "drivers");
+            using var context = new ServerDB();
+            var veh = context.Vehicles.Where(x => x.Id == vehicle.GetSharedData<int>("id")).FirstOrDefault();
+            veh.Drivers = drivers;
+            context.SaveChanges();
         }
         public static void SaveVehiclesDriver(Vehicle vehicle, Player player)
         {
@@ -306,7 +289,10 @@ namespace ServerSide
         {
             vehicle.SetSharedData("color1", ColorToJson(new Color(r, g, b), mod));
             vehicle.SetSharedData("color1mod", mod);
-            SavePersonalVehicleDataToDB(vehicle, "color1");
+            using var context = new ServerDB();
+            var veh = context.Vehicles.Where(x => x.Id == vehicle.GetSharedData<int>("id")).FirstOrDefault();
+            veh.Color1 = ColorToJson(new Color(r, g, b), mod);
+            context.SaveChanges();
             try
             {
                 NAPI.Vehicle.SetVehicleCustomPrimaryColor(vehicle.Handle, r, g, b);
@@ -318,7 +304,10 @@ namespace ServerSide
         {
             vehicle.SetSharedData("color2", ColorToJson(new Color(r, g, b), mod));
             vehicle.SetSharedData("color2mod", mod);
-            SavePersonalVehicleDataToDB(vehicle, "color2");
+            using var context = new ServerDB();
+            var veh = context.Vehicles.Where(x => x.Id == vehicle.GetSharedData<int>("id")).FirstOrDefault();
+            veh.Color2 = ColorToJson(new Color(r, g, b), mod);
+            context.SaveChanges();
             try
             {
                 NAPI.Vehicle.SetVehicleCustomSecondaryColor(vehicle.Handle, r, g, b);
@@ -330,7 +319,10 @@ namespace ServerSide
             if (vehicle != null)
             {
                 vehicle.SetSharedData("spawned", spawned);
-                SavePersonalVehicleDataToDB(vehicle, "spawned");
+                using var context = new ServerDB();
+                var veh = context.Vehicles.Where(x => x.Id == vehicle.GetSharedData<int>("id")).FirstOrDefault();
+                veh.Spawned = spawned.ToString();
+                context.SaveChanges();
             }
 
         }
@@ -339,7 +331,10 @@ namespace ServerSide
             if (vehicle != null)
             {
                 vehicle.SetSharedData("market", market);
-                SavePersonalVehicleDataToDB(vehicle, "market");
+                using var context = new ServerDB();
+                var veh = context.Vehicles.Where(x => x.Id == vehicle.GetSharedData<int>("id")).FirstOrDefault();
+                veh.Spawned = market ? "Market" : "False";
+                context.SaveChanges();
             }
 
         }
@@ -351,7 +346,11 @@ namespace ServerSide
                 if (vehicle.HasSharedData("owner"))
                 {
                     vehicle.SetSharedData("lastrot", vehicle.Rotation);
-                    SavePersonalVehicleDataToDB(vehicle, "lastpos");
+                    using var context = new ServerDB();
+                    var veh = context.Vehicles.Where(x => x.Id == vehicle.GetSharedData<int>("id")).FirstOrDefault();
+                    veh.Lastpos = VehicleDataManager.VectorToJson(vehicle.Position);
+                    veh.Lastrot = VehicleDataManager.VectorToJson(vehicle.Rotation);
+                    context.SaveChanges();
                 }
                 
             }
@@ -361,8 +360,13 @@ namespace ServerSide
             if (vehicle != null)
             {
                 vehicle.SetSharedData("damage", damage);
-                if(vehicle.HasSharedData("owner"))
-                    SavePersonalVehicleDataToDB(vehicle, "damage");
+                if (vehicle.HasSharedData("owner"))
+                {
+                    using var context = new ServerDB();
+                    var veh = context.Vehicles.Where(x => x.Id == vehicle.GetSharedData<int>("id")).FirstOrDefault();
+                    veh.Damage = damage;
+                    context.SaveChanges();
+                }
             }
         }
 
@@ -370,18 +374,27 @@ namespace ServerSide
         {
             string date = DateTime.Now.ToString();
             vehicle.SetSharedData("used", date);
-            SavePersonalVehicleDataToDB(vehicle, "used");
+            using var context = new ServerDB();
+            var veh = context.Vehicles.Where(x => x.Id == vehicle.GetSharedData<int>("id")).FirstOrDefault();
+            veh.Used = date;
+            context.SaveChanges();
         }
 
         public static void UpdateVehiclesTune(Vehicle vehicle, string tune)
         {
             vehicle.SetSharedData("tune", tune);
-            SavePersonalVehicleDataToDB(vehicle, "tune");
+            using var context = new ServerDB();
+            var veh = context.Vehicles.Where(x => x.Id == vehicle.GetSharedData<int>("id")).FirstOrDefault();
+            veh.Tune = tune;
+            context.SaveChanges();
         }
         public static void UpdateVehiclesMechTune(Vehicle vehicle, string tune)
         {
             vehicle.SetSharedData("mechtune", tune);
-            SavePersonalVehicleDataToDB(vehicle, "mechtune");
+            using var context = new ServerDB();
+            var veh = context.Vehicles.Where(x => x.Id == vehicle.GetSharedData<int>("id")).FirstOrDefault();
+            veh.Mechtune = tune;
+            context.SaveChanges();
         }
         public static void UpdateVehiclesPetrol(Vehicle vehicle, float petrol)
         {
@@ -390,7 +403,12 @@ namespace ServerSide
                 petrol = MathF.Round(petrol, 2);
                 vehicle.SetSharedData("petrol", petrol);
                 if(vehicle.HasSharedData("owner"))
-                    SavePersonalVehicleDataToDB(vehicle, "petrol");
+                {
+                    using var context = new ServerDB();
+                    var veh = context.Vehicles.Where(x => x.Id == vehicle.GetSharedData<int>("id")).FirstOrDefault();
+                    veh.Petrol = petrol.ToString();
+                    context.SaveChanges();
+                }
             }
 
         }
@@ -402,7 +420,10 @@ namespace ServerSide
                 vehicle.SetSharedData("veh_trip", vehicle.GetSharedData<float>("veh_trip") + dist);
                 if (vehicle.HasSharedData("owner"))
                 {
-                    SavePersonalVehicleDataToDB(vehicle, "veh_trip");
+                    using var context = new ServerDB();
+                    var veh = context.Vehicles.Where(x => x.Id == vehicle.GetSharedData<int>("id")).FirstOrDefault();
+                    veh.Trip = vehicle.GetSharedData<float>("veh_trip");
+                    context.SaveChanges();
                 }
             }
         }
@@ -420,53 +441,41 @@ namespace ServerSide
         {
             List<string[]> vehicles = new List<string[]>();
             string vehString = "";
-            DBConnection dataBase = new DBConnection();
+            
+            using var context = new ServerDB();
+            var vehs = context.Vehicles.Where(x => x.Owner == player.SocialClubId.ToString() && !(spawned && x.Spawned != "False")).ToList();
 
-            dataBase.command.CommandText = $"SELECT * FROM vehicles WHERE owner = '{player.SocialClubId.ToString()}'" + (spawned ? " AND spawned = 'False';" : ";");
-            using (MySqlDataReader reader = dataBase.command.ExecuteReader())
+            foreach(var veh in vehs)
             {
-                while (reader.Read())
+                vehicles.Add(new string[]
                 {
-                    vehicles.Add(new string[]
-                    {
-                        reader.GetInt32(0).ToString(), reader.GetString(3),reader.GetString(2), "0"
-                    });
-                    
-                }
-                reader.Close();
+                    veh.Id.ToString(), veh.Name, veh.Model, "0"
+                });
             }
 
             if(player.HasSharedData("orgId") && player.GetSharedData<Int32>("orgId") != 0 && orgIds != null && orgIds.Count > 0)
             {
-                string m = "";
-                foreach (int vehicle in orgIds)
+                var orgVehicles = (from veh in context.Set<Server.Models.Vehicle>()
+                                   join user in context.Set<Server.Models.User>()
+                                   on veh.Owner equals user.Login
+                                   where orgIds.Contains(veh.Id)
+                                   select new { veh, user }).ToList();
+
+                foreach (var vehicle in orgVehicles)
                 {
-                    m += $" vehicles.id = {vehicle}";
-                    if (orgIds.IndexOf(vehicle) != orgIds.Count - 1)
+                    vehicles.Add(new string[]
                     {
-                        m += " OR ";
-                    }
-                }
-                dataBase.command.CommandText = $"SELECT vehicles.id, vehicles.name, vehicles.model FROM vehicles LEFT JOIN users ON vehicles.owner = users.login WHERE vehicles.spawned = 'False' AND vehicles.owner NOT LIKE '{player.SocialClubId}' AND(" + m + ");";
-                using (MySqlDataReader reader = dataBase.command.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        vehicles.Add(new string[]
-                        {
-                            reader.GetInt32(0).ToString(),
-                            reader.GetString(1),
-                            reader.GetString(2),
-                            "1"
-                        });
-                    }
+                        vehicle.veh.Id.ToString(),
+                        vehicle.veh.Name,
+                        vehicle.veh.Model,
+                        "1"
+                    });
                 }
             }
             if (vehicles.Count > 0)
             {
                 vehString = JsonConvert.SerializeObject(vehicles);
             }
-            dataBase.connection.Close();
             return vehString;
         }
 
@@ -476,11 +485,35 @@ namespace ServerSide
             switch (vehType)
             {
                 case "bonus":
-                    DBConnection dataBase = new DBConnection();
-                    dataBase.command.CommandText = $"INSERT INTO vehicles (owner, model, name, color1, color2, spawned, lastpos, lastrot, damage, used, tune, petrol, speedometer, dirt, washtime, trunk, mechtune, wheels, drivers, trip) VALUES ('{player.SocialClubId}', '3025077634', 'Bonusowy Blazer', '[0,0,0,0]', '[0,0,0,0]', 'False', '[119.26427,-1069.8783,28.48527]', '[-0.006499935,0.11400143,3.0413654]', '{defaultDamage}', '{DateTime.Now.ToString()}', '{defaultTune}', '10', '{"licznik":0}', '{0}', '{DateTime.Now.ToString()}', '[]', '[0,0,0,0,0]', '[0, -1, 0]', '[]', 0);";
-                    dataBase.command.ExecuteNonQuery();
-                    dataBase.connection.Close();
-                    break;
+                    using (var context = new ServerDB())
+                    {
+                        context.Vehicles.Add(new Server.Models.Vehicle
+                        {
+                            Owner = player.SocialClubId.ToString(),
+                            Model = "3025077634",
+                            Name = "Bonusowy Blazer",
+                            Color1 = "[0,0,0,0]",
+                            Color2 = "[0,0,0,0]",
+                            Spawned = "False",
+                            Lastpos = "[119.26427,-1069.8783,28.48527]",
+                            Lastrot = "[0,0,0]",
+                            Damage = defaultDamage,
+                            Used = DateTime.Now.ToString(),
+                            Tune = defaultTune,
+                            Petrol = "10",
+                            Speedometer = "#0c9",
+                            Dirt = 0,
+                            Washtime = DateTime.Now.ToString(),
+                            Trunk = "[]",
+                            Mechtune = "[0,0,0,0,0]",
+                            Wheels = "[0, -1, 0]",
+                            Drivers = "[]",
+                            Trip = 0
+                        });
+                        context.SaveChanges();
+                        break;
+                    }
+                        
             }
         }
 
@@ -511,21 +544,16 @@ namespace ServerSide
 
         public static void LoadPersonalVehiclesFromDB()
         {
-            DBConnection dbc = new DBConnection();
-            dbc.command.CommandText = $"SELECT * FROM vehicles WHERE spawned = '{bool.TrueString}'";
-            using (MySqlDataReader reader = dbc.command.ExecuteReader())
+            using var context = new ServerDB();
+            var vehicles = context.Vehicles.Where(x => x.Spawned == "True").ToList();
+            foreach(var vehicle in vehicles)
             {
-                while (reader.Read())
-                {
-                    Vector3 position = JsonToVector(reader.GetString(7));
-                    Vector3 rotation = JsonToVector(reader.GetString(8));
-                    Vehicle veh = CreatePersonalVehicle(reader.GetInt32(0), position, 0.0f, true);
-                    veh.Rotation = rotation;
-                    OrgManager.SetVehiclesOrg(veh);
-                }
-                reader.Close();
+                Vector3 position = JsonToVector(vehicle.Lastpos);
+                Vector3 rotation = JsonToVector(vehicle.Lastrot);
+                Vehicle veh = CreatePersonalVehicle(vehicle.Id, position, 0.0f, true);
+                veh.Rotation = rotation;
+                OrgManager.SetVehiclesOrg(veh);
             }
-            dbc.connection.Close();
         }
 
         public static int GetVehicleModelPrice(Vehicle vehicle)
@@ -1100,77 +1128,53 @@ namespace ServerSide
 
         public static string GetVehiclesOwner(string id)
         {
-            DBConnection dataBase = new DBConnection();
-            dataBase.command.CommandText = $"SELECT * FROM vehicles WHERE id = {id};";
-            using (MySqlDataReader reader = dataBase.command.ExecuteReader())
-            {
-                if (reader.Read())
-                {
-                    string owner = reader.GetString(1);
-                    dataBase.connection.Close();
-                    return owner;
-                }
-                else
-                {
-                    dataBase.connection.Close();
-                    return "";
-                }
-            }
+            using var context = new ServerDB();
 
-        }
-        public static string GetVehiclesOwnerName(string id)
-        {
-            DBConnection dataBase = new DBConnection();
-            dataBase.command.CommandText = $"SELECT * FROM vehicles WHERE id = {id};";
-            string owner = "";
-            using (MySqlDataReader reader = dataBase.command.ExecuteReader())
+            var results = context.Vehicles.Where(x => x.Id == int.Parse(id)).ToList();
+            var vehicle = results.Count > 0 ? results[0] : null;
+
+            if(vehicle != null)
             {
-                if (reader.Read())
-                {
-                    owner = reader.GetString(1);
-                }
-            }
-            if (owner == "")
-            {
-                dataBase.connection.Close();
+                return vehicle.Owner;
             }
             else
             {
-                dataBase.command.CommandText = $"SELECT * FROM users WHERE login = {owner};";
-                using (MySqlDataReader reader = dataBase.command.ExecuteReader())
-                {
-                    if (reader.Read())
-                    {
-                        string ow = reader.GetString(3);
-                        dataBase.connection.Close();
-                        return ow;
-                    }
-                    else
-                    {
-                        return "";
-                    }
-
-                }
+                return "";
             }
-            return "";
+        }
+        public static string GetVehiclesOwnerName(string id)
+        {
+            var owner = "";
+            using var context = new ServerDB();
+            var results = context.Vehicles.Where(x => x.Id == int.Parse(id)).ToList();
+            var vehicle = results.Count > 0 ? results[0] : null;
+
+            if (vehicle != null)
+            {
+                owner = vehicle.Owner;
+            }
+            
+            if(owner == "")
+            {
+                return "";
+            }
+
+            var user = context.Users.Where(x => x.Login == owner).FirstOrDefault();
+            return user.Username;
         }
         public static string GetVehiclesNameById(string id)
         {
-            DBConnection dataBase = new DBConnection();
-            dataBase.command.CommandText = $"SELECT * FROM vehicles WHERE id = {id};";
-            using (MySqlDataReader reader = dataBase.command.ExecuteReader())
+            using var context = new ServerDB();
+            var results = context.Vehicles.Where(x => x.Id == int.Parse(id)).ToList();
+            var vehicle = results.Count > 0 ? results[0] : null;
+
+            if (vehicle != null)
             {
-                if (reader.Read())
-                {
-                    string name = reader.GetString(3);
-                    dataBase.connection.Close();
-                    return name;
-                }
-                else
-                {
-                    dataBase.connection.Close();
-                    return "";
-                }
+                return vehicle.Name;
+            }
+            else
+            {
+                return "";
             }
         }
 
@@ -1247,10 +1251,10 @@ namespace ServerSide
 
         public static void UpdateVehiclesDBOwner(int carId, string newOwner)
         {
-            DBConnection dataBase = new DBConnection();
-            dataBase.command.CommandText = $"UPDATE vehicles SET owner = '{newOwner}' WHERE id = {carId.ToString()}";
-            dataBase.command.ExecuteNonQuery();
-            dataBase.connection.Close();
+            using var context = new ServerDB();
+            var vehicle = context.Vehicles.Where(x => x.Id == carId).FirstOrDefault();
+            vehicle.Owner = newOwner;
+            context.SaveChanges();
         }
 
         public static void setVehiclesPetrolAndTrunk(Vehicle vehicle)
@@ -1323,23 +1327,18 @@ namespace ServerSide
         public static string GetPlayersVehicles(Player player)
         {
             List<List<string>> vehicles = new List<List<string>>();
-            DBConnection dataBase = new DBConnection();
-            dataBase.command.CommandText = $"SELECT id, name, model, spawned FROM vehicles WHERE owner = '{player.SocialClubId}';";
-            using (MySqlDataReader reader = dataBase.command.ExecuteReader())
+            using var context = new ServerDB();
+            var vehs = context.Vehicles.Where(x => x.Owner == player.SocialClubId.ToString()).ToList();
+            foreach(var veh in vehs)
             {
-                while(reader.Read())
+                vehicles.Add(new List<string>
                 {
-                    List<string> veh = new List<string>()
-                    {
-                        reader.GetInt32(0).ToString(),
-                        reader.GetString(1),
-                        reader.GetString(2),
-                        reader.GetString(3)
-                    };
-                    vehicles.Add(veh);
-                }
+                    veh.Id.ToString(),
+                    veh.Name,
+                    veh.Model,
+                    veh.Spawned
+                });
             }
-            dataBase.connection.Close();
             return JsonConvert.SerializeObject(vehicles);
         }
 
@@ -1347,31 +1346,31 @@ namespace ServerSide
         {
             string[] tune = new string[3];
             List<string> vehInfo = new List<string>();
-            DBConnection dataBase = new DBConnection();
-            dataBase.command.CommandText = $"SELECT id, name, model, mechtune, tune, spawned, trip FROM vehicles WHERE id = {id};";
+            using var context = new ServerDB();
+            var result = context.Vehicles.Where(x => x.Id == id).ToList();
+
+            var veh = result.Count > 0 ? result[0] : null;
+
             string model = "";
             string mechtune = "";
             string visutune = "";
             string trip = "";
-            using (MySqlDataReader reader = dataBase.command.ExecuteReader())
+
+
+            if(veh != null)
             {
-                if (reader.Read())
-                {
-                    vehInfo.Add(reader.GetString(1));
-                    vehInfo.Add(reader.GetInt32(0).ToString());
-                    vehInfo.Add(reader.GetString(2));
-                    model = reader.GetString(2);
-                    mechtune = reader.GetString(3);
-                    visutune = reader.GetString(4);
-                    trip = reader.GetFloat(6).ToString();
-                }
-                else
-                {
-                    dataBase.connection.Close();
-                    return tune;
-                }
+                vehInfo.Add(veh.Name);
+                vehInfo.Add(veh.Id.ToString());
+                vehInfo.Add(veh.Model);
+                model = veh.Model;
+                mechtune = veh.Mechtune;
+                visutune = veh.Tune;
+                trip = veh.Trip.ToString();
             }
-            dataBase.connection.Close();
+            else
+            {
+                return tune;
+            }
 
             int combustionAdd = 0;
 
@@ -1405,7 +1404,7 @@ namespace ServerSide
                     break;
                 }
             }
-            vehInfo.Add(trip);
+            //vehInfo.Add(trip);
             tune[0] = JsonConvert.SerializeObject(vehInfo);
             tune[1] = mtune.Count > 0 ? JsonConvert.SerializeObject(mtune) : "";
             

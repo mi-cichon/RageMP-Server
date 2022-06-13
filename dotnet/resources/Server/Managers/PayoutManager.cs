@@ -49,7 +49,7 @@ namespace ServerSide
             money = Convert.ToInt32(AddPlayersBonus(player, money) * (IsPlayerTesting(player) ? 1 : bonuses["warehouse"]));
 
 
-            PlayerDataManager.UpdatePlayersJobBonus(player, "warehouse", exp);
+            PlayerDataManager.UpdatePlayersJobPoints(player, "warehouse", exp);
 
             PlayerDataManager.GiveMoney(player, money);
             PlayerDataManager.UpdatePlayersExp(player, exp);
@@ -84,7 +84,7 @@ namespace ServerSide
             money = Convert.ToInt32(AddPlayersBonus(player, money) * (IsPlayerTesting(player) ? 1 : bonuses["forklifts"]));
 
 
-            PlayerDataManager.UpdatePlayersJobBonus(player, "forklifts", exp);
+            PlayerDataManager.UpdatePlayersJobPoints(player, "forklifts", exp);
 
             PlayerDataManager.GiveMoney(player, money);
             PlayerDataManager.UpdatePlayersExp(player, exp);
@@ -108,7 +108,7 @@ namespace ServerSide
                 exp = 40;
 
 
-            PlayerDataManager.UpdatePlayersJobBonus(player, "towtruck", exp);
+            PlayerDataManager.UpdatePlayersJobPoints(player, "towtruck", exp);
 
             money = Convert.ToInt32(money * dmg);
             money = Convert.ToInt32(AddPlayersBonus(player, money) * (IsPlayerTesting(player) ? 1 : bonuses["towtrucks"]));
@@ -127,7 +127,7 @@ namespace ServerSide
             int exp = liters / 8;
 
 
-            PlayerDataManager.UpdatePlayersJobBonus(player, "refinery", exp);
+            PlayerDataManager.UpdatePlayersJobPoints(player, "refinery", exp);
 
             money = Convert.ToInt32(AddPlayersBonus(player, money) * (IsPlayerTesting(player) ? 1 : bonuses["refinery"]));
             PlayerDataManager.GiveMoney(player, money);
@@ -163,7 +163,7 @@ namespace ServerSide
 
             money = Convert.ToInt32(AddPlayersBonus(player, money) * (IsPlayerTesting(player) ? 1 : bonuses["debrisCleaner"]));
 
-            PlayerDataManager.UpdatePlayersJobBonus(player, "debriscleaner", exp);
+            PlayerDataManager.UpdatePlayersJobPoints(player, "debriscleaner", exp);
 
             PlayerDataManager.GiveMoney(player, money);
             PlayerDataManager.UpdatePlayersExp(player, exp);
@@ -209,7 +209,7 @@ namespace ServerSide
             money = Convert.ToInt32(bonus * money);
             money = Convert.ToInt32(AddPlayersBonus(player, money) * (IsPlayerTesting(player) ? 1 : bonuses["diver"]));
 
-            PlayerDataManager.UpdatePlayersJobBonus(player, "diver", exp);
+            PlayerDataManager.UpdatePlayersJobPoints(player, "diver", exp);
 
             PlayerDataManager.GiveMoney(player, money);
             PlayerDataManager.UpdatePlayersExp(player, exp);
@@ -441,7 +441,7 @@ namespace ServerSide
             int exp = price * 10;
             PlayerDataManager.UpdatePlayersExp(player, exp);
             
-            PlayerDataManager.UpdatePlayersJobBonus(player, "fisherman", exp);
+            PlayerDataManager.UpdatePlayersJobPoints(player, "fisherman", exp);
 
             player.TriggerEvent("updateJobVars", 0, exp);
         }
@@ -597,7 +597,7 @@ namespace ServerSide
 
             money = Convert.ToInt32(AddPlayersBonus(player, money) * (IsPlayerTesting(player) ? 1 : bonuses["lawnmowing"]));
 
-            PlayerDataManager.UpdatePlayersJobBonus(player, "lawnmowing", exp);
+            PlayerDataManager.UpdatePlayersJobPoints(player, "lawnmowing", exp);
 
             PlayerDataManager.GiveMoney(player, money);
             PlayerDataManager.UpdatePlayersExp(player, exp);
@@ -609,7 +609,7 @@ namespace ServerSide
             PlayerDataManager.UpdatePlayersExp(player, exp);
             player.TriggerEvent("updateJobVars", 0, exp);
 
-            PlayerDataManager.UpdatePlayersJobBonus(player, "gardener", exp);
+            PlayerDataManager.UpdatePlayersJobPoints(player, "gardener", exp);
 
         }
 
@@ -641,7 +641,7 @@ namespace ServerSide
             PlayerDataManager.GiveMoney(player, money);
             player.TriggerEvent("updateJobVars", money, exp);
 
-            PlayerDataManager.UpdatePlayersJobBonus(player, "gardener", exp);
+            PlayerDataManager.UpdatePlayersJobPoints(player, "gardener", exp);
         }
         
         public static void HunterPaymentAnimal(Player player, string pedstr)
@@ -671,7 +671,7 @@ namespace ServerSide
             PlayerDataManager.UpdatePlayersExp(player, exp);
             player.TriggerEvent("updateJobVars", 0, exp);
 
-            PlayerDataManager.UpdatePlayersJobBonus(player, "gardener", exp);
+            PlayerDataManager.UpdatePlayersJobPoints(player, "hunter", exp);
             //LogManager.LogJobTransaction(player.SocialClubId.ToString(), $"Myśliwy: +{reward.ToString()}$, +1PP ({player.GetSharedData<Int32>("money")},{player.GetSharedData<Int32>("pp")})");
         }
 

@@ -1,58 +1,41 @@
-C:/Users/micha/Desktop/server-files/dotnet/resources/Server/obj/Debug/netcoreapp3.1/Server.csprojAssemblyReference.cache
-C:/Users/micha/Desktop/server-files/dotnet/resources/Server/obj/Debug/netcoreapp3.1/Server.AssemblyInfoInputs.cache
-C:/Users/micha/Desktop/server-files/dotnet/resources/Server/obj/Debug/netcoreapp3.1/Server.AssemblyInfo.cs
-C:/Users/micha/Desktop/server-files/dotnet/resources/Server/obj/Debug/netcoreapp3.1/Server.csproj.CoreCompileInputs.cache
-C:/Users/micha/Desktop/server-files/dotnet/resources/Server/bin/Debug/netcoreapp3.1/Server.deps.json
-C:/Users/micha/Desktop/server-files/dotnet/resources/Server/bin/Debug/netcoreapp3.1/Server.dll
-C:/Users/micha/Desktop/server-files/dotnet/resources/Server/bin/Debug/netcoreapp3.1/Server.pdb
-C:/Users/micha/Desktop/server-files/dotnet/resources/Server/obj/Debug/netcoreapp3.1/Server.dll
-C:/Users/micha/Desktop/server-files/dotnet/resources/Server/obj/Debug/netcoreapp3.1/Server.pdb
-F:/Ragemp server GIT/server-files/dotnet/resources/Server/bin/Debug/netcoreapp3.1/Server.deps.json
-F:/Ragemp server GIT/server-files/dotnet/resources/Server/bin/Debug/netcoreapp3.1/Server.dll
-F:/Ragemp server GIT/server-files/dotnet/resources/Server/bin/Debug/netcoreapp3.1/Server.pdb
-F:/Ragemp server GIT/server-files/dotnet/resources/Server/obj/Debug/netcoreapp3.1/Server.csprojAssemblyReference.cache
-F:/Ragemp server GIT/server-files/dotnet/resources/Server/obj/Debug/netcoreapp3.1/Server.AssemblyInfoInputs.cache
-F:/Ragemp server GIT/server-files/dotnet/resources/Server/obj/Debug/netcoreapp3.1/Server.AssemblyInfo.cs
-F:/Ragemp server GIT/server-files/dotnet/resources/Server/obj/Debug/netcoreapp3.1/Server.csproj.CoreCompileInputs.cache
-F:/Ragemp server GIT/server-files/dotnet/resources/Server/obj/Debug/netcoreapp3.1/Server.dll
-F:/Ragemp server GIT/server-files/dotnet/resources/Server/obj/Debug/netcoreapp3.1/Server.pdb
-E:/Ragemp server GIT/server-files/dotnet/resources/Server/bin/Debug/netcoreapp3.1/Server.deps.json
-E:/Ragemp server GIT/server-files/dotnet/resources/Server/bin/Debug/netcoreapp3.1/Server.dll
-E:/Ragemp server GIT/server-files/dotnet/resources/Server/bin/Debug/netcoreapp3.1/Server.pdb
-E:/Ragemp server GIT/server-files/dotnet/resources/Server/obj/Debug/netcoreapp3.1/Server.csproj.AssemblyReference.cache
-E:/Ragemp server GIT/server-files/dotnet/resources/Server/obj/Debug/netcoreapp3.1/Server.GeneratedMSBuildEditorConfig.editorconfig
-E:/Ragemp server GIT/server-files/dotnet/resources/Server/obj/Debug/netcoreapp3.1/Server.AssemblyInfoInputs.cache
-E:/Ragemp server GIT/server-files/dotnet/resources/Server/obj/Debug/netcoreapp3.1/Server.AssemblyInfo.cs
-E:/Ragemp server GIT/server-files/dotnet/resources/Server/obj/Debug/netcoreapp3.1/Server.csproj.CoreCompileInputs.cache
-E:/Ragemp server GIT/server-files/dotnet/resources/Server/obj/Debug/netcoreapp3.1/Server.dll
-E:/Ragemp server GIT/server-files/dotnet/resources/Server/obj/Debug/netcoreapp3.1/Server.pdb
-/home/ragemp/ragemp-srv/dotnet/resources/Server/bin/Debug/netcoreapp3.1/Server.deps.json
-/home/ragemp/ragemp-srv/dotnet/resources/Server/bin/Debug/netcoreapp3.1/Server.dll
-/home/ragemp/ragemp-srv/dotnet/resources/Server/bin/Debug/netcoreapp3.1/Server.pdb
-/home/ragemp/ragemp-srv/dotnet/resources/Server/obj/Debug/netcoreapp3.1/Server.csproj.AssemblyReference.cache
-/home/ragemp/ragemp-srv/dotnet/resources/Server/obj/Debug/netcoreapp3.1/Server.GeneratedMSBuildEditorConfig.editorconfig
-/home/ragemp/ragemp-srv/dotnet/resources/Server/obj/Debug/netcoreapp3.1/Server.AssemblyInfoInputs.cache
-/home/ragemp/ragemp-srv/dotnet/resources/Server/obj/Debug/netcoreapp3.1/Server.AssemblyInfo.cs
-/home/ragemp/ragemp-srv/dotnet/resources/Server/obj/Debug/netcoreapp3.1/Server.csproj.CoreCompileInputs.cache
-/home/ragemp/ragemp-srv/dotnet/resources/Server/obj/Debug/netcoreapp3.1/Server.dll
-/home/ragemp/ragemp-srv/dotnet/resources/Server/obj/Debug/netcoreapp3.1/Server.pdb
-F:\RAGEMP server\server-files\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Server.deps.json
-F:\RAGEMP server\server-files\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Server.dll
-F:\RAGEMP server\server-files\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Server.pdb
-F:\RAGEMP server\server-files\dotnet\resources\Server\obj\Debug\netcoreapp3.1\Server.GeneratedMSBuildEditorConfig.editorconfig
-F:\RAGEMP server\server-files\dotnet\resources\Server\obj\Debug\netcoreapp3.1\Server.AssemblyInfoInputs.cache
-F:\RAGEMP server\server-files\dotnet\resources\Server\obj\Debug\netcoreapp3.1\Server.AssemblyInfo.cs
-F:\RAGEMP server\server-files\dotnet\resources\Server\obj\Debug\netcoreapp3.1\Server.csproj.CoreCompileInputs.cache
-F:\RAGEMP server\server-files\dotnet\resources\Server\obj\Debug\netcoreapp3.1\Server.dll
-F:\RAGEMP server\server-files\dotnet\resources\Server\obj\Debug\netcoreapp3.1\Server.pdb
-F:\RAGEMP server\server-files\dotnet\resources\Server\obj\Debug\netcoreapp3.1\Server.csproj.AssemblyReference.cache
 E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Server.deps.json
+E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Server.runtimeconfig.json
+E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Server.runtimeconfig.dev.json
 E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Server.dll
 E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Server.pdb
+E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\MySqlConnector.dll
+E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Pomelo.EntityFrameworkCore.MySql.dll
+E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Pomelo.JsonObject.dll
+E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\Bootstrapper.dll
+E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.1\System.Drawing.Common.dll
+E:\Server\dotnet\resources\Server\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Drawing.Common.dll
 E:\Server\dotnet\resources\Server\obj\Debug\netcoreapp3.1\Server.csproj.AssemblyReference.cache
 E:\Server\dotnet\resources\Server\obj\Debug\netcoreapp3.1\Server.GeneratedMSBuildEditorConfig.editorconfig
 E:\Server\dotnet\resources\Server\obj\Debug\netcoreapp3.1\Server.AssemblyInfoInputs.cache
 E:\Server\dotnet\resources\Server\obj\Debug\netcoreapp3.1\Server.AssemblyInfo.cs
 E:\Server\dotnet\resources\Server\obj\Debug\netcoreapp3.1\Server.csproj.CoreCompileInputs.cache
+E:\Server\dotnet\resources\Server\obj\Debug\netcoreapp3.1\Server.csproj.CopyComplete
 E:\Server\dotnet\resources\Server\obj\Debug\netcoreapp3.1\Server.dll
 E:\Server\dotnet\resources\Server\obj\Debug\netcoreapp3.1\Server.pdb
+E:\Server\dotnet\resources\Server\obj\Debug\netcoreapp3.1\Server.genruntimeconfig.cache

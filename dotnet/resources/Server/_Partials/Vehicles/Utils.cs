@@ -35,7 +35,7 @@ namespace ServerSide
         public void updateVehiclesDirtLevel(Player player, Vehicle vehicle, float dirtLevel)
         {
             if (vehicle != null && vehicle.Exists)
-                VehicleDataManager.UpdateVehiclesDirtLevel(vehicle, dirtLevel);
+                VehicleDataManager.UpdateVehiclesDirtLevel(vehicle, Convert.ToInt32(dirtLevel));
         }
 
         //drowned veh

@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using GTANetworkAPI;
+using Server.Database;
 
 namespace ServerSide
 {
@@ -40,7 +42,10 @@ namespace ServerSide
                 player.SetSharedData("jobveh", -1111);
             }
             player.SetSharedData("licenceBp", true);
-            PlayerDataManager.SavePlayerDataToDB(player, "licenceBp");
+            using var context = new ServerDB();
+            var usersLicences = context.Licences.Where(x => x.Id == player.GetSharedData<int>("id")).FirstOrDefault();
+            usersLicences.Bp = "True";
+            context.SaveChanges();
         }
 
         [RemoteEvent("licenceBfailed")]
@@ -75,7 +80,10 @@ namespace ServerSide
         public void LicenceCompleted(Player player)
         {
             player.SetSharedData("licenceBt", true);
-            PlayerDataManager.SavePlayerDataToDB(player, "licenceBt");
+            using var context = new ServerDB();
+            var usersLicences = context.Licences.Where(x => x.Id == player.GetSharedData<int>("id")).FirstOrDefault();
+            usersLicences.Bt = "True";
+            context.SaveChanges();
         }
     }
 }

@@ -20,7 +20,7 @@ namespace ServerSide
                     {
                         org.name,
                         org.tag,
-                        (org.members.Count).ToString(),
+                        (org.members.Count + 1).ToString(),
                         org.id.ToString()
                     });
                 }

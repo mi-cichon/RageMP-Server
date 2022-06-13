@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Timers;
 using GTANetworkAPI;
 using Newtonsoft.Json;
+using Server.Database;
 
 namespace ServerSide
 {
@@ -19,19 +21,17 @@ namespace ServerSide
             checkStations.Enabled = true;
 
             stationsData = new List<KeyValuePair<int, int>>();
-            DBConnection dataBase = new DBConnection();
 
-            dataBase.command.CommandText = $"SELECT stationsValues FROM data";
-            string values = (string)dataBase.command.ExecuteScalar();
-            dataBase.command.CommandText = $"SELECT stationsPrices FROM data";
-            string prices = (string)dataBase.command.ExecuteScalar();
-            dataBase.connection.Close();
+            using var context = new ServerDB();
+
+            var values = context.Data.ToList()?[0].StationsValues;
+            var prices = context.Data.ToList()?[0].StationsPrices;
 
             List<int> valuesList = JsonConvert.DeserializeObject<List<int>>(values);
 
             List<int> pricesList = JsonConvert.DeserializeObject<List<int>>(prices);
 
-            for(int i = 0; i < valuesList.Count; i++)
+            for (int i = 0; i < valuesList.Count; i++)
             {
                 stationsData.Add(new KeyValuePair<int, int>(valuesList[i], pricesList[i]));
             }
@@ -53,10 +53,11 @@ namespace ServerSide
             List<int> prices = new List<int>();
             stationsData.ForEach(station => { values.Add(station.Key); prices.Add(station.Value); });
 
-            DBConnection dataBase = new DBConnection();
-            dataBase.command.CommandText = $"UPDATE data SET stationsValues = '{JsonConvert.SerializeObject(values)}', stationsPrices = '{JsonConvert.SerializeObject(prices)}'";
-            dataBase.command.ExecuteNonQuery();
-            dataBase.connection.Close();
+            using var context = new ServerDB();
+            var data = context.Data.ToList()[0];
+            data.StationsPrices = JsonConvert.SerializeObject(prices);
+            data.StationsValues = JsonConvert.SerializeObject(values);
+            context.SaveChanges();
         }
 
         public static void CheckStations(System.Object source, ElapsedEventArgs e)
